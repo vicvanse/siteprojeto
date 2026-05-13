@@ -100,6 +100,8 @@
   },
   "hero": {
     "projectTitle": "Project X",
+    "projectTitleHead": "Project ",
+    "projectTitleMark": "X",
     "globeHint": "Hover over the globe to see the animation",
     "analyst": "systems analyst",
     "nameFirst": "victor",

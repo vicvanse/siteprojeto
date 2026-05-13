@@ -56,37 +56,6 @@ html {
   }
 }
 
-/** Setas do cabeçalho mobile: descida lenta; retorno ocupa o resto do ciclo (sem alongar só a pausa entre ciclos). */
-@keyframes header-arrow-mobile-nudge {
-  0% {
-    transform: translateY(0);
-  }
-  12% {
-    transform: translateY(1.5px);
-  }
-  28% {
-    transform: translateY(3.2px);
-  }
-  42% {
-    transform: translateY(4px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.header-arrow-mobile-nudge {
-  animation: header-arrow-mobile-nudge 3.1s cubic-bezier(0.45, 0, 0.55, 1)
-    infinite;
-  animation-delay: 0.12s;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .header-arrow-mobile-nudge {
-    animation: none;
-  }
-}
-
 /** Sugestões (mobile): seta «voltar» com nudge horizontal, ritmo alinhado ao cabeçalho. */
 @keyframes sugestoes-back-arrow-mobile-nudge {
   0% {

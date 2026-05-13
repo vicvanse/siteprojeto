@@ -3,13 +3,14 @@
 import { BookOpen, Check, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import { LanguageSwitcher } from "@/components/site/language-switcher";
 import {
   CONTACT_EMAIL,
   GOODREADS_URL,
   INSTAGRAM_URL,
   INSTAGRAM_LINK_LABEL,
   TIKTOK_URL,
+  VICVANSE_EMAIL,
+  VICVANSE_INSTAGRAM_URL,
 } from "@/lib/site-constants";
 
 const socialFooterLinkClass =
@@ -133,8 +134,33 @@ export function SiteSocialFooter({
           </>
         ) : null}
       </div>
-      <div className="w-full min-w-0 max-w-full px-1 sm:px-0">
-        <LanguageSwitcher />
+      <div className="flex w-full min-w-0 max-w-full flex-col items-center gap-4 sm:gap-5">
+        <div className="flex w-full flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:gap-x-5">
+          {[0, 1, 2].map((i) => (
+            <a
+              key={`vic-email-${i}`}
+              href={`mailto:${VICVANSE_EMAIL}`}
+              className="max-w-[min(100%,20rem)] break-all text-center font-mono text-[10px] uppercase tracking-[0.12em] text-black/70 underline decoration-black/18 underline-offset-[3px] transition hover:text-[#4a7c44] hover:decoration-[#4a7c44]/35 max-sm:text-white/88 max-sm:decoration-white/28 max-sm:hover:text-white"
+            >
+              {VICVANSE_EMAIL}
+            </a>
+          ))}
+        </div>
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+          {[0, 1, 2].map((i) => (
+            <a
+              key={`vic-ig-${i}`}
+              href={VICVANSE_INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={socialFooterLinkClass}
+              aria-label="Instagram @vicvanse"
+              title="Instagram @vicvanse"
+            >
+              <InstagramGlyph className="h-[18px] w-[18px]" />
+            </a>
+          ))}
+        </div>
       </div>
       <span className="sr-only" role="status" aria-live="polite">
         {emailCopied ? "Copiado." : ""}

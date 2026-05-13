@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import { HeroBackground } from "@/components/site/hero-background";
 import { HeroTriangleArt } from "@/components/site/hero-triangle-art";
+import { HeaderLocaleSelect } from "@/components/site/header-locale-select";
 import { VekonHeroMark } from "@/components/site/vekon-hero-mark";
 import { SiteSocialFooter } from "@/components/site/site-social-footer";
 import { TextPostCard } from "@/components/victor/text-post-card";
@@ -130,7 +131,7 @@ async function exitDocumentFullscreen(): Promise<void> {
 function SpinStar({ className }: { className?: string }) {
   return (
     <svg
-      className={`star-spin inline-block h-[0.74em] w-[0.74em] shrink-0 translate-y-[0.04em] align-middle text-black/25 ${className ?? ""}`}
+      className={`star-spin inline-block h-[0.74em] w-[0.74em] shrink-0 translate-y-[0.04em] align-middle ${className ?? "text-black/25"}`}
       viewBox="0 0 24 24"
       fill="currentColor"
       aria-hidden
@@ -198,10 +199,6 @@ function MainNavigation({
       : navToggleBase;
   const ti = variant === "mobileDark" ? navToggleIdleMobile : navToggleIdle;
   const ta = variant === "mobileDark" ? navToggleActiveMobile : navToggleActive;
-  const arrowClass =
-    compactHeader && variant === "mobileDark"
-      ? "header-arrow-mobile-nudge mt-0.5 text-sm leading-none"
-      : "mt-0.5 text-base leading-none sm:max-lg:motion-safe:animate-bounce";
 
   const navJustifyClass = "w-full justify-center";
 
@@ -216,9 +213,6 @@ function MainNavigation({
         className={`${tb} ${navToggleShapeHeader} ${openPanel === "victor" ? ta : ti}`}
       >
         <span className="text-center">{t("projeto")}</span>
-        <span className={arrowClass} aria-hidden>
-          ↓
-        </span>
       </button>
       <button
         type="button"
@@ -226,9 +220,6 @@ function MainNavigation({
         className={`${tb} ${navToggleShapeHeader} ${openPanel === "registros" ? ta : ti}`}
       >
         <span className="min-w-0 text-center">{t("registros")}</span>
-        <span className={arrowClass} aria-hidden>
-          ↓
-        </span>
       </button>
       <button
         type="button"
@@ -236,9 +227,6 @@ function MainNavigation({
         className={`${tb} ${navToggleShapeHeader} ${openPanel === "clinica" ? ta : ti}`}
       >
         <span className="text-center">{t("servicos")}</span>
-        <span className={arrowClass} aria-hidden>
-          ↓
-        </span>
       </button>
       <button
         type="button"
@@ -246,9 +234,6 @@ function MainNavigation({
         className={`${tb} ${navToggleShapeHeader} ${openPanel === "nos" ? ta : ti}`}
       >
         <span className="text-center">{t("nos")}</span>
-        <span className={arrowClass} aria-hidden>
-          ↓
-        </span>
       </button>
     </nav>
   );
@@ -784,20 +769,26 @@ export default function HomePage() {
       {/* Só navegação sticky; o hero (mint + identidade) fica na secção seguinte, mais baixo que o antigo 70vh. */}
       <div className="order-0 shrink-0 bg-white">
         <header className="relative z-40 shrink-0">
-          <div className="sticky top-0 z-40 border-b border-white/12 bg-black py-2.5 sm:hidden">
-            <div className="mx-auto flex w-full max-w-[1600px] min-w-0 items-center justify-center px-3">
-              <MainNavigation
-                compactHeader
-                variant="mobileDark"
-                openPanel={openPanel}
-                pickPanel={pickPanel}
-              />
+          <div className="sticky top-0 z-40 border-b border-white/12 bg-black py-2 sm:hidden">
+            <div className="mx-auto flex w-full max-w-[1600px] min-w-0 items-center gap-2 px-3">
+              <div className="flex min-w-0 flex-1 justify-center">
+                <MainNavigation
+                  compactHeader
+                  variant="mobileDark"
+                  openPanel={openPanel}
+                  pickPanel={pickPanel}
+                />
+              </div>
+              <HeaderLocaleSelect variant="dark" />
             </div>
           </div>
 
-          <div className="sticky top-0 z-40 hidden min-w-0 w-full flex-col gap-2 border-b border-black/[0.08] bg-white py-2 sm:flex sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-6 sm:gap-y-2 sm:py-2.5">
-            <div className="mx-auto flex w-full max-w-[1600px] min-w-0 flex-col gap-4 px-5 sm:flex-row sm:flex-nowrap sm:items-center sm:justify-center sm:gap-x-6 sm:gap-y-0 sm:px-8 md:px-12">
-              <MainNavigation openPanel={openPanel} pickPanel={pickPanel} />
+          <div className="sticky top-0 z-40 hidden min-w-0 w-full border-b border-black/[0.08] bg-white py-2 sm:block sm:py-2.5">
+            <div className="mx-auto flex w-full max-w-[1600px] min-w-0 items-center gap-3 px-5 sm:px-8 md:px-12">
+              <div className="flex min-w-0 flex-1 justify-center">
+                <MainNavigation openPanel={openPanel} pickPanel={pickPanel} />
+              </div>
+              <HeaderLocaleSelect variant="light" />
             </div>
           </div>
         </header>
@@ -805,20 +796,25 @@ export default function HomePage() {
 
       <section
         id="top"
-        className="relative order-1 isolate flex w-full min-w-0 flex-col overflow-visible bg-[#f0f4f2] px-5 pb-4 pt-0 max-sm:pb-4 sm:px-8 sm:pb-5 md:px-12 lg:min-h-0 lg:pb-5 min-h-[min(40vh,280px)] sm:min-h-[min(38vh,300px)] lg:min-h-[min(34vh,340px)]"
+        className="relative order-1 isolate flex min-h-[min(40vh,280px)] w-full min-w-0 flex-col overflow-visible bg-[#f0f4f2] px-5 pb-0 pt-0 sm:min-h-[min(38vh,300px)] sm:px-8 md:px-12 lg:min-h-[min(34vh,340px)]"
       >
         <HeroBackground />
-        <HeroTriangleArt className="pointer-events-none absolute left-0 top-3 z-0 -ml-5 h-[min(20vh,132px)] w-[min(72vw,200px)] sm:-ml-8 sm:top-4 sm:h-[min(24vh,168px)] sm:w-[min(50vw,240px)] md:-ml-12 md:h-[min(26vh,200px)] md:w-[min(42vw,280px)] lg:top-5" />
+        <HeroTriangleArt className="pointer-events-none absolute left-0 top-2 z-[1] -ml-5 h-[min(22vh,148px)] w-[min(72vw,216px)] sm:-ml-8 sm:top-3 sm:h-[min(26vh,180px)] sm:w-[min(52vw,260px)] md:-ml-12 md:h-[min(28vh,210px)] md:w-[min(44vw,300px)] lg:top-4" />
         <HeroTriangleArt
           mirror
-          className="pointer-events-none absolute right-0 top-3 z-0 -mr-5 h-[min(20vh,132px)] w-[min(72vw,200px)] sm:-mr-8 sm:top-4 sm:h-[min(24vh,168px)] sm:w-[min(50vw,240px)] md:-mr-12 md:h-[min(26vh,200px)] md:w-[min(42vw,280px)] lg:top-5"
+          emphasis
+          className="pointer-events-none absolute right-0 top-2 z-[1] -mr-5 h-[min(30vh,200px)] w-[min(82vw,260px)] sm:-mr-8 sm:top-3 sm:h-[min(34vh,240px)] sm:w-[min(58vw,300px)] md:-mr-12 md:h-[min(36vh,280px)] md:w-[min(48vw,340px)] lg:top-4"
         />
 
-        <div className="relative z-10 flex w-full min-w-0 max-w-full flex-col overflow-visible">
-          <div className="relative z-10 mx-auto w-full max-w-7xl min-h-[min(26vh,11rem)] px-2 sm:min-h-[min(28vh,12.5rem)] lg:min-h-[min(30vh,13.5rem)]">
-            <div className="flex min-h-[inherit] flex-col items-center justify-center px-2 pb-14 pt-5 text-center sm:pb-16 sm:pt-6">
-              <h1 className="m-0 max-w-[min(100%,34rem)] text-[clamp(1.85rem,7vw,4.5rem)] font-normal leading-[0.82] tracking-[-0.02em] text-black [font-family:var(--font-signature)]">
-                {tHero("projectTitle")}
+        <div className="relative z-10 flex min-h-0 w-full max-w-full flex-1 flex-col overflow-visible">
+          <div className="mx-auto flex w-full max-w-7xl min-h-0 flex-1 flex-col px-2">
+            <div className="flex flex-1 flex-col items-center justify-center px-2 pb-4 pt-5 text-center sm:pt-6">
+              <h1
+                className="m-0 max-w-[min(100%,36rem)] text-[clamp(1.85rem,7vw,4.5rem)] font-normal leading-[0.82] tracking-[-0.02em] [font-family:var(--font-signature)]"
+                aria-label={tHero("projectTitle")}
+              >
+                <span className="text-black">{tHero("projectTitleHead")}</span>
+                <span className="text-black/18">{tHero("projectTitleMark")}</span>
               </h1>
               {INSTAGRAM_URL ? (
                 <footer className="mt-4 flex w-full justify-center sm:mt-5">
@@ -834,25 +830,21 @@ export default function HomePage() {
               ) : null}
             </div>
 
-            <div
-              className="pointer-events-none absolute bottom-0 left-0 z-20 origin-bottom-left scale-[0.38] pl-0.5 pb-0.5 sm:scale-[0.45] sm:pl-1 sm:pb-1 md:scale-50 md:pl-2 md:pb-2"
-              aria-hidden
-            >
-              <div className="m-0 text-[clamp(2.5rem,10vw,7rem)] font-sans font-semibold leading-[0.88] tracking-[-0.06em] text-black">
-                <span className="flex flex-col items-end gap-0">
-                  <span className="flex items-baseline gap-[0.14em] text-black/18">
-                    <SpinStar className="shrink-0" />
+            <div className="mt-auto flex w-full shrink-0 items-end justify-between gap-3 pb-3 pt-1 sm:gap-4 sm:pb-4">
+              <div className="min-w-0 shrink" aria-hidden>
+                <div className="pointer-events-none select-none text-left font-sans font-semibold leading-[0.92] tracking-[-0.05em]">
+                  <span className="flex items-baseline gap-[0.12em] text-[clamp(0.7rem,2.1vw,0.95rem)] text-black/18">
+                    <SpinStar className="shrink-0 text-black/18" />
                     <span>{tHero("nameFirst")}</span>
                   </span>
-                  <span className="-mt-[0.18em] block text-black">
+                  <span className="-mt-0.5 block text-[clamp(1.05rem,3.8vw,1.75rem)] text-black">
                     {tHero("nameLast")}
                   </span>
-                </span>
+                </div>
               </div>
-            </div>
-
-            <div className="absolute bottom-0 right-0 z-20 pr-0.5 pb-0.5 sm:pr-1 sm:pb-1 md:pr-2 md:pb-2">
-              <VekonHeroMark interactive={false} sizePx={136} className="mx-0" />
+              <div className="shrink-0 self-end">
+                <VekonHeroMark interactive={false} sizePx={136} className="mx-0" />
+              </div>
             </div>
           </div>
         </div>

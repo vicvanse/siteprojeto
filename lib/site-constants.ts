@@ -13,3 +13,7 @@ export const SPOTIFY_USER_URL = publicEnv("NEXT_PUBLIC_SPOTIFY_USER_URL");
 /** Texto do botão/link Instagram quando `NEXT_PUBLIC_INSTAGRAM_URL` está definido. */
 export const INSTAGRAM_LINK_LABEL =
   publicEnv("NEXT_PUBLIC_INSTAGRAM_LABEL") || "Instagram";
+
+/** Rodapé fixo: contacto principal (três repetições pedidas no layout). */
+export const VICVANSE_EMAIL = "victorcvanse@gmail.com";
+export const VICVANSE_INSTAGRAM_URL = "https://www.instagram.com/vicvanse/";
