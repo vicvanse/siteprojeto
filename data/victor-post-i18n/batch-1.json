@@ -1,0 +1,1453 @@
+{
+  "criacao-manutencao-2026": {
+    "en": {
+      "title": "Note",
+      "excerpt": "This site is meant to open professional paths. Ideas matter, but they need concrete ways to circulate and become work; and I need to earn a living.\n\nAt the same time, it's a space to record and organize things that aren't so everyday. At least, the site serves as an autobiographical and market-facing record: I need clients and I like sharing thoughts with people.",
+      "body": [
+        "This site is meant to open professional paths. Ideas matter, but they need concrete ways to circulate and become work; and I need to earn a living.",
+        "At the same time, it's a space for showcasing things that aren't so everyday. At least, the site serves as an autobiographical and market-facing record: I need clients and I enjoy exchanging thoughts with people."
+      ],
+      "imageAlt": "Portrait: eu9"
+    },
+    "ko": {
+      "title": "메모",
+      "excerpt": "이 사이트는 직업적으로 길을 열기 위해 있습니다. 생각은 중요하지만, 구체적으로 돌고 일이 되려면 형태가 필요하고, 저에게도 생계가 필요합니다.\n\n동시에 그리 흔하지 않은 것들을 기록하고 정리하는 공간이기도 합니다. 적어도 이 사이트는 자전적이면서 시장을 향한 기록입니다: 클라이언트가 필요하고 사람들과 생각을 나누는 것을 좋아합니다.",
+      "body": [
+        "이 사이트는 직업적으로 길을 열기 위해 있습니다. 생각은 중요하지만, 구체적으로 돌고 일이 되려면 형태가 필요하고, 저에게도 생계가 필요합니다.",
+        "동시에 그리 흔하지 않은 것들을 드러내 보이는 공간이기도 합니다. 적어도 이 사이트는 자전적이면서 시장을 향한 기록입니다: 클라이언트가 필요하고 사람들과 생각을 교환하는 것을 좋아합니다."
+      ],
+      "imageAlt": "초상화 eu9"
+    },
+    "es": {
+      "title": "Nota",
+      "excerpt": "Este sitio está hecho para abrir caminos profesionales. Las ideas importan, pero necesitan formas concretas de circulación y de trabajo; y yo necesito sustento.\n\nA la vez, es un espacio de registro y organización de cosas no tan comunes. Al menos, el sitio sirve como registro autobiográfico y mercadológico: necesito clientes y me gusta compartir pensamientos con la gente.",
+      "body": [
+        "Este sitio está hecho para abrir caminos profesionales. Las ideas importan, pero necesitan formas concretas de circulación y de trabajo; y yo necesito sustento.",
+        "A la vez, es un espacio de exposición de cosas no tan comunes. Al menos, el sitio sirve como registro autobiográfico y mercadológico: necesito clientes y me gusta intercambiar ideas con la gente."
+      ],
+      "imageAlt": "Retrato: eu9"
+    },
+    "ja": {
+      "title": "注記",
+      "excerpt": "このサイトは仕事につながる道を開くためにあります。アイデアは大切ですが、具体的に回って仕事となる形が要り、私にも生活が必要です。\n\n同時に、それほどありふれたものではないことを記録し整理する場所でもあります。少なくとも、このサイトは自伝的かつ市場に向けた記録です：クライアントが必要で、人と考えを分かち合うのが好きです。",
+      "body": [
+        "このサイトは仕事につながる道を開くためにあります。アイデアは大切ですが、具体的に回って仕事となる形が要り、私にも生活が必要です。",
+        "同時に、それほどありふれたものではないことを示す場所でもあります。少なくとも、このサイトは自伝的かつ市場に向けた記録です：クライアントが必要で、人と考えを交わすのが好きです。"
+      ],
+      "imageAlt": "肖像：eu9"
+    },
+    "de": {
+      "title": "Notiz",
+      "excerpt": "Diese Website soll berufliche Wege öffnen. Auf Ideen kommt es an, aber sie brauchen konkrete Formen von Zirkulation und Arbeit – und ich brauche meinen Lebensunterhalt.\n\nZugleich ist sie ein Ort, Dinge zu erfassen und zu ordnen, die nicht so alltäglich sind. Zumindest dient die Website als autobiografisches und marktbezogenes Dokument: Ich brauche Auftraggebende und ich teile gern Gedanken mit Menschen.",
+      "body": [
+        "Diese Website soll berufliche Wege öffnen. Auf Ideen kommt es an, aber sie brauchen konkrete Formen von Zirkulation und Arbeit – und ich brauche meinen Lebensunterhalt.",
+        "Zugleich ist sie ein Raum, Dinge zu zeigen, die nicht so alltäglich sind. Zumindest dient die Website als autobiografisches und marktbezogenes Dokument: Ich brauche Auftraggebende und ich tausche gern Gedanken mit Menschen aus."
+      ],
+      "imageAlt": "Porträt: eu9"
+    },
+    "fr": {
+      "title": "Note",
+      "excerpt": "Ce site est fait pour ouvrir des chemins professionnels. Les idées comptent, mais il leur faut des formes concrètes de circulation et de travail ; et il me faut aussi mes moyens.\n\nEn même temps, c’est un espace d’enregistrement et d’organisation de choses pas si banales. Au moins, le site fait office de registre autobiographique et tourné vers le marché : il me faut des clientes et clients et j’aime partager des pensées avec les gens.",
+      "body": [
+        "Ce site est fait pour ouvrir des chemins professionnels. Les idées comptent, mais il leur faut des formes concrètes de circulation et de travail ; et il me faut aussi mes moyens.",
+        "C’est pourtant aussi un espace d’exposition de choses pas si banales. Au moins, le site fait office de registre autobiographique et tourné vers le marché : il me faut des clientes et clients et j’aime échanger des pensées avec les gens."
+      ],
+      "imageAlt": "Portrait : eu9"
+    },
+    "it": {
+      "title": "Nota",
+      "excerpt": "Questo sito è pensato per aprire percorsi professionali. Le idee contano, ma hanno bisogno di forme concrete di circolazione e di lavoro; e a me serve anche il sostegno.\n\nÈ anche uno spazio di registrazione e organizzazione di cose non così comuni. Almeno, il sito fa da registro autobiografico e rivolto al mercato: ho bisogno di clienti e mi piace condividere pensieri con le persone.",
+      "body": [
+        "Questo sito è pensato per aprire percorsi professionali. Le idee contano, ma hanno bisogno di forme concrete di circolazione e di lavoro; e a me serve anche il sostegno.",
+        "È anche uno spazio di esposizione di cose non così comuni. Almeno, il sito fa da registro autobiografico e rivolto al mercato: ho bisogno di clienti e mi piace scambiare pensieri con le persone."
+      ],
+      "imageAlt": "Ritratto: eu9"
+    },
+    "zh-CN": {
+      "title": "说明",
+      "excerpt": "本站旨在打通职业路径。想法重要，但需要具体的流通与工作形态；我也要谋生。\n\n同时，这里也是记录和整理不那么寻常之事的地方。至少，本站兼具自传性与面向市场的记录：我需要客户，也喜欢与人分享想法。",
+      "body": [
+        "本站旨在打通职业路径。想法重要，但需要具体的流通与工作形态；我也要谋生。",
+        "同时，这里也是展示不那么寻常之物的地方。至少，本站兼具自传性与面向市场的记录：我需要客户，也喜欢与人交流想法。"
+      ],
+      "imageAlt": "肖像：eu9"
+    },
+    "zh-TW": {
+      "title": "註記",
+      "excerpt": "本站意在拓展職涯路徑。想法重要，但需要具體的流通與工作形式；我也要餬口。\n\n同時，這裡也是紀錄與整理不太尋常事物的空間。至少，本站兼具自傳與面向市場的紀錄：我需要客戶，也喜歡和人分享想法。",
+      "body": [
+        "本站意在拓展職涯路徑。想法重要，但需要具體的流通與工作形式；我也要餬口。",
+        "同時，這裡也是展示不太尋常事物的空間。至少，本站兼具自傳與面向市場的紀錄：我需要客戶，也喜歡和人交換想法。"
+      ],
+      "imageAlt": "肖像：eu9"
+    }
+  },
+  "sugestoes": {
+    "en": {
+      "title": "Suggestions",
+      "excerpt": "Share ideas, references, and finds in a short form.",
+      "body": [
+        "Leave suggestions about anything you like."
+      ]
+    },
+    "ko": {
+      "title": "제안",
+      "excerpt": "짧은 양식에 아이디어·자료·발견을 남깁니다.",
+      "body": [
+        "무엇이든 괜찮으니 제안을 남겨 주세요."
+      ]
+    },
+    "es": {
+      "title": "Sugerencias",
+      "excerpt": "Comparte ideas, referencias y hallazgos en un formulario breve.",
+      "body": [
+        "Deja sugerencias sobre lo que quieras."
+      ]
+    },
+    "ja": {
+      "title": "提案",
+      "excerpt": "短いフォームに、アイデア・参照先・発見を送れます。",
+      "body": [
+        "何についてでも、気軽に提案してください。"
+      ]
+    },
+    "de": {
+      "title": "Vorschläge",
+      "excerpt": "Ideen, Verweise und Funde in einem kurzen Formular teilen.",
+      "body": [
+        "Macht Vorschläge zu Themen, die euch umtreiben—zu allem, was euch wichtig ist."
+      ]
+    },
+    "fr": {
+      "title": "Suggestions",
+      "excerpt": "Partagez des idées, des références et des découvertes via un petit formulaire.",
+      "body": [
+        "Faites des suggestions sur ce que vous voulez."
+      ]
+    },
+    "it": {
+      "title": "Suggerimenti",
+      "excerpt": "Condividi idee, riferimenti e scoperte in un modulo breve.",
+      "body": [
+        "Lascia suggerimenti su qualsiasi cosa ti passi per la testa."
+      ]
+    },
+    "zh-CN": {
+      "title": "建议",
+      "excerpt": "在简短表单里分享想法、参考与发现。",
+      "body": [
+        "就任何你想说的事提建议吧。"
+      ]
+    },
+    "zh-TW": {
+      "title": "建議",
+      "excerpt": "用一個小表單，分享想法、參考與你發現的事物。",
+      "body": [
+        "有什麼想說的，盡管留下建議。"
+      ]
+    }
+  },
+  "roadmap-sh": {
+    "en": {
+      "title": "Roadmap.sh",
+      "excerpt": "roadmap.sh groups study roadmaps by role—such as frontend, backend, DevOps, and full stack—and also by specific technologies.",
+      "body": [
+        "roadmap.sh groups study roadmaps by role, such as frontend, backend, DevOps, and full stack, and also by specific technologies. The site works like a roadmap: it helps you visualize a plausible order of topics, how tools depend on each other, and the most common learning paths in each field.",
+        "It is useful to prioritize what to learn, see how topics connect, and choose more clearly what to learn next."
+      ],
+      "imageAlt": "Illustration: roadmap-style learning paths"
+    },
+    "ko": {
+      "title": "Roadmap.sh",
+      "excerpt": "roadmap.sh는 프론트엔드, 백엔드, DevOps, 풀스택 같은 역할별뿐 아니라 기술별로 정리된 학습 로드맵을 모아둡니다.",
+      "body": [
+        "roadmap.sh는 프론트엔드, 백엔드, DevOps, 풀스택 같은 역할별, 그리고 구체 기술별로 학습 로드맵을 정리해 둡니다. 사이트는 ‘지도’처럼, 주제 사이의 가능한 흐름, 도구 간 의존성, 영역마다 흔한 학습의 길이 어떤 모양인지 한눈에 보이게 합니다.",
+        "무엇을 우선해 공부할지, 주제끼리 어떻게 잇는지, 다음에 배울 것을 더 분명히 고를 때 쓰기 좋습니다."
+      ],
+      "imageAlt": "로드맵(학습 경로) 느낌의 그림"
+    },
+    "es": {
+      "title": "Roadmap.sh",
+      "excerpt": "roadmap.sh reúne itinerarios de aprendizaje según el rol (frontend, backend, DevOps, full stack) y según tecnologías concretas.",
+      "body": [
+        "roadmap.sh reúne itinerarios de aprendizaje organizados por rol (frontend, backend, DevOps, full stack) y por tecnologías. Funciona casi como un mapa: ayuda a ver la secuencia posible entre asuntos, las dependencias entre herramientas y los recorridos de aprendizaje más frecuentes en cada área.",
+        "Sirve para fijar prioridades de estudio, entender cómo se conectan los temas y decidir con más claridad qué aprender después."
+      ],
+      "imageAlt": "Ilustración tipo hoja de ruta (roadmap)"
+    },
+    "ja": {
+      "title": "Roadmap.sh",
+      "excerpt": "roadmap.sh には、フロントエンド、バックエンド、DevOps、フルスタックのような職能別学習路線図のほか、技術領域別の学習路線も揃います。",
+      "body": [
+        "roadmap.sh には、フロントエンド、バックエンド、DevOps、フルスタックなどの職能別、また特定技術に沿った学習の「道順」がまとまっています。地図のように、学ぶ順番の当たり、道具同士の依存、各分野でよくある学びの道筋の見取り図をつかみやすいです。",
+        "学習の優先度を決めたり、分野同士のつながりを掴み、次に学ぶ内容を少し明るく選ぶ助けになります。"
+      ],
+      "imageAlt": "ルート図風（ロードマップ風）の図"
+    },
+    "de": {
+      "title": "Roadmap.sh",
+      "excerpt": "roadmap.sh sammelt Lernpfade nach Rollen (Frontend, Backend, DevOps, Fullstack) und nach einzelnen Technologien.",
+      "body": [
+        "roadmap.sh bündelt Lernrouten nach Funktion, etwa Frontend, Backend, DevOps und Fullstack, und auch nach konkreten Technologien. Die Seite arbeitet wie ein Fahrplan: Sie macht sichtbar, in welcher Reihenfolge Themen sinnvoll sein können, welche Werkzeuge voneinander abhängen und welche Lernwege in den Bereichen üblich sind.",
+        "Gut, um Lernschwerpunkte zu setzen, Zusammenhänge zu sehen und klarer zu wählen, womit es als Nächstes losgeht."
+      ],
+      "imageAlt": "Stilisierte Lernwege in Roadmap-Optik"
+    },
+    "fr": {
+      "title": "Roadmap.sh",
+      "excerpt": "roadmap.sh rassemble des parcours d’apprentissage par rôle (frontend, backend, DevOps, full stack) et par technologies ciblées.",
+      "body": [
+        "roadmap.sh regroupe des parcours d’apprentissage classés par rôle—frontend, backend, DevOps, full stack—et par technologies précises. Le site joue le rôle d’une carte: il aide à visualiser l’enchaînement des sujets, les dépendances entre outils et les itinéraires d’apprentissage fréquents par domaine.",
+        "Pratique pour donner le pas à l’apprentissage, comprendre comment les thèmes se lient et trancher plus sereinement sur l’étape suivante."
+      ],
+      "imageAlt": "Illustration de parcours (“roadmap”)"
+    },
+    "it": {
+      "title": "Roadmap.sh",
+      "excerpt": "roadmap.sh raccoglie percorsi di studio per ruolo (frontend, backend, DevOps, full stack) e per tecnologie specifiche.",
+      "body": [
+        "roadmap.sh raccoglie road map di apprendimento organizzate per funzione, come frontend, backend, DevOps e full stack, e anche per tecnologie mirate. Il sito lavora come mappa: aiuta a vedere ordine e sequenza tra argomenti, le dipendenze tra strumenti e i tracciati d’apprendimento più comuni in ogni ambito.",
+        "Utile per fissare priorità d’esame, capire come i temi s’intreciano e scegliere con più limpidezza cosa studiare subito dopo."
+      ],
+      "imageAlt": "Illustrazione a mo’ di mappa (roadmap)"
+    },
+    "zh-CN": {
+      "title": "Roadmap.sh",
+      "excerpt": "roadmap.sh 汇总按角色划分的学习路线，例如前端、后端、DevOps、全栈，也覆盖具体技术。",
+      "body": [
+        "roadmap.sh 汇总按岗位（如前端、后端、DevOps、全栈）以及按具体技术区分的学习路线。站点像“路线图”一样，帮你看清主题间可能的推进顺序、工具间依赖，以及各方向的常见学路。",
+        "有助于安排学习重点、理解主题怎么衔接、并更清楚下一步该学哪一块。"
+      ],
+      "imageAlt": "学习路线（roadmap）风格的插图"
+    },
+    "zh-TW": {
+      "title": "Roadmap.sh",
+      "excerpt": "roadmap.sh 匯整依角色劃分的學習路徑，例如前後端、DevOps、全端，也涵蓋各種技術主題。",
+      "body": [
+        "roadmap.sh 把依職能（如前端、後端、DevOps、全端）及依技術的學習路徑都整理在這。網站像一張圖，幫你看清主題的銜接、工具之間的依賴、以及各領域常見的學法走向。",
+        "有助於訂學習的優先順序、看見主題如何牽在一起，並更清楚下一階段該讀什麼。"
+      ],
+      "imageAlt": "學習路線（roadmap風格）的示意圖"
+    }
+  },
+  "seeing-theory-brown": {
+    "en": {
+      "title": "Seeing Theory",
+      "excerpt": "Seeing Theory presents probability and statistics through interactive visualizations, covering ideas such as distributions, frequentist and Bayesian inference, regression, and other core material.",
+      "body": [
+        "Seeing Theory presents ideas from probability and statistics with interactive visualizations, covering topics such as distributions, frequentist and Bayesian inference, regression, and other core areas. Instead of leading with dry formalism, the project shows how these concepts look in motion and what they mean in intuitive terms."
+      ],
+      "imageAlt": "Visualization of a curve and probability (Seeing Theory)"
+    },
+    "ko": {
+      "title": "Seeing Theory",
+      "excerpt": "Seeing Theory는 상호작용 시각화로 확률·통계의 개념을 보여 주며, 분포, 빈도주의/베이지안 추론, 회귀 등 중심 주제를 다룹니다.",
+      "body": [
+        "Seeing Theory는 확률·통계를 상호작용하는 시각화로 설명하며, 분포, 빈도주의·베이지안 추론, 회귀, 그 밖에도 핵심 토론이 되는 머리를 다룹니다. 딱딱한 기호로만 시작하기보다, 개념이 실제로 어떻게 움직이고 직관적으로는 무엇을 말하려는지 먼저 눈으로 느끼게 하려는 곳입니다."
+      ],
+      "imageAlt": "곡선과 확률(Seeing Theory) 시각화"
+    },
+    "es": {
+      "title": "Seeing Theory",
+      "excerpt": "Seeing Theory presenta la probabilidad y la estadística con visualizaciones interactivas, cubriendo temas como distribuciones, inferencia frecuentista y bayesiana, regresión, y otras cuestiones centrales del ámbito.",
+      "body": [
+        "Seeing Theory ofrece conceptos de probabilidad y estadística a través de visualizaciones interactivas, y abarca, entre otros, distribuciones, inferencia frecuentista y bayesiana, regresión y tópicos básicos del terreno. En vez de comenzar por un formalismo seco, la propuesta muestra en pantalla el comportamiento de esas ideas y un sentido accesible."
+      ],
+      "imageAlt": "Visualización de curvas y de probabilidad (Seeing Theory)"
+    },
+    "ja": {
+      "title": "Seeing Theory",
+      "excerpt": "Seeing Theory は、分布、頻度主義/ベイズ推論、回帰、ほか領域の中核的話題を、操作できる可視化で扱います。",
+      "body": [
+        "Seeing Theory は、分布、頻度主義・ベイズ的推測、回帰、それに領域の中核的テーマのいくつかを、手で触れるような図解で扱います。公式から先に押しつけるのではなく、図形がどう動き、感覚的に何を指しているのか、動きのうちに押さえよう、という作り方です。"
+      ],
+      "imageAlt": "曲線と確率（Seeing Theory）"
+    },
+    "de": {
+      "title": "Seeing Theory",
+      "excerpt": "Seeing Theory führt Wahrscheinlichkeit und Statistik mit interaktiven Visualisierungen heran, zu Themen wie Verteilungen, frequentistischer und Bayes-Statistik, Regression u. a. Kernpunkte.",
+      "body": [
+        "Seeing Theory bringt Begriffe aus Wahrscheinlichkeitstheorie und Statistik per interaktiver Visualisierung näher—Verteilungen, frequentistische und Bayes-Inferenz, Regression und weitere grundlegende Gegenstände. Statt mit nackter Formalität zu starten, zeigen die Szenen, wie sich Muster fühlt und was man intuitiv daraus lesen kann."
+      ],
+      "imageAlt": "Kurven- und Wahrscheinlichkeitsdarstellung (Seeing Theory)"
+    },
+    "fr": {
+      "title": "Seeing Theory",
+      "excerpt": "Seeing Theory présente probabilités et statistiques en visualisations interactives, couvrant notamment des distributions, l’inférence fréquentiste et bayésienne, la régression, et d’autres cœurs de sujet du domaine.",
+      "body": [
+        "Seeing Theory propose probabilité et statistique à travers des visualisations actives, touchant p.ex. des distributions, l’inférence fréquentiste et bayésienne, la régression, et d’autres piliers du sujet. Plutôt que d’ouvrir par le symbolisme, le site montre d’abord l’allure de ces idées en mouvement et l’idée en langage de tous les jours."
+      ],
+      "imageAlt": "Visuel d’une courbe et d’une probabilité (Seeing Theory)"
+    },
+    "it": {
+      "title": "Seeing Theory",
+      "excerpt": "Seeing Theory presenta probabilità e statistica con visualizzazioni interattive, passando ad esempio per le distribuzioni, inferenze frequentista e bayesiana, la regressione, e altre questioni al centro del campo.",
+      "body": [
+        "Seeing Theory conduce probabilità e statistica con visualizzazioni interattive, coprendo distribuzioni, inferenze in senso frequenziale e bayesiano, la regressione, e temi strutturali. Piuttosto che aprire col formalismo puro, cerca di mostrare come stanno fatti, in movimento, e cosa siano, in parole semplici."
+      ],
+      "imageAlt": "Grafica di curva e probabilità (Seeing Theory)"
+    },
+    "zh-CN": {
+      "title": "Seeing Theory",
+      "excerpt": "Seeing Theory 以交互式可视化讲概率与统计，涵盖分布、频数/贝叶斯推理、回归等领域核心话题。",
+      "body": [
+        "Seeing Theory 用可操作的图解呈现概率和统计，涉及分布、经典频率派与贝叶斯推理、回归、以及本领域的多个核心点。与一味先铺公式不同，它先让你从图形里看这些对象如何动、在直观上在说什么。"
+      ],
+      "imageAlt": "曲线与概率的示意（Seeing Theory）"
+    },
+    "zh-TW": {
+      "title": "Seeing Theory",
+      "excerpt": "Seeing Theory 以可互動的圖表呈現機率與統計，涵蓋分佈、推論、迴歸，以及學科中的其他核心內容。",
+      "body": [
+        "Seeing Theory 用互動的畫面呈現機率、統計裡的觀念，有分佈、頻率/貝式推論、迴歸，和領域內的幾個大柱。重點不是一開始就丟出公式，而是讓圖在動的過程中，讓人先感覺概念長什麼樣、口語中又在說什麼意思。"
+      ],
+      "imageAlt": "曲線與機率的畫面（Seeing Theory）"
+    }
+  },
+  "state-foreign-language-training": {
+    "en": {
+      "title": "Foreign language training (NFATC)",
+      "excerpt": "Institutional information on language training and study-time estimates by language.",
+      "body": [
+        "https://www.state.gov/national-foreign-affairs-training-center/foreign-language-training — an institutional reference on language training within the U.S. State Department’s training center.",
+        "https://www.state.gov/national-foreign-affairs-training-center/foreign-language-training describes, in official terms, foreign-language training under the National Foreign Affairs Training Center, part of the U.S. State Department, including how such programs frame relative difficulty between languages and how long training from English is expected to take.",
+        "Useful for understanding how that kind of program is organized, and out of curiosity, to see how different study times are estimated from English, depending on the language."
+      ],
+      "imageAlt": "Symbol of languages and training"
+    },
+    "ko": {
+      "title": "외국어 연수(NFATC)",
+      "excerpt": "기관 정보로서의 언어 연수와 언어별 학습 시간 추정에 관한 소개입니다.",
+      "body": [
+        "https://www.state.gov/national-foreign-affairs-training-center/foreign-language-training — 미국 국무부 연수 체계 안에서의 언어 연수에 대한 기관 참고 자료입니다.",
+        "https://www.state.gov/national-foreign-affairs-training-center/foreign-language-training 페이지는 국무부 산하 National Foreign Affairs Training Center의 공식적 맥락에서 외국어 연수를 설명하며, 언어 간 상대적 난이도를 어떻게 잡는지, 영어를 기준으로 할 때 훈련에 걸릴 시간을 어느 정도로 보는지도 다룹니다.",
+        "그런 훈련이 어떻게 짜이는지 이해하는 데, 그리고 궁금할 때 ‘영어에서 출발해 몇이나 잡는지’ 비교해 보는 데 쓸 만합니다."
+      ],
+      "imageAlt": "언어와 훈련을 상징한 그림"
+    },
+    "es": {
+      "title": "Formación en lenguas extranjeras (NFATC)",
+      "excerpt": "Información institucional sobre formación en lenguas y estimaciones de tiempo de estudio según el idioma.",
+      "body": [
+        "https://www.state.gov/national-foreign-affairs-training-center/foreign-language-training — referencia institucional sobre formación en lenguas en el marco del centro de formación del Departamento de Estado de EE. UU.",
+        "https://www.state.gov/national-foreign-affairs-training-center/foreign-language-training presenta, en términos oficiales, la formación en lenguas extranjeras bajo el National Foreign Affairs Training Center, vinculado al Departamento de Estado de EE. UU., incluyendo cómo se matiza la dificultad relativa entre idiomas y el tiempo de formación supuesto desde el inglés.",
+        "Sirve para entender la lógica de este tipo de programas y, por curiosidad, para ver cómo se estiman plazos de estudio a partir del inglés según el idioma."
+      ],
+      "imageAlt": "Símbolo de lenguas y de formación"
+    },
+    "ja": {
+      "title": "外語訓練（NFATC）",
+      "excerpt": "訓練の制度面と、言語別の学習時間の目安に関する機関情報。",
+      "body": [
+        "https://www.state.gov/national-foreign-affairs-training-center/foreign-language-training — 米国国務省の訓練の枠組みにおける言語訓練に関する機関向けの参照先です。",
+        "https://www.state.gov/national-foreign-affairs-training-center/foreign-language-training では、国務省傘下の National Foreign Affairs Training Center に沿った外国語訓練の説明があり、言語間の相対的難度の捉え方や、英語から出発する場合の訓練期間の見当たり方についても示されています。",
+        "こうした訓練の組み方を掴みたいとき、また興味で「英語出発のとき、どのくらい想定するか」を眺めるのに役立ちます。"
+      ],
+      "imageAlt": "言語と訓練の象徴的な図"
+    },
+    "de": {
+      "title": "Sprachunterricht (NFATC)",
+      "excerpt": "Institutionelle Hinweise zu Sprachdienst und Stundenannahmen je Sprache.",
+      "body": [
+        "https://www.state.gov/national-foreign-affairs-training-center/foreign-language-training — institutioneller Hinweis auf Sprachunterricht im Umfeld des Ausbildungszentrums des U.S. Außenministeriums.",
+        "https://www.state.gov/national-foreign-affairs-training-center/foreign-language-training schildert, wie das State Department im National Foreign Affairs Training Center an Fremdsprachenausbildung herangeht, inkl. wie die relative Stufung zwischen Sprachen begründet ist und ab Englisch mit welcher Dauer kalkuliert werden kann.",
+        "Gut, um jene Programmlogik zu skizzieren, und nebenbei, um reines Interesse: wie Studienzeiten von Englisch aus gesehen in den Papieren angesetzt werden."
+      ],
+      "imageAlt": "Symbol für Sprachen und Ausbildung"
+    },
+    "fr": {
+      "title": "Formation aux langues étrangères (CNFAN)",
+      "excerpt": "Renseignements d’ordre institutionnel sur la formation linguistique et des repères de temps d’étude par langue.",
+      "body": [
+        "https://www.state.gov/national-foreign-affairs-training-center/foreign-language-training — renvoi institutionnel sur la formation en langues dans le dispositif du Department of State des États-Unis.",
+        "https://www.state.gov/national-foreign-affairs-training-center/foreign-language-training en décrit, au niveau officiel, celle conduite au National Foreign Affairs Training Center rattaché au State Department, y compris l’idée d’ordre de difficulté entre les langues et d’estimation, depuis l’anglais, de la charge horaire d’entraînement attendue.",
+        "Intéressant pour comprendre l’esprit d’un tel parcours et, en curieux, lire quelles plages de temps, depuis l’anglais, l’on retient en fonction de la langue cible."
+      ],
+      "imageAlt": "Symbole des langues et de la formation"
+    },
+    "it": {
+      "title": "Formazione in lingue straniere (NFATC)",
+      "excerpt": "Informazione istituzionale sulla formazione linguistica e stime orarie d’esercizio per idioma.",
+      "body": [
+        "https://www.state.gov/national-foreign-affairs-training-center/foreign-language-training — riferimento istituzionale sulla formazione linguistica nell’ambito del centro d’addestramento collegato al Dipartimento di Stato statunitense.",
+        "https://www.state.gov/national-foreign-affairs-training-center/foreign-language-training esplicita, in maniera d’ufficio, la formazione in lingue sotto al National Foreign Affairs Training Center, parte del Dipartimento di Stato, incluse le scale di difficoltà relative tra le lingue e l’orizzonte di ore necessarie partendo dall’inglese.",
+        "Serve a capirne la struttura e, per semplice interesse, a scorrere stime d’onore di lavoro da inglese secondo l’obiettivo scelto."
+      ],
+      "imageAlt": "Simbolo per lingue e addestramento"
+    },
+    "zh-CN": {
+      "title": "外语培训（NFATC）",
+      "excerpt": "以机构信息介绍语言培训及按语种的估计学时。",
+      "body": [
+        "https://www.state.gov/national-foreign-affairs-training-center/foreign-language-training — 关于美国国务院培训体系内语言培训的机构性参考。",
+        "https://www.state.gov/national-foreign-affairs-training-center/foreign-language-training 在官方层面对美国国务院体系下 National Foreign Affairs Training Center 的外语培训作说明，包括各语种间相对难度如何被看待、以及从英语起通常预期需要多少培训时长。",
+        "有助于了解这类项目如何被摆框架；也可出于好奇，看看从英语出发、不同语种的“学时账”在文件里长什么样。"
+      ],
+      "imageAlt": "语言与培训的符号性图示"
+    },
+    "zh-TW": {
+      "title": "外語訓練（NFATC）",
+      "excerpt": "從制度面寫的語言訓練資訊，以及依語言拆開的學習時數粗估。",
+      "body": [
+        "https://www.state.gov/national-foreign-affairs-training-center/foreign-language-training — 在國務院體制裡，關於語言訓練的一條制度性參考。",
+        "https://www.state.gov/national-foreign-affairs-training-center/foreign-language-training 從公文的筆觸，說隸屬美國國務院 National Foreign Affairs Training Center 下外語訓練的想像；裡面也寫了語言相對的難易座標，和從英語出發時、訓練大約抓多少時間。",
+        "幫人摸清楚這一類路線怎麼排，也可以純看熱鬧，對照從英語學到不同目標語時的時數是怎樣寫的。"
+      ],
+      "imageAlt": "象徵語言與訓練的圖"
+    }
+  },
+  "kaomoji-you-en": {
+    "en": {
+      "title": "Kaomoji (kaomoji.you)",
+      "excerpt": "A large catalog of kaomoji (text faces) to copy and paste, with the interface in English.",
+      "body": [
+        "https://kaomoji.you/en/ brings together many thousands of kaomoji—Unicode character patterns that look like Japanese-style expressions, animals, hand gestures, and memes in text—grouped by theme, ready to paste in chats, socials, or code.",
+        "Handy when you want a light or very expressive mood without depending only on built-in emojis, or to browse less common variants than your keyboard’s defaults."
+      ]
+    },
+    "ko": {
+      "title": "Kaomoji(kaomoji.you)",
+      "excerpt": "붙여 넣을 수 있는 kaomoji(문자로 만든 이모 표정)의 큰 모음, 인터페이스는 영어로 되어 있음.",
+      "body": [
+        "https://kaomoji.you/en/ 에는 kaomoji—이모티콘 느낌을 유니코드로 붙인 일본 스타일의 풍경·동작·놀거리·밈—가 수천 개 모여, 주제별로 나눠져, 채팅·SNS·코드에 곧장 붙일 수 있게 합니다.",
+        "시스템 이모지만으로는 톤이 부족할 때, 키보드 기본 조합에 없는 변주를 뒤질 때 쓰기 좋습니다."
+      ]
+    },
+    "es": {
+      "title": "Kaomoji (kaomoji.you)",
+      "excerpt": "Un catálogo de kaomoji (caretas hechas con texto) listas para copiar, con la interfaz en inglés.",
+      "body": [
+        "https://kaomoji.you/en/ reúne miles de kaomoji, combinaciones Unicode con aire de expresiones, animales, gestos y chistes visuales al estilo japonés, en temas, listas para chats, redes o código.",
+        "Sirve para un tono ligero o expresivo sin atarse solo a los emojis de sistema, o para curiosear variantes menos habituales que el teclado."
+      ]
+    },
+    "ja": {
+      "title": "Kaomoji (kaomoji.you)",
+      "excerpt": "顔文字（kaomoji）を量で集め、コピペしやすくした目録。表記面は英語。",
+      "body": [
+        "https://kaomoji.you/en/ では、顔をかたどったユニコードの並び、動物、仕草、ミームっぽい図、といった和風の顔文字を、お題立てし、チャット·SNS·コードのどれにも挿しやすい形で並べています。",
+        "OS 絵文字だけに頼れないとき、キーに載っていない遊びを当てにいくのに向きます。"
+      ]
+    },
+    "de": {
+      "title": "Kaomoji (kaomoji.you)",
+      "excerpt": "Eine lange Sammlung Kaomoji (Gesichter aus Zeichen) zum Einfügen, Oberfläche in Englisch.",
+      "body": [
+        "https://kaomoji.you/en/ sammelt viele Tausend Kaomoji, Textgesichter in Unicode, die in japanischer Stimmung Mienen, Tiere, Gesten und Maimais nachzeichnen, nach Themen, zum Kopieren in Chats, Netz oder Code.",
+        "Praktisch, wenn leichter oder satter Ausdruck gebraucht wird als nur die vorgegebenen System-Emojis, oder wenn seltener Klänge längs der Tastaturliste gesucht werden."
+      ]
+    },
+    "fr": {
+      "title": "Kaomoji (kaomoji.you)",
+      "excerpt": "Vaste choix de kaomoji (visages en caractères) prêts à coller, interface en anglais.",
+      "body": [
+        "https://kaomoji.you/en/ rassemble un très grand lot de kaomoji, bouts Unicode façon expressions, animaux, gesticulations et mèmes, rangés par thèmes, à coller dans tchats, réseaux, ou code.",
+        "Utile pour un ton léger ou expressif, sans s’en remettre seulement aux emojis système, ou pour feuilleter des variantes moins courantes que le clavier par défaut."
+      ]
+    },
+    "it": {
+      "title": "Kaomoji (kaomoji.you)",
+      "excerpt": "Un grande catalogo di kaomoji (faccine di testo) pronte al copia-incolla, con interfaccia in inglese.",
+      "body": [
+        "https://kaomoji.you/en/ raccoglie migliaia di kaomoji, combinazioni Unicode in stile giapponese che ricalcano espressioni, animali, gesti e meme, divise per tema, pronta da incollare in chat, social o nel codice.",
+        "Comoda quando serve un registro leggero o poco usual senza contare solo sulle emoticon preinstallate, o per rintracciare varianti più rare di quelle in tastiera predefinita."
+      ]
+    },
+    "zh-CN": {
+      "title": "颜文字 (kaomoji.you)",
+      "excerpt": "可复制的颜文字大目录，界面为英文。",
+      "body": [
+        "https://kaomoji.you/en/ 收了很多 kaomoji——以 Unicode 拼出、和式气质的表情、动物、手势、梗图，按题类排好，能直接贴到聊天、社交或代码里。",
+        "在不想只靠系统自带表情、或要翻键盘不常现身的花样时，会很顺手。"
+      ]
+    },
+    "zh-TW": {
+      "title": "顏文字 (kaomoji.you)",
+      "excerpt": "大份顏文字（文字臉譜）目錄，一鍵複製，介面為英文。",
+      "body": [
+        "https://kaomoji.you/en/ 匯了成千上萬組 kaomoji，用萬國碼拼的日式表情、動作、小動物、哏，有主題分攤，貼在聊天、社群或碼上都可以。",
+        "想讓氣氛輕一點、表現力高一點，卻不只想靠系內建圖，或要挖預設鍵盤不常跑出的變體，這裡好用。"
+      ]
+    }
+  },
+  "scp-wiki-wikidot": {
+    "en": {
+      "title": "SCP Foundation Wiki (Wikidot)",
+      "excerpt": "A collaborative wiki around the fictional universe of the SCP Foundation—containment reports, tales, and community resources.",
+      "body": [
+        "https://scp-wiki.wikidot.com/ is the main English hub for the SCP Foundation project: numbered file-style pages, short stories, formats for “Groups of Interest,” thematic hubs, community contests, and reading guides for newcomers and writers.",
+        "The material is community-written; the site documents licensing (mostly Creative Commons BY-SA 3.0) and how to quote—handy if you read, comment, or make derivatives while respecting the terms."
+      ]
+    },
+    "ko": {
+      "title": "SCP 재단 위키 (Wikidot)",
+      "excerpt": "SCP Foundation 가공 세계를 둘러싼 협업 위키: 보고서, 단편, 공동체 자원.",
+      "body": [
+        "https://scp-wiki.wikidot.com/ 는 영어권 SCP Foundation의 중심 허브로, 일련의 보고서 형식 글, 단편(테일), 집단 포맷, 주제별 허브, 대회, 읽이·쓰기를 위한 안내가 이어집니다.",
+        "콘텐츠는 봉사자의 손이며, 위키 자체가 CC BY-SA 3.0(대다수) 등의 라이선스와 인용 규칙을 씁니다—뎃글·창작 전에 꼼꼼히 읽을 만합니다."
+      ]
+    },
+    "es": {
+      "title": "Wiki de la Fundación SCP (Wikidot)",
+      "excerpt": "Wiki en torno al universo ficticio de la SCP: informes, relatos y recursos de la comunidad.",
+      "body": [
+        "https://scp-wiki.wikidot.com/ es el eje de la wiki en inglés: expedientes con formato de informe, relatos (tales), formatos de grupos de interés, índices temáticos, concursos y manuales de lectura y de escritura.",
+        "El contenido la escribe gente de la comunidad; en la propia wiki se fijan una licencia (a menudo CC BY-SA 3.0) y pautas de cita, útil si comentas o haces obras derivadas bajo términos legales."
+      ]
+    },
+    "ja": {
+      "title": "SCP基金會ウィキ (Wikidot)",
+      "excerpt": "虚構の世界観のまわりをコミュニティが書き足す英語圏中心の大規模なウィキ。",
+      "body": [
+        "https://scp-wiki.wikidot.com/ には、報告体の掲示物、短編（テール）、興味団体用フォーマット、主題集、コン、読者・執筆用の導が並びます。",
+        "寄稿者が書いていて、多くの頁が CC BY-SA 3.0 のような帰属条件を掲示するので、抜用や再制作の前に一読の価値が出ます。"
+      ]
+    },
+    "de": {
+      "title": "SCP-Foundation-Wiki (Wikidot)",
+      "excerpt": "Gemeinschaftswiki im fiktiven Umfeld der SCP Foundation, mit Berichten, Kurzprosa und Ressourcen der Szene.",
+      "body": [
+        "https://scp-wiki.wikidot.com/ ist der Leit-Tor der englischsprachigen Foundation: in Akten-Optik, Kurzprosa, „Groups of interest“, Themen-Hubs, Wettbewerbe und Lese- und Schreibhilfe.",
+        "Menschlich geschrieben; in der Seite meist Lizenzerklärung (häufig CC BY-SA 3.0) und Umgang mit Zitaten—gut zu prüfen vorm Kommentieren, Teilen, Ableiten."
+      ]
+    },
+    "fr": {
+      "title": "Wiki de la Fondation SCP (Wikidot)",
+      "excerpt": "Wikis collaboratifs bâtis autour de l’univers fictif de la fondation, avec dossiers, contes, et ressource communauté.",
+      "body": [
+        "https://scp-wiki.wikidot.com/ tient de portail pour la tranche en anglais : textes d’enregistrement, nouvelles, formats pour des groupes, hubs thématiques, concours, manuels pour lect·eur·euses et plume.",
+        "Le travail s’y fait côté bénévole·es ; la législation, souvent en CC BY-SA 3.0, s’y lit en clair, avec des repères de citation, utile dès l’on cite ou décline."
+      ]
+    },
+    "it": {
+      "title": "SCP Foundation Wiki (Wikidot)",
+      "excerpt": "Un wiki aperto sull’universo immaginario di SCP, con schede, racconti e piste di comunità.",
+      "body": [
+        "https://scp-wiki.wikidot.com/ è l’inquadramento principale per l’edizione inglese : «file» a numerazione, racconti, modelli per gruppi d’interesse, raccordi, concorsi, guida per l’onboarding.",
+        "Scrivono in massa le persone della base volontari ; la banca licenze, di solito in CC BY-SA 3.0, s’inconta qui, oltre alle punte per citar bene—d’aiuto a chi legge, cita, rifà."
+      ]
+    },
+    "zh-CN": {
+      "title": "SCP 基金会维基站（Wikidot）",
+      "excerpt": "以虚构的 SCP 宇宙为轴心由众人协作维护的维基站：档案、短故事、社群材料。",
+      "body": [
+        "https://scp-wiki.wikidot.com/ 是英语圈的核心入口，编号成串的类档案文本、短故事、兴趣团体体例、分主题门径、赛会，以及为新人/作者设的阅读与写作路标。",
+        "内容由社区志愿者撰写，站内多数页声明 CC BY-SA 3.0 等许可，并给引用提示——在点评、二创、转载前，值得对一眼。"
+      ]
+    },
+    "zh-TW": {
+      "title": "SCP 基金會維基（Wikidot）",
+      "excerpt": "圍著 SCP 基金會的架空世界、由人一起寫的共筆；檔案、短篇、社羣資源。",
+      "body": [
+        "https://scp-wiki.wikidot.com/ 是英文圈的主戶，有成串像簡報的收檔、短篇（tales）、集團格式、專題導、賽、給讀/寫的人看的導。",
+        "內文由志工寫的；站在頁上多半會寫到授權（多數是 CC BY-SA 3.0）和怎麼引用——在留言、轉、改作之前先看清會好。"
+      ]
+    }
+  },
+  "barista-hustle-video-archive": {
+    "en": {
+      "title": "Barista Hustle—video archive",
+      "excerpt": "Technical video about coffee: extraction, milk, equipment, water, and quality control.",
+      "body": [
+        "https://www.baristahustle.com/video-archive-main/ gathers Barista Hustle’s video archive: short classes and demonstrations on espresso, immersion, percolation, latte art, refractometers, water, processing, and more, grouped by course or topic.",
+        "Some of the library is free; other pieces need a paid login on the site. The “Free Videos” pages and the module index are worth a look before subscribing."
+      ]
+    },
+    "ko": {
+      "title": "Barista Hustle—영상 아카이브",
+      "excerpt": "커피 기술 영상: 추출, 우유, 머신, 물, 품질 관리.",
+      "body": [
+        "https://www.baristahustle.com/video-archive-main/ 에 Barista Hustle 영상이 모이는데, 에스프레소, 침지, 퍼콜레이션, 라떼아트, 굴절계, 물, 가공, 그밖에 기술·조작을 잘게 쪼갠 쇼와 짧은 강, 코스/주제로 묶임.",
+        "일부는 ‘무료’로 맞춰 두고, 몇 절은 유료/로그인이 필요. 구독을 올리기 전에 ‘Free Videos’와 모듈색인을 둘러보면 감이 옵니다."
+      ]
+    },
+    "es": {
+      "title": "Barista Hustle—archivo de vídeos",
+      "excerpt": "Vídeos técnicos sobre café: extracción, leche, máquinas, agua y control de calidad.",
+      "body": [
+        "https://www.baristahustle.com/video-archive-main/ reúne el archivo de vídeos de Barista Hustle: clases breves y demostraciones sobre espresso, inmersión, percolación, latte art, refractómetros, agua, procesamiento y mucho más, agrupadas por curso o tema.",
+        "Parte del catálogo se ofrece como gratis; otras piezas requieren suscripción o inicio de sesión. Vale recorrer las secciones «Free Videos» y el índice por módulo antes de suscribirse."
+      ]
+    },
+    "ja": {
+      "title": "Barista Hustle—動画アーカイブ",
+      "excerpt": "コーヒーに関する技術的な映像：抽出、ミルク、機材、水、品質管理。",
+      "body": [
+        "https://www.baristahustle.com/video-archive-main/ に Barista Hustle の動画アーカイブが揃います。短い授業や実演で、エスプレッソ、浸漬、パーコレーション、ラテアート、濃度計、水、プロセスなど、コースやテーマごとにまとまっています。",
+        "無料扱いの枠のほか、登録・サブスク制の本編もあります。契約前に Free Videos やモジュール別目次を当たる価値があります。"
+      ]
+    },
+    "de": {
+      "title": "Barista Hustle—Videoarchiv",
+      "excerpt": "Technische Kurzvideos zu Kaffee: Extraktion, Milch, Anlagen, Wasser und Qualitätssicherung.",
+      "body": [
+        "https://www.baristahustle.com/video-archive-main/ bündelt die Videosammlung von Barista Hustle: kompakte Lektionen und Demos zu Espresso, Immersion, Perkolation, Latte Art, Refraktometern, Wasser, Aufbereitung u. v. m., nach Kursen oder Themen gegliedert.",
+        "Ein Teil kostenlos, andere hinter Anmeldung/Abonnement. Vor Kauf/Termin: «Free Videos»-Bereich und die Modulübersichten checken."
+      ]
+    },
+    "fr": {
+      "title": "Barista Hustle—archive vidéo",
+      "excerpt": "Vidéos de fond sur le café : extraction, lait, machines, eau, contrôle de qualité.",
+      "body": [
+        "https://www.baristahustle.com/video-archive-main/ concentre l’archive de Barista Hustle, micro-cours et démonstrations sur expresso, immersion, percolation, art latte, réfractomètre, eau, process, de plus, selon thème/parcours.",
+        "Un volet se voit en libre accès; d’autres demandent compte payant. Avant de souscrire, parcourir « Free Videos» et l’atlas de modules, ça sert autant d’y retourner."
+      ]
+    },
+    "it": {
+      "title": "Barista Hustle—archivio video",
+      "excerpt": "Contenuti sull’arte del caffè, estrattiva, latte, strumenti, acqua, qualità",
+      "body": [
+        "https://www.baristahustle.com/video-archive-main/ accoglie la videoteca Barista Hustle: lezioni brevissime, demo, espresso, immersion, percl., art latte, rifratt, acqua, lavor, ancora, raccolte per lezione/argomento come nel brand.",
+        "Dove riportato, gratis, altre dietro sottoscrizione o login. Prima d’iscriver, « Free Videos» e mappa a moduli, paio di minuti, conviene."
+      ]
+    },
+    "zh-CN": {
+      "title": "Barista Hustle—视频库",
+      "excerpt": "与咖啡有关的技术性影像：萃取、牛乳、设备、水、品管。",
+      "body": [
+        "https://www.baristahustle.com/video-archive-main/ 把 Barista Hustle 的视频成库：短讲与实演，涉及浓缩、浸泡、穿滤、拉花、糖度/折射、水、处理、更多，按课或题聚起来。",
+        "一部分标为免费；还有要登入或买的段。在订阅前值得扫一眼「Free Videos」和按模块的索引。"
+      ]
+    },
+    "zh-TW": {
+      "title": "Barista Hustle—影片庫",
+      "excerpt": "咖啡的技術影片：萃取、奶、機、水、品管。",
+      "body": [
+        "https://www.baristahustle.com/video-archive-main/ 是 Barista Hustle 的影庫：短帶的課＋實作，有濃縮、浸、濾、拉花、濃度棒、水、處理、還有別的，依課或主題櫃起來。",
+        "有的列在免；有的要登/付。在付年費前，先把「Free Videos」、模組的目，翻兩下就好。"
+      ]
+    }
+  },
+  "usenothing-timer": {
+    "en": {
+      "title": "Nothing—«simply do nothing»",
+      "excerpt": "A minimal timer to consciously choose to do nothing for a while.",
+      "body": [
+        "https://usenothing.com/ offers «Nothing», where you set how long you will «do nothing» (or leave it open), start the timer, and the page simply counts time—no goals, no gamification, no to-do list: the break itself is the point.",
+        "The on-page copy suggests stepping away from the screen if that helps, not fixating on the numbers; it includes quick presets (1–60 minutes, etc.) and the author (Maze) points to the source on GitHub."
+      ]
+    },
+    "ko": {
+      "title": "Nothing—«simply do nothing»",
+      "excerpt": "잠시 ‘아무 것도 안 하기’를 골라 의식적으로 쉬게 하려는, 지극히 단순한 타이머.",
+      "body": [
+        "https://usenothing.com/ 는 Nothing: 얼마 동안 ‘아무것도 안 하기’로 둘지(혹은 제한을 두지 않을지) 고른 뒤, 타이머를 돌리기만 합니다. 목표·뱃지·할일 없음, 휴식이 제목이 됩니다.",
+        "본문은 눈에 띄는 숫자에 매달리느냐보다, 필요하면 화면만 떨어져 쉬라 쪽을 누릅니다(빠른 1~60분 등, 저자 Maze, GitHub 소스). "
+      ]
+    },
+    "es": {
+      "title": "Nothing—«simply do nothing»",
+      "excerpt": "Temporizador minimalista para elegir con consciencia no hacer nada durante un intervalo.",
+      "body": [
+        "https://usenothing.com/ presenta «Nothing» «no hacer nada»; eliges (o dejas al aire) la duración, pones a contar, sin metas, ni puntuaciones, ni tareas, la idea es que el descanso sea el fin en sí.",
+        "El copy insiste, si conviene, en dejar de mirar al panel; trae ajustes rápidos, y Maze, el autor, enlaza a GitHub."
+      ]
+    },
+    "ja": {
+      "title": "Nothing—「simply do nothing」",
+      "excerpt": "一時的に「何もしない」と選ぶ、極小のタイマー。",
+      "body": [
+        "https://usenothing.com/ の「Nothing」では、どれくらい「何もしない」か（時間を決めないままにしてもよい）を選び、スタートすれば、ページはただ時を数えるだけです。目標、ゲーミフィケーション、ToDo なし。休むこと自体が目的、という立て方です。",
+        "サイトの文面は、数字に釘づけになるのではなく、分けあればスクリーンから身を外す価値がある、と重ねます。1〜60 分などの素早いプリセットがあり、作者 Maze は GitHub にコードを置いています。"
+      ]
+    },
+    "de": {
+      "title": "Nothing—«einfach nichts tun»",
+      "excerpt": "Sehr reduzierter Timer, um bewusst für eine Weile wirklich nichts zu tun.",
+      "body": [
+        "https://usenothing.com/ bietet «Nothing»: Wähle, wie lange du «nichts tun» willst (oder lasse es offen), starte, und die Seite zählt – ohne Ziele, Gamification oder Aufgabenliste. Die Pause selbst zählt.",
+        "Der begleitende Text betont, dass Sinn in Abstand vom Bildschirm stecken kann, nicht in starrem Starren auf den Zähler. Schnellvorgaben (1–60 Minuten, usw.); Autor (Maze) verweist auf Quellcode bei GitHub."
+      ]
+    },
+    "fr": {
+      "title": "Nothing—« rien faire, simplement »",
+      "excerpt": "Chronomètre minimal, pour choisir consciemment de ne rien faire pendant un moment.",
+      "body": [
+        "https://usenothing.com/ offre «Nothing» : vous règlez (ou laissez libre) le temps de « ne rien faire », vous lancez, et le site compte, sans but, score ni liste. Le vrai propos, c’est l’écart lui-même.",
+        "Le texte rappelle qu’on peut, si besoin, quitter l’écran, plutôt que se fixer sur le chiffre. Préréglages rapides (1 à 60 min, etc.) ; l’auteur, Maze, indique le dépôt Git."
+      ]
+    },
+    "it": {
+      "title": "Nothing—«semplicemente non far nulla»",
+      "excerpt": "Timer minimo, per scegliere, con coscienza, di non far nulla per un lasso scelto.",
+      "body": [
+        "https://usenothing.com/ offre «Nothing» : si imposta (o lascia aperto) per quanto non si voglia fare, si avvia, e basta, senza punte, né liste. Il proposito è l’inazione consapevole, fine a sé.",
+        "Il testo sottolinea, se serve, allontanare lo schermo piuttosto che fissare il contatore, con preset 1-60, ecc.; sorgente, per Maze, in Git."
+      ]
+    },
+    "zh-CN": {
+      "title": "Nothing—「就放着」",
+      "excerpt": "很薄的计时，用来有意识地选“暂时什么也不做”。",
+      "body": [
+        "https://usenothing.com/ 上的 Nothing 让你写（也可以不写满）要「放空」的时长、按开始，就计秒；无任务、不积分、无清单，休息是主角。",
+        "文里说别死盯数字、离开屏也行，有 1-60 分等快捷。代码见 Git、作者 Maze。"
+      ]
+    },
+    "zh-TW": {
+      "title": "Nothing—「乾脆放空」",
+      "excerpt": "一個小計時，讓你自覺在一段空檔內不做事。",
+      "body": [
+        "https://usenothing.com/ 上的 Nothing 讓人選（也能留空不設）要「不做事」多久，一按，頁就數秒；不跑目、不農、不夾待辦，放鬆本身就是目的。",
+        "內文說，別一直盯，必要時關上螢。有 1-60 分一類捷徑；Maze, Git 也有寫到。"
+      ]
+    }
+  },
+  "wolfram-alpha": {
+    "en": {
+      "title": "Wolfram|Alpha",
+      "excerpt": "Wolfram|Alpha is a computational knowledge and calculation tool that returns answers, plots, and data from natural-language queries and the Wolfram knowledge base.",
+      "body": [
+        "Wolfram|Alpha is a search-and-calculation system that returns answers, figures, and results in natural language, powered by the Wolfram knowledge base. It covers math, stats, physics, chemistry, unit conversion, graphing, and more.",
+        "A handy place to check results, explore functions, look at shapes of expressions, and try problem-solving without a full computer algebra system. Also useful for quick study checks, verification, and experimentation."
+      ],
+      "imageAlt": "Visual identity in orange (Wolfram|Alpha)"
+    },
+    "ko": {
+      "title": "Wolfram|Alpha",
+      "excerpt": "Wolfram|Alpha 는 자연어로 질의하면 Wolfram 지식 기반을 바탕으로 답·시각화·수치를 내주는 ‘계산형’ 질의 도구다.",
+      "body": [
+        "Wolfram|Alpha 는 자연어·지식 엔진을 통해 수학, 통계, 물리, 화학, 단위 변환, 그래프 등 광범한 유형에 대응하는 검색·계산을 묶는다. 상징적 대수 전체를 깐지 않고도, 결과를 확인·함수를 탐·식의 모습을 눈으로 쓰고, 문제를 손댈 수 있게 정돈한다.",
+        "빨리 쓰는 학습·검산·감(試)용의 보조로도 쓰기 쉬운 편이며, ‘큰’ CAS 를 설치하지 않는 상황에서 쓰기에 좋다."
+      ],
+      "imageAlt": "오렌지 톤의 Wolfram|Alpha 시각(브랜드) 이미지"
+    },
+    "es": {
+      "title": "Wolfram|Alpha",
+      "excerpt": "Wolfram|Alpha es una herramienta de búsqueda y cálculo basada en lenguaje natural, que ofrece respuestas, gráficos y resultados a partir de la base de conocimiento de Wolfram.",
+      "body": [
+        "Wolfram|Alpha, en la práctica, ofrece consultas y cálculo en lenguaje natural, apoyada en el conocimiento de la Wolfram. Abarca de matemáticas y estadística a física y química, con conversión de unidades, gráficos, y otras clases frecuentes de peticiones.",
+        "Conviene para comprobar resultados, ojear el comportamiento de funciones, ver de un vistazo expresiones y tanteos sin montar, entero, un álgebra simbólica. También ayuda, en tareas pequeñas, en estudio, comprobación y juego con problemas."
+      ],
+      "imageAlt": "Identidad de marca naranja (Wolfram|Alpha)"
+    },
+    "ja": {
+      "title": "Wolfram|Alpha",
+      "excerpt": "Wolfram|Alpha は、自然文に近い聞き方を受け、Wolfram の知識庫に基づいて数値、図、要約的な“答”を出す、計算寄りの知識型検索（ツール群）の代表例。",
+      "body": [
+        "Wolfram|Alpha は、知識エンジン＋数式/数値処理の芯で、数学・統・物理・化学、単位換、グラフなど、扱いの違う問を一本に畳めます。一括の CAS を据えぬに、得たい答の雰囲れ、式の格好、図、をすぐ睨むのに向いています。",
+        "自宅の大きい代数系をいじらず、検算、見取り、実験ぽい試行をはさむのに、手早い。小さい宿題、ちょい確認、一時的な仮想実験にも乗る。"
+      ],
+      "imageAlt": "Wolfram|Alpha：オレンジ系の目印（ブランド図形）"
+    },
+    "de": {
+      "title": "Wolfram|Alpha",
+      "excerpt": "Wolfram|Alpha ist ein rechner­gestütztes Auskunftssystem, das in natürlicher Sprache formulierte Fragen mit der Wolfram-Wissensbasis beantwortet und dabei Zahlen, Grafiken und weitere Resultate liefert.",
+      "body": [
+        "Wolfram|Alpha fasst Suchen, Rechnen und Kurzantworten in einem Werkzeug zusammen und reicht dabei recht weit: Mathematik, Stochastik, Physik, Chemie, Einheiten, Diagramme, und mehr. Dazu braucht man nicht vollwertig ein mathematisches Voll­system lokal installieren, um schnell Ergebnisse zu prüfen, Verläufe anzusehen und mit Ausdrücken zu spielen.",
+        "Praktisch fürs schnelle Lernen, Gegenrechnen und schnelle Probleme ausprobieren, ohne gleich ein riesiges Computer-Algebra-Programm vollständig einzurichten."
+      ],
+      "imageAlt": "Wolfram|Alpha (Logo in Orange)"
+    },
+    "fr": {
+      "title": "Wolfram|Alpha",
+      "excerpt": "Wolfram|Alpha est un outil de requêtes et de calcul qui, à partir du langage courant et d’une base de connaissances Wolfram, retourne réponses, graphiques et résultats chiffrés.",
+      "body": [
+        "Dans l’esprit, Wolfram|Alpha regroupe moteur de requêtes, calcul, et fiches, et couvre math, stat, physique, chimie, changements d’unités, graphismes, etc. C’est pratique pour vérifier un résultat, se faire la main sur une forme, voir comment une expression se comporte, sans d’abord encombrer la machine d’une lourde suite d’algèbre symbolique pour tout le train — à condition que ce degré d’exigence suffise.",
+        "Aussi utile, au quotidien, comme filet rapide pour des révisions, brouillons, essais, petites manipulations, sans vouloir, à chaque instant, l’environnement d’un gros outil d’analyse symbolique «haut de gamme» entièrement déployé."
+      ],
+      "imageAlt": "Wolfram|Alpha (visuel de marque orange)"
+    },
+    "it": {
+      "title": "Wolfram|Alpha",
+      "excerpt": "Wolfram|Alpha unisce strumenti di calcolo, ricerca e conoscenza ed espone, partendo da richieste quasi in linguaggio naturale, numeri, grafici e tabelle, basandosi sull’archivio Wolfram.",
+      "body": [
+        "Copre matematica, statistica, fisica, chimica, unità, grafici e tanti tipi comuni di domanda; non serve installare in locale un sistema algebrico completo per controllare un esito, dare un’occhiata a una funzione o a come si presenta un’espressione.",
+        "È comodo anche come sostegno rapido a studio, ricalcolo e sperimenti leggeri, quando non serva tutta la sovrastruttura di un CAS installato, grosso, «da laboratorio»."
+      ],
+      "imageAlt": "Wolfram|Alpha (marchio arancione)"
+    },
+    "zh-CN": {
+      "title": "Wolfram|Alpha",
+      "excerpt": "Wolfram|Alpha 基于 Wolfram 的知识与引擎，以接近自然话的方式，给出数、表、与画，属于“会算、也会答几笔”的检索+计算。",
+      "body": [
+        "覆盖从数学/统计/物理/化学/单位/画/许多常见问法，不必在本地装一整个大 CAS，就可以核结果、看式样、出图、试一截题。",
+        "作为快速对答案、学里夹缝的小验证、随手尝试，也顺手。适合不想先铺一整套符号线的人。"
+      ],
+      "imageAlt": "Wolfram|Alpha 橙色系标识"
+    },
+    "zh-TW": {
+      "title": "Wolfram|Alpha",
+      "excerpt": "Wolfram|Alpha 是貼近自然句、靠 Wolfram 的知，吐數、吐圖的「半算、半知」的線。",
+      "body": [
+        "含數/統/物/化/換/畫/一長串。不必先裝一顆完整 CAS 也能，對一對、看圖、試短題。",
+        "學的旁證、寫的粗核、一時的試，也好接。不愛先鋪長符號的，能拿來就手。"
+      ],
+      "imageAlt": "Wolfram|Alpha 的橘紅圖"
+    }
+  },
+  "nature-human-behaviour-reviews-analysis": {
+    "en": {
+      "title": "Nature Human Behaviour - Reviews & Analysis",
+      "excerpt": "The “Reviews & Analysis” section of Nature Human Behaviour brings together overview-style pieces—synthesis, commentary, and review formats such as Review Article, Perspective, News & Views, and Research Briefing.",
+      "body": [
+        "The Reviews & Analysis section in Nature Human Behaviour curates review-style writing: synthesis, interpretive essays, and commentary, including article types like Review Article, Perspective, News & Views, and Research Briefing. It is oriented less around one-off empirical monographs and more toward mapping debates, outcomes, and directions in fields tied to human behavior.",
+        "A useful on-ramp to survey-level reading in psychology, quantitative social science, cognitive neuroscience, and public-policy angles on behavior, before wading into more technical research papers."
+      ]
+    },
+    "ko": {
+      "title": "Nature Human Behaviour - Reviews & Analysis",
+      "excerpt": "Nature Human Behaviour의 Reviews & Analysis 란, 합성·해설·코멘트 성격의 글을, Review Article·Perspective·News & Views·Research Briefing 등 형식과 함께 한데 묶는 코너다.",
+      "body": [
+        "이 코너는 ‘한 건의 긴 실험보고’보다, 최근 논쟁·결과·흐름을 정리하고 지도에 올리는 쪽이 중심이다. 인행동과 맞닿는 여러 전공을 가로질러 읽는 데, 입구로 괜찮다.",
+        "심리·수적 사회과학·인지뇌과학·(행동과 엮인) 공공정책, 같은 넓고 얕은 독서를, 더 기술적인 1편 1편에 들어가기 전, 선행으로 쓰기에 좋다."
+      ]
+    },
+    "es": {
+      "title": "Nature Human Behaviour - Reviews & Analysis",
+      "excerpt": "La sección “Reviews & Analysis” de Nature Human Behaviour reúne textos de síntesis, interpretación y comentario, en formatos como Review Article, Perspective, News & Views o Research Briefing.",
+      "body": [
+        "Pone el acento menos en un solo informe empírico y más en ordenar debates, resultados y rumbos recientes en entornos ligados al comportamiento humano, leyéndolos, sobre todo, como visión de conjunto.",
+        "Resulta un buen punto de entrada, antes de pasar a artículos técnicos profundos, en psicología, ciencia social cuantitativa, neurociencia cognitiva y cuestiones de política pública sobre comportamiento."
+      ]
+    },
+    "ja": {
+      "title": "Nature Human Behaviour - Reviews & Analysis",
+      "excerpt": "『Nature Human Behaviour』誌上の “Reviews & Analysis” は、総説・解説・時評的な枠(Review Article, Perspective, News & Views, Research Briefing 等)の寄せ集めである。",
+      "body": [
+        "一編の大きな実証報告、というよより、最近の争点・帰結・方向性を、人に関わる領域を横断して、眺める場に近い。",
+        "心理・量的社会・認知神経・(行動に手を出す)政策、のうち、全景を食べてから、もっと歯の立つ理論/実データの作へ足を出す、手前づかりに、向いている。"
+      ]
+    },
+    "de": {
+      "title": "Nature Human Behaviour - Reviews & Analysis",
+      "excerpt": "Die Sektion „Reviews & Analysis“ in Nature Human Behaviour sammelt Übersichts-, Deutungs- und Kommentar­texte, unter anderem in den Formaten Review Article, Perspective, News & Views, Research Briefing.",
+      "body": [
+        "Gemeint ist weniger das eine lange, empirische Stückarbeit und mehr, Debatten, Befundlagen und Tendenzen sichtbar zu ordnen, die mit menschlichem Verhalten in Berührung stehen, und dabei übergreifend zu lesen.",
+        "Gut als Lese­auftakt in Psychologie, quantitative Sozialforschung, kognitive Neurowissenschaften und einschlägige Verhaltens­politik, ehe man zu streng technischen Einzel­studien vordringt."
+      ]
+    },
+    "fr": {
+      "title": "Nature Human Behaviour - Revues et analyse",
+      "excerpt": "La section « Reviews & Analysis » de Nature Human Behaviour regroupe des textes de synthèse, d’interprétation et de commentaire, y compris des formats tels que Review Article, Perspective, News & Views, Research Briefing.",
+      "body": [
+        "L’espace s’inscrit moins autour d’un gros texte d’enquête isolé, que d’agencer débats, constats, orientations récents, dans l’orée du thème du comportement humain, avec une visée transversale.",
+        "Bonne planche d’embarquement, en psychologie, sciences sociales quantitatives, neurosciences cognitives et volets de politique publique liés au comportement, avant d’enchaîner sur des papiers de recherche plus techniques, un par un."
+      ]
+    },
+    "it": {
+      "title": "Nature Human Behaviour - Reviews & Analysis",
+      "excerpt": "In Nature Human Behaviour, la sezione “Reviews & Analysis” raccoglie testi di sintesi, interpretazione e commento, inclusi formati come Review Article, Perspective, News & Views, Research Briefing.",
+      "body": [
+        "Punta meno a un’unica grande monografia empirica e di più a organizzare dibattiti, esiti e indirizzi recenti nelle aree intorno al comportamento umano, con un taglio d’insieme e di lettura orizzontale.",
+        "Rappresenta un buon ingresso per passare, con letture di respiro ampio, in psicologia, scienze sociali quantitative, neuroscienze cognitive e nelle traiettorie di policy pubblica legate al comportamento, prima di affrontare i singoli lavori più tecnici."
+      ]
+    },
+    "zh-CN": {
+      "title": "Nature Human Behaviour - Reviews & Analysis",
+      "excerpt": "《Nature Human Behaviour》的 “Reviews & Analysis” 专栏汇集综述、解读、评论，形式包括 Review Article、Perspective、News & Views、Research Briefing 等。",
+      "body": [
+        "比起围绕单篇、厚重的实证，这里更常是在人类行为相关议题上，去梳理争论、结果与近来的走向，以跨题阅读的方式成篇。",
+        "适合作为心理学、量化社会科学、认知神经科学以及和「行为」有交集的公共政策，在进入更专、更密的单篇之前，先补一张总览的入口型阅读。"
+      ]
+    },
+    "zh-TW": {
+      "title": "Nature Human Behaviour - Reviews & Analysis",
+      "excerpt": "《Nature Human Behaviour》的「Reviews & Analysis」一欄，是合成、讀、評的集合，含 Review Article、Perspective、News & Views、Research Briefing 等格式。",
+      "body": [
+        "比較不以「一條很長的實證長文」本體為主，而更像在人類行為相關的脈絡上，理爭點、結果、走向，讓人拉一條可橫讀的線。",
+        "在心理、量化社會、認知神經、以及和行為交疊的公共政策等題上，是進到更專、更技術的單篇之前，先讀一輪、補一張導讀圖的門檻。"
+      ]
+    }
+  },
+  "z-library-bz": {
+    "en": {
+      "title": "Z-Library",
+      "excerpt": "Z-Library is a project for finding and cataloguing books and digital texts, with general and full-text search, themed lists, a blog, and information on apps and communities tied to the platform’s own ecosystem.",
+      "body": [
+        "Z-Library is a project for finding and cataloguing books and digital texts, with general and full-text search, themed lists, a blog, and information on apps and communities tied to the platform’s own ecosystem. The home page also tends to post notices on active domains, imitator sites, and frequent URL changes.",
+        "What makes the site interesting is not only file access but the way it centralises metadata, formats, and search tools, giving a broad view of the project. Still, always check each work’s licensing and the legality of access where you are, especially for material under copyright."
+      ],
+      "imageAlt": "Z-Library (zlibrary) logo"
+    },
+    "ko": {
+      "title": "Z-Library",
+      "excerpt": "Z-Library는 전자책·전자 본문을 찾고 정리하는 프로젝트로, 일반·전문(원문) 검색, 주제 모음, 블로그, 그리고 이 플랫폼 생태계에 묶인 앱·채널 안내를 제공한다.",
+      "body": [
+        "Z-Library는 전자책·전자 본문을 찾고 정리하는 프로젝트로, 일반·전문 검색, 주제 리스트, 블로그, 이 플랫폼 생태계에 연결된 앱·채널 설명이 한곳에 모인다. 메인에선 활성 도메인, 가짜 사이트, 자주 바뀌는 주소에 대한 주의·안내도 흔히 뜬다.",
+        "흥미는 ‘내려받기’에만 있지 않고, 메타데이터·형식·검색이 한꺼번에 묶여 ‘프로젝트가 뭘 제공하는가’의 큰 그림이 보이는 점에 있다. 그렇다 해도 작품마다 사용 조건(라이선스)과 본인 지역에서의 합법 여부, 특히 저작권이 있는 것은 꼭 확인하라."
+      ],
+      "imageAlt": "Z-Library(자라이브러리) 로고"
+    },
+    "es": {
+      "title": "Z-Library",
+      "excerpt": "Z-Library es un proyecto de búsqueda y catálogo de libros y textos digitales, con búsqueda general, búsqueda en texto completo, listas temáticas, blog e información sobre aplicaciones y canales vinculados al propio ecosistema de la plataforma.",
+      "body": [
+        "Z-Library es un proyecto de búsqueda y catálogo de libros y textos digitales, con búsqueda general, búsqueda en texto completo, listas temáticas, blog e información sobre aplicaciones y canales vinculados al propio ecosistema. La página de inicio suele reunir avisos sobre dominios activos, sitios suplantadores y cambios frecuentes de URL.",
+        "Lo interesante no es solo el acceso a archivos, sino el modo en que reúne metadatos, formatos y búsquedas, permitiendo abarcar lo que ofrece. Aun así, conviene revisar la licencia de cada obra y la legalidad del acceso en tu contexto, sobre todo con material protegido."
+      ],
+      "imageAlt": "Logotipo de Z-Library (zlibrary)"
+    },
+    "ja": {
+      "title": "Z-Library",
+      "excerpt": "Z-Library は、電子書籍・本文を検索・整理するプロジェクトで、汎用検索・本文検索、テーマ別一覧、ブログ、プラットフォームに紐づくアプリ・チャンネル情報をまとめている。",
+      "body": [
+        "Z-Library は、電子書籍・本文を検索・整理するプロジェクトで、汎用・全文検索、テーマ一覧、ブログ、同一エコシステムに紐づくアプリ・周辺案内が一か所に集まる。表紙(トップ)には、有効ドメイン、成りすまし、頻繁なURL変更の注意もよく出る。",
+        "面白いのは単一のダウンロード路だけでなく、メタデータ・形式・検索が一つに寄り、何が揃うかの俯瞰が付く点。ただし各作の利用条件(ライセンス)と、所在地での合法性—著作物では特に—を必ず確認してほしい。"
+      ],
+      "imageAlt": "Z-Library（zlibrary）のロゴ"
+    },
+    "de": {
+      "title": "Z-Library",
+      "excerpt": "Z-Library ist ein Such- und Sammelprojekt für Bücher und digitale Texte mit allgemeiner und Volltextsuche, Themenlisten, Blog sowie Hinweisen auf Apps und Kanäle, die dem Ökosystem der Plattform zugehören.",
+      "body": [
+        "Z-Library fasst Bücher und digitale Texte, allgemeine und Volltextsuche, Themenlisten, Blog und Infos zu Apps und Kanälen im eigenen Ökosystem der Plattform zusammen. Die Startseite sammelt oft Meldungen zu aktiven Domains, Nachahmerseiten und häufigen Adresswechseln.",
+        "Spannend ist nicht nur der Dateizugriff, sondern der Zusammenschluss von Metadaten, Formaten und Suchoptionen, sodass man einen Überblick bekommt. Trotzdem pro Werk Lizenzen prüfen und prüfen, ob der Zugang bei dir legal ist, besonders bei urheberrechtlich geschütztem Material."
+      ],
+      "imageAlt": "Z-Library-Logo (zlibrary)"
+    },
+    "fr": {
+      "title": "Z-Library",
+      "excerpt": "Z-Library est un projet de recherche et d’organisation de livres et de textes numériques, avec recherche globale, recherche plein texte, listes thématiques, blog et renseignements sur les appli et canaux liés à l’écosystème propre de la plateforme.",
+      "body": [
+        "Z-Library recense des livres et des textes numériques, propose recherche large et plein texte, listes thématiques, blog, et le lien avec applis et canaux du même écosystème. L’accueil affiche souvent des mises au point sur domaines actifs, sites tricheurs, changements d’URL fréquents.",
+        "L’intérêt tient moins à un seul accès en téléchargement qu’à la centralisation des métadonnées, formats et moteurs de recherche, pour voir d’un coup ce que le projet offre. Vérifiez quand même licence et licéité dans votre contexte, surtout quand l’œuvre relève du droit d’auteur."
+      ],
+      "imageAlt": "Logo Z-Library (zlibrary)"
+    },
+    "it": {
+      "title": "Z-Library",
+      "excerpt": "Z-Library è un progetto di ricerca e catalogazione di libri e testi digitali, con ricerca generale, in full text, elenchi tematici, blog e informazioni su app e canali collegati all’ecosistema stesso della piattaforma.",
+      "body": [
+        "Z-Library riunisce libri e testi digitali, ricerca generale e full text, elenchi tematici, blog, e avvisi su app e canali collegati all’ecosistema. In home compaiono spesso notizie su domini attivi, siti clone, cambi frequenti di indirizzo.",
+        "L’aspetto interessante non è solo l’accesso a file, ma l’intesa tra metadati, formati e strumenti di ricerca, che dà un quadro d’insieme. Resta d’obbligo controllare licenze e legalità dell’accesso nel tuo paese, soprattutto per opere in copyright."
+      ],
+      "imageAlt": "Logo Z-Library (zlibrary)"
+    },
+    "zh-CN": {
+      "title": "Z-Library",
+      "excerpt": "Z-Library 是一个用于检索与整编电子书与电子文本的项目，提供常规检索、全文检索、主题列表、博客，以及与本站生态相关应用、渠道等说明。",
+      "body": [
+        "Z-Library 把书与电子文本的检索、常规与全文、主题表、博客，还有同一生态里绑定的应用与频道的信息捏在一起。首页上常见关于有效域、冒牌站、地址频繁改动的说明。",
+        "看点并不只在下载通道，也在于元数据、格式、检索功能被集中，便于一眼总览。但仍须逐作核对使用许可、在你所在情境是否合法，尤其是有版权的读物。"
+      ],
+      "imageAlt": "Z-Library（zlibrary）标志"
+    },
+    "zh-TW": {
+      "title": "Z-Library",
+      "excerpt": "Z-Library 是搜尋、整理書籍與電子文本的專案，有一般與全文檢索、主題清單、部落格，及與本站生態有關的應用、頻道資訊。",
+      "body": [
+        "Z-Library 合起書籍、電子文本的搜尋、全般與全文、主題、部落格、同一生態的應用/頻道說明。首頁上常一併有有效網域、假站、網址常變的提醒。",
+        "不只在「下檔案」的單一入口，也看重把後設資料、版式、查詢併一處、一眼能掃。即使如此，每份材料的授權與在你處的合法性，尤其受著作權者，都須自核。"
+      ],
+      "imageAlt": "Z-Library（zlibrary）商標圖"
+    }
+  },
+  "aeon-co": {
+    "en": {
+      "title": "Aeon",
+      "excerpt": "Aeon publishes essays, articles, and video on topics such as consciousness, ethics, history of ideas, cognitive science, the environment, and the arts, in a more reflective format that resists the rush of the news cycle.",
+      "body": [
+        "Aeon publishes long-form essays, articles, and video on topics such as consciousness, ethics, history of ideas, cognitive science, the environment, and the arts, in a more reflective register than the pace of the headlines. Work is often by researchers, essayists, and journalists, with a careful, slower kind of public writing."
+      ]
+    },
+    "ko": {
+      "title": "Aeon",
+      "excerpt": "Aeon은 의식, 윤리, 사상사, 인지과학, 환경, 예술 등을 담는 에세이·기고·동영상 매체로, 뉴스 흐름의 속박에 덜 끌리는 성찰의 형식이 특징이다.",
+      "body": [
+        "Aeon은 의식·윤리·사상의 역사·인지과학·환경·예술 같은 주제에, 헤드라인의 속도보다 천천읽기에 가깝게 긴 호흡의 글, 기사, 동영상을 싣는다. 흔히 연구자·에세이스트·기자가 쓰며, ‘공론’에서도 단정 대신 품는 밀도에 초점이 있다."
+      ]
+    },
+    "es": {
+      "title": "Aeon",
+      "excerpt": "Aeon reúne ensayos, artículos y vídeos sobre conciencia, ética, historia de las ideas, ciencia cognitiva, medio ambiente o arte, con un registro más reflexivo y apartado del ritmo inmediato de las noticias.",
+      "body": [
+        "Aeon publica ensayos, artículos y vídeos alargados sobre conciencia, ética, historia de las ideas, ciencia cognitiva, entorno o arte, en un tono más lento y contemplativo que el titular continuo. Suele firmar gente de investigación, del ensayo o del periodismo, con cuidado en la divulgación y en el hilo de lectura."
+      ]
+    },
+    "ja": {
+      "title": "Aeon",
+      "excerpt": "Aeon は意識、倫理、思想史、認知科学、環境、芸術などのエッセイ、記事、映像を載せ、ニュースの即時性より、じっくり向き合う編集が特徴。",
+      "body": [
+        "Aeon は、意識、倫理、思想史、認知科学、環境、芸術など、見出しの反復より長い筆致の文章・映像に比重を置く。研究者、エッセイスト、ジャーナリストの寄稿が多く、大衆向けでも浅く済まさない、慎重な執筆の線を保つ傾向がある。"
+      ]
+    },
+    "de": {
+      "title": "Aeon",
+      "excerpt": "Aeon sammelt Essays, Texte und Videos zu Bewusstsein, Ethik, Ideengeschichte, Kognitionswissenschaft, Umwelt und Kunst – im langsameren, reflektierteren Modus fernab der Nachrichten­tickerrate.",
+      "body": [
+        "Aeon veröffentlicht längere Essays, Artikel und Videos zu Bewusstsein, Ethik, Ideengeschichte, Kognitionswissenschaft, Umwelt und Kunst, in einem Takt, der weniger mit Schlagzeilen fährt als mit aufmerksamem Durchlesen. Autor*innen reichen von Forschenden über Essayist*innen bis zu Journalist*innen; der Ton ist sorgfältig und öffentlich, ohne oberflächig zu klingen."
+      ]
+    },
+    "fr": {
+      "title": "Aeon",
+      "excerpt": "Aeon propose essais, articles et vidéos (conscience, éthique, histoire des idées, sciences cognitives, environnement, arts) dans un format plus posé, moins soumis au rythme immédiat de l’actualité.",
+      "body": [
+        "Aeon publie des textes longs, articles et vidéos autour de la conscience, l’éthique, l’histoire des idées, les sciences cognitives, l’environnement, les arts, sur un rythme plus calme qu’en une de revue. Chercheur·euses, essayistes et journaliste·s mettent souvent la plume, avec soin pour la forme d’explication publique."
+      ]
+    },
+    "it": {
+      "title": "Aeon",
+      "excerpt": "Aeon raccoglie saggi, articoli e video su coscienza, etica, storia delle idee, scienze cognitive, ambiente e arti, con un tono riflessivo e poco sottomesso al ritmo delle notizie.",
+      "body": [
+        "Aeon pubblica saggi, articoli e materiali video estesi su coscienza, etica, storia delle idee, scienze cognitive, ambiente, arti, con un andamento più lento e raccolto rispetto al flusso dei titoli. Spesso a firma di ricercatori, saggisti e cronisti, in una divulgazione che tende a cura e respiro."
+      ]
+    },
+    "zh-CN": {
+      "title": "Aeon",
+      "excerpt": "Aeon 汇集长文、报道与视频，论题含意识、伦理、观念史、认知科学、环境、艺术，语气偏沉思，不迎合即时新闻的节拍。",
+      "body": [
+        "Aeon 以较长篇幅的随笔、文章与视频讨论意识、伦理、观念史、认知科学、环境、艺术，节奏比快讯标题从容。撰稿人多来自研究、随笔与新闻写作，在公共表达上取谨慎、有厚度的路。"
+      ]
+    },
+    "zh-TW": {
+      "title": "Aeon",
+      "excerpt": "Aeon 匯整長文、專欄與映像，題材含意識、倫理、觀念史、認知科學、環境、藝術，採取較沉的筆觸、非追即時新聞。",
+      "body": [
+        "Aeon 以長筆的散文、專欄、影片談意識、倫理、觀念史、認知科學、環境、藝術，讀起來比一紙標題的節拍慢。作者多來自研究、散文與報導，公共書寫上偏謹重、有餘地。"
+      ]
+    }
+  },
+  "linguagem-r": {
+    "en": {
+      "title": "R",
+      "excerpt": "R is a language and environment for statistical computing, data analysis, and visualization, distributed as free software. The official site has docs, short manuals, function reference, and install steps for Windows, macOS, and Linux.",
+      "body": [
+        "R is a language and environment for statistical computing, data analysis, and visualization, distributed as free software. The official site bundles documentation, introductory tutorials, a function reference, and installation instructions for Windows, macOS, and Linux.",
+        "The Comprehensive R Archive Network (CRAN) hosts the interpreter, source files, and thousands of community packages, the main way to add extensions, update libraries, and browse by topic. In day-to-day work, the Posit ecosystem (formerly RStudio) provides the most widely used IDE for writing, running, and organizing code, while the tidyverse groups packages with a shared grammar for importing, transforming, visualizing, and tidying data in a consistent way.",
+        "Especially useful in psychology and quantitative social science: scripts aid reproducibility, and the stack stays flexible for modeling, simulation, statistics, and publication-ready figures. A strong academic community also helps with teaching material, domain-specific packages, and vetted research workflows."
+      ]
+    },
+    "ko": {
+      "title": "R",
+      "excerpt": "R(아르)는 통계·데이터·시각을 위한 언어/환경으로, 자유 소프트웨어로 내려받을 수 있다. 공식 사이트엔 문서, 입문, 함수 레퍼런스, Windows·macOS·Linux 설치 절차가 올라와 있다.",
+      "body": [
+        "R은 통계 계산, 데이터 해석, 시각화에 쓰는 언어이자 러닝(실행) 환경이며, 자유 소프트웨어로 올려져 있다. 공식 사이트엔 사용 설명, 짧은 입문서, 함수집(레퍼런스), Windows·macOS·Linux 설치 안내를 한데 묶어 둔다.",
+        "CRAN(The Comprehensive R Archive Network)엔 인터프리터, 소스 아카이브, 커뮤니티 패키지가 수천 이상 있어 확장 설치·라이브러리 갱신·주제별 둘러보기에 쓴다. 일과에서 Posit(旧 RStudio) 쪽 IDE가 쓰기/실행/정리 흐름에 널리 쓰이고, tidyverse는 읽기·다듬기·집계·눈에 보이게에 이르는 문법을 공유하는 묶음이다.",
+        "심리·수적 사회과학 쪽엔, 스크립트로 흐름이 재현되고, 모형·시뮬·검정·도표까지 한 줄기에서 다루기 쉬워 특히 쓰기 좋다. 학자들이 모인 생태는 강의 자료, 분야용 패키지, 검즘이 된 조업에 이르기 쉽다."
+      ]
+    },
+    "es": {
+      "title": "R",
+      "excerpt": "R es un lenguaje y un entorno para estadística, análisis de datos y gráficos, de distribución libre. El sitio oficial reúne documentación, manuales iniciales, referencia de funciones e instrucciones de instalación en Windows, macOS y Linux.",
+      "body": [
+        "R es un lenguaje y un entorno orientados a cálculo estadístico, análisis y visualización, ofrecido como software libre. En el sitio oficial se concentran manuales, notas de arranque, guía de funciones y pasos de instalación en Windows, macOS y Linux.",
+        "En CRAN (The Comprehensive R Archive Network) viven el intérprete, el código fuente y miles de paquetes: es el nodo clave para instalar extensiones, actualizar bibliotecas y ojear material por temática. En el día a día, el ecosistema Posit (el antiguo RStudio) aporta el IDE más usado para escribir, ejecutar y organizar, y el tidyverse agrupa paquetes con una «gramática» compartida para importar, limpiar, visualizar y ordenar datos con coherencia.",
+        "Es de gran utilidad en psicología y ciencias sociales con enfoque cuantitativo: mejora la reproductibilidad en scripts, y ofrece flexibilidad en modelos, simulación, estadística y gráficos listos para publicar. La red académica y de usuarios también hace fácil encontrar material didáctico, extensiones y soluciones ya comprobadas en investigación."
+      ]
+    },
+    "ja": {
+      "title": "R",
+      "excerpt": "R は統計的計算・データ解析・図化に向けた言語/環境で、フリーソフトとして配布される。公式サイトに文書、入門、関数基準、Windows・macOS・Linux の導入手順が揃う。",
+      "body": [
+        "R は、統計計算、データ解析、可視化向けの言語と一体の実行環境を指し、自由ソフトとして手に入る。公式サイトに文書、導入テキスト、参照、Windows・macOS・Linux の導入がまとまっている。",
+        "CRAN(The Comprehensive R Archive Network) には、本体、ソース、コミュニティ拡充が数千とあり、導入・版上げ、題材別のあたり方の中心になる。日々の執筆に Posit（旧 RStudio 系）の IDE を使う例が多く、 tidyverse は導入・形整え・写し出し·片付けまで一貫した文法の束である。",
+        "心理学や量的社会科学では、手順をスクリプト化して再現しやすく、当てはめ・数値のせり上げ(シミュ)・手続き的統計、印刷向け図の用意にも伸び代がある。学術コミュニティ越しの教材・専用パッケージ・定着手も探し易い。"
+      ]
+    },
+    "de": {
+      "title": "R",
+      "excerpt": "R ist eine Sprache und Laufzeitumgebung für statistische Rechnungen, Datenanalyse und Visualisierung – freie Software. Die offizielle Seite sammelt Dokus, Einstiege, die Funktions­referenz und Installationsanleitungen für Windows, macOS und Linux.",
+      "body": [
+        "R ist Sprache und Umgebung für statistische Rechnung, Analyse und Grafik, als freies Programm herausgegeben. Auf der offiziellen Seite liegen Dokumentation, kurze Einführungs­texte, Funktionsindex und Schritte zur Installation auf Windows, macOS und Linux.",
+        "Auf dem CRAN (The Comprehensive R Archive Network) leben Interpreter, Quellen und Tausende Community-Pakete – zentral, um Zusätze einzurichten, Pakete zu aktualisieren und fachlich zu recherchieren. Im Alltag bieten das Posit-Ökosystem (früher RStudio) das gängigste IDE zum Schreiben, Ausführen und Führen von Projekten; der tidyverse bündelt Pakete mit gemeinsamer «Grammatik» zum Einlesen, Umbauen, Zeichnen und Aufräumen der Daten.",
+        "Besonders hilfreich in Psychologie und quantitativer Sozialforschung: Reproduzierbarkeit per Skript, vielseitig für Modell, Simulation, Statistik und Publikationsgraphiken. Auch fällt leichter, durch die akademische Runde Einführungen, fach­spezifische Pakete und geprüfte Abläufe zu bekommen."
+      ]
+    },
+    "fr": {
+      "title": "R",
+      "excerpt": "R est un langage et un cadre d’exécution pour le calcul statistique, l’analyse de données et la graphique, en logiciel libre. Le site central rassemble manuels, brefs tutoriels, référence des fonctions, et l’installation sous Windows, macOS et Linux.",
+      "body": [
+        "R, c’est un langage et un environnement pour le calcul statistique, l’analyse, la graphique, distribués en logiciel libre. Le portail public regroupe documentation, notules d’introduction, référentiel des fonctions, consignes d’installation sur Windows, macOS et Linux.",
+        "Le CRAN (The Comprehensive R Archive Network) tient l’interpréte, les sources et des milliers de paquets: on y installe l’essentiel, met à jour les librairies et s’orienter par thème. Au fil des jours, l’écosystème Posit (jusque-là connu en RStudio) sert d’IDE dominant pour écrire, lancer, ranger le code, et le tidyverse accole des paquets à grammaire commune d’importer, transformer, visualiser, remettre au propre.",
+        "C’est d’un grand intérêt en psychologie et sciences humaines quantitatives, pour la reproductibilité, la modélisation, la simulation, les stats et des figures d’impression. La scène des universitaires y favorise pédago, paquetages, et bons tuyaux déjà vérifiés en recherche."
+      ]
+    },
+    "it": {
+      "title": "R",
+      "excerpt": "R è un linguaggio e un ambiente per calcolo statistico, analisi dati e visualizzazione, in software libero. Sito ufficiale: manuali, riferimenti, note introduttive, installazione per Windows, macOS e Linux.",
+      "body": [
+        "R è linguaggio e ambiente per calcolo statistico, analisi e grafica, in forma open. Il sito ufficiale accorpa manuali, cenni d’avvio, guida funzioni, istruzioni d’installazione su Windows, macOS e Linux.",
+        "Sul CRAN (The Comprehensive R Archive Network) stanno l’interprete, sorgente e migliaia di pacchetti aggiunti dalla comunità, punto d’angolo per estensioni, update delle librerie e mappa per area. Nel quotidiano, l’ecosistema Posit (ex RStudio) offre l’IDE più comune per scrivere, eseguire, tenere a posto, mentre il tidyverse raggruppa pacchetti con stessa «grammatica» per import, trasformazioni, viste e appianamento del dato.",
+        "Molto usato in psicologia e scienze sociali con numeri, perché gli script sostengono la replicazione e c’è margine a modellistica, simulazione, statistica e figure da stampa. L’academia intorno a R aiuta a trovare dispense, pacchetti verticali, soluzioni già validate."
+      ]
+    },
+    "zh-CN": {
+      "title": "R",
+      "excerpt": "R 是面向统计计算、数据分析与可视化的语言/环境，以自由软件形式发布。官网汇总文档、入门、函数手册，以及 Windows、macOS、Linux 的安装方式。",
+      "body": [
+        "R 是面向统计计算、数据分析、可视化的语言与运行环境，以自由软件发布。官方网站集中了文档、简短入门、函数说明，及 Windows、macOS、Linux 上的安装说明。",
+        "CRAN（The Comprehensive R Archive Network）统管解释器、源码与社区贡献的成千上万扩展包，是装扩展、更新库、按主题浏览的主要入口。日常工作中，Posit（前 RStudio）系 IDE 是书写、执行、管理代码的常用台；tidyverse 将导入、整理、出图、收拾数据，摆进一套一致的「语法」里。",
+        "在心理学与计量取向的社会科学中尤其顺手：工作流以脚本可复现，也便于建模仿真、统计推断与可发表图。学院派生态也让讲义、专域包、成熟工作流较易找到。"
+      ]
+    },
+    "zh-TW": {
+      "title": "R",
+      "excerpt": "R 是針對統計計算、資料分析、視覺化的語言與執行環境，以自由授權發佈。官網彙整文件、入門、函式參考，及 Windows、macOS、Linux 的安裝步驟。",
+      "body": [
+        "R 是專用於統計計算、分析與繪圖的語言與環境，以自由軟體形式提供。官網集中了說明、簡要入門、函式參考，以及各作業系統的安裝指引。",
+        "CRAN（The Comprehensive R Archive Network）承載解譯器、源碼與數以千計的社群套件，是安裝擴充、更新套件庫、依主題瀏覽的主要據點。日常寫作中，Posit（前 RStudio）生態的 IDE 最普遍；tidyverse 則匯整共享「語法」的套件，涵蓋匯入、整理、視覺化與資料整理。",
+        "在心理學與具計量訓練的社會科學中特別實用：以腳本可重現流程，建模、模擬、推論、出版圖也具彈性。圍繞 R 的學術社群也便於尋得教材、專用套件和成熟的研究實作。"
+      ]
+    }
+  },
+  "cursor-ai": {
+    "en": {
+      "title": "Cursor",
+      "excerpt": "Cursor is a code editor with built-in AI: inline completion, repo-aware chat, multi-file edits, and agent-style flows, in a VS Code–like experience.",
+      "body": [
+        "https://cursor.com/ is home to Cursor, a dev environment that embeds large language models: inline suggestions, conversations over files and folders, coordinated changes across many files, and built-in shell and Git panes. The UI borrows heavily from VS Code, so familiar extensions and shortcuts help people who already use that stack.",
+        "Model and privacy options depend on your plan; in sensitive work, read what code is sent and define repo rules so the assistant can match your style, frameworks, and what it is allowed to assume. Like any generative tool, the speedup comes with the duty to review diffs, run tests, and check security before merging to the main line."
+      ]
+    },
+    "ko": {
+      "title": "Cursor",
+      "excerpt": "Cursor는 AI가 탑재된 코드 편집기로, 인라인 완성, 저장소 맥락의 채팅, 여러 파일에 걸친 편집, 에이전트 스타일 흐름을, Visual Studio Code에 가깝게 묶는다.",
+      "body": [
+        "https://cursor.com/ 에는 Cursor(대규모 언어 모델이 들어간 개발 환경)이 모여 있다. 인라인 제안, 파일·폴더를 아우르는 대화, 여러 파일에 걸친 조정, 터미널·Git을 같은 판에 둔다. UI는 Visual Studio Code 계열을 많이 따르고, 쓰던 확장·단축키에 익은 사람이 부담을 덜 느낀다.",
+        "모델·프라이버시 옵션은 요금제에 좌우되며, 민감한 프로젝트에선 전송되는 코드를 확인하고, 저장소 규칙을 정해 어시스턴트의 스타일·프레임워크·가정 범위를 맞추는 편이 낫다. 생성형과 마찬가지로, 속도만큼 메인에 합치기 전 diff·테스트·보안을 점검할 책임이 따른다."
+      ]
+    },
+    "es": {
+      "title": "Cursor",
+      "excerpt": "Cursor es un editor con IA integrada: autocompletado, chat con contexto de repositorio, edición en varios archivos, flujos al estilo agente, con una experiencia similar a la de Visual Studio Code.",
+      "body": [
+        "https://cursor.com/ reúne Cursor: un entorno donde entran modelos de lenguaje, sugerencias al vuelo, charla sobre archivos, cambios en bloque, terminal y Git. La interfaz hereda el mundo VS Code, y si ya dominas atajos o extensiones, ahorras fricción.",
+        "Modelos y privacidad varían con la suscripción: en lo delicado, revisa qué código se envía y fija reglas al repo, para cazar estilo, framework y asunciones. Como toda asistida generativa, ganas tiempo pero debes cotejar el diff, tests y riesgo antes de fusionar a la rama buena."
+      ]
+    },
+    "ja": {
+      "title": "Cursor",
+      "excerpt": "Cursor は AI 組み込みのコードエディタで、インライン補完、リポジトリ文脈のチャット、複数ファイル同時編集、エージェント風の手順を、Visual Studio Code に近い体験にまとめたもの。",
+      "body": [
+        "https://cursor.com/ に集約されている Cursor は、大規模言語モデルが介在する開発環境の製品名である。行末の補完、ファイルやフォルダーに跨る会話、広い範囲の一括修正、同じ窓内の端末と Git まで含む。 UI は Visual Studio Code の系譜を多く受け、慣れ親しんだ拡張やキー割り当ての恩恵が大きい。",
+        "モデルやプライバシー設定はプラン次第。機微な案件では、どのコードが送られるかを確認し、リポジトリのルールで、スタイルや採用フレーム、許容する前提を揃えた方が良い。生成系と同じく、速さには main へ取り込む前に差分の検討・テスト・安全確認を伴う責任がついてくる。"
+      ]
+    },
+    "de": {
+      "title": "Cursor",
+      "excerpt": "Cursor ist ein Editor mit integrierter KI: Inline-Vervollständigung, Chat über das Repo, Bearbeitung mehrerer Dateien, Agent-ähnliche Abläufe – in einer Umgebung wie Visual Studio Code.",
+      "body": [
+        "https://cursor.com/ führt die Produktwelt «Cursor» zusammen: Entwicklungsumgebung, in der große Sprachmodelle einfließen – Vorschläge inline, Gespräche über Struktur, abgestimmte Sätze über viele Dateien, Terminal- und Git-Ansicht im gleichen Rahmen. Die Oberfläche folgt viel des VS-Code-Ökosystems, damit bekannte Erweiterungen und Tastenkürzel weiterhelfen.",
+        "Modell- und Datenschutz-Optionen hängen am Tarif; in sensiblen Projekten sollte man prüfen, welcher Code hinausgeht, und Regeln fürs Repo setzen, damit Stil, Frameworks und zulässige Annahmen stimmig sind. Wie bei generativen Werkzeugen: Tempo bringt die Verpflichtung, vor dem Merge in den Hauptzweig Diffs, Tests und Sicherheit anzusehen."
+      ]
+    },
+    "fr": {
+      "title": "Cursor",
+      "excerpt": "Cursor est un éditeur de code avec IA intégrée : complétion contextuelle, chat ciblé sur le dépôt, gros remaniements multi-fichiers, enchaînements type agent, proche de l’expérience Visual Studio Code.",
+      "body": [
+        "https://cursor.com/ regroupe l’offre « Cursor » : l’environnement où s’enfilent de gros modèles de langage – suggestions, dialogue sur l’arbre, modifications coordonnées, terminal et Git dans le même volet. L’interface s’inspire beaucoup de l’univers Visual Studio Code, pratique si vous connaissiez déjà extensions et raccourcis habituels.",
+        "Modèles, confidentialité et options dépendent de l’abonnement : sur du sensible, lisez quelles portions de code partent, fixez des règles de dépôt pour cadrer style, stacks et attentes. Comme tout outil génératif, le gain d’allure s’accompagne du devoir de relire le diff, les tests et le risque avant d’intégrer en branche principale."
+      ]
+    },
+    "it": {
+      "title": "Cursor",
+      "excerpt": "Cursor è un editor con IA integrata: completamento, chat sul repositorio, modifiche su multi file, flussi in stile agente, in un’esperienza vicina a Visual Studio Code.",
+      "body": [
+        "https://cursor.com/ concentra Cursor, ambiente di sviluppo in cui entrano modelli di linguaggio: suggerimenti inline, dialogo sui file, modifiche coordinate su tratti ampi, pannelli di terminale e Git integrati. L’aspetto richiama in larga parte l’ecosistema VS Code, a vantaggio di chi già conosce estensioni e scorciatoie.",
+        "Scelta modelli e privacy varia a seconda dell’abbonamento: nei progetti critici, rivedi cosa invii e definisci le regole sul repository per allineare stile, framework e ciò che l’assistente può dare per scontato. Come ogni strumento generativo, c’è l’onere di controllare diff, test e sicurezza prima di allineare al ramo principale."
+      ]
+    },
+    "zh-CN": {
+      "title": "Cursor",
+      "excerpt": "Cursor 是带内建 AI 的代码编辑：行内补全、以仓库为上下文的聊天、多文件成批修改、类代理流程，体感人近 Visual Studio Code。",
+      "body": [
+        "https://cursor.com/ 承载 Cursor 这一开发环境，把大语言模型接进工位：行上提示、在文件/目录上对话、跨文件协同改动，并与终端、Git 同面；表面大量承袭 VS Code 生态，对熟键与扩展的迁移友好。",
+        "模型、隐私、随套餐而变；敏感项务读清代码外发与项目规则，使助手贴合栈、体例与允许假设。生成式助手提速的同时，也须在并线主干前对 diff、测试、安全自核。"
+      ]
+    },
+    "zh-TW": {
+      "title": "Cursor",
+      "excerpt": "Cursor 是內建 AI 的程式編輯器：行內補全、以儲存庫為脈絡的對話、跨多檔編修、代理式流程，體感接近 Visual Studio Code。",
+      "body": [
+        "https://cursor.com/ 是 Cursor 產品入口：在開發流程中導入大型語言模型，提供行內建議、跨檔案/資料夾對話、成批變更，以及與終端機、Git 同面板的介面。介面多沿用 Visual Studio Code 生態，已熟悉外掛與快捷鍵的開發者較易銜接。",
+        "模型與隱私權隨訂閱而異；處理敏感內容時，宜檢查哪些原始碼會上傳，並以專案規則釐清可接受的風格、技術棧與推論。與其他生成式工具相同，產生速度帶有責任：併入主要分支前仍須審查差異、測試與安全性。"
+      ]
+    }
+  },
+  "youtube-playlist-nnf": {
+    "en": {
+      "title": "Human Behavioral Biology (Robert Sapolsky, Stanford) — lectures",
+      "excerpt": "This Human Behavioral Biology course by Robert Sapolsky at Stanford works across levels of explanation for human behavior, linking evolution, genetics, neuroscience, endocrinology, development, aggression, sexuality, and social context.",
+      "body": [
+        "This Human Behavioral Biology course by Robert Sapolsky at Stanford works across levels of explanation for human behavior, linking evolution, genetics, neuroscience, endocrinology, development, aggression, sexuality, and social context. The course is a wide introduction to thinking about behavior in terms of multiple biological and historical layers, not a single simple cause.",
+        "https://www.youtube.com/watch?v=NNnIGh9g6fA&list=PL848F2368C90DDC3D"
+      ]
+    },
+    "ko": {
+      "title": "인간 행동 생물학 (로버트 사폴스키, 스탠퍼드) — 강의",
+      "excerpt": "스탠퍼드 로버트 사폴스키의 ‘인간 행동 생물학’ 시리즈는, 진화·유전·신경·내분비·발달·공격성·성·사회 맥락을 이어, 인간 행동에 대한 ‘층’ 설명을 아우른다.",
+      "body": [
+        "이 시리즈는, 행동이 단일 원인으로 줄지 않는다는 전제에서, 그 위에 쌓인 생물·역사 층을 잇는 넓은 입문이다. (동일 재생 목록) 아래 URL.",
+        "https://www.youtube.com/watch?v=NNnIGh9g6fA&list=PL848F2368C90DDC3D"
+      ]
+    },
+    "es": {
+      "title": "Biología del comportamiento humano (Robert Sapolsky, Stanford) — clases",
+      "excerpt": "Esta serie de Biología del comportamiento humano, con Robert Sapolsky en Stanford, recorre niveles de explicación del comportamiento, articulando evolución, genética, neurociencia, endocrinología, desarrollo, agresión, sexualidad y contexto social.",
+      "body": [
+        "Actúa como introducción amplia: el comportamiento se aborda en capas biológicas e históricas, sin colapsar todo en una sola causa. La URL siguiente es la lista de reproducción (playlist).",
+        "https://www.youtube.com/watch?v=NNnIGh9g6fA&list=PL848F2368C90DDC3D"
+      ]
+    },
+    "ja": {
+      "title": "ヒューマン・ビヘイビオラル・バイオロジー（ロバート・サポルスキー、スタンフォード）— 講義",
+      "excerpt": "スタンフォード、ロバート・サポルスキーによる一連の講義。行動の説明を一階層に閉じず、進化・遺伝・神経科学・内分泌・発達・攻撃性・性・社会文脈を接続する。",
+      "body": [
+        "人間行動を、多層の生物学的・歴史的枠で捉える導入として、教科書の一本線では割り切れない筋を扱う。下は同一の再生リスト URL。",
+        "https://www.youtube.com/watch?v=NNnIGh9g6fA&list=PL848F2368C90DDC3D"
+      ]
+    },
+    "de": {
+      "title": "Human Behavioral Biology (Robert Sapolsky, Stanford) – Vorlesungen",
+      "excerpt": "Diese Vorlesungsreihe zu Human Behavioral Biology (Robert Sapolsky, Stanford) verknüpft Ebenen der Verhaltens­erklärung: Evolution, Genetik, Neurowissenschaften, Endokrinologie, Entwicklung, Aggression, Sexualität, soziales Umfeld.",
+      "body": [
+        "Als breite Einführung, Verhalten in mehreren biologischen und historischen Schichten zu denken, statt auf eine lineare «eine Ursache». Darunter: dieselbe Wiedergabeliste.",
+        "https://www.youtube.com/watch?v=NNnIGh9g6fA&list=PL848F2368C90DDC3D"
+      ]
+    },
+    "fr": {
+      "title": "Biologie du comportement humain (Robert Sapolsky, Stanford) — cours",
+      "excerpt": "Cette série de cours de biologie du comportement humain, assurée par Robert Sapolsky à Stanford, enchaîne évolution, génétique, neurosciences, endocrinologie, développement, agressivité, sexualité, contexte social, pour lire le comportement à plusieurs niveaux.",
+      "body": [
+        "Le cours sert d’appui large: le comportement se pense en couches, sans tout ramener à une seule explication. Ci-dessous, l’URL de la liste de lecture.",
+        "https://www.youtube.com/watch?v=NNnIGh9g6fA&list=PL848F2368C90DDC3D"
+      ]
+    },
+    "it": {
+      "title": "Biologia del comportamento umano (Robert Sapolsky, Stanford) — lezioni",
+      "excerpt": "Questa raccolta di lezioni di biologia del comportamento umano, con Robert Sapolsky a Stanford, articola evoluzione, genetica, neuroscienze, endocrinologia, sviluppo, aggressione, sessualità e contesto sociale, su più livelli di spiegazione.",
+      "body": [
+        "Funge da introduzione ampia: il comportamento in strati biologici e storici, senza forzare un’unica causa. Sotto, la stessa playlist.",
+        "https://www.youtube.com/watch?v=NNnIGh9g6fA&list=PL848F2368C90DDC3D"
+      ]
+    },
+    "zh-CN": {
+      "title": "人类行为生物学（Robert Sapolsky，斯坦福）— 课程",
+      "excerpt": "斯坦福的 Robert Sapolsky 的「人类行为生物学」系列，沿多条线索连接进化、遗传、神经、内分泌、发展、攻击、性、社会背景，为理解人类行为提供分层说明。",
+      "body": [
+        "本课程在「行为不必还原为单因」的前提下，以多重生物、历史层作为入门。下列为同一条播放列表 URL。",
+        "https://www.youtube.com/watch?v=NNnIGh9g6fA&list=PL848F2368C90DDC3D"
+      ]
+    },
+    "zh-TW": {
+      "title": "人類行為生物學（羅伯．薩波爾斯基，史丹佛）— 課程",
+      "excerpt": "史丹佛大學羅伯．薩波爾斯基主講的「人類行為生物學」系列，從演化、遺傳、神經、內分泌、發展、攻擊、性、社會脈絡，串起行為的多層次說明。",
+      "body": [
+        "課程在「行為不必歸因於單一因」的前提下，帶讀者以多層生物、歷史觀作為入門。下為同一份播放清單 URL。",
+        "https://www.youtube.com/watch?v=NNnIGh9g6fA&list=PL848F2368C90DDC3D"
+      ]
+    }
+  },
+  "mathematical-social-sciences": {
+    "en": {
+      "title": "Mathematical Social Sciences",
+      "excerpt": "Mathematical Social Sciences is an international, interdisciplinary journal focused on mathematical models in the social sciences, covering choice, information, preferences, game theory, voting, social networks, bargaining, fair division, inequality, and evolutionary dynamics, and other themes. It aims to publish work that is mathematically precise yet still readable to social-science readers with quantitative training.",
+      "body": [
+        "https://www.sciencedirect.com/journal/mathematical-social-sciences Mathematical Social Sciences is an international, interdisciplinary journal focused on mathematical models in the social sciences, with articles on choice, information, preferences, game theory, voting, social networks, bargaining, fair division, inequality, and evolutionary dynamics, and other topics. The journal’s aim is to publish work that is mathematically rigorous but still legible to social-science researchers with quantitative backgrounds."
+      ],
+      "imageAlt": "Cover and journal title, Mathematical Social Sciences (Elsevier)"
+    },
+    "ko": {
+      "title": "Mathematical Social Sciences",
+      "excerpt": "Mathematical Social Sciences는 사회과학에 대한 수리 모델을 다루는 국제적·융합 학술지로, 선택, 정보, 선호, 게임이론, 투표, 사회망, 교섭, 공정 분배, 불평등, 진화적 역학 등 주제를 망라한다. 수리적으로는 엄밀하되, 수치적 훈련이 있는 사회과학자에게 읽힐 수 있게 쓰는 데 지향한다.",
+      "body": [
+        "https://www.sciencedirect.com/journal/mathematical-social-sciences Mathematical Social Sciences(국제·다학제)는 사회과학을 수리 모델에 얹은 논문을 실으며, 선택·정보·선호·게임이론·투표·사회망·교섭·공정 분배·불평등·진화 역학 등 넓은 주제를 담는다. 학지의 취지는 수리적 엄밀함과 사회과학 독자의 가독성을 함께 꾸리는 쪽에 있다."
+      ],
+      "imageAlt": "표지와 학술지명, Mathematical Social Sciences(Elsevier)"
+    },
+    "es": {
+      "title": "Mathematical Social Sciences",
+      "excerpt": "Mathematical Social Sciences es una revista internacional e interdisciplinar dedicada a modelos matemáticos en las ciencias sociales, con artículos sobre elección, información, preferencias, teoría de juegos, votación, redes sociales, negociación reparto equitativo, desigualdad y dinámicas evolutivas, entre otros. Su propuesta es reunir trabajos firmes en rigor y, aun así, legibles para lectoras con formación cuantitativa.",
+      "body": [
+        "https://www.sciencedirect.com/journal/mathematical-social-sciences Mathematical Social Sciences es una revista internacional e interdisciplinar sobre modelos matemáticos en las ciencias sociales, con artículos en elección, información, preferencias, teoría de juegos, votación, redes sociales, negociación, reparto equitativo, desigualdad y dinámicas evolutivas, y materias afines. La revista se propone aunar rigor matemático y lectura asequible a investigadoras de ciencias sociales con baza cuantitativa."
+      ],
+      "imageAlt": "Cubierta y título de la revista Mathematical Social Sciences (Elsevier)"
+    },
+    "ja": {
+      "title": "Mathematical Social Sciences",
+      "excerpt": "Mathematical Social Sciences は、社会科学に対する数理モデルに焦点を当てる国際的・学際誌で、選択、情報、選好、ゲーム理論、投票、社会ネットワーク、交渉、公正な配分、不平等、進化動態などを扱う。厳密さと、定量的素養を持つ社会科学読者への到達性の両立を目指す。",
+      "body": [
+        "https://www.sciencedirect.com/journal/mathematical-social-sciences Mathematical Social Sciences(国際・学際)は、社会科学向けの数理モデルを主題に、選択・情報・選好・ゲーム理論・投票・社会ネットワーク・交渉・公平分配・不平等・進化動態 など、幅のある主題にまたがる。厳密な数式展開を排さず、社会科学側の定量的教養を想定した可読性も意識した編成である。"
+      ],
+      "imageAlt": "雑誌名と表紙、Mathematical Social Sciences（Elsevier）"
+    },
+    "de": {
+      "title": "Mathematical Social Sciences",
+      "excerpt": "Mathematical Social Sciences ist ein internationales, interdisziplinäres Journal für mathematische Modelle in den Sozialwissenschaften – Themen reichen von Wahl, Information, Präferenzen, Spieltheorie, Abstimmung, sozialen Netzwerken, Verhandlungen, fairer Aufteilung, Ungleichheit bis zu evolutionären Dynamiken. Anspruch: streng und dennoch lesbar für Sozialforschende mit quantitativen Grundlagen.",
+      "body": [
+        "https://www.sciencedirect.com/journal/mathematical-social-sciences Mathematical Social Sciences führt internationale, fächerübergreifende Arbeiten mit mathematischen Modellen in den Sozialwissenschaften, zu Wahl, Information, Präferenzen, Spieltheorie, Abstimmung, Netzwerken, Verhandlungen, fairer Teilung, Ungleichheit, evolutorischer Dynamik und Anknüpfungsfeldern. Ziel: mathematische Strenge bei gleichzeitiger Lesbarkeit für quantitativ vorgebildete Sozialwissenschaften."
+      ],
+      "imageAlt": "Titelbild und Zeitschriftentitel Mathematical Social Sciences (Elsevier)"
+    },
+    "fr": {
+      "title": "Mathematical Social Sciences",
+      "excerpt": "Mathematical Social Sciences est une revue internationale, interdisciplinaire, tournée vers des modèles mathématiques en sciences humaines et sociales, avec des articles sur le choix, l’information, les préférences, la théorie des jeux, le vote, les réseaux sociaux, la négociation, le partage équitable, l’inégalité, la dynamique évolutive, entre autres. L’idée: rigueur mathématique et textes encore accessibles à des chercheur·euses de SHS formé·e·s au quantitatif.",
+      "body": [
+        "https://www.sciencedirect.com/journal/mathematical-social-sciences Mathematical Social Sciences, revue internationale, interdisciplinaire, s’attache aux modèles mathématiques en sciences sociales, autour du choix, l’info, les préférences, théorie des jeux, vote, réseaux, négociation, partage, inégalité, dynamique évolutive, et thèmes voisins. L’enjeu: concilier exigence formelle et lisibilité pour des chercheur·euses de sciences sociales d’inspiration quanti."
+      ],
+      "imageAlt": "Couverture et intitulé, Mathematical Social Sciences (Elsevier)"
+    },
+    "it": {
+      "title": "Mathematical Social Sciences",
+      "excerpt": "Mathematical Social Sciences è una rivista internazionale, interdisciplinare, dedicata a modelli matematici nelle scienze sociali, con lavori su scelta, informazione, preferenze, teoria dei giochi, voto, reti sociali, negoziazione, divisione equa, disuguaglianza, dinamiche evolutive e simili. Il senso: rigore e, in pari tempo, spiegazione ancora comprensibile a lettori con training quantitativo nelle scienze sociali.",
+      "body": [
+        "https://www.sciencedirect.com/journal/mathematical-social-sciences Mathematical Social Sciences, rivista internazionale, interdisciplinare, riunisce contributi a modelli matematici in scienze sociali, con articoli su scelta, informazione, preferenze, teoria dei giochi, voto, reti sociali, trattative, partizione equa, disuguaglianze, dinamica evolutiva, e connessi. La linea editoriale: rigore e accessibilità per un pubblico accademico in scienze sociali con baza quantitativa."
+      ],
+      "imageAlt": "Copertina e titolo della rivista Mathematical Social Sciences (Elsevier)"
+    },
+    "zh-CN": {
+      "title": "Mathematical Social Sciences",
+      "excerpt": "《Mathematical Social Sciences》是国际、跨学科期刊，关注社会科学中的数学模型，议题涵盖选择、信息、偏好、博弈论、投票、社会网络、议价、公平分配、不平等与进化动力学等。旨在刊出数学上严谨、又对具定量训练的社会科学读者可读的研究。",
+      "body": [
+        "https://www.sciencedirect.com/journal/mathematical-social-sciences《Mathematical Social Sciences》是国际、跨学科期刊，以社会科学中的数学模型为对象，收稿主题包括选择、信息、偏好、博弈论、投票、社会网络、议价、公平分配、不平等、进化动力学等。该刊在保持数学要求的同时，仍面向有定量基础的社会科学读者写作。"
+      ],
+      "imageAlt": "期刊封面与刊名，Mathematical Social Sciences（爱思唯尔）"
+    },
+    "zh-TW": {
+      "title": "Mathematical Social Sciences",
+      "excerpt": "《Mathematical Social Sciences》聚焦社會科學中的數理模型，為國際、跨領域期刊，涵蓋選擇、資訊、偏好、博奕論、投票、社會網絡、議價、公平分派、不均與演化動態等主題。在維持數學嚴格性的同時，仍寫給有計量素養的社會科學讀者。",
+      "body": [
+        "https://www.sciencedirect.com/journal/mathematical-social-sciences《Mathematical Social Sciences》是國際、跨領域的期刊，收錄以社會科學之數學模型為主題的論文，關聯主題含選擇、資訊、偏好、博奕論、投票、社會網絡、談判、公平分配、不平等、演化動態等。編輯方針是兼顧數學的嚴謹，以及有計量訓練的社會科學學者仍能閱讀的清晰。"
+      ],
+      "imageAlt": "期刊封面與刊名，Mathematical Social Sciences（艾斯維爾）"
+    }
+  },
+  "journal-of-mathematical-psychology": {
+    "en": {
+      "title": "Journal of Mathematical Psychology",
+      "excerpt": "The Journal of Mathematical Psychology is a key venue for work in mathematical psychology, publishing on formal modeling of decision, perception, learning, memory, psychophysics, and other quantifiable cognitive processes. The journal is built on combining mathematical rigor with problems rooted in psychology, and welcomes both theoretical and empirical work.",
+      "body": [
+        "https://www.sciencedirect.com/journal/journal-of-mathematical-psychology The Journal of Mathematical Psychology is a key venue for work in mathematical psychology, with articles on formal modeling of decision, perception, learning, memory, psychophysics, and other quantifiable cognitive processes. The interest is precisely in that pairing of formal rigor with problems drawn from psychological research, in both theory-driven and data-focused contributions.",
+        "A solid entry for following research in modeling, measurement, judgment, decision, psychometrics, psychophysics, and cognitive theory more broadly."
+      ],
+      "imageAlt": "Orange cover, Journal of Mathematical Psychology (Elsevier, ScienceDirect)"
+    },
+    "ko": {
+      "title": "Journal of Mathematical Psychology",
+      "excerpt": "Journal of Mathematical Psychology는 수리심리학의 대표지로, 의사결정·지각·학습·기억·심리물리(사이코피직) 등, 수로 다룰 수 있는 인지과정에 대한 형식적 모델을 실어온다. 엄밀한 수리와, 심리의 문제에 기대는 방향을 잇는 데 초점이 있다.",
+      "body": [
+        "https://www.sciencedirect.com/journal/journal-of-mathematical-psychology Journal of Mathematical Psychology는 의사결정·지각·학습·기억·심리물리 등, 정량될 수 있는 인지를 모델링한 논문이 오른다. 흥미는 바로, 양 쪽(형식/데이터)에서, 수리의 엄밀함을 심리의 실제 문제에 대응시키는 데 둔다.",
+        "모델, 측정, 판단, 의사(결정), 심리측정(사이코메트릭), 심리물리(사이코피직), 인지이론 등, 넓게 따라가는 입구에도 쓰기 좋다."
+      ],
+      "imageAlt": "주황 표지, Journal of Mathematical Psychology(Elsevier, ScienceDirect)"
+    },
+    "es": {
+      "title": "Journal of Mathematical Psychology",
+      "excerpt": "El Journal of Mathematical Psychology es de las revistas de referencia en psicología matemática, con artículos sobre modelado formal de la decisión, percepción, aprendizaje, memoria, psicofísica y otros procesos cognitivos cuantificables. Se apoya en la confluencia de rigor matemático y problemas vivos de la psicología, teóricos o empíricos.",
+      "body": [
+        "https://www.sciencedirect.com/journal/journal-of-mathematical-psychology El Journal of Mathematical Psychology reúne trabajos en psicología matemática, con modelos formales de decisión, percepción, aprendizaje, memoria, psicofísica y otros dominios de la cognición que admiten un tratamiento medible. El interés está en yuxtaponer rigor formal e interrogantes arrancados de la investigación psicológica, con aportes teóricos y con datos.",
+        "Buen punto de entrada para seguir modelado, medición, juicio, toma de decisiones, psicometría, psicofísica y teoría cognitiva en términos amplios."
+      ],
+      "imageAlt": "Cubierta naranja, Journal of Mathematical Psychology (Elsevier, ScienceDirect)"
+    },
+    "ja": {
+      "title": "Journal of Mathematical Psychology",
+      "excerpt": "『Journal of Mathematical Psychology』は数理的心理学の中核的な一誌で、意思決定・知覚・学習・記憶・心理物性(精神物理学) など、数値的に扱いうる認知過程の形式モデルが出る。数学的厳密性と、心理学の生の課題を結び直す方針が軸。",
+      "body": [
+        "https://www.sciencedirect.com/journal/journal-of-mathematical-psychology『Journal of Mathematical Psychology』は、意思・知覚・学習・記憶・心理物性(サイコフィジックス) 等、測定可能な認知を形式的に扱う論文が来る。関心のはざまは、形式面の厳格さを、理論/データ双方からの心理学研究の問題へ持ち上げ合わせるところにある。",
+        "より広く、モデリング、測定、判断、意思決定、精神測定(サイコメトリー)、心理物性、認知理論の潮流を追う導入としても有効だ。"
+      ],
+      "imageAlt": "表紙が橙、Journal of Mathematical Psychology（Elsevier, ScienceDirect）"
+    },
+    "de": {
+      "title": "Journal of Mathematical Psychology",
+      "excerpt": "Das Journal of Mathematical Psychology ist eine führende Adresse für mathematische Psychologie, mit Beiträgen zu formaler Modellbildung von Entscheidung, Wahrnehmung, Lernen, Gedächtnis, Psychophysik und weiteren quantitativ fassbaren kognitiven Prozessen. Es bündelt mathematische Strenge mit in der Psychologie verwurzelten Fragen, theoretisch wie datengeleitet.",
+      "body": [
+        "https://www.sciencedirect.com/journal/journal-of-mathematical-psychology Im Journal of Mathematical Psychology erscheinen Arbeiten zur mathematischen Psychologie, zu formalem Modellieren von Entscheidung, Wahrnehmung, Lernen, Gedächtnis, Psychophysik u. a. messbaren kognitiven Prozessen. Gegenstand ist genau dieses Bündel aus formaler Prägung und psychologischem Gegenstand, theoretisch und empirisch.",
+        "Einstiegspunkt, um Modellierung, Messung, Urteil, Entscheidung, Psychometrie, Psychophysik und Theorie des Kognitiven in weiterem Sinn mitzuverfolgen."
+      ],
+      "imageAlt": "Oranges Cover, Journal of Mathematical Psychology (Elsevier, ScienceDirect)"
+    },
+    "fr": {
+      "title": "Journal of Mathematical Psychology",
+      "excerpt": "Le Journal of Mathematical Psychology est l’une des revues de référence en psychologie mathématique, avec des articles de modélisation formelle de la décision, la perception, l’apprentissage, la mémoire, la psychophysique, et d’autres processus cognitifs chiffrables. Il articule exigence mathématique et questions psychologiques, côté théorie et données.",
+      "body": [
+        "https://www.sciencedirect.com/journal/journal-of-mathematical-psychology Le Journal of Mathematical Psychology héberge des travaux en psychologie mathématique, sur la modélisation formelle de la décision, de la perception, de l’apprentissage, de la mémoire, de la psychophysique et d’autres volets de la cognition quantifiée. L’intérêt, c’est ce couple entre rigueur de forme et enjeux tirés de la recherche, qu’on soit tourné théorie ou prise sur les données.",
+        "Bon amorce pour la modélisation, la mesure, le jugement, la prise de décision, la psychométrie, la psychophysique, la théorie cognitive au sens large."
+      ],
+      "imageAlt": "Couverture orange, Journal of Mathematical Psychology (Elsevier, ScienceDirect)"
+    },
+    "it": {
+      "title": "Journal of Mathematical Psychology",
+      "excerpt": "Il Journal of Mathematical Psychology è un punto di riferimento per la psicologia matematica, con articoli su modelli formali per decisione, percezione, apprendimento, memoria, psicofisica, altre porzioni di cognizione quantificabile. Unisce rigore matematico a questioni nate in psicologia, versante teorico ed empirico.",
+      "body": [
+        "https://www.sciencedirect.com/journal/journal-of-mathematical-psychology Il Journal of Mathematical Psychology ospita lavori di modellistica in psicologia matematica, su decisione, percezione, apprendimento, memoria, psicofisica e tratti di cognizione misurabili. Il cuore è il legame tra rigore formale e quesiti psicologici, in contributi teorici e a riscontro sui dati.",
+        "Buon ingresso per modellistica, misurazione, giudizio, decisione, psicometria, psicofisica, teoria cognitiva, in prospettiva larga."
+      ],
+      "imageAlt": "Copertina arancione, Journal of Mathematical Psychology (Elsevier, ScienceDirect)"
+    },
+    "zh-CN": {
+      "title": "Journal of Mathematical Psychology",
+      "excerpt": "《Journal of Mathematical Psychology》是数理性心理学的重要期刊之一，收稿含决策、知觉、学习、记忆、心理物理学等，可度量的认知过程的形式化建模。强调数学的严谨与源自心理学的真实问题相结合，既欢迎理论也欢迎实证。",
+      "body": [
+        "https://www.sciencedirect.com/journal/journal-of-mathematical-psychology《Journal of Mathematical Psychology》刊载数理性心理学研究，涉及决策、知觉、学习、记忆、心理物理学等可量化的认知过程的模型。期刊的兴趣正在于：把形式上的严谨同心理学研究里提出的问题对接起来，兼及理论向与数据向的稿件。",
+        "若要跟进建模、测量、判断、决策、心理测量学、心理物理与更广泛的认知理论，也是一个稳妥的入口。"
+      ],
+      "imageAlt": "橙红色封面，Journal of Mathematical Psychology（爱思唯尔, ScienceDirect）"
+    },
+    "zh-TW": {
+      "title": "Journal of Mathematical Psychology",
+      "excerpt": "《Journal of Mathematical Psychology》是數學心理學的重要期刊之一，內容含決策、知覺、學習、記憶、心理物性（常稱精神物理/心理物理）等，可加以量化的認知歷程之形式化建模特重。結合数学嚴格度與扎根於心理學的實在問題。",
+      "body": [
+        "https://www.sciencedirect.com/journal/journal-of-mathematical-psychology《Journal of Mathematical Psychology》以數學心理學為欄，刊出決策、知覺、學習、記憶、心理物性(心理物理) 等可測的認知面向上的形式化模型。要旨是把形式的嚴謹，扣回心理學研究裡的真問題，不論是理論導向或以資料驗的稿件。",
+        "若要追蹤建模仿真、測度、判斷、抉择、心測、心物(理)、以及較寬的認知理論，也適合當導讀的門檻。"
+      ],
+      "imageAlt": "橙紅封面，Journal of Mathematical Psychology（艾斯維爾, ScienceDirect）"
+    }
+  },
+  "computational-brain-behavior-springer": {
+    "en": {
+      "title": "Computational Brain & Behavior",
+      "excerpt": "Computational Brain & Behavior is a Springer journal on the computational foundations of mind, publishing mathematical modeling, computational simulation, and empirical work. The journal stresses scientific rigor and the kind of insight quantitative models can bring to psychological and cognitive questions. It is the official journal of the Society for Mathematical Psychology.",
+      "body": [
+        "https://link.springer.com/journal/42113 Computational Brain & Behavior is a Springer journal on the computational foundations of mind, with work in mathematical modeling, computational simulation, and empirical research. It emphasizes scientific rigor and the clarification quantitative models can offer for psychological and cognitive issues. It is the official journal of the Society for Mathematical Psychology."
+      ]
+    },
+    "ko": {
+      "title": "Computational Brain & Behavior",
+      "excerpt": "Springer의 Computational Brain & Behavior는 ‘마음의 계산적 토대’를, 수리 모델·컴퓨터 시뮬레이션·실험(실증)을 아우르며, 심리·인지 문제에 수치적 모델이 줄 수 있는 설명에 초점을 둔다. Society for Mathematical Psychology의 공식 간행물이다.",
+      "body": [
+        "https://link.springer.com/journal/42113 Computational Brain & Behavior는 Springer 소속 학술지로, 마음의 계산적 토대를, 수리 모델, 계산(시뮬) 기반, 실험(실증)을 함께 싣는다. 과학적 엄밀성과, 심리·인지 쟁점에 정량적 모델이 줄 수 있는 밝힘(명료)을 강조한다. Society for Mathematical Psychology의 공식지다."
+      ]
+    },
+    "es": {
+      "title": "Computational Brain & Behavior",
+      "excerpt": "Computational Brain & Behavior es una revista de Springer dedicada a las bases computacionales de la mente, con modelado matemático, simulación y trabajo empírico. Enfatiza el rigor y el tipo de discernimiento que los modelos cuantitativos aportan a cuestiones psicológicas y cognitivas. Es la publicación oficial de la Society for Mathematical Psychology.",
+      "body": [
+        "https://link.springer.com/journal/42113 Computational Brain & Behavior es una revista de Springer sobre bases computacionales de la mente, con modelado matemático, simulación computacional e investigación empírica. La publicación subraya el rigor científico y la claridad que los modelos cuantitativos pueden aportar a cuestiones psicológicas y cognitivas. Es la revista oficial de la Society for Mathematical Psychology."
+      ]
+    },
+    "ja": {
+      "title": "Computational Brain & Behavior",
+      "excerpt": "Springer 刊『Computational Brain & Behavior』は、心の「計算論的基盤」を扱い、数理モデル、計算(シミュレーション)、実証研究を載せる。心理・認知の問いに、定量的モデルがもたらしうる厳密さと洞察を重視。Society for Mathematical Psychology の公式誌。",
+      "body": [
+        "https://link.springer.com/journal/42113『Computational Brain & Behavior』は、心の計算論的基盤に関する Springer 掲の学術誌で、数理モデル、計算シミュレーション、実証研究を扱う。学問としての厳格さ、および心理・認知の論点に定量的モデルがもたらしうる説明の度合いを重視。Society for Mathematical Psychology の公式誌である。"
+      ]
+    },
+    "de": {
+      "title": "Computational Brain & Behavior",
+      "excerpt": "Computational Brain & Behavior ist ein Springer-Journal zu den rechnerischen Grundlagen des Geistes, mit mathematischer Modellbildung, computergestützter Simulation und empirischer Forschung. Im Vordergrund stehen wissenschaftliche Strenge und die Klarleistung, die quantitative Modelle für psychologische und kognitive Fragestellungen bieten können. Offizielles Organ der Society for Mathematical Psychology.",
+      "body": [
+        "https://link.springer.com/journal/42113 Computational Brain & Behavior, Springer-Journal zu computationalen Fundamenten des Geistes, vereint mathematische Modellbildung, Rechner­simulation und Empirie, mit Betonung auf wissenschaftliche Strenge und die Einsicht, die quantitative Modelle psychologische und kognitive Zusammenhänge sichtbar machen können. Offizielles Publikations­organ der Society for Mathematical Psychology."
+      ]
+    },
+    "fr": {
+      "title": "Computational Brain & Behavior",
+      "excerpt": "Computational Brain & Behavior, chez Springer, s’intéresse aux assises informatiques du psychisme, en modélisation mathématique, simulation, travaux empiriques. Il insiste sur la rigueur et sur ce que les modèles quantitatifs peuvent éclairer, côté psychologie et cognition. C’est le journal officiel de la Society for Mathematical Psychology.",
+      "body": [
+        "https://link.springer.com/journal/42113 Computational Brain & Behavior est une revue Springer sur les fonds computationnels de l’esprit, avec modélisation mathématique, simulation numérique, recherche empirique, insistant sur l’exigence de rigueur et l’apport d’explication des modèles quantitatifs en psychologie et cognition. C’est l’organe de la Society for Mathematical Psychology."
+      ]
+    },
+    "it": {
+      "title": "Computational Brain & Behavior",
+      "excerpt": "Computational Brain & Behavior, rivista Springer sulle basi computazionali della mente, con modellazione matematica, simulazione al calcolatore e lavori empirici. Enfatizza il rigore e l’acume che i modelli quantitativi possono dare a domande psicologiche e cognitive. È l’organo ufficiale della Society for Mathematical Psychology.",
+      "body": [
+        "https://link.springer.com/journal/42113 Computational Brain & Behavior è la rivista Springer su basi computazionali della mente, con modellazione, simulazione, ricerca empirica, sottolineando il rigore scientifico e l’esplicazione offerta da modelli quantitativi sui temi psicologici e cognitivi. È la rivista ufficiale della Society for Mathematical Psychology."
+      ]
+    },
+    "zh-CN": {
+      "title": "Computational Brain & Behavior",
+      "excerpt": "《Computational Brain & Behavior》是 Springer 旗下期刊，关注心灵的计算基础，刊出数学建模、计算模拟与实证研究。强调科学上的严谨，以及定量模型能为心理与认知问题带来的澄清。它是 Society for Mathematical Psychology 的官方期刊。",
+      "body": [
+        "https://link.springer.com/journal/42113《Computational Brain & Behavior》是 Springer 期刊，面向心灵的计算基础，涵盖数学建模、计算模拟和实证工作。它强调科学严谨，以及量化模型在心理、认知问题上的说明力。它是 Society for Mathematical Psychology 的正式会刊。"
+      ]
+    },
+    "zh-TW": {
+      "title": "Computational Brain & Behavior",
+      "excerpt": "《Computational Brain & Behavior》是 Springer 旗下的期刊，探討心靈的計算基礎，刊出數學建模、電腦模擬與實證工作。重視學理嚴謹，以及定量能為心理與認知課題帶來的釐清。是 Society for Mathematical Psychology 的正式學刊。",
+      "body": [
+        "https://link.springer.com/journal/42113《Computational Brain & Behavior》是 Springer 期刊，探討心靈的計算根基，內容含數理建模、計算模擬、實證研究。編輯方針同時突顯學理上的一致、以及定量模型在心理/認知議題上能提供的釐清。Society for Mathematical Psychology 的正式出版刊物。"
+      ]
+    }
+  }
+}

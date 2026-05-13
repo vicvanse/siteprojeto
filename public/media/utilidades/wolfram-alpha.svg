@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="200" viewBox="0 0 280 200" fill="none">
+  <rect width="280" height="200" rx="12" fill="#f97316"/>
+  <path d="M48 140 L88 60 L128 100 L168 52 L208 88 L232 140" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.95"/>
+  <text x="140" y="178" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="#fff">Wolfram|Alpha</text>
+</svg>

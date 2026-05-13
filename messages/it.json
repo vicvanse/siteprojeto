@@ -1,0 +1,195 @@
+{
+  "metadata": {
+    "title": "Collective science project",
+    "description": "Collective science — site content in progress."
+  },
+  "nav": {
+    "main": "Main navigation",
+    "victor": "victor",
+    "clinica": "clinica",
+    "registros": "archivio",
+    "vekon": "vekon"
+  },
+  "time": {
+    "local": "local time"
+  },
+  "feed": {
+    "typeOrCategory": "Type or category",
+    "filterAll": "All types",
+    "searchLabel": "Search the notes",
+    "searchPlaceholder": "Search…",
+    "utilTabsAria": "Journals, tools, or resources",
+    "incomumTabsAria": "Art, literature, audiovisual, or profiles",
+    "empty": "No note matches the search or filter.",
+    "viewMore": "Show more",
+    "viewMoreAria": "Show more notes ({count} remaining)"
+  },
+  "utilBucket": {
+    "ferramenta": "Tools",
+    "jornais": "Journals",
+    "textos": "Resources"
+  },
+  "incomumKind": {
+    "arte": "Art",
+    "literatura": "Literature",
+    "audiovisual": "Audiovisual",
+    "perfis": "Profiles"
+  },
+  "Category": {
+    "anime": "anime",
+    "contato": "contact",
+    "conto": "short story",
+    "contos": "short stories",
+    "desenho": "drawing",
+    "documentário": "documentary",
+    "ensaio": "essay",
+    "gravura": "engraving",
+    "jornais": "journals",
+    "livro": "book",
+    "literatura": "literature",
+    "manga": "manga",
+    "música": "music",
+    "nota": "note",
+    "pintura": "painting",
+    "pintura digital": "digital painting",
+    "pixel art": "pixel art",
+    "podcast": "podcast",
+    "poema": "poem",
+    "recurso": "resource",
+    "série": "series",
+    "site": "site",
+    "textos": "texts",
+    "vídeos": "videos"
+  },
+  "victor": {
+    "label": "victor",
+    "infoTitle": "General information",
+    "infoTitleShort": "Informazione",
+    "tabsAria": "Information sub-sections",
+    "tabNotas": "General Notes",
+    "tabIncomum": "Unusual",
+    "tabUtil": "Resources",
+    "incomumIntro": "Cose che ho trovato e che mi sono sembrate abbastanza insolite o differenti:",
+    "utilIntro": "Cose utili, essenziali per l’ambito o per la realizzazione di progetti:"
+  },
+  "clinica": {
+    "label": "clinica",
+    "title": "Clinical perspectives"
+  },
+  "registros": {
+    "label": "archivio",
+    "video": "video",
+    "videoTitle": "Video {slot} — registros",
+    "playVideo": "play video",
+    "thumbAria": "Feature video {slot}",
+    "theaterOn": "Turn off theater mode (black band around the video)",
+    "theaterOff": "Turn on theater mode (black band around the video)",
+    "theaterTitleOn": "Turn off theater mode",
+    "theaterTitleOff": "Theater mode — black band"
+  },
+  "vimeo": {
+    "closeFs": "Close fullscreen",
+    "exitFs": "Exit fullscreen",
+    "enterFs": "View video fullscreen",
+    "fsTitleOff": "Fullscreen",
+    "fsTitleOn": "Exit fullscreen"
+  },
+  "vekon": {
+    "label": "vekon",
+    "title": "Vekon: Life",
+    "body": "A personal system for organization, record-keeping, memory, and analysis, built by me. Still in development for a beta release.",
+    "openPage": "open page",
+    "close": "close",
+    "closeDialog": "Close",
+    "closePanel": "Close panel"
+  },
+  "hero": {
+    "globeHint": "Hover over the globe to see the animation",
+    "analyst": "systems analyst",
+    "nameFirst": "victor",
+    "nameLast": "correard",
+    "cardAria": "Profile"
+  },
+  "profile": {
+    "name": "Victor Correard Vekony",
+    "bio": "Victor Correard Vekony. Laurea magistrale in corso presso l'Istituto di psicologia dell'USP. Psicologia all'Istituto di psicologia dell'Università di San Paolo. Scuola tecnica e industriale di Guaratinguetá, formazione in elettronica.",
+    "goodreads": "Goodreads",
+    "spotify": "Spotify"
+  },
+  "post": {
+    "back": "Back to the archive",
+    "contentPt": "This content is only available in Portuguese (Brazil).",
+    "backCrumb": "← victor"
+  },
+  "sugestoesInbox": {
+    "title": "Inbox",
+    "configNotice": "Set {url} and {token} in your deployment environment to store submissions.",
+    "urlKey": "UPSTASH_REDIS_REST_URL",
+    "tokenKey": "UPSTASH_REDIS_REST_TOKEN",
+    "empty": "No messages stored yet.",
+    "count": "{n} recent record(s) — newest first.",
+    "name": "Name",
+    "email": "E-mail",
+    "attachments": "Attachments (Discord only):",
+    "sugestoes": "Suggestions",
+    "publishField": "Publish",
+    "publishAsField": "Publication name",
+    "answerYes": "yes",
+    "answerNo": "no"
+  },
+  "footer": {
+    "langLabel": "Language / Idioma",
+    "emailCopied": "E-mail copied: {email}",
+    "copyEmail": "Copy e-mail {email} to clipboard",
+    "copyTitle": "Click to copy the e-mail"
+  },
+  "postUi": {
+    "readMore": "Read more",
+    "readLess": "Read less"
+  },
+  "sugestoes": {
+    "title": "Suggestions",
+    "backAria": "Back to victor archive",
+    "back": "victor",
+    "introEyebrow": "Alla ricerca di senso",
+    "qr1": "Questo spazio esiste per raccogliere raccomandazioni.",
+    "qr2": "Tra tutto ciò che hai visto, fatto o trovato, cosa dovrebbe essere trasmesso a qualcuno di importante, a una versione precedente di te stesso, o semplicemente per non andare perso?",
+    "qr3": "Qualsiasi cosa: una storia, una persona, un'idea, un sito web, un film, un libro, un luogo, un evento, una conoscenza, un'immagine, un oggetto, un marchio, un gesto o qualsiasi osservazione.",
+    "name": "Name",
+    "nameHint": "(optional)",
+    "email": "E-mail",
+    "message": "Message",
+    "messageHint": "(required)",
+    "imagesAudio": "Images or audio",
+    "optional": "(optional)",
+    "attachmentsNote": "Up to {maxImages} images (JPEG, PNG, GIF, WebP, max {mbImg} MB each) and one audio file (MP3, M4A, OGG, WAV, WebM, max {mbAudio} MB). Total attachments: at most ~{mbTotal} MB (server limit).",
+    "imagesLabel": "Images",
+    "audioLabel": "Audio",
+    "noFileChosen": "Nessun file selezionato",
+    "chooseFiles": "Scegli file",
+    "remove": "Remove",
+    "imageLimit": "Limit of {count} images. Remove one to choose another.",
+    "honeypot": "Company",
+    "success": "Thanks — your message was sent. You can send another anytime.",
+    "sending": "Sending…",
+    "submit": "Send",
+    "errImageMime": "Images: use JPEG, PNG, GIF, or WebP.",
+    "errImageSize": "Each image must be at most {mb} MB.",
+    "errAudioMime": "Audio: use MP3, M4A, OGG, WAV, or WebM.",
+    "errAudioSize": "Audio must be at most {mb} MB.",
+    "errTotalSize": "The total size of attachments is too large. Reduce the image or audio size.",
+    "errNetwork": "Network error. Please try again.",
+    "errGeneric": "Error sending the message.",
+    "publishLabel": "Publish?",
+    "qualNomeLabel": "What name:",
+    "publishAsDefault": "False name",
+    "responsesCenterTitle": "Responses",
+    "responsesNavAria": "Open Responses archive",
+    "suggestionsNavAria": "Go to the suggestions form",
+    "responsesNavDesktop": "Risposte →",
+    "suggestionsNavDesktop": "← Suggerimenti",
+    "responsesMobileWord": "responses",
+    "suggestionsMobileWord": "suggestions",
+    "responsesArchiveHeading": "Responses"
+  }
+}

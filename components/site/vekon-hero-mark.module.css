@@ -1,0 +1,133 @@
+/* Adaptado do pixellife (LoginPageContent / LivingRing) — tema claro para o hero */
+
+.root {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.ringOuter {
+  border: 3px solid rgba(0, 0, 0, 0.55);
+  border-radius: 9999px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+  opacity: 0.92;
+}
+
+.ringInner {
+  border: 2px solid rgba(0, 0, 0, 0.16);
+  border-radius: 9999px;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.06) inset,
+    0 0 40px rgba(244, 242, 241, 0.9);
+  opacity: 0.88;
+}
+
+.livingWrap {
+  border-radius: 9999px;
+}
+
+.ringBase {
+  stroke: #999;
+  transition: stroke 350ms ease;
+}
+
+.ringInnerThin {
+  stroke: #666;
+  transition: stroke 350ms ease;
+}
+
+.ringSpin {
+  transform-origin: 50% 50%;
+  animation: vekonSpin 3.2s linear infinite;
+}
+
+.ringPulse {
+  animation: vekonPulse 2.6s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.08));
+}
+
+.ringWobble {
+  transform-origin: 50% 50%;
+  animation: vekonWobble 2.2s ease-in-out infinite;
+  opacity: 0.85;
+}
+
+.wordmarkShell {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+  line-height: 1;
+}
+
+.wordmarkMeasure {
+  font-size: clamp(0.85rem, 2.8vw, 1.15rem);
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  color: transparent;
+}
+
+.wordmarkDots {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(0.85rem, 2.8vw, 1.15rem);
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  color: transparent;
+  background-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.88) 1.4px,
+    transparent 1.65px
+  );
+  background-size: 5px 5px;
+  background-position: 0 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.12));
+  animation: vekonShimmer 6.2s ease-in-out infinite;
+}
+
+@keyframes vekonSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes vekonPulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    stroke-dasharray: 24 10;
+  }
+  50% {
+    opacity: 0.92;
+    stroke-dasharray: 28 8;
+  }
+}
+
+@keyframes vekonWobble {
+  0%,
+  100% {
+    transform: rotate(-2deg) scale(1);
+  }
+  50% {
+    transform: rotate(2deg) scale(1.01);
+  }
+}
+
+@keyframes vekonShimmer {
+  0%,
+  100% {
+    background-position: 0 0;
+    opacity: 0.94;
+  }
+  50% {
+    background-position: 14px 8px;
+    opacity: 1;
+  }
+}

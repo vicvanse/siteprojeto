@@ -1,0 +1,43 @@
+{
+  "name": "siteprojeto",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "print:png": "node scripts/generate-card-png.mjs",
+    "print:pdf": "node scripts/generate-card-pdf.mjs",
+    "print:qr": "node scripts/regenerate-print-qr.mjs",
+    "print:assets": "npm run print:qr && npm run print:pdf && npm run print:png"
+  },
+  "dependencies": {
+    "@upstash/redis": "^1.37.0",
+    "@vimeo/player": "^2.30.3",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.7.0",
+    "next": "16.2.2",
+    "next-intl": "^4.9.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "resend": "^6.12.0"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.2",
+    "pdfkit": "^0.18.0",
+    "qrcode": "^1.5.4",
+    "svg-to-pdfkit": "^0.1.8",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

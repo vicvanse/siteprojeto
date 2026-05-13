@@ -1,0 +1,1410 @@
+{
+  "ted-ed-psychology-lessons": {
+    "en": {
+      "title": "TED-Ed: psychology lessons",
+      "excerpt": "The TED-Ed Psychology section offers video lessons on topics such as cognition and learning, motivation and emotion, personality, development, and social psychology.",
+      "body": [
+        "TED-Ed’s Psychology section brings together short video lessons on topics such as cognition and learning, motivation and emotion, personality, development, and social psychology. The pieces are usually short, designed to introduce a concept, a question, or a problem in a clear, visual, accessible way.",
+        "The value is that they work well as an entry point, a quick review, or a first encounter with ideas you can then deepen in more technical texts. Even when they simplify, the lessons often structure the subject and help you place the core ideas before you move on to denser reading."
+      ]
+    },
+    "ko": {
+      "title": "TED-Ed: 심리학 레슨",
+      "excerpt": "TED-Ed의 Psychology 섹션은 인지·학습, 동기·정서, 성격, 발달, 사회심리학 등의 주제를 담은 영상 강의를 모읍니다.",
+      "body": [
+        "TED-Ed의 Psychology는 인지·학습, 동기·정서, 성격, 발달, 사회심리학을 다루는 짧은 영상을 모읍니다. 짧고 시각·접근가능한 방식으로 개념, 질문, 문제를 소개하도록 짜여 있습니다.",
+        "더 기술적 텍스트로 가기 전 입구·빠른 복습·첫접촉으로 쓰기 좋다는 점이 강점입니다. 단순화하더라도 주제의 뼈대를 잡아 주어, 촘촘한 읽기 전에 핵심을 자리에 놓는 데 도움이 됩니다."
+      ]
+    },
+    "es": {
+      "title": "TED-Ed: lecciones de psicología",
+      "excerpt": "La sección Psychology de TED-Ed reúne lecciones en vídeo sobre temas como cognición y aprendizaje, motivación y emoción, personalidad, desarrollo y psicología social.",
+      "body": [
+        "La sección Psychology de TED-Ed reúne lecciones breves sobre cognición y aprendizaje, motivación y emoción, personalidad, desarrollo y psicología social. Suelen ser piezas breves, pensadas para presentar, de forma visual y accesible, un concepto, una pregunta o un problema.",
+        "Ahí está su utilidad: sirven de entrada, de repaso rápido o de primer contacto con asuntos a profundizar luego con textos técnicos. Aun simplificando, a menudo ordenan el tema y sitúan ideas clave antes de leer con más densidad."
+      ]
+    },
+    "ja": {
+      "title": "TED-Ed: 心理学レッスン",
+      "excerpt": "TED-Ed「Psychology」は、認知と学習、動機づけと感情、パーソナリティ、発達、社会心理学といった主題の動画レッスンを集めたセクション。",
+      "body": [
+        "短い映像で、概念・問い・問題を、視覚的で取り上げやすい形で導入します。専門文献へ行く前の導入や要点のざっとした把握に向きます。",
+        "単純化はあっても主題の骨子を揃え、重い文章に入る前の足場にしやすいのが利点です。"
+      ]
+    },
+    "de": {
+      "title": "TED-Ed: Psychologielektionen",
+      "excerpt": "In TED-Eds Rubrik „Psychology“ finden sich Videolektionen zu Themen wie Kognition und Lernen, Motivation und Emotion, Persönlichkeit, Entwicklung und Sozialpsychologie.",
+      "body": [
+        "Dort bündelt TED-Ed kurze Lektionen, die Kognition, Lernen, Motivation, Emotion, Persönlichkeit, Entwicklung und Sozialpsychologie ansprechen. Häufig knapp, visuell, mit klarer Einführung in ein Konzept, eine Frage oder ein Problem.",
+        "Gut geeignet als Einstieg, Auffrischung oder erster Anlauf, bevor du technischere Texte liest. Trotz Vereinfachung oft hilfreich, Thema zu strukturieren und Kernideen vor dichterer Lektüre zu platzieren."
+      ]
+    },
+    "fr": {
+      "title": "TED-Ed : leçons de psychologie",
+      "excerpt": "La section Psychology de TED-Ed regroupe des leçons vidéo sur la cognition et l’apprentissage, la motivation et l’émotion, la personnalité, le développement et la psychologie sociale.",
+      "body": [
+        "Les leçons sont plutôt courtes et visent à introduire visuellement, de façon accessible, un concept, une question ou un problème. Bon point d’entrée, révision rapide ou premier contact, avant des lectures plus denses ou techniques.",
+        "Même quand c’est simplifié, cela structure souvent le thème et aide à situer les idées clés."
+      ]
+    },
+    "it": {
+      "title": "TED-Ed: lezioni di psicologia",
+      "excerpt": "La sezione Psychology raccoglie lezioni video su cognizione e apprendimento, motivazione ed emozione, personalità, sviluppo, psicologia sociale.",
+      "body": [
+        "Contenuti in genere brevi, pensati per presentare in modo visivo e accessibile un concetto, una domanda, un problema. Valgono come ingresso, ripasso veloce, primo incontro con un tema da approfondire in testi tecnici.",
+        "Anche se semplificano, spesso danno struttura al materiale e aiutano a posizionare le idee centrali prima di letture più faticose."
+      ]
+    },
+    "zh-CN": {
+      "title": "TED-Ed：心理学课程",
+      "excerpt": "TED-Ed「Psychology」栏目汇集关于认知与学习、动机与情绪、人格、发展与社会心理学等主题的视频讲习。",
+      "body": [
+        "短片形式，以直观、易懂方式引入一个概念、问题或话题，适合当入口、速览，或在深入更专业的文本前先建立轮廓。",
+        "即便有简化，也常能先把主题理清楚，把关键想法摆好位置。"
+      ]
+    },
+    "zh-TW": {
+      "title": "TED-Ed：心理學課程",
+      "excerpt": "TED-Ed 的「Psychology」匯整認知與學習、動機與情緒、人格、發展與社會心理學等主題的短影片。",
+      "body": [
+        "內容多半偏短、偏視覺、易讀，先交出一個概念、問法或待處理議題。適合當導讀、快轉式複習，或通往更專文前的踏腳。",
+        "就算略為簡化，也常幫讀者把主題的骨架立起來。"
+      ]
+    }
+  },
+  "you-are-not-so-smart": {
+    "en": {
+      "title": "You Are Not So Smart",
+      "excerpt": "A podcast by David McRaney about psychology, reasoning, beliefs, and disinformation.",
+      "body": [
+        "You Are Not So Smart (https://youarenotsosmart.com/) is David McRaney’s podcast, focused on psychology, reasoning, belief, and disinformation. Episodes are often long interviews with researchers, authors, and experts on cognitive bias, perception, memory, polarization, conspiracy-tinged thinking, and critical thought.",
+        "The site also bundles posts, books, newsletters, and transcripts. The point is to translate social and psychological research into accessible, problem-led conversations: why we believe, how we change our minds, and how error, illusion, and persuasion work in daily life."
+      ]
+    },
+    "ko": {
+      "title": "You Are Not So Smart",
+      "excerpt": "David McRaney의 팟캐스트로, 심리, 추론, 신념, 허위정보에 초점이 맞춰집니다.",
+      "body": [
+        "https://youarenotsosmart.com/ — 인지 편향, 지각, 기억, 양극화, 음모적 뉘앙스의 사고, 비판적 사고를 주제로 연구자, 저자, 전문가를 인터뷰하며 끌어갑니다.",
+        "같은 프로젝트는 글, 서적, 뉴스레터, 대본과 함께 묶여 있습니다. 사회·심리 연구를, 왜 믿는지, 생각이 어떻게 바뀌는지, 착오·망상·설득이 일상에 어떻게 스며드는지라는 질문으로 길고 듣기 쉬운 이야기로 옮깁니다."
+      ]
+    },
+    "es": {
+      "title": "You Are Not So Smart",
+      "excerpt": "Podcast de David McRaney sobre psicología, razonamiento, creencias y desinformación.",
+      "body": [
+        "https://youarenotsosmart.com/ es el podcast: entrevistas largas con expertos sobre sesgos cognitivos, percepción, memoria, polarización, lógica de teorías de conspiración, pensamiento crítico, etc.",
+        "El sitio agrupa además publicaciones, libros, boletines y transcripciones. Trata de traducir la investigación social y psicológica a conversaciones amplias y concretas sobre por qué creemos y cómo se mueven las certezas."
+      ]
+    },
+    "ja": {
+      "title": "You Are Not So Smart",
+      "excerpt": "David McRaney の、心理学、推論、信念、偽情報を扱うポッドキャスト。",
+      "body": [
+        "https://youarenotsosmart.com/ — 認知バイアス、知覚、記憶、二極化、陰謀的な文脈の物の見方、批評的思考など、研究者・著者へのインタビューが中心です。",
+        "サイト上では記事、書籍、レター、逐語稿を束ね、社会・心理の知見を「なぜ信じるのか」「心はどう変わるのか」という、日常に根差した会話に運びます。"
+      ]
+    },
+    "de": {
+      "title": "You Are Not So Smart",
+      "excerpt": "Podcast von David McRaney zu Psychologie, Argumentation, Überzeugung und Fehlinformation.",
+      "body": [
+        "https://youarenotsosmart.com/ — lange Interviews (Forscher:innen, Autor:innen) zu Wahrnehmung, Voreingenommenheit, Erinnerung, Polarisierung, Verschwörungsaffiner Denkweise, skeptischem Denken.",
+        "Dazu: Texte, Bücher, Newslettern, Transkripte. Idee: psychologische und soziale Forschung in zugängliche, problemgetriebene Gespräche zu gießen."
+      ]
+    },
+    "fr": {
+      "title": "You Are Not So Smart",
+      "excerpt": "Podcast de David McRaney: psychologie, raisonnement, croyances, désinformation.",
+      "body": [
+        "https://youarenotsosmart.com/ — grands entretiens sur biais cognitifs, perception, mémoire, polarisation, pente conspirationniste, esprit critique.",
+        "Avec, sur le site, billets, livres, infolettre, retranscriptions. L’enjeu: ancrer la recherche en psych et sciences soc dans des questions concrètes sur la croyance et l’influence au quotidien."
+      ]
+    },
+    "it": {
+      "title": "You Are Not So Smart",
+      "excerpt": "Il podcast di David McRaney su psicologia, ragionamento, credenze, disinformazione.",
+      "body": [
+        "https://youarenotsosmart.com/ — colloqui con ricercatrici e autori: bias, percezione, memoria, polarizzazione, tono cospirativo, critica.",
+        "C’è un intorno di post, libri, newsletter, trascritti: tradurre ricerca psicologica e sociale in conversazioni lunghe e poggiate su problemi reali."
+      ]
+    },
+    "zh-CN": {
+      "title": "You Are Not So Smart",
+      "excerpt": "David McRaney 的播客，讨论心理学、推理、信念与虚假信息。",
+      "body": [
+        "https://youarenotsosmart.com/ 多围绕访谈展开：认知偏差、知觉、记忆、极化、带阴谋论色彩的思维方式、批判性思考等。",
+        "同站还有文章、书、通讯与逐字稿，试图把社会与心理研究，落到可感的日常命题：人为何而信、观念如何变动、错谬、幻相与说服如何织进生活。"
+      ]
+    },
+    "zh-TW": {
+      "title": "You Are Not So Smart",
+      "excerpt": "David McRaney 的節目，關心心理、推理、信念、不實訊息。",
+      "body": [
+        "https://youarenotsosmart.com/ 以長訪談常態：偏誤、知覺、記憶、極化、陰謀論氣息濃的推想、批評性思考之類的題。",
+        "專案頁上亦串文章、書、電子報、全稿。想把研究拉回日常：人如何信、想法怎麼挪位、誤、幻、說服在日子裡怎走。"
+      ]
+    }
+  },
+  "mad-men": {
+    "en": {
+      "title": "Mad Men",
+      "excerpt": "Mad Men follows the Sterling Cooper agency and what branches from it on Madison Avenue, with Don Draper (Jon Hamm) as the central creative, brilliant, with a past pieced together in secret.",
+      "body": [
+        "Mad Men follows Sterling Cooper and what flows from it on Madison Avenue, with Don Draper (Jon Hamm) as the brilliant lead creative and a past built in secrecy. Copywriters, art directors, accountants, and clients sketch the day-to-day of an industry that sells desire; the plot works power, gender, race, class, and identity without easy answers.",
+        "What makes the show stick is the restrained pace, the precise dialogue, and the way sets, wardrobe, and music act as part of the story: the 1960s move episode by episode, and the tone shifts with the country."
+      ]
+    },
+    "ko": {
+      "title": "Mad Men",
+      "excerpt": "Sterling Cooper와 이에서 갈라져 나가는 사무실을 따라 매디슨 애비뉴를, 도넬드 드레이퍼(존 햄)는 비밀 속에 쌓인 과거의 중심 창작가로 둡니다.",
+      "body": [
+        "Sterling Cooper와 갈라져 나가는 광고주들을 따라가며, 도널드 드레이퍼(존햄)는 뛰어난 주역으로 욕망을 파는 일상을 그리고 권력·젠더·인종·계급·정체성의 주제에 답이 쉽지 않다.",
+        "눌린 리듬, 섬세한 대사, 세트·의상·음악이 이야기의 일부로 작동하며 60년대는 에피소드마다 나라의 분위기와 같이 흐른다."
+      ]
+    },
+    "es": {
+      "title": "Mad Men",
+      "excerpt": "Mad Men sigue a la agencia Sterling Cooper, y a lo que se desprende, en Madison Avenue, con Don Draper (Jon Hamm) como creativo central, brillante, y un pasado armado en la sombra.",
+      "body": [
+        "El trabajo del día a día: redactores, directores de arte, contables y clientes, en un sector que vende deseo; trata de poder, género, raza, clase, identidad sin respuestas fáciles.",
+        "Lo que la hace inolvidable es su ritmo contenido, su diálogo afinado, y su uso de decorado, ropa y música: los años sesenta avanzan, y el tono cambia con el país."
+      ]
+    },
+    "ja": {
+      "title": "Mad Men",
+      "excerpt": "マジソン・アベニューのスターリング・クーパーと、そこから生じる人々を描く。中心は、秘密に包まれた過去を持つ、天才クリエイティブのドン・ドレイパー（ジョン・ハム）。",
+      "body": [
+        "コピーライター、AD、経理、クライアントが、欲望を売る産業の日々を塗る。物語は権力、ジェンダー、人種、階級、アイデンティティに触れ、簡単な答えは出さない。",
+        "抑えたテンポ、鋭い会話、セット、衣、音楽が物語の延長として働き、60年代をエピソードごとに、国の空気のように進める。"
+      ]
+    },
+    "de": {
+      "title": "Mad Men",
+      "excerpt": "Mad Men folgt der Agentur Sterling Cooper in der Madison Avenue und alles, was daraus wird; Don Draper (Jon Hamm) als strahlendes, zentrales Creativ, mit in Geheimnisse gehüllter Herkunft.",
+      "body": [
+        "Rundum Texter, Artdirector, Buchhaltung, Kund:innen in einer Branche, die Verlangen verkauft. Macht, Geschlecht, Rasse, Klasse, Identität — nie billige Antworten.",
+        "Was bleibt: gedecktes Tempo, scharf geschriebener Dialog, Kulisse, Garderobe, Musik als Nacherzählung; die 1960er wachsen Episode um Episode, der Ton wächst mit dem Land."
+      ]
+    },
+    "fr": {
+      "title": "Mad Men",
+      "excerpt": "Mad Men suit l’agence Sterling Cooper, et ce qui s’y rattache, sur Madison Avenue, avec Don Draper (Jon Hamm) comme concepteur flamboyant, au passé tissé de secrets.",
+      "body": [
+        "Rédacteurs, directeur·trice d’art, comptes, clients: le quotidien d’un métier de désir, sans réponses toutes faites sur le pouvoir, le genre, la «race», la classe, l’identité.",
+        "Sa force: rythme contenu, dialogues ciselés, décors, costumes, musique comme tissu; les années 60 avancent, et l’humeur suit le pays."
+      ]
+    },
+    "it": {
+      "title": "Mad Men",
+      "excerpt": "Mad Men segue l’agenzia Sterling Cooper e quanto ne deriva, su Madison Avenue, con Don Draper (Jon Hamm) al centro, creativo brillante e un passato impacchettato nel mistero.",
+      "body": [
+        "In torno, copy, art, contabilità, committenti, quotidianità di un’industria del desiderio, su potere, genere, razza, classe, identità, senza soluzioni facili.",
+        "Cosa ne fa un capo memorabile: ritmo trattenuto, dialogo preciso, set, abiti, musica come sostanza narrativa; i Sessanta avanzano, il tono si sposta con il paese."
+      ]
+    },
+    "zh-CN": {
+      "title": "Mad Men",
+      "excerpt": "在麦迪逊大道的史特林·古柏及其延伸，唐·德雷柏（乔·汉姆）是核心创想者，光鲜背后藏着一段以秘密堆起的过去。",
+      "body": [
+        "周围是文案、美指、客户与账房，描绘推销欲望这一行的日常。剧情触及权力、性别、种族、阶级、身份，但不给轻巧答案。",
+        "节制的节奏、利落的对话，以及布景、服装、音乐对叙事的参与：六十年代一集一集往前，气氛随国家而变。"
+      ]
+    },
+    "zh-TW": {
+      "title": "Mad Men",
+      "excerpt": "跟著史特林庫伯與旁枝，在麥迪遜大道上。唐德雷伯（喬漢姆）是核心創意人，有著藏起來拼成的過去。",
+      "body": [
+        "文案、美指、帳、客戶在場，描一個賣慾的產業。故事碰權力、性別、種族、階級、自我，不給便宜答案。",
+        "能記住它的是壓住的速度、利落的口白，還有場景、衣、音當敘事延伸：六〇年代一集一集走，調子跟著國家動。"
+      ]
+    }
+  },
+  "special-books-by-special-kids": {
+    "en": {
+      "title": "Special Books by Special Kids",
+      "excerpt": "Special Books by Special Kids is a YouTube channel created by Chris Ulmer, with long interviews and conversations with people living with neurological differences, rare conditions, and disabilities.",
+      "body": [
+        "Special Books by Special Kids (https://www.youtube.com/@SpecialBooksbySpecialKids) is a YouTube channel created by Chris Ulmer, with long interviews and conversations with people living with neurological differences, rare conditions, and disabilities. The format is simple, almost domestic: a camera, a conversation, and a space where each person, or someone in the family, tells their own story in the first person.",
+        "What makes the project compelling is the way it pulls away from the spectacular or pitying tone that often surrounds these portrayals, shifting attention toward daily life, humor, affection, and concrete difficulties. Over the years, the channel has also become an archive of lives shaped by experiences that rarely get visibility, built around listening, presence, and steady community work."
+      ]
+    },
+    "ko": {
+      "title": "Special Books by Special Kids",
+      "excerpt": "Special Books by Special Kids는 크리스 울머가 만든 유튜브 채널로, 신경학적 다양성, 희귀 질환, 장애와 함께 살아가는 사람들과의 긴 인터뷰와 대화를 모은 곳입니다.",
+      "body": [
+        "Special Books by Special Kids (https://www.youtube.com/@SpecialBooksbySpecialKids)는 크리스 울머가 만든 유튜브 채널로, 신경학적 다양성, 희귀 질환, 장애와 함께 살아가는 사람들과의 긴 인터뷰와 대화를 모은 곳입니다. 형식은 단순하고 거의 가정적입니다. 카메라 한 대, 대화 한 자리, 그리고 본인이나 가족이 1인칭으로 자기 이야기를 들려줄 공간이 그 전부입니다.",
+        "이 프로젝트가 흥미로운 이유는, 이런 모습들을 흔히 둘러싸는 자극적이거나 동정적인 톤에서 벗어나 일상, 유머, 정서, 구체적인 어려움 쪽으로 시선을 옮긴다는 점입니다. 시간이 지나면서 이 채널은 잘 드러나지 않던 경험으로 채워진 삶의 기록이 되었고, 그 바탕에는 듣기, 함께 있어 주기, 꾸준한 공동체적 작업이 자리합니다."
+      ]
+    },
+    "es": {
+      "title": "Special Books by Special Kids",
+      "excerpt": "Special Books by Special Kids es un canal de YouTube creado por Chris Ulmer, con entrevistas y conversaciones largas con personas que viven con diversidades neurológicas, condiciones raras y discapacidades.",
+      "body": [
+        "Special Books by Special Kids (https://www.youtube.com/@SpecialBooksbySpecialKids) es un canal de YouTube creado por Chris Ulmer, con entrevistas y conversaciones largas con personas que viven con diversidades neurológicas, condiciones raras y discapacidades. El formato es sencillo y casi casero: una cámara, una conversación y un espacio en el que cada persona, o alguien de la familia, cuenta su historia en primera persona.",
+        "El interés del proyecto está en deshacer el tono espectacular o compasivo que suele rodear estas representaciones, desplazando la mirada hacia lo cotidiano, el humor, los afectos y las dificultades concretas. Con los años, el canal se ha convertido también en un archivo de vidas atravesadas por experiencias poco visibles, organizado en torno a la escucha, la presencia y un trabajo de comunidad sostenido."
+      ]
+    },
+    "ja": {
+      "title": "Special Books by Special Kids",
+      "excerpt": "Special Books by Special Kids は、クリス・アルマーが立ち上げた YouTube チャンネルで、神経学的な多様性、希少疾患、障害とともに生きる人々への長いインタビューや対話を集めている。",
+      "body": [
+        "Special Books by Special Kids (https://www.youtube.com/@SpecialBooksbySpecialKids) は、クリス・アルマーが立ち上げた YouTube チャンネルで、神経学的な多様性、希少疾患、障害とともに生きる人々への長いインタビューと対話をまとめている。形式は簡素で、ほぼ家庭的。カメラ一台と会話、そして当事者や家族が一人称で自分の物語を語る場が用意されている。",
+        "この企画の魅力は、こうした表象を取り囲みがちな扇情的または憐憫の調子から離れ、日々の暮らし、ユーモア、情、具体的な困りごとへ視線を移す点にある。年月を重ねるうちに、可視化されにくい経験を抱えた生の記録としても機能するようになり、その土台には聴くこと、寄り添うこと、続いていく共同体的な仕事がある。"
+      ]
+    },
+    "de": {
+      "title": "Special Books by Special Kids",
+      "excerpt": "Special Books by Special Kids ist ein YouTube-Kanal von Chris Ulmer, der lange Interviews und Gespräche mit Menschen versammelt, die mit neurologischer Vielfalt, seltenen Erkrankungen und Behinderungen leben.",
+      "body": [
+        "Special Books by Special Kids (https://www.youtube.com/@SpecialBooksbySpecialKids) ist ein YouTube-Kanal von Chris Ulmer, der lange Interviews und Gespräche mit Menschen versammelt, die mit neurologischer Vielfalt, seltenen Erkrankungen und Behinderungen leben. Das Format ist schlicht, fast häuslich: eine Kamera, ein Gespräch und ein Raum, in dem jede Person oder ein Angehöriger in der ersten Person die eigene Geschichte erzählen kann.",
+        "Spannend wird das Projekt dadurch, dass es den spektakulären oder mitleidigen Ton ablegt, der solche Darstellungen oft begleitet, und den Blick auf Alltag, Humor, Zuneigung und konkrete Schwierigkeiten lenkt. Über die Jahre ist der Kanal auch zu einem Archiv von Leben geworden, in denen wenig sichtbare Erfahrungen Gewicht bekommen, getragen von Zuhören, Präsenz und einer beständigen Arbeit am Gemeinschaftlichen."
+      ]
+    },
+    "fr": {
+      "title": "Special Books by Special Kids",
+      "excerpt": "Special Books by Special Kids est une chaîne YouTube créée par Chris Ulmer, qui rassemble de longs entretiens et conversations avec des personnes vivant avec des diversités neurologiques, des maladies rares et des handicaps.",
+      "body": [
+        "Special Books by Special Kids (https://www.youtube.com/@SpecialBooksbySpecialKids) est une chaîne YouTube créée par Chris Ulmer, qui rassemble de longs entretiens et conversations avec des personnes vivant avec des diversités neurologiques, des maladies rares et des handicaps. Le format est simple, presque domestique: une caméra, une conversation, et un espace où chaque personne, ou un proche, raconte son histoire à la première personne.",
+        "L’intérêt du projet tient à la façon dont il se détache du ton spectaculaire ou apitoyé qui accompagne souvent ces représentations, en déplaçant le regard vers le quotidien, l’humour, les affects et les difficultés concrètes. Au fil des années, la chaîne est devenue aussi une archive de vies marquées par des expériences peu visibles, articulée autour de l’écoute, de la présence et d’un travail patient de communauté."
+      ]
+    },
+    "it": {
+      "title": "Special Books by Special Kids",
+      "excerpt": "Special Books by Special Kids è un canale YouTube creato da Chris Ulmer, che raccoglie interviste e lunghe conversazioni con persone che vivono con diversità neurologiche, condizioni rare e disabilità.",
+      "body": [
+        "Special Books by Special Kids (https://www.youtube.com/@SpecialBooksbySpecialKids) è un canale YouTube creato da Chris Ulmer, che raccoglie interviste e lunghe conversazioni con persone che vivono con diversità neurologiche, condizioni rare e disabilità. Il formato è semplice e quasi domestico: una telecamera, una conversazione e uno spazio in cui ciascuno, o un familiare, racconta la propria storia in prima persona.",
+        "L’interesse del progetto sta nel disfare il tono spettacolare o pietoso che spesso accompagna queste rappresentazioni, spostando lo sguardo sul quotidiano, sull’umorismo, sugli affetti e sulle difficoltà concrete. Con il tempo, il canale è diventato anche un archivio di vite segnate da esperienze poco visibili, costruito attorno all’ascolto, alla presenza e a un lavoro continuativo di comunità."
+      ]
+    },
+    "zh-CN": {
+      "title": "Special Books by Special Kids",
+      "excerpt": "《Special Books by Special Kids》是克里斯·厄尔默创办的 YouTube 频道，集中收录与神经多样性、罕见疾病及残障人士相关的长访谈与对话。",
+      "body": [
+        "《Special Books by Special Kids》（https://www.youtube.com/@SpecialBooksbySpecialKids）是克里斯·厄尔默创办的 YouTube 频道，集中收录与神经多样性、罕见疾病及残障人士的长访谈与对话。形式简单，近乎家庭：一台摄像机、一段对谈，以及当事人或家人以第一人称讲述自身经历的空间。",
+        "项目的可贵之处，在于不再沿用那种猎奇或怜悯的叙述口吻，把注意力转回日常、幽默、情感与具体的困难。多年下来，这个频道也成为一份不易被看见之生命经验的档案，建立在倾听、陪伴与持续的社群工作之上。"
+      ]
+    },
+    "zh-TW": {
+      "title": "Special Books by Special Kids",
+      "excerpt": "《Special Books by Special Kids》是 Chris Ulmer 創辦的 YouTube 頻道，集中收錄與神經多樣性、罕見疾病及身心障礙者的長訪談與對話。",
+      "body": [
+        "《Special Books by Special Kids》（https://www.youtube.com/@SpecialBooksbySpecialKids）是 Chris Ulmer 創辦的 YouTube 頻道，集中收錄與神經多樣性、罕見疾病及身心障礙者的長訪談與對話。形式簡單，近乎家庭：一台攝影機、一段對談，以及當事人或家人以第一人稱訴說自身故事的空間。",
+        "這個計畫有意思的地方，在於拉開與獵奇或憐憫常見口吻的距離，把目光轉回日常、幽默、情感與具體的困難。多年下來，這個頻道也成為一份較少被看見的生命經驗檔案，奠基於聆聽、陪伴與長期投入的社群工作。"
+      ]
+    }
+  },
+  "great-pretender-anime": {
+    "en": {
+      "title": "Great Pretender",
+      "excerpt": "Great Pretender follows con artist Makoto Edamura in Tokyo as he is pulled into Laurent Thierry’s long cons.",
+      "body": [
+        "Makoto Edamura, a Tokyo swindler, gets roped into Laurent Thierry’s stings. Each block stages a long con (Los Angeles, Singapore, London, Tokyo/Shanghai) in a almost filmic clip: a rich mark, costuming, flips, and a finale that usually reframes the obvious. Light comedy, drama, a bit of social jab, still the fun of watching the clockwork go.",
+        "Hiro Kaburagi’s feel and the Wit Studio look go for big color, wide frames, winks to cinema and jazz; the OST, including a nod to the old Platters hit, sells spectacle."
+      ]
+    },
+    "ko": {
+      "title": "Great Pretender",
+      "excerpt": "도쿄의 사기꾼 에다무라 마모토가 로렌 띠에리의 작전에 끼어드는 애니.",
+      "body": [
+        "회차마다 (LA·싱가·런·도쿄/상하이) 풍의 롱콘. 풍부한 표적·변장·뒤집기, 결말이 낯선 각도. 가벼운 희극·드라마·뼈질, 공작이 풀리는 재미는 유지.",
+        "감독·와이트: 채도 높고 프레임 넓고, 영·재즈 쪽 오마주. BGM은 전반적으로 쇼맛을 끌고, 더 피터스 타이틀 쪽 호출도. "
+      ]
+    },
+    "es": {
+      "title": "Great Pretender",
+      "excerpt": "Great Pretender sigue al timador Makoto Edamura, en Tokio, metido en los golpes de Laurent Thierry.",
+      "body": [
+        "Cada arco arma un long con: Los Ángeles, Singapur, Londres, Tokio/Shanghái; ritmo casi de capítulo de cine, blanco rico, trajes, giros, final que tuerce lo obvio, con toques de comedia, drama, crítica, sin dejar de disfrutar el engranaje.",
+        "Dire de Hiro Kaburagi, dibujo Wit Studio, color saturado, planos abiertos, guiños cine y jazz. El soundtrack remata el aire de espectáculo."
+      ]
+    },
+    "ja": {
+      "title": "Great Pretender",
+      "excerpt": "都の詐欺師、枝村真人が、ロラン・ティエリの仕掛けに巻き込まれる。",
+      "body": [
+        "各ブロックでロングコン。LA、シンガ、ロンド、東京/上海。富裕なマーク、変装、裏目、最後のひねり。ショーとして楽しさは残る。",
+        "鏑木ひろ監督とWitの絵、彩り、ワイド、映画的・ジャズ的示唆。サウンドも、プラターズ等への参照を交え、見世物的な匂いを高める。"
+      ]
+    },
+    "de": {
+      "title": "Great Pretender",
+      "excerpt": "Great Pretender begleitet den Trickbetrüger Makoto Edamura, gezogen in Laurent Thierrys Operationen, aus Tokio.",
+      "body": [
+        "Jede Serienfuhre mit Big Con, Los Angeles, Singapur, London, Tokio/Shanghai: reiches Opfer, Verkleidung, Umschlag, Schluss, der meist kippt, was klar aussieht. Mischton aus Witz, Drama, leiser Gesellschaftsstichel, trotzdem Lust, dem Uhrwerk zuzusehen.",
+        "Visuell: Kaburagi, WIT, Farbe, Bühne, Film/Jazz-Referenzen, Score als Show."
+      ]
+    },
+    "fr": {
+      "title": "Great Pretender",
+      "excerpt": "Great Pretender suit l’arnaqueur Edamura à Tokyo, entraîné dans les « long cons » de Laurent Thierry.",
+      "body": [
+        "Chaque acte: escroquerie mémorable (L.A., Singapour, Londres, Tōkyō / Shanghai) au rythme de film: proie, costumes, retournements, twist final. Mélange comique, drame, pointe de critique sociale, sans cesser d’y prendre plaisir.",
+        "Finition Kaburagi/ Wit Studio, couleurs, plans larges, winks au cinéma, au jazz; B.O. pousse l’esprit spectacle, avec clin d’œil The Platters."
+      ]
+    },
+    "it": {
+      "title": "Great Pretender",
+      "excerpt": "Great Pretender: il truffatore Makoto Edamura a Tōkyō, nella orbita di Laurent Thierry.",
+      "body": [
+        "Ciascun arco: una grande fregatura (L.A., Singapore, Londra, Tōkyō/ Shanghai), ritmo quasi di film, bersagli ricchi, svolte, finale capace di ribaltare l’ovvio, tra risata, drammaticità, pizzico di critica, senza togliere gusto al congegno che gira.",
+        "Kaburagi, Wit, colore, inquadrature larghe, cita cinema e jazz; traccia sostiene l’impianto spettacolare."
+      ]
+    },
+    "zh-CN": {
+      "title": "「Great Pretender」",
+      "excerpt": "在东京的骗子“枝村真人”被拉进“罗兰·提耶里”的大骗局。",
+      "body": [
+        "分块是长线骗局（洛杉矶、新加坡、伦敦、东京/上海），节奏像电影一截：富目标、化装、反转、结局常翻掉你以为是的那层。带轻喜、重戏、点社会，仍好这一口机关运转。",
+        "镜利弘与 WIT 工作室：饱和色、大画幅、对电影/爵士的致敬；原声带（含对老歌名的呼应）强化戏台感。"
+      ]
+    },
+    "zh-TW": {
+      "title": "Great Pretender",
+      "excerpt": "東京的枝村真人被捲入羅倫提耶里的一連串大騙。",
+      "body": [
+        "一塊塊的長局（洛杉磯、新加坡、倫敦、東京/上海）像一截一截的片子：有錢的標的、變身、轉、最後一拐常翻掉以為的事。戲、刺、一點社會，仍不減看機關的爽。",
+        "鏑木+Wit：大色、大框、對電影/爵士的眨眼；聲帶幫你覺得在台上。"
+      ]
+    }
+  },
+  "cowboy-bebop": {
+    "en": {
+      "title": "Cowboy Bebop",
+      "excerpt": "Cowboy Bebop has Spike and Jet on the Bebop hunting bounties in a future where Earth is partly left behind and the system is a scene of drift, want, and scattered violence.",
+      "body": [
+        "Spike Spiegel, Jet Black on the Bebop: bounty work in a future where the Earth is partly desolate, the system a stage for drift, need, and vague violence. Faye, Ed, Ein show up, so the “crew” is more shared life than a tight band: shaky pasts, fickle links.",
+        "A single episode can lean western, noir, gags, space opera, or existential mope, and still it stays itself. Tight, film-like craft; the picture is strong in color, frame, and quiet. Yoko Kanno with the Seatbelts, jazz, blues, bebop, rock, are not a pad under the show but a core to its clock. A stylish, wistful anime, clear that past, loneliness, and regret do not get tied up neat."
+      ]
+    },
+    "ko": {
+      "title": "Cowboy Bebop",
+      "excerpt": "지구를 일부 포기한 미래, 스파이크·스피갈과 젯·블랙이 비밥호에서 바운티를 쫓는다. 태양계는 이동, 불안, 흩어지는 폭력이 무대다.",
+      "body": [
+        "이후 페이, 에드, 아인이 합류해도, 일행은 단단한 '팀'보다는 가벼운 동거, 남겨진 과거, 흔들리는 끈에 가깝다.",
+        "회마다 톤이 서부, 느와르, 코미디, SF, 실존적 쓰라림으로 바뀌어도, 작품의 정체성은 뚜렷하다. 콘·컷·침묵, 그리고 이노 카노&시트벨츠의 재즈·블루스·비밥·락은 BGM이 아니라 흐름의 뼈대. 과거·고독·후회가 깨끗이 해결되지는 않는다는 자각이 있는, 스타일 강한, 멜랑콜한 SF 애니다."
+      ]
+    },
+    "es": {
+      "title": "Cowboy Bebop",
+      "excerpt": "Cowboy Bebop: Spike, Jet, la nave Bebop, cazando fianzas en un futuro de Tierra medio abandonada y Sistema que es desarraigo, precariedad, violencia difusa.",
+      "body": [
+        "Faye, Ed, Ein, forman cuerpo más de convivencia poco firme, basura de recuerdo, afecto frágil, que de equipo.",
+        "Cada tira puede ponerse wéstern, cine negro, risa, ciencia-espacial, tristeza, sin perder tren; dirección, color, corte, silencio, y pista, jazz, bebop, de Yoko, no son acompañamiento, pilar del ritmo. Tono melancólico, sabiendo que nada, soledad, mala consciencia, no arreglan en redondo."
+      ]
+    },
+    "ja": {
+      "title": "Cowboy Bebop",
+      "excerpt": "スパイク、ジェット、宇宙船Bebopの賞金稼ぎ。地球が一面的に捨てられ、太陽系が移動、不安、散らばる暴力の舞台に変わる未来。",
+      "body": [
+        "物語の途中で、フェイ、エド、アインが加わるが、一行は揃いの'仲間'というより、仮住まい的な同席、抜け殻の過去、揺らぐ接続に近い。",
+        "各話で西部、ノワール、コメディ、SF、実存的な自失へ比重が揺れても、筆跡の芯は一つ。演出は締まり、色彩・枠・沈黙。菅野よう子率いるシートベルツのジャズ、ブルース、ビバップ、ロックは、劇下敷きでなく、リズムの中核。過去、孤独、未練を綺麗に片づけられない——その自覚を持った、艶のある、愁いの深い作品。"
+      ]
+    },
+    "de": {
+      "title": "Cowboy Bebop",
+      "excerpt": "Suche nach Kopfgeld auf der Bebop in einer Zukunft, in der der Globus stückweise verlassen ist, das System zu Schlepp, Not, wabernder Gewalt wird.",
+      "body": [
+        "Spike, Jet, dazu Faye, Ed, Ein, ein Haufen eher fester als festes Team, Reste von Dasein, wacklige Bünde.",
+        "Episoden: Western, Film noir, Lacher, Utopie, spleen; Farbe, Bild, Pausa, dazu Yoko Kanno/Seatbe. Jazz, Blues, Bebop, Rock, nicht nur unter der Szene, sondern Nerv, der den Schnitt trägt. Melancholisch, mit dem Wissen, dass alte Sünde, Einsamkeit, Reue sich selten lückenlos klären lassen."
+      ]
+    },
+    "fr": {
+      "title": "Cowboy Bebop",
+      "excerpt": "Avec Spike et Jet sur le Bebop, primes dans un avenir où la terre s’en va en partie, et le Système est déplacement, précarité, et violence vague.",
+      "body": [
+        "Faye, Ed, Ein, une maisonnée soudée, à peine, par des bouts de vies, des attachements fuyants, plus que par une bande soudée.",
+        "D’un chapitre à l’autre, western, noir, foutage, S-F, triste; bords vifs, images, vides; bande-son, jazz, bop, d’Yoko+Seat, pas simple fond, cœur du rythme. Spleen stylisé, ayant connaissance que l’Histoire, l’enfermement, le pardon, ne s’y mettent pas d’un coup proprement."
+      ]
+    },
+    "it": {
+      "title": "Cowboy Bebop",
+      "excerpt": "Spike e Jet sulla Bebop, caccia a taglia in un domani di Terra rotta e sistema solare da deriva, penuria, violenza indistinta.",
+      "body": [
+        "Faye, Ed, Ein entrano, ma il gruppo assomiglia a convivenza secca, resti di storia, legame labile, più che a un team compatto.",
+        "Un episodio può virare a western, noir, risata, space opera, malinconia; il segno c’è, regia essenziale, quadro, silenzio, musica, jazz, bebop, Yoko&Seat, non tappetino, ma respiro centrale, melo su passato, solitudine, rimpianti che raramente si sgombrano soddisfacentemente."
+      ]
+    },
+    "zh-CN": {
+      "title": "《星际牛仔》",
+      "excerpt": "斯派克、杰特与飞船bebop的赏金生涯；地球被部分遗弃，太阳系的漂泊、脆弱与四散的暴烈。",
+      "body": [
+        "菲、艾德、爱恩陆续加入，这群人更像被凑在一处的过客，是残章与易断的系绳，非铁板一块。",
+        "单集在西部、黑色、喜、太空、存在之叹里来回，气质却不散。管井克制、有电影感，画面、构图、静场强；菅野与SeatB的爵士、蓝调、比波、摇滚是节拍的核心，不只为衬底。一部自觉：旧账、落单、悔意，很少能被一笔勾清。"
+      ]
+    },
+    "zh-TW": {
+      "title": "COWBOY BEBOP",
+      "excerpt": "在地球被半拋的未來，史派克、傑與 bebop 的賞金。太陽系是位移、匱乏、散亂的暴。",
+      "body": [
+        "菲,艾德,人狗入列，更像暫同屋，殘夢,輕的繫,不是鋼板的隊。",
+        "一話能在西部,黑色,哏,科幻,沒落裡變,但臉一樣;色,框,靜;菅野+Seat,爵士,比波,搖,不是地墊,是節的脊。陳舊,孤,愧,鮮有漂亮結清。"
+      ]
+    }
+  },
+  "stanford-psychology-podcast": {
+    "en": {
+      "title": "Stanford Psychology Podcast",
+      "excerpt": "A podcast for sharing psychology research, with long conversations between hosts and guests in cognition, emotion, development, neuroscience, and social behavior.",
+      "body": [
+        "The Stanford Psychology Podcast shares research through long-form conversations with guests in cognition, emotion, development, neuroscience, and social behavior. Episodes usually address current research lines, methods, and open theoretical issues in a longer register than a quick “pop” interview.",
+        "The value is a balance of rigor and clarity for listeners who want to follow today’s psychology without only reading one-line blurbs. The site and newsletter list the archive and links to listen on several platforms."
+      ]
+    },
+    "ko": {
+      "title": "Stanford Psychology Podcast",
+      "excerpt": "인지, 정서, 발달, 뇌과학, 사회적 행동 등의 게스트와, 호스트가 심리학 연구를 긴 대담으로 나누는 팟캐스트.",
+      "body": [
+        "에피소드는 흐름, 방법, 이론적 쟁점이 중심이며, 짧은 “팝 과학” 인터뷰와는 톤이 다르다.",
+        "엄밀함과 이해하기 쉬움의 균형이 강점이다. 오늘의 심리 담론을 요약 한 줄이 아닌, 따라잡고 싶은 이에게 잘 맞는다. 공식 사이트·뉴스레터에서 전체 목록을 보고, 여러 플랫폼으로 이어질 수 있다."
+      ]
+    },
+    "es": {
+      "title": "Stanford Psychology Podcast",
+      "excerpt": "Podcast de divulgación con entrevistas extensas entre anfitriones e invitados, en temas de cognición, emoción, desarrollo, neurociencia o conducta social.",
+      "body": [
+        "Los episodios se centran en líneas de investigación, métodos y problemas teóricos, en un formato mucho más largo que el de divulgación rápida.",
+        "El interés es equilibrar solidez y asequibilidad: sirve a quien quiera seguir debates vivos, sin aferrarse a resúmenes diminutos. Sitio y boletín resumen el archivo y enlaces para escuchar en múltiples plataformas."
+      ]
+    },
+    "ja": {
+      "title": "Stanford Psychology Podcast",
+      "excerpt": "認知、感情、発達、神経科学、社会行動の領域のゲストを迎え、心理学の研究を長回しの対談で届ける番組。",
+      "body": [
+        "各回は、進行中の研究、方法、理論的な論点に深く入り、短い一般向けインタビューほど要約には落としません。",
+        "厳密さと分かりやすさのバランス。今日の心理学の議論を、一行要約にとどまらず追いたい人向き。公式サイトとメールマガジンにアーカイブと、複数プラットフォームの聴取リンク。"
+      ]
+    },
+    "de": {
+      "title": "Stanford Psychology Podcast",
+      "excerpt": "Podcast, der mit langen Gesprächen Forschende in Kognition, Emotion, Entwicklung, Neuroscience und soziales Verhalten einlädt, um psychologische Forschung teilbar zu machen.",
+      "body": [
+        "Episoden führen in laufende Forschung, Methoden und offene Theoriefragestellungen, in deutlich ausführlicherem Format als schnelle „Einstiegs“-Interviews.",
+        "Darin steckt der Sinn, wenn man aktuelle Debatten ernsthaft folgen will, nicht an kurzen Sätzen in den Medien. Archiv, Hör-Links, über Website und Info-Brief."
+      ]
+    },
+    "fr": {
+      "title": "Stanford Psychology Podcast",
+      "excerpt": "Un podcast qui diffuse de la recherche en psychologie en longues conversations entre hôtes et invitées, sur la cognition, l’émotion, le développement, les neurosciences, le comportement social.",
+      "body": [
+        "Les épisodes tournent souvent autour de fils de recherche, de méthodes et de questions théoriques, dans un format nettement plus long qu’une interview de vulgarisation bâclée.",
+        "L’intérêt tient à l’équilibre entre exigence et pédagogie, pour quiconque veut suivre les débats actuels sans s’y limiter à des extraits. Le site et la infolettre donnent l’archive et des liens d’écoute sur plusieurs plateformes."
+      ]
+    },
+    "it": {
+      "title": "Stanford Psychology Podcast",
+      "excerpt": "Podcast che condivide la ricerca in psicologia in colloqui lunghi con ospiti in cognizione, emozione, sviluppo, neuroscienze, comportamento sociale.",
+      "body": [
+        "Gli episodi spesso trattano linee di ricerca, metodi, nodi teorici, in un formato ben più ampio rispetto all’intervista di divulgazione veloce.",
+        "Il valore è l’equilibrio tra rigore e accessibilità, per chi vuole seguire i dibattiti attuali senza accontentarsi di stralci. Sito e newsletter elencano l’archivio e i link per ascoltare su più piattaforme."
+      ]
+    },
+    "zh-CN": {
+      "title": "Stanford Psychology Podcast",
+      "excerpt": "以长对谈方式介绍心理学研究，与认知、情绪、发展、神经科学、社会行为等方向的嘉宾交流。",
+      "body": [
+        "单集多围绕在研工作、方法、理论分歧展开，比那种很短的“科普快访”铺得更开。",
+        "在严谨与可读性之间做平衡，适合想跟进当下心理学中那些实在争论、又不满足于一两行摘要的听众。官网与简讯有存档和多平台收听链接。"
+      ]
+    },
+    "zh-TW": {
+      "title": "Stanford Psychology Podcast",
+      "excerpt": "以長對談介紹心理學研究，邀請認知、情緒、發展、神經科學、社會行為等脈絡的來賓參與。",
+      "body": [
+        "各集多從在研的題、方法、理論爭點著眼，篇幅拉開，不是幾分鐘一則的「新聞式採訪」節拍。",
+        "在嚴謹與好讀之間做平衡，適合想跟進當下心理學的爭辯、又不只滿足於一兩行摘要的聽眾。官網與電子報有存檔與多平臺收聽連結。"
+      ]
+    }
+  },
+  "the-twilight-zone": {
+    "en": {
+      "title": "The Twilight Zone (1959–1964)",
+      "excerpt": "A black-and-white anthology: each episode is a self-contained story, often with a twist ending, mixing science fiction, horror, fantasy, and social satire.",
+      "body": [
+        "The Twilight Zone is a black-and-white anthology. Each episode is a self-contained story, often with a twist, crossing science fiction, horror, fantasy, and social satire. Rod Serling was the main writer, host, and the voice of the show; the tone weds a literary feel with the dramatic economy of 1960s TV, without forgoing political metaphor and a veiled critique of conformity and the fears of the era.",
+        "The original series ran for five seasons; continuations and reboots followed in the 1980s, the 2000s, and a 2010s version with Jordan Peele."
+      ]
+    },
+    "ko": {
+      "title": "The Twilight Zone (1959–1964)",
+      "excerpt": "흑백의 옴니버스. 매화마다 괄목할만한 끝맺음, SF, 공포, 판타지, 사회 풍자가 뒤섞인다.",
+      "body": [
+        "《트와일라이트 존》은 흑백 옴니버스다. 매화는 닫힌 이야기, 결말에 딴각이 잦다. SF, 공포, 판타지, 사회 풍자. 론드 서링이 핵심 대본, 진행, 내레이터. 1960년대 TV의 촘촘한 연극에 문학적 절제, 정치 은유, 당시의 굴복과 두려움에 대한 은근한 비판이 어우러진다.",
+        "원작은 5시즌. 1980, 2000, 2010(조던 필)에 리부트·속편. "
+      ]
+    },
+    "es": {
+      "title": "The Twilight Zone (1959–1964)",
+      "excerpt": "Antología en blanco y negro: cada episodio, una historia aislada, a menudo con giro final, mezclando ciencia ficción, terror, fantasía y sátira social.",
+      "body": [
+        "The Twilight Zone es antología en blanco y negro. Cada capítulo es un relato en sí, muchas veces con vuelta de tuerca, cruzando ciencia ficción, horror, fantasía y sátira social. Rod Serling fue guionista central, presentador y voz; el tono une sobriedad literaria con la economía dramática de la TV de los 60, sin renunciar a metáfora política ni a la crítica velada al conformismo y al miedo de la época.",
+        "La original duró cinco temporadas; más tarde hubo secuelas y relanzamientos (los 80, los 2000, y en los 2010 una versión con Jordan Peele)."
+      ]
+    },
+    "ja": {
+      "title": "The Twilight Zone (1959–1964)",
+      "excerpt": "白黒のオムニバス。各話独立、最後のひねり、SF、恐怖、幻想、社会風刺。",
+      "body": [
+        "《トワイライトゾーン》は白黒のオムニバス。各エピソードは独立の物語、しばしばラストのどんでん返し、SF、ホラー、ファンタジー、社会風刺が交差する。ロッド・サーリングが中核の脚本、司会、声。1960年代TVの緻密な演出に文学的な厳格さ、政治比喩、同調圧力や恐怖への遠目の批評。",
+        "本編は5シーズン。以後、続編・リブート(80年代、00年代、10年代にジョーダン・ピール版など)。"
+      ]
+    },
+    "de": {
+      "title": "The Twilight Zone (1959–1964)",
+      "excerpt": "Schwarz-weiß-Anthologie: in jeder Folge eine in sich geschlossene Geschichte, oft mit Schlusspunkt, zwischen Science-Fiction, Horror, Fantasy und sozialer Satire.",
+      "body": [
+        "The Twilight Zone ist schwarz-weiß, jede Episode steht für sich, oft mit Wendung, zwischen Science-Fiction, Horror, Fantasy, gesellschaftlicher Satire. Rod Serling war zentraler Autor, Moderator und Stimme; der Ton verbindet literarische Dichte und dramatische Kürze des Fernsehens der 1960er mit politischen Metaphern und verhaltener Kritik an Konformität und der Angst der Epoche.",
+        "Die Erstfassung umfasste fünf Staffeln; anschließend kamen Fortsetzungen und Reboots (1980er, 2000er, und eine 2010er-Version mit Jordan Peele)."
+      ]
+    },
+    "fr": {
+      "title": "The Twilight Zone (1959–1964)",
+      "excerpt": "Une anthologie en noir et blanc : chaque épisode est un récit autonome, souvent clos par un retournement, entre science-fiction, horreur, fantastique et satire sociale.",
+      "body": [
+        "The Twilight Zone, anthologie en noir et blanc : chaque numéro, histoire en vase clos, fréquemment un twist, entre science-fiction, peur, merveilleux, satire sociale. Serling, scénariste central, présentateur, voix ; mélange de retenue littéraire, d’économie des années 1960, métaphores, critique voilée du conformisme, des frayeurs du moment.",
+        "L’original compte cinq saisons ; des suites, des reprises (années 1980, 2000, mouture 2010 avec Jordan Peele)."
+      ]
+    },
+    "it": {
+      "title": "The Twilight Zone (1959–1964)",
+      "excerpt": "Antologia in bianco e nero: ogni episodio, racconto isolato, spesso con svolta finale, che mescola fantascienza, orrore, meraviglioso e satira sociale.",
+      "body": [
+        "The Twilight Zone, antologia in b/n, ogni puntata è a sé, spesso con ribaltone, tra fantascienza, orrore, meraviglioso, satira. Rod Serling, testi, conducente, voce: unisce sobrietà letteraria e compattezza drammatica della TV degli anni Sessanta, metafore politiche, critica sommessa a conformismo e paura d’epoca.",
+        "Cinque stagioni la prima, poi seguiti, reboot (Ottanta, duemila, 2010 con Jordan Peele)."
+      ]
+    },
+    "zh-CN": {
+      "title": "The Twilight Zone（1959–1964）",
+      "excerpt": "黑白单元剧：一集一故事，常有收束式反转，科幻、恐怖、幻想与社会讽刺相混。",
+      "body": [
+        "《阴阳魔界》是黑白选集。每集一则独立故事，多带结尾反转，科幻、恐怖、幻想、社会讽喻交织。罗德·塞林是主笔、主持、旁白；在六十年代电视的紧凑与文学性之间，仍常夹带政治隐喻、对顺服与时代恐惧的旁击。",
+        "原剧五季；之后有续拍、重启（80 年代、2000 年代，2010 年代有含乔丹·皮尔的版本等）。"
+      ]
+    },
+    "zh-TW": {
+      "title": "The Twilight Zone（1959–1964）",
+      "excerpt": "黑白單元劇：每則一個獨立故事，結尾常見一拐，科幻、恐怖、幻想、社會諷刺交纏。",
+      "body": [
+        "全劇是黑白、一篇一則的選集。每回自成篇章，多帶結局翻轉，在科幻、恐怖、奇幻、社會嘲諷之間穿梭。羅德·席林是主幹編劇、節目主持，也是聲音的臉。調子在文學收束與六十年代電視的緻密戲劇之間，仍夾政治隱喻，也對順從與當年恐懼做含蓄批評。",
+        "本傳五季。之後有續集與重拍：八〇年代、〇〇年代，以及一〇年代由喬登·皮爾參與的系列等。"
+      ]
+    }
+  },
+  "love-death-and-robots": {
+    "en": {
+      "title": "Love, Death & Robots",
+      "excerpt": "An anthology series: each episode is a standalone short with variable length, different animation styles (2D, 3D, mocap, mixed), and tones from bawdy comedy to body horror and speculative fiction.",
+      "body": [
+        "Each Love, Death & Robots episode is a self-contained short: mixed lengths, looks (2D, 3D, mocap, hybrid), and tones from gross-out gags to body horror, speculative fable. The aim is a showcase of many directors and studios, with a strong license on form, and often adult material (violence, sex, profanity) meant for grown-up viewers.",
+        "Tim Miller is among the show’s creators. It reads as a block of streamable shorts, with a curatorial bias toward variety over a single through-line. Some stories adapt science-fiction short stories; the hook is the story, and the way the look can change wholesale from one chapter to the next."
+      ]
+    },
+    "ko": {
+      "title": "Love, Death & Robots",
+      "excerpt": "옴니버스: 매 화마다 독립된 짧은 작품, 길이·그림체(2D, 3D, 모션캡처, 혼합)가 달라지고, 톤은 유쾌한 그로테스크에서 육체적 공포, 사이언스 픽션까지 이어진다.",
+      "body": [
+        "각 편은 자기 완결된 단편으로, 연출·스튜디오가 갈리는 쇼케이스에 가깝다. 형식의 자유가 크고, 폭력·성·욕설 등 성인지향 콘텐츠가 잦다.",
+        "팀 밀러가 창작진 가운데 있다. 스트리밍용 ‘단편 모음’ 느낌으로, 한 줄로 이어질 이야기보다 다양한 시각·장르의 점프를 가치에 둔다. SF 단편을 원작으로 한 화도 있고, 이야기만큼, 화마다 완전히 달라지는 화면만의 쾌감이 있다."
+      ]
+    },
+    "es": {
+      "title": "Love, Death & Robots",
+      "excerpt": "Serie antológica: cada episodio es un corto independiente, con duración, estilos (2D, 3D, captura, híbridos) y tonos que van del humor crudo al terror corporal y a la ficción especulativa.",
+      "body": [
+        "Cada capítulo es un corto en sí, con mezcla de duración y de estilos. La idea es servir de escaparate a muchas firmas, con mucha licencia formal y a menudo material adulto (violencia, sexo, lenguaje), pensado para público mayor.",
+        "Tim Miller figura entre los creadores; el bloque se siente como un lote de cortos en streaming, con curaduría que privilegia la variedad frente a una sola continuidad. Varios relatos parten de cuentos de ciencia ficción; el placer está en la trama y en el salto radical de lenguaje visual de un capítulo al otro."
+      ]
+    },
+    "ja": {
+      "title": "Love, Death & Robots",
+      "excerpt": "各話が独立のショート。尺も、2D・3D・モーションキャプチャも混在し、下品に笑えるものから、身体ホラー、思弁的SFまで幅がある。",
+      "body": [
+        "回ごとに一本の短編。多様な演出・スタジオを見せる形式で、作風の自由度が高く、成人向け（暴力、性、言葉づかい）なことも多い。",
+        "ティム・ミラーも創作に名を連ねる。ストリーミング向けの短編ブロックのようで、一本の物語の連続より、回ごとにガラッと違う見た目と話を選び取る。SF短編の脚色もあって、面白さは筋と、章が変わるたびに激変する映像言語の両方にある。"
+      ]
+    },
+    "de": {
+      "title": "Love, Death & Robots",
+      "excerpt": "Eine Anthologieserie: jede Folge ist ein eigenständiger Kurzfilm, mit wechselnder Länge, unterschiedlichen Animationstilen (2D, 3D, Motion Capture, Mischformen) und Tönen von grober Komik bis Body Horror und spekulativer Fiktion.",
+      "body": [
+        "Jede Episode ist ein in sich geschlossener Kurzfilm, mit wechselnder Länge und Stil. Idee: viele Regisseur:innen und Studios, starke formale Freiheit, oft explizite (Gewalt, Sex, Sprache) und für Erwachsene gedacht.",
+        "Tim Miller zählt zu den Schöpfer:innen; man hat den Eindruck eines Streaming-Kurzfilmblocks, kuratiert eher mit Blick auf Vielfalt denn auf eine einzige Linie. Manche Kapitel adaptieren Science-Fiction-Kurzgeschichten; Reiz sind sowohl die Erzählung als der radikale Wechsel des visuellen Tons von einem Kapitel zum nächsten."
+      ]
+    },
+    "fr": {
+      "title": "Love, Death & Robots",
+      "excerpt": "Une série d’anthologie: chaque épisode est un court indépendant, durées, styles d’animation (2D, 3D, capture, mélange) et tons qui vont de la comédie crue au body horror, à la fiction spéculative.",
+      "body": [
+        "Chaque chapitre est un court en soi, durées, styles, tons variables. L’idée, vitrines pour beaucoup de metteurs en scène, grande liberté formelle, contenu souvent explicite (violence, sexe, propos), public adulte visé.",
+        "Tim Miller figure parmi les créateurs, la série tient d’un lot de courts pour le streaming, avec une curation de la variété, pas d’une seule trame. Certains volets s’inspirent de nouvelles; le plaisir est l’histoire, et chaque relooking visuel, cap sur cap."
+      ]
+    },
+    "it": {
+      "title": "Love, Death & Robots",
+      "excerpt": "Serie antologica: ogni episodio è un corto a sé, con durate, stili (2D, 3D, motion capture, ibrido) e toni che vanno da commedia ruvida a horror corporeo, fino a fantascienza speculativa.",
+      "body": [
+        "Ciascun blocco funziona come corto autonomo, con look e respiro diversi, vetrine per tanti registi, grande libertà formale, spesso con materiale per adulti (violenza, sesso, parolacce).",
+        "Tra i creatori c’è Tim Miller: la struttura ricorda un pacchetto di corti per lo streaming, con cura che mette in primo piano la varietà piuttosto che un unico arco. Alcuni adattano racconti di science fiction; il gusto è nel testo, e nello stacco netto d’aspetto da un capitolo all’altro."
+      ]
+    },
+    "zh-CN": {
+      "title": "《爱、死亡和机器人》",
+      "excerpt": "每集一短片，时长短、画风各异（2D/3D/动捕/混合），气质从戏谑、肉体恐怖到科幻。",
+      "body": [
+        "每集是一则完整的短作品，像给不同导演与厂牌做展示，形式很自由，暴力、性、脏字等成人向内容也不罕见。提姆·米勒是主创之一。",
+        "整体像流媒体上的一格“短片面”，刻意拿题材、视听、节奏换花样，不追求单线叙事。有集改编自科幻短篇；乐子既在故事，也在于一集一换的影像语言。"
+      ]
+    },
+    "zh-TW": {
+      "title": "《愛x死x機器人》",
+      "excerpt": "一集一短片，長短不一，畫風有 2D、3D、動捕、混搭，從戲諧、肉體驚悚到投機科幻都有。",
+      "body": [
+        "每則是獨立短作，讓各路人馬上台，很敢玩形式，成人向（暴、性、髒口）不稀奇。提姆·米勒參與主創。整體像一板串好的串流短片面，不追一條線，專心換題、換皮、換臉。",
+        "有集改寫 SF 小說；看頭在劇，也在每集一換的影像語彙。"
+      ]
+    }
+  },
+  "ichika-nito-away-official-music-video": {
+    "en": {
+      "title": "Ichika Nito - Away (Official Music Video)",
+      "excerpt": "Ichika Nito is a Japanese guitarist and composer, known for work that weaves fingerstyle, tapping, and very clear phrasing, often instrumental, with the string sound and the groove as melody.",
+      "body": [
+        "Ichika Nito is a Japanese guitarist and composer, best known for material that weaves fingerstyle, tapping, and clean phrasing, often without singing, with stress on the sound of the strings and rhythm as melody. Away is one of his official music video releases on his own channel."
+      ]
+    },
+    "ko": {
+      "title": "Ichika Nito - Away (Official Music Video)",
+      "excerpt": "핑거스타일·탭, 맑은 운지, 보컬 없이도 현의 울림·리듬에 곡의 선이 생기는 데 집중하는, 일본 기타리스트·이치카 니토.",
+      "body": [
+        "핑거스타일, 탭핑, 잔·날렵한 음놀림, 종종 기악만. 《Away》는 그의 공식 뮤직비디오이며, 본인 YouTube 채널에 게시되었다."
+      ]
+    },
+    "es": {
+      "title": "Ichika Nito - Away (Official Music Video)",
+      "excerpt": "Guitarrista y compositor japonés, reconocido por mezclar fingerstyle, tapping y fraseo claro, a menudo sin voz, poniendo el brillo de las cuerdas y el groove en el centro melódico.",
+      "body": [
+        "Ichika Nito es guitarrista y compositor japonés, sobre todo en piezas con fingerstyle, tapping y fraseo limpio, a menudo instrumentales, con el sonido de cuerda y el ritmo como idea melódica. Away es uno de sus videoclips oficiales en su canal."
+      ]
+    },
+    "ja": {
+      "title": "Ichika Nito - Away (Official Music Video)",
+      "excerpt": "フィンガースタイル、タッピング、研ぎ澄まされたフレージング。ボーカルがなくても弦の響きとグルーヴをメロディの中心に据える、日本のギタリスト・作曲家、いちかにと。",
+      "body": [
+        "いちかにとは、フィンガースタイル、タッピング、整ったフレーズ、しばしばインスト。弦の響きとリズムをメロディのように扱う。《Away》は公式のミュージックビデオの一本で、自身のYouTubeチャンネルに公開。"
+      ]
+    },
+    "de": {
+      "title": "Ichika Nito - Away (Official Music Video)",
+      "excerpt": "Japanischer Gitarrist und Komponist, bekannt für Fingerstyle, Tapping, klare Phrasierung, oft instrumental, Klang und Groove als Melodieträger.",
+      "body": [
+        "Ichika Nito verwebt Fingerstyle, Tapping und klare, oft wortlose Phrasen, mit Fokus auf Saitenklang und Pulsfluss als Linienmelodie. Away ist eins seiner offiziellen Videos auf dem eigenen Kanal."
+      ]
+    },
+    "fr": {
+      "title": "Ichika Nito - Away (Official Music Video)",
+      "excerpt": "Guitariste et compositeur japonais, reconnu pour fingerstyle, tapping, phrasé net, souvent instrumentale, le son de la corde et le groove mènent le chant.",
+      "body": [
+        "Ichika Nito mêle fingerstyle, tapping, phrasage net, le plus souvent sans voix, mettant en avant le bruit des cordes et le groove mélodique. Away compte parmi les clips publiés sur sa chaîne."
+      ]
+    },
+    "it": {
+      "title": "Ichika Nito - Away (Official Music Video)",
+      "excerpt": "Chitarrista e autore giapponese, noto per fingerstyle, tapping, fraseo pulito, spesso strumentale, con corda e battito a fare da melodia.",
+      "body": [
+        "Ichika Nito intreccia fingerstyle, tapping, fraseggio asciutto, sovente strumento solo, sottolineando l’aspetto acustico delle corde e il moto come linea. Away figura come videoclip ufficiale del suo canale."
+      ]
+    },
+    "zh-CN": {
+      "title": "Ichika Nito - Away（官方 MV）",
+      "excerpt": "以指弹、点弦、利落的乐句见长的日本吉他手、作曲家，常作纯器乐，把弦音与律动感当作旋律主线。",
+      "body": [
+        "作品里多揉指法、点弦、清晰的走向，不唱的时候也让弦的共鸣与律动感像旋律一样被听见。《Away》是其一则官方音乐视频，发布在本人 YouTube 频道。"
+      ]
+    },
+    "zh-TW": {
+      "title": "Ichika Nito - Away（官方 MV）",
+      "excerpt": "以指彈、點弦、俐落樂句聞名，常做純樂，把弦響、律動當成旋律的骨架，日籍吉他手、曲作者。",
+      "body": [
+        "貫徹指彈、點弦、乾淨的走向，不唱也讓弦的共鳴和節擺像一條線在跑。《Away》是其一則正式 MV，在本人 YouTube 上。"
+      ]
+    }
+  },
+  "pina-2011": {
+    "en": {
+      "title": "Pina (2011)",
+      "excerpt": "Wim Wenders’s Pina (2011) is a dance documentary conceived for 3D, honoring choreographer Pina Bausch and Tanztheater Wuppertal through performance excerpts filmed onstage and outdoors, framed by brief dancer reflections.",
+      "body": [
+        "Wim Wenders’s Pina (2011) is a dance documentary conceived for 3D, honoring choreographer Pina Bausch and Tanztheater Wuppertal through performance excerpts filmed onstage and outdoors, framed by brief dancer reflections on how she asked for images, words, and gesture in rehearsal. Rather than a continuous biography driven by archive footage and explanatory narration, the film circles her repertoire—looping gesture, sharp wit, live speech and music as choreographic material—and lets the stage image carry meaning.",
+        "Editing trusts the succession of pieces to convey Bausch’s theatrical vocabulary; for tighter chronology or denser historical framing you may want essays or other sources alongside it, but as a cinematic record of dance in space and depth it is a vivid entry into her world."
+      ]
+    },
+    "ko": {
+      "title": "Pina (2011)",
+      "excerpt": "빔 벤더스의 《피나》(2011)는 안무가 피나 바우슈와 부퍼탈 무용단을 3D 상영을 염두에 두고 기록한 무용 다큐로, 무대와 야외에서 찍은 공연 장면과 무용수들의 짧은 증언이 교차한다.",
+      "body": [
+        "빔 벤더스의 《피나》(2011)는 안무가 피나 바우슈와 부퍼탈 무용단을 3D 상영을 염두에 두고 기록한 무용 다큐다. 무대와 도시·산업 공간 등에서 촬영된 레퍼토리 발췌와, 리허설에서 그녀가 이미지·말·제스처를 어떻게 요구했는지에 대한 무용수들의 짧은 증언이 교차한다. 연속 설명 내레이션과 연대기식 전기보다는 반복되는 동작, 묘한 유머, 말과 라이브 음악을 안무적 요소로 쓰는 그녀의 무대 어휘를 두르고, 장면 자체가 말하게 한다.",
+        "편집은 작품 나열에 맡겨 바우슈의 극적 어휘를 전달한다. 더 촘촘한 연대나 역사 맥락은 글이나 다른 자료로 보완할 수 있지만, 공간과 깊이 속의 무용을 영화로 남긴다는 점에서 그 세계로 들어가기에 강한 입구다."
+      ]
+    },
+    "es": {
+      "title": "Pina (2011)",
+      "excerpt": "Pina (2011), de Wim Wenders, documenta a la coreógrafa Pina Bausch y al Tanztheater Wuppertal en un formato pensado para 3D: fragmentos de espectáculo en escena y exteriores, alternados con testimonios breves de los bailarines sobre el método de trabajo.",
+      "body": [
+        "Pina (2011), de Wim Wenders, documenta a la coreógrafa Pina Bausch y al Tanztheater Wuppertal en un formato pensado para 3D: fragmentos de espectáculo en escena y en espacios urbanos o industriales, alternados con testimonios breves sobre cómo pedía imágenes, palabras y gesto en ensayo. En lugar de una biografía lineal con archivo y narración continua, la película orbita el repertorio —gestos en bucle, humor sombrío, palabra y música en vivo como materiales coreográficos— y deja que la escena hable por sí.",
+        "El montaje confía en la sucesión de números para transmitir el vocabulario escénico de Bausch; quien busque cronología más densa o marco histórico puede complementar con lecturas u otros materiales, pero como registro cinematográfico de la danza en espacio y volumen ofrece una entrada muy vívida a su universo."
+      ]
+    },
+    "ja": {
+      "title": "Pina (2011)",
+      "excerpt": "ヴィム・ヴェンダース監督『Pina』（2011）は、振付家ピナ・バウシュとヴッパータール舞踊団を3D上映を想定した形で記録した舞踊ドキュメンタリー。舞台と屋外で撮られた作品の断片と、稽古での創作方法についてのダンサーの短い語りが交錯する。",
+      "body": [
+        "ヴィム・ヴェンダース監督『Pina』（2011）は、ピナ・バウシュとヴッパータール舞踊団を3D上映を想定した舞踊ドキュメンタリーとしてまとめる。舞台や都市・工業的空間で撮られたレパートリーの断片と、リハーサルで彼女がイメージや言葉、ジェスチャーをどう求めたかについての短い証言が挟まれる。アーカイブと説明的ナレーションによる連続伝記ではなく、繰り返しの身ぶり、翳りのあるユーモア、言葉とライブ音楽を振付素材として使うレパートリーを軸にし、舞台映像そのものに語らせる。",
+        "編集は作品の連続に頼ってバウシュの舞台語彙を伝える。より綿密な年表や歴史的文脈は論文や別資料で補えるが、空間とボリュームの中の踊りを映画として残した記録として、彼女の世界への強い入口になる。"
+      ]
+    },
+    "de": {
+      "title": "Pina (2011)",
+      "excerpt": "Pina (2011) von Wim Wenders dokumentiert die Choreografin Pina Bausch und das Tanztheater Wuppertal als für 3D-Kino gedachten Tanzfilm: Bühnen- und Außenaufnahmen aus dem Repertoire, zusammen mit kurzen Äußerungen der Tänzer:innen zur Arbeitsweise der Compagnie.",
+      "body": [
+        "Pina (2011) von Wim Wenders dokumentiert Pina Bausch und das Tanztheater Wuppertal als für 3D-Kino gedachten Tanzfilm: Ausschnitte aus dem Repertoire auf der Bühme und in urbanen oder industriellen Räumen, dazwischen kurze Statements der Tänzer:innen, wie sie in Proben Bilder, Worte und Geste einforderte. Statt einer linearen Biografie aus Archiv und fortlaufender Erzählfolie kreist der Film um das Repertoire — wiederholte Gesten, dunkler Humor, gesprochenes Wort und Livemusik als choreographisches Material — und lässt das Bühnenbild für sich sprechen.",
+        "Der Schnitt vertraut der Abfolge der Stücke, um Bauschs szenisches Vokabular zu vermitteln; wer dichtere Chronologie oder historischen Rahmen sucht, kann mit Texten ergänzen; als filmische Aufzeichnung von Tanz in Raum und Tiefe bleibt er aber ein starker Einstieg in ihre Welt."
+      ]
+    },
+    "fr": {
+      "title": "Pina (2011)",
+      "excerpt": "Pina (2011), de Wim Wenders, documente la chorégraphe Pina Bausch et le Tanztheater Wuppertal dans une forme pensée pour la projection en relief : extraits de spectacles filmés en plateau et en extérieur, entrecoupés de très courts témoignages des danseurs sur la fabrique de la compagnie.",
+      "body": [
+        "Pina (2011), de Wim Wenders, documente Pina Bausch et le Tanztheater Wuppertal dans une forme pensée pour la projection en relief : extraits du répertoire captés sur scène ou dans des lieux urbains et industriels, avec de brefs témoignages sur la façon dont elle demandait images, paroles et gestes aux répétitions. Plutôt qu’une biographie linéaire nourrie d’archives et de voix-off continue, le film s’organise autour du répertoire — gestes en boucle, humour noir, parole et musique live comme matière chorégraphique — et laisse la scène porter le sens.",
+        "Le montage confie à l’enchaînement des morceaux le soin de transmettre le vocabulaire scénique de Bausch ; pour une chronologie plus serrée ou un cadrage historique plus dense, il faudra lire ailleurs, mais comme trace cinématographique de la danse dans l’espace et le volume, le film offre une entrée très forte dans son univers."
+      ]
+    },
+    "it": {
+      "title": "Pina (2011)",
+      "excerpt": "Pina (2011) di Wim Wenders documenta la coreografa Pina Bausch e il Tanztheater Wuppertal in un formato pensato per il 3D: estratti di spettacolo ripresi in scena e all’esterno, alternati a brevi testimonianze dei danzatori sul metodo della compagnia.",
+      "body": [
+        "Pina (2011) di Wim Wenders documenta Pina Bausch e il Tanztheater Wuppertal in un formato pensato per il 3D: estratti dal repertorio ripresi in plateau e in spazi urbani o industriali, alternati a brevi interventi su come lei chiedeva immagini, parole e gesto nelle prove. Piuttosto che una biografia lineare fatta di archivio e narrazione continua, il film ruota attorno al repertorio — gesti ripetuti, umorismo cupo, parola e musica dal vivo come materiale coreografico — e lascia parlare lo spettacolo.",
+        "Il montaggio affida alla successione dei numeri il compito di trasmettere il vocabolario scenico di Bausch; chi cerca cronologia più fitta o contesto storico può affiancare saggi o altre fonti, ma come registrazione cinematografica della danza nello spazio e nel volume resta un ingresso molto vivido al suo universo."
+      ]
+    },
+    "zh-CN": {
+      "title": "Pina（2011）",
+      "excerpt": "维姆·文德斯《皮娜》（2011）以面向3D放映的思路记录编舞家皮娜·鲍什与乌珀塔尔舞蹈剧场：舞台与户外演出的片段，穿插舞者关于创作方式的简短口述。",
+      "body": [
+        "维姆·文德斯《皮娜》（2011）以面向3D放映的思路记录皮娜·鲍什与乌珀塔尔舞蹈剧场：在舞台上与城市或工业空间中拍摄的剧目节选，穿插排练里她如何索要意象、语言与动作的短口述。影片不以档案加长解说构成线性传记，而是围绕剧目本身——重复的动作、阴郁的幽默、话语与现场音乐作为编舞材料——让舞台画面自己发声。",
+        "剪辑依靠曲目接续传递鲍什的舞台语汇；若要更密的时间线或历史语境可另读材料补充，但作为把舞蹈置于空间与体量中的影像记录，本片是进入她世界的有力入口。"
+      ]
+    },
+    "zh-TW": {
+      "title": "Pina（2011）",
+      "excerpt": "文·溫德斯《皮娜》（2011）以3D放映為取向，紀錄編舞家皮娜·鮑許與烏珀塔爾舞蹈劇場：舞台與戶外演出的片段，穿插舞者關於創作方法的短述。",
+      "body": [
+        "文·溫德斯《皮娜》（2011）以3D放映為取向紀錄皮娜·鮑許與烏珀塔爾舞蹈劇場：在舞台上與都市或工業空間拍下的劇目摘錄，穿插排練時她如何索求意象、語言與肢體的短述。片長不以檔案加长旁白做線性傳記，而是環繞劇目——重複的動作、陰鬱的幽默、話語與現場音樂作為編舞材料——讓舞台影像自己說話。",
+        "剪接倚賴曲目接續傳達鮑許的舞台語彙；若要更密的年表或歷史框架可另讀資料補足，但作為把舞蹈放在空間與體量裡的影像紀錄，仍是進入她世界的強入口。"
+      ]
+    }
+  },
+  "channel-5-andrew-callaghan": {
+    "en": {
+      "title": "Channel 5 with Andrew Callaghan",
+      "excerpt": "Channel 5 with Andrew Callaghan is an independent documentary-style journalism project launched in 2021, hosted by Andrew Callaghan, launched after the end of All Gas No Brakes.",
+      "body": [
+        "Channel 5 with Andrew Callaghan is an independent documentary-style journalism project launched in 2021, hosted by Andrew Callaghan, emerging after the end of All Gas No Brakes. The channel mixes street interviews, event coverage, character profiles, and longer documentaries, published mainly on YouTube and Patreon."
+      ]
+    },
+    "ko": {
+      "title": "Channel 5 with Andrew Callaghan",
+      "excerpt": "Channel 5 with Andrew Callaghan은 2021년에 내놓인 독립·다큐 풍 저널리즘, 앤드루 캐러핸 진행, All Gas No Brakes가 끝난 뒤 이어짐.",
+      "body": [
+        "Channel 5 with Andrew Callaghan는 2021년 내놓인, 앤드루 캐러핸이 앞에 선 독립·다큐 풍 저널, All Gas No Brakes의 끝 뒤 이어졌다. 가두 인터뷰, 이벤트, 인물, 긴 다큐를 섞어, 대개 유튜브·패트리온에 올린다."
+      ]
+    },
+    "es": {
+      "title": "Channel 5 with Andrew Callaghan",
+      "excerpt": "Channel 5 with Andrew Callaghan es un proyecto de periodismo documental independiente (2021), con Andrew Callaghan, surgido al terminar All Gas No Brakes.",
+      "body": [
+        "Channel 5 with Andrew Callaghan es un proyecto de periodismo documental independiente, lanzado en 2021 y presentado por Andrew Callaghan, tras el fin de All Gas No Brakes. El canal mezcla entrevistas de calle, cobertura de acontecimientos, perfiles y documentales largos, publicados sobre todo en YouTube y Patreon."
+      ]
+    },
+    "ja": {
+      "title": "Channel 5 with Andrew Callaghan",
+      "excerpt": "独立ドキュメンタリー・ジャーナリズムの〈Channel 5 with Andrew Callaghan〉。2021年、Andrew Callaghan 司会。All Gas No Brakes終了のあと。",
+      "body": [
+        "《Channel 5 with Andrew Callaghan》は、2021年に立ち上がった独立系・ドキュメンタリータッチの報道。司会は Andrew Callaghan。元『All Gas No Brakes』の次の枠。街インタ、イベント、人物、長尺ドキュを交え、主に YouTube と Patreon で出す。"
+      ]
+    },
+    "de": {
+      "title": "Channel 5 with Andrew Callaghan",
+      "excerpt": "Channel 5 with Andrew Callaghan: unabhängiger dokumentarischer Journalismus, Start 2021, Moderation Andrew Callaghan, nach All Gas No Brakes.",
+      "body": [
+        "Channel 5 with Andrew Callaghan ist ein unabhängiges dokumentarisch-journalistisches Projekt von 2021, moderiert von Andrew Callaghan, nach dem Ende von All Gas No Brakes. Der Kanal verbindet Straßenumfragen, Event-Reportagen, Porträts und längere Documentaries, hauptsächlich auf YouTube und Patreon."
+      ]
+    },
+    "fr": {
+      "title": "Channel 5 with Andrew Callaghan",
+      "excerpt": "Channel 5 with Andrew Callaghan, journalisme documentaire indépendant (lancement 2021) présenté par Andrew Callaghan, né après la fin d’All Gas No Brakes.",
+      "body": [
+        "Channel 5 with Andrew Callaghan est un projet de journalisme documentaire indépendant lancé en 2021, présenté par Andrew Callaghan, après l’arrêt d’All Gas No Brakes. On y mélange interviews de rue, couverture d’événements, portraits de personnages et documentaires plus longs, publiés surtout sur YouTube et Patreon."
+      ]
+    },
+    "it": {
+      "title": "Channel 5 with Andrew Callaghan",
+      "excerpt": "Channel 5 with Andrew Callaghan, giornalismo documentario indipendente (avvio 2021) con Andrew Callaghan, nato dopo la chiusura di All Gas No Brakes.",
+      "body": [
+        "Channel 5 with Andrew Callaghan è un progetto di giornalismo documentario indipendente, avviato nel 2021 e condotto da Andrew Callaghan, dopo la fine di All Gas No Brakes. Il canale fonde interviste in strada, eventi, profili di personaggi e documentari più lunghi, soprattutto su YouTube e Patreon."
+      ]
+    },
+    "zh-CN": {
+      "title": "Channel 5 with Andrew Callaghan",
+      "excerpt": "《Channel 5 with Andrew Callaghan》是 2021 年推出的独立纪实向报道项目，由 Andrew Callaghan 主持，继 All Gas No Brakes 结束之后。",
+      "body": [
+        "《Channel 5 with Andrew Callaghan》是 2021 年启动的独立纪实风报道，Andrew Callaghan 主持，承接 All Gas No Brakes 结束后的路线。内容混合街头采访、活动、人物与较长纪录片，主要在 YouTube 与 Patreon 发布。"
+      ]
+    },
+    "zh-TW": {
+      "title": "Channel 5 with Andrew Callaghan",
+      "excerpt": "《Channel 5 with Andrew Callaghan》是 2021 年上線的獨立紀實風採訪專案，由 Andrew Callaghan 主持，接在 All Gas No Brakes 之後。",
+      "body": [
+        "《Channel 5 with Andrew Callaghan》是 2021 年啟動的獨立紀實採訪專案，由 Andrew Callaghan 主持，出現在 All Gas No Brakes 結束之後。內容混有街訪、活動、人物與較長的紀錄，主要在 YouTube 與 Patreon 刊出。"
+      ]
+    }
+  },
+  "lamp-koibito-e-hirogaru-namida": {
+    "en": {
+      "title": "Lamp - 恋人へ～ひろがるなみだ",
+      "excerpt": "Lamp is a Japanese project with roots in city pop and soft indie; on YouTube, the official channel posts studio recordings and release videos.",
+      "body": [
+        "Lamp is a Japanese musical project rooted in sounds close to city pop and soft indie; on YouTube, the official channel posts studio recordings and release videos. «恋人へ～ひろがるなみだ» (read roughly: Koibito e - Hirogaru namida) is part of that archive as a music video."
+      ]
+    },
+    "ko": {
+      "title": "Lamp - 恋人へ～ひろがるなみだ",
+      "excerpt": "Lamp는 시티 팝, 부드러운 인디에 뿌리둔 일본 프로젝트이며, 유튜브 공식엔 스튜디오 녹음·발매 영상이 잇따라 올라온다.",
+      "body": [
+        "Lamp는 시티 팝과 부드러운 인디에 가까운 일본 뮤지컬 프로젝트다. 유튜브 공식엔 스튜디오 녹음, 발매와 맞는 영상이 올라온다.「恋人へ～ひろがるなみ다」(읽기 대략: こいびとへ, ひろがる なみだ)는 그 묶음 가운데 MV로 있다."
+      ]
+    },
+    "es": {
+      "title": "Lamp - 恋人へ～ひろがるなみだ",
+      "excerpt": "Lamp es un proyecto japonés, raíces en city pop e indie suave; en YouTube, el canal oficial publica tomas de estudio y videos de lanzamiento.",
+      "body": [
+        "Lamp es un proyecto musical japonés, con raíces en sonoridades próximas al city pop y al indie suave; en YouTube, el canal oficial publica grabaciones de estudio y piezas de lanzamiento. «恋人へ～ひろがるなみだ» (lectura aproximada: Koibito e - Hirogaru namida) entra en ese acervo como video musical."
+      ]
+    },
+    "ja": {
+      "title": "Lamp - 恋人へ～ひろがるなみだ",
+      "excerpt": "Lamp は、シティポップと柔らかいインディーに近い地に足のついた日本の音楽名義。YouTube 公式はスタジオ音源とリリース用映像を載せる。",
+      "body": [
+        "Lamp は、シティポップや穏やかなインディーに近い音づくりの日本のプロジェクト。YouTube 公式ではスタジオ録音やリリースに合わせた映像が並ぶ。「恋人へ～ひろがるなみだ」は、そのなかのひとつとして音楽映像の形で収まっている。"
+      ]
+    },
+    "de": {
+      "title": "Lamp - 恋人へ～ひろがるなみだ",
+      "excerpt": "Lamp, japanisches Projekt mit Wurzeln in City-Pop und softem Indie; auf YouTube: Studioaufnahmen und Release-Videos im offiziellen Kanal.",
+      "body": [
+        "Lamp ist ein japanisches Projekt, verwurzelt in City-Pop und softem Indie; der offizielle YouTube-Kanal zeigt Studiomaterial und Release-Videos. «恋人へ～ひろがるなみだ» (grobe Lesung: Koibito e - Hirogaru namida) zählt dazu als Musikvideo."
+      ]
+    },
+    "fr": {
+      "title": "Lamp - 恋人へ～ひろがるなみだ",
+      "excerpt": "Lamp, projet musical japonais, ancré dans le city pop et l’indie doux ; sur YouTube, le canal officiel propose prises de studio et vidéos de sortie.",
+      "body": [
+        "Lamp, projet japonais, proche du city pop et d’un indie doux ; le canal YouTube officiel poste enregistrements studio et visuels de parution. « 恋人へ～ひろがるなみだ » (lecture approx. : Koibito e - Hirogaru namida) figure dans ce corpus comme clip."
+      ]
+    },
+    "it": {
+      "title": "Lamp - 恋人へ～ひろがるなみだ",
+      "excerpt": "Lamp, progetto musicale giapponese, radici tra city pop e indie morbido; su YouTube il canale ufficiale pubblica registrazioni in studio e video di uscita.",
+      "body": [
+        "Lamp è un progetto musicale giapponese, con radici nel city pop e in un indie morbido; su YouTube il canale ufficiale pubblica materiali in studio e video per le uscite. «恋人へ～ひろがるなみだ» (lettura grossolana: Koibito e - Hirogaru namida) entra in quell’archivio come videoclip."
+      ]
+    },
+    "zh-CN": {
+      "title": "Lamp - 恋人へ～ひろがるなみだ",
+      "excerpt": "Lamp 是日本系音乐计划，根在城市流行与温软独立乐；YouTube 官方频道上既有录音室与发行向视频。",
+      "body": [
+        "Lamp 是日本系音乐名衔，听感贴近城市流行与轻独立；YouTube 官方会发录音与配合发行的影像。「恋人へ～ひろがるなみだ」大致可读作 Koibito e - Hirogaru namida，是档案里的一条官方 MV。"
+      ]
+    },
+    "zh-TW": {
+      "title": "Lamp - 恋人へ～ひろがるなみだ",
+      "excerpt": "Lamp 是日本系音樂名義，聽感貼近城市流行與溫和獨立；在 YouTube 官方頻道會有錄音室與上市向影片。",
+      "body": [
+        "Lamp 是日本系音樂專案，氣息接近城市流行與溫和獨立；YouTube 官方會有錄音、配合發行的畫面。「恋人へ～ひろがるなみだ」粗略可讀成 Koibito e - Hirogaru namida，是那份檔案裡的 MV。"
+      ]
+    }
+  },
+  "julie-feminine-adornments": {
+    "en": {
+      "title": "Julie - feminine adornments",
+      "excerpt": "“julie” is a project whose releases mix indie rock with textures close to shoegaze or dream pop, depending on the period and the register of each track.",
+      "body": [
+        "The “julie” project’s releases mix indie rock with textures close to shoegaze or dream pop, depending on the period and the register of each track. “feminine adornments” appears as a music video on the official channel.",
+        "I would say it is a very good picture of who I am: 95% of the time the one on the left, 5% the one on the right."
+      ]
+    },
+    "ko": {
+      "title": "Julie - feminine adornments",
+      "excerpt": "«julie»는 시기와 곡에 따라 인디 록에 슈게이즈·드림 팝에 닿는 질감을 쓰는 음악 프로젝트다.",
+      "body": [
+        "«julie»는, 시기와 곡 톤에 맞게, 인디 록에 슈게이즈·드림 팝에 닿는 질감을 쓰는 쪽. «feminine adornments»는 공식 채널의 뮤직비디오다.",
+        "나는 말하자면, 날 잘 비춰 준—대개 왼(95%), 가끔 오른(5%) 느낌이다."
+      ]
+    },
+    "es": {
+      "title": "Julie - feminine adornments",
+      "excerpt": "«julie» es un proyecto cuyas publicaciones mezclan indie rock y texturas cercanas a shoegaze o dream pop, según el momento y el registro de cada corte.",
+      "body": [
+        "«julie» publica mezcla de indie rock y texturas cercanas al shoegaze o al dream pop, según el período y el registro. «feminine adornments» circula en el canal oficial como video musical.",
+        "Yo diría que me representa bastante: el 95% el de la izquierda, el 5% el de la derecha."
+      ]
+    },
+    "ja": {
+      "title": "Julie - feminine adornments",
+      "excerpt": "「julie」は、曲ごとの時期や仕上げに応じ、インディー・ロックにシューゲイズやドリーム・ポップに近い層を混ぜるリリースを重ねる名義。",
+      "body": [
+        "名義「julie」のリリースは、時期と曲の温度に合わせ、インディー・ロックにシューゲイズやドリーム・ポップに近い面を掛け合わせる。「feminine adornments」は公式チャンネルの MV として出ている。",
+        "ぼく自身の写しだと思う。九割五分は左の、あと五分は右の、という感覚。"
+      ]
+    },
+    "de": {
+      "title": "Julie - feminine adornments",
+      "excerpt": "«julie» mischen Indie-Rock mit klanglichen Nähe zu Shoegaze oder Dream Pop, je nach Phase und Titelcharakter.",
+      "body": [
+        "«julie» verbindet in den Veröffentlichungen Indie-Rock mit shoegazigen oder dreampoppigen Texturen, abhängig von Phase und Titel. «feminine adornments» erscheint offiziell als Musikvideo.",
+        "Für mich: ein ziemlich treffendes Spiegelbild — 95 % der Zeit links, 5 % rechts."
+      ]
+    },
+    "fr": {
+      "title": "Julie - feminine adornments",
+      "excerpt": "« julie » : un projet qui mélange indie rock et patines proches du shoegaze ou du dream pop, selon l’époque et l’inscription de chaque morceau.",
+      "body": [
+        "Le projet « julie » tisse indie rock et textures proches du shoegaze / dream pop, selon la période et l’inscription. « feminine adornments » apparaît sur le canal officiel en clip.",
+        "Je dirais que cela me ressemble vraiment : 95 % du temps à gauche, 5 % à droite."
+      ]
+    },
+    "it": {
+      "title": "Julie - feminine adornments",
+      "excerpt": "«julie» è un progetto i cui lavori fondono indie rock e trame prossime allo shoegaze o al dream pop, a seconda del periodo e del registro del brano.",
+      "body": [
+        "Gli uscite di «julie» mescolano indie rock e trame prossime allo shoegaze o al dream pop, a seconda del periodo. «feminine adornments» compaiono sul canale ufficiale come video.",
+        "Direi che mi ritrae bene: il 95% delle volte quello a sinistra, il 5% quello a destra."
+      ]
+    },
+    "zh-CN": {
+      "title": "Julie - feminine adornments",
+      "excerpt": "名衔「julie」：发行在独立摇滚中掺入自赏或梦泡质感，因时期、曲目而变。",
+      "body": [
+        "「julie」的发布会在独立摇滚中揉进近自赏、近梦泡的听感，随阶段与每首歌的取舍而变。「feminine adornments」在官方频道是 MV。",
+        "我会说极像自己：多数时候是左面那一位，少数时候是右面。"
+      ]
+    },
+    "zh-TW": {
+      "title": "Julie - feminine adornments",
+      "excerpt": "名義「julie」：在獨立搖滾裡帶一點自賞、夢泡的質地，看時期、看曲目。",
+      "body": [
+        "「julie」的釋出會把獨立搖滾與偏自賞、夢泡的觸感混起來，隨階段與單曲取捨而變。「feminine adornments」是官方頻道的一支 MV。",
+        "我會說很像我：多數時是左邊，少數時是右邊。"
+      ]
+    }
+  },
+  "bonjr-its-ok-youre-ok": {
+    "en": {
+      "title": "Bonjr - It's Ok, You're Ok",
+      "excerpt": "Bonjr is an electronic music project that often explores soft textures, clean beats, and a nearly hypnotic feel, at the cross of future beats, chill, and synthetic pop.",
+      "body": [
+        "Bonjr is an electronic music project whose releases often explore soft textures, clean beats, and a nearly hypnotic atmosphere, where future beats, chill, and synthetic pop meet. “It's Ok, You're Ok” circulates as a video on the channel i'm cyborg but that's ok (a nod to Park Chan-wook’s film), with scenes from Wuthering Heights."
+      ]
+    },
+    "ko": {
+      "title": "Bonjr - It's Ok, You're Ok",
+      "excerpt": "Bonjr는 전자악으로, 부드러운 질감·맑은 비트·거의 최면 같은 공기를 자주 쓰고, future beats, chill, 합성에 가까운 팝이 겹치는 쪽. ",
+      "body": [
+        "Bonjr는 발매마다 부드러운 질감, 맑은 박, 거의 최면 같은 대기를 탐지듯 쓰고, future beats, chill, 합성 톤이 만나는 경계에 둔다. «It's Ok, You're Ok»는 «i'm cyborg but that's ok»(박찬욱 감독 작품에서 가져온 이름) 채널에, 《폭풍의 언덕》 영상을 덧댄 영상으로 돈다."
+      ]
+    },
+    "es": {
+      "title": "Bonjr - It's Ok, You're Ok",
+      "excerpt": "Bonjr, proyecto de música electrónica que a menudo apuesta por texturas suaves, batería limpia, atmósfera casi hipnótica, en el cruce de future beats, chill y pop sintético.",
+      "body": [
+        "Bonjr explora texturas suaves, batería limpia, atmósfera casi hipnótica, frecuente en cruce entre future beats, chill y pop sintético. «It's Ok, You're Ok» rueda en el canal «i'm cyborg but that's ok» (guiño a la cinta de Park Chan-wook) con imágenes de Cumbres borrascosas."
+      ]
+    },
+    "ja": {
+      "title": "Bonjr - It's Ok, You're Ok",
+      "excerpt": "Bonjr：電子音系で、柔い質感、澄んだ打ち、ほぼ催眠的な雰囲気をよく扱い、フューチャー・ビーツ、チル、合成的ポップの境を行き来する。",
+      "body": [
+        "Bonjr は、柔らかい質感、澄んだビート、ほぼ催眠的な空気を、フューチャー・ビーツ、チル、合成的ポップが重なる地帯で扱いがち。「It's Ok, You're Ok」は、i'm cyborg but that's ok（朴贊郁作の一作へのなぞかけ）というチャンネルで、『嵐が丘』の断片映像とともに出回る。"
+      ]
+    },
+    "de": {
+      "title": "Bonjr - It's Ok, You're Ok",
+      "excerpt": "Bonjr, elektronische Musik, oft weiche Flächen, saubere Beats, beinahe hypnoid, am Schnitt von Future Beats, Chill, synthetischem Pop.",
+      "body": [
+        "Veröffentlichungen von Bonjr loten weiche Texturen, saubere Beats, beinahe hypnotische Stimmung aus, wo Future Beats, Chill und synthetischer Pop kreuzen. „It’s Ok, You’re Ok“ erscheint am Kanal „i’m cyborg but that’s ok“ (Anspielung auf Park Chan-wook) mit Szenen aus Wuthering Heights."
+      ]
+    },
+    "fr": {
+      "title": "Bonjr - It's Ok, You're Ok",
+      "excerpt": "Bonjr, musique électronique qui cherche souvent des textures douces, des rythmes nets, une atmosphère presque hypnotique, à la croisée future beats, chill, pop synthétique.",
+      "body": [
+        "Bonjr explore des textures souples, des rythmes nets, un climat proche de l’hypnose, au croisement future beats, chill, pop synthétique. « It’s Ok, You’re Ok » circule sur la chaîne « i’m cyborg but that’s ok » (clin d’œil à Park Chan-wook) avec des images de Les Hauts de Hurlevent."
+      ]
+    },
+    "it": {
+      "title": "Bonjr - It's Ok, You're Ok",
+      "excerpt": "Bonjr, elettronica con texture morbide, batterie linee, clima quasi ipnotico, fra future beats, chill e pop sintetico.",
+      "body": [
+        "Bonjr indaga spesso su texture morbide, battiti limpidi, atmosfere ipnotiche, nel punto in cui future beats, chill e pop sintetico si toccano. «It's Ok, You're Ok» appare nel canale «i'm cyborg but that's ok» (richiamo al film di Park Chan-wook) con spezzoni di Cime tempestose."
+      ]
+    },
+    "zh-CN": {
+      "title": "Bonjr - It's Ok, You're Ok",
+      "excerpt": "Bonjr：电子乐，常做柔软铺底、干净节拍、近乎催眠的气质，在 future beats、chill 与合成流行之间。",
+      "body": [
+        "Bonjr 的发片常在 future beats、chill、偏合成的流行交叠处，摸索柔软质感、清楚节拍、近乎催眠的氛围。《It's Ok, You're Ok》在叫「i'm cyborg but that's ok」（暗指朴赞郁作品）的频道上流传，并配上《呼啸山庄》的片段。"
+      ]
+    },
+    "zh-TW": {
+      "title": "Bonjr - It's Ok, You're Ok",
+      "excerpt": "Bonjr：電子系，常見柔軟鋪底、乾淨拍點、近乎催眠的氣息，在 future beats、chill 與合成流行之間。",
+      "body": [
+        "Bonjr 的釋出常在 future beats、chill、偏合式的流行重疊處，用柔軟、清楚、近乎催眠的空氣。《It's Ok, You're Ok》在名為「i'm cyborg but that's ok」（揶揄朴贊郁片）的頻道上流傳，並配上《呼嘯山莊》的剪輯。"
+      ]
+    }
+  },
+  "blue-foundation-eyes-on-fire-official-music-video": {
+    "en": {
+      "title": "Blue Foundation - Eyes On Fire (Official Music Video)",
+      "excerpt": "Blue Foundation is a Danish act with roots in electronic music and dream pop; “Eyes On Fire.”",
+      "body": [
+        "Blue Foundation is a Danish act with roots in electronic music and dream pop; “Eyes On Fire.”"
+      ]
+    },
+    "ko": {
+      "title": "Blue Foundation - Eyes On Fire (Official Music Video)",
+      "excerpt": "Blue Foundation, 덴마크, 전자, 드림 팝 쪽, «Eyes On Fire».",
+      "body": [
+        "Blue Foundation, 덴마크, 전자·드림 팝, «Eyes On Fire»."
+      ]
+    },
+    "es": {
+      "title": "Blue Foundation - Eyes On Fire (Official Music Video)",
+      "excerpt": "Blue Foundation, formación danesa con base en electrónica y dream pop; «Eyes On Fire».",
+      "body": [
+        "Blue Foundation, formación danesa con base en electrónica y dream pop; «Eyes On Fire»."
+      ]
+    },
+    "ja": {
+      "title": "Blue Foundation - Eyes On Fire (Official Music Video)",
+      "excerpt": "Blue Foundation、デンマーク、エレクトロニックとドリーム・ポップに根；「Eyes On Fire」。",
+      "body": [
+        "Blue Foundation、デンマークの名。エレクトロニックとドリーム・ポップ系譜；「Eyes On Fire」。"
+      ]
+    },
+    "de": {
+      "title": "Blue Foundation - Eyes On Fire (Official Music Video)",
+      "excerpt": "Blue Foundation, dänische Gruppe, verwurzelt in Elektronik und Dreampop; «Eyes On Fire».",
+      "body": [
+        "Blue Foundation, dänische Formation, Wurzeln in Elektronik und Dreampop; «Eyes On Fire»."
+      ]
+    },
+    "fr": {
+      "title": "Blue Foundation - Eyes On Fire (Official Music Video)",
+      "excerpt": "Blue Foundation, formation danoise, ancrage électronique et dream pop; « Eyes On Fire ».",
+      "body": [
+        "Blue Foundation, formation danoise, racines en électronique et dream pop; « Eyes On Fire »."
+      ]
+    },
+    "it": {
+      "title": "Blue Foundation - Eyes On Fire (Official Music Video)",
+      "excerpt": "Blue Foundation, formazione danese, radici in elettronica e dream pop; «Eyes On Fire».",
+      "body": [
+        "Blue Foundation, formazione danese, radici in elettronica e dream pop; «Eyes On Fire»."
+      ]
+    },
+    "zh-CN": {
+      "title": "Blue Foundation - Eyes On Fire（官方音乐视频）",
+      "excerpt": "Blue Foundation：丹麦，根基在电子乐与梦泡；《Eyes On Fire》。",
+      "body": [
+        "Blue Foundation：丹麦组合，根在电子乐与梦泡；《Eyes On Fire》。"
+      ]
+    },
+    "zh-TW": {
+      "title": "Blue Foundation - Eyes On Fire（官方音樂影片）",
+      "excerpt": "Blue Foundation：丹麥，根基在電子與夢泡；《Eyes On Fire》。",
+      "body": [
+        "Blue Foundation：丹麥團，根在電子與夢泡；《Eyes On Fire》。"
+      ]
+    }
+  },
+  "christian-loffler-ensemble-live-volksbuhne-berlin": {
+    "en": {
+      "title": "Christian Löffler & Ensemble (Live at Volksbühne, Berlin)",
+      "excerpt": "Christian Löffler is a German producer and musician associated with melodic house and techno with strong emotional weight, slow soundscapes, fragmented voices, and textures near ambient.",
+      "body": [
+        "Christian Löffler is a German producer and musician associated with melodic house and techno with strong emotional weight, slow soundscapes, fragmented voices, and textures near ambient. This document captures a live set with ensemble at the Volksbühne in Berlin, a theatre and culture venue known for experimental staging."
+      ]
+    },
+    "ko": {
+      "title": "Christian Löffler & Ensemble (Live at Volksbühne, Berlin)",
+      "excerpt": "Christian Löffler, 독일, 멜로딕한 하우스·테크노, 감정의 무게, 느린 풍경, 잘게 쪼갠 목소리, 앰비언트에 닿는 질감. ",
+      "body": [
+        "Christian Löffler는 독일 뮤지션·프로듀서로, 감정이 실린 멜로딕 하우스·테크노, 느리게 흐르는 풍경, 잘린 듯한 보컬, 앰비언트에 가까운 층으로 알려진다. 이 음원은 베를린 Volksbühne에서의 앙상블 라이브를 담는다. 실험적 무대로 유명한 극장·문화공간."
+      ]
+    },
+    "es": {
+      "title": "Christian Löffler & Ensemble (En directo, Volksbühne, Berlín)",
+      "excerpt": "Christian Löffler, productor y músico alemán, vinculado a house y techno melódico con carga emocional, paisajes lentos, vozes fragmentadas, texturas cercanas al ambient.",
+      "body": [
+        "Christian Löffler, productor y músico alemán, vinculado a house y techno melódico con carga emocional, paisajes lentos, voces fragmentadas, texturas cercanas al ambient. El registro documenta un concierto con ensemble en la Volksbühne (Berlín), teatro y centre cultural conocido por la escena escénica arriesgada."
+      ]
+    },
+    "ja": {
+      "title": "Christian Löffler & Ensemble (Live at Volksbühne, Berlin)",
+      "excerpt": "Christian Löffler、ドイツ。メロディック・ハウス／テクノ、感情の重さ、遅い景、断片化した声、ambient 寄りの質感。",
+      "body": [
+        "ドイツの Christian Löffler は、感情の厚みのあるメロディック・ハウスとテクノ、ゆっくりとした風景、砕かれた声、アンビエントに近いテクスチャに結び付けられる。本作は、ベルリン、フォルクスビューネでのアンサンブル・ライブ。実験的な舞台づくりで知られる劇場。"
+      ]
+    },
+    "de": {
+      "title": "Christian Löffler & Ensemble (Live at Volksbühne, Berlin)",
+      "excerpt": "Christian Löffler, deutscher Produzent und Musiker, melodisches House, Techno mit starker Stimmung, langsame Flächen, fragmentierte Stimmen, ambientnahe Textur.",
+      "body": [
+        "Christian Löffler, deutscher Producer und Musiker, melodisches House, Techno mit starker Stimmung, langsame Klangbilder, brüchige Stimmen, ambientnahe Klang. Diese Aufnahme dokumentiert ein Konzert mit Ensemble in der Volksbühne Berlin, Theater- und Kulturort mit bekannten Bühnenexperimenten."
+      ]
+    },
+    "fr": {
+      "title": "Christian Löffler & Ensemble (Live à la Volksbühne, Berlin)",
+      "excerpt": "Christian Löffler, producteur et musicien allemand, associé à une house mélodique, à un techno chargé, paysages lents, voix fragmentées, proche de l’ambient.",
+      "body": [
+        "Christian Löffler, producteur et musicien allemand, associé à la house mélodique, au techno chargé d’émotion, à des paysages sonores lents, des voix fragmentées, des textures proches de l’ambient. Cette prise retranscrit un direct avec ensemble à la Volksbühne (Berlin), théâtre et maison de culture célèbres pour l’expérimentation de plateau."
+      ]
+    },
+    "it": {
+      "title": "Christian Löffler & Ensemble (Live at Volksbühne, Berlin)",
+      "excerpt": "Christian Löffler, producer e musicista tedesco, legato a house e techno melodici carichi emotivamente, paesaggi lenti, voci frammentate, trame prossime all’ambient.",
+      "body": [
+        "Christian Löffler è un producer e musicista tedesco, associato a house e techno melodici dalle emozioni forti, paesaggi lenti, voci frammentate, trame vicine all’ambient. Registrazione dal vivo con ensemble alla Volksbühne di Berlino, teatro e spazio culturale noti per sperimentazione scenica."
+      ]
+    },
+    "zh-CN": {
+      "title": "Christian Löffler & Ensemble（柏林人民剧场现场）",
+      "excerpt": "Christian Löffler：德籍制作人、音乐人，以旋律感 house/techno、重情绪、慢板声景、碎裂人声、偏 ambient 的质感为标识。",
+      "body": [
+        "Christian Löffler 是德籍制作人与乐手，常见标签是情绪饱满的旋律系 house/techno、慢板声景、碎化人声、贴近 ambient 的层。此片记录他在柏林人民剧场与乐队合作的现场；该剧场是著名实验性舞台的演艺与文化场。"
+      ]
+    },
+    "zh-TW": {
+      "title": "Christian Löffler & Ensemble（柏林人民劇院現場）",
+      "excerpt": "Christian Löffler：德籍製作與樂手，以旋律性 house/techno、情緒厚重、慢板聲響、碎化人聲、貼近 ambient 的層理著稱。",
+      "body": [
+        "Christian Löffler 是德籍製作人與器樂手，以富情緒的旋律性 house/techno、遲緩聲響、碎化聲帶、貼近 ambient 的觸感為人熟知。本紀錄是他與合奏組在柏林人民劇院（Volksbühne）的現場；此處是舞台實驗頗知名的劇院與文化據點。"
+      ]
+    }
+  },
+  "resilience-memory-reboot": {
+    "en": {
+      "title": "Resilience - Memory Reboot",
+      "excerpt": "GhostEdits posts edits and mashups with a remix-leaning, online-culture look—sometimes linked to games or to electronic soundscapes.",
+      "body": [
+        "GhostEdits posts edits and mashups with a remix-leaning aesthetic and online audiovisual culture, sometimes linked to games or to electronic soundscapes. “Memory Reboot” appears here in a “Resilience” context, as a music video or rhythmic cut on YouTube."
+      ]
+    },
+    "ko": {
+      "title": "Resilience - Memory Reboot",
+      "excerpt": "GhostEdits, 리믹스에 가까운 편집·매시업, 온라인 오디오비주얼. 때로 게임·일렉트로닉 풍경.",
+      "body": [
+        "GhostEdits는 리믹스에 가까운 편집과 매시업, 온라인 문화의 시각·청각을 쓰고, 가끔 게임·일렉트로닉 풍경과 잇는다. «Memory Reboot»는 «Resilience» 맥락에서, 유튜브의 뮤직비디오·리듬 클립으로 뜬다."
+      ]
+    },
+    "es": {
+      "title": "Resilience - Memory Reboot",
+      "excerpt": "GhostEdits publica ediciones y mashups, estética de remix, cultura de vídeo en línea, a veces ligada a juegos o paisajes sonoros electrónicos.",
+      "body": [
+        "GhostEdits publica ediciones y mashups con aire de remix y de cultura audiovisual online, a veces ligada a juegos o a paisajes sonoros electrónicos. «Memory Reboot» entra en «Resilience» como video musical o corte rítmico en YouTube."
+      ]
+    },
+    "ja": {
+      "title": "Resilience - Memory Reboot",
+      "excerpt": "GhostEdits、リミックス的な再編、ネット上の映像文化、時にゲームや電子系の風景と結び付く。",
+      "body": [
+        "GhostEdits は、リミックス的な手の合わせ、ネット文化の映像的仕立てを持つ作品を出すことがあり、ゲームや電子系の風響に結び付くこともある。「Memory Reboot」は「Resilience」の文脈で、YouTube 上の MV あるいはリズム寄りの断片として現れる。"
+      ]
+    },
+    "de": {
+      "title": "Resilience - Memory Reboot",
+      "excerpt": "GhostEdits: Edits, Mashups, eher remixlastige, online-affine Ästhetik, manchmal mit Spielen oder elektronischen Klanglandschaften.",
+      "body": [
+        "GhostEdits veröffentlicht Edits und Mashups mit eher remixlastiger, online-naher Ästhetik, manchmal mit Bezug zu Spielen oder elektronischen Klanglandschaften. «Memory Reboot» taucht hier im Rahmen von «Resilience» als Musikvideo- oder Rhythmus-Cut auf YouTube auf."
+      ]
+    },
+    "fr": {
+      "title": "Resilience - Memory Reboot",
+      "excerpt": "GhostEdits, montages, mashups, esthétique proche du remix et de la culture vidéo en ligne, parfois liée au jeu ou à des paysages sonores électroniques.",
+      "body": [
+        "GhostEdits poste des montages et des mashups à l’esthétique proche du remix, culture audiovisuelle en ligne, parfois rattachée au jeu ou à des univers sonores électroniques. « Memory Reboot » apparaît ici sous « Resilience » comme clip ou coupe rythmique sur YouTube."
+      ]
+    },
+    "it": {
+      "title": "Resilience - Memory Reboot",
+      "excerpt": "GhostEdits pubblica edit e mashup, estetica prossima al remix, cultura visiva online, a volte legata a giochi o a paesaggi elettronici.",
+      "body": [
+        "GhostEdits diffonde edit e mashup con stile da remix, cultura audiovisiva online, talvolta legata a giochi o a paesaggi elettronici. «Memory Reboot» appare sotto «Resilience» come video musicale o taglio ritmico su YouTube."
+      ]
+    },
+    "zh-CN": {
+      "title": "Resilience - Memory Reboot",
+      "excerpt": "GhostEdits：以偏混音的剪辑与 mashup、线上一体的视听文化，有时与游戏或电子系声场相连。",
+      "body": [
+        "GhostEdits 发布带混音感、贴近线上视听文化的再剪与 mashup，有时也接到游戏或电子系声场。「Memory Reboot」在「Resilience」语境下，以 YouTube 上的音乐视频或节奏性短片出现。"
+      ]
+    },
+    "zh-TW": {
+      "title": "Resilience - Memory Reboot",
+      "excerpt": "GhostEdits：偏混音的再剪與 mashup、貼合線上視聽文化，有時牽到遊戲或電子聲響。",
+      "body": [
+        "GhostEdits 釋出混音味濃的再剪與 mashup，帶有線上視聽習氣，偶與遊戲或電子聲景相接。「Memory Reboot」在「Resilience」脈絡中，以 YouTube 的 MV 或節奏向短片出現。"
+      ]
+    }
+  },
+  "the-big-push": {
+    "en": {
+      "title": "The Big Push",
+      "excerpt": "The Big Push is a band that grew out of Brighton’s busking scene, with Ren Gill, Romain Axisa, Gorran Kendall, and Glenn Chambers.",
+      "body": [
+        "The Big Push is a band that emerged from Brighton’s busking scene, with Ren Gill, Romain Axisa, Gorran Kendall, and Glenn Chambers. The group became known for that street start: very physical live shows, reach through online video, and a style that combined performance energy, cover rearrangements, and original material.",
+        "Filmed in Brighton and posted on the band’s official channel, the medley weaves “I Shot the Sheriff” and “Road to Zion” with a rap/hip-hop segue, turning well-known sources into a raw, expansive set that leans on live energy."
+      ]
+    },
+    "ko": {
+      "title": "The Big Push",
+      "excerpt": "The Big Push, 브라이턴 길거리 연주에서, Ren Gill, Romain Axisa, Gorran Kendall, Glenn Chambers.",
+      "body": [
+        "The Big Push는 브라이턴 버스킹에서 나온 팀, Ren Gill, Romain Axisa, Gorran Kendall, Glenn Chambers. 그 길에서의 출발로 알려졌다—체력이 드는 라이브, 온라인 영상으로 퍼짐, 연주의 열, 커버 편곡, 자작곡이 한데.",
+        "브라이턴에서 촬영, 밴드 공식 채널. «I Shot the Sheriff»와 «Road to Zion»을 랩/힙합으로 잇는 메들리, 익숙한 곡을 거칠고 벌어진, 라이브 힘에 기대는 연주로."
+      ]
+    },
+    "es": {
+      "title": "The Big Push",
+      "excerpt": "The Big Push, banda nacida del busking de Brighton, con Ren Gill, Romain Axisa, Gorran Kendall y Glenn Chambers.",
+      "body": [
+        "The Big Push, banda surgida de la calle y del busking en Brighton, con Ren Gill, Romain Axisa, Gorran Kendall, Glenn Chambers. Fama por ese inicio: directo muy corpóreo, circulación vía video online, mezcla de brío escénico, rearmados de versiones, temas propios.",
+        "Grabado en Brighton, en el canal oficial, el medley enlaza «I Shot the Sheriff» y «Road to Zion» con un tramo de rap/hip hop, haciendo de clásicos conocidos una puesta ruda, expansiva, muy dependiente del directo."
+      ]
+    },
+    "ja": {
+      "title": "The Big Push",
+      "excerpt": "The Big Push、ブライトンの街演奏から。Ren Gill、Romain Axisa、Gorran Kendall、Glenn Chambers。",
+      "body": [
+        "The Big Push は、ブライトンのバスキングから。Ren Gill、Romain Axisa、Gorran Kendall、Glenn Chambers。路上からの出発で知られ、生の身体性、映像拡散、演じる熱、カバーの再配置、自作曲。",
+        "ブライトンで撮影、公式チャンネル。メドレーに「I Shot the Sheriff」と「Road to Zion」、合間にラップ/ヒップホップ、よく知られた曲を、粗く、拡がり、ライブの力に乗る形へ。"
+      ]
+    },
+    "de": {
+      "title": "The Big Push",
+      "excerpt": "The Big Push, Band aus der Straßenszene in Brighton, Ren Gill, Romain Axisa, Gorran Kendall, Glenn Chambers.",
+      "body": [
+        "The Big Push, aus dem Busking in Brighton, mit Ren Gill, Romain Axisa, Gorran Kendall, Glenn Chambers. Bekannt mit diesem Straßen-Start: sehr körperliche Lives, Zirkulation über Online-Video, Stil aus Bühnenenergie, Cover-Versionen, eigenen Songs.",
+        "Aufgezeichnet in Brighton, im offiziellen Kanal: Medley kettet «I Shot the Sheriff» und «Road to Zion» an einen Rap-/Hip-Hop-Block; bekannte Lieder werden grob, weit, stark vom Live-Impuls getragen."
+      ]
+    },
+    "fr": {
+      "title": "The Big Push",
+      "excerpt": "The Big Push, formation issue du busking de Brighton, avec Ren Gill, Romain Axisa, Gorran Kendall, Glenn Chambers.",
+      "body": [
+        "The Big Push, groupe né du busking de Brighton, avec Ren Gill, Romain Axisa, Gorran Kendall, Glenn Chambers. Réputé par ce point de départ: concerts très physiques, diffusion en ligne, style mêlant énergie de plateau, reprises travaillées, morceaux originaux.",
+        "Tourné à Brighton, sur la chaîne officielle: le medley enchaîne « I Shot the Sheriff » et « Road to Zion » avec un passage rap/hip-hop, tournant des références notoires en une exécution crue, ample, accrochée à l’énergie live."
+      ]
+    },
+    "it": {
+      "title": "The Big Push",
+      "excerpt": "The Big Push, banda uscita dal busking di Brighton, con Ren Gill, Romain Axisa, Gorran Kendall, Glenn Chambers.",
+      "body": [
+        "The Big Push nasce dal busking a Brighton, con Ren Gill, Romain Axisa, Gorran Kendall, Glenn Chambers. Nota per l’inizio in strada: live molto fisici, circolazione via video online, fusione di energia scenica, rielaborazioni di cover, brani originali.",
+        "Ripresa a Brighton, sul canale ufficiale: la medley intreccia «I Shot the Sheriff» e «Road to Zion» con un nodo rap/hip hop, riconvertendo riferimenti conosciuti in un’esecuzione ruvida, ampia, sostenuta dall’energia del diretto."
+      ]
+    },
+    "zh-CN": {
+      "title": "The Big Push",
+      "excerpt": "The Big Push：出自布莱顿街演，成员 Ren Gill、Romain Axisa、Gorran Kendall、Glenn Chambers。",
+      "body": [
+        "The Big Push 自布莱顿街头演奏而起，班底含 Ren Gill、Romain Axisa、Gorran Kendall、Glenn Chambers。因这段街头起点出圈：现场很身体化、依视频在网上的传播、语言把演出来的力度、对翻唱的改编与原创并置。",
+        "布莱顿拍、发在官频；串烧把《I Shot the Sheriff》《Road to Zion》接到一段说/饶段，让熟悉的素材在粗粝、开阔、很依赖现场能量的演法里跑起来。"
+      ]
+    },
+    "zh-TW": {
+      "title": "The Big Push",
+      "excerpt": "The Big Push：出自布萊頓的街演，團員 Ren Gill、Romain Axisa、Gorran Kendall、Glenn Chambers。",
+      "body": [
+        "The Big Push 從布萊頓街頭演奏長出，Ren Gill、Romain Axisa、Gorran Kendall、Glenn Chambers 在內。因那種街頭起點出名：很身體化的現場、依網路影片傳播、風格把演出台勁、重編翻唱、原創扣在一起。",
+        "在布萊頓拍、釋在官方頻道；串接《I Shot the Sheriff》《Road to Zion》與一截饒/嘻哈轉手，讓人熟的素材在粗、開、很靠現場衝的演法裡跑。"
+      ]
+    }
+  },
+  "vice-documentarios": {
+    "en": {
+      "title": "VICE",
+      "excerpt": "VICE brings together documentaries, video reportage, and series on politics, crime, drugs, technology, war, culture, and urban life—usually with a more immersive, direct voice than traditional TV news.",
+      "body": [
+        "VICE brings together documentaries, video reportage, and series on politics, crime, drugs, technology, war, culture, and urban life, usually in a more immersive, direct idiom than conventional television journalism. In the brand ecosystem, this work appears on VICE Video and on platforms such as YouTube and VICE TV."
+      ]
+    },
+    "ko": {
+      "title": "VICE",
+      "excerpt": "VICE는 정치, 범죄, 마약, 기술, 전쟁, 문화, 도시를 다루는 다큐·영상 보도·시리즈를 모으며, 흔히 기성 TV 뉴스보다 몰입감 있고 직접 말투다.",
+      "body": [
+        "VICE는 정치, 범죄, 마약, 기술, 전쟁, 문화, 도시 생을 다루는 다큐, 영상 보도, 시리즈를 모으며, 대개 기성 TV 저널리즘보다 몰입적이고 직설적인 톤이다. 브랜드 쪽에선 VICE Video와 YouTube, VICE TV 등에서 만난다."
+      ]
+    },
+    "es": {
+      "title": "VICE",
+      "excerpt": "VICE reúne documentales, reportaje en video y series sobre política, crimen, droga, tecnología, guerra, cultura, vida urbana, con lenguaje más inmersivo y directo que el informativo televisivo de siempre.",
+      "body": [
+        "VICE reúne documentales, reportaje en video y series sobre política, crimen, drogas, tecnología, guerra, cultura y vida urbana, frecuentemente con un lenguaje más inmersivo y directo que el periodismo televisivo clásico. En el ecosistema de la marca, el material aparece en VICE Video y en plataformas como YouTube o VICE TV."
+      ]
+    },
+    "ja": {
+      "title": "VICE",
+      "excerpt": "VICE は、政治、犯罪、薬物、技術、戦争、文化、都市生活を扱うドキュメンタリー、映像レポート、シリーズを束ね、ふつうのテレビ向け報道より没入的で素っ気ない口調のことが多い。",
+      "body": [
+        "VICE には、政治、犯罪、薬物、技術、戦争、文化、都市生活を扱うドキュメンタリー、映像リポート、シリーズがまとまり、一般のテレビ報道より没入的で直截な語り口が多い。ブランドの中では、VICE Video や、YouTube、VICE TV といった所でも同種の作が出る。"
+      ]
+    },
+    "de": {
+      "title": "VICE",
+      "excerpt": "VICE bündelt Documentaries, Video-Reportagen, Serien: Politik, Kriminalität, Drogen, Technik, Krieg, Kultur, städtisches Leben, oft eher einbindend, direkter, als herkömmliches TV-Journal.",
+      "body": [
+        "VICE bündelt Documentaries, Video-Reportagen und Serien zu Politik, Kriminalität, Drogen, Technik, Krieg, Kultur und städtischem Leben, meist in immersiver, direkterer Sprache als herkömmlicher TV-Journalismus. In der Marke: VICE Video sowie u. a. YouTube, VICE TV"
+      ]
+    },
+    "fr": {
+      "title": "VICE",
+      "excerpt": "VICE rassemble documentaires, reportages vidéo, séries : politique, crime, drogues, tech, guerre, culture, vie urbaine, souvent plus incarné, plus direct, que l’info télé de référence.",
+      "body": [
+        "VICE regroupe documentaires, reportages vidéo, séries sur la politique, le crime, les drogues, la technologie, la guerre, la culture, la vie urbaine, avec un ton en général plus incarné, plus direct, que le journal télé classique. Dans l’écosystème de la marque, le contenu figure sur VICE Video, sur YouTube, VICE TV, et plus."
+      ]
+    },
+    "it": {
+      "title": "VICE",
+      "excerpt": "VICE raccoglie documentari, reportage video, serie: politica, crimine, droghe, tecnica, guerra, cultura, città, in genere con voce più immersiva e diretta del Tg classico.",
+      "body": [
+        "VICE raccoglie documentari, reportage, serie su politica, crimine, droghe, tecnologia, guerra, cultura, vita urbana, in genere con stile più immersivo e schietto del Tg tradizionale. Nell’ecosistema del brand compaiono VICE Video, YouTube, VICE TV, ecc."
+      ]
+    },
+    "zh-CN": {
+      "title": "VICE",
+      "excerpt": "VICE 汇集政治、罪案、药、技、战、文化、城市场景的纪录片、视频报道与系列，语气往往比传统电视新闻更贴肤、更直。",
+      "body": [
+        "VICE 汇集关于政治、罪案、药、技、战、文化、城市场景的纪录片、视频报道与系列，语态通常比常规电视新闻更贴肤、更直。在品牌网络里，这类内容出现在 VICE Video，以及 YouTube、VICE TV 等平台。"
+      ]
+    },
+    "zh-TW": {
+      "title": "VICE",
+      "excerpt": "VICE 匯政、查、藥、技、戰、文、都會的紀錄、影像報導、系列，口氣多比傳統電視新聞更入戲、更直。",
+      "body": [
+        "VICE 匯政、查、藥、技、戰、文、都會的紀錄、影像專題、系列，敘法往往比一線電視新聞更衝、更直。在品牌內，這些內容見於 VICE Video，以及 YouTube、VICE TV 等。"
+      ]
+    }
+  }
+}

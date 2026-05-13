@@ -1,0 +1,195 @@
+{
+  "metadata": {
+    "title": "Collective science project",
+    "description": "Collective science — site content in progress."
+  },
+  "nav": {
+    "main": "Main navigation",
+    "victor": "victor",
+    "clinica": "クリニック",
+    "registros": "記録",
+    "vekon": "vekon"
+  },
+  "time": {
+    "local": "local time"
+  },
+  "feed": {
+    "typeOrCategory": "Type or category",
+    "filterAll": "All types",
+    "searchLabel": "Search the notes",
+    "searchPlaceholder": "Search…",
+    "utilTabsAria": "Journals, tools, or resources",
+    "incomumTabsAria": "Art, literature, audiovisual, or profiles",
+    "empty": "No note matches the search or filter.",
+    "viewMore": "Show more",
+    "viewMoreAria": "Show more notes ({count} remaining)"
+  },
+  "utilBucket": {
+    "ferramenta": "Tools",
+    "jornais": "Journals",
+    "textos": "Resources"
+  },
+  "incomumKind": {
+    "arte": "Art",
+    "literatura": "Literature",
+    "audiovisual": "Audiovisual",
+    "perfis": "Profiles"
+  },
+  "Category": {
+    "anime": "anime",
+    "contato": "contact",
+    "conto": "short story",
+    "contos": "short stories",
+    "desenho": "drawing",
+    "documentário": "documentary",
+    "ensaio": "essay",
+    "gravura": "engraving",
+    "jornais": "journals",
+    "livro": "book",
+    "literatura": "literature",
+    "manga": "manga",
+    "música": "music",
+    "nota": "note",
+    "pintura": "painting",
+    "pintura digital": "digital painting",
+    "pixel art": "pixel art",
+    "podcast": "podcast",
+    "poema": "poem",
+    "recurso": "resource",
+    "série": "series",
+    "site": "site",
+    "textos": "texts",
+    "vídeos": "videos"
+  },
+  "victor": {
+    "label": "victor",
+    "infoTitle": "General information",
+    "infoTitleShort": "情報",
+    "tabsAria": "Information sub-sections",
+    "tabNotas": "General Notes",
+    "tabIncomum": "Unusual",
+    "tabUtil": "Resources",
+    "incomumIntro": "出会って、一見ふつうではない／十分違うと感じたもの：",
+    "utilIntro": "分野やプロづくりに欠かせない、役に立つ内容："
+  },
+  "clinica": {
+    "label": "クリニック",
+    "title": "Clinical perspectives"
+  },
+  "registros": {
+    "label": "記録",
+    "video": "video",
+    "videoTitle": "Video {slot} — registros",
+    "playVideo": "play video",
+    "thumbAria": "Feature video {slot}",
+    "theaterOn": "Turn off theater mode (black band around the video)",
+    "theaterOff": "Turn on theater mode (black band around the video)",
+    "theaterTitleOn": "Turn off theater mode",
+    "theaterTitleOff": "Theater mode — black band"
+  },
+  "vimeo": {
+    "closeFs": "Close fullscreen",
+    "exitFs": "Exit fullscreen",
+    "enterFs": "View video fullscreen",
+    "fsTitleOff": "Fullscreen",
+    "fsTitleOn": "Exit fullscreen"
+  },
+  "vekon": {
+    "label": "vekon",
+    "title": "Vekon: Life",
+    "body": "A personal system for organization, record-keeping, memory, and analysis, built by me. Still in development for a beta release.",
+    "openPage": "open page",
+    "close": "close",
+    "closeDialog": "Close",
+    "closePanel": "Close panel"
+  },
+  "hero": {
+    "globeHint": "Hover over the globe to see the animation",
+    "analyst": "systems analyst",
+    "nameFirst": "victor",
+    "nameLast": "correard",
+    "cardAria": "Profile"
+  },
+  "profile": {
+    "name": "Victor Correard Vekony",
+    "bio": "Victor Correard Vekony. USP心理学研究科で修士課程在学中。サンパウロ大学心理学研究所にて心理学。グアラチンゲタの工業高校で電子工学。",
+    "goodreads": "Goodreads",
+    "spotify": "Spotify"
+  },
+  "post": {
+    "back": "Back to the archive",
+    "contentPt": "This content is only available in Portuguese (Brazil).",
+    "backCrumb": "← victor"
+  },
+  "sugestoesInbox": {
+    "title": "Inbox",
+    "configNotice": "Set {url} and {token} in your deployment environment to store submissions.",
+    "urlKey": "UPSTASH_REDIS_REST_URL",
+    "tokenKey": "UPSTASH_REDIS_REST_TOKEN",
+    "empty": "No messages stored yet.",
+    "count": "{n} recent record(s) — newest first.",
+    "name": "Name",
+    "email": "E-mail",
+    "attachments": "Attachments (Discord only):",
+    "sugestoes": "Suggestions",
+    "publishField": "Publish",
+    "publishAsField": "Publication name",
+    "answerYes": "yes",
+    "answerNo": "no"
+  },
+  "footer": {
+    "langLabel": "Language / Idioma",
+    "emailCopied": "E-mail copied: {email}",
+    "copyEmail": "Copy e-mail {email} to clipboard",
+    "copyTitle": "Click to copy the e-mail"
+  },
+  "postUi": {
+    "readMore": "Read more",
+    "readLess": "Read less"
+  },
+  "sugestoes": {
+    "title": "Suggestions",
+    "backAria": "Back to victor archive",
+    "back": "victor",
+    "introEyebrow": "意味を求めて",
+    "qr1": "このスペースは、おすすめを集めるためにあります。",
+    "qr2": "あなたが見たこと、したこと、出会ったことの中で、誰か大切な人や過去の自分に伝えるべきこと、あるいは失われないように残しておくべきことは何ですか？",
+    "qr3": "何でも構いません: 物語、人、アイデア、サイト、映画、本、場所、出来事、知識、画像、物、ブランド、しぐさ、またはどんな観察でも。",
+    "name": "Name",
+    "nameHint": "(optional)",
+    "email": "E-mail",
+    "message": "Message",
+    "messageHint": "(required)",
+    "imagesAudio": "Images or audio",
+    "optional": "(optional)",
+    "attachmentsNote": "Up to {maxImages} images (JPEG, PNG, GIF, WebP, max {mbImg} MB each) and one audio file (MP3, M4A, OGG, WAV, WebM, max {mbAudio} MB). Total attachments: at most ~{mbTotal} MB (server limit).",
+    "imagesLabel": "Images",
+    "audioLabel": "Audio",
+    "noFileChosen": "ファイルが選択されていません",
+    "chooseFiles": "ファイルを選択",
+    "remove": "Remove",
+    "imageLimit": "Limit of {count} images. Remove one to choose another.",
+    "honeypot": "Company",
+    "success": "Thanks — your message was sent. You can send another anytime.",
+    "sending": "Sending…",
+    "submit": "Send",
+    "errImageMime": "Images: use JPEG, PNG, GIF, or WebP.",
+    "errImageSize": "Each image must be at most {mb} MB.",
+    "errAudioMime": "Audio: use MP3, M4A, OGG, WAV, or WebM.",
+    "errAudioSize": "Audio must be at most {mb} MB.",
+    "errTotalSize": "The total size of attachments is too large. Reduce the image or audio size.",
+    "errNetwork": "Network error. Please try again.",
+    "errGeneric": "Error sending the message.",
+    "publishLabel": "Publish?",
+    "qualNomeLabel": "What name:",
+    "publishAsDefault": "False name",
+    "responsesCenterTitle": "Responses",
+    "responsesNavAria": "Open Responses archive",
+    "suggestionsNavAria": "Go to the suggestions form",
+    "responsesNavDesktop": "回答 →",
+    "suggestionsNavDesktop": "← 提案",
+    "responsesMobileWord": "responses",
+    "suggestionsMobileWord": "suggestions",
+    "responsesArchiveHeading": "Responses"
+  }
+}

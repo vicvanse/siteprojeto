@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="200" viewBox="0 0 280 200" fill="none">
+  <rect width="280" height="200" rx="12" fill="#1e293b"/>
+  <path d="M40 150 Q100 40 140 100 T240 80" stroke="#38bdf8" stroke-width="2.5" fill="none"/>
+  <path d="M40 150 L240 150" stroke="#475569" stroke-width="1"/>
+  <rect x="50" y="60" width="180" height="70" rx="4" fill="#0f172a" stroke="#334155"/>
+  <circle cx="140" cy="95" r="28" fill="#791126" fill-opacity="0.35" stroke="#f87171" stroke-width="1.5"/>
+  <text x="140" y="178" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#94a3b8">Seeing Theory · Brown</text>
+</svg>

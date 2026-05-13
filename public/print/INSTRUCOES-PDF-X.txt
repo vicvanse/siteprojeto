@@ -1,0 +1,52 @@
+================================================================================
+CARTAO — PDF gerado no repositorio vs. PDF/X-1a (FuturaIM e similares)
+================================================================================
+
+O que o projeto exporta (npm run print:pdf)
+---------------------------------------------
+- PDF com 2 paginas (frente, verso) ou 1 pagina por ficheiro.
+- Tamanho de cada pagina: 92 x 52 mm (sangria 2 mm para corte 88 x 48 mm).
+- Gerado com PDFKit + svg-to-pdfkit: PDF "normal" (ex.: 1.3), espaco de cor RGB.
+- NAO e PDF/X-1a: nao ha Output Intent, perfil ICC de impressao, nem certificacao X-1a.
+- Texto "VEKON LABS" na frente Vekon pode ir como texto editavel (nao curvas).
+
+Para upload no site da grafica
+--------------------------------
+- Muitas vezes o upload ACEITA este PDF para analise automatica.
+- Se pedem explicitamente "PDF/X-1a" ou "CMYK", o ficheiro do repo e um ponto de
+  partida visual/tamanho correto, mas NAO cumpre o standard so por ser exportado aqui.
+
+O que a FuturaIM (e o aviso "PDF/X-1a") costuma exigir
+------------------------------------------------------
+- PDF/X-1a: restricoes de fontes, transparencia, cores, etc.
+- CMYK para impressao offset/laser com separacao de cores.
+- Fontes incorporadas ou convertidas em contornos (curvas).
+- Sangria e tamanho de pagina ja estao corretos nos SVG/PDF deste projeto.
+
+Como obter PDF/X-1a + CMYK (recomendado)
+----------------------------------------
+1) Abrir o PDF deste projeto OU os SVG em Adobe Illustrator (ou Affinity).
+
+2) Modo de documento / cores: converter para CMYK (perfil sugerido pela grafica,
+   ex. FOGRA39, U.S. Web Coated SWOP, conforme indicacao da FuturaIM).
+
+3) Texto: Contorno de criacao / Create Outlines (ou exportar com fontes incorporadas
+   conforme o preset PDF/X permitir).
+
+4) Guardar / Exportar como PDF:
+   - Predefinicao "PDF/X-1a" ou "PDF/X-1a:2001" (Illustrator/Acrobat).
+   - Verificar marcas de corte se o template oficial deles exigir.
+
+5) No Acrobat Pro: Ferramentas > Impressao de producao > Preflight > PDF/X-1a
+   para validar antes de enviar.
+
+Alternativa sem Adobe
+---------------------
+- Inkscape: exportar PDF e depois validar/converter na grafica ou com servico
+  pago; PDF/X-1a fiel e mais simples com Acrobat/Illustrator.
+
+Resumo
+------
+- PDF do repo: tamanho e layout OK para revisao; NAO e PDF/X-1a nem CMYK por defeito.
+- Para "menor chance de reprovação" com pedido PDF/X-1a: passar pelo fluxo
+  Illustrator/Acrobat (ou equivalente profissional) acima.

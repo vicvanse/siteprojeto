@@ -1,0 +1,35 @@
+/* Símbolo compacto — cabeçalho escuro (só mobile) */
+
+.wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.spinCw {
+  transform-origin: 50% 50%;
+  animation: vekonHeaderSpinCw 10s linear infinite;
+}
+
+.spinCcw {
+  transform-origin: 50% 50%;
+  animation: vekonHeaderSpinCcw 7s linear infinite;
+}
+
+@keyframes vekonHeaderSpinCw {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes vekonHeaderSpinCcw {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinCw,
+  .spinCcw {
+    animation: none;
+  }
+}
