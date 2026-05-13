@@ -796,19 +796,22 @@ export default function HomePage() {
 
       <section
         id="top"
-        className="relative order-1 isolate flex min-h-[min(40vh,280px)] w-full min-w-0 flex-col overflow-visible bg-[#f0f4f2] px-5 pb-0 pt-0 sm:min-h-[min(38vh,300px)] sm:px-8 md:px-12 lg:min-h-[min(34vh,340px)]"
+        className="relative order-1 isolate flex min-h-[min(44vh,300px)] w-full min-w-0 flex-col overflow-visible bg-[#f0f4f2] px-5 pb-0 pt-0 sm:min-h-[min(42vh,320px)] sm:px-8 md:px-12 lg:min-h-[min(40vh,360px)]"
       >
         <HeroBackground />
-        <HeroTriangleArt className="pointer-events-none absolute left-0 top-2 z-[1] -ml-5 h-[min(22vh,148px)] w-[min(72vw,216px)] sm:-ml-8 sm:top-3 sm:h-[min(26vh,180px)] sm:w-[min(52vw,260px)] md:-ml-12 md:h-[min(28vh,210px)] md:w-[min(44vw,300px)] lg:top-4" />
+        <HeroTriangleArt
+          emphasis
+          className="pointer-events-none absolute left-2 top-1/2 z-[2] h-[min(18rem,52vh)] w-[min(42vw,240px)] max-h-[280px] -translate-y-1/2 sm:left-4 sm:h-[min(19rem,55vh)] sm:max-h-[300px] sm:w-[min(38vw,260px)] md:left-6 md:w-[min(34vw,280px)]"
+        />
         <HeroTriangleArt
           mirror
           emphasis
-          className="pointer-events-none absolute right-0 top-2 z-[1] -mr-5 h-[min(30vh,200px)] w-[min(82vw,260px)] sm:-mr-8 sm:top-3 sm:h-[min(34vh,240px)] sm:w-[min(58vw,300px)] md:-mr-12 md:h-[min(36vh,280px)] md:w-[min(48vw,340px)] lg:top-4"
+          className="pointer-events-none absolute right-2 top-1/2 z-[2] h-[min(18rem,52vh)] w-[min(42vw,240px)] max-h-[280px] -translate-y-1/2 sm:right-4 sm:h-[min(19rem,55vh)] sm:max-h-[300px] sm:w-[min(38vw,260px)] md:right-6 md:w-[min(34vw,280px)]"
         />
 
         <div className="relative z-10 flex min-h-0 w-full max-w-full flex-1 flex-col overflow-visible">
-          <div className="mx-auto flex w-full max-w-7xl min-h-0 flex-1 flex-col px-2">
-            <div className="flex flex-1 flex-col items-center justify-center px-2 pb-4 pt-5 text-center sm:pt-6">
+          <div className="mx-auto grid min-h-0 w-full max-w-7xl flex-1 grid-rows-[1fr_auto] px-2">
+            <div className="flex min-h-0 flex-col items-center justify-center px-2 pb-2 pt-4 text-center sm:pb-3 sm:pt-6">
               <h1
                 className="m-0 max-w-[min(100%,36rem)] text-[clamp(1.85rem,7vw,4.5rem)] font-normal leading-[0.82] tracking-[-0.02em] [font-family:var(--font-signature)]"
                 aria-label={tHero("projectTitle")}
@@ -830,19 +833,26 @@ export default function HomePage() {
               ) : null}
             </div>
 
-            <div className="mt-auto flex w-full shrink-0 items-end justify-between gap-3 pb-3 pt-1 sm:gap-4 sm:pb-4">
-              <div className="min-w-0 shrink" aria-hidden>
-                <div className="pointer-events-none select-none text-left font-sans font-semibold leading-[0.92] tracking-[-0.05em]">
-                  <span className="flex items-baseline gap-[0.12em] text-[clamp(0.7rem,2.1vw,0.95rem)] text-black/18">
-                    <SpinStar className="shrink-0 text-black/18" />
-                    <span>{tHero("nameFirst")}</span>
-                  </span>
-                  <span className="-mt-0.5 block text-[clamp(1.05rem,3.8vw,1.75rem)] text-black">
-                    {tHero("nameLast")}
-                  </span>
+            <div className="flex w-full shrink-0 items-end justify-between gap-3 pb-3 pt-0 sm:gap-4 sm:pb-4 sm:pt-1">
+              <div
+                className="pointer-events-none min-w-0 shrink pl-0.5 pb-0.5 sm:pl-1 sm:pb-1 md:pl-2 md:pb-2"
+                aria-hidden
+              >
+                <div className="origin-bottom-left scale-[0.38] sm:scale-[0.45] md:scale-50">
+                  <div className="m-0 text-[clamp(2.5rem,10vw,7rem)] font-sans font-semibold leading-[0.88] tracking-[-0.06em] text-black">
+                    <span className="flex flex-col items-end gap-0">
+                      <span className="flex items-baseline gap-[0.14em] text-black/18">
+                        <SpinStar className="shrink-0" />
+                        <span>{tHero("nameFirst")}</span>
+                      </span>
+                      <span className="-mt-[0.18em] block text-black">
+                        {tHero("nameLast")}
+                      </span>
+                    </span>
+                  </div>
                 </div>
               </div>
-              <div className="shrink-0 self-end">
+              <div className="shrink-0 self-end pr-0.5 pb-0.5 sm:pr-1 sm:pb-1 md:pr-2 md:pb-2">
                 <VekonHeroMark interactive={false} sizePx={136} className="mx-0" />
               </div>
             </div>
