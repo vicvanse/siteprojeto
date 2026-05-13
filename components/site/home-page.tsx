@@ -796,24 +796,23 @@ export default function HomePage() {
 
       <section
         id="top"
-        className="relative order-1 isolate flex min-h-[min(44vh,300px)] w-full min-w-0 flex-col overflow-visible px-5 pb-0 pt-0 sm:min-h-[min(42vh,320px)] sm:px-8 md:px-12 lg:min-h-[min(40vh,360px)]"
+        className="relative order-1 isolate flex min-h-[min(44vh,300px)] w-full min-w-0 flex-col overflow-visible bg-[#f0f4f2] px-5 pb-0 pt-0 sm:min-h-[min(42vh,320px)] sm:px-8 md:px-12 lg:min-h-[min(40vh,360px)]"
       >
         <HeroBackground />
-        {/* Esquerda: colado ao topo; direita: colado por baixo — abrem para o centro, sem competir com o título. */}
         <HeroTriangleArt
           emphasis
-          className="pointer-events-none absolute left-0 top-5 z-[2] h-[min(42vh,280px)] w-[min(46vw,300px)] max-h-[400px] sm:left-2 sm:top-7 sm:h-[min(44vh,300px)] sm:w-[min(42vw,320px)] md:left-4 md:top-8"
+          className="pointer-events-none absolute left-2 top-1/2 z-[2] h-[min(18rem,52vh)] w-[min(42vw,240px)] max-h-[280px] -translate-y-1/2 sm:left-4 sm:h-[min(19rem,55vh)] sm:max-h-[300px] sm:w-[min(38vw,260px)] md:left-6 md:w-[min(34vw,280px)]"
         />
         <HeroTriangleArt
           mirror
           emphasis
-          className="pointer-events-none absolute bottom-14 right-0 top-auto z-[2] h-[min(36vh,220px)] w-[min(48vw,280px)] max-h-[360px] sm:bottom-16 sm:right-2 sm:h-[min(38vh,240px)] sm:w-[min(44vw,300px)] md:bottom-20 md:right-5"
+          className="pointer-events-none absolute right-2 top-1/2 z-[2] h-[min(18rem,52vh)] w-[min(42vw,240px)] max-h-[280px] -translate-y-1/2 sm:right-4 sm:h-[min(19rem,55vh)] sm:max-h-[300px] sm:w-[min(38vw,260px)] md:right-6 md:w-[min(34vw,280px)]"
         />
 
         <div className="relative z-10 flex min-h-0 w-full max-w-full flex-1 flex-col overflow-visible">
           <div className="mx-auto grid min-h-0 w-full max-w-7xl flex-1 grid-rows-[1fr_auto] px-2">
             <div className="grid h-full min-h-0 w-full place-items-center px-2 py-2 text-center sm:py-3">
-              <div className="flex max-w-full flex-col items-center justify-center">
+              <div className="flex max-w-full translate-y-[50px] flex-col items-center justify-center">
                 <h1
                   className="m-0 max-w-[min(100%,36rem)] text-[clamp(1.85rem,7vw,4.5rem)] font-normal leading-[0.82] tracking-[-0.02em] [font-family:var(--font-signature)]"
                   aria-label={tHero("projectTitle")}
