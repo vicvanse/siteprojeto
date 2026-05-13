@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import { HeroBackground } from "@/components/site/hero-background";
 import { HeroTriangleArt } from "@/components/site/hero-triangle-art";
+import { VekonHeroMark } from "@/components/site/vekon-hero-mark";
 import { SiteSocialFooter } from "@/components/site/site-social-footer";
 import { TextPostCard } from "@/components/victor/text-post-card";
 import { PostsFeed } from "@/components/victor/posts-feed";
@@ -123,6 +124,20 @@ async function exitDocumentFullscreen(): Promise<void> {
   if (d.msExitFullscreen) {
     d.msExitFullscreen();
   }
+}
+
+/** Estrela de 8 pontas com raios ligeiramente irregulares (vetor, não imagem). */
+function SpinStar({ className }: { className?: string }) {
+  return (
+    <svg
+      className={`star-spin inline-block h-[0.74em] w-[0.74em] shrink-0 translate-y-[0.04em] align-middle text-black/25 ${className ?? ""}`}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden
+    >
+      <path d="M12,2.4 L13.38,8.67 L19.21,4.79 L16.07,10.32 L21.9,12 L15.51,13.45 L19.35,19.35 L13.61,15.88 L12,21.7 L10.66,15.23 L4.86,19.14 L7.84,13.72 L2.2,12 L8.4,10.51 L4.72,4.72 L10.43,8.21z" />
+    </svg>
+  );
 }
 
 const navToggleShape = "rounded-[12px]";
@@ -595,6 +610,7 @@ function RegistrosVideoThumbnail({
 
 export default function HomePage() {
   const siteLocale = useLocale() as AppLocale;
+  const tHero = useTranslations("hero");
   const tVictor = useTranslations("victor");
   const tClinica = useTranslations("clinica");
   const tReg = useTranslations("registros");
@@ -646,7 +662,7 @@ export default function HomePage() {
     e.preventDefault();
   };
   const registrosFeaturedRef = useRef<HTMLDivElement>(null);
-  /** Evita saltar para a secção victor no primeiro paint (mantém o cabeçalho visível). */
+  /** Evita saltar para a secção victor no primeiro paint (mantém o hero visível). */
   const skipInitialVictorScrollRef = useRef(true);
 
   function selectRegistrosFeatured(nextIdx: number) {
@@ -765,15 +781,9 @@ export default function HomePage() {
 
   return (
     <main className="relative flex min-h-screen flex-col overflow-x-visible overflow-y-visible bg-white font-sans text-black selection:bg-[#4a7c44] selection:text-white">
-      {/* Cabeçalho: navegação sticky sobre fundo liso com triângulos nas laterais (sm+). */}
-      <div id="top" className="relative order-0 isolate w-full shrink-0 overflow-hidden">
-        <HeroBackground />
-        <HeroTriangleArt className="pointer-events-none absolute left-0 top-1/2 z-0 hidden h-[88px] w-[min(42vw,168px)] -translate-y-1/2 sm:block sm:h-[104px] sm:w-[min(36vw,200px)] md:h-[118px] md:w-[min(32vw,220px)]" />
-        <HeroTriangleArt
-          mirror
-          className="pointer-events-none absolute right-0 top-1/2 z-0 hidden h-[88px] w-[min(42vw,168px)] -translate-y-1/2 sm:block sm:h-[104px] sm:w-[min(36vw,200px)] md:h-[118px] md:w-[min(32vw,220px)]"
-        />
-        <header className="relative z-10 shrink-0 bg-transparent">
+      {/* Só navegação sticky; o hero (mint + identidade) fica na secção seguinte, mais baixo que o antigo 70vh. */}
+      <div className="order-0 shrink-0 bg-white">
+        <header className="relative z-40 shrink-0">
           <div className="sticky top-0 z-40 border-b border-white/12 bg-black py-2.5 sm:hidden">
             <div className="mx-auto flex w-full max-w-[1600px] min-w-0 items-center justify-center px-3">
               <MainNavigation
@@ -785,13 +795,68 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="sticky top-0 z-40 hidden min-w-0 w-full flex-col gap-2 border-b border-black/[0.08] bg-transparent py-2 sm:flex sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-6 sm:gap-y-2 sm:py-2.5">
+          <div className="sticky top-0 z-40 hidden min-w-0 w-full flex-col gap-2 border-b border-black/[0.08] bg-white py-2 sm:flex sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-6 sm:gap-y-2 sm:py-2.5">
             <div className="mx-auto flex w-full max-w-[1600px] min-w-0 flex-col gap-4 px-5 sm:flex-row sm:flex-nowrap sm:items-center sm:justify-center sm:gap-x-6 sm:gap-y-0 sm:px-8 md:px-12">
               <MainNavigation openPanel={openPanel} pickPanel={pickPanel} />
             </div>
           </div>
         </header>
       </div>
+
+      <section
+        id="top"
+        className="relative order-1 isolate flex w-full min-w-0 flex-col overflow-visible bg-[#f0f4f2] px-5 pb-4 pt-0 max-sm:pb-4 sm:px-8 sm:pb-5 md:px-12 lg:min-h-0 lg:pb-5 min-h-[min(40vh,280px)] sm:min-h-[min(38vh,300px)] lg:min-h-[min(34vh,340px)]"
+      >
+        <HeroBackground />
+        <HeroTriangleArt className="pointer-events-none absolute left-0 top-3 z-0 -ml-5 h-[min(20vh,132px)] w-[min(72vw,200px)] sm:-ml-8 sm:top-4 sm:h-[min(24vh,168px)] sm:w-[min(50vw,240px)] md:-ml-12 md:h-[min(26vh,200px)] md:w-[min(42vw,280px)] lg:top-5" />
+        <HeroTriangleArt
+          mirror
+          className="pointer-events-none absolute right-0 top-3 z-0 -mr-5 h-[min(20vh,132px)] w-[min(72vw,200px)] sm:-mr-8 sm:top-4 sm:h-[min(24vh,168px)] sm:w-[min(50vw,240px)] md:-mr-12 md:h-[min(26vh,200px)] md:w-[min(42vw,280px)] lg:top-5"
+        />
+
+        <div className="relative z-10 flex w-full min-w-0 max-w-full flex-col overflow-visible">
+          <div className="relative z-10 mx-auto w-full max-w-7xl min-h-[min(26vh,11rem)] px-2 sm:min-h-[min(28vh,12.5rem)] lg:min-h-[min(30vh,13.5rem)]">
+            <div className="flex min-h-[inherit] flex-col items-center justify-center px-2 pb-14 pt-5 text-center sm:pb-16 sm:pt-6">
+              <h1 className="m-0 max-w-[min(100%,34rem)] text-[clamp(1.85rem,7vw,4.5rem)] font-normal leading-[0.82] tracking-[-0.02em] text-black [font-family:var(--font-signature)]">
+                {tHero("projectTitle")}
+              </h1>
+              {INSTAGRAM_URL ? (
+                <footer className="mt-4 flex w-full justify-center sm:mt-5">
+                  <a
+                    href={INSTAGRAM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center rounded-full border border-[#356040]/25 bg-white/55 px-4 py-1.5 text-[11px] uppercase tracking-[0.26em] text-[#356040] backdrop-blur-sm transition hover:bg-white/75 sm:px-5 sm:py-2 sm:text-[12px]"
+                  >
+                    {INSTAGRAM_LINK_LABEL}
+                  </a>
+                </footer>
+              ) : null}
+            </div>
+
+            <div
+              className="pointer-events-none absolute bottom-0 left-0 z-20 origin-bottom-left scale-[0.38] pl-0.5 pb-0.5 sm:scale-[0.45] sm:pl-1 sm:pb-1 md:scale-50 md:pl-2 md:pb-2"
+              aria-hidden
+            >
+              <div className="m-0 text-[clamp(2.5rem,10vw,7rem)] font-sans font-semibold leading-[0.88] tracking-[-0.06em] text-black">
+                <span className="flex flex-col items-end gap-0">
+                  <span className="flex items-baseline gap-[0.14em] text-black/18">
+                    <SpinStar className="shrink-0" />
+                    <span>{tHero("nameFirst")}</span>
+                  </span>
+                  <span className="-mt-[0.18em] block text-black">
+                    {tHero("nameLast")}
+                  </span>
+                </span>
+              </div>
+            </div>
+
+            <div className="absolute bottom-0 right-0 z-20 pr-0.5 pb-0.5 sm:pr-1 sm:pb-1 md:pr-2 md:pb-2">
+              <VekonHeroMark interactive={false} sizePx={136} className="mx-0" />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {openPanel === "victor" ? (
         <section
