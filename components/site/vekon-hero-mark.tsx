@@ -75,12 +75,15 @@ export interface VekonHeroMarkProps {
   sizePx?: number;
   className?: string;
   onActivate?: () => void;
+  /** Se false, marca puramente decorativa (sem clique nem foco). */
+  interactive?: boolean;
 }
 
 export function VekonHeroMark({
   sizePx = MARK_PX,
   className = "",
   onActivate,
+  interactive = true,
 }: VekonHeroMarkProps) {
   const s = sizePx;
   const inner = Math.round((18 / 420) * s);
@@ -89,19 +92,17 @@ export function VekonHeroMark({
   const innerStyle = { top: inner, left: inner, right: inner, bottom: inner };
   const livingStyle = { top: living, left: living, right: living, bottom: living };
 
-  return (
-    <button
-      type="button"
-      onClick={onActivate}
-      aria-label="Abrir Vekon"
-      className={`${styles.root} mx-auto block cursor-pointer border-0 bg-transparent p-0 outline-none transition-opacity hover:opacity-95 focus-visible:ring-2 focus-visible:ring-[#751027]/35 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f4f2f1] ${className}`}
-      style={{
-        width: s,
-        height: s,
-        maxWidth: "min(92vw, 240px)",
-        maxHeight: "min(92vw, 240px)",
-      }}
-    >
+  const boxStyle = {
+    width: s,
+    height: s,
+    maxWidth: "min(92vw, 240px)",
+    maxHeight: "min(92vw, 240px)",
+  } as const;
+
+  const shellClass = `${styles.root} mx-auto block border-0 bg-transparent p-0 ${className}`;
+
+  const rings = (
+    <>
       <div className={`absolute inset-0 rounded-full ${styles.ringOuter}`} />
       <div
         className={`absolute rounded-full ${styles.ringInner}`}
@@ -113,6 +114,31 @@ export function VekonHeroMark({
       <div className="absolute inset-0 flex flex-col items-center justify-center px-3 text-center">
         <DottedWordmarkHero text="VEKON" />
       </div>
+    </>
+  );
+
+  if (!interactive) {
+    return (
+      <div
+        role="presentation"
+        aria-hidden
+        className={`${shellClass} cursor-default`}
+        style={boxStyle}
+      >
+        {rings}
+      </div>
+    );
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={onActivate}
+      aria-label="Abrir Vekon"
+      className={`${shellClass} cursor-pointer outline-none transition-opacity hover:opacity-95 focus-visible:ring-2 focus-visible:ring-[#356040]/35 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0f4f2]`}
+      style={boxStyle}
+    >
+      {rings}
     </button>
   );
 }

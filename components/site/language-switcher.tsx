@@ -23,7 +23,7 @@ const LANG_FOOTER_LABEL: Record<AppLocale, string> = {
 
 const linkBaseClass =
   "shrink-0 font-sans text-[9px] tracking-[0.08em] transition-colors sm:text-[10px] sm:tracking-[0.1em] " +
-  "hover:text-[#791126] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#751027]/25 focus-visible:ring-offset-2 " +
+  "hover:text-[#4a7c44] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#356040]/25 focus-visible:ring-offset-2 " +
   "max-sm:hover:text-white/90 max-sm:focus-visible:ring-white/30 max-sm:focus-visible:ring-offset-black";
 
 export function LanguageSwitcher() {

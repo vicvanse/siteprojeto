@@ -9,7 +9,7 @@ export const postCardMetaTimeClass =
   "text-[12px] tabular-nums text-black/[0.42]";
 
 export const postCardMetaTagClass =
-  "inline-flex rounded-full bg-[#791126]/10 px-2.5 py-0.5 text-[12px] font-medium tracking-[0.04em] text-[#791126]";
+  "inline-flex rounded-full bg-[#4a7c44]/10 px-2.5 py-0.5 text-[12px] font-medium tracking-[0.04em] text-[#4a7c44]";
 
 export const postCardBodyParaClass =
   "text-[14px] font-normal leading-[1.65] text-neutral-800 [text-wrap:pretty]";

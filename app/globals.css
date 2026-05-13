@@ -127,6 +127,11 @@ html {
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Marca — musgo / floresta / água (substitui vinho no UI) */
+  --site-accent: #4a7c44;
+  --site-accent-border: #356040;
+  --site-accent-deep: #2d4c3b;
+  --site-canvas: #f0f4f2;
 }
 
 @theme inline {

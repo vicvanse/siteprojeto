@@ -5,10 +5,15 @@
   },
   "nav": {
     "main": "Main navigation",
-    "victor": "victor",
-    "clinica": "클리닉",
+    "projeto": "프로젝트",
+    "servicos": "서비스",
     "registros": "기록",
-    "vekon": "vekon"
+    "nos": "우리"
+  },
+  "nosSection": {
+    "label": "우리",
+    "title": "소개",
+    "intro": "콜렉티브와 프로젝트 목표에 대한 내용을 이 페이지에 준비 중입니다."
   },
   "time": {
     "local": "local time"
@@ -104,6 +109,7 @@
     "closePanel": "Close panel"
   },
   "hero": {
+    "projectTitle": "프로젝트 X",
     "globeHint": "Hover over the globe to see the animation",
     "analyst": "systems analyst",
     "nameFirst": "victor",

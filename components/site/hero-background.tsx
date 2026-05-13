@@ -8,7 +8,7 @@ export function HeroBackground({ className = "" }: HeroBackgroundProps) {
       aria-hidden
       className={`pointer-events-none absolute inset-0 overflow-hidden ${className}`}
     >
-      <div className="absolute inset-0 bg-[#f4f2f1]" />
+      <div className="absolute inset-0 bg-[#f0f4f2]" />
 
       <div
         className="absolute inset-0 opacity-[0.34]"
@@ -36,9 +36,9 @@ export function HeroBackground({ className = "" }: HeroBackgroundProps) {
         className="absolute inset-0"
         style={{
           background: `
-            radial-gradient(circle at 82% 28%, rgba(121, 17, 38, 0.09), transparent 22%),
-            radial-gradient(circle at 82% 72%, rgba(121, 17, 38, 0.08), transparent 24%),
-            radial-gradient(circle at 68% 38%, rgba(121, 17, 38, 0.04), transparent 18%),
+            radial-gradient(circle at 82% 28%, rgba(74, 124, 68, 0.09), transparent 22%),
+            radial-gradient(circle at 82% 72%, rgba(74, 124, 68, 0.08), transparent 24%),
+            radial-gradient(circle at 68% 38%, rgba(74, 124, 68, 0.04), transparent 18%),
             radial-gradient(circle at 30% 45%, rgba(0, 0, 0, 0.02), transparent 18%)
           `,
         }}
@@ -48,7 +48,7 @@ export function HeroBackground({ className = "" }: HeroBackgroundProps) {
         className="absolute inset-y-0 right-0 w-[46%] opacity-80"
         style={{
           background:
-            "linear-gradient(90deg, rgba(244,242,241,0) 0%, rgba(121,17,38,0.015) 30%, rgba(121,17,38,0.03) 60%, rgba(121,17,38,0.045) 100%)",
+            "linear-gradient(90deg, rgba(240,244,242,0) 0%, rgba(74,124,68,0.015) 30%, rgba(74,124,68,0.03) 60%, rgba(74,124,68,0.045) 100%)",
         }}
       />
     </div>

@@ -197,7 +197,7 @@ export function PostsFeed({
               id={`feed-cat-${feedId}`}
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              className="h-9 min-w-0 w-full flex-1 rounded-full border border-black/10 bg-white px-2.5 py-1.5 text-[12px] leading-tight text-neutral-800 shadow-sm outline-none transition focus:border-[#791126]/40 focus:ring-2 focus:ring-[#791126]/15 sm:h-10 sm:min-w-[10rem] sm:flex-initial sm:px-3 sm:py-2 sm:text-[13px] sm:leading-normal"
+              className="h-9 min-w-0 w-full flex-1 rounded-full border border-black/10 bg-white px-2.5 py-1.5 text-[12px] leading-tight text-neutral-800 shadow-sm outline-none transition focus:border-[#4a7c44]/40 focus:ring-2 focus:ring-[#4a7c44]/15 sm:h-10 sm:min-w-[10rem] sm:flex-initial sm:px-3 sm:py-2 sm:text-[13px] sm:leading-normal"
             >
               <option value="todos">{tFeed("filterAll")}</option>
               {categories.map((c) => (
@@ -226,7 +226,7 @@ export function PostsFeed({
               onChange={(e) => setQuery(e.target.value)}
               placeholder={tFeed("searchPlaceholder")}
               autoComplete="off"
-              className="h-9 w-full rounded-full border border-black/10 bg-white py-2 pl-9 pr-2.5 text-[12px] leading-tight text-neutral-800 shadow-sm outline-none transition placeholder:text-black/35 focus:border-[#791126]/40 focus:ring-2 focus:ring-[#791126]/15 sm:h-10 sm:pl-10 sm:pr-4 sm:text-[13px] sm:leading-normal"
+              className="h-9 w-full rounded-full border border-black/10 bg-white py-2 pl-9 pr-2.5 text-[12px] leading-tight text-neutral-800 shadow-sm outline-none transition placeholder:text-black/35 focus:border-[#4a7c44]/40 focus:ring-2 focus:ring-[#4a7c44]/15 sm:h-10 sm:pl-10 sm:pr-4 sm:text-[13px] sm:leading-normal"
             />
           </div>
         </div>
@@ -251,8 +251,8 @@ export function PostsFeed({
                 onClick={() => handleUtilBucketChange(kind)}
                 className={
                   utilBucket === kind
-                    ? "-mb-px border-0 border-b-2 border-[#791126] bg-transparent pb-2.5 font-semibold text-[#791126] outline-none transition-colors focus-visible:ring-2 focus-visible:ring-[#751027]/35 focus-visible:ring-offset-2"
-                    : "-mb-px border-0 border-b-2 border-transparent bg-transparent pb-2.5 font-normal outline-none transition-colors hover:text-black/60 focus-visible:ring-2 focus-visible:ring-[#751027]/35 focus-visible:ring-offset-2"
+                    ? "-mb-px border-0 border-b-2 border-[#4a7c44] bg-transparent pb-2.5 font-semibold text-[#4a7c44] outline-none transition-colors focus-visible:ring-2 focus-visible:ring-[#356040]/35 focus-visible:ring-offset-2"
+                    : "-mb-px border-0 border-b-2 border-transparent bg-transparent pb-2.5 font-normal outline-none transition-colors hover:text-black/60 focus-visible:ring-2 focus-visible:ring-[#356040]/35 focus-visible:ring-offset-2"
                 }
               >
                 {label}
@@ -291,8 +291,8 @@ export function PostsFeed({
               onClick={() => handleIncomumBucketChange(kind)}
               className={
                 incomumBucket === kind
-                  ? "-mb-px border-0 border-b-2 border-[#791126] bg-transparent pb-2.5 font-semibold text-[#791126] outline-none transition-colors focus-visible:ring-2 focus-visible:ring-[#751027]/35 focus-visible:ring-offset-2"
-                  : "-mb-px border-0 border-b-2 border-transparent bg-transparent pb-2.5 font-normal outline-none transition-colors hover:text-black/60 focus-visible:ring-2 focus-visible:ring-[#751027]/35 focus-visible:ring-offset-2"
+                  ? "-mb-px border-0 border-b-2 border-[#4a7c44] bg-transparent pb-2.5 font-semibold text-[#4a7c44] outline-none transition-colors focus-visible:ring-2 focus-visible:ring-[#356040]/35 focus-visible:ring-offset-2"
+                  : "-mb-px border-0 border-b-2 border-transparent bg-transparent pb-2.5 font-normal outline-none transition-colors hover:text-black/60 focus-visible:ring-2 focus-visible:ring-[#356040]/35 focus-visible:ring-offset-2"
               }
             >
               {tIncomum(
@@ -344,7 +344,7 @@ export function PostsFeed({
           {showMobileMoreBar ? (
             <button
               type="button"
-              className="md:hidden mt-6 w-full rounded-lg border border-[#791126] bg-[#791126] py-4 text-center font-mono text-[10px] uppercase tracking-[0.28em] text-white shadow-sm transition hover:border-[#6a0f20] hover:bg-[#6a0f20] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#751027]/50 focus-visible:ring-offset-2"
+              className="md:hidden mt-6 w-full rounded-lg border border-[#4a7c44] bg-[#4a7c44] py-4 text-center font-mono text-[10px] uppercase tracking-[0.28em] text-white shadow-sm transition hover:border-[#2d4c3b] hover:bg-[#2d4c3b] hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#356040]/50 focus-visible:ring-offset-2"
               onClick={() => setMobileExpanded(true)}
               aria-expanded={false}
               aria-label={tFeed("viewMoreAria", {

@@ -5,10 +5,15 @@
   },
   "nav": {
     "main": "Main navigation",
-    "victor": "victor",
-    "clinica": "clinica",
+    "projeto": "Progetto",
+    "servicos": "Servizi",
     "registros": "archivio",
-    "vekon": "vekon"
+    "nos": "Noi"
+  },
+  "nosSection": {
+    "label": "Noi",
+    "title": "Chi siamo",
+    "intro": "Stiamo preparando questa pagina con maggiori informazioni sul collettivo e sugli obiettivi del progetto."
   },
   "time": {
     "local": "local time"
@@ -104,6 +109,7 @@
     "closePanel": "Close panel"
   },
   "hero": {
+    "projectTitle": "Progetto X",
     "globeHint": "Hover over the globe to see the animation",
     "analyst": "systems analyst",
     "nameFirst": "victor",

@@ -5,10 +5,15 @@
   },
   "nav": {
     "main": "Main navigation",
-    "victor": "victor",
-    "clinica": "クリニック",
+    "projeto": "プロジェクト",
+    "servicos": "サービス",
     "registros": "記録",
-    "vekon": "vekon"
+    "nos": "私たち"
+  },
+  "nosSection": {
+    "label": "私たち",
+    "title": "私たちについて",
+    "intro": "コレクティブとプロジェクトの目的について、こちらのページを準備しています。"
   },
   "time": {
     "local": "local time"
@@ -104,6 +109,7 @@
     "closePanel": "Close panel"
   },
   "hero": {
+    "projectTitle": "プロジェクトX",
     "globeHint": "Hover over the globe to see the animation",
     "analyst": "systems analyst",
     "nameFirst": "victor",

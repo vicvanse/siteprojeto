@@ -63,7 +63,7 @@ export function TextPostCard({ post, categoryLabel }: TextPostCardProps) {
     return (
       <Link
         href={post.feedCardHref}
-        className={`group block rounded-lg no-underline outline-none transition-shadow duration-200 hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] focus-visible:ring-2 focus-visible:ring-[#751027]/35 focus-visible:ring-offset-2`}
+        className={`group block rounded-lg no-underline outline-none transition-shadow duration-200 hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)] focus-visible:ring-2 focus-visible:ring-[#356040]/35 focus-visible:ring-offset-2`}
       >
         <article className={`${cardArticleClass} group-hover:border-black/[0.1]`}>
           {inner}

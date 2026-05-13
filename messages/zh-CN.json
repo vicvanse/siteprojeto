@@ -5,10 +5,15 @@
   },
   "nav": {
     "main": "Main navigation",
-    "victor": "victor",
-    "clinica": "咨询",
+    "projeto": "项目",
+    "servicos": "服务",
     "registros": "档案",
-    "vekon": "vekon"
+    "nos": "我们"
+  },
+  "nosSection": {
+    "label": "我们",
+    "title": "关于我们",
+    "intro": "我们正在准备本页，以介绍团队与项目目标。"
   },
   "time": {
     "local": "local time"
@@ -104,6 +109,7 @@
     "closePanel": "Close panel"
   },
   "hero": {
+    "projectTitle": "项目 X",
     "globeHint": "Hover over the globe to see the animation",
     "analyst": "systems analyst",
     "nameFirst": "victor",

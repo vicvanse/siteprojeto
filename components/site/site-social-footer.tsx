@@ -13,7 +13,7 @@ import {
 } from "@/lib/site-constants";
 
 const socialFooterLinkClass =
-  "inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white text-black/65 shadow-sm transition hover:border-[#791126]/35 hover:text-[#791126] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#751027]/35 focus-visible:ring-offset-2 " +
+  "inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white text-black/65 shadow-sm transition hover:border-[#4a7c44]/35 hover:text-[#4a7c44] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#356040]/35 focus-visible:ring-offset-2 " +
   "max-sm:border-white/45 max-sm:bg-transparent max-sm:text-white max-sm:shadow-none max-sm:hover:border-white max-sm:hover:bg-white/10 max-sm:hover:text-white max-sm:focus-visible:ring-white/40 max-sm:focus-visible:ring-offset-2 max-sm:focus-visible:ring-offset-black";
 
 function InstagramGlyph({ className }: { className?: string }) {
@@ -103,7 +103,7 @@ export function SiteSocialFooter({
           <button
             type="button"
             onClick={copyEmail}
-            className={`${socialFooterLinkClass} ${emailCopied ? "border-[#791126]/40 text-[#791126] max-sm:border-white max-sm:bg-white/15 max-sm:text-white" : ""}`}
+            className={`${socialFooterLinkClass} ${emailCopied ? "border-[#4a7c44]/40 text-[#4a7c44] max-sm:border-white max-sm:bg-white/15 max-sm:text-white" : ""}`}
             aria-label={
               emailCopied
                 ? t("emailCopied", { email: CONTACT_EMAIL })

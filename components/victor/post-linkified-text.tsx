@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 const linkClassName =
-  "font-medium text-[#791126] underline decoration-[#791126]/25 underline-offset-2 break-all [overflow-wrap:anywhere] transition hover:decoration-[#791126]";
+  "font-medium text-[#4a7c44] underline decoration-[#4a7c44]/25 underline-offset-2 break-all [overflow-wrap:anywhere] transition hover:decoration-[#4a7c44]";
 
 /** Remove pontuação final que frequentemente cola ao URL na frase. */
 function trimUrlForHref(raw: string): string {

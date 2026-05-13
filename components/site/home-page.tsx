@@ -14,17 +14,14 @@ import { useSearchParams } from "next/navigation";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Globe,
   Maximize2,
   Minimize2,
   Moon,
   Play,
-  Sparkles,
   X,
 } from "lucide-react";
-import { DigitalWineArtwork } from "@/components/site/digital-wine-artwork";
 import { HeroBackground } from "@/components/site/hero-background";
-import { VekonHeaderMark } from "@/components/site/vekon-header-mark";
+import { HeroTriangleArt } from "@/components/site/hero-triangle-art";
 import { VekonHeroMark } from "@/components/site/vekon-hero-mark";
 import { SiteSocialFooter } from "@/components/site/site-social-footer";
 import { PostsFeed } from "@/components/victor/posts-feed";
@@ -32,16 +29,12 @@ import { VictorRespostasPanel } from "@/components/victor/victor-respostas-panel
 import { VictorSugestoesPanel } from "@/components/victor/victor-sugestoes-panel";
 import { getPostsForSection } from "@/data/victor-notes-posts";
 import {
-  GOODREADS_URL,
   INSTAGRAM_URL,
   INSTAGRAM_LINK_LABEL,
 } from "@/lib/site-constants";
 import type Player from "@vimeo/player";
 
 const VEKON_URL = "https://pixellife.vercel.app/auth/login";
-
-/** Retrato no painel «victor» da navegação (public/victor-intro.png). */
-const REGISTROS_INTRO_IMAGE = "/victor-intro.png";
 
 /** Vídeos em Registros: o primeiro em destaque; os restantes em miniatura (clique promove ao bloco grande). */
 interface RegistrosVideoEntry {
@@ -66,15 +59,6 @@ const REGISTROS_VIDEOS: RegistrosVideoEntry[] = [
     darkBand: false,
   },
 ];
-
-const HOVER_GIFS = ["/media/hover/corno.gif"] as const;
-
-/** Ao lado do Vekon: preenche o quadro sem letterbox (`cover` em vez de `contain`). */
-function globeHoverGifClass(): string {
-  return (
-    "h-[min(52vh,260px)] w-[min(46vw,300px)] max-w-[min(92vw,300px)] rounded-sm object-cover object-center shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-[opacity,transform] duration-500 ease-out sm:h-[min(58vh,280px)] sm:w-[min(40vw,320px)] sm:max-w-[320px]"
-  );
-}
 
 function getFullscreenElement(): Element | null {
   const d = document as Document & {
@@ -139,48 +123,28 @@ async function exitDocumentFullscreen(): Promise<void> {
   }
 }
 
-function useLocalTime() {
-  const [time, setTime] = useState("—");
-  const locale = useLocale();
-
-  useEffect(() => {
-    const formatter = new Intl.DateTimeFormat(locale, {
-      hour: "2-digit",
-      minute: "2-digit",
-      hour12: false,
-    });
-    const tick = () => setTime(formatter.format(new Date()));
-    tick();
-    const id = window.setInterval(tick, 60_000);
-    return () => window.clearInterval(id);
-  }, [locale]);
-
-  return time;
-}
-
 const navToggleShape = "rounded-[12px]";
 
-/** Cabeçalho (victor / clínica / registros / vekon): só em mobile, canto superior direito e inferior esquerdo; a partir de `sm`, rectângulos. */
-const navToggleShapeHeader =
-  "rounded-tr-[12px] rounded-bl-[12px] sm:rounded-none";
+/** Cabeçalho (projeto / registros / serviços / nós): cantos arredondados em todos os tamanhos. */
+const navToggleShapeHeader = navToggleShape;
 
 const navToggleBase =
   "group inline-flex min-h-[52px] w-auto min-w-[100px] shrink-0 flex-col items-center justify-center border px-2.5 py-1.5 text-[10px] uppercase leading-tight tracking-[0.18em] transition-colors duration-200 outline-none " +
-  "focus-visible:ring-2 focus-visible:ring-[#751027]/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white";
+  "focus-visible:ring-2 focus-visible:ring-[#356040]/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white";
 
 /** Blur só no estado inativo: backdrop-filter + fundo sólido no ativo quebra o texto em alguns browsers (Chrome/Windows). */
 const navToggleIdle =
-  "border-[#751027]/50 bg-white/72 backdrop-blur-sm text-[#791126] hover:border-[#751027] hover:bg-[#791126]/10 hover:text-[#791126]";
+  "border-[#356040]/50 bg-white/72 backdrop-blur-sm text-[#4a7c44] hover:border-[#356040] hover:bg-[#4a7c44]/10 hover:text-[#4a7c44]";
 
 const navToggleActive =
-  "border-[#751027] bg-[#791126] text-white shadow-[0_14px_28px_rgba(121,17,38,0.18)] [backdrop-filter:none] [-webkit-backdrop-filter:none]";
+  "border-[#356040] bg-[#4a7c44] text-white shadow-[0_14px_28px_rgba(74,124,68,0.18)] [backdrop-filter:none] [-webkit-backdrop-filter:none]";
 
 /** Barra de navegação escura (só mobile): contorno e texto brancos. */
 const navToggleBaseMobile =
   "group inline-flex min-h-[52px] w-auto min-w-[100px] shrink-0 flex-col items-center justify-center border px-2.5 py-1.5 text-[10px] uppercase leading-tight tracking-[0.18em] transition-colors duration-200 outline-none " +
   "focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-black";
 
-/** Botões mais estreitos na barra preta mobile (com ícone Vekon à esquerda). */
+/** Botões mais estreitos na barra preta mobile. */
 const navToggleBaseMobileCompact =
   "group inline-flex min-h-[44px] w-auto min-w-[72px] shrink-0 flex-col items-center justify-center border px-1.5 py-1 text-[9px] uppercase leading-tight tracking-[0.15em] transition-colors duration-200 outline-none " +
   "focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-black";
@@ -191,24 +155,20 @@ const navToggleIdleMobile =
 const navToggleActiveMobile =
   "border-white bg-white text-black shadow-[0_14px_28px_rgba(0,0,0,0.28)] [backdrop-filter:none] [-webkit-backdrop-filter:none]";
 
-type OpenPanel = "victor" | "clinica" | "registros";
+type OpenPanel = "victor" | "clinica" | "registros" | "nos";
 
 interface MainNavigationProps {
   openPanel: OpenPanel;
-  vekonOpen: boolean;
-  pickPanel: (next: "victor" | "clinica" | "registros") => void;
-  setVekonOpen: (open: boolean) => void;
+  pickPanel: (next: OpenPanel) => void;
   /** `mobileDark`: fundo preto no header (max-sm). */
   variant?: "light" | "mobileDark";
-  /** Barra só mobile: botões menores (ícone Vekon à esquerda no header). */
+  /** Barra só mobile: botões mais compactos. */
   compactHeader?: boolean;
 }
 
 function MainNavigation({
   openPanel,
-  vekonOpen,
   pickPanel,
-  setVekonOpen,
   variant = "light",
   compactHeader = false,
 }: MainNavigationProps) {
@@ -226,10 +186,7 @@ function MainNavigation({
       ? "header-arrow-mobile-nudge mt-0.5 text-sm leading-none"
       : "mt-0.5 text-base leading-none sm:max-lg:motion-safe:animate-bounce";
 
-  const navJustifyClass =
-    compactHeader && variant === "mobileDark"
-      ? "w-full justify-center"
-      : "justify-center sm:justify-start";
+  const navJustifyClass = "w-full justify-center";
 
   return (
     <nav
@@ -239,19 +196,9 @@ function MainNavigation({
       <button
         type="button"
         onClick={() => pickPanel("victor")}
-        className={`${tb} ${navToggleShapeHeader} ${openPanel === "victor" ? ta : ti} ${!vekonOpen && openPanel === "victor" ? "max-sm:hidden" : ""}`}
+        className={`${tb} ${navToggleShapeHeader} ${openPanel === "victor" ? ta : ti}`}
       >
-        <span className="text-center">{t("victor")}</span>
-        <span className={arrowClass} aria-hidden>
-          ↓
-        </span>
-      </button>
-      <button
-        type="button"
-        onClick={() => pickPanel("clinica")}
-        className={`${tb} ${navToggleShapeHeader} ${openPanel === "clinica" ? ta : ti} ${!vekonOpen && openPanel === "clinica" ? "max-sm:hidden" : ""}`}
-      >
-        <span className="text-center">{t("clinica")}</span>
+        <span className="text-center">{t("projeto")}</span>
         <span className={arrowClass} aria-hidden>
           ↓
         </span>
@@ -259,7 +206,7 @@ function MainNavigation({
       <button
         type="button"
         onClick={() => pickPanel("registros")}
-        className={`${tb} ${navToggleShapeHeader} ${openPanel === "registros" ? ta : ti} ${!vekonOpen && openPanel === "registros" ? "max-sm:hidden" : ""}`}
+        className={`${tb} ${navToggleShapeHeader} ${openPanel === "registros" ? ta : ti}`}
       >
         <span className="min-w-0 text-center">{t("registros")}</span>
         <span className={arrowClass} aria-hidden>
@@ -268,69 +215,25 @@ function MainNavigation({
       </button>
       <button
         type="button"
-        onClick={() => setVekonOpen(true)}
-        className={`${tb} ${navToggleShapeHeader} ${vekonOpen ? ta : ti} ${vekonOpen ? "max-sm:hidden" : ""}`}
+        onClick={() => pickPanel("clinica")}
+        className={`${tb} ${navToggleShapeHeader} ${openPanel === "clinica" ? ta : ti}`}
       >
-        <span className="text-center">{t("vekon")}</span>
+        <span className="text-center">{t("servicos")}</span>
+        <span className={arrowClass} aria-hidden>
+          ↓
+        </span>
+      </button>
+      <button
+        type="button"
+        onClick={() => pickPanel("nos")}
+        className={`${tb} ${navToggleShapeHeader} ${openPanel === "nos" ? ta : ti}`}
+      >
+        <span className="text-center">{t("nos")}</span>
         <span className={arrowClass} aria-hidden>
           ↓
         </span>
       </button>
     </nav>
-  );
-}
-
-function LocalTimeBlock({ localTime }: { localTime: string }) {
-  const t = useTranslations("time");
-  return (
-    <div
-      className="flex w-full shrink-0 flex-col items-center gap-0.5 border-t border-black/[0.08] pt-3 text-center sm:w-auto sm:items-end sm:border-t-0 sm:pt-0 sm:text-right"
-      aria-live="polite"
-    >
-      <span className="block w-full text-[9px] font-medium uppercase tracking-[0.32em] text-black/50">
-        {t("local")}
-      </span>
-      <span className="block w-full font-mono text-[12px] font-semibold tabular-nums tracking-[0.04em] text-black/80">
-        {localTime}
-      </span>
-    </div>
-  );
-}
-
-/** Marca Vekon + GIF do globo (incl. mobile quando o globo do hero está ativo). */
-function HeroVekonCluster({
-  nameHover,
-  hoverMediaIdx,
-  globeHoverGifSrc,
-  onOpenVekon,
-}: {
-  nameHover: boolean;
-  hoverMediaIdx: number;
-  globeHoverGifSrc: string | null;
-  onOpenVekon: () => void;
-}) {
-  return (
-    <div className="relative w-fit shrink-0">
-      <VekonHeroMark onActivate={onOpenVekon} />
-      <div
-        className={`pointer-events-none absolute left-full top-1/2 z-30 ml-3 block w-[min(46vw,300px)] max-w-[min(92vw,300px)] -translate-y-1/2 transition-all duration-500 ease-out sm:ml-4 sm:max-w-[320px] ${
-          nameHover && hoverMediaIdx >= 1
-            ? "translate-x-0 scale-100 opacity-100"
-            : "pointer-events-none translate-x-2 scale-95 opacity-0"
-        }`}
-        aria-hidden
-      >
-        {globeHoverGifSrc ? (
-          /* eslint-disable-next-line @next/next/no-img-element */
-          <img
-            key={globeHoverGifSrc}
-            src={globeHoverGifSrc}
-            alt=""
-            className={globeHoverGifClass()}
-          />
-        ) : null}
-      </div>
-    </div>
   );
 }
 
@@ -708,13 +611,9 @@ export default function HomePage() {
   const tVictor = useTranslations("victor");
   const tClinica = useTranslations("clinica");
   const tReg = useTranslations("registros");
+  const tNos = useTranslations("nosSection");
   const tVekon = useTranslations("vekon");
-  const tProfile = useTranslations("profile");
   const [vekonOpen, setVekonOpen] = useState(false);
-  const [nameHover, setNameHover] = useState(false);
-  /** 0 = sem mídia ao lado do nome; 1 = GIF (hover do globo). */
-  const [hoverMediaIdx, setHoverMediaIdx] = useState(0);
-  const localTime = useLocalTime();
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const router = useRouter();
@@ -723,7 +622,9 @@ export default function HomePage() {
       ? "clinica"
       : pathname === "/registros"
         ? "registros"
-        : "victor";
+        : pathname === "/nos"
+          ? "nos"
+          : "victor";
 
   const isVictorSugestoesView = pathname === "/victor/sugestoes";
   const isVictorRespostasView = pathname === "/victor/respostas";
@@ -795,7 +696,12 @@ export default function HomePage() {
   /** Migra URLs antigas com hash (#clinica, etc.) para rotas sem `#`. */
   useEffect(() => {
     const raw = window.location.hash.slice(1).toLowerCase();
-    if (raw !== "clinica" && raw !== "registros" && raw !== "victor") {
+    if (
+      raw !== "clinica" &&
+      raw !== "registros" &&
+      raw !== "victor" &&
+      raw !== "nos"
+    ) {
       return;
     }
     const path = raw === "victor" ? "/" : `/${raw}`;
@@ -858,13 +764,8 @@ export default function HomePage() {
     };
   }, [vekonOpen]);
 
-  const globeHoverGifSrc =
-    hoverMediaIdx >= 1
-      ? HOVER_GIFS[Math.min(hoverMediaIdx - 1, HOVER_GIFS.length - 1)]
-      : null;
-
-  /** Victor é sempre o estado “em repouso”; clínica/registros ao desmarcar voltam a victor. */
-  function pickPanel(next: "victor" | "clinica" | "registros") {
+  /** Projeto (/) é o estado em repouso; ao desmarcar a secção activa volta ao início. */
+  function pickPanel(next: OpenPanel) {
     if (next === "victor") {
       router.push("/");
       return;
@@ -877,86 +778,63 @@ export default function HomePage() {
   }
 
   return (
-    <main className="relative flex min-h-screen flex-col overflow-x-visible overflow-y-visible bg-white font-sans text-black selection:bg-[#791126] selection:text-white">
+    <main className="relative flex min-h-screen flex-col overflow-x-visible overflow-y-visible bg-white font-sans text-black selection:bg-[#4a7c44] selection:text-white">
       {/* Mobile (< lg): secção activa antes do hero; desktop: header → hero → secção. */}
-      {/* Mobile: barra única sticky (só nav). Desktop: nav + hora na mesma barra sticky. */}
+      {/* Mobile: barra única sticky (só nav). Desktop: barra sticky só com nav centrada. */}
       <header className="order-0 shrink-0 bg-white">
         <div className="sticky top-0 z-40 border-b border-white/12 bg-black py-2.5 shadow-[0_1px_0_rgba(255,255,255,0.06)] sm:hidden">
-          <div className="mx-auto grid w-full max-w-[1600px] min-w-0 grid-cols-[auto_1fr_auto] items-center gap-x-2 px-3">
-            <div className="flex shrink-0 justify-start">
-              <VekonHeaderMark
-                active={vekonOpen}
-                onActivate={() => setVekonOpen(true)}
-              />
-            </div>
-            <div className="flex min-w-0 justify-center">
-              <MainNavigation
-                compactHeader
-                variant="mobileDark"
-                openPanel={openPanel}
-                vekonOpen={vekonOpen}
-                pickPanel={pickPanel}
-                setVekonOpen={setVekonOpen}
-              />
-            </div>
-            <div className="h-10 w-10 shrink-0" aria-hidden />
+          <div className="mx-auto flex w-full max-w-[1600px] min-w-0 items-center justify-center px-3">
+            <MainNavigation
+              compactHeader
+              variant="mobileDark"
+              openPanel={openPanel}
+              pickPanel={pickPanel}
+            />
           </div>
         </div>
 
-        <div className="sticky top-0 z-40 hidden min-w-0 w-full flex-col gap-2 border-b border-black/[0.08] bg-white py-2 shadow-[0_1px_0_rgba(0,0,0,0.04)] sm:flex sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-6 sm:gap-y-2 sm:pt-2.5 sm:pb-[calc(0.625rem+10px)] lg:py-2.5">
-          <div className="mx-auto flex w-full max-w-[1600px] min-w-0 flex-col gap-4 px-5 sm:flex-row sm:flex-nowrap sm:items-center sm:justify-between sm:gap-x-6 sm:gap-y-0 sm:px-8 md:px-12">
-            <MainNavigation
-              openPanel={openPanel}
-              vekonOpen={vekonOpen}
-              pickPanel={pickPanel}
-              setVekonOpen={setVekonOpen}
-            />
-            <LocalTimeBlock localTime={localTime} />
+        <div className="sticky top-0 z-40 hidden min-w-0 w-full flex-col gap-2 border-b border-black/[0.08] bg-white py-2 shadow-[0_1px_0_rgba(0,0,0,0.04)] sm:flex sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-6 sm:gap-y-2 sm:py-2.5">
+          <div className="mx-auto flex w-full max-w-[1600px] min-w-0 flex-col gap-4 px-5 sm:flex-row sm:flex-nowrap sm:items-center sm:justify-center sm:gap-x-6 sm:gap-y-0 sm:px-8 md:px-12">
+            <MainNavigation openPanel={openPanel} pickPanel={pickPanel} />
           </div>
         </div>
       </header>
 
-      {/* Mobile e até lg: globo + identidade cursiva no topo; o hero (#top) fica abaixo sem repetir o título. */}
-      <section className="order-1 bg-[#f4f2f1] px-5 py-3.5 sm:px-8 sm:py-4 md:px-12 md:py-4 lg:hidden">
-        <div className="mx-auto flex w-full max-w-[40rem] flex-col items-center justify-center gap-0">
-          <div
-            role="button"
-            tabIndex={0}
-            className="relative z-30 shrink-0 cursor-default rounded-full px-1.5 pt-1.5 pb-0 outline-none focus-visible:ring-2 focus-visible:ring-[#751027]/35 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f4f2f1]"
-            onMouseEnter={() => {
-              setHoverMediaIdx(1);
-              setNameHover(true);
-            }}
-            onMouseLeave={() => {
-              setNameHover(false);
-              setHoverMediaIdx(0);
-            }}
-            onFocus={() => {
-              setHoverMediaIdx(1);
-              setNameHover(true);
-            }}
-            onBlur={() => {
-              setNameHover(false);
-              setHoverMediaIdx(0);
-            }}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
-                setHoverMediaIdx(1);
-                setNameHover(true);
-              }
-            }}
-            aria-label={tHero("globeHint")}
-          >
-            <Globe
-              className="pointer-events-none h-4 w-4 text-[#751027]/55"
-              strokeWidth={1.25}
+      <section
+        id="top"
+        className="relative order-1 isolate flex w-full min-w-0 flex-col overflow-visible bg-[#f0f4f2] px-5 pb-5 pt-0 max-sm:pb-[35px] sm:px-8 sm:pb-6 md:px-12 lg:min-h-0 lg:pt-2 lg:pb-6 xl:min-h-[calc(90lvh-5.5rem)]"
+      >
+        {/* Grelha + vinhetas só no hero; o resto da página fica branco */}
+        <HeroBackground />
+
+        <HeroTriangleArt className="pointer-events-none absolute left-0 top-6 z-0 -ml-5 h-[min(40vh,280px)] w-[min(78vw,260px)] sm:-ml-8 sm:top-8 sm:h-[min(50vh,420px)] sm:w-[min(52vw,320px)] md:-ml-12 md:h-[min(56vh,500px)] md:w-[min(44vw,380px)] lg:top-10 lg:h-[min(62vh,580px)] lg:w-[min(36vw,440px)] xl:w-[min(32vw,480px)]" />
+
+        <div className="relative z-10 flex w-full min-w-0 max-w-full flex-col overflow-visible lg:flex-none">
+        <div className="relative z-10 mt-1 flex min-w-0 w-full max-w-full flex-col justify-start overflow-visible py-1.5 pt-1.5 sm:mt-2 sm:py-4 sm:pt-1 lg:mt-[calc(1rem+30px)] lg:justify-start lg:py-4 lg:pt-1 lg:pb-2">
+          <div className="hero-cluster-shift relative mx-auto w-full max-w-7xl min-h-[min(44vh,22rem)] px-2 sm:min-h-[min(48vh,26rem)] lg:min-h-[min(52vh,30rem)]">
+            <div className="flex min-h-[inherit] flex-col items-center justify-center px-2 pb-28 pt-8 text-center sm:pb-32 sm:pt-12">
+              <h1 className="m-0 max-w-[min(100%,36rem)] font-sans text-[clamp(2.25rem,8vw,4.5rem)] font-semibold leading-[1.05] tracking-[-0.06em] text-black">
+                {tHero("projectTitle")}
+              </h1>
+              {INSTAGRAM_URL ? (
+                <footer className="mt-8 flex w-full justify-center lg:mt-10">
+                  <a
+                    href={INSTAGRAM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center rounded-full border border-[#356040]/25 bg-white/55 px-5 py-2 text-[12px] uppercase tracking-[0.28em] text-[#356040] backdrop-blur-sm transition hover:bg-white/75"
+                  >
+                    {INSTAGRAM_LINK_LABEL}
+                  </a>
+                </footer>
+              ) : null}
+            </div>
+
+            <div
+              className="pointer-events-none absolute bottom-3 left-3 z-20 origin-bottom-left scale-50 sm:bottom-6 sm:left-6"
               aria-hidden
-            />
-          </div>
-          <div className="relative -mt-2 w-full overflow-x-visible text-center">
-            <div className="group/hovername relative inline-block cursor-default overflow-visible">
-              <h1 className="relative z-10 m-0 text-[clamp(2.5rem,10vw,7rem)] font-normal leading-[0.78] tracking-[-0.02em] [font-family:var(--font-signature)]">
+            >
+              <div className="m-0 text-[clamp(2.5rem,10vw,7rem)] font-normal leading-[0.78] tracking-[-0.02em] [font-family:var(--font-signature)]">
                 <span className="flex flex-col items-end gap-0">
                   <span className="flex items-baseline gap-[0.14em] text-black/18">
                     <SpinStar className="shrink-0" />
@@ -966,172 +844,11 @@ export default function HomePage() {
                     {tHero("nameLast")}
                   </span>
                 </span>
-              </h1>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="top"
-        className="relative order-2 isolate flex w-full min-w-0 flex-col overflow-visible bg-[#f4f2f1] px-5 pb-5 pt-0 max-sm:pb-[35px] sm:px-8 sm:pb-6 md:px-12 lg:order-1 lg:min-h-0 lg:pt-2 lg:pb-6 xl:min-h-[calc(90lvh-5.5rem)]"
-      >
-        {/* Grelha + vinhetas só no hero; o resto da página fica branco */}
-        <HeroBackground />
-
-        {/* lg+: todo o bloco visual do hero ~5% menor (tipografia, cartão, vinhetas, Vekon). */}
-        <div className="relative z-10 flex w-full min-w-0 max-w-full flex-col overflow-visible lg:flex-none">
-        <DigitalWineArtwork className="z-[0] w-[min(820px,48vw)] max-w-[min(100%,820px)] lg:max-xl:w-[min(620px,44vw)] xl:w-[min(1000px,52vw)] 2xl:w-[min(1120px,56vw)]" />
-
-        {/* Centro: título + mídias; cartão de perfil */}
-        <div className="relative z-10 mt-1 flex min-w-0 w-full max-w-full flex-col justify-start overflow-visible py-1.5 pt-1.5 sm:mt-2 sm:py-4 sm:pt-1 lg:mt-[calc(1rem+30px)] lg:justify-start lg:py-4 lg:pt-1 lg:pb-2">
-          <div className="hero-cluster-shift mx-auto grid min-w-0 w-full max-w-7xl grid-cols-1 items-start justify-items-stretch gap-4 sm:gap-6 lg:mx-0 lg:grid-cols-24 lg:items-start lg:gap-x-4 lg:gap-y-5 lg:max-xl:grid-cols-1 lg:max-xl:justify-items-start lg:max-xl:gap-y-8 lg:max-xl:gap-x-0 lg:max-xl:mx-0 xl:mx-auto xl:grid-cols-24 xl:gap-x-10 xl:max-2xl:gap-x-14 2xl:gap-x-12">
-            <div className="relative order-1 hidden min-w-0 flex-col items-center sm:flex lg:order-1 lg:row-start-1 lg:col-span-15 lg:max-xl:col-span-1 lg:max-xl:w-full lg:max-xl:items-start lg:max-xl:self-start xl:col-span-15">
-              {/* Largura máxima estável: o globo e o título partilham o mesmo eixo central */}
-              <div
-                className="hero-name-lockup relative z-[25] mx-auto flex w-full max-w-[min(100%,42rem)] flex-col items-center px-1 sm:max-w-[min(100%,46rem)] sm:px-0 lg:max-xl:mx-0 lg:max-xl:items-start lg:max-xl:pr-2 xl:mx-auto xl:items-center"
-              >
-              <div
-                role="button"
-                tabIndex={0}
-                className="relative z-30 max-lg:hidden cursor-default rounded-full p-3 outline-none focus-visible:ring-2 focus-visible:ring-[#751027]/35 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f4f2f1] max-lg:mb-0 max-lg:p-2 max-sm:p-1.5 lg:absolute lg:left-1/2 lg:top-0 lg:-translate-x-1/2 lg:max-xl:relative lg:max-xl:left-auto lg:max-xl:translate-x-0 sm:p-4"
-                onMouseEnter={() => {
-                  setHoverMediaIdx(1);
-                  setNameHover(true);
-                }}
-                onMouseLeave={() => {
-                  setNameHover(false);
-                  setHoverMediaIdx(0);
-                }}
-                onFocus={() => {
-                  setHoverMediaIdx(1);
-                  setNameHover(true);
-                }}
-                onBlur={() => {
-                  setNameHover(false);
-                  setHoverMediaIdx(0);
-                }}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    setHoverMediaIdx(1);
-                    setNameHover(true);
-                  }
-                }}
-                aria-label={tHero("globeHint")}
-              >
-                <Globe
-                  className="pointer-events-none h-4 w-4 text-[#751027]/55"
-                  strokeWidth={1.25}
-                  aria-hidden
-                />
-              </div>
-
-              <div className="mb-3 mt-6 hidden max-w-[min(92vw,36rem)] flex-col items-center gap-2 text-[10px] uppercase tracking-[0.22em] text-black/28 sm:flex-row sm:text-center lg:mt-10 lg:flex">
-                <Sparkles
-                  className="hidden h-3 w-3 shrink-0 text-[#751027]/45 lg:inline"
-                  strokeWidth={1.5}
-                  aria-hidden
-                />
-                <span className="text-balance text-center leading-relaxed">
-                  {tHero("analyst")}
-                </span>
-              </div>
-
-              <div className="relative w-full overflow-x-visible text-center max-lg:-mt-1 max-sm:-mt-0.5 max-lg:hidden lg:max-xl:text-left xl:text-center">
-                <div className="group/hovername relative inline-block cursor-default overflow-visible lg:max-xl:mr-auto xl:mx-auto">
-                  <h1 className="relative z-10 text-[clamp(2.5rem,10vw,7rem)] font-semibold leading-[0.88] tracking-[-0.06em] sm:text-[clamp(2.5rem,11vw,7.5rem)] lg:max-xl:text-[clamp(2.05rem,5.25vw,5.75rem)] xl:text-[clamp(2rem,6.25vw,6.25rem)] 2xl:text-[clamp(2.35rem,8vw,7rem)] min-[1800px]:text-[clamp(2.5rem,11vw,7.5rem)]">
-                    <span className="flex flex-col items-end lg:max-xl:items-start xl:items-end">
-                      <span className="flex items-baseline gap-[0.14em] text-black/18">
-                        <SpinStar className="shrink-0" />
-                        <span>{tHero("nameFirst")}</span>
-                      </span>
-                      <span className="block text-black">
-                        {tHero("nameLast")}
-                      </span>
-                    </span>
-          </h1>
-                </div>
-              </div>
-
-              <footer className="mt-2 hidden w-full justify-center lg:mt-8 lg:flex lg:max-xl:justify-start xl:justify-center">
-                {INSTAGRAM_URL ? (
-                  <a
-                    href={INSTAGRAM_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center rounded-full border border-[#751027]/25 bg-white/55 px-5 py-2 text-[12px] uppercase tracking-[0.28em] text-[#751027] backdrop-blur-sm transition hover:bg-white/75"
-                  >
-                    {INSTAGRAM_LINK_LABEL}
-                  </a>
-                ) : null}
-              </footer>
-
               </div>
             </div>
 
-            <aside
-              className={`relative z-20 order-2 min-w-0 w-full max-w-full -translate-x-[7px] translate-y-[10px] overflow-x-hidden overflow-y-visible rounded-tr-2xl rounded-bl-2xl border border-[#751027]/10 bg-[rgba(255,251,252,0.82)] p-4 shadow-[0_22px_54px_rgba(64,21,29,0.08)] backdrop-blur-md sm:-translate-y-[18px] lg:z-10 lg:translate-x-0 lg:bg-[rgba(255,251,252,0.97)] lg:backdrop-blur-none lg:translate-y-0 ${
-                openPanel === "victor" || openPanel === "clinica"
-                  ? "max-lg:order-3 sm:max-lg:mt-3"
-                  : ""
-              } lg:order-2 lg:col-span-9 lg:row-start-1 lg:self-start lg:max-xl:col-span-1 lg:max-xl:max-w-xl lg:max-xl:justify-self-start lg:max-xl:translate-x-0 xl:col-span-9 xl:max-2xl:-translate-x-[75px] xl:max-2xl:max-w-[min(100%,26rem)] 2xl:translate-x-0 2xl:max-w-full lg:p-5`}
-              aria-label={tHero("cardAria")}
-            >
-              <div className="min-w-0 overflow-x-hidden overflow-y-visible">
-                <div className="grid min-w-0 grid-cols-1 gap-4 md:grid-cols-[minmax(0,6.5rem)_minmax(0,1fr)] md:gap-5">
-                  <div className="relative z-[35] mx-auto shrink-0 overflow-hidden md:mx-0">
-                    <div className="relative mx-auto w-full max-w-[180px] shrink-0 overflow-hidden bg-neutral-100 max-lg:aspect-square max-lg:h-36 max-lg:w-36 max-lg:max-w-none max-lg:rounded-full max-lg:shadow-[inset_0_0_0_2px_rgba(255,255,255,0.75)] max-lg:ring-2 max-lg:ring-black/10 lg:mx-0 lg:aspect-[5/4] lg:max-w-none lg:rounded-lg lg:shadow-none lg:ring-0">
-                      <Image
-                        src={REGISTROS_INTRO_IMAGE}
-                        alt=""
-                        fill
-                        className="object-cover object-[center_38%]"
-                        sizes="(max-width: 1024px) 200px, 120px"
-                        priority={false}
-                      />
-                    </div>
-                  </div>
-                  <div className="min-w-0">
-                    <h2 className="translate-y-[3px] text-lg font-semibold leading-snug tracking-[-0.04em] text-black sm:text-xl">
-                      {tProfile("name")}
-                    </h2>
-                    <div className="-translate-y-[3px]">
-                      <p className="mt-3 text-left text-[13px] leading-[1.7] text-black/58 [overflow-wrap:anywhere] hyphens-auto">
-                        {tProfile("bio")}
-                      </p>
-                      <div className="mt-4 hidden min-w-0 flex-col gap-3 lg:flex lg:flex-row lg:flex-wrap lg:items-baseline lg:gap-x-4 lg:gap-y-2">
-                        {GOODREADS_URL ? (
-                          <a
-                            href={GOODREADS_URL}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="min-w-0 max-w-full break-words text-[12px] uppercase tracking-[0.18em] text-[#751027] underline decoration-[#751027]/25 underline-offset-4 transition hover:text-[#791126] hover:decoration-[#791126] lg:tracking-[0.24em]"
-                          >
-                            {tProfile("goodreads")}
-                          </a>
-                        ) : null}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </aside>
-
-            {/* Victor / Clínica (mobile): Vekon antes do cartão. Registros: cartão antes. Desktop: linha abaixo. */}
-            <div
-              className={`relative order-3 mt-6 flex w-full justify-center lg:mx-auto lg:mt-7 lg:order-3 lg:col-span-24 lg:row-start-2 lg:max-w-[min(100%,52rem)] lg:max-xl:col-span-1 lg:max-xl:mx-0 lg:max-xl:w-full lg:max-xl:max-w-none lg:max-xl:justify-start xl:col-span-24 ${
-                openPanel === "victor" || openPanel === "clinica"
-                  ? "max-lg:order-2 sm:max-lg:mt-3"
-                  : ""
-              }`}
-            >
-              <HeroVekonCluster
-                nameHover={nameHover}
-                hoverMediaIdx={hoverMediaIdx}
-                globeHoverGifSrc={globeHoverGifSrc}
-                onOpenVekon={() => setVekonOpen(true)}
-              />
+            <div className="absolute bottom-3 right-3 z-20 sm:bottom-6 sm:right-6">
+              <VekonHeroMark interactive={false} sizePx={168} className="mx-0" />
             </div>
           </div>
         </div>
@@ -1325,6 +1042,30 @@ export default function HomePage() {
             </div>
 
             <div className="hidden lg:block">
+              <SiteSocialFooter />
+            </div>
+          </div>
+        </section>
+      ) : null}
+
+      {openPanel === "nos" ? (
+        <section
+          id="nos"
+          className="relative z-10 order-1 scroll-mt-6 border-t border-black/10 bg-white px-5 pb-[5px] pt-5 max-sm:pb-[20px] sm:px-8 sm:max-lg:pb-[45px] md:px-12 lg:order-2 lg:pb-10 lg:pt-12"
+        >
+          <div className="mx-auto w-full max-w-[40rem]">
+            <div className="text-center">
+              <p className="font-mono text-[10px] uppercase tracking-[0.35em] text-black/40">
+                {tNos("label")}
+              </p>
+              <h2 className="mt-3 font-sans text-[clamp(2rem,6vw,3.5rem)] font-semibold leading-[1.05] tracking-[-0.06em] text-black sm:mt-4">
+                {tNos("title")}
+              </h2>
+            </div>
+            <p className="mx-auto mt-8 max-w-prose text-center text-[15px] leading-[1.8] text-black/70 [text-wrap:pretty] sm:mt-10">
+              {tNos("intro")}
+            </p>
+            <div className="mt-10 hidden lg:block">
               <SiteSocialFooter />
             </div>
           </div>

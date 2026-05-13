@@ -3,6 +3,6 @@
   <path d="M40 150 Q100 40 140 100 T240 80" stroke="#38bdf8" stroke-width="2.5" fill="none"/>
   <path d="M40 150 L240 150" stroke="#475569" stroke-width="1"/>
   <rect x="50" y="60" width="180" height="70" rx="4" fill="#0f172a" stroke="#334155"/>
-  <circle cx="140" cy="95" r="28" fill="#791126" fill-opacity="0.35" stroke="#f87171" stroke-width="1.5"/>
+  <circle cx="140" cy="95" r="28" fill="#4a7c44" fill-opacity="0.35" stroke="#7ea04d" stroke-width="1.5"/>
   <text x="140" y="178" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#94a3b8">Seeing Theory · Brown</text>
 </svg>
