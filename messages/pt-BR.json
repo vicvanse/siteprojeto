@@ -13,7 +13,8 @@
   "nosSection": {
     "label": "Nós",
     "title": "Quem somos",
-    "intro": "Estamos a preparar esta página com informação sobre o colectivo e o propósito do projeto."
+    "intro": "Estamos a preparar esta página com informação sobre o colectivo e o propósito do projeto.",
+    "bioPostCategory": "Perfil"
   },
   "time": { "local": "hora local" },
   "feed": {
@@ -67,8 +68,8 @@
     "utilIntro": "Coisas úteis, que são essenciais para o ramo ou para criação de projetos:"
   },
   "clinica": {
-    "label": "clínica",
-    "title": "Perspectivas clínicas"
+    "label": "Serviços",
+    "title": "Serviços oferecidos"
   },
   "registros": {
     "label": "registros",
@@ -106,8 +107,8 @@
     "cardAria": "Perfil"
   },
   "profile": {
-    "name": "Víctor Correard",
-    "bio": "Víctor Correard Vekony. Mestrado em andamento no Instituto de Psicologia da USP. Psicologia no Instituto de Psicologia da USP. Colégio Técnico e Industrial de Guaratinguetá, formação em Eletrônica.",
+    "name": "Victor Correard Vekony",
+    "bio": "Victor Correard Vekony. Mestrado em andamento no Instituto de Psicologia da USP. Psicologia no Instituto de Psicologia da USP. Colégio Técnico e Industrial de Guaratinguetá, formação em Eletrônica.",
     "goodreads": "Goodreads",
     "spotify": "Spotify"
   },

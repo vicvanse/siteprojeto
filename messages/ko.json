@@ -13,7 +13,8 @@
   "nosSection": {
     "label": "우리",
     "title": "소개",
-    "intro": "콜렉티브와 프로젝트 목표에 대한 내용을 이 페이지에 준비 중입니다."
+    "intro": "콜렉티브와 프로젝트 목표에 대한 내용을 이 페이지에 준비 중입니다.",
+    "bioPostCategory": "프로필"
   },
   "time": {
     "local": "local time"
@@ -78,8 +79,8 @@
     "utilIntro": "분야나 프로젝트에 꼭 쓰일, 유익한 것들:"
   },
   "clinica": {
-    "label": "클리닉",
-    "title": "Clinical perspectives"
+    "label": "서비스",
+    "title": "제공 서비스"
   },
   "registros": {
     "label": "기록",

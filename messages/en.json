@@ -13,7 +13,8 @@
   "nosSection": {
     "label": "Us",
     "title": "Who we are",
-    "intro": "We are preparing this page with more about the collective and the aims of the project."
+    "intro": "We are preparing this page with more about the collective and the aims of the project.",
+    "bioPostCategory": "Profile"
   },
   "time": { "local": "local time" },
   "feed": {
@@ -67,8 +68,8 @@
     "utilIntro": "Useful things that are essential to the field or to building projects:"
   },
   "clinica": {
-    "label": "clinic",
-    "title": "Clinical perspectives"
+    "label": "Services",
+    "title": "Services offered"
   },
   "registros": {
     "label": "records",

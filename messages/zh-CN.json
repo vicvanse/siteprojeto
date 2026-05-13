@@ -13,7 +13,8 @@
   "nosSection": {
     "label": "我们",
     "title": "关于我们",
-    "intro": "我们正在准备本页，以介绍团队与项目目标。"
+    "intro": "我们正在准备本页，以介绍团队与项目目标。",
+    "bioPostCategory": "简介"
   },
   "time": {
     "local": "local time"
@@ -78,8 +79,8 @@
     "utilIntro": "对专业领域或做项目很重要、有实质帮助的内容："
   },
   "clinica": {
-    "label": "咨询",
-    "title": "Clinical perspectives"
+    "label": "服务",
+    "title": "提供的服务"
   },
   "registros": {
     "label": "档案",

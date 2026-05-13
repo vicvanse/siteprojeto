@@ -3,6 +3,7 @@
 import {
   useCallback,
   useEffect,
+  useMemo,
   useRef,
   useState,
   type MouseEvent,
@@ -12,7 +13,6 @@ import { useLocale, useTranslations } from "next-intl";
 import type { AppLocale } from "@/i18n/routing";
 import { useSearchParams } from "next/navigation";
 import { usePathname, useRouter } from "@/i18n/navigation";
-import { motion, AnimatePresence } from "framer-motion";
 import {
   Maximize2,
   Minimize2,
@@ -22,19 +22,21 @@ import {
 } from "lucide-react";
 import { HeroBackground } from "@/components/site/hero-background";
 import { HeroTriangleArt } from "@/components/site/hero-triangle-art";
-import { VekonHeroMark } from "@/components/site/vekon-hero-mark";
 import { SiteSocialFooter } from "@/components/site/site-social-footer";
+import { TextPostCard } from "@/components/victor/text-post-card";
 import { PostsFeed } from "@/components/victor/posts-feed";
 import { VictorRespostasPanel } from "@/components/victor/victor-respostas-panel";
 import { VictorSugestoesPanel } from "@/components/victor/victor-sugestoes-panel";
-import { getPostsForSection } from "@/data/victor-notes-posts";
+import {
+  getPostsForSection,
+  type VictorFeedPost,
+} from "@/data/victor-notes-posts";
+import { formatPostDateForLocale } from "@/lib/victor-post-i18n";
 import {
   INSTAGRAM_URL,
   INSTAGRAM_LINK_LABEL,
 } from "@/lib/site-constants";
 import type Player from "@vimeo/player";
-
-const VEKON_URL = "https://pixellife.vercel.app/auth/login";
 
 /** Vídeos em Registros: o primeiro em destaque; os restantes em miniatura (clique promove ao bloco grande). */
 interface RegistrosVideoEntry {
@@ -137,7 +139,7 @@ const navToggleIdle =
   "border-[#356040]/50 bg-white/72 backdrop-blur-sm text-[#4a7c44] hover:border-[#356040] hover:bg-[#4a7c44]/10 hover:text-[#4a7c44]";
 
 const navToggleActive =
-  "border-[#356040] bg-[#4a7c44] text-white shadow-[0_14px_28px_rgba(74,124,68,0.18)] [backdrop-filter:none] [-webkit-backdrop-filter:none]";
+  "border-[#356040] bg-[#4a7c44] text-white [backdrop-filter:none] [-webkit-backdrop-filter:none]";
 
 /** Barra de navegação escura (só mobile): contorno e texto brancos. */
 const navToggleBaseMobile =
@@ -153,7 +155,7 @@ const navToggleIdleMobile =
   "border-white/55 bg-transparent text-white hover:border-white hover:bg-white/10";
 
 const navToggleActiveMobile =
-  "border-white bg-white text-black shadow-[0_14px_28px_rgba(0,0,0,0.28)] [backdrop-filter:none] [-webkit-backdrop-filter:none]";
+  "border-white bg-white text-black [backdrop-filter:none] [-webkit-backdrop-filter:none]";
 
 type OpenPanel = "victor" | "clinica" | "registros" | "nos";
 
@@ -591,29 +593,13 @@ function RegistrosVideoThumbnail({
   );
 }
 
-/** Estrela de 8 pontas com raios ligeiramente irregulares (vetor, não imagem). */
-function SpinStar({ className }: { className?: string }) {
-  return (
-    <svg
-      className={`star-spin inline-block h-[0.74em] w-[0.74em] shrink-0 translate-y-[0.04em] align-middle text-black/25 ${className ?? ""}`}
-      viewBox="0 0 24 24"
-      fill="currentColor"
-      aria-hidden
-    >
-      <path d="M12,2.4 L13.38,8.67 L19.21,4.79 L16.07,10.32 L21.9,12 L15.51,13.45 L19.35,19.35 L13.61,15.88 L12,21.7 L10.66,15.23 L4.86,19.14 L7.84,13.72 L2.2,12 L8.4,10.51 L4.72,4.72 L10.43,8.21z" />
-    </svg>
-  );
-}
-
 export default function HomePage() {
   const siteLocale = useLocale() as AppLocale;
-  const tHero = useTranslations("hero");
   const tVictor = useTranslations("victor");
   const tClinica = useTranslations("clinica");
   const tReg = useTranslations("registros");
   const tNos = useTranslations("nosSection");
-  const tVekon = useTranslations("vekon");
-  const [vekonOpen, setVekonOpen] = useState(false);
+  const tProfile = useTranslations("profile");
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const router = useRouter();
@@ -625,6 +611,23 @@ export default function HomePage() {
         : pathname === "/nos"
           ? "nos"
           : "victor";
+
+  /** Cartão em «Nós»: texto do perfil que aparecia no hero (nome + bio). */
+  const nosVictorBioPost = useMemo((): VictorFeedPost => {
+    const bio = tProfile("bio");
+    return {
+      section: "notas-gerais",
+      slug: "_nos-victor-profile",
+      title: tProfile("name"),
+      publishedAt: "2026-05-01",
+      dateLabel: formatPostDateForLocale("2026-05-01", siteLocale),
+      category: tNos("bioPostCategory"),
+      excerpt: bio,
+      body: [bio],
+      skipPostDetailPage: true,
+      feedTitleAlign: "center",
+    };
+  }, [siteLocale, tNos, tProfile]);
 
   const isVictorSugestoesView = pathname === "/victor/sugestoes";
   const isVictorRespostasView = pathname === "/victor/respostas";
@@ -643,7 +646,7 @@ export default function HomePage() {
     e.preventDefault();
   };
   const registrosFeaturedRef = useRef<HTMLDivElement>(null);
-  /** Evita saltar para a secção victor no primeiro paint (mantém o hero visível). */
+  /** Evita saltar para a secção victor no primeiro paint (mantém o cabeçalho visível). */
   const skipInitialVictorScrollRef = useRef(true);
 
   function selectRegistrosFeatured(nextIdx: number) {
@@ -747,23 +750,6 @@ export default function HomePage() {
     });
   }, [openPanel, pathname]);
 
-  useEffect(() => {
-    if (!vekonOpen) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setVekonOpen(false);
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [vekonOpen]);
-
-  useEffect(() => {
-    if (vekonOpen) document.body.style.overflow = "hidden";
-    else document.body.style.overflow = "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [vekonOpen]);
-
   /** Projeto (/) é o estado em repouso; ao desmarcar a secção activa volta ao início. */
   function pickPanel(next: OpenPanel) {
     if (next === "victor") {
@@ -779,81 +765,33 @@ export default function HomePage() {
 
   return (
     <main className="relative flex min-h-screen flex-col overflow-x-visible overflow-y-visible bg-white font-sans text-black selection:bg-[#4a7c44] selection:text-white">
-      {/* Mobile (< lg): secção activa antes do hero; desktop: header → hero → secção. */}
-      {/* Mobile: barra única sticky (só nav). Desktop: barra sticky só com nav centrada. */}
-      <header className="order-0 shrink-0 bg-white">
-        <div className="sticky top-0 z-40 border-b border-white/12 bg-black py-2.5 shadow-[0_1px_0_rgba(255,255,255,0.06)] sm:hidden">
-          <div className="mx-auto flex w-full max-w-[1600px] min-w-0 items-center justify-center px-3">
-            <MainNavigation
-              compactHeader
-              variant="mobileDark"
-              openPanel={openPanel}
-              pickPanel={pickPanel}
-            />
-          </div>
-        </div>
-
-        <div className="sticky top-0 z-40 hidden min-w-0 w-full flex-col gap-2 border-b border-black/[0.08] bg-white py-2 shadow-[0_1px_0_rgba(0,0,0,0.04)] sm:flex sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-6 sm:gap-y-2 sm:py-2.5">
-          <div className="mx-auto flex w-full max-w-[1600px] min-w-0 flex-col gap-4 px-5 sm:flex-row sm:flex-nowrap sm:items-center sm:justify-center sm:gap-x-6 sm:gap-y-0 sm:px-8 md:px-12">
-            <MainNavigation openPanel={openPanel} pickPanel={pickPanel} />
-          </div>
-        </div>
-      </header>
-
-      <section
-        id="top"
-        className="relative order-1 isolate flex w-full min-w-0 flex-col overflow-visible bg-[#f0f4f2] px-5 pb-5 pt-0 max-sm:pb-[35px] sm:px-8 sm:pb-6 md:px-12 lg:min-h-0 lg:pt-2 lg:pb-6 xl:min-h-[calc(90lvh-5.5rem)]"
-      >
-        {/* Grelha + vinhetas só no hero; o resto da página fica branco */}
+      {/* Cabeçalho: navegação sticky sobre fundo liso com triângulos nas laterais (sm+). */}
+      <div id="top" className="relative order-0 isolate w-full shrink-0 overflow-hidden">
         <HeroBackground />
-
-        <HeroTriangleArt className="pointer-events-none absolute left-0 top-6 z-0 -ml-5 h-[min(40vh,280px)] w-[min(78vw,260px)] sm:-ml-8 sm:top-8 sm:h-[min(50vh,420px)] sm:w-[min(52vw,320px)] md:-ml-12 md:h-[min(56vh,500px)] md:w-[min(44vw,380px)] lg:top-10 lg:h-[min(62vh,580px)] lg:w-[min(36vw,440px)] xl:w-[min(32vw,480px)]" />
-
-        <div className="relative z-10 flex w-full min-w-0 max-w-full flex-col overflow-visible lg:flex-none">
-        <div className="relative z-10 mt-1 flex min-w-0 w-full max-w-full flex-col justify-start overflow-visible py-1.5 pt-1.5 sm:mt-2 sm:py-4 sm:pt-1 lg:mt-[calc(1rem+30px)] lg:justify-start lg:py-4 lg:pt-1 lg:pb-2">
-          <div className="hero-cluster-shift relative mx-auto w-full max-w-7xl min-h-[min(44vh,22rem)] px-2 sm:min-h-[min(48vh,26rem)] lg:min-h-[min(52vh,30rem)]">
-            <div className="flex min-h-[inherit] flex-col items-center justify-center px-2 pb-28 pt-8 text-center sm:pb-32 sm:pt-12">
-              <h1 className="m-0 max-w-[min(100%,36rem)] font-sans text-[clamp(2.25rem,8vw,4.5rem)] font-semibold leading-[1.05] tracking-[-0.06em] text-black">
-                {tHero("projectTitle")}
-              </h1>
-              {INSTAGRAM_URL ? (
-                <footer className="mt-8 flex w-full justify-center lg:mt-10">
-                  <a
-                    href={INSTAGRAM_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center rounded-full border border-[#356040]/25 bg-white/55 px-5 py-2 text-[12px] uppercase tracking-[0.28em] text-[#356040] backdrop-blur-sm transition hover:bg-white/75"
-                  >
-                    {INSTAGRAM_LINK_LABEL}
-                  </a>
-                </footer>
-              ) : null}
-            </div>
-
-            <div
-              className="pointer-events-none absolute bottom-3 left-3 z-20 origin-bottom-left scale-50 sm:bottom-6 sm:left-6"
-              aria-hidden
-            >
-              <div className="m-0 text-[clamp(2.5rem,10vw,7rem)] font-normal leading-[0.78] tracking-[-0.02em] [font-family:var(--font-signature)]">
-                <span className="flex flex-col items-end gap-0">
-                  <span className="flex items-baseline gap-[0.14em] text-black/18">
-                    <SpinStar className="shrink-0" />
-                    <span>{tHero("nameFirst")}</span>
-                  </span>
-                  <span className="-mt-[0.18em] block text-black">
-                    {tHero("nameLast")}
-                  </span>
-                </span>
-              </div>
-            </div>
-
-            <div className="absolute bottom-3 right-3 z-20 sm:bottom-6 sm:right-6">
-              <VekonHeroMark interactive={false} sizePx={168} className="mx-0" />
+        <HeroTriangleArt className="pointer-events-none absolute left-0 top-1/2 z-0 hidden h-[88px] w-[min(42vw,168px)] -translate-y-1/2 sm:block sm:h-[104px] sm:w-[min(36vw,200px)] md:h-[118px] md:w-[min(32vw,220px)]" />
+        <HeroTriangleArt
+          mirror
+          className="pointer-events-none absolute right-0 top-1/2 z-0 hidden h-[88px] w-[min(42vw,168px)] -translate-y-1/2 sm:block sm:h-[104px] sm:w-[min(36vw,200px)] md:h-[118px] md:w-[min(32vw,220px)]"
+        />
+        <header className="relative z-10 shrink-0 bg-transparent">
+          <div className="sticky top-0 z-40 border-b border-white/12 bg-black py-2.5 sm:hidden">
+            <div className="mx-auto flex w-full max-w-[1600px] min-w-0 items-center justify-center px-3">
+              <MainNavigation
+                compactHeader
+                variant="mobileDark"
+                openPanel={openPanel}
+                pickPanel={pickPanel}
+              />
             </div>
           </div>
-        </div>
-        </div>
-      </section>
+
+          <div className="sticky top-0 z-40 hidden min-w-0 w-full flex-col gap-2 border-b border-black/[0.08] bg-transparent py-2 sm:flex sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-6 sm:gap-y-2 sm:py-2.5">
+            <div className="mx-auto flex w-full max-w-[1600px] min-w-0 flex-col gap-4 px-5 sm:flex-row sm:flex-nowrap sm:items-center sm:justify-center sm:gap-x-6 sm:gap-y-0 sm:px-8 md:px-12">
+              <MainNavigation openPanel={openPanel} pickPanel={pickPanel} />
+            </div>
+          </div>
+        </header>
+      </div>
 
       {openPanel === "victor" ? (
         <section
@@ -1065,6 +1003,9 @@ export default function HomePage() {
             <p className="mx-auto mt-8 max-w-prose text-center text-[15px] leading-[1.8] text-black/70 [text-wrap:pretty] sm:mt-10">
               {tNos("intro")}
             </p>
+            <div className="mt-10">
+              <TextPostCard post={nosVictorBioPost} />
+            </div>
             <div className="mt-10 hidden lg:block">
               <SiteSocialFooter />
             </div>
@@ -1164,7 +1105,7 @@ export default function HomePage() {
         </section>
       ) : null}
 
-      {/* Mobile (< lg): rodapé social depois do hero; no desktop o mesmo bloco fica no fim de cada secção. */}
+      {/* Mobile (< lg): rodapé social após o conteúdo; no desktop o mesmo bloco fica no fim de cada secção. */}
       <div className="order-3 shrink-0 max-sm:pb-[15px] max-sm:px-0 sm:px-8 md:px-12 sm:max-lg:mt-2 lg:hidden">
         <SiteSocialFooter
           afterHeroStack
@@ -1172,74 +1113,6 @@ export default function HomePage() {
           layout={openPanel === "registros" ? "registros" : "default"}
         />
       </div>
-
-      <AnimatePresence>
-        {vekonOpen ? (
-          <motion.div
-            key="vekon-overlay"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-6"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="vekon-title"
-          >
-            <button
-              type="button"
-              className="absolute inset-0 bg-black/45 backdrop-blur-[2px]"
-              aria-label={tVekon("closeDialog")}
-              onClick={() => setVekonOpen(false)}
-            />
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 8 }}
-              transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-              className="relative z-10 w-full max-w-md rounded-none rounded-tr-[12px] rounded-bl-[12px] border border-black/15 bg-[#fafafa] p-8 shadow-[0_24px_80px_rgba(0,0,0,0.12)]"
-            >
-              <button
-                type="button"
-                onClick={() => setVekonOpen(false)}
-                className="absolute right-4 top-4 rounded-full p-1 text-black/50 transition hover:bg-black/5 hover:text-black"
-                aria-label={tVekon("closePanel")}
-              >
-                <X className="h-4 w-4" strokeWidth={1.5} />
-              </button>
-              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-black/45">
-                {tVekon("label")}
-              </p>
-              <h2
-                id="vekon-title"
-                className="mt-4 text-2xl font-medium tracking-[-0.03em]"
-              >
-                {tVekon("title")}
-              </h2>
-              <p className="mt-4 text-[14px] leading-[1.75] text-black/65">
-                {tVekon("body")}
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <a
-                  href={VEKON_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full border-0 bg-black px-4 py-2 text-[10px] font-medium uppercase tracking-[0.2em] text-white shadow-[0_0_0_1px_rgb(0,0,0)] transition hover:bg-white hover:text-black hover:shadow-[0_0_0_1px_rgb(0,0,0)]"
-                >
-                  {tVekon("openPage")}
-                </a>
-                <button
-                  type="button"
-                  onClick={() => setVekonOpen(false)}
-                  className="rounded-full border-0 px-4 py-2 text-[10px] font-medium uppercase tracking-[0.2em] text-black/70 shadow-[0_0_0_1px_rgb(0,0,0,0.2)] transition hover:shadow-[0_0_0_1px_rgb(0,0,0)] hover:text-black"
-                >
-                  {tVekon("close")}
-                </button>
-        </div>
-            </motion.div>
-          </motion.div>
-        ) : null}
-      </AnimatePresence>
       </main>
   );
 }

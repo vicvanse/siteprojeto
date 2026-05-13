@@ -13,7 +13,8 @@
   "nosSection": {
     "label": "Nosotros",
     "title": "Quiénes somos",
-    "intro": "Estamos preparando esta página con más información sobre el colectivo y los objetivos del proyecto."
+    "intro": "Estamos preparando esta página con más información sobre el colectivo y los objetivos del proyecto.",
+    "bioPostCategory": "Perfil"
   },
   "time": {
     "local": "local time"
@@ -78,8 +79,8 @@
     "utilIntro": "Cosas útiles, esenciales en el ámbito o para crear proyectos:"
   },
   "clinica": {
-    "label": "clínica",
-    "title": "Clinical perspectives"
+    "label": "Servicios",
+    "title": "Servicios ofrecidos"
   },
   "registros": {
     "label": "archivo",

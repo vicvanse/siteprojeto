@@ -1,14 +1,29 @@
+import { useId } from "react";
+
 interface HeroTriangleArtProps {
   className?: string;
+  /** Espelha horizontalmente (para o lado direito da página). */
+  mirror?: boolean;
 }
 
 /**
- * Decoração do hero: composição abstracta só com triângulos (sem a arte antiga em formas orgânicas).
+ * Decoração: composição abstracta só com triângulos (sem a arte antiga em formas orgânicas).
  * Cores alinhadas à marca (musgo / floresta).
  */
-export function HeroTriangleArt({ className = "" }: HeroTriangleArtProps) {
+export function HeroTriangleArt({
+  className = "",
+  mirror = false,
+}: HeroTriangleArtProps) {
+  const uid = useId().replace(/\W/g, "");
+  const idA = `heroTriFillA-${uid}`;
+  const idB = `heroTriFillB-${uid}`;
+  const idC = `heroTriFillC-${uid}`;
+
   return (
-    <div aria-hidden className={className}>
+    <div
+      aria-hidden
+      className={`${mirror ? "-scale-x-100 origin-[100%_50%]" : ""} ${className}`}
+    >
       <svg
         viewBox="0 0 420 680"
         className="h-full w-full"
@@ -17,7 +32,7 @@ export function HeroTriangleArt({ className = "" }: HeroTriangleArtProps) {
       >
         <defs>
           <linearGradient
-            id="heroTriFillA"
+            id={idA}
             x1="0%"
             y1="0%"
             x2="100%"
@@ -27,7 +42,7 @@ export function HeroTriangleArt({ className = "" }: HeroTriangleArtProps) {
             <stop offset="100%" stopColor="#2d4c3b" stopOpacity="0.1" />
           </linearGradient>
           <linearGradient
-            id="heroTriFillB"
+            id={idB}
             x1="100%"
             y1="0%"
             x2="0%"
@@ -36,17 +51,25 @@ export function HeroTriangleArt({ className = "" }: HeroTriangleArtProps) {
             <stop offset="0%" stopColor="#356040" stopOpacity="0.28" />
             <stop offset="100%" stopColor="#4a7c44" stopOpacity="0.06" />
           </linearGradient>
-          <linearGradient id="heroTriFillC" x1="0%" y1="100%" x2="0%" y2="0%">
+          <linearGradient id={idC} x1="0%" y1="100%" x2="0%" y2="0%">
             <stop offset="0%" stopColor="#7ea04d" stopOpacity="0.22" />
             <stop offset="100%" stopColor="#a7bdb5" stopOpacity="0.08" />
           </linearGradient>
         </defs>
 
-        <polygon points="0,0 268,168 0,312" fill="url(#heroTriFillA)" />
-        <polygon points="0,220 244,468 0,680" fill="url(#heroTriFillB)" />
-        <polygon points="32,96 208,52 118,248" fill="url(#heroTriFillC)" />
-        <polygon points="48,360 236,320 132,548" fill="#4a7c44" fillOpacity="0.12" />
-        <polygon points="12,520 188,440 96,620" fill="#2d4c3b" fillOpacity="0.1" />
+        <polygon points="0,0 268,168 0,312" fill={`url(#${idA})`} />
+        <polygon points="0,220 244,468 0,680" fill={`url(#${idB})`} />
+        <polygon points="32,96 208,52 118,248" fill={`url(#${idC})`} />
+        <polygon
+          points="48,360 236,320 132,548"
+          fill="#4a7c44"
+          fillOpacity="0.12"
+        />
+        <polygon
+          points="12,520 188,440 96,620"
+          fill="#2d4c3b"
+          fillOpacity="0.1"
+        />
 
         <g
           stroke="#356040"

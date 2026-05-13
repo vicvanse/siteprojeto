@@ -13,7 +13,8 @@
   "nosSection": {
     "label": "我們",
     "title": "關於我們",
-    "intro": "我們正在準備本頁，以介紹團隊與專案目標。"
+    "intro": "我們正在準備本頁，以介紹團隊與專案目標。",
+    "bioPostCategory": "簡介"
   },
   "time": {
     "local": "local time"
@@ -78,8 +79,8 @@
     "utilIntro": "對專業領域或做專案很重要、有實質幫助的內容："
   },
   "clinica": {
-    "label": "諮商",
-    "title": "Clinical perspectives"
+    "label": "服務",
+    "title": "提供的服務"
   },
   "registros": {
     "label": "檔案",
