@@ -866,12 +866,12 @@ export default function HomePage() {
 
       <section
         id="top"
-        className="relative order-1 isolate flex min-h-0 w-full min-w-0 flex-col overflow-visible bg-[#f3f4f6] px-5 pb-0 pt-0 max-sm:min-h-[min(22vh,152px)] sm:min-h-[min(35.7vh,272px)] sm:px-8 md:px-12 lg:min-h-[min(34vh,306px)]"
+        className="relative order-1 isolate flex min-h-0 w-full min-w-0 flex-col overflow-visible bg-[#f3f4f6] px-5 pb-0 pt-0 max-sm:min-h-0 sm:min-h-[min(35.7vh,272px)] sm:px-8 md:px-12 lg:min-h-[min(34vh,306px)]"
       >
         <HeroBackground />
 
-        <div className="relative z-10 flex min-h-0 w-full max-w-full flex-1 flex-col overflow-visible">
-          <div className="w-full max-sm:origin-top max-sm:scale-[0.75] max-sm:[transform-origin:50%_0] max-sm:-mb-14">
+        <div className="relative z-10 flex min-h-0 w-full max-w-full flex-1 max-sm:flex-none flex-col overflow-visible max-sm:h-auto">
+          <div className="w-full max-sm:origin-top max-sm:scale-[0.75] max-sm:[transform-origin:50%_0] max-sm:-mb-[4.75rem]">
             <div className="mx-auto grid min-h-0 w-full max-w-7xl flex-1 max-sm:flex-none grid-rows-[1fr_auto] max-sm:grid-rows-[auto_auto] px-2">
               <div className="grid h-full min-h-0 w-full place-items-center px-2 py-2 text-center max-sm:h-auto max-sm:min-h-0 max-sm:py-1 sm:py-3">
               <div className="flex max-w-full flex-col items-center justify-center max-sm:translate-y-3 sm:translate-y-[68px]">
@@ -894,9 +894,9 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="flex w-full shrink-0 items-end justify-between gap-2 pb-2 pt-0 max-sm:gap-1 max-sm:pb-2 sm:gap-4 sm:pb-4 sm:pt-1">
+            <div className="flex w-full shrink-0 items-end justify-between gap-2 pb-2 pt-0 max-sm:gap-1 max-sm:pb-0 max-sm:pt-0 sm:gap-4 sm:pb-4 sm:pt-1">
               <div
-                className="pointer-events-none min-w-0 max-w-[58%] shrink pl-0.5 pb-0.5 max-sm:max-w-[52%] sm:max-w-none sm:pl-1 sm:pb-1 md:pl-2 md:pb-2"
+                className="pointer-events-none min-w-0 max-w-[58%] shrink pl-0.5 pb-0 max-sm:max-w-[52%] sm:max-w-none sm:pl-1 sm:pb-1 md:pl-2 md:pb-2"
                 aria-hidden
               >
                 <div className="origin-bottom-left scale-[0.266] sm:scale-[0.315] md:scale-[0.35]">
@@ -921,7 +921,7 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <div className="shrink-0 self-end pr-0 pb-0.5 max-sm:translate-x-4 max-sm:-mr-1 sm:pr-1 sm:pb-1 md:pr-2 md:pb-2">
+              <div className="shrink-0 self-end pr-0 pb-0 max-sm:translate-x-4 max-sm:-mr-1 sm:pr-1 sm:pb-1 md:pr-2 md:pb-2">
                 <VekonHeroMark interactive={false} sizePx={136} className="mx-0" />
               </div>
             </div>
@@ -933,7 +933,7 @@ export default function HomePage() {
       {openPanel === "victor" ? (
         <section
           id="victor"
-          className={`relative z-10 order-1 border-t border-black/10 bg-white px-5 pb-[5px] pt-5 max-sm:pb-[20px] sm:px-8 sm:max-lg:pb-[45px] md:px-12 lg:order-2 lg:pb-10 lg:pt-12 ${
+          className={`relative z-10 order-1 border-t border-black/10 bg-white px-5 pb-[5px] pt-3 max-sm:pb-[20px] sm:px-8 sm:pt-5 sm:max-lg:pb-[45px] md:px-12 lg:order-2 lg:pb-10 lg:pt-12 ${
             isVictorSugestoesView || isVictorRespostasView
               ? "scroll-mt-20 sm:scroll-mt-24"
               : "scroll-mt-6"
