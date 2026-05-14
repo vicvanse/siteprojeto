@@ -14,10 +14,14 @@ import type { AppLocale } from "@/i18n/routing";
 import { useSearchParams } from "next/navigation";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import {
+  Clapperboard,
+  LayoutGrid,
   Maximize2,
   Minimize2,
   Moon,
   Play,
+  Stethoscope,
+  Users,
   X,
 } from "lucide-react";
 import { HeroBackground } from "@/components/site/hero-background";
@@ -146,28 +150,28 @@ const navToggleShape = "rounded-[12px]";
 const navToggleShapeHeader = navToggleShape;
 
 const navToggleBase =
-  "group inline-flex min-h-[52px] w-auto min-w-[100px] shrink-0 flex-col items-center justify-center border px-2.5 py-1.5 text-[10px] uppercase leading-tight tracking-[0.18em] transition-colors duration-200 outline-none " +
+  "group inline-flex min-h-[52px] w-auto min-w-[108px] shrink-0 flex-row items-center justify-center gap-2 border px-2.5 py-1.5 text-[10px] uppercase leading-tight tracking-[0.18em] transition-colors duration-200 outline-none " +
   "focus-visible:ring-2 focus-visible:ring-[#404040]/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white";
 
 /** Blur só no estado inativo: backdrop-filter + fundo sólido no ativo quebra o texto em alguns browsers (Chrome/Windows). */
 const navToggleIdle =
-  "border-[#404040]/50 bg-white/72 backdrop-blur-sm text-[#525252] hover:border-[#404040] hover:bg-[#525252]/10 hover:text-[#525252]";
+  "border-black/12 bg-white/75 backdrop-blur-sm text-neutral-600 hover:border-neutral-400/70 hover:bg-neutral-200 hover:text-neutral-900";
 
 const navToggleActive =
   "border-[#404040] bg-[#525252] text-white [backdrop-filter:none] [-webkit-backdrop-filter:none]";
 
 /** Barra de navegação escura (só mobile): contorno e texto brancos. */
 const navToggleBaseMobile =
-  "group inline-flex min-h-[52px] w-auto min-w-[100px] shrink-0 flex-col items-center justify-center border px-2.5 py-1.5 text-[10px] uppercase leading-tight tracking-[0.18em] transition-colors duration-200 outline-none " +
+  "group inline-flex min-h-[52px] w-auto min-w-[100px] shrink-0 flex-row items-center justify-center gap-1.5 border px-2.5 py-1.5 text-[10px] uppercase leading-tight tracking-[0.18em] transition-colors duration-200 outline-none " +
   "focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-black";
 
 /** Botões mais estreitos na barra preta mobile. */
 const navToggleBaseMobileCompact =
-  "group inline-flex min-h-[44px] w-auto min-w-[72px] shrink-0 flex-col items-center justify-center border px-1.5 py-1 text-[9px] uppercase leading-tight tracking-[0.15em] transition-colors duration-200 outline-none " +
+  "group inline-flex min-h-[44px] w-auto min-w-[80px] shrink-0 flex-row items-center justify-center gap-1 border px-1.5 py-1 text-[9px] uppercase leading-tight tracking-[0.15em] transition-colors duration-200 outline-none " +
   "focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-black";
 
 const navToggleIdleMobile =
-  "border-white/55 bg-transparent text-white hover:border-white hover:bg-white/10";
+  "border-white/55 bg-transparent text-white hover:border-white/80 hover:bg-white/15 hover:text-white";
 
 const navToggleActiveMobile =
   "border-white bg-white text-black [backdrop-filter:none] [-webkit-backdrop-filter:none]";
@@ -211,13 +215,15 @@ function MainNavigation({
         onClick={() => pickPanel("victor")}
         className={`${tb} ${navToggleShapeHeader} ${openPanel === "victor" ? ta : ti}`}
       >
-        <span className="text-center">{t("projeto")}</span>
+        <LayoutGrid className="h-4 w-4 shrink-0" strokeWidth={2} aria-hidden />
+        <span className="min-w-0 text-center">{t("projeto")}</span>
       </button>
       <button
         type="button"
         onClick={() => pickPanel("registros")}
         className={`${tb} ${navToggleShapeHeader} ${openPanel === "registros" ? ta : ti}`}
       >
+        <Clapperboard className="h-4 w-4 shrink-0" strokeWidth={2} aria-hidden />
         <span className="min-w-0 text-center">{t("registros")}</span>
       </button>
       <button
@@ -225,14 +231,16 @@ function MainNavigation({
         onClick={() => pickPanel("clinica")}
         className={`${tb} ${navToggleShapeHeader} ${openPanel === "clinica" ? ta : ti}`}
       >
-        <span className="text-center">{t("servicos")}</span>
+        <Stethoscope className="h-4 w-4 shrink-0" strokeWidth={2} aria-hidden />
+        <span className="min-w-0 text-center">{t("servicos")}</span>
       </button>
       <button
         type="button"
         onClick={() => pickPanel("nos")}
         className={`${tb} ${navToggleShapeHeader} ${openPanel === "nos" ? ta : ti}`}
       >
-        <span className="text-center">{t("nos")}</span>
+        <Users className="h-4 w-4 shrink-0" strokeWidth={2} aria-hidden />
+        <span className="min-w-0 text-center">{t("nos")}</span>
       </button>
     </nav>
   );
@@ -804,7 +812,7 @@ export default function HomePage() {
             <div className="grid h-full min-h-0 w-full place-items-center px-2 py-2 text-center sm:py-3">
               <div className="flex max-w-full translate-y-[80px] flex-col items-center justify-center">
                 <h1
-                  className="m-0 max-w-[min(100%,36rem)] text-[3rem] font-normal uppercase leading-[0.92] tracking-[0.04em] [font-family:Helvetica,Arial,sans-serif]"
+                  className="m-0 max-w-[min(100%,36rem)] text-[3rem] font-sans font-semibold uppercase leading-[0.92] tracking-[0.04em]"
                   aria-label={tHero("projectTitle")}
                 >
                   <span className="text-black">{tHero("projectTitleHead")}</span>
