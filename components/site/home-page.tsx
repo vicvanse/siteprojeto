@@ -3,6 +3,7 @@
 import {
   useCallback,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useRef,
   useState,
@@ -50,6 +51,23 @@ import {
 } from "@/lib/site-constants";
 import { VICTOR_IMAGE_QUALITY_MAIN } from "@/lib/victor-image-quality";
 import type Player from "@vimeo/player";
+
+interface NosProfileCardEntry {
+  post: VictorFeedPost;
+  afterBody?: ReactNode;
+}
+
+function shuffleNosProfileCards(cards: NosProfileCardEntry[]): NosProfileCardEntry[] {
+  const out = cards.slice();
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const a = out[i]!;
+    const b = out[j]!;
+    out[i] = b;
+    out[j] = a;
+  }
+  return out;
+}
 
 /** Vídeos em Registros: o primeiro em destaque; os restantes em miniatura (clique promove ao bloco grande). */
 interface RegistrosVideoEntry {
@@ -622,11 +640,8 @@ export default function HomePage() {
           ? "nos"
           : "victor";
 
-  /** Cartões em «Nós»: perfis (Víctor com link; Adriel; Vitor). */
-  const nosProfileCards = useMemo((): {
-    post: VictorFeedPost;
-    afterBody?: ReactNode;
-  }[] => {
+  /** Cartões em «Nós»: perfis (Víctor com link; Adriel; Vitor) — ordem base; embaralhada ao entrar na secção. */
+  const nosProfileCardsBase = useMemo((): NosProfileCardEntry[] => {
     const cat = tNos("bioPostCategory");
     const victorBio = tNos("profileCardBio");
     const adrielBio = tNos("adrielProfileBio");
@@ -689,6 +704,41 @@ export default function HomePage() {
       { post: vitorPost },
     ];
   }, [siteLocale, tNos]);
+
+  const prevOpenPanelForNosRef = useRef<OpenPanel | null>(null);
+  const prevNosProfileCardsBaseRef = useRef<NosProfileCardEntry[] | null>(null);
+  const [nosProfileCardsShuffled, setNosProfileCardsShuffled] = useState<
+    NosProfileCardEntry[] | null
+  >(null);
+
+  useLayoutEffect(() => {
+    const prevPanel = prevOpenPanelForNosRef.current;
+    const prevBase = prevNosProfileCardsBaseRef.current;
+
+    if (openPanel === "nos") {
+      if (prevPanel !== "nos") {
+        setNosProfileCardsShuffled(shuffleNosProfileCards(nosProfileCardsBase));
+      } else if (prevBase !== nosProfileCardsBase) {
+        setNosProfileCardsShuffled((current) => {
+          if (!current) return shuffleNosProfileCards(nosProfileCardsBase);
+          const bySlug = new Map(
+            nosProfileCardsBase.map((e) => [e.post.slug, e]),
+          );
+          const next = current
+            .map((e) => bySlug.get(e.post.slug))
+            .filter((e): e is NosProfileCardEntry => e != null);
+          return next.length === current.length
+            ? next
+            : shuffleNosProfileCards(nosProfileCardsBase);
+        });
+      }
+    }
+
+    prevOpenPanelForNosRef.current = openPanel;
+    prevNosProfileCardsBaseRef.current = nosProfileCardsBase;
+  }, [openPanel, nosProfileCardsBase]);
+
+  const nosProfileCards = nosProfileCardsShuffled ?? nosProfileCardsBase;
 
   const victorEntenderPosts = useMemo(
     () => getPostsForSection("entender", siteLocale),

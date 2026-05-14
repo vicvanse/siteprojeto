@@ -42,7 +42,7 @@
   "utilBucket": {
     "ferramenta": "Tools",
     "jornais": "Journals",
-    "textos": "Resources"
+    "textos": "Material"
   },
   "incomumKind": {
     "arte": "Art",
@@ -80,12 +80,12 @@
   },
   "victor": {
     "label": "Psivortex",
-    "infoTitle": "General information",
+    "infoTitle": "Información general",
     "infoTitleShort": "Información",
-    "tabsAria": "Information sub-sections",
-    "tabNotas": "General Notes",
-    "tabIncomum": "Unusual",
-    "tabUtil": "Resources",
+    "tabsAria": "Subsecciones de información",
+    "tabNotas": "Notas generales",
+    "tabIncomum": "Inusual",
+    "tabUtil": "Utilidades",
     "tabMaterial": "Material",
     "incomumIntro": "Cosas que encontré y me parecieron poco comunes o bastante distintas:",
     "utilIntro": "Cosas útiles, esenciales en el ámbito o para crear proyectos:",

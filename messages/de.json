@@ -42,7 +42,7 @@
   "utilBucket": {
     "ferramenta": "Tools",
     "jornais": "Journals",
-    "textos": "Resources"
+    "textos": "Materialien"
   },
   "incomumKind": {
     "arte": "Art",
@@ -80,13 +80,13 @@
   },
   "victor": {
     "label": "Psivortex",
-    "infoTitle": "General information",
-    "infoTitleShort": "Information",
-    "tabsAria": "Information sub-sections",
-    "tabNotas": "General Notes",
-    "tabIncomum": "Unusual",
-    "tabUtil": "Resources",
-    "tabMaterial": "Material",
+    "infoTitle": "Allgemeine Informationen",
+    "infoTitleShort": "Informationen",
+    "tabsAria": "Unterbereiche der Informationen",
+    "tabNotas": "Allgemeine Notizen",
+    "tabIncomum": "Außergewöhnliches",
+    "tabUtil": "Nützliches",
+    "tabMaterial": "Materialien",
     "incomumIntro": "Dinge, die mir ungewöhnlich genug oder bemerkenswert anders vorkamen:",
     "utilIntro": "Nützliches, das im Fach oder für Projekte unverzichtbar ist:",
     "materialIntro": "Längere Texte, Leitfäden und Nachschlagematerial zum Lesen:"

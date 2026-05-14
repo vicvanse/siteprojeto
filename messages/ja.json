@@ -42,7 +42,7 @@
   "utilBucket": {
     "ferramenta": "Tools",
     "jornais": "Journals",
-    "textos": "Resources"
+    "textos": "資料"
   },
   "incomumKind": {
     "arte": "Art",
@@ -80,13 +80,13 @@
   },
   "victor": {
     "label": "Psivortex",
-    "infoTitle": "General information",
+    "infoTitle": "一般情報",
     "infoTitleShort": "情報",
-    "tabsAria": "Information sub-sections",
-    "tabNotas": "General Notes",
-    "tabIncomum": "Unusual",
-    "tabUtil": "Resources",
-    "tabMaterial": "Material",
+    "tabsAria": "情報のサブセクション",
+    "tabNotas": "一般ノート",
+    "tabIncomum": "ユニーク",
+    "tabUtil": "リソース",
+    "tabMaterial": "資料",
     "incomumIntro": "出会って、一見ふつうではない／十分違うと感じたもの：",
     "utilIntro": "分野やプロづくりに欠かせない、役に立つ内容：",
     "materialIntro": "長文、ガイド、参照用の読み物や資料："
