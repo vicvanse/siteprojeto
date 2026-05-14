@@ -1100,10 +1100,7 @@ export default function HomePage() {
         >
           <div className="mx-auto w-full max-w-[40rem]">
             <div className="text-center">
-              <p className="font-mono text-[10px] uppercase tracking-[0.35em] text-black/40">
-                {tClinica("label")}
-              </p>
-              <h2 className="mt-3 font-sans text-[clamp(2rem,6vw,3.5rem)] font-semibold leading-[1.05] tracking-[-0.06em] text-black sm:mt-4">
+              <h2 className="font-sans text-[clamp(2rem,6vw,3.5rem)] font-semibold leading-[1.05] tracking-[-0.06em] text-black">
                 {tClinica("title")}
               </h2>
             </div>
