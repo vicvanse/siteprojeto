@@ -802,9 +802,9 @@ export default function HomePage() {
         <div className="relative z-10 flex min-h-0 w-full max-w-full flex-1 flex-col overflow-visible">
           <div className="mx-auto grid min-h-0 w-full max-w-7xl flex-1 grid-rows-[1fr_auto] px-2">
             <div className="grid h-full min-h-0 w-full place-items-center px-2 py-2 text-center sm:py-3">
-              <div className="flex max-w-full translate-y-[50px] flex-col items-center justify-center">
+              <div className="flex max-w-full translate-y-[80px] flex-col items-center justify-center">
                 <h1
-                  className="m-0 max-w-[min(100%,36rem)] text-[clamp(1.85rem,7vw,4.5rem)] font-normal leading-[0.82] tracking-[-0.02em] [font-family:var(--font-signature)]"
+                  className="m-0 max-w-[min(100%,36rem)] text-[3rem] font-normal uppercase leading-[0.92] tracking-[0.04em] [font-family:Helvetica,Arial,sans-serif]"
                   aria-label={tHero("projectTitle")}
                 >
                   <span className="text-black">{tHero("projectTitleHead")}</span>
@@ -830,7 +830,7 @@ export default function HomePage() {
                 className="pointer-events-none min-w-0 shrink pl-0.5 pb-0.5 sm:pl-1 sm:pb-1 md:pl-2 md:pb-2"
                 aria-hidden
               >
-                <div className="origin-bottom-left scale-[0.38] sm:scale-[0.45] md:scale-50">
+                <div className="origin-bottom-left scale-[0.266] sm:scale-[0.315] md:scale-[0.35]">
                   <div className="m-0 text-[clamp(2.5rem,10vw,7rem)] font-sans font-semibold leading-[0.88] tracking-[-0.06em] text-black">
                     <span className="flex flex-col items-end gap-0">
                       <span className="flex items-baseline gap-[0.14em] text-black/18">
