@@ -26,6 +26,7 @@ import {
 } from "lucide-react";
 import { HeroBackground } from "@/components/site/hero-background";
 import { HeaderLocaleSelect } from "@/components/site/header-locale-select";
+import { ProjectHexMark } from "@/components/site/project-hex-mark";
 import { VekonHeroMark } from "@/components/site/vekon-hero-mark";
 import { SiteSocialFooter } from "@/components/site/site-social-footer";
 import { TextPostCard } from "@/components/victor/text-post-card";
@@ -607,7 +608,6 @@ export default function HomePage() {
   const tClinica = useTranslations("clinica");
   const tReg = useTranslations("registros");
   const tNos = useTranslations("nosSection");
-  const tProfile = useTranslations("profile");
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const router = useRouter();
@@ -620,13 +620,13 @@ export default function HomePage() {
           ? "nos"
           : "victor";
 
-  /** Cartão em «Nós»: texto do perfil que aparecia no hero (nome + bio). */
+  /** Cartão em «Nós»: texto do perfil (nome + bio) — cópia em `nosSection` com «Víctor». */
   const nosVictorBioPost = useMemo((): VictorFeedPost => {
-    const bio = tProfile("bio");
+    const bio = tNos("profileCardBio");
     return {
       section: "notas-gerais",
       slug: "_nos-victor-profile",
-      title: tProfile("name"),
+      title: tNos("profileCardName"),
       publishedAt: "2026-05-01",
       dateLabel: formatPostDateForLocale("2026-05-01", siteLocale),
       category: tNos("bioPostCategory"),
@@ -635,7 +635,7 @@ export default function HomePage() {
       skipPostDetailPage: true,
       feedTitleAlign: "center",
     };
-  }, [siteLocale, tNos, tProfile]);
+  }, [siteLocale, tNos]);
 
   const isVictorSugestoesView = pathname === "/victor/sugestoes";
   const isVictorRespostasView = pathname === "/victor/respostas";
@@ -803,7 +803,7 @@ export default function HomePage() {
 
       <section
         id="top"
-        className="relative order-1 isolate flex min-h-[min(44vh,300px)] w-full min-w-0 flex-col overflow-visible bg-[#f4f4f5] px-5 pb-0 pt-0 sm:min-h-[min(42vh,320px)] sm:px-8 md:px-12 lg:min-h-[min(40vh,360px)]"
+        className="relative order-1 isolate flex min-h-[min(44vh,300px)] w-full min-w-0 flex-col overflow-visible bg-[#f3f4f6] px-5 pb-0 pt-0 sm:min-h-[min(42vh,320px)] sm:px-8 md:px-12 lg:min-h-[min(40vh,360px)]"
       >
         <HeroBackground />
 
@@ -811,13 +811,10 @@ export default function HomePage() {
           <div className="mx-auto grid min-h-0 w-full max-w-7xl flex-1 grid-rows-[1fr_auto] px-2">
             <div className="grid h-full min-h-0 w-full place-items-center px-2 py-2 text-center sm:py-3">
               <div className="flex max-w-full translate-y-[80px] flex-col items-center justify-center">
-                <h1
-                  className="m-0 max-w-[min(100%,36rem)] text-[3rem] font-sans font-semibold uppercase leading-[0.92] tracking-[0.04em]"
-                  aria-label={tHero("projectTitle")}
-                >
-                  <span className="text-black">{tHero("projectTitleHead")}</span>
-                  <span className="text-black/18">{tHero("projectTitleMark")}</span>
-                </h1>
+                <h1 className="sr-only">{tHero("projectTitle")}</h1>
+                <ProjectHexMark
+                  label={`${tHero("projectTitleHead")} ${tHero("projectTitleMark")}`.toUpperCase()}
+                />
                 {INSTAGRAM_URL ? (
                   <footer className="mt-4 flex w-full justify-center sm:mt-5">
                     <a
@@ -1069,6 +1066,16 @@ export default function HomePage() {
             </div>
             <p className="mx-auto mt-8 max-w-prose text-center text-[15px] leading-[1.8] text-black/70 [text-wrap:pretty] sm:mt-10">
               {tNos("intro")}
+            </p>
+            <p className="mt-6 text-center">
+              <a
+                href={tNos("websiteUrl")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-mono text-[11px] uppercase tracking-[0.28em] text-[#525252] underline decoration-[#525252]/30 underline-offset-[5px] transition hover:text-black hover:decoration-black/35 sm:text-[12px]"
+              >
+                {tNos("websiteLinkText")}
+              </a>
             </p>
             <div className="mt-10">
               <TextPostCard post={nosVictorBioPost} />

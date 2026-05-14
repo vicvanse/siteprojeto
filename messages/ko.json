@@ -14,7 +14,11 @@
     "label": "우리",
     "title": "소개",
     "intro": "콜렉티브와 프로젝트 목표에 대한 내용을 이 페이지에 준비 중입니다.",
-    "bioPostCategory": "프로필"
+    "bioPostCategory": "프로필",
+    "profileCardName": "Víctor Correard",
+    "profileCardBio": "Víctor Correard. USP 심리학 연구과정 석사 재학 중. 상파울루 대학교 심리학 연구소에서 심리학. 과라칭게타공업고등학교 전자과.",
+    "websiteUrl": "https://victorcorreard.com",
+    "websiteLinkText": "victorcorreard.com"
   },
   "time": {
     "local": "local time"
@@ -68,7 +72,7 @@
     "vídeos": "videos"
   },
   "victor": {
-    "label": "victor",
+    "label": "Psivortex",
     "infoTitle": "General information",
     "infoTitleShort": "정보",
     "tabsAria": "Information sub-sections",

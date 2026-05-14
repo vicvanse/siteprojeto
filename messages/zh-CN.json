@@ -14,7 +14,11 @@
     "label": "我们",
     "title": "关于我们",
     "intro": "我们正在准备本页，以介绍团队与项目目标。",
-    "bioPostCategory": "简介"
+    "bioPostCategory": "简介",
+    "profileCardName": "Víctor Correard",
+    "profileCardBio": "Víctor Correard。在圣保罗大学（USP）心理学研究所攻读硕士。于圣保罗大学心理学研究所修读心理学。瓜拉廷格塔技术与工业学校，电子专业。",
+    "websiteUrl": "https://victorcorreard.com",
+    "websiteLinkText": "victorcorreard.com"
   },
   "time": {
     "local": "local time"
@@ -68,7 +72,7 @@
     "vídeos": "videos"
   },
   "victor": {
-    "label": "victor",
+    "label": "Psivortex",
     "infoTitle": "General information",
     "infoTitleShort": "信息",
     "tabsAria": "Information sub-sections",

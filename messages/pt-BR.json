@@ -14,7 +14,11 @@
     "label": "Nós",
     "title": "Quem somos",
     "intro": "Estamos a preparar esta página com informação sobre o colectivo e o propósito do projeto.",
-    "bioPostCategory": "Perfil"
+    "bioPostCategory": "Perfil",
+    "profileCardName": "Víctor Correard",
+    "profileCardBio": "Víctor Correard. Mestrado em andamento no Instituto de Psicologia da USP. Psicologia no Instituto de Psicologia da USP. Colégio Técnico e Industrial de Guaratinguetá, formação em Eletrônica.",
+    "websiteUrl": "https://victorcorreard.com",
+    "websiteLinkText": "victorcorreard.com"
   },
   "time": { "local": "hora local" },
   "feed": {
@@ -57,7 +61,7 @@
     "vídeos": "vídeos"
   },
   "victor": {
-    "label": "victor",
+    "label": "Psivortex",
     "infoTitle": "Informações Gerais",
     "infoTitleShort": "Informações",
     "tabsAria": "Subsecções de informações",

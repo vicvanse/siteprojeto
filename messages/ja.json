@@ -14,7 +14,11 @@
     "label": "私たち",
     "title": "私たちについて",
     "intro": "コレクティブとプロジェクトの目的について、こちらのページを準備しています。",
-    "bioPostCategory": "プロフィール"
+    "bioPostCategory": "プロフィール",
+    "profileCardName": "Víctor Correard",
+    "profileCardBio": "Víctor Correard. USP心理学研究科で修士課程在学中。サンパウロ大学心理学研究所にて心理学。グアラチンゲタの工業高校で電子工学。",
+    "websiteUrl": "https://victorcorreard.com",
+    "websiteLinkText": "victorcorreard.com"
   },
   "time": {
     "local": "local time"
@@ -68,7 +72,7 @@
     "vídeos": "videos"
   },
   "victor": {
-    "label": "victor",
+    "label": "Psivortex",
     "infoTitle": "General information",
     "infoTitleShort": "情報",
     "tabsAria": "Information sub-sections",

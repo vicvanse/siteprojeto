@@ -14,7 +14,11 @@
     "label": "我們",
     "title": "關於我們",
     "intro": "我們正在準備本頁，以介紹團隊與專案目標。",
-    "bioPostCategory": "簡介"
+    "bioPostCategory": "簡介",
+    "profileCardName": "Víctor Correard",
+    "profileCardBio": "Víctor Correard。就讀聖保羅大學（USP）心理學研究所碩士。於聖保羅大學心理學研究所修讀心理學。瓜拉廷格塔工業技術學校，電子專長。",
+    "websiteUrl": "https://victorcorreard.com",
+    "websiteLinkText": "victorcorreard.com"
   },
   "time": {
     "local": "local time"
@@ -68,7 +72,7 @@
     "vídeos": "videos"
   },
   "victor": {
-    "label": "victor",
+    "label": "Psivortex",
     "infoTitle": "General information",
     "infoTitleShort": "資訊",
     "tabsAria": "Information sub-sections",

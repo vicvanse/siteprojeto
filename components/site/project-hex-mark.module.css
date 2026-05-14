@@ -1,0 +1,167 @@
+/* Hexágono exterior + anéis no círculo interior (eco Vekon / PixelLife). */
+
+.stack {
+  position: relative;
+  width: min(78vw, 240px);
+  height: min(78vw, 240px);
+  max-width: 240px;
+  max-height: 240px;
+}
+
+.svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.hexSpin {
+  transform-origin: 0px 0px;
+  animation: projectHexSpin 48s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hexSpin {
+    animation: none;
+  }
+}
+
+@keyframes projectHexSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ringSpin {
+  transform-origin: 0px 0px;
+  animation: projectRingSpin 3.2s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ringSpin {
+    animation: none;
+  }
+}
+
+@keyframes projectRingSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ringPulse {
+  animation: projectRingPulse 2.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ringPulse {
+    animation: none;
+  }
+}
+
+@keyframes projectRingPulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    stroke-dasharray: 20 8;
+  }
+  50% {
+    opacity: 0.9;
+    stroke-dasharray: 24 6;
+  }
+}
+
+.ringWobble {
+  transform-origin: 0px 0px;
+  animation: projectRingWobble 2.2s ease-in-out infinite;
+  opacity: 0.85;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ringWobble {
+    animation: none;
+  }
+}
+
+@keyframes projectRingWobble {
+  0%,
+  100% {
+    transform: rotate(-2deg) scale(1);
+  }
+  50% {
+    transform: rotate(2deg) scale(1.01);
+  }
+}
+
+.ringBase {
+  stroke: #737373;
+}
+
+.ringInnerThin {
+  stroke: #525252;
+}
+
+/* Título por cima — mesmo efeito pontilhado do wordmark Vekon, maior para o hero. */
+.titleShell {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+  line-height: 1;
+  margin-bottom: 0.65rem;
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+.titleMeasure {
+  font-size: clamp(1rem, 3.8vw, 1.45rem);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: transparent;
+}
+
+.titleDots {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1rem, 3.8vw, 1.45rem);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: transparent;
+  background-image: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.88) 1.5px,
+    transparent 1.75px
+  );
+  background-size: 5px 5px;
+  background-position: 0 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.1));
+  animation: projectTitleShimmer 6.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .titleDots {
+    animation: none;
+  }
+}
+
+@keyframes projectTitleShimmer {
+  0%,
+  100% {
+    background-position: 0 0;
+    opacity: 0.94;
+  }
+  50% {
+    background-position: 14px 8px;
+    opacity: 1;
+  }
+}

@@ -14,7 +14,11 @@
     "label": "Us",
     "title": "Who we are",
     "intro": "We are preparing this page with more about the collective and the aims of the project.",
-    "bioPostCategory": "Profile"
+    "bioPostCategory": "Profile",
+    "profileCardName": "Víctor Correard",
+    "profileCardBio": "Víctor Correard. Master's in progress at the Institute of Psychology, USP. Psychology at the Institute of Psychology, University of São Paulo. Technical and Industrial School of Guaratinguetá, electronics training.",
+    "websiteUrl": "https://victorcorreard.com",
+    "websiteLinkText": "victorcorreard.com"
   },
   "time": { "local": "local time" },
   "feed": {
@@ -57,7 +61,7 @@
     "vídeos": "videos"
   },
   "victor": {
-    "label": "victor",
+    "label": "Psivortex",
     "infoTitle": "General information",
     "infoTitleShort": "Information",
     "tabsAria": "Information sub-sections",
