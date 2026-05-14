@@ -803,14 +803,14 @@ export default function HomePage() {
 
       <section
         id="top"
-        className="relative order-1 isolate flex min-h-[min(44vh,300px)] w-full min-w-0 flex-col overflow-visible bg-[#f3f4f6] px-5 pb-0 pt-0 sm:min-h-[min(42vh,320px)] sm:px-8 md:px-12 lg:min-h-[min(40vh,360px)]"
+        className="relative order-1 isolate flex min-h-[min(37.4vh,255px)] w-full min-w-0 flex-col overflow-visible bg-[#f3f4f6] px-5 pb-0 pt-0 sm:min-h-[min(35.7vh,272px)] sm:px-8 md:px-12 lg:min-h-[min(34vh,306px)]"
       >
         <HeroBackground />
 
         <div className="relative z-10 flex min-h-0 w-full max-w-full flex-1 flex-col overflow-visible">
           <div className="mx-auto grid min-h-0 w-full max-w-7xl flex-1 grid-rows-[1fr_auto] px-2">
             <div className="grid h-full min-h-0 w-full place-items-center px-2 py-2 text-center sm:py-3">
-              <div className="flex max-w-full translate-y-[80px] flex-col items-center justify-center">
+              <div className="flex max-w-full translate-y-[68px] flex-col items-center justify-center">
                 <h1 className="sr-only">{tHero("projectTitle")}</h1>
                 <ProjectHexMark
                   label={`${tHero("projectTitleHead")} ${tHero("projectTitleMark")}`.toUpperCase()}

@@ -8,6 +8,18 @@
   max-height: 240px;
 }
 
+/* Wordmark centrado sobre o hex/círculo (mesmo padrão que VekonHeroMark). */
+.wordmarkOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  padding-inline: 0.65rem;
+}
+
 .svg {
   display: block;
   width: 100%;
@@ -107,13 +119,12 @@
   stroke: #525252;
 }
 
-/* Título por cima — mesmo efeito pontilhado do wordmark Vekon, maior para o hero. */
+/* Título sobreposto ao centro — mesmo efeito pontilhado do wordmark Vekon. */
 .titleShell {
   position: relative;
   display: inline-block;
   user-select: none;
   line-height: 1;
-  margin-bottom: 0.65rem;
   font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
 }
 

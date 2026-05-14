@@ -14,7 +14,7 @@ export interface ProjectHexMarkProps {
 }
 
 /**
- * Marca «Projeto X»: título com efeito pontilhado (como Vekon) por cima,
+ * Marca «Projeto X»: título pontilhado centrado sobre o emblema (como Vekon),
  * hexágono exterior a girar lentamente, círculo interior com anéis animados.
  * Decorativo: use um `<h1 className="sr-only">` junto para acessibilidade / SEO.
  */
@@ -26,19 +26,7 @@ export function ProjectHexMark({
   const gradientId = `projHexRingGrad-${uid}`;
 
   return (
-    <div
-      className={`flex flex-col items-center text-center ${className}`}
-      aria-hidden
-    >
-      <div className={styles.titleShell}>
-        <div className={styles.titleMeasure} aria-hidden>
-          {label}
-        </div>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className={styles.titleDots}>{label}</span>
-        </div>
-      </div>
-
+    <div className={`mx-auto block w-fit text-center ${className}`} aria-hidden>
       <div className={styles.stack}>
         <svg
           className={styles.svg}
@@ -114,6 +102,17 @@ export function ProjectHexMark({
             </g>
           </g>
         </svg>
+
+        <div className={styles.wordmarkOverlay}>
+          <div className={styles.titleShell}>
+            <div className={styles.titleMeasure} aria-hidden>
+              {label}
+            </div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className={styles.titleDots}>{label}</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
