@@ -13,10 +13,15 @@
   "nosSection": {
     "label": "Nous",
     "title": "Qui nous sommes",
-    "intro": "Nous préparons cette page avec davantage d'informations sur le collectif et les objectifs du projet.",
+    "intro": "",
     "bioPostCategory": "Profil",
     "profileCardName": "Víctor Correard",
     "profileCardBio": "Víctor Correard. Master en cours à l'Institut de psychologie de l'USP. Psychologie à l'Institut de psychologie de l'université de São Paulo. Lycée technique et industriel de Guaratinguetá, formation en électronique.",
+    "profileCardImageAlt": "Portrait de Víctor Correard (photo de profil).",
+    "adrielProfileName": "Adriel Lourenço",
+    "adrielProfileBio": "Étudiant en psychologie à l'Institut de psychologie de l'USP.",
+    "vitorProfileName": "Vitor",
+    "vitorProfileBio": "Design professionnel, basé à Rio de Janeiro.",
     "websiteUrl": "https://victorcorreard.com",
     "websiteLinkText": "victorcorreard.com"
   },
@@ -79,8 +84,10 @@
     "tabNotas": "General Notes",
     "tabIncomum": "Unusual",
     "tabUtil": "Resources",
+    "tabMaterial": "Material",
     "incomumIntro": "Choses que j’ai trouvées et qui m’ont paru assez inhabituelles ou originales :",
-    "utilIntro": "Choses utiles, indispensables dans le domaine ou pour monter des projets :"
+    "utilIntro": "Choses utiles, indispensables dans le domaine ou pour monter des projets :",
+    "materialIntro": "Textes de fond, guides et lectures de référence :"
   },
   "clinica": {
     "label": "Services",
@@ -162,8 +169,8 @@
   },
   "sugestoes": {
     "title": "Suggestions",
-    "backAria": "Back to victor archive",
-    "back": "victor",
+    "backAria": "Retour à l’accueil du projet",
+    "back": "Projet",
     "introEyebrow": "En quête de sens",
     "qr1": "Cet espace existe pour rassembler des recommandations.",
     "qr2": "Parmi tout ce que vous avez vu, fait ou trouvé, qu'est-ce qui devrait être transmis à quelqu'un d'important, à une version antérieure de vous-même, ou simplement pour ne pas se perdre ?",

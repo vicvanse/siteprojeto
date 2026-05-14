@@ -7,6 +7,7 @@ import {
   useRef,
   useState,
   type MouseEvent,
+  type ReactNode,
 } from "react";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
@@ -29,12 +30,17 @@ import { HeaderLocaleSelect } from "@/components/site/header-locale-select";
 import { ProjectHexMark } from "@/components/site/project-hex-mark";
 import { VekonHeroMark } from "@/components/site/vekon-hero-mark";
 import { SiteSocialFooter } from "@/components/site/site-social-footer";
+import { ImagePostCard } from "@/components/victor/image-post-card";
 import { TextPostCard } from "@/components/victor/text-post-card";
-import { PostsFeed } from "@/components/victor/posts-feed";
+import {
+  PostsFeed,
+  UTILIDADE_BUCKETS_WITHOUT_TEXTOS,
+} from "@/components/victor/posts-feed";
 import { VictorRespostasPanel } from "@/components/victor/victor-respostas-panel";
 import { VictorSugestoesPanel } from "@/components/victor/victor-sugestoes-panel";
 import {
   getPostsForSection,
+  getUtilidadeKind,
   type VictorFeedPost,
 } from "@/data/victor-notes-posts";
 import { formatPostDateForLocale } from "@/lib/victor-post-i18n";
@@ -161,48 +167,29 @@ const navToggleIdle =
 const navToggleActive =
   "border-[#404040] bg-[#525252] text-white [backdrop-filter:none] [-webkit-backdrop-filter:none]";
 
-/** Barra de navegação escura (só mobile): contorno e texto brancos. */
-const navToggleBaseMobile =
-  "group inline-flex min-h-[52px] w-auto min-w-[100px] shrink-0 flex-row items-center justify-center gap-1.5 border px-2.5 py-1.5 text-[10px] uppercase leading-tight tracking-[0.18em] transition-colors duration-200 outline-none " +
-  "focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-black";
-
-/** Botões mais estreitos na barra preta mobile. */
-const navToggleBaseMobileCompact =
+/** Botões compactos no header mobile: mesma geometria que antes, tema claro (fundo branco). */
+const navToggleBaseCompactLight =
   "group inline-flex min-h-[44px] w-auto min-w-[80px] shrink-0 flex-row items-center justify-center gap-1 border px-1.5 py-1 text-[9px] uppercase leading-tight tracking-[0.15em] transition-colors duration-200 outline-none " +
-  "focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-black";
-
-const navToggleIdleMobile =
-  "border-white/55 bg-transparent text-white hover:border-white/80 hover:bg-white/15 hover:text-white";
-
-const navToggleActiveMobile =
-  "border-white bg-white text-black [backdrop-filter:none] [-webkit-backdrop-filter:none]";
+  "focus-visible:ring-2 focus-visible:ring-[#404040]/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white";
 
 type OpenPanel = "victor" | "clinica" | "registros" | "nos";
 
 interface MainNavigationProps {
   openPanel: OpenPanel;
   pickPanel: (next: OpenPanel) => void;
-  /** `mobileDark`: fundo preto no header (max-sm). */
-  variant?: "light" | "mobileDark";
-  /** Barra só mobile: botões mais compactos. */
+  /** Barra só mobile: botões mais compactos (mesmo tema claro que ≥sm). */
   compactHeader?: boolean;
 }
 
 function MainNavigation({
   openPanel,
   pickPanel,
-  variant = "light",
   compactHeader = false,
 }: MainNavigationProps) {
   const t = useTranslations("nav");
-  const tb =
-    variant === "mobileDark"
-      ? compactHeader
-        ? navToggleBaseMobileCompact
-        : navToggleBaseMobile
-      : navToggleBase;
-  const ti = variant === "mobileDark" ? navToggleIdleMobile : navToggleIdle;
-  const ta = variant === "mobileDark" ? navToggleActiveMobile : navToggleActive;
+  const tb = compactHeader ? navToggleBaseCompactLight : navToggleBase;
+  const ti = navToggleIdle;
+  const ta = navToggleActive;
 
   const navJustifyClass = "w-full justify-center";
 
@@ -608,6 +595,7 @@ export default function HomePage() {
   const tClinica = useTranslations("clinica");
   const tReg = useTranslations("registros");
   const tNos = useTranslations("nosSection");
+  const nosIntro = tNos("intro").trim();
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const router = useRouter();
@@ -620,22 +608,88 @@ export default function HomePage() {
           ? "nos"
           : "victor";
 
-  /** Cartão em «Nós»: texto do perfil (nome + bio) — cópia em `nosSection` com «Víctor». */
-  const nosVictorBioPost = useMemo((): VictorFeedPost => {
-    const bio = tNos("profileCardBio");
-    return {
+  /** Cartões em «Nós»: perfis (Víctor com link; Adriel; Vitor). */
+  const nosProfileCards = useMemo((): {
+    post: VictorFeedPost;
+    afterBody?: ReactNode;
+  }[] => {
+    const cat = tNos("bioPostCategory");
+    const victorBio = tNos("profileCardBio");
+    const adrielBio = tNos("adrielProfileBio");
+    const vitorBio = tNos("vitorProfileBio");
+
+    const victorPost: VictorFeedPost = {
       section: "notas-gerais",
       slug: "_nos-victor-profile",
       title: tNos("profileCardName"),
       publishedAt: "2026-05-01",
       dateLabel: formatPostDateForLocale("2026-05-01", siteLocale),
-      category: tNos("bioPostCategory"),
-      excerpt: bio,
-      body: [bio],
+      category: cat,
+      excerpt: victorBio,
+      body: [victorBio],
+      imageSrc: "/media/hover/eu9.png",
+      imageAlt: tNos("profileCardImageAlt"),
       skipPostDetailPage: true,
       feedTitleAlign: "center",
     };
+    const adrielPost: VictorFeedPost = {
+      section: "notas-gerais",
+      slug: "_nos-adriel-lourenco",
+      title: tNos("adrielProfileName"),
+      publishedAt: "2026-05-02",
+      dateLabel: formatPostDateForLocale("2026-05-02", siteLocale),
+      category: cat,
+      excerpt: adrielBio,
+      body: [adrielBio],
+      skipPostDetailPage: true,
+      feedTitleAlign: "center",
+    };
+    const vitorPost: VictorFeedPost = {
+      section: "notas-gerais",
+      slug: "_nos-vitor",
+      title: tNos("vitorProfileName"),
+      publishedAt: "2026-05-03",
+      dateLabel: formatPostDateForLocale("2026-05-03", siteLocale),
+      category: cat,
+      excerpt: vitorBio,
+      body: [vitorBio],
+      skipPostDetailPage: true,
+      feedTitleAlign: "center",
+    };
+
+    return [
+      {
+        post: victorPost,
+        afterBody: (
+          <a
+            href={tNos("websiteUrl")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono text-[11px] uppercase tracking-[0.28em] text-[#525252] underline decoration-[#525252]/30 underline-offset-[5px] transition hover:text-black hover:decoration-black/35 sm:text-[12px]"
+          >
+            {tNos("websiteLinkText")}
+          </a>
+        ),
+      },
+      { post: adrielPost },
+      { post: vitorPost },
+    ];
   }, [siteLocale, tNos]);
+
+  const victorEntenderPosts = useMemo(
+    () => getPostsForSection("entender", siteLocale),
+    [siteLocale],
+  );
+  const victorUtilidadesPosts = useMemo(
+    () =>
+      victorEntenderPosts.filter((p) => getUtilidadeKind(p) !== "textos"),
+    [victorEntenderPosts],
+  );
+  const victorMaterialPosts = useMemo(
+    () =>
+      victorEntenderPosts.filter((p) => getUtilidadeKind(p) === "textos"),
+    [victorEntenderPosts],
+  );
 
   const isVictorSugestoesView = pathname === "/victor/sugestoes";
   const isVictorRespostasView = pathname === "/victor/respostas";
@@ -645,9 +699,9 @@ export default function HomePage() {
   const [registrosBandDark, setRegistrosBandDark] = useState(
     () => Boolean(REGISTROS_VIDEOS[0]?.darkBand),
   );
-  /** Subsecção em «victor → Informações Gerais»: Notas | Incomum (apreciar) | Utilidades (entender). */
+  /** Subsecção em «victor → Informações Gerais»: Notas | Utilidades | Material. */
   const [victorInfoTab, setVictorInfoTab] = useState<
-    "notas-gerais" | "incomum" | "utilidades"
+    "notas-gerais" | "utilidades" | "material"
   >("notas-gerais");
   /** No telemóvel, o foco no <button> pós-toque desloca a janela; evitamos o scroll-into-view do focus. */
   const onVictorInfoTabButtonDown = (e: MouseEvent<HTMLButtonElement>) => {
@@ -681,11 +735,7 @@ export default function HomePage() {
 
   useEffect(() => {
     const tab = searchParams.get("tab");
-    if (
-      tab === "notas-gerais" ||
-      tab === "incomum" ||
-      tab === "utilidades"
-    ) {
+    if (tab === "notas-gerais" || tab === "utilidades" || tab === "material") {
       setVictorInfoTab(tab);
     }
   }, [searchParams]);
@@ -776,17 +826,16 @@ export default function HomePage() {
       {/* Só navegação sticky; o hero (cinza claro + identidade) fica na secção seguinte, mais baixo que o antigo 70vh. */}
       <div className="order-0 shrink-0 bg-white">
         <header className="relative z-40 shrink-0">
-          <div className="sticky top-0 z-40 border-b border-white/12 bg-black py-2 sm:hidden">
+          <div className="sticky top-0 z-40 border-b border-black/[0.08] bg-white py-2 sm:hidden">
             <div className="mx-auto flex w-full max-w-[1600px] min-w-0 items-center gap-2 px-3">
               <div className="flex min-w-0 flex-1 justify-center">
                 <MainNavigation
                   compactHeader
-                  variant="mobileDark"
                   openPanel={openPanel}
                   pickPanel={pickPanel}
                 />
               </div>
-              <HeaderLocaleSelect variant="dark" />
+              <HeaderLocaleSelect variant="light" />
             </div>
           </div>
 
@@ -839,7 +888,15 @@ export default function HomePage() {
                   <div className="m-0 text-[clamp(2.5rem,10vw,7rem)] font-sans font-semibold leading-[0.88] tracking-[-0.06em] text-black">
                     <span className="flex flex-col items-end gap-0">
                       <span className="flex items-baseline gap-[0.14em] text-black/18">
-                        <SpinStar className="shrink-0" />
+                        <a
+                          href={tNos("websiteUrl")}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="pointer-events-auto inline-flex shrink-0 items-baseline rounded-sm outline-none transition-opacity hover:opacity-70 focus-visible:ring-2 focus-visible:ring-[#404040]/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f3f4f6]"
+                          aria-label={tNos("websiteLinkText")}
+                        >
+                          <SpinStar className="shrink-0" />
+                        </a>
                         <span>{tHero("nameFirst")}</span>
                       </span>
                       <span className="-mt-[0.18em] block text-black">
@@ -925,36 +982,36 @@ export default function HomePage() {
                     <button
                       type="button"
                       role="tab"
-                      id="victor-tab-incomum"
-                      aria-selected={victorInfoTab === "incomum"}
-                      aria-controls="victor-panel-incomum"
+                      id="victor-tab-utilidades"
+                      aria-selected={victorInfoTab === "utilidades"}
+                      aria-controls="victor-panel-utilidades"
                       onMouseDown={onVictorInfoTabButtonDown}
-                      onClick={() => setVictorInfoTab("incomum")}
+                      onClick={() => setVictorInfoTab("utilidades")}
                       className={
-                        victorInfoTab === "incomum"
+                        victorInfoTab === "utilidades"
                           ? `${navToggleBase} ${navToggleShape} ${navToggleActive} min-h-0 shrink-0 px-4 py-2.5 text-balance`
                           : `${navToggleBase} ${navToggleShape} ${navToggleIdle} min-h-0 shrink-0 px-4 py-2.5 text-balance`
                       }
                     >
-                      {tVictor("tabIncomum")}
+                      {tVictor("tabUtil")}
+                    </button>
+                    <button
+                      type="button"
+                      role="tab"
+                      id="victor-tab-material"
+                      aria-selected={victorInfoTab === "material"}
+                      aria-controls="victor-panel-material"
+                      onMouseDown={onVictorInfoTabButtonDown}
+                      onClick={() => setVictorInfoTab("material")}
+                      className={
+                        victorInfoTab === "material"
+                          ? `${navToggleBase} ${navToggleShape} ${navToggleActive} min-h-0 shrink-0 px-4 py-2.5 text-balance`
+                          : `${navToggleBase} ${navToggleShape} ${navToggleIdle} min-h-0 shrink-0 px-4 py-2.5 text-balance`
+                      }
+                    >
+                      {tVictor("tabMaterial")}
                     </button>
                   </div>
-                  <button
-                    type="button"
-                    role="tab"
-                    id="victor-tab-utilidades"
-                    aria-selected={victorInfoTab === "utilidades"}
-                    aria-controls="victor-panel-utilidades"
-                    onMouseDown={onVictorInfoTabButtonDown}
-                    onClick={() => setVictorInfoTab("utilidades")}
-                    className={
-                      victorInfoTab === "utilidades"
-                        ? `${navToggleBase} ${navToggleShape} ${navToggleActive} min-h-0 shrink-0 px-4 py-2.5 text-balance`
-                        : `${navToggleBase} ${navToggleShape} ${navToggleIdle} min-h-0 shrink-0 px-4 py-2.5 text-balance`
-                    }
-                  >
-                    {tVictor("tabUtil")}
-                  </button>
                 </div>
 
                 <div className="mx-auto mt-8 w-full border-t border-black/10 pt-8 sm:mt-10 sm:pt-10">
@@ -972,24 +1029,7 @@ export default function HomePage() {
                         />
                       </div>
                     </div>
-                  ) : victorInfoTab === "incomum" ? (
-                    <div
-                      id="victor-panel-incomum"
-                      role="tabpanel"
-                      aria-labelledby="victor-tab-incomum"
-                    >
-                      <p className="mx-auto mb-0 hidden max-w-2xl text-center text-[15px] leading-[1.8] text-black [text-wrap:pretty] sm:max-w-3xl md:mb-8 md:block">
-                        {tVictor("incomumIntro")}
-                      </p>
-                      <div className="rounded-lg bg-[#f4f4f5] p-4 sm:p-6">
-                        <PostsFeed
-                          posts={getPostsForSection("apreciar", siteLocale)}
-                          feedId="apreciar"
-                          incomumBucketToggle
-                        />
-                      </div>
-                    </div>
-                  ) : (
+                  ) : victorInfoTab === "utilidades" ? (
                     <div
                       id="victor-panel-utilidades"
                       role="tabpanel"
@@ -1001,9 +1041,27 @@ export default function HomePage() {
 
                       <div className="mt-8 rounded-lg bg-[#f4f4f5] p-4 sm:p-6">
                         <PostsFeed
-                          posts={getPostsForSection("entender", siteLocale)}
-                          feedId="entender"
+                          posts={victorUtilidadesPosts}
+                          feedId="entender-util"
                           utilidadeBucketToggle
+                          utilidadeBuckets={UTILIDADE_BUCKETS_WITHOUT_TEXTOS}
+                        />
+                      </div>
+                    </div>
+                  ) : (
+                    <div
+                      id="victor-panel-material"
+                      role="tabpanel"
+                      aria-labelledby="victor-tab-material"
+                    >
+                      <p className="mx-auto max-w-2xl text-center text-[15px] leading-[1.8] text-black [text-wrap:pretty] sm:max-w-3xl">
+                        {tVictor("materialIntro")}
+                      </p>
+
+                      <div className="mt-8 rounded-lg bg-[#f4f4f5] p-4 sm:p-6">
+                        <PostsFeed
+                          posts={victorMaterialPosts}
+                          feedId="entender-material"
                         />
                       </div>
                     </div>
@@ -1064,21 +1122,29 @@ export default function HomePage() {
                 {tNos("title")}
               </h2>
             </div>
-            <p className="mx-auto mt-8 max-w-prose text-center text-[15px] leading-[1.8] text-black/70 [text-wrap:pretty] sm:mt-10">
-              {tNos("intro")}
-            </p>
-            <p className="mt-6 text-center">
-              <a
-                href={tNos("websiteUrl")}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-mono text-[11px] uppercase tracking-[0.28em] text-[#525252] underline decoration-[#525252]/30 underline-offset-[5px] transition hover:text-black hover:decoration-black/35 sm:text-[12px]"
-              >
-                {tNos("websiteLinkText")}
-              </a>
-            </p>
-            <div className="mt-10">
-              <TextPostCard post={nosVictorBioPost} />
+            {nosIntro ? (
+              <p className="mx-auto mt-8 max-w-prose text-center text-[15px] leading-[1.8] text-black/70 [text-wrap:pretty] sm:mt-10">
+                {nosIntro}
+              </p>
+            ) : null}
+            <div
+              className={`${nosIntro ? "mt-10" : "mt-8 sm:mt-10"} space-y-8 sm:space-y-10`}
+            >
+              {nosProfileCards.map(({ post, afterBody }) =>
+                post.imageSrc ? (
+                  <ImagePostCard
+                    key={post.slug}
+                    post={post}
+                    afterBody={afterBody}
+                  />
+                ) : (
+                  <TextPostCard
+                    key={post.slug}
+                    post={post}
+                    afterBody={afterBody}
+                  />
+                ),
+              )}
             </div>
             <div className="mt-10 hidden lg:block">
               <SiteSocialFooter />

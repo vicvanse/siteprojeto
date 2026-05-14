@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import {
   postCardBodyParaClass,
   postCardBodyStackClass,
@@ -21,14 +22,22 @@ import { PostBodySection } from "@/components/victor/post-body-section";
 export interface ImagePostCardProps {
   post: VictorFeedPost;
   categoryLabel?: string;
+  /** Conteúdo extra após o corpo (ex.: link no cartão «Nós»). */
+  afterBody?: ReactNode;
 }
 
 /** Post com imagem no topo; texto completo abaixo. */
-export function ImagePostCard({ post, categoryLabel }: ImagePostCardProps) {
+export function ImagePostCard({
+  post,
+  categoryLabel,
+  afterBody,
+}: ImagePostCardProps) {
   if (!post.imageSrc) return null;
 
   const images = getPostImages(post);
   const mainPreset = getPostGalleryMainPreset(post);
+  const afterBodyWrapClass =
+    post.feedTitleAlign === "center" ? "mt-5 text-center" : "mt-5";
 
   return (
     <article className="font-post overflow-hidden rounded-lg border border-black/[0.07] bg-white shadow-[0_1px_3px_rgba(0,0,0,0.05)] transition-shadow duration-200 hover:shadow-[0_4px_20px_rgba(0,0,0,0.06)]">
@@ -46,9 +55,21 @@ export function ImagePostCard({ post, categoryLabel }: ImagePostCardProps) {
       />
       <div className="flex flex-col px-6 py-7 sm:px-7 sm:py-8">
         <div className={postCardReadingColumnClass}>
-          <header className={postCardHeaderClass}>
+          <header
+            className={
+              post.feedTitleAlign === "center"
+                ? `${postCardHeaderClass} md:text-center`
+                : postCardHeaderClass
+            }
+          >
             <h3 className={postCardTitleClass}>{post.title}</h3>
-            <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+            <div
+              className={
+                post.feedTitleAlign === "center"
+                  ? "flex flex-wrap items-baseline gap-x-3 gap-y-1 md:justify-center"
+                  : "flex flex-wrap items-baseline gap-x-3 gap-y-1"
+              }
+            >
               <time className={`${postCardMetaTimeClass} max-sm:hidden`}>
                 {post.dateLabel}
               </time>
@@ -59,6 +80,9 @@ export function ImagePostCard({ post, categoryLabel }: ImagePostCardProps) {
           </header>
           <div className={postCardBodyStackClass}>
             <PostBodySection post={post} paragraphClassName={postCardBodyParaClass} />
+            {afterBody != null ? (
+              <div className={afterBodyWrapClass}>{afterBody}</div>
+            ) : null}
           </div>
         </div>
         <time

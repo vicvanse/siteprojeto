@@ -13,10 +13,15 @@
   "nosSection": {
     "label": "Nós",
     "title": "Quem somos",
-    "intro": "Estamos a preparar esta página com informação sobre o colectivo e o propósito do projeto.",
+    "intro": "",
     "bioPostCategory": "Perfil",
     "profileCardName": "Víctor Correard",
     "profileCardBio": "Víctor Correard. Mestrado em andamento no Instituto de Psicologia da USP. Psicologia no Instituto de Psicologia da USP. Colégio Técnico e Industrial de Guaratinguetá, formação em Eletrônica.",
+    "profileCardImageAlt": "Retrato de Víctor Correard (foto de perfil).",
+    "adrielProfileName": "Adriel Lourenço",
+    "adrielProfileBio": "Estudante de Psicologia no Instituto de Psicologia da USP",
+    "vitorProfileName": "Vitor",
+    "vitorProfileBio": "Design profissional, based in Rio de Janeiro",
     "websiteUrl": "https://victorcorreard.com",
     "websiteLinkText": "victorcorreard.com"
   },
@@ -68,8 +73,10 @@
     "tabNotas": "Notas Gerais",
     "tabIncomum": "Incomum",
     "tabUtil": "Utilidades",
+    "tabMaterial": "Material",
     "incomumIntro": "Coisas que encontrei e que me pareceram incomuns ou diferentes o suficiente:",
-    "utilIntro": "Coisas úteis, que são essenciais para o ramo ou para criação de projetos:"
+    "utilIntro": "Coisas úteis, que são essenciais para o ramo ou para criação de projetos:",
+    "materialIntro": "Textos longos, guias e material de apoio à leitura e à referência:"
   },
   "clinica": {
     "label": "Serviços",
@@ -148,8 +155,8 @@
   "postUi": { "readMore": "Ler mais", "readLess": "Ler menos" },
   "sugestoes": {
     "title": "Sugestões",
-    "backAria": "Voltar ao arquivo victor",
-    "back": "victor",
+    "backAria": "Voltar à página inicial do Projeto",
+    "back": "Projeto",
     "introEyebrow": "Em busca de sentido",
     "qr1": "Este espaço existe para reunir recomendações.",
     "qr2": "O que, entre tudo o que você viu, fez ou encontrou, deveria ser transmitido adiante, para alguém importante, para uma versão anterior de si mesmo, ou simplesmente para não se perder?",

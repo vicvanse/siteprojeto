@@ -13,9 +13,7 @@ import { Search } from "lucide-react";
 import { getLocalizedCategoryLabel } from "@/lib/i18n-category";
 import {
   getCategoriesForPosts,
-  getIncomumKind,
   getUtilidadeKind,
-  type IncomumKind,
   type UtilidadeKind,
   type VictorFeedPost,
 } from "@/data/victor-notes-posts";
@@ -54,27 +52,29 @@ function preventFocusScrollOnPointer(e: PointerEvent<HTMLButtonElement>) {
   e.preventDefault();
 }
 
-const INCOMUM_KIND_ORDER: IncomumKind[] = [
-  "arte",
-  "literatura",
-  "audiovisual",
-  "perfis",
-];
-
-const UTILIDADE_ORDER: UtilidadeKind[] = [
+const UTILIDADE_BUCKETS_ALL: UtilidadeKind[] = [
   "jornais",
   "ferramenta",
   "textos",
+];
+
+/** Jornais + Ferramentas (Material é outro separador na home). */
+export const UTILIDADE_BUCKETS_WITHOUT_TEXTOS: UtilidadeKind[] = [
+  "jornais",
+  "ferramenta",
 ];
 
 export interface PostsFeedProps {
   posts: VictorFeedPost[];
   /** Id estável para ids de formulário (sem espaços). */
   feedId?: string;
-  /** Utilidades: toggle Ferramentas / Jornais / Material abaixo do filtro e da busca. */
+  /** Utilidades: tabs por bucket abaixo do filtro e da busca. */
   utilidadeBucketToggle?: boolean;
-  /** Incomum: tabs Arte / Literatura / Audiovisual / Perfis. */
-  incomumBucketToggle?: boolean;
+  /**
+   * Ordem e subconjunto de buckets quando `utilidadeBucketToggle`.
+   * Omitido = Jornais, Ferramentas e Material (`textos`).
+   */
+  utilidadeBuckets?: readonly UtilidadeKind[];
   /** Abaixo de `md`: oculta busca e seletor "Todos os tipos" (ex.: notas gerais no telefone). */
   hideSearchAndCategoryOnMobile?: boolean;
 }
@@ -83,31 +83,34 @@ export function PostsFeed({
   posts,
   feedId = "feed",
   utilidadeBucketToggle = false,
-  incomumBucketToggle = false,
+  utilidadeBuckets,
   hideSearchAndCategoryOnMobile = false,
 }: PostsFeedProps) {
   const tFeed = useTranslations("feed");
   const tUtil = useTranslations("utilBucket");
-  const tIncomum = useTranslations("incomumKind");
   const tCategory = useTranslations("Category");
+
+  const bucketList = utilidadeBuckets ?? UTILIDADE_BUCKETS_ALL;
 
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState<string>("todos");
-  const [utilBucket, setUtilBucket] = useState<UtilidadeKind>("jornais");
-  const [incomumBucket, setIncomumBucket] =
-    useState<IncomumKind>("audiovisual");
+  const [utilBucket, setUtilBucket] = useState<UtilidadeKind>(
+    () => bucketList[0] ?? "jornais",
+  );
   const [mobileExpanded, setMobileExpanded] = useState(false);
   const isMdUp = useIsMdUp();
+
+  useEffect(() => {
+    if (!utilidadeBucketToggle) return;
+    setUtilBucket((prev) =>
+      bucketList.includes(prev) ? prev : bucketList[0] ?? "jornais",
+    );
+  }, [utilidadeBucketToggle, bucketList]);
 
   function handleUtilBucketChange(kind: UtilidadeKind) {
     // Evita um frame com expanded=true e lista nova (refs/scroll em lista errada).
     setMobileExpanded(false);
     setUtilBucket(kind);
-  }
-
-  function handleIncomumBucketChange(kind: IncomumKind) {
-    setMobileExpanded(false);
-    setIncomumBucket(kind);
   }
 
   const categories = useMemo(() => getCategoriesForPosts(posts), [posts]);
@@ -118,36 +121,20 @@ export function PostsFeed({
       if (utilidadeBucketToggle && getUtilidadeKind(p) !== utilBucket) {
         return false;
       }
-      if (incomumBucketToggle && getIncomumKind(p) !== incomumBucket) {
-        return false;
-      }
       if (category !== "todos" && p.category !== category) return false;
       if (!q) return true;
       const hay = `${p.title} ${p.excerpt} ${p.category} ${p.body.join(" ")}`.toLowerCase();
       return hay.includes(q);
     });
-  }, [
-    posts,
-    query,
-    category,
-    utilidadeBucketToggle,
-    utilBucket,
-    incomumBucketToggle,
-    incomumBucket,
-  ]);
+  }, [posts, query, category, utilidadeBucketToggle, utilBucket]);
 
-  /** Ao mudar de subseção (Arte/Literatura/… ou Ferramentas/Jornais/Material), volta ao estado inicial do filtro. */
+  /** Ao mudar de subseção (Ferramentas/Jornais/[Material]), volta ao estado inicial do filtro. */
   useEffect(() => {
-    if (!incomumBucketToggle && !utilidadeBucketToggle) return;
+    if (!utilidadeBucketToggle) return;
     setQuery("");
     setCategory("todos");
     setMobileExpanded(false);
-  }, [
-    incomumBucket,
-    utilBucket,
-    incomumBucketToggle,
-    utilidadeBucketToggle,
-  ]);
+  }, [utilBucket, utilidadeBucketToggle]);
 
   useEffect(() => {
     setMobileExpanded(false);
@@ -163,11 +150,11 @@ export function PostsFeed({
 
   const utilidadeBucketOrder = useMemo(
     () =>
-      UTILIDADE_ORDER.map((kind) => ({
+      bucketList.map((kind) => ({
         kind,
         label: tUtil(kind as "ferramenta"),
       })),
-    [tUtil],
+    [tUtil, bucketList],
   );
 
   const tCat = tCategory as unknown as (k: string) => string;
@@ -270,40 +257,6 @@ export function PostsFeed({
               tabButton,
             ];
           })}
-        </nav>
-      ) : null}
-
-      {incomumBucketToggle ? (
-        <nav
-          className="mb-8 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 border-b border-black/[0.08] text-[14px] leading-relaxed tracking-[-0.02em] text-black/45 [text-wrap:balance] sm:gap-x-6 sm:text-[15px]"
-          role="tablist"
-          aria-label={tFeed("incomumTabsAria")}
-        >
-          {INCOMUM_KIND_ORDER.map((kind) => (
-            <button
-              key={kind}
-              type="button"
-              role="tab"
-              id={`feed-incomum-${feedId}-${kind}`}
-              aria-selected={incomumBucket === kind}
-              onPointerDown={preventFocusScrollOnPointer}
-              onMouseDown={preventFocusScrollOnPress}
-              onClick={() => handleIncomumBucketChange(kind)}
-              className={
-                incomumBucket === kind
-                  ? "-mb-px border-0 border-b-2 border-[#525252] bg-transparent pb-2.5 font-semibold text-[#525252] outline-none transition-colors focus-visible:ring-2 focus-visible:ring-[#404040]/35 focus-visible:ring-offset-2"
-                  : "-mb-px border-0 border-b-2 border-transparent bg-transparent pb-2.5 font-normal outline-none transition-colors hover:text-black/60 focus-visible:ring-2 focus-visible:ring-[#404040]/35 focus-visible:ring-offset-2"
-              }
-            >
-              {tIncomum(
-                kind as
-                  | "arte"
-                  | "literatura"
-                  | "audiovisual"
-                  | "perfis",
-              )}
-            </button>
-          ))}
         </nav>
       ) : null}
 

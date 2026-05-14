@@ -2052,85 +2052,132 @@
   },
   "clinica-contacto": {
     "en": {
-      "title": "Contact",
-      "excerpt": "I will be available again next year; e-mail for other information about projects.",
+      "title": "Psychotherapeutic care",
+      "excerpt": "We will begin appointments only next year. For other projects, e-mail us — we reply when we can.",
       "body": [
-        "I will be available again next year.",
-        "For information about any other projects, please get in touch by e-mail. I will reply as soon as I can.",
-        "contato@example.com"
+        "We will begin offering appointments only next year.",
+        "For information about any other projects, you can contact us by e-mail. We will reply as soon as we can.",
+        "victorcvanse@gmail.com and adriellourenco@usp.br"
       ]
     },
     "ko": {
-      "title": "문의",
-      "excerpt": "진료(또는 상담)는 내년부터입니다. 기타 문의는 이메일로.",
+      "title": "심리치료 상담",
+      "excerpt": "내년부터 상담을 시작합니다. 다른 프로젝트 문의는 이메일로 — 가능한 한 답변드립니다.",
       "body": [
-        "가능한 시점은 내년부터입니다.",
-        "다른 프로젝트에 관한 문의는 이메일로 보내 주세요. 가능한 한 곧 답하겠습니다.",
-        "contato@example.com"
+        "상담은 내년부터 시작합니다.",
+        "다른 프로젝트에 관한 문의는 이메일로 연락해 주세요. 가능한 한 빨리 답변드리겠습니다.",
+        "victorcvanse@gmail.com 및 adriellourenco@usp.br"
       ]
     },
     "es": {
-      "title": "Contacto",
-      "excerpt": "Atención a partir del año que viene; para otras dudas, e-mail.",
+      "title": "Atención psicoterapéutica",
+      "excerpt": "Empezaremos a atender solo el año que viene. Para otros proyectos, e-mail — responderemos en cuanto podamos.",
       "body": [
-        "Solo atenderé a partir del año que viene.",
-        "Para cualquier otra consulta o proyecto, el contacto puede ser por e-mail. Respondo en cuanto pueda.",
-        "contato@example.com"
+        "Empezaremos a atender solo el año que viene.",
+        "Para información sobre cualquier otro proyecto, el contacto puede hacerse por correo electrónico. Responderemos en cuanto podamos.",
+        "victorcvanse@gmail.com y adriellourenco@usp.br"
       ]
     },
     "ja": {
-      "title": "お問い合わせ",
-      "excerpt": "対応は来年から。ほかの件はメールで。",
+      "title": "心理療法的面接・支援",
+      "excerpt": "対応は来年から開始します。その他のプロジェクトはメールで。できるだけ早く返信します。",
       "body": [
-        "対応は来年からとさせていただきます。",
-        "その他の案件やご用件のご連絡は、メールでお願いします。可能な限り早く返信します。",
-        "contato@example.com"
+        "対応は来年からのみとさせていただきます。",
+        "その他のプロジェクトに関するお問い合わせは、メールでお願いいたします。可能な限り早く返信いたします。",
+        "victorcvanse@gmail.com と adriellourenco@usp.br"
       ]
     },
     "de": {
-      "title": "Kontakt",
-      "excerpt": "Nächstes Jahr wieder verfügbar; für anderes: E-Mail.",
+      "title": "Psychotherapeutische Behandlung",
+      "excerpt": "Erst nächstes Jahr nehmen wir wieder Termine an. Für andere Projekte: per E-Mail — wir antworten sobald möglich.",
       "body": [
-        "Ich nehme wieder Aufträge an, erst im kommenden Jahr.",
-        "Für Auskunft zu anderen Projekten erreichen Sie mich per E-Mail. Ich antworte, sobald ich kann.",
-        "contato@example.com"
+        "Wir beginnen erst im kommenden Jahr mit der Betreuung.",
+        "Für Informationen zu anderen Projekten erreichen Sie uns per E-Mail. Wir antworten so bald wie möglich.",
+        "victorcvanse@gmail.com und adriellourenco@usp.br"
       ]
     },
     "fr": {
-      "title": "Contact",
-      "excerpt": "Prise de rendez-vous à partir de l’année prochaine; pour le reste, e-mail.",
+      "title": "Soins psychothérapeutiques",
+      "excerpt": "Nous commencerons les consultations l’année prochaine seulement. Pour d’autres projets : e-mail — nous répondrons dès que possible.",
       "body": [
-        "Je ne prends des rendez-vous qu’à partir de l’année prochaine.",
-        "Pour toute autre question ou projet, vous pouvez me joindre par e-mail. Je réponds dès que possible.",
-        "contato@example.com"
+        "Nous commencerons à recevoir uniquement l’année prochaine.",
+        "Pour toute information sur d’autres projets, vous pouvez nous écrire par e-mail. Nous répondrons dès que possible.",
+        "victorcvanse@gmail.com et adriellourenco@usp.br"
       ]
     },
     "it": {
-      "title": "Contatto",
-      "excerpt": "Disponibilità dall’anno prossimo; per il resto, e-mail.",
+      "title": "Assistenza psicoterapeutica",
+      "excerpt": "Inizieremo ad accogliere solo l’anno prossimo. Per altri progetti: e-mail — risponderemo appena possibile.",
       "body": [
-        "Rispondo su appuntamento solo a partire dall’anno prossimo.",
-        "Per informazioni su qualsiasi altro progetto, contattatemi via e-mail. Rispondo appena posso.",
-        "contato@example.com"
+        "Inizieremo ad accogliere solo l’anno prossimo.",
+        "Per informazioni su qualsiasi altro progetto, potete contattarci via e-mail. Risponderemo appena possibile.",
+        "victorcvanse@gmail.com e adriellourenco@usp.br"
       ]
     },
     "zh-CN": {
-      "title": "联系",
-      "excerpt": "明年起接诊；其他事宜请发邮件。",
+      "title": "心理治疗面谈",
+      "excerpt": "我们将于明年开始接诊。其他项目请发邮件——我们会尽快回复。",
       "body": [
-        "我只在明年起开始接诊。",
-        "如有任何其他项目或合作方面的询问，请发邮件联系。我会尽快回复。",
-        "contato@example.com"
+        "我们将于明年才开始接诊。",
+        "若需了解任何其他项目，请通过电子邮件联系。我们会尽快回复。",
+        "victorcvanse@gmail.com 与 adriellourenco@usp.br"
       ]
     },
     "zh-TW": {
-      "title": "聯絡",
-      "excerpt": "明年起接案；其他事項請用電子郵件。",
+      "title": "心理治療晤談",
+      "excerpt": "我們將於明年開始接案。其他專案請來信——會盡快回覆。",
       "body": [
-        "我僅在明年起開始接案。",
-        "若有其他專案或合作相關問題，歡迎以電子郵件聯絡。我會盡快回覆。",
-        "contato@example.com"
+        "我們將於明年才開始接案。",
+        "若需了解任何其他專案，請以電子郵件聯絡。我們會盡快回覆。",
+        "victorcvanse@gmail.com 與 adriellourenco@usp.br"
       ]
+    }
+  },
+  "clinica-design": {
+    "en": {
+      "title": "Design",
+      "excerpt": "Design services",
+      "body": ["Design services"]
+    },
+    "ko": {
+      "title": "Design",
+      "excerpt": "디자인 서비스",
+      "body": ["디자인 서비스"]
+    },
+    "es": {
+      "title": "Design",
+      "excerpt": "Servicios de diseño",
+      "body": ["Servicios de diseño"]
+    },
+    "ja": {
+      "title": "デザイン",
+      "excerpt": "デザインのサービス",
+      "body": ["デザインのサービス"]
+    },
+    "de": {
+      "title": "Design",
+      "excerpt": "Design-Leistungen",
+      "body": ["Design-Leistungen"]
+    },
+    "fr": {
+      "title": "Design",
+      "excerpt": "Services de design",
+      "body": ["Services de design"]
+    },
+    "it": {
+      "title": "Design",
+      "excerpt": "Servizi di design",
+      "body": ["Servizi di design"]
+    },
+    "zh-CN": {
+      "title": "设计",
+      "excerpt": "设计服务",
+      "body": ["设计服务"]
+    },
+    "zh-TW": {
+      "title": "設計",
+      "excerpt": "設計服務",
+      "body": ["設計服務"]
     }
   },
   "annual-review-of-psychology": {

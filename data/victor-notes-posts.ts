@@ -194,13 +194,15 @@ export const VICTOR_FEED_POSTS: VictorFeedPost[] = [
     dateLabel: "12 de abr. de 2026",
     category: "nota",
     excerpt:
-      "Este é um site feito para abrir caminhos profissionais. Ideias importam, mas precisam encontrar formas concretas de circulação, trabalho; e eu de sustento.\n\nAo mesmo tempo, é um espaço de registro e organização de coisas não tão comuns. Ao menos, o site serve como um registro autobiográfico e mercadológico: eu preciso de clientes e gosto de compartilhar pensamentos com pessoas.",
+      "ProjetoX é um projeto de divulgação/educação científica sobre psicologia, comportamento e vida cotidiana.\n\nA ideia é reunir textos, vídeos, recomendações e observações sobre como pessoas pensam, escolhem, sofrem, aprendem, se organizam e circulam pelo mundo.\n\nNão como curiosidade solta, mas como tentativa de transformar pesquisa, dados e boas perguntas em algo mais acessível, útil e compartilhável.",
     body: [
-      "Este é um site feito para abrir caminhos profissionais. Ideias importam, mas precisam encontrar formas concretas de circulação, trabalho; e eu de sustento.",
-      "Ao mesmo tempo, é um espaço de exposição de coisas não tão comuns. Ao menos, o site serve como um registro autobiográfico e mercadológico: eu preciso de clientes e gosto de discutir pensamentos.",
+      "ProjetoX é um projeto de divulgação/educação científica sobre psicologia, comportamento e vida cotidiana.",
+      "A ideia é reunir textos, vídeos, recomendações e observações sobre como pessoas pensam, escolhem, sofrem, aprendem, se organizam e circulam pelo mundo.",
+      "Não como curiosidade solta, mas como tentativa de transformar pesquisa, dados e boas perguntas em algo mais acessível, útil e compartilhável.",
     ],
-    imageSrc: "/media/hover/eu9.png",
-    imageAlt: "Retrato eu9",
+    imageSrc: "/media/hover/nota-criacao-manutencao-2026.png",
+    imageAlt:
+      "Víctor num laboratório de informática, em frente a um ecrã com página de login da Vercel.",
   },
   {
     section: "notas-gerais",
@@ -1406,18 +1408,29 @@ export const VICTOR_FEED_POSTS: VictorFeedPost[] = [
   {
     section: "clinica",
     slug: "clinica-contacto",
-    title: "Contato",
+    title: "Atendimento psicoterapeutico",
     feedTitleAlign: "center",
     publishedAt: "2026-04-11",
     dateLabel: "11 de abr. de 2026",
     category: "contato",
     excerpt:
-      "Atendimento no ano que vem; para informações sobre outros projetos, contato por e-mail.",
+      "Começaremos a atender apenas no ano que vem. Para outros projetos, e-mail — responderemos quando possível.",
     body: [
-      "Atenderei apenas no ano que vem.",
-      "Para informações sobre quaisquer outros projetos, o contato pode ser feito por e-mail. Respondo assim que possível.",
-      "Configure o endereço público em .env.local (NEXT_PUBLIC_CONTACT_EMAIL).",
+      "Começaremos a atender apenas no ano que vem.",
+      "Para informações sobre quaisquer outros projetos, o contato pode ser feito por e-mail. Responderemos assim que possível.",
+      "victorcvanse@gmail.com e adriellourenco@usp.br",
     ],
+  },
+  {
+    section: "clinica",
+    slug: "clinica-design",
+    title: "Design",
+    feedTitleAlign: "center",
+    publishedAt: "2026-03-01",
+    dateLabel: "1 de mar. de 2026",
+    category: "design",
+    excerpt: "Serviços de design",
+    body: ["Serviços de design"],
   },
 ];
 

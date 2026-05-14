@@ -8,7 +8,7 @@ const NAV_BTN_CLASS =
 
 export type SugestoesRespostasStripVariant = "formulario" | "arquivo";
 
-/** Só chip «victor» (layout clássico quando não há fluxo QR). */
+/** Só chip «Projeto» (layout clássico quando não há fluxo QR). */
 function SugestoesVictorHomeChipOnly() {
   const t = useTranslations("sugestoes");
   return (
@@ -34,8 +34,8 @@ function SugestoesVictorHomeChipOnly() {
 }
 
 /**
- * Fluxo QR (`?ref=qr`, etc.): linha victor ← · «Respostas» · respostas → / sugestões ←.
- * Fora do QR em sugestões: só o chip victor (sem «Respostas» nem botão para arquivo).
+ * Fluxo QR (`?ref=qr`, etc.): linha Projeto ← · «Respostas» · respostas → / sugestões ←.
+ * Fora do QR em sugestões: só o chip Projeto (sem «Respostas» nem botão para arquivo).
  */
 export function VictorSugestoesRespostasStrip({
   variant,
@@ -59,7 +59,7 @@ export function VictorSugestoesRespostasStrip({
       ? t("responsesNavAria")
       : t("suggestionsNavAria");
 
-  /** Fora do fluxo QR: só o chip victor (sem «Respostas» nem ligar ao arquivo). */
+  /** Fora do fluxo QR: só o chip Projeto (sem «Respostas» nem ligar ao arquivo). */
   if (!qrFlow) {
     return (
       <>

@@ -13,10 +13,15 @@
   "nosSection": {
     "label": "Us",
     "title": "Who we are",
-    "intro": "We are preparing this page with more about the collective and the aims of the project.",
+    "intro": "",
     "bioPostCategory": "Profile",
     "profileCardName": "Víctor Correard",
     "profileCardBio": "Víctor Correard. Master's in progress at the Institute of Psychology, USP. Psychology at the Institute of Psychology, University of São Paulo. Technical and Industrial School of Guaratinguetá, electronics training.",
+    "profileCardImageAlt": "Portrait of Víctor Correard (profile photo).",
+    "adrielProfileName": "Adriel Lourenço",
+    "adrielProfileBio": "Psychology student at the Institute of Psychology, University of São Paulo (USP).",
+    "vitorProfileName": "Vitor",
+    "vitorProfileBio": "Professional design, based in Rio de Janeiro.",
     "websiteUrl": "https://victorcorreard.com",
     "websiteLinkText": "victorcorreard.com"
   },
@@ -68,8 +73,10 @@
     "tabNotas": "General Notes",
     "tabIncomum": "Unusual",
     "tabUtil": "Resources",
+    "tabMaterial": "Material",
     "incomumIntro": "Things I found that seemed unusual or different enough:",
-    "utilIntro": "Useful things that are essential to the field or to building projects:"
+    "utilIntro": "Useful things that are essential to the field or to building projects:",
+    "materialIntro": "Long-form texts, guides, and reference reading material:"
   },
   "clinica": {
     "label": "Services",
@@ -148,8 +155,8 @@
   "postUi": { "readMore": "Read more", "readLess": "Read less" },
   "sugestoes": {
     "title": "Suggestions",
-    "backAria": "Back to victor archive",
-    "back": "victor",
+    "backAria": "Back to Project home",
+    "back": "Project",
     "introEyebrow": "In Search of Meaning",
     "qr1": "This space exists to gather recommendations.",
     "qr2": "Of everything you've seen, done, or found, what should be passed on to someone important, to an earlier version of yourself, or simply so it won't be lost?",

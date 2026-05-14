@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import {
   postCardBodyParaClass,
   postCardBodyStackClass,
@@ -14,13 +15,18 @@ import { PostBodySection } from "@/components/victor/post-body-section";
 export interface TextPostCardProps {
   post: VictorFeedPost;
   categoryLabel?: string;
+  /** Conteúdo extra após o corpo (ex.: link no cartão «Nós»). */
+  afterBody?: ReactNode;
 }
 
 const cardArticleClass =
   "font-post flex flex-col rounded-lg border border-black/[0.07] bg-white px-6 py-7 shadow-[0_1px_3px_rgba(0,0,0,0.05)] transition-shadow duration-200 sm:px-7 sm:py-8";
 
 /** Cartão textual: corpo completo visível no feed (sem página separada). */
-export function TextPostCard({ post, categoryLabel }: TextPostCardProps) {
+export function TextPostCard({ post, categoryLabel, afterBody }: TextPostCardProps) {
+  const afterBodyWrapClass =
+    post.feedTitleAlign === "center" ? "mt-5 text-center" : "mt-5";
+
   const inner = (
     <>
       <div className={postCardReadingColumnClass}>
@@ -49,6 +55,9 @@ export function TextPostCard({ post, categoryLabel }: TextPostCardProps) {
         </header>
         <div className={postCardBodyStackClass}>
           <PostBodySection post={post} paragraphClassName={postCardBodyParaClass} />
+          {afterBody != null ? (
+            <div className={afterBodyWrapClass}>{afterBody}</div>
+          ) : null}
         </div>
       </div>
       <time

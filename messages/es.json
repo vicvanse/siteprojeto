@@ -13,10 +13,15 @@
   "nosSection": {
     "label": "Nosotros",
     "title": "Quiénes somos",
-    "intro": "Estamos preparando esta página con más información sobre el colectivo y los objetivos del proyecto.",
+    "intro": "",
     "bioPostCategory": "Perfil",
     "profileCardName": "Víctor Correard",
     "profileCardBio": "Víctor Correard. Máster en curso en el Instituto de Psicología de la USP. Psicología en el Instituto de Psicología de la Universidad de São Paulo. Escuela Técnica e Industrial de Guaratinguetá, formación en electrónica.",
+    "profileCardImageAlt": "Retrato de Víctor Correard (foto de perfil).",
+    "adrielProfileName": "Adriel Lourenço",
+    "adrielProfileBio": "Estudiante de Psicología en el Instituto de Psicología de la USP.",
+    "vitorProfileName": "Vitor",
+    "vitorProfileBio": "Diseño profesional, con base en Río de Janeiro.",
     "websiteUrl": "https://victorcorreard.com",
     "websiteLinkText": "victorcorreard.com"
   },
@@ -79,8 +84,10 @@
     "tabNotas": "General Notes",
     "tabIncomum": "Unusual",
     "tabUtil": "Resources",
+    "tabMaterial": "Material",
     "incomumIntro": "Cosas que encontré y me parecieron poco comunes o bastante distintas:",
-    "utilIntro": "Cosas útiles, esenciales en el ámbito o para crear proyectos:"
+    "utilIntro": "Cosas útiles, esenciales en el ámbito o para crear proyectos:",
+    "materialIntro": "Textos extensos, guías y material de lectura y referencia:"
   },
   "clinica": {
     "label": "Servicios",
@@ -162,8 +169,8 @@
   },
   "sugestoes": {
     "title": "Suggestions",
-    "backAria": "Back to victor archive",
-    "back": "victor",
+    "backAria": "Volver al inicio del proyecto",
+    "back": "Proyecto",
     "introEyebrow": "En busca de sentido",
     "qr1": "Este espacio existe para reunir recomendaciones.",
     "qr2": "Entre todo lo que viste, hiciste o encontraste, ¿qué debería transmitirse a alguien importante, a una versión anterior de ti mismo, o simplemente para que no se pierda?",

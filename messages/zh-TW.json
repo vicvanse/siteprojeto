@@ -13,10 +13,15 @@
   "nosSection": {
     "label": "我們",
     "title": "關於我們",
-    "intro": "我們正在準備本頁，以介紹團隊與專案目標。",
+    "intro": "",
     "bioPostCategory": "簡介",
     "profileCardName": "Víctor Correard",
     "profileCardBio": "Víctor Correard。就讀聖保羅大學（USP）心理學研究所碩士。於聖保羅大學心理學研究所修讀心理學。瓜拉廷格塔工業技術學校，電子專長。",
+    "profileCardImageAlt": "Víctor Correard 肖像（頭像照）。",
+    "adrielProfileName": "Adriel Lourenço",
+    "adrielProfileBio": "聖保羅大學（USP）心理學研究所心理學學生。",
+    "vitorProfileName": "Vitor",
+    "vitorProfileBio": "專業設計，常駐里約熱內盧。",
     "websiteUrl": "https://victorcorreard.com",
     "websiteLinkText": "victorcorreard.com"
   },
@@ -79,8 +84,10 @@
     "tabNotas": "General Notes",
     "tabIncomum": "Unusual",
     "tabUtil": "Resources",
+    "tabMaterial": "Material",
     "incomumIntro": "我遇見、覺得不尋常或夠有特色的內容：",
-    "utilIntro": "對專業領域或做專案很重要、有實質幫助的內容："
+    "utilIntro": "對專業領域或做專案很重要、有實質幫助的內容：",
+    "materialIntro": "長文、指南與參考讀物資料："
   },
   "clinica": {
     "label": "服務",
@@ -162,8 +169,8 @@
   },
   "sugestoes": {
     "title": "Suggestions",
-    "backAria": "Back to victor archive",
-    "back": "victor",
+    "backAria": "返回專案首頁",
+    "back": "專案",
     "introEyebrow": "尋找意義",
     "qr1": "這個空間是用來收集推薦的。",
     "qr2": "在你看過、做過或遇見的一切之中，什麼應該被傳遞下去，給重要的人、給過去的自己，或只是為了不讓它流失？",

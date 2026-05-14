@@ -13,10 +13,15 @@
   "nosSection": {
     "label": "私たち",
     "title": "私たちについて",
-    "intro": "コレクティブとプロジェクトの目的について、こちらのページを準備しています。",
+    "intro": "",
     "bioPostCategory": "プロフィール",
     "profileCardName": "Víctor Correard",
     "profileCardBio": "Víctor Correard. USP心理学研究科で修士課程在学中。サンパウロ大学心理学研究所にて心理学。グアラチンゲタの工業高校で電子工学。",
+    "profileCardImageAlt": "Víctor Correardの肖像（プロフィール写真）。",
+    "adrielProfileName": "Adriel Lourenço",
+    "adrielProfileBio": "サンパウロ大学（USP）心理学研究所の心理学学生。",
+    "vitorProfileName": "Vitor",
+    "vitorProfileBio": "プロフェッショナルなデザイン。リオデジャネイロを拠点に。",
     "websiteUrl": "https://victorcorreard.com",
     "websiteLinkText": "victorcorreard.com"
   },
@@ -79,8 +84,10 @@
     "tabNotas": "General Notes",
     "tabIncomum": "Unusual",
     "tabUtil": "Resources",
+    "tabMaterial": "Material",
     "incomumIntro": "出会って、一見ふつうではない／十分違うと感じたもの：",
-    "utilIntro": "分野やプロづくりに欠かせない、役に立つ内容："
+    "utilIntro": "分野やプロづくりに欠かせない、役に立つ内容：",
+    "materialIntro": "長文、ガイド、参照用の読み物や資料："
   },
   "clinica": {
     "label": "サービス",
@@ -162,8 +169,8 @@
   },
   "sugestoes": {
     "title": "Suggestions",
-    "backAria": "Back to victor archive",
-    "back": "victor",
+    "backAria": "プロジェクトのトップに戻る",
+    "back": "プロジェクト",
     "introEyebrow": "意味を求めて",
     "qr1": "このスペースは、おすすめを集めるためにあります。",
     "qr2": "あなたが見たこと、したこと、出会ったことの中で、誰か大切な人や過去の自分に伝えるべきこと、あるいは失われないように残しておくべきことは何ですか？",

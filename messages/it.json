@@ -13,10 +13,15 @@
   "nosSection": {
     "label": "Noi",
     "title": "Chi siamo",
-    "intro": "Stiamo preparando questa pagina con maggiori informazioni sul collettivo e sugli obiettivi del progetto.",
+    "intro": "",
     "bioPostCategory": "Profilo",
     "profileCardName": "Víctor Correard",
     "profileCardBio": "Víctor Correard. Laurea magistrale in corso presso l'Istituto di psicologia dell'USP. Psicologia all'Istituto di psicologia dell'Università di San Paolo. Scuola tecnica e industriale di Guaratinguetá, formazione in elettronica.",
+    "profileCardImageAlt": "Ritratto di Víctor Correard (foto profilo).",
+    "adrielProfileName": "Adriel Lourenço",
+    "adrielProfileBio": "Studente di psicologia presso l'Istituto di psicologia dell'USP.",
+    "vitorProfileName": "Vitor",
+    "vitorProfileBio": "Design professionale, con base a Rio de Janeiro.",
     "websiteUrl": "https://victorcorreard.com",
     "websiteLinkText": "victorcorreard.com"
   },
@@ -79,8 +84,10 @@
     "tabNotas": "General Notes",
     "tabIncomum": "Unusual",
     "tabUtil": "Resources",
+    "tabMaterial": "Material",
     "incomumIntro": "Cose che ho trovato e che mi sono sembrate abbastanza insolite o differenti:",
-    "utilIntro": "Cose utili, essenziali per l’ambito o per la realizzazione di progetti:"
+    "utilIntro": "Cose utili, essenziali per l’ambito o per la realizzazione di progetti:",
+    "materialIntro": "Testi lunghi, guide e materiale di lettura e consultazione:"
   },
   "clinica": {
     "label": "Servizi",
@@ -162,8 +169,8 @@
   },
   "sugestoes": {
     "title": "Suggestions",
-    "backAria": "Back to victor archive",
-    "back": "victor",
+    "backAria": "Torna all’inizio del progetto",
+    "back": "Progetto",
     "introEyebrow": "Alla ricerca di senso",
     "qr1": "Questo spazio esiste per raccogliere raccomandazioni.",
     "qr2": "Tra tutto ciò che hai visto, fatto o trovato, cosa dovrebbe essere trasmesso a qualcuno di importante, a una versione precedente di te stesso, o semplicemente per non andare perso?",

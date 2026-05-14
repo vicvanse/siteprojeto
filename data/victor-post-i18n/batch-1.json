@@ -2,84 +2,93 @@
   "criacao-manutencao-2026": {
     "en": {
       "title": "Note",
-      "excerpt": "This site is meant to open professional paths. Ideas matter, but they need concrete ways to circulate and become work; and I need to earn a living.\n\nAt the same time, it's a space to record and organize things that aren't so everyday. At least, the site serves as an autobiographical and market-facing record: I need clients and I like sharing thoughts with people.",
+      "excerpt": "ProjetoX is a science communication and science education project on psychology, behavior, and everyday life.\n\nThe idea is to bring together texts, videos, recommendations, and observations on how people think, choose, suffer, learn, organize themselves, and move through the world.\n\nNot as idle curiosity, but as an attempt to turn research, data, and good questions into something more accessible, useful, and shareable.",
       "body": [
-        "This site is meant to open professional paths. Ideas matter, but they need concrete ways to circulate and become work; and I need to earn a living.",
-        "At the same time, it's a space for showcasing things that aren't so everyday. At least, the site serves as an autobiographical and market-facing record: I need clients and I enjoy exchanging thoughts with people."
+        "ProjetoX is a science communication and science education project on psychology, behavior, and everyday life.",
+        "The idea is to bring together texts, videos, recommendations, and observations on how people think, choose, suffer, learn, organize themselves, and move through the world.",
+        "Not as idle curiosity, but as an attempt to turn research, data, and good questions into something more accessible, useful, and shareable."
       ],
-      "imageAlt": "Portrait: eu9"
+      "imageAlt": "Victor at a lab desk with a monitor showing a Vercel sign-in page."
     },
     "ko": {
       "title": "메모",
-      "excerpt": "이 사이트는 직업적으로 길을 열기 위해 있습니다. 생각은 중요하지만, 구체적으로 돌고 일이 되려면 형태가 필요하고, 저에게도 생계가 필요합니다.\n\n동시에 그리 흔하지 않은 것들을 기록하고 정리하는 공간이기도 합니다. 적어도 이 사이트는 자전적이면서 시장을 향한 기록입니다: 클라이언트가 필요하고 사람들과 생각을 나누는 것을 좋아합니다.",
+      "excerpt": "ProjetoX는 심리학, 행동, 일상생활에 관한 과학 대중화·과학교육 프로젝트입니다.\n\n사람들이 어떻게 생각하고, 선택하고, 겪고, 배우며, 스스로를 조직하고 세상을 돌아다니는지에 대한 글, 영상, 추천과 관찰을 모으는 것이 취지입니다.\n\n단순한 호기심이 아니라, 연구·데이터·좋은 질문을 더 접근하기 쉽고 유용하며 나누기 좋은 형태로 바꾸려는 시도입니다.",
       "body": [
-        "이 사이트는 직업적으로 길을 열기 위해 있습니다. 생각은 중요하지만, 구체적으로 돌고 일이 되려면 형태가 필요하고, 저에게도 생계가 필요합니다.",
-        "동시에 그리 흔하지 않은 것들을 드러내 보이는 공간이기도 합니다. 적어도 이 사이트는 자전적이면서 시장을 향한 기록입니다: 클라이언트가 필요하고 사람들과 생각을 교환하는 것을 좋아합니다."
+        "ProjetoX는 심리학, 행동, 일상생활에 관한 과학 대중화·과학교육 프로젝트입니다.",
+        "사람들이 어떻게 생각하고, 선택하고, 겪고, 배우며, 스스로를 조직하고 세상을 돌아다니는지에 대한 글, 영상, 추천과 관찰을 모으는 것이 취지입니다.",
+        "단순한 호기심이 아니라, 연구·데이터·좋은 질문을 더 접근하기 쉽고 유용하며 나누기 좋은 형태로 바꾸려는 시도입니다."
       ],
-      "imageAlt": "초상화 eu9"
+      "imageAlt": "연구실 책상의 빅터, 모니터에 Vercel 로그인 화면."
     },
     "es": {
       "title": "Nota",
-      "excerpt": "Este sitio está hecho para abrir caminos profesionales. Las ideas importan, pero necesitan formas concretas de circulación y de trabajo; y yo necesito sustento.\n\nA la vez, es un espacio de registro y organización de cosas no tan comunes. Al menos, el sitio sirve como registro autobiográfico y mercadológico: necesito clientes y me gusta compartir pensamientos con la gente.",
+      "excerpt": "ProjetoX es un proyecto de divulgación y educación científica sobre psicología, conducta y vida cotidiana.\n\nLa idea es reunir textos, vídeos, recomendaciones y observaciones sobre cómo las personas piensan, eligen, sufren, aprenden, se organizan y se mueven por el mundo.\n\nNo como curiosidad suelta, sino como intento de transformar investigación, datos y buenas preguntas en algo más accesible, útil y compartible.",
       "body": [
-        "Este sitio está hecho para abrir caminos profesionales. Las ideas importan, pero necesitan formas concretas de circulación y de trabajo; y yo necesito sustento.",
-        "A la vez, es un espacio de exposición de cosas no tan comunes. Al menos, el sitio sirve como registro autobiográfico y mercadológico: necesito clientes y me gusta intercambiar ideas con la gente."
+        "ProjetoX es un proyecto de divulgación y educación científica sobre psicología, conducta y vida cotidiana.",
+        "La idea es reunir textos, vídeos, recomendaciones y observaciones sobre cómo las personas piensan, eligen, sufren, aprenden, se organizan y se mueven por el mundo.",
+        "No como curiosidad suelta, sino como intento de transformar investigación, datos y buenas preguntas en algo más accesible, útil y compartible."
       ],
-      "imageAlt": "Retrato: eu9"
+      "imageAlt": "Víctor en un aula de informática, con un monitor que muestra la página de inicio de sesión de Vercel."
     },
     "ja": {
       "title": "注記",
-      "excerpt": "このサイトは仕事につながる道を開くためにあります。アイデアは大切ですが、具体的に回って仕事となる形が要り、私にも生活が必要です。\n\n同時に、それほどありふれたものではないことを記録し整理する場所でもあります。少なくとも、このサイトは自伝的かつ市場に向けた記録です：クライアントが必要で、人と考えを分かち合うのが好きです。",
+      "excerpt": "ProjetoX は、心理学・行動・日常生活に関する科学コミュニケーション／科学教育のプロジェクトです。\n\n人がどのように考え、選び、苦しみ、学び、身を整え、世界を巡るかについて、文章・動画・推薦・観察を集めることが狙いです。\n\n散漫な好奇心ではなく、研究・データ・良い問いを、より身近で有用で共有しやすいものにしようとする試みです。",
       "body": [
-        "このサイトは仕事につながる道を開くためにあります。アイデアは大切ですが、具体的に回って仕事となる形が要り、私にも生活が必要です。",
-        "同時に、それほどありふれたものではないことを示す場所でもあります。少なくとも、このサイトは自伝的かつ市場に向けた記録です：クライアントが必要で、人と考えを交わすのが好きです。"
+        "ProjetoX は、心理学・行動・日常生活に関する科学コミュニケーション／科学教育のプロジェクトです。",
+        "人がどのように考え、選び、苦しみ、学び、身を整え、世界を巡るかについて、文章・動画・推薦・観察を集めることが狙いです。",
+        "散漫な好奇心ではなく、研究・データ・良い問いを、より身近で有用で共有しやすいものにしようとする試みです。"
       ],
-      "imageAlt": "肖像：eu9"
+      "imageAlt": "研究室の机にいるビクター。モニターに Vercel のサインイン画面。"
     },
     "de": {
       "title": "Notiz",
-      "excerpt": "Diese Website soll berufliche Wege öffnen. Auf Ideen kommt es an, aber sie brauchen konkrete Formen von Zirkulation und Arbeit – und ich brauche meinen Lebensunterhalt.\n\nZugleich ist sie ein Ort, Dinge zu erfassen und zu ordnen, die nicht so alltäglich sind. Zumindest dient die Website als autobiografisches und marktbezogenes Dokument: Ich brauche Auftraggebende und ich teile gern Gedanken mit Menschen.",
+      "excerpt": "ProjetoX ist ein Projekt zur Wissenschaftskommunikation und -bildung zu Psychologie, Verhalten und Alltagsleben.\n\nDie Idee ist, Texte, Videos, Empfehlungen und Beobachtungen darüber zusammenzutragen, wie Menschen denken, wählen, leiden, lernen, sich organisieren und durch die Welt gehen.\n\nNicht aus reiner Neugier, sondern als Versuch, Forschung, Daten und gute Fragen in etwas zu verwandeln, das zugänglicher, nützlicher und leichter zu teilen ist.",
       "body": [
-        "Diese Website soll berufliche Wege öffnen. Auf Ideen kommt es an, aber sie brauchen konkrete Formen von Zirkulation und Arbeit – und ich brauche meinen Lebensunterhalt.",
-        "Zugleich ist sie ein Raum, Dinge zu zeigen, die nicht so alltäglich sind. Zumindest dient die Website als autobiografisches und marktbezogenes Dokument: Ich brauche Auftraggebende und ich tausche gern Gedanken mit Menschen aus."
+        "ProjetoX ist ein Projekt zur Wissenschaftskommunikation und -bildung zu Psychologie, Verhalten und Alltagsleben.",
+        "Die Idee ist, Texte, Videos, Empfehlungen und Beobachtungen darüber zusammenzutragen, wie Menschen denken, wählen, leiden, lernen, sich organisieren und durch die Welt gehen.",
+        "Nicht aus reiner Neugier, sondern als Versuch, Forschung, Daten und gute Fragen in etwas zu verwandeln, das zugänglicher, nützlicher und leichter zu teilen ist."
       ],
-      "imageAlt": "Porträt: eu9"
+      "imageAlt": "Victor am Labor‑PC, Monitor mit Vercel‑Anmeldeseite."
     },
     "fr": {
       "title": "Note",
-      "excerpt": "Ce site est fait pour ouvrir des chemins professionnels. Les idées comptent, mais il leur faut des formes concrètes de circulation et de travail ; et il me faut aussi mes moyens.\n\nEn même temps, c’est un espace d’enregistrement et d’organisation de choses pas si banales. Au moins, le site fait office de registre autobiographique et tourné vers le marché : il me faut des clientes et clients et j’aime partager des pensées avec les gens.",
+      "excerpt": "ProjetoX est un projet de vulgarisation et d’éducation scientifique sur la psychologie, le comportement et la vie quotidienne.\n\nL’idée est de rassembler textes, vidéos, recommandations et observations sur la façon dont les gens pensent, choisissent, souffrent, apprennent, s’organisent et circulent dans le monde.\n\nNon pas comme curiosité gratuite, mais comme tentative de transformer recherche, données et bonnes questions en quelque chose de plus accessible, utile et partageable.",
       "body": [
-        "Ce site est fait pour ouvrir des chemins professionnels. Les idées comptent, mais il leur faut des formes concrètes de circulation et de travail ; et il me faut aussi mes moyens.",
-        "C’est pourtant aussi un espace d’exposition de choses pas si banales. Au moins, le site fait office de registre autobiographique et tourné vers le marché : il me faut des clientes et clients et j’aime échanger des pensées avec les gens."
+        "ProjetoX est un projet de vulgarisation et d’éducation scientifique sur la psychologie, le comportement et la vie quotidienne.",
+        "L’idée est de rassembler textes, vidéos, recommandations et observations sur la façon dont les gens pensent, choisissent, souffrent, apprennent, s’organisent et circulent dans le monde.",
+        "Non pas comme curiosité gratuite, mais comme tentative de transformer recherche, données et bonnes questions en quelque chose de plus accessible, utile et partageable."
       ],
-      "imageAlt": "Portrait : eu9"
+      "imageAlt": "Victor dans un laboratoire informatique, écran montrant la page de connexion Vercel."
     },
     "it": {
       "title": "Nota",
-      "excerpt": "Questo sito è pensato per aprire percorsi professionali. Le idee contano, ma hanno bisogno di forme concrete di circolazione e di lavoro; e a me serve anche il sostegno.\n\nÈ anche uno spazio di registrazione e organizzazione di cose non così comuni. Almeno, il sito fa da registro autobiografico e rivolto al mercato: ho bisogno di clienti e mi piace condividere pensieri con le persone.",
+      "excerpt": "ProjetoX è un progetto di divulgazione e educazione scientifica su psicologia, comportamento e vita quotidiana.\n\nL’idea è riunire testi, video, raccomandazioni e osservazioni su come le persone pensano, scelgono, soffrono, imparano, si organizzano e si muovono nel mondo.\n\nNon come curiosità fine a se stessa, ma come tentativo di trasformare ricerca, dati e buone domande in qualcosa di più accessibile, utile e condivisibile.",
       "body": [
-        "Questo sito è pensato per aprire percorsi professionali. Le idee contano, ma hanno bisogno di forme concrete di circolazione e di lavoro; e a me serve anche il sostegno.",
-        "È anche uno spazio di esposizione di cose non così comuni. Almeno, il sito fa da registro autobiografico e rivolto al mercato: ho bisogno di clienti e mi piace scambiare pensieri con le persone."
+        "ProjetoX è un progetto di divulgazione e educazione scientifica su psicologia, comportamento e vita quotidiana.",
+        "L’idea è riunire testi, video, raccomandazioni e osservazioni su come le persone pensano, scelgono, soffrono, imparano, si organizzano e si muovono nel mondo.",
+        "Non come curiosità fine a se stessa, ma come tentativo di trasformare ricerca, dati e buone domande in qualcosa di più accessibile, utile e condivisibile."
       ],
-      "imageAlt": "Ritratto: eu9"
+      "imageAlt": "Victor in laboratorio informatico, monitor con schermata di accesso Vercel."
     },
     "zh-CN": {
       "title": "说明",
-      "excerpt": "本站旨在打通职业路径。想法重要，但需要具体的流通与工作形态；我也要谋生。\n\n同时，这里也是记录和整理不那么寻常之事的地方。至少，本站兼具自传性与面向市场的记录：我需要客户，也喜欢与人分享想法。",
+      "excerpt": "ProjetoX 是一项关于心理学、行为与日常生活的科学传播／科学教育项目。\n\n旨在汇集文章、视频、推荐与观察，讨论人们如何思考、选择、经历痛苦、学习、自我组织并在世界中活动。\n\n不是零散的猎奇，而是尝试把研究、数据和好问题转化为更易理解、更有用、更易分享的内容。",
       "body": [
-        "本站旨在打通职业路径。想法重要，但需要具体的流通与工作形态；我也要谋生。",
-        "同时，这里也是展示不那么寻常之物的地方。至少，本站兼具自传性与面向市场的记录：我需要客户，也喜欢与人交流想法。"
+        "ProjetoX 是一项关于心理学、行为与日常生活的科学传播／科学教育项目。",
+        "旨在汇集文章、视频、推荐与观察，讨论人们如何思考、选择、经历痛苦、学习、自我组织并在世界中活动。",
+        "不是零散的猎奇，而是尝试把研究、数据和好问题转化为更易理解、更有用、更易分享的内容。"
       ],
-      "imageAlt": "肖像：eu9"
+      "imageAlt": "实验室工位上的 Víctor，显示器为 Vercel 登录页。"
     },
     "zh-TW": {
       "title": "註記",
-      "excerpt": "本站意在拓展職涯路徑。想法重要，但需要具體的流通與工作形式；我也要餬口。\n\n同時，這裡也是紀錄與整理不太尋常事物的空間。至少，本站兼具自傳與面向市場的紀錄：我需要客戶，也喜歡和人分享想法。",
+      "excerpt": "ProjetoX 是關於心理學、行為與日常生活的科學傳播／科學教育專案。\n\n想法是匯集文章、影片、推薦與觀察，談人們如何思考、選擇、受苦、學習、自我組織並在世界中移動。\n\n不是零散的獵奇，而是試著把研究、資料和好問題轉成更易親近、更有用、更易分享的內容。",
       "body": [
-        "本站意在拓展職涯路徑。想法重要，但需要具體的流通與工作形式；我也要餬口。",
-        "同時，這裡也是展示不太尋常事物的空間。至少，本站兼具自傳與面向市場的紀錄：我需要客戶，也喜歡和人交換想法。"
+        "ProjetoX 是關於心理學、行為與日常生活的科學傳播／科學教育專案。",
+        "想法是匯集文章、影片、推薦與觀察，談人們如何思考、選擇、受苦、學習、自我組織並在世界中移動。",
+        "不是零散的獵奇，而是試著把研究、資料和好問題轉成更易親近、更有用、更易分享的內容。"
       ],
-      "imageAlt": "肖像：eu9"
+      "imageAlt": "電腦教室裡的 Víctor，螢幕為 Vercel 登入頁。"
     }
   },
   "sugestoes": {
