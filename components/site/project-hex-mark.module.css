@@ -8,6 +8,21 @@
   max-height: 240px;
 }
 
+@media (max-width: 639px) {
+  .stack {
+    width: min(92vw, 292px);
+    height: min(92vw, 292px);
+    max-width: 292px;
+    max-height: 292px;
+  }
+
+  .titleMeasure,
+  .titleDots {
+    font-size: clamp(1.05rem, 4.4vw, 1.6rem);
+    letter-spacing: 0.2em;
+  }
+}
+
 /* Wordmark centrado sobre o hex/círculo (mesmo padrão que VekonHeroMark). */
 .wordmarkOverlay {
   position: absolute;
