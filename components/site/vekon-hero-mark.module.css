@@ -3,6 +3,25 @@
 .root {
   position: relative;
   flex-shrink: 0;
+  width: var(--vekon-size, 200px);
+  height: var(--vekon-size, 200px);
+  max-width: min(92vw, 240px);
+  max-height: min(92vw, 240px);
+}
+
+/** Insets proporcionais ao diâmetro (equivalente a 18/420 e 74/420 do layout original). */
+.ringInnerInset {
+  top: 4.2857%;
+  right: 4.2857%;
+  bottom: 4.2857%;
+  left: 4.2857%;
+}
+
+.livingInset {
+  top: 17.619%;
+  right: 17.619%;
+  bottom: 17.619%;
+  left: 17.619%;
 }
 
 .ringOuter {

@@ -86,17 +86,8 @@ export function VekonHeroMark({
   interactive = true,
 }: VekonHeroMarkProps) {
   const s = sizePx;
-  const inner = Math.round((18 / 420) * s);
-  const living = Math.round((74 / 420) * s);
-
-  const innerStyle = { top: inner, left: inner, right: inner, bottom: inner };
-  const livingStyle = { top: living, left: living, right: living, bottom: living };
-
-  const boxStyle = {
-    width: s,
-    height: s,
-    maxWidth: "min(92vw, 240px)",
-    maxHeight: "min(92vw, 240px)",
+  const shellStyle = {
+    ["--vekon-size" as string]: `${s}px`,
   } as const;
 
   const shellClass = `${styles.root} mx-auto block border-0 bg-transparent p-0 ${className}`;
@@ -105,10 +96,9 @@ export function VekonHeroMark({
     <>
       <div className={`absolute inset-0 rounded-full ${styles.ringOuter}`} />
       <div
-        className={`absolute rounded-full ${styles.ringInner}`}
-        style={innerStyle}
+        className={`absolute rounded-full ${styles.ringInner} ${styles.ringInnerInset}`}
       />
-      <div className={`absolute ${styles.livingWrap}`} style={livingStyle}>
+      <div className={`absolute ${styles.livingWrap} ${styles.livingInset}`}>
         <LivingRingHero />
       </div>
       <div className="absolute inset-0 flex flex-col items-center justify-center px-3 text-center">
@@ -123,7 +113,7 @@ export function VekonHeroMark({
         role="presentation"
         aria-hidden
         className={`${shellClass} cursor-default`}
-        style={boxStyle}
+        style={shellStyle}
       >
         {rings}
       </div>
@@ -136,7 +126,7 @@ export function VekonHeroMark({
       onClick={onActivate}
       aria-label="Abrir Vekon"
       className={`${shellClass} cursor-pointer outline-none transition-opacity hover:opacity-95 focus-visible:ring-2 focus-visible:ring-[#404040]/35 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f3f4f6]`}
-      style={boxStyle}
+      style={shellStyle}
     >
       {rings}
     </button>

@@ -194,43 +194,54 @@ function MainNavigation({
 
   const navJustifyClass = "w-full justify-center";
 
+  /** No header só mobile: não mostrar o destino já aberto (padrão tipo victorcorreard). */
+  const showNav = (panel: OpenPanel) => !compactHeader || openPanel !== panel;
+
   return (
     <nav
       className={`flex min-w-0 flex-wrap items-center gap-1.5 sm:gap-2.5 ${navJustifyClass}`}
       aria-label={t("main")}
     >
-      <button
-        type="button"
-        onClick={() => pickPanel("victor")}
-        className={`${tb} ${navToggleShapeHeader} ${openPanel === "victor" ? ta : ti}`}
-      >
-        <LayoutGrid className="h-4 w-4 shrink-0" strokeWidth={2} aria-hidden />
-        <span className="min-w-0 text-center">{t("projeto")}</span>
-      </button>
-      <button
-        type="button"
-        onClick={() => pickPanel("registros")}
-        className={`${tb} ${navToggleShapeHeader} ${openPanel === "registros" ? ta : ti}`}
-      >
-        <Clapperboard className="h-4 w-4 shrink-0" strokeWidth={2} aria-hidden />
-        <span className="min-w-0 text-center">{t("registros")}</span>
-      </button>
-      <button
-        type="button"
-        onClick={() => pickPanel("clinica")}
-        className={`${tb} ${navToggleShapeHeader} ${openPanel === "clinica" ? ta : ti}`}
-      >
-        <Stethoscope className="h-4 w-4 shrink-0" strokeWidth={2} aria-hidden />
-        <span className="min-w-0 text-center">{t("servicos")}</span>
-      </button>
-      <button
-        type="button"
-        onClick={() => pickPanel("nos")}
-        className={`${tb} ${navToggleShapeHeader} ${openPanel === "nos" ? ta : ti}`}
-      >
-        <Users className="h-4 w-4 shrink-0" strokeWidth={2} aria-hidden />
-        <span className="min-w-0 text-center">{t("nos")}</span>
-      </button>
+      {showNav("victor") ? (
+        <button
+          type="button"
+          onClick={() => pickPanel("victor")}
+          className={`${tb} ${navToggleShapeHeader} ${openPanel === "victor" ? ta : ti}`}
+        >
+          <LayoutGrid className="h-4 w-4 shrink-0" strokeWidth={2} aria-hidden />
+          <span className="min-w-0 text-center">{t("projeto")}</span>
+        </button>
+      ) : null}
+      {showNav("registros") ? (
+        <button
+          type="button"
+          onClick={() => pickPanel("registros")}
+          className={`${tb} ${navToggleShapeHeader} ${openPanel === "registros" ? ta : ti}`}
+        >
+          <Clapperboard className="h-4 w-4 shrink-0" strokeWidth={2} aria-hidden />
+          <span className="min-w-0 text-center">{t("registros")}</span>
+        </button>
+      ) : null}
+      {showNav("clinica") ? (
+        <button
+          type="button"
+          onClick={() => pickPanel("clinica")}
+          className={`${tb} ${navToggleShapeHeader} ${openPanel === "clinica" ? ta : ti}`}
+        >
+          <Stethoscope className="h-4 w-4 shrink-0" strokeWidth={2} aria-hidden />
+          <span className="min-w-0 text-center">{t("servicos")}</span>
+        </button>
+      ) : null}
+      {showNav("nos") ? (
+        <button
+          type="button"
+          onClick={() => pickPanel("nos")}
+          className={`${tb} ${navToggleShapeHeader} ${openPanel === "nos" ? ta : ti}`}
+        >
+          <Users className="h-4 w-4 shrink-0" strokeWidth={2} aria-hidden />
+          <span className="min-w-0 text-center">{t("nos")}</span>
+        </button>
+      ) : null}
     </nav>
   );
 }
@@ -855,13 +866,14 @@ export default function HomePage() {
 
       <section
         id="top"
-        className="relative order-1 isolate flex min-h-[min(37.4vh,255px)] w-full min-w-0 flex-col overflow-visible bg-[#f3f4f6] px-5 pb-0 pt-0 sm:min-h-[min(35.7vh,272px)] sm:px-8 md:px-12 lg:min-h-[min(34vh,306px)]"
+        className="relative order-1 isolate flex min-h-[min(26.18vh,178px)] w-full min-w-0 flex-col overflow-visible bg-[#f3f4f6] px-5 pb-0 pt-0 sm:min-h-[min(35.7vh,272px)] sm:px-8 md:px-12 lg:min-h-[min(34vh,306px)]"
       >
         <HeroBackground />
 
         <div className="relative z-10 flex min-h-0 w-full max-w-full flex-1 flex-col overflow-visible">
-          <div className="mx-auto grid min-h-0 w-full max-w-7xl flex-1 grid-rows-[1fr_auto] px-2">
-            <div className="grid h-full min-h-0 w-full place-items-center px-2 py-2 text-center sm:py-3">
+          <div className="w-full max-sm:origin-top max-sm:scale-[0.75] max-sm:[transform-origin:50%_0]">
+            <div className="mx-auto grid min-h-0 w-full max-w-7xl flex-1 grid-rows-[1fr_auto] px-2">
+              <div className="grid h-full min-h-0 w-full place-items-center px-2 py-2 text-center sm:py-3">
               <div className="flex max-w-full translate-y-[68px] flex-col items-center justify-center">
                 <h1 className="sr-only">{tHero("projectTitle")}</h1>
                 <ProjectHexMark
@@ -912,6 +924,7 @@ export default function HomePage() {
               <div className="shrink-0 self-end pr-0.5 pb-0.5 sm:pr-1 sm:pb-1 md:pr-2 md:pb-2">
                 <VekonHeroMark interactive={false} sizePx={136} className="mx-0" />
               </div>
+            </div>
             </div>
           </div>
         </div>

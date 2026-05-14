@@ -21,8 +21,7 @@ const footerMailtoChain = [
 ] as const;
 
 const socialFooterLinkClass =
-  "inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white text-black/65 shadow-sm transition hover:border-[#525252]/35 hover:text-[#525252] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#404040]/35 focus-visible:ring-offset-2 " +
-  "max-sm:border-white/45 max-sm:bg-transparent max-sm:text-white max-sm:shadow-none max-sm:hover:border-white max-sm:hover:bg-white/10 max-sm:hover:text-white max-sm:focus-visible:ring-white/40 max-sm:focus-visible:ring-offset-2 max-sm:focus-visible:ring-offset-black";
+  "inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white text-black/65 shadow-sm transition hover:border-[#525252]/35 hover:text-[#525252] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#404040]/35 focus-visible:ring-offset-2";
 
 function InstagramGlyph({ className }: { className?: string }) {
   return (
@@ -66,11 +65,11 @@ export function SiteSocialFooter({
   const shellClass =
     layout === "registros"
       ? afterHeroStack
-        ? "mx-auto mt-0 flex w-full max-w-6xl flex-col items-center justify-center gap-3 border-t border-black/10 pt-5 max-sm:relative max-sm:left-1/2 max-sm:w-screen max-sm:max-w-[100vw] max-sm:-translate-x-1/2 max-sm:border-white/15 max-sm:bg-black max-sm:px-5 max-sm:pb-[max(2rem,env(safe-area-inset-bottom))] max-sm:pt-5 sm:max-lg:-mt-[15px] sm:max-lg:mx-0 sm:max-lg:w-full sm:max-lg:max-w-none sm:max-lg:justify-center sm:max-lg:pt-10"
-        : "mx-auto mt-16 flex w-full max-w-6xl flex-col items-center justify-center gap-3 border-t border-black/10 pt-10 max-sm:relative max-sm:left-1/2 max-sm:w-screen max-sm:max-w-[100vw] max-sm:-translate-x-1/2 max-sm:border-white/15 max-sm:bg-black max-sm:px-5 max-sm:pb-[max(2rem,env(safe-area-inset-bottom))] max-sm:pt-10 lg:max-xl:justify-center lg:max-xl:pt-12"
+        ? "mx-auto mt-0 flex w-full max-w-6xl flex-col items-center justify-center gap-3 border-t border-black/10 pt-5 max-sm:relative max-sm:left-1/2 max-sm:w-screen max-sm:max-w-[100vw] max-sm:-translate-x-1/2 max-sm:border-black/10 max-sm:bg-white max-sm:px-5 max-sm:pb-[max(2rem,env(safe-area-inset-bottom))] max-sm:pt-5 sm:max-lg:-mt-[15px] sm:max-lg:mx-0 sm:max-lg:w-full sm:max-lg:max-w-none sm:max-lg:justify-center sm:max-lg:pt-10"
+        : "mx-auto mt-16 flex w-full max-w-6xl flex-col items-center justify-center gap-3 border-t border-black/10 pt-10 max-sm:relative max-sm:left-1/2 max-sm:w-screen max-sm:max-w-[100vw] max-sm:-translate-x-1/2 max-sm:border-black/10 max-sm:bg-white max-sm:px-5 max-sm:pb-[max(2rem,env(safe-area-inset-bottom))] max-sm:pt-10 lg:max-xl:justify-center lg:max-xl:pt-12"
       : afterHeroStack
-        ? "mx-auto mt-0 flex w-full max-w-[40rem] flex-col items-center justify-center gap-3 border-t border-black/10 pt-5 max-sm:relative max-sm:left-1/2 max-sm:w-screen max-sm:max-w-[100vw] max-sm:-translate-x-1/2 max-sm:border-white/15 max-sm:bg-black max-sm:px-5 max-sm:pb-[max(2rem,env(safe-area-inset-bottom))] max-sm:pt-5 sm:max-lg:-mt-[15px] sm:max-lg:mx-0 sm:max-lg:w-full sm:max-lg:max-w-none sm:max-lg:justify-center sm:max-lg:pt-10"
-        : "mx-auto mt-20 flex w-full max-w-[40rem] flex-col items-center justify-center gap-3 border-t border-black/10 pt-10 max-sm:relative max-sm:left-1/2 max-sm:w-screen max-sm:max-w-[100vw] max-sm:-translate-x-1/2 max-sm:border-white/15 max-sm:bg-black max-sm:px-5 max-sm:pb-[max(2rem,env(safe-area-inset-bottom))] max-sm:pt-10 lg:max-xl:justify-center lg:max-xl:pt-12";
+        ? "mx-auto mt-0 flex w-full max-w-[40rem] flex-col items-center justify-center gap-3 border-t border-black/10 pt-5 max-sm:relative max-sm:left-1/2 max-sm:w-screen max-sm:max-w-[100vw] max-sm:-translate-x-1/2 max-sm:border-black/10 max-sm:bg-white max-sm:px-5 max-sm:pb-[max(2rem,env(safe-area-inset-bottom))] max-sm:pt-5 sm:max-lg:-mt-[15px] sm:max-lg:mx-0 sm:max-lg:w-full sm:max-lg:max-w-none sm:max-lg:justify-center sm:max-lg:pt-10"
+        : "mx-auto mt-20 flex w-full max-w-[40rem] flex-col items-center justify-center gap-3 border-t border-black/10 pt-10 max-sm:relative max-sm:left-1/2 max-sm:w-screen max-sm:max-w-[100vw] max-sm:-translate-x-1/2 max-sm:border-black/10 max-sm:bg-white max-sm:px-5 max-sm:pb-[max(2rem,env(safe-area-inset-bottom))] max-sm:pt-10 lg:max-xl:justify-center lg:max-xl:pt-12";
 
   async function copyEmail() {
     try {
@@ -111,7 +110,7 @@ export function SiteSocialFooter({
           <button
             type="button"
             onClick={copyEmail}
-            className={`${socialFooterLinkClass} ${emailCopied ? "border-[#525252]/40 text-[#525252] max-sm:border-white max-sm:bg-white/15 max-sm:text-white" : ""}`}
+            className={`${socialFooterLinkClass} ${emailCopied ? "border-[#525252]/40 text-[#525252]" : ""}`}
             aria-label={
               emailCopied
                 ? t("emailCopied", { email: CONTACT_EMAIL })
@@ -147,7 +146,7 @@ export function SiteSocialFooter({
             <a
               key={`vic-email-${i}-${email}`}
               href={`mailto:${email}`}
-              className="max-w-[min(100%,20rem)] break-all text-center font-mono text-[10px] uppercase tracking-[0.12em] text-black/70 underline decoration-black/18 underline-offset-[3px] transition hover:text-[#525252] hover:decoration-[#525252]/35 max-sm:text-white/88 max-sm:decoration-white/28 max-sm:hover:text-white"
+              className="max-w-[min(100%,20rem)] break-all text-center font-mono text-[10px] uppercase tracking-[0.12em] text-black/70 underline decoration-black/18 underline-offset-[3px] transition hover:text-[#525252] hover:decoration-[#525252]/35"
             >
               {email}
             </a>
