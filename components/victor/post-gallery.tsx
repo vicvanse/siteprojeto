@@ -171,7 +171,7 @@ export function PostGallery({
   }
 
   const arrowMainClass =
-    "absolute top-1/2 z-20 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border-0 bg-white/75 text-neutral-800 shadow-sm backdrop-blur-[2px] transition-opacity duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4a7c44]/40 opacity-35 sm:opacity-0 sm:group-hover/main:opacity-90";
+    "absolute top-1/2 z-20 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border-0 bg-white/75 text-neutral-800 shadow-sm backdrop-blur-[2px] transition-opacity duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#525252]/40 opacity-35 sm:opacity-0 sm:group-hover/main:opacity-90";
 
   const showLightbox = !locked;
 

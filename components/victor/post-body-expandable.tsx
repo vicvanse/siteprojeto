@@ -43,7 +43,7 @@ export function PostBodyExpandable({
           <button
             type="button"
             onClick={() => setOpen(true)}
-            className="border-0 bg-transparent p-0 text-[15px] font-medium leading-[1.7] text-[#4a7c44] underline decoration-[#4a7c44]/30 underline-offset-[5px] transition hover:decoration-[#4a7c44]"
+            className="border-0 bg-transparent p-0 text-[15px] font-medium leading-[1.7] text-[#525252] underline decoration-[#525252]/30 underline-offset-[5px] transition hover:decoration-[#525252]"
             aria-expanded={false}
             aria-controls={regionId}
           >
@@ -63,7 +63,7 @@ export function PostBodyExpandable({
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="border-0 bg-transparent p-0 text-[15px] font-medium leading-[1.7] text-[#4a7c44] underline decoration-[#4a7c44]/30 underline-offset-[5px] transition hover:decoration-[#4a7c44]"
+              className="border-0 bg-transparent p-0 text-[15px] font-medium leading-[1.7] text-[#525252] underline decoration-[#525252]/30 underline-offset-[5px] transition hover:decoration-[#525252]"
               aria-expanded
               aria-controls={regionId}
             >

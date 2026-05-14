@@ -21,7 +21,6 @@ import {
   X,
 } from "lucide-react";
 import { HeroBackground } from "@/components/site/hero-background";
-import { HeroTriangleArt } from "@/components/site/hero-triangle-art";
 import { HeaderLocaleSelect } from "@/components/site/header-locale-select";
 import { VekonHeroMark } from "@/components/site/vekon-hero-mark";
 import { SiteSocialFooter } from "@/components/site/site-social-footer";
@@ -148,14 +147,14 @@ const navToggleShapeHeader = navToggleShape;
 
 const navToggleBase =
   "group inline-flex min-h-[52px] w-auto min-w-[100px] shrink-0 flex-col items-center justify-center border px-2.5 py-1.5 text-[10px] uppercase leading-tight tracking-[0.18em] transition-colors duration-200 outline-none " +
-  "focus-visible:ring-2 focus-visible:ring-[#356040]/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white";
+  "focus-visible:ring-2 focus-visible:ring-[#404040]/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white";
 
 /** Blur só no estado inativo: backdrop-filter + fundo sólido no ativo quebra o texto em alguns browsers (Chrome/Windows). */
 const navToggleIdle =
-  "border-[#356040]/50 bg-white/72 backdrop-blur-sm text-[#4a7c44] hover:border-[#356040] hover:bg-[#4a7c44]/10 hover:text-[#4a7c44]";
+  "border-[#404040]/50 bg-white/72 backdrop-blur-sm text-[#525252] hover:border-[#404040] hover:bg-[#525252]/10 hover:text-[#525252]";
 
 const navToggleActive =
-  "border-[#356040] bg-[#4a7c44] text-white [backdrop-filter:none] [-webkit-backdrop-filter:none]";
+  "border-[#404040] bg-[#525252] text-white [backdrop-filter:none] [-webkit-backdrop-filter:none]";
 
 /** Barra de navegação escura (só mobile): contorno e texto brancos. */
 const navToggleBaseMobile =
@@ -765,8 +764,8 @@ export default function HomePage() {
   }
 
   return (
-    <main className="relative flex min-h-screen flex-col overflow-x-visible overflow-y-visible bg-white font-sans text-black selection:bg-[#4a7c44] selection:text-white">
-      {/* Só navegação sticky; o hero (mint + identidade) fica na secção seguinte, mais baixo que o antigo 70vh. */}
+    <main className="relative flex min-h-screen flex-col overflow-x-visible overflow-y-visible bg-white font-sans text-black selection:bg-[#525252] selection:text-white">
+      {/* Só navegação sticky; o hero (cinza claro + identidade) fica na secção seguinte, mais baixo que o antigo 70vh. */}
       <div className="order-0 shrink-0 bg-white">
         <header className="relative z-40 shrink-0">
           <div className="sticky top-0 z-40 border-b border-white/12 bg-black py-2 sm:hidden">
@@ -796,18 +795,9 @@ export default function HomePage() {
 
       <section
         id="top"
-        className="relative order-1 isolate flex min-h-[min(44vh,300px)] w-full min-w-0 flex-col overflow-visible bg-[#f0f4f2] px-5 pb-0 pt-0 sm:min-h-[min(42vh,320px)] sm:px-8 md:px-12 lg:min-h-[min(40vh,360px)]"
+        className="relative order-1 isolate flex min-h-[min(44vh,300px)] w-full min-w-0 flex-col overflow-visible bg-[#f4f4f5] px-5 pb-0 pt-0 sm:min-h-[min(42vh,320px)] sm:px-8 md:px-12 lg:min-h-[min(40vh,360px)]"
       >
         <HeroBackground />
-        <HeroTriangleArt
-          emphasis
-          className="pointer-events-none absolute left-2 top-1/2 z-[2] h-[min(18rem,52vh)] w-[min(42vw,240px)] max-h-[280px] -translate-y-1/2 sm:left-4 sm:h-[min(19rem,55vh)] sm:max-h-[300px] sm:w-[min(38vw,260px)] md:left-6 md:w-[min(34vw,280px)]"
-        />
-        <HeroTriangleArt
-          mirror
-          emphasis
-          className="pointer-events-none absolute right-2 top-1/2 z-[2] h-[min(18rem,52vh)] w-[min(42vw,240px)] max-h-[280px] -translate-y-1/2 sm:right-4 sm:h-[min(19rem,55vh)] sm:max-h-[300px] sm:w-[min(38vw,260px)] md:right-6 md:w-[min(34vw,280px)]"
-        />
 
         <div className="relative z-10 flex min-h-0 w-full max-w-full flex-1 flex-col overflow-visible">
           <div className="mx-auto grid min-h-0 w-full max-w-7xl flex-1 grid-rows-[1fr_auto] px-2">
@@ -826,7 +816,7 @@ export default function HomePage() {
                       href={INSTAGRAM_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center rounded-full border border-[#356040]/25 bg-white/55 px-4 py-1.5 text-[11px] uppercase tracking-[0.26em] text-[#356040] backdrop-blur-sm transition hover:bg-white/75 sm:px-5 sm:py-2 sm:text-[12px]"
+                      className="inline-flex items-center rounded-full border border-[#404040]/25 bg-white/55 px-4 py-1.5 text-[11px] uppercase tracking-[0.26em] text-[#404040] backdrop-blur-sm transition hover:bg-white/75 sm:px-5 sm:py-2 sm:text-[12px]"
                     >
                       {INSTAGRAM_LINK_LABEL}
                     </a>

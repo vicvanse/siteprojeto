@@ -77,7 +77,7 @@ export default async function PostPage({ params }: PostPageProps) {
         <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-black/40">
           <Link
             href="/"
-            className="text-[#4a7c44] underline decoration-[#4a7c44]/25 underline-offset-4 transition hover:decoration-[#4a7c44]"
+            className="text-[#525252] underline decoration-[#525252]/25 underline-offset-4 transition hover:decoration-[#525252]"
           >
             {tPost("backCrumb")}
           </Link>
@@ -107,7 +107,7 @@ export default async function PostPage({ params }: PostPageProps) {
               <time className="text-[12px] tabular-nums text-black/45">
                 {post.dateLabel}
               </time>
-              <span className="inline-flex rounded-full bg-[#4a7c44]/10 px-2.5 py-0.5 text-[10px] font-medium tracking-[0.08em] text-[#4a7c44]">
+              <span className="inline-flex rounded-full bg-[#525252]/10 px-2.5 py-0.5 text-[10px] font-medium tracking-[0.08em] text-[#525252]">
                 {getLocalizedCategoryLabel(
                   post.category,
                   tCategory as unknown as (k: string) => string,
@@ -173,7 +173,7 @@ export default async function PostPage({ params }: PostPageProps) {
         <p className="mt-10 text-center">
           <Link
             href="/"
-            className="text-[13px] font-medium text-[#4a7c44] underline decoration-[#4a7c44]/25 underline-offset-[5px] transition hover:decoration-[#4a7c44]"
+            className="text-[13px] font-medium text-[#525252] underline decoration-[#525252]/25 underline-offset-[5px] transition hover:decoration-[#525252]"
           >
             {tPost("back")}
           </Link>

@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 
 const NAV_BTN_CLASS =
-  "inline-flex min-h-[52px] min-w-[100px] shrink-0 flex-col items-center justify-center gap-0.5 rounded-tr-[12px] rounded-bl-[12px] border border-[#356040] bg-[#4a7c44] px-2.5 py-1.5 text-center font-mono text-[10px] leading-tight tracking-[0.18em] text-white no-underline shadow-[0_14px_28px_rgba(74,124,68,0.18)] outline-none max-sm:transition-colors max-sm:duration-200 max-sm:hover:border-[#2d4c3b] max-sm:hover:bg-[#2d4c3b] focus-visible:ring-2 focus-visible:ring-[#356040]/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:min-h-0 sm:min-w-0 sm:inline sm:gap-0 sm:rounded-none sm:border-0 sm:bg-transparent sm:px-0 sm:py-0 sm:shadow-none sm:text-[#4a7c44] sm:underline sm:decoration-[#4a7c44]/25 sm:underline-offset-4 sm:hover:bg-transparent sm:hover:text-[#4a7c44]";
+  "inline-flex min-h-[52px] min-w-[100px] shrink-0 flex-col items-center justify-center gap-0.5 rounded-tr-[12px] rounded-bl-[12px] border border-[#404040] bg-[#525252] px-2.5 py-1.5 text-center font-mono text-[10px] leading-tight tracking-[0.18em] text-white no-underline shadow-[0_14px_28px_rgba(82,82,82,0.18)] outline-none max-sm:transition-colors max-sm:duration-200 max-sm:hover:border-[#262626] max-sm:hover:bg-[#262626] focus-visible:ring-2 focus-visible:ring-[#404040]/40 focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:min-h-0 sm:min-w-0 sm:inline sm:gap-0 sm:rounded-none sm:border-0 sm:bg-transparent sm:px-0 sm:py-0 sm:shadow-none sm:text-[#525252] sm:underline sm:decoration-[#525252]/25 sm:underline-offset-4 sm:hover:bg-transparent sm:hover:text-[#525252]";
 
 export type SugestoesRespostasStripVariant = "formulario" | "arquivo";
 

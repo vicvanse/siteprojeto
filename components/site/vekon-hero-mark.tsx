@@ -135,7 +135,7 @@ export function VekonHeroMark({
       type="button"
       onClick={onActivate}
       aria-label="Abrir Vekon"
-      className={`${shellClass} cursor-pointer outline-none transition-opacity hover:opacity-95 focus-visible:ring-2 focus-visible:ring-[#356040]/35 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f0f4f2]`}
+      className={`${shellClass} cursor-pointer outline-none transition-opacity hover:opacity-95 focus-visible:ring-2 focus-visible:ring-[#404040]/35 focus-visible:ring-offset-2 focus-visible:ring-offset-[#f4f4f5]`}
       style={boxStyle}
     >
       {rings}

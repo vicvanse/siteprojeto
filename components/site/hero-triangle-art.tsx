@@ -14,7 +14,7 @@ function clampOpacity(v: number): number {
 
 /**
  * Decoração: composição abstracta só com triângulos (sem a arte antiga em formas orgânicas).
- * Cores alinhadas à marca (musgo / floresta).
+ * Cores alinhadas à marca (tons de cinza).
  */
 export function HeroTriangleArt({
   className = "",
@@ -48,12 +48,12 @@ export function HeroTriangleArt({
           >
             <stop
               offset="0%"
-              stopColor="#4a7c44"
+              stopColor="#525252"
               stopOpacity={clampOpacity(0.38 * m)}
             />
             <stop
               offset="100%"
-              stopColor="#2d4c3b"
+              stopColor="#262626"
               stopOpacity={clampOpacity(0.1 * m)}
             />
           </linearGradient>
@@ -66,24 +66,24 @@ export function HeroTriangleArt({
           >
             <stop
               offset="0%"
-              stopColor="#356040"
+              stopColor="#404040"
               stopOpacity={clampOpacity(0.28 * m)}
             />
             <stop
               offset="100%"
-              stopColor="#4a7c44"
+              stopColor="#525252"
               stopOpacity={clampOpacity(0.06 * m)}
             />
           </linearGradient>
           <linearGradient id={idC} x1="0%" y1="100%" x2="0%" y2="0%">
             <stop
               offset="0%"
-              stopColor="#7ea04d"
+              stopColor="#737373"
               stopOpacity={clampOpacity(0.22 * m)}
             />
             <stop
               offset="100%"
-              stopColor="#a7bdb5"
+              stopColor="#d4d4d4"
               stopOpacity={clampOpacity(0.08 * m)}
             />
           </linearGradient>
@@ -94,17 +94,17 @@ export function HeroTriangleArt({
         <polygon points="32,96 208,52 118,248" fill={`url(#${idC})`} />
         <polygon
           points="48,360 236,320 132,548"
-          fill="#4a7c44"
+          fill="#525252"
           fillOpacity={clampOpacity(0.12 * m)}
         />
         <polygon
           points="12,520 188,440 96,620"
-          fill="#2d4c3b"
+          fill="#262626"
           fillOpacity={clampOpacity(0.1 * m)}
         />
 
         <g
-          stroke="#356040"
+          stroke="#404040"
           strokeOpacity={clampOpacity(0.22 * m)}
           strokeWidth="1.15"
           fill="none"
@@ -115,7 +115,7 @@ export function HeroTriangleArt({
           <path d="M72 120 L188 96 L118 208" />
         </g>
 
-        <g fill="#2d4c3b" fillOpacity={clampOpacity(0.35 * m)}>
+        <g fill="#262626" fillOpacity={clampOpacity(0.35 * m)}>
           <polygon points="156,72 168,72 162,84" />
           <polygon points="88,312 100,312 94,324" />
           <polygon points="52,592 64,592 58,604" />

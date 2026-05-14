@@ -193,7 +193,7 @@ export function SugestoesForm() {
 
       {successBanner ? (
         <p
-          className="rounded-lg border border-[#4a7c44]/20 bg-[#4a7c44]/5 px-4 py-3 text-[15px] leading-relaxed text-neutral-800"
+          className="rounded-lg border border-[#525252]/20 bg-[#525252]/5 px-4 py-3 text-[15px] leading-relaxed text-neutral-800"
           role="status"
         >
           {t("success")}
@@ -227,7 +227,7 @@ export function SugestoesForm() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           autoComplete="name"
-          className="h-11 w-full rounded-lg border border-black/12 bg-white px-3 text-[15px] text-neutral-900 outline-none transition focus:border-[#4a7c44]/45 focus:ring-2 focus:ring-[#4a7c44]/15"
+          className="h-11 w-full rounded-lg border border-black/12 bg-white px-3 text-[15px] text-neutral-900 outline-none transition focus:border-[#525252]/45 focus:ring-2 focus:ring-[#525252]/15"
         />
       </div>
 
@@ -247,7 +247,7 @@ export function SugestoesForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           autoComplete="email"
-          className="h-11 w-full rounded-lg border border-black/12 bg-white px-3 text-[15px] text-neutral-900 outline-none transition focus:border-[#4a7c44]/45 focus:ring-2 focus:ring-[#4a7c44]/15"
+          className="h-11 w-full rounded-lg border border-black/12 bg-white px-3 text-[15px] text-neutral-900 outline-none transition focus:border-[#525252]/45 focus:ring-2 focus:ring-[#525252]/15"
         />
       </div>
 
@@ -269,7 +269,7 @@ export function SugestoesForm() {
           rows={6}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          className="w-full resize-y rounded-lg border border-black/12 bg-white px-3 py-2.5 text-[15px] leading-relaxed text-neutral-900 outline-none transition focus:border-[#4a7c44]/45 focus:ring-2 focus:ring-[#4a7c44]/15"
+          className="w-full resize-y rounded-lg border border-black/12 bg-white px-3 py-2.5 text-[15px] leading-relaxed text-neutral-900 outline-none transition focus:border-[#525252]/45 focus:ring-2 focus:ring-[#525252]/15"
         />
       </div>
 
@@ -306,7 +306,7 @@ export function SugestoesForm() {
                     <button
                       type="button"
                       onClick={() => removeImage(i)}
-                      className="shrink-0 rounded-md px-2 py-0.5 text-[12px] font-medium text-[#4a7c44] underline-offset-2 hover:underline"
+                      className="shrink-0 rounded-md px-2 py-0.5 text-[12px] font-medium text-[#525252] underline-offset-2 hover:underline"
                     >
                       {t("remove")}
                     </button>
@@ -319,7 +319,7 @@ export function SugestoesForm() {
                 <button
                   type="button"
                   onClick={() => imageInputRef.current?.click()}
-                  className="inline-flex h-10 items-center rounded-lg border-0 bg-[#4a7c44]/10 px-3 py-2 text-[13px] font-medium text-[#4a7c44]"
+                  className="inline-flex h-10 items-center rounded-lg border-0 bg-[#525252]/10 px-3 py-2 text-[13px] font-medium text-[#525252]"
                 >
                   {t("chooseFiles")}
                 </button>
@@ -352,7 +352,7 @@ export function SugestoesForm() {
                 <button
                   type="button"
                   onClick={clearAudio}
-                  className="shrink-0 rounded-md px-2 py-0.5 text-[12px] font-medium text-[#4a7c44] underline-offset-2 hover:underline"
+                  className="shrink-0 rounded-md px-2 py-0.5 text-[12px] font-medium text-[#525252] underline-offset-2 hover:underline"
                 >
                   {t("remove")}
                 </button>
@@ -362,7 +362,7 @@ export function SugestoesForm() {
               <button
                 type="button"
                 onClick={() => audioInputRef.current?.click()}
-                className="inline-flex h-10 items-center rounded-lg border-0 bg-[#4a7c44]/10 px-3 py-2 text-[13px] font-medium text-[#4a7c44]"
+                className="inline-flex h-10 items-center rounded-lg border-0 bg-[#525252]/10 px-3 py-2 text-[13px] font-medium text-[#525252]"
               >
                 {t("chooseFiles")}
               </button>
@@ -388,7 +388,7 @@ export function SugestoesForm() {
       </div>
 
       {status === "err" ? (
-        <p className="text-[14px] text-[#2d4c3b]" role="alert">
+        <p className="text-[14px] text-[#262626]" role="alert">
           {errorMsg}
         </p>
       ) : null}
@@ -401,7 +401,7 @@ export function SugestoesForm() {
                 type="checkbox"
                 checked={publish}
                 onChange={(e) => setPublish(e.target.checked)}
-                className="mt-0.5 h-[1.15rem] w-[1.15rem] shrink-0 rounded border-black/25 accent-[#4a7c44]"
+                className="mt-0.5 h-[1.15rem] w-[1.15rem] shrink-0 rounded border-black/25 accent-[#525252]"
               />
               <span className="font-medium">{t("publishLabel")}</span>
             </label>
@@ -420,7 +420,7 @@ export function SugestoesForm() {
                 onChange={(e) => setPublishAs(e.target.value)}
                 placeholder={t("publishAsDefault")}
                 autoComplete="nickname"
-                className="h-11 w-full rounded-lg border border-black/12 bg-white px-3 text-[15px] text-neutral-900 placeholder:text-black/35 outline-none transition focus:border-[#4a7c44]/45 focus:ring-2 focus:ring-[#4a7c44]/15"
+                className="h-11 w-full rounded-lg border border-black/12 bg-white px-3 text-[15px] text-neutral-900 placeholder:text-black/35 outline-none transition focus:border-[#525252]/45 focus:ring-2 focus:ring-[#525252]/15"
               />
             </div>
           </div>
@@ -429,7 +429,7 @@ export function SugestoesForm() {
         <button
           type="submit"
           disabled={status === "sending"}
-          className="inline-flex h-11 min-w-[8rem] items-center justify-center rounded-xl border border-[#4a7c44] bg-[#4a7c44] px-6 text-[14px] font-medium text-white shadow-sm transition hover:bg-[#2d4c3b] disabled:opacity-60 sm:rounded-full"
+          className="inline-flex h-11 min-w-[8rem] items-center justify-center rounded-xl border border-[#525252] bg-[#525252] px-6 text-[14px] font-medium text-white shadow-sm transition hover:bg-[#262626] disabled:opacity-60 sm:rounded-full"
         >
           {status === "sending" ? t("sending") : t("submit")}
         </button>

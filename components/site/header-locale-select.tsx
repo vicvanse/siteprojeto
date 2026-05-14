@@ -52,7 +52,7 @@ export function HeaderLocaleSelect({
           "focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-wait disabled:opacity-60 " +
           (isDark
             ? "border-white/25 bg-black text-white hover:border-white/40 focus-visible:ring-white/35 focus-visible:ring-offset-black"
-            : "border-black/12 bg-white text-black/80 hover:border-black/20 focus-visible:ring-[#356040]/35 focus-visible:ring-offset-white")
+            : "border-black/12 bg-white text-black/80 hover:border-black/20 focus-visible:ring-[#404040]/35 focus-visible:ring-offset-white")
         }
       >
         {routing.locales.map((l) => (
