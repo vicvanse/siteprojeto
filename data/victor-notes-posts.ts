@@ -41,7 +41,10 @@ export interface VictorFeedPost {
   pinned?: boolean;
   /** Data curta para o cartão (pt-BR estilo leitura: "11 de abr. de 2026"). */
   dateLabel: string;
-  /** Etiqueta de tipo / categoria (filtro). */
+  /**
+   * Etiqueta de tipo / categoria (filtro).
+   * Em Material (`utilidadeKind: "textos"`): use `victor` ou `adriel` para o autor da curadoria.
+   */
   category: string;
   /** Só em `entender`: omitido conta como ferramenta. */
   utilidadeKind?: UtilidadeKind;
@@ -477,7 +480,7 @@ export const VICTOR_FEED_POSTS: VictorFeedPost[] = [
     title: "Aulas de Human Behavioral Biology (Robert Sapolsky / Stanford)",
     publishedAt: "2026-04-12",
     dateLabel: "12 de abr. de 2026",
-    category: "textos",
+    category: "victor",
     excerpt:
       "Esta série de aulas de Human Behavioral Biology, ministrada por Robert Sapolsky em Stanford, percorre diferentes níveis de explicação do comportamento humano, articulando evolução, genética, neurociência, endocrinologia, desenvolvimento, agressão, sexualidade e contexto social.",
     body: [
@@ -1484,6 +1487,8 @@ export function formatCategoryLabel(category: string): string {
   if (!t) return category;
   if (t === "pixel art") return "Pixel art";
   if (t === "textos") return "Material";
+  if (t === "victor") return "Victor";
+  if (t === "adriel") return "Adriel";
   if (/\s/.test(t)) {
     return t
       .split(/\s+/)

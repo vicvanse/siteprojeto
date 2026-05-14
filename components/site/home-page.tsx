@@ -899,7 +899,7 @@ export default function HomePage() {
                 className="pointer-events-none min-w-0 max-w-[58%] shrink pl-0.5 pb-0 max-sm:max-w-[52%] sm:max-w-none sm:pl-1 sm:pb-1 md:pl-2 md:pb-2"
                 aria-hidden
               >
-                <div className="origin-bottom-left scale-[0.266] sm:scale-[0.315] md:scale-[0.35]">
+                <div className="origin-bottom-left scale-[0.30] sm:scale-[0.315] md:scale-[0.35]">
                   <div className="m-0 text-[clamp(2.5rem,10vw,7rem)] font-sans font-semibold leading-[0.88] tracking-[-0.06em] text-black">
                     <span className="flex flex-col items-end gap-0">
                       <span className="flex items-baseline gap-[0.14em] text-black/18">

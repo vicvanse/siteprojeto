@@ -26,6 +26,8 @@ const CATEGORY_SOURCE_KEYS = new Set([
   "site",
   "textos",
   "vídeos",
+  "victor",
+  "adriel",
 ]);
 
 /**
