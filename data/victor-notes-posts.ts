@@ -1408,7 +1408,7 @@ export const VICTOR_FEED_POSTS: VictorFeedPost[] = [
   {
     section: "clinica",
     slug: "clinica-contacto",
-    title: "Atendimento psicoterapeutico",
+    title: "Atendimento psicoterapêutico",
     feedTitleAlign: "center",
     publishedAt: "2026-04-11",
     dateLabel: "11 de abr. de 2026",

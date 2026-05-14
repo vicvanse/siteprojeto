@@ -627,7 +627,7 @@ export default function HomePage() {
       category: cat,
       excerpt: victorBio,
       body: [victorBio],
-      imageSrc: "/media/hover/eu9.png",
+      imageSrc: "/media/hover/nos-victor-correard.png",
       imageAlt: tNos("profileCardImageAlt"),
       skipPostDetailPage: true,
       feedTitleAlign: "center",

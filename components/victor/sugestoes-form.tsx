@@ -161,10 +161,17 @@ export function SugestoesForm() {
         method: "POST",
         body: fd,
       });
-      const data = (await res.json()) as { error?: string };
+      const data = (await res.json()) as {
+        error?: string;
+        code?: string;
+      };
       if (!res.ok) {
         setStatus("err");
-        setErrorMsg(data.error ?? t("errGeneric"));
+        if (res.status === 429 && data.code === "RATE_LIMIT") {
+          setErrorMsg(t("errRateLimit"));
+        } else {
+          setErrorMsg(data.error ?? t("errGeneric"));
+        }
         return;
       }
       setStatus("idle");

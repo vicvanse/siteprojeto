@@ -16,6 +16,7 @@
     "print:assets": "npm run print:qr && npm run print:pdf && npm run print:png"
   },
   "dependencies": {
+    "@upstash/ratelimit": "^2.0.8",
     "@upstash/redis": "^1.37.0",
     "@vimeo/player": "^2.30.3",
     "framer-motion": "^12.38.0",

@@ -10,6 +10,7 @@ import {
   notifyDiscord,
   type StoredSugestao,
 } from "@/lib/sugestoes-storage";
+import { allowSugestoesPost } from "@/lib/sugestoes-rate-limit";
 
 function isValidEmail(s: string): boolean {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s.trim());
@@ -57,6 +58,17 @@ async function sendResendEmail(entry: StoredSugestao): Promise<boolean> {
 }
 
 export async function POST(request: Request) {
+  const rate = await allowSugestoesPost(request);
+  if (!rate.allowed) {
+    return NextResponse.json(
+      { code: "RATE_LIMIT", retryAfter: rate.retryAfterSec },
+      {
+        status: 429,
+        headers: { "Retry-After": String(rate.retryAfterSec) },
+      },
+    );
+  }
+
   const contentType = request.headers.get("content-type") ?? "";
 
   let name: string;
