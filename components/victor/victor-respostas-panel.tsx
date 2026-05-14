@@ -11,6 +11,10 @@ import {
 } from "@/components/victor/post-card-typography";
 import { getPostsForSection } from "@/data/victor-notes-posts";
 import { VictorSugestoesRespostasStrip } from "@/components/victor/victor-sugestoes-respostas-strip";
+import {
+  VICTOR_IMAGE_QUALITY_AVATAR,
+  VICTOR_IMAGE_QUALITY_MAIN,
+} from "@/lib/victor-image-quality";
 
 /** Feed «Respostas» ligado ao QR / sugestões — mesmo shell visual que `VictorSugestoesPanel`. */
 export function VictorRespostasPanel() {
@@ -51,6 +55,7 @@ export function VictorRespostasPanel() {
                               alt={profileImage.alt ?? post.title}
                               fill
                               sizes="48px"
+                              quality={VICTOR_IMAGE_QUALITY_AVATAR}
                               className="object-cover"
                             />
                           ) : null}
@@ -87,6 +92,7 @@ export function VictorRespostasPanel() {
                           height={1200}
                           className="h-auto w-full object-cover"
                           sizes="(max-width: 768px) 100vw, 640px"
+                          quality={VICTOR_IMAGE_QUALITY_MAIN}
                         />
                       </div>
                     ) : null}

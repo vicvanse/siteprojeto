@@ -14,6 +14,7 @@ export const SPOTIFY_USER_URL = publicEnv("NEXT_PUBLIC_SPOTIFY_USER_URL");
 export const INSTAGRAM_LINK_LABEL =
   publicEnv("NEXT_PUBLIC_INSTAGRAM_LABEL") || "Instagram";
 
-/** Rodapé fixo: contacto principal (três repetições pedidas no layout). */
+/** Rodapé fixo: primeiro e terceiro mailto; o do meio é o contacto USP (layout em três repetições). */
 export const VICVANSE_EMAIL = "victorcvanse@gmail.com";
+export const ADRIEL_LOURENCO_EMAIL = "adriellourenco@usp.br";
 export const VICVANSE_INSTAGRAM_URL = "https://www.instagram.com/vicvanse/";

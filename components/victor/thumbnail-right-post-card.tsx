@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { VICTOR_IMAGE_QUALITY_MAIN } from "@/lib/victor-image-quality";
 import {
   postCardBodyParaClass,
   postCardMetaTagClass,
@@ -48,6 +49,7 @@ export function ThumbnailRightPostCard({
             fill
             className="object-cover object-center"
             sizes="(max-width: 640px) 104px, 136px"
+            quality={VICTOR_IMAGE_QUALITY_MAIN}
             unoptimized={post.imageSrc.endsWith(".gif")}
           />
           {(post.imageGallery?.length ?? 0) > 0 ? (

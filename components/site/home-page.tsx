@@ -48,6 +48,7 @@ import {
   INSTAGRAM_URL,
   INSTAGRAM_LINK_LABEL,
 } from "@/lib/site-constants";
+import { VICTOR_IMAGE_QUALITY_MAIN } from "@/lib/victor-image-quality";
 import type Player from "@vimeo/player";
 
 /** Vídeos em Registros: o primeiro em destaque; os restantes em miniatura (clique promove ao bloco grande). */
@@ -484,6 +485,7 @@ function RegistrosVimeoEmbed({
               fill
               className="object-cover object-center"
               sizes="(max-width: 768px) 100vw, min(896px, 90vw)"
+              quality={VICTOR_IMAGE_QUALITY_MAIN}
               priority={false}
             />
             <div
@@ -568,6 +570,7 @@ function RegistrosVideoThumbnail({
           fill
           className="object-cover object-center transition duration-300 group-hover:scale-[1.02]"
           sizes="(max-width: 640px) 100vw, 33vw"
+          quality={VICTOR_IMAGE_QUALITY_MAIN}
           priority={false}
         />
         <div
@@ -699,7 +702,7 @@ export default function HomePage() {
   const [registrosBandDark, setRegistrosBandDark] = useState(
     () => Boolean(REGISTROS_VIDEOS[0]?.darkBand),
   );
-  /** Subsecção em «victor → Informações Gerais»: Notas | Utilidades | Material. */
+  /** Subsecção em «victor → Informações»: Notas | Utilidades | Material. */
   const [victorInfoTab, setVictorInfoTab] = useState<
     "notas-gerais" | "utilidades" | "material"
   >("notas-gerais");

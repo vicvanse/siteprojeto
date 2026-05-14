@@ -4,6 +4,7 @@ import { BookOpen, Check, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import {
+  ADRIEL_LOURENCO_EMAIL,
   CONTACT_EMAIL,
   GOODREADS_URL,
   INSTAGRAM_URL,
@@ -12,6 +13,12 @@ import {
   VICVANSE_EMAIL,
   VICVANSE_INSTAGRAM_URL,
 } from "@/lib/site-constants";
+
+const footerMailtoChain = [
+  VICVANSE_EMAIL,
+  ADRIEL_LOURENCO_EMAIL,
+  VICVANSE_EMAIL,
+] as const;
 
 const socialFooterLinkClass =
   "inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white text-black/65 shadow-sm transition hover:border-[#525252]/35 hover:text-[#525252] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#404040]/35 focus-visible:ring-offset-2 " +
@@ -136,13 +143,13 @@ export function SiteSocialFooter({
       </div>
       <div className="flex w-full min-w-0 max-w-full flex-col items-center gap-4 sm:gap-5">
         <div className="flex w-full flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:gap-x-5">
-          {[0, 1, 2].map((i) => (
+          {footerMailtoChain.map((email, i) => (
             <a
-              key={`vic-email-${i}`}
-              href={`mailto:${VICVANSE_EMAIL}`}
+              key={`vic-email-${i}-${email}`}
+              href={`mailto:${email}`}
               className="max-w-[min(100%,20rem)] break-all text-center font-mono text-[10px] uppercase tracking-[0.12em] text-black/70 underline decoration-black/18 underline-offset-[3px] transition hover:text-[#525252] hover:decoration-[#525252]/35 max-sm:text-white/88 max-sm:decoration-white/28 max-sm:hover:text-white"
             >
-              {VICVANSE_EMAIL}
+              {email}
             </a>
           ))}
         </div>

@@ -17,6 +17,7 @@ import {
   getPostImages,
   getYoutubeEmbedSrc,
 } from "@/data/victor-notes-posts";
+import { VICTOR_IMAGE_QUALITY_MAIN } from "@/lib/victor-image-quality";
 
 interface PostPageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -125,6 +126,7 @@ export default async function PostPage({ params }: PostPageProps) {
                 fill
                 className="object-cover object-center"
                 sizes="136px"
+                quality={VICTOR_IMAGE_QUALITY_MAIN}
                 priority
                 unoptimized={post.imageSrc.endsWith(".gif")}
               />

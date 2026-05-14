@@ -11,6 +11,11 @@ import {
 } from "react";
 import { createPortal } from "react-dom";
 import type { VictorPostImage } from "@/data/victor-notes-posts";
+import {
+  VICTOR_IMAGE_QUALITY_LIGHTBOX,
+  VICTOR_IMAGE_QUALITY_MAIN,
+  VICTOR_IMAGE_QUALITY_THUMB,
+} from "@/lib/victor-image-quality";
 
 export type PostGalleryMainPreset = "default" | "pixel-art" | "compact";
 
@@ -202,6 +207,7 @@ export function PostGallery({
               alt={altFor(images, active, fallbackLabel)}
               width={1600}
               height={1200}
+              quality={VICTOR_IMAGE_QUALITY_LIGHTBOX}
               className={
                 nativePixelSources
                   ? "h-auto max-h-[min(88dvh,1100px)] w-full max-w-full object-contain [image-rendering:pixelated]"
@@ -274,7 +280,7 @@ export function PostGallery({
       ? "(max-width: 768px) 100vw, min(42rem, 90vw)"
       : mainPreset === "compact"
         ? "(max-width: 768px) 92vw, min(40rem, 90vw)"
-        : "(max-width: 768px) 100vw, 40rem";
+        : "(max-width: 768px) 100vw, min(44rem, 96vw)";
 
   const imageClassCompact = mobileMainTighter
     ? "h-auto w-full max-w-full object-contain max-sm:max-h-[min(48dvh,300px)] sm:max-h-[min(74dvh,500px)]"
@@ -305,6 +311,7 @@ export function PostGallery({
                   width={layoutHint.width}
                   height={layoutHint.height}
                   sizes={imageSizes}
+                  quality={VICTOR_IMAGE_QUALITY_MAIN}
                   className={`block transition-opacity duration-300 ease-out ${
                     mainPreset === "pixel-art"
                       ? `h-auto ${imageClassPixelArt}${nativePixelSources ? " [image-rendering:pixelated]" : ""} ${locked ? "scale-[1.02] blur-md" : ""}`
@@ -422,6 +429,7 @@ export function PostGallery({
                       src={img.src}
                       alt=""
                       fill
+                      quality={VICTOR_IMAGE_QUALITY_THUMB}
                       className={`object-contain bg-neutral-100${nativePixelSources ? " [image-rendering:pixelated]" : ""}`}
                       sizes="52px"
                       loading="lazy"
