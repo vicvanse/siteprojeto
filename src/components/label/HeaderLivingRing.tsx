@@ -43,7 +43,7 @@ export function HeaderLivingRing() {
       style={
         size > 0
           ? { width: size, height: size }
-          : { width: 96, height: 96 }
+          : { width: 67, height: 67 }
       }
     >
       <LivingRingMark />

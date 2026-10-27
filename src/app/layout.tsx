@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
+import { AccessProvider } from "@/components/AccessProvider";
 import { AccentProvider } from "@/components/AccentProvider";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import { ViewModeProvider } from "@/components/ViewModeProvider";
@@ -51,13 +52,15 @@ export default function RootLayout({
         </Script>
         <LanguageProvider>
           <AccentProvider>
-            <ViewModeProvider>
-              <SiteIntro />
-              <div className="shell">
-                <LabelHeader />
-                <main className="shell__main">{children}</main>
-              </div>
-            </ViewModeProvider>
+            <AccessProvider>
+              <ViewModeProvider>
+                <SiteIntro />
+                <div className="shell">
+                  <LabelHeader />
+                  <main className="shell__main">{children}</main>
+                </div>
+              </ViewModeProvider>
+            </AccessProvider>
           </AccentProvider>
         </LanguageProvider>
       </body>

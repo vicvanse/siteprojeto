@@ -4,9 +4,7 @@ import { useLayoutEffect, useRef, useState, type CSSProperties } from "react";
 import type { Artifact } from "@/data/artifacts";
 import { formatPrice } from "@/data/artifacts";
 import { useLanguage } from "@/components/LanguageProvider";
-import { useViewMode } from "@/components/ViewModeProvider";
 import { artifactDescriptionKey, type MessageKey } from "@/lib/i18n";
-import { Annotation } from "./Annotation";
 import { ArtifactFrame } from "./ArtifactFrame";
 import { ArtworkCover } from "./ArtworkCover";
 
@@ -25,7 +23,6 @@ const EDITION_KEYS = [
 ] as const satisfies readonly MessageKey[];
 
 export function FeaturedObject({ artifact }: Props) {
-  const { mode } = useViewMode();
   const { t } = useLanguage();
   const titleRef = useRef<HTMLDivElement>(null);
   const [titleH, setTitleH] = useState(0);
@@ -67,9 +64,6 @@ export function FeaturedObject({ artifact }: Props) {
                 <ArtworkCover artifact={artifact} size="featured" />
               </ArtifactFrame>
 
-              {mode === "schema" ? (
-                <Annotation className="viewport__annotation" lines={plaques} />
-              ) : null}
             </div>
           </div>
 

@@ -71,7 +71,28 @@ export const LANGUAGE_BCP47: Record<Language, string> = {
 export type MessageKey =
   | "view"
   | "gallery"
-  | "schema"
+  | "collection"
+  | "collection.kicker"
+  | "collection.owned"
+  | "collection.locked"
+  | "collection.ownedMeta"
+  | "collection.lockedMeta"
+  | "access.kicker"
+  | "access.title"
+  | "access.lead"
+  | "access.email"
+  | "access.emailInvalid"
+  | "access.send"
+  | "access.checkTitle"
+  | "access.checkLead"
+  | "access.checkHint"
+  | "access.expire"
+  | "access.openLink"
+  | "access.sendAgain"
+  | "access.close"
+  | "access.working"
+  | "access.badLink"
+  | "access.ready"
   | "object"
   | "pages"
   | "get"
@@ -106,7 +127,28 @@ type Dictionary = Record<MessageKey, string>;
 const en: Dictionary = {
   view: "View",
   gallery: "Gallery",
-  schema: "Schema",
+  collection: "Collection",
+  "collection.kicker": "YOUR OBJECTS",
+  "collection.owned": "OWNED",
+  "collection.locked": "LOCKED",
+  "collection.ownedMeta": "{count} in your collection",
+  "collection.lockedMeta": "Identification required",
+  "access.kicker": "ACCESS / COLLECTION",
+  "access.title": "Access your collection",
+  "access.lead": "Enter the email used to collect your objects.",
+  "access.email": "EMAIL",
+  "access.emailInvalid": "Enter a valid email.",
+  "access.send": "Send link →",
+  "access.checkTitle": "Check your email",
+  "access.checkLead": "We sent an access link to {email}",
+  "access.checkHint": "Open it to access your collection.",
+  "access.expire": "The link expires in 15 minutes.",
+  "access.openLink": "Open the access link →",
+  "access.sendAgain": "Send again",
+  "access.close": "Close",
+  "access.working": "Confirming access…",
+  "access.badLink": "This access link is invalid or expired.",
+  "access.ready": "Identification required",
   object: "Object",
   pages: "PAGES",
   get: "Get →",
@@ -150,7 +192,28 @@ const pt: Dictionary = {
   ...en,
   view: "Vista",
   gallery: "Galeria",
-  schema: "Schema",
+  collection: "Collection",
+  "collection.kicker": "SEUS OBJETOS",
+  "collection.owned": "SEU",
+  "collection.locked": "BLOQUEADO",
+  "collection.ownedMeta": "{count} na sua collection",
+  "collection.lockedMeta": "Identificação necessária",
+  "access.kicker": "ACCESS / COLLECTION",
+  "access.title": "Acesse sua collection",
+  "access.lead": "Digite o email usado para coletar seus objetos.",
+  "access.email": "EMAIL",
+  "access.emailInvalid": "Digite um email válido.",
+  "access.send": "Enviar link →",
+  "access.checkTitle": "Confira seu email",
+  "access.checkLead": "Enviamos um link de acesso para {email}",
+  "access.checkHint": "Abra-o para acessar sua collection.",
+  "access.expire": "O link expira em 15 minutos.",
+  "access.openLink": "Abrir o link de acesso →",
+  "access.sendAgain": "Enviar de novo",
+  "access.close": "Fechar",
+  "access.working": "Confirmando acesso…",
+  "access.badLink": "Este link de acesso é inválido ou expirou.",
+  "access.ready": "Identificação necessária",
   object: "Objeto",
   pages: "PÁGINAS",
   get: "Pegar →",
@@ -194,7 +257,7 @@ const es: Dictionary = {
   ...en,
   view: "Vista",
   gallery: "Galería",
-  schema: "Schema",
+  collection: "Collection",
   object: "Objeto",
   pages: "PÁGINAS",
   get: "Obtener →",
@@ -238,7 +301,7 @@ const de: Dictionary = {
   ...en,
   view: "Ansicht",
   gallery: "Galerie",
-  schema: "Schema",
+  collection: "Collection",
   object: "Objekt",
   pages: "SEITEN",
   get: "Holen →",
@@ -282,7 +345,7 @@ const fr: Dictionary = {
   ...en,
   view: "Vue",
   gallery: "Galerie",
-  schema: "Schéma",
+  collection: "Collection",
   object: "Objet",
   pages: "PAGES",
   get: "Obtenir →",
@@ -326,7 +389,7 @@ const it: Dictionary = {
   ...en,
   view: "Vista",
   gallery: "Galleria",
-  schema: "Schema",
+  collection: "Collection",
   object: "Oggetto",
   pages: "PAGINE",
   get: "Prendi →",
@@ -370,7 +433,7 @@ const ja: Dictionary = {
   ...en,
   view: "表示",
   gallery: "ギャラリー",
-  schema: "スキーマ",
+  collection: "コレクション",
   object: "オブジェクト",
   pages: "ページ",
   get: "入手 →",
@@ -414,7 +477,7 @@ const ko: Dictionary = {
   ...en,
   view: "보기",
   gallery: "갤러리",
-  schema: "스키마",
+  collection: "컬렉션",
   object: "오브젝트",
   pages: "페이지",
   get: "받기 →",
@@ -458,7 +521,7 @@ const zhCN: Dictionary = {
   ...en,
   view: "视图",
   gallery: "画廊",
-  schema: "图式",
+  collection: "收藏",
   object: "物件",
   pages: "页",
   get: "获取 →",
@@ -502,7 +565,7 @@ const zhTW: Dictionary = {
   ...en,
   view: "檢視",
   gallery: "藝廊",
-  schema: "圖式",
+  collection: "收藏",
   object: "物件",
   pages: "頁",
   get: "取得 →",

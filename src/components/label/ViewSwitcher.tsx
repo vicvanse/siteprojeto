@@ -1,17 +1,24 @@
 "use client";
 
+import { useAccess } from "@/components/AccessProvider";
 import { useLanguage } from "@/components/LanguageProvider";
 import { useViewMode, type ViewMode } from "@/components/ViewModeProvider";
 
-/** Physical pair-pill control — Vekon LIFE/VEKON logic, not a tiny tech toggle. */
+/** Physical pair-pill control — Gallery / Collection. */
 export function ViewSwitcher() {
   const { mode, setMode } = useViewMode();
+  const { ready, authenticated, openOverlay } = useAccess();
   const { t } = useLanguage();
 
   const options: { id: ViewMode; label: string }[] = [
     { id: "gallery", label: t("gallery") },
-    { id: "schema", label: t("schema") },
+    { id: "collection", label: t("collection") },
   ];
+
+  function select(next: ViewMode) {
+    setMode(next);
+    if (next === "collection" && ready && !authenticated) openOverlay("form");
+  }
 
   return (
     <div className="view-switcher" role="group" aria-label={t("view")}>
@@ -25,7 +32,7 @@ export function ViewSwitcher() {
               type="button"
               className={`view-pill${active ? " view-pill--active" : ""}`}
               aria-pressed={active}
-              onClick={() => setMode(opt.id)}
+              onClick={() => select(opt.id)}
             >
               <span className="view-pill__label">{opt.label}</span>
             </button>

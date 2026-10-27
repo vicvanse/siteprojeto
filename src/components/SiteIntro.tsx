@@ -16,12 +16,12 @@ const LEFT_WORDS = [
   "Vekon:",
   "Object",
   "Gallery",
-  "Schema",
+  "Collection",
   "Vekon:",
 ];
 
 const RIGHT_WORDS = [
-  "Schema",
+  "Collection",
   "Zine",
   "Release",
   "Object",
