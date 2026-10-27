@@ -354,11 +354,13 @@ html[data-view="schema"] .lang-swatch__chip {
   color: var(--ink);
 }
 
-/* Mobile: compact under Gallery/Schema (same X); expand card downward */
+/* Mobile: ring stays in header; color/lang drops under Gallery/Schema */
 @media (max-width: 900px) {
   .label-header__row {
     min-height: 0;
     align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.5rem;
     padding-top: 0.15rem;
   }
 
@@ -370,7 +372,8 @@ html[data-view="schema"] .lang-swatch__chip {
       "accents .";
     align-items: stretch;
     width: max-content;
-    max-width: min(100%, 520px);
+    max-width: min(100% - 4.5rem, 520px);
+    flex: 0 1 auto;
   }
 
   .label-header__view-panel {
@@ -389,6 +392,16 @@ html[data-view="schema"] .lang-swatch__chip {
     align-self: start;
     margin-top: 0.55rem;
     z-index: 4;
+  }
+
+  /* In-flow on mobile so it never overlays View / accents */
+  .label-header__ring {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    flex: 0 0 auto;
+    z-index: 2;
   }
 
   .accent-swatches__compact {
@@ -410,29 +423,6 @@ html[data-view="schema"] .lang-swatch__chip {
 
   .accent-swatches-panel {
     max-width: min(100vw - 1.5rem, 280px);
-  }
-
-  .viewport__id {
-    justify-content: space-between;
-    margin: 0 0 0.55rem;
-    min-height: 52px;
-  }
-
-  .viewport__ring {
-    display: block;
-    width: 52px;
-    height: 52px;
-    flex-shrink: 0;
-    margin: 0;
-    padding: 0;
-    line-height: 0;
-    text-decoration: none;
-    color: var(--ink);
-  }
-
-  .viewport__ring .living-ring {
-    width: 100%;
-    height: 100%;
   }
 }
 
@@ -609,18 +599,6 @@ html[data-view="schema"] .label-header__view-panel {
 .label-header__ring .living-ring {
   width: 100%;
   height: 100%;
-}
-
-/* Must come after base .label-header__ring — earlier mobile rule was overridden by display:block */
-@media (max-width: 900px) {
-  .label-header__ring {
-    display: none !important;
-    width: 0 !important;
-    height: 0 !important;
-    overflow: hidden;
-    pointer-events: none;
-    visibility: hidden;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1100,11 +1078,6 @@ html[data-view="schema"] .viewport__panel {
   text-transform: uppercase;
   color: #333;
   line-height: 1.2;
-}
-
-/* Mobile-only: living ring as a tight object beside Object ID (right) */
-.viewport__ring {
-  display: none;
 }
 
 html[data-view="schema"] .object-id-pill {

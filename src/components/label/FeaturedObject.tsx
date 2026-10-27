@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useLayoutEffect, useRef, useState, type CSSProperties } from "react";
 import type { Artifact } from "@/data/artifacts";
 import { formatPrice } from "@/data/artifacts";
@@ -10,7 +9,6 @@ import { artifactDescriptionKey, type MessageKey } from "@/lib/i18n";
 import { Annotation } from "./Annotation";
 import { ArtifactFrame } from "./ArtifactFrame";
 import { ArtworkCover } from "./ArtworkCover";
-import { LivingRingMark } from "./LivingRingMark";
 
 type Props = {
   artifact: Artifact;
@@ -52,19 +50,11 @@ export function FeaturedObject({ artifact }: Props) {
   return (
     <section id="viewport" className="viewport" aria-labelledby="featured-title">
       <div className="viewport__panel">
-        <div className="viewport__id">
+        <p className="viewport__id">
           <span className="object-id-pill">
             {t("object")} / {artifact.number}
           </span>
-          <Link
-            href="/"
-            className="viewport__ring"
-            aria-label="Vekon — Memory · Personas"
-            title="Vekon"
-          >
-            <LivingRingMark />
-          </Link>
-        </div>
+        </p>
 
         <div className="viewport__stage">
           <div className="viewport__mount">
