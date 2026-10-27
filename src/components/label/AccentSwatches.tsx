@@ -157,12 +157,12 @@ function Swatch({
   ariaControls?: string;
 }) {
   const palette = ACCENT_PALETTES[id];
-  const style: CSSProperties = {
+  const style: CSSProperties & { "--hint-delay"?: string } = {
     border: active ? `2px solid ${STYLE_SELECTED}` : "1px solid #d4d4d4",
     boxShadow: active ? `0 0 0 1px ${STYLE_SELECTED}` : "none",
   };
   if (!active) {
-    style["--hint-delay" as string] = `${hintDelay}s`;
+    style["--hint-delay"] = `${hintDelay}s`;
   }
 
   return (
@@ -207,10 +207,10 @@ function LangChip({
   ariaControls?: string;
   className?: string;
 }) {
-  const style: CSSProperties = {
+  const style: CSSProperties & { "--hint-delay"?: string } = {
     border: active ? `2px solid ${STYLE_SELECTED}` : "1px solid #d4d4d4",
     boxShadow: active ? `0 0 0 1px ${STYLE_SELECTED}` : "none",
-    ["--hint-delay" as string]: `${hintDelay}s`,
+    "--hint-delay": `${hintDelay}s`,
   };
   const cjk = code === "zh-CN" || code === "zh-TW";
 
