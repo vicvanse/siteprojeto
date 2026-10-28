@@ -825,7 +825,7 @@ html[data-view="schema"] .lang-swatch__chip {
   align-items: center;
   margin-top: 0;
   margin-left: -10px;
-  padding: 10px 10px 10px 15px;
+  padding: 10px 10px 10px 22px;
   border-radius: 0 10px 10px 0;
   background: #ffffff;
   border: 1px solid var(--line);
@@ -934,6 +934,49 @@ html[data-view="schema"] .label-header__view-panel {
 .label-header__ring .living-ring {
   width: 100%;
   height: 100%;
+}
+
+/* Desktop — soft white disc behind the ring so it lifts off the grey header */
+@media (min-width: 901px) {
+  .label-header__ring {
+    isolation: isolate;
+  }
+
+  .label-header__ring::before {
+    content: "";
+    position: absolute;
+    inset: -18%;
+    z-index: 0;
+    border-radius: 9999px;
+    pointer-events: none;
+    background: radial-gradient(
+      circle at 50% 50%,
+      #ffffff 0%,
+      #ffffff 38%,
+      rgba(255, 255, 255, 0.92) 52%,
+      rgba(255, 255, 255, 0.45) 68%,
+      rgba(255, 255, 255, 0.12) 82%,
+      transparent 100%
+    );
+  }
+
+  .label-header__ring .living-ring {
+    position: relative;
+    z-index: 1;
+  }
+
+  .label-header__ring .living-ring__bloom {
+    inset: -8%;
+    background: radial-gradient(
+      circle at 50% 48%,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.75) 42%,
+      rgba(255, 255, 255, 0.2) 68%,
+      transparent 82%
+    );
+    filter: blur(10px);
+    opacity: 1;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1278,7 +1321,7 @@ html[data-view="schema"] .living-ring__subtitle {
 .view-switcher {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.35rem;
   width: 100%;
 }
 
@@ -1385,10 +1428,13 @@ html[data-view="schema"] .view-pill:hover:not(.view-pill--active) {
 }
 
 .viewport__panel {
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
   background: var(--header-bg, #f0f0f0);
   border: 1px solid #d8d8d8;
   border-radius: 14px;
-  padding: 1.15rem 1.35rem 1.4rem;
+  padding: 1.15rem 1.15rem 1.4rem;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.65),
     0 1px 0 #e0e0e0,
@@ -2341,14 +2387,14 @@ html[data-view="schema"] .releases__count-pill {
   box-shadow: none;
 }
 
-/* Desktop: tall frameless 6-up. Mobile: physical moldura (below). */
+/* Desktop + mobile: same museum moldura as the featured banner. */
 .releases__grid {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 0.75rem 0.55rem;
+  gap: 1.15rem 0.55rem;
 }
 
 .release-slot {
@@ -2376,28 +2422,59 @@ html[data-view="schema"] .releases__count-pill {
 .release-slot__frame {
   position: relative;
   display: block;
-  border-radius: 6px;
-  overflow: hidden;
-  background: #1a1a1a;
-  aspect-ratio: 3 / 4;
-}
-
-.release-slot__shell,
-.release-slot__well,
-.release-slot__mount {
-  display: block;
-  width: 100%;
-  height: 100%;
-  min-height: 0;
+  overflow: visible;
+  background: transparent;
+  border-radius: 0;
+  aspect-ratio: auto;
 }
 
 .release-slot__shell {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  gap: 0;
+  padding: 10px 10px 8px;
+  border: 1px solid #d8d8d8;
+  border-radius: var(--frame-radius);
+  background: #f5f5f5;
+  box-shadow: var(--shadow);
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.release-slot__well {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 1;
+  padding: 4px;
+  border-radius: 6px;
+  background: #ebebeb;
+  border: 1px solid #d9d9d9;
+  box-shadow:
+    inset 0 1px 3px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.4);
 }
 
 .release-slot__mount {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
   overflow: hidden;
-  border-radius: 4px;
+  border: 1px solid #cfcfcf;
+  border-radius: var(--mount-radius);
+  background: #1a1a1a;
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.04),
+    0 1px 0 rgba(255, 255, 255, 0.55);
 }
 
 .release-slot__mount .artwork {
@@ -2406,11 +2483,39 @@ html[data-view="schema"] .releases__count-pill {
 }
 
 .release-slot__badge {
-  display: none;
+  display: inline-flex;
+  position: absolute;
+  top: -8px;
+  left: 10px;
+  z-index: 2;
+  min-width: 2rem;
+  padding: 0.2rem 0.45rem;
+  border-radius: 9999px;
+  background: #1a1a1a;
+  color: #fafaf8;
+  font-family: var(--font-mono), ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 2px 0 0 #4a4a4a;
 }
 
 .release-slot__btn--active .release-slot__frame {
-  box-shadow: 0 0 0 2px #525252;
+  box-shadow: none;
+}
+
+.release-slot__btn--active .release-slot__shell {
+  border-color: var(--conquest-fill-ring, #262626);
+  box-shadow:
+    var(--shadow),
+    0 0 0 2px #fff,
+    0 0 0 4px var(--conquest-fill, #525252);
+}
+
+.release-slot__btn:hover .release-slot__shell {
+  filter: brightness(0.985);
 }
 
 .release-slot__meta {
@@ -2701,6 +2806,10 @@ html[data-view="schema"] .release-slot__more {
 @media (max-width: 900px) {
   .shell {
     width: min(100% - 2rem, 1280px);
+  }
+
+  .viewport__panel {
+    width: 100%;
   }
 
   .viewport__stage {

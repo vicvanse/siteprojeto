@@ -16,8 +16,8 @@ function byNumberDesc(a: Artifact, b: Artifact) {
 }
 
 /**
- * Releases — desktop: tall frameless 6-up.
- * Mobile: Vekon moldura (shell / well / badge) tinted like quick-thought.
+ * Releases — museum moldura (shell / well / badge), same language as the
+ * featured banner. Mobile keeps the accent-tinted plate variant.
  */
 export function ReleasesStrip({ artifacts, activeId, onSelect }: Props) {
   const { t } = useLanguage();
