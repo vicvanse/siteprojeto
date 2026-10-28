@@ -2621,11 +2621,11 @@ html[data-view="schema"] .releases__count-pill {
 /* Desktop — hang the white pill on the bottom edge of the moldura */
 @media (min-width: 901px) {
   .release-slot__btn {
-    align-items: center;
     gap: 0.55rem;
   }
 
   .release-slot__frame {
+    width: 100%;
     margin-bottom: 0.55rem;
   }
 
