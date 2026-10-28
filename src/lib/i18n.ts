@@ -146,7 +146,7 @@ export type MessageKey =
 type Dictionary = Record<MessageKey, string>;
 
 const en: Dictionary = {
-  view: "View",
+  view: "View:",
   gallery: "Gallery",
   collection: "Collection",
   logIn: "Log in",
@@ -232,7 +232,7 @@ const en: Dictionary = {
 
 const pt: Dictionary = {
   ...en,
-  view: "Vista",
+  view: "Vista:",
   gallery: "Galeria",
   collection: "Collection",
   logIn: "Entrar",
@@ -318,7 +318,7 @@ const pt: Dictionary = {
 
 const es: Dictionary = {
   ...en,
-  view: "Vista",
+  view: "Vista:",
   gallery: "Galería",
   collection: "Collection",
   logIn: "Entrar",
@@ -364,7 +364,7 @@ const es: Dictionary = {
 
 const de: Dictionary = {
   ...en,
-  view: "Ansicht",
+  view: "Ansicht:",
   gallery: "Galerie",
   collection: "Collection",
   logIn: "Anmelden",
@@ -410,7 +410,7 @@ const de: Dictionary = {
 
 const fr: Dictionary = {
   ...en,
-  view: "Vue",
+  view: "Vue:",
   gallery: "Galerie",
   collection: "Collection",
   logIn: "Connexion",
@@ -456,7 +456,7 @@ const fr: Dictionary = {
 
 const it: Dictionary = {
   ...en,
-  view: "Vista",
+  view: "Vista:",
   gallery: "Galleria",
   collection: "Collection",
   logIn: "Accedi",
@@ -502,7 +502,7 @@ const it: Dictionary = {
 
 const ja: Dictionary = {
   ...en,
-  view: "表示",
+  view: "表示:",
   gallery: "ギャラリー",
   collection: "コレクション",
   logIn: "ログイン",
@@ -548,7 +548,7 @@ const ja: Dictionary = {
 
 const ko: Dictionary = {
   ...en,
-  view: "보기",
+  view: "보기:",
   gallery: "갤러리",
   collection: "컬렉션",
   logIn: "로그인",
@@ -594,7 +594,7 @@ const ko: Dictionary = {
 
 const zhCN: Dictionary = {
   ...en,
-  view: "视图",
+  view: "视图:",
   gallery: "画廊",
   collection: "收藏",
   logIn: "登录",
@@ -640,7 +640,7 @@ const zhCN: Dictionary = {
 
 const zhTW: Dictionary = {
   ...en,
-  view: "檢視",
+  view: "檢視:",
   gallery: "藝廊",
   collection: "收藏",
   logIn: "登入",
