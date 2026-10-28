@@ -110,6 +110,8 @@ export function CollectionGrid({
         </div>
       </header>
 
+      {active ? <OwnedObject artifact={active} /> : null}
+
       <nav className="collection__filters" aria-label={t("collection.filters")}>
         {FILTERS.map((f) => (
           <button
@@ -123,8 +125,6 @@ export function CollectionGrid({
           </button>
         ))}
       </nav>
-
-      {active ? <OwnedObject artifact={active} /> : null}
 
       <div className="collection__shelf-block">
         <header className="collection__section-head">

@@ -524,26 +524,11 @@ html[data-view="schema"] .lang-swatch__chip {
   }
 
   .label-header__stack {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-areas: "view brand";
-    align-items: stretch;
     justify-self: center;
     width: max-content;
     max-width: 100%;
     flex: 0 1 auto;
     margin-inline: auto;
-  }
-
-  .label-header__view-panel {
-    grid-area: view;
-    padding: 8px 12px 8px 8px;
-    margin-right: -8px;
-  }
-
-  .label-header__brand-panel {
-    grid-area: brand;
-    padding: 9px 11px 9px 12px;
   }
 
   .label-header__name {
@@ -653,7 +638,7 @@ html[data-view="schema"] .lang-swatch__chip {
 
   body:not(:has(.viewport__tools)) .label-header__stack {
     grid-template-areas:
-      "view brand"
+      "brand view"
       "accents .";
   }
 
@@ -813,6 +798,75 @@ html[data-view="schema"] .label-header__view-panel {
   border-color: var(--line);
   border-right: none;
   box-shadow: none;
+}
+
+/* Mobile: PAPERS left, View right — two intact panels (no clipped join) */
+@media (max-width: 900px) {
+  .label-header__stack {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 1 auto;
+    align-items: stretch;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .label-header__brand-panel {
+    order: -1;
+    z-index: 2;
+    flex: 0 0 auto;
+    padding: 8px 10px;
+    border-radius: 8px;
+  }
+
+  .label-header__view-panel {
+    order: 0;
+    z-index: 1;
+    flex: 0 1 auto;
+    min-width: 0;
+    align-self: stretch;
+    margin: 0;
+    padding: 7px 8px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    overflow: visible;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.92),
+      0 1px 0 #d2d2d2,
+      1px 0 0 #c4c4c4,
+      -1px 0 0 #c4c4c4,
+      1px 1px 0 #b8b8b8,
+      -1px 1px 0 #b8b8b8,
+      0 8px 18px rgba(0, 0, 0, 0.06);
+  }
+
+  .label-header__view-panel .view-switcher {
+    width: auto;
+    max-width: 100%;
+    flex-wrap: nowrap;
+    gap: 0.35rem;
+  }
+
+  .label-header__view-panel .view-switcher__label {
+    flex: 0 0 auto;
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+  }
+
+  .label-header__view-panel .view-switcher__pair {
+    gap: 5px;
+    min-width: 0;
+  }
+
+  .label-header__view-panel .view-pill {
+    padding: 5px 8px;
+    font-size: 0.58rem;
+  }
+
+  html[data-view="schema"] .label-header__view-panel {
+    border: 1px solid var(--line);
+    box-shadow: none;
+  }
 }
 
 /* Ring stays top-right; size follows stack via HeaderLivingRing */
@@ -2725,12 +2779,59 @@ html[data-view="schema"] .release-slot__more {
   align-self: flex-start;
 }
 
+/* Library column — mobile: panel then filters; desktop: filters then panel */
+.collection--library {
+  display: flex;
+  flex-direction: column;
+}
+
+.collection--library > .collection__head {
+  order: 0;
+}
+
+.collection--library > .viewport {
+  order: 1;
+}
+
+.collection--library > .collection__filters {
+  order: 2;
+}
+
+.collection--library > .collection__shelf-block {
+  order: 3;
+}
+
+.collection--library > .collection__extras-block {
+  order: 4;
+}
+
+.collection--library > .collection__foot {
+  order: 5;
+}
+
+@media (min-width: 901px) {
+  .collection--library > .collection__filters {
+    order: 1;
+  }
+
+  .collection--library > .viewport {
+    order: 2;
+  }
+}
+
 /* Same category pills as Vekon Market (Avatars / Banners / Eggs). */
 .collection__filters {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin-top: 1.1rem;
   margin-bottom: 1.1rem;
+}
+
+@media (min-width: 901px) {
+  .collection__filters {
+    margin-top: 0;
+  }
 }
 
 @keyframes collection-filter-blink {
