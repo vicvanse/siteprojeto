@@ -25,6 +25,10 @@ const FILTERS: { id: Filter; labelKey: "collection.filterAll" | "collection.filt
   { id: "field-guide", labelKey: "collection.filterGuides" },
 ];
 
+function byNumberDesc(a: Artifact, b: Artifact) {
+  return b.number.localeCompare(a.number, undefined, { numeric: true });
+}
+
 /** Private drawer — only owned objects; shelves + extras, not a second shop. */
 export function CollectionGrid({
   artifacts,
@@ -43,7 +47,7 @@ export function CollectionGrid({
   );
 
   const ownedObjects = useMemo(
-    () => publications.filter((a) => owns(a.id)),
+    () => [...publications.filter((a) => owns(a.id))].sort(byNumberDesc),
     [publications, owns],
   );
 
@@ -52,14 +56,12 @@ export function CollectionGrid({
     [extras, owns],
   );
 
-  /* All publications in filter: owned first (color), missing last (B/W). */
+  /* Filter pool in number desc (owned color / missing B&W stay in place). */
   const shelfObjects = useMemo(() => {
     const pool =
       filter === "all" ? publications : publications.filter((a) => a.kind === filter);
-    const held = pool.filter((a) => owns(a.id));
-    const missing = pool.filter((a) => !owns(a.id));
-    return [...held, ...missing];
-  }, [publications, filter, owns]);
+    return [...pool].sort(byNumberDesc);
+  }, [publications, filter]);
 
   const active =
     ownedObjects.find((a) => a.id === activeId) ??
@@ -165,24 +167,22 @@ export function CollectionGrid({
                       setMode("gallery");
                     }}
                   >
-                    <span className="shelf-card__photo">
-                      {artifact.cover ? (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                          className="shelf-card__cover"
-                          src={artifact.cover}
-                          alt=""
-                          draggable={false}
-                          decoding="async"
-                        />
-                      ) : null}
-                    </span>
-                    <span className="shelf-card__meta">
-                      <span className="shelf-card__name">{artifact.title}</span>
-                      <span className="shelf-card__kind">
-                        {held
-                          ? `${artifact.number} · ${kindLabel(artifact.kind)}`
-                          : t("collection.missing")}
+                    <span className="shelf-card__frame">
+                      <span className="shelf-card__shell">
+                        <span className="shelf-card__well">
+                          <span className="shelf-card__mount">
+                            <ArtworkCover artifact={artifact} size="release" />
+                          </span>
+                        </span>
+                        <span className="shelf-card__badge">{artifact.number}</span>
+                      </span>
+                      <span className="shelf-card__hang">
+                        <span className="shelf-card__name">{artifact.title}</span>
+                        <span className="shelf-card__kind">
+                          {held
+                            ? kindLabel(artifact.kind)
+                            : t("collection.missing")}
+                        </span>
                       </span>
                     </span>
                   </button>

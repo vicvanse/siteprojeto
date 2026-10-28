@@ -32,7 +32,10 @@ export function isOwnerKey(value: string) {
 /** Demo ownership until purchases exist. */
 export function demoOwnedIds(email: string): string[] {
   if (isOwnerKey(email)) {
-    return collectibleArtifacts.map((artifact) => artifact.id);
+    /* Leave 001 / 005 unowned so missing slots are visible in Collection. */
+    return collectibleArtifacts
+      .map((artifact) => artifact.id)
+      .filter((id) => id !== "001" && id !== "005");
   }
   const base = ["001", "007", "b004"];
   const extra = email.toLowerCase().includes("a")
