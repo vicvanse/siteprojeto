@@ -29,9 +29,9 @@ export function SiteIntro() {
     setPhase("play");
     document.body.style.overflow = "hidden";
 
-    /* Fade in ~0.6s + hold ~1.4s + exit starts — total ~2.6s before gone */
-    const doneAt = window.setTimeout(finish, 2600);
-    const safetyAt = window.setTimeout(finish, 5000);
+    /* Fade in ~0.45s + hold ~1s + exit starts — total ~1.82s before gone (70%) */
+    const doneAt = window.setTimeout(finish, 1820);
+    const safetyAt = window.setTimeout(finish, 3500);
 
     return () => {
       window.clearTimeout(doneAt);
@@ -48,14 +48,14 @@ export function SiteIntro() {
           className="site-intro"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.525, ease: [0.22, 1, 0.36, 1] }}
           aria-hidden
         >
           <motion.div
             className="site-intro__mark"
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.455, ease: [0.22, 1, 0.36, 1] }}
           >
             <LivingRingMark className="site-intro__ring" />
             <p className="site-intro__caption">Papers</p>

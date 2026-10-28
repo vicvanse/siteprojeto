@@ -2539,6 +2539,35 @@ html[data-view="schema"] .release-slot__more {
   .release-slot__more {
     margin-top: 0.4rem;
     margin-bottom: 0.15rem;
+    /* Same idle blink as Collection / Log in pills */
+    animation: accent-swatch-hint-blink 14s ease-in-out infinite;
+    animation-delay: 2.4s;
+  }
+
+  .release-slot:nth-child(3n + 2) .release-slot__more {
+    animation-delay: 4.2s;
+  }
+
+  .release-slot:nth-child(3n + 3) .release-slot__more {
+    animation-delay: 6s;
+  }
+
+  /* Mobile CTAs — invite tap like Collection / Log in */
+  .get-btn {
+    animation: accent-swatch-hint-blink 14s ease-in-out infinite;
+    animation-delay: 0.9s;
+  }
+
+  .accent-swatches__compact .accent-swatch {
+    animation: accent-swatch-hint-blink 14s ease-in-out infinite;
+  }
+
+  .accent-swatches__compact .accent-swatch:nth-child(2) {
+    animation-delay: 1.8s;
+  }
+
+  .accent-swatches-panel--open .accent-swatches__compact .accent-swatch {
+    animation: none;
   }
 
   .release-slot__frame {
@@ -2720,8 +2749,11 @@ html[data-view="schema"] .release-slot__more {
     transition: none;
   }
 
-  .view-pill:not(.view-pill--active) {
-    animation: none;
+  .view-pill:not(.view-pill--active),
+  .get-btn,
+  .release-slot__more,
+  .accent-swatches__compact .accent-swatch {
+    animation: none !important;
   }
 }
 
@@ -2944,11 +2976,30 @@ html[data-view="schema"] .release-slot__more {
   background: #f7f7f7;
 }
 
+/* Desktop — same conquest plate as the title container */
+@media (min-width: 901px) {
+  .collection__logout {
+    border-color: var(--conquest-fill-ring, #262626);
+    background: var(--conquest-fill, #525252);
+    color: #ffffff;
+    box-shadow:
+      0 1px 0 color-mix(in srgb, var(--conquest-fill-alt, #404040) 80%, #000),
+      0 4px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  .collection__logout:hover {
+    border-color: var(--conquest-fill-ring, #262626);
+    background: var(--conquest-fill-alt, #404040);
+    color: #ffffff;
+  }
+}
+
 @media (max-width: 900px) {
-  /* Clear the floating living ring on the panel corner */
+  /* Left side — living ring stays on the right; keep neutral white */
   .collection__logout {
     top: 0.7rem;
-    right: 3.6rem;
+    left: 0.7rem;
+    right: auto;
   }
 }
 
@@ -3003,7 +3054,9 @@ html[data-view="schema"] .release-slot__more {
 }
 
 .collection-shelf__item {
+  display: flex;
   min-width: 0;
+  height: 100%;
 }
 
 .shelf-card {
@@ -3014,8 +3067,10 @@ html[data-view="schema"] .release-slot__more {
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  flex: 1 1 auto;
   gap: 0.14rem;
   width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0.16rem;
   border: 1px solid #d9d9d9;
@@ -3166,8 +3221,10 @@ html[data-view="schema"] .release-slot__more {
 
 .shelf-card__meta {
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   gap: 0.1rem;
   min-width: 0;
   min-height: 0;
@@ -3732,10 +3789,13 @@ html[data-view="schema"] .release-slot__more {
   .collection-shelf {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 6px 5px;
+    align-items: stretch;
   }
 
   .shelf-card__name {
     font-size: 0.88rem;
+    /* Titles wrap up to 3 lines; row mates stretch to match */
+    -webkit-line-clamp: 3;
   }
 
   .shelf-card__kind,

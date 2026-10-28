@@ -2,6 +2,7 @@
 
 export type PersonalCopy = {
   copy: string;
+  /** `DD.MM.YY HH:MM` — date + hour of acquisition. */
   acquired: string;
   version: string;
 };
@@ -19,7 +20,7 @@ function pad(n: number, width: number) {
   return String(n).padStart(width, "0");
 }
 
-/** COPY #### + ACQUIRED date — materiality without fake scarcity. */
+/** COPY #### + ACQUIRED date/time — materiality without fake scarcity. */
 export function personalCopy(
   identity: string,
   artifactId: string,
@@ -30,7 +31,9 @@ export function personalCopy(
   const day = (h % 27) + 1;
   const month = ((h >>> 5) % 12) + 1;
   const year = 26 + ((h >>> 9) % 2);
-  const acquired = `${pad(day, 2)}.${pad(month, 2)}.${pad(year, 2)}`;
+  const hour = (h >>> 11) % 24;
+  const minute = (h >>> 16) % 60;
+  const acquired = `${pad(day, 2)}.${pad(month, 2)}.${pad(year, 2)} ${pad(hour, 2)}:${pad(minute, 2)}`;
   return { copy, acquired, version };
 }
 
@@ -57,10 +60,12 @@ const MONTHS = [
   "DEC",
 ] as const;
 
-/** `27.10.26` → `27 OCT 2026` for OWNED stamp. */
+/** `27.10.26 14:32` → `27 OCT 2026 · 14:32` for OWNED stamp. */
 export function formatAcquiredStamp(acquired: string) {
-  const [dd, mm, yy] = acquired.split(".");
+  const [datePart, timePart] = acquired.trim().split(/\s+/);
+  const [dd, mm, yy] = (datePart ?? "").split(".");
   const month = MONTHS[(Number(mm) || 1) - 1] ?? "JAN";
   const year = 2000 + (Number(yy) || 0);
-  return `${dd} ${month} ${year}`;
+  const date = `${dd} ${month} ${year}`;
+  return timePart ? `${date} · ${timePart}` : date;
 }
