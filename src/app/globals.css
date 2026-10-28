@@ -312,7 +312,7 @@ button {
 .label-header {
   position: relative;
   padding: 0.95rem 0 1.05rem;
-  border-bottom: 1px solid var(--line-soft);
+  border-bottom: none;
   margin-bottom: 1.575rem;
   background: var(--header-bg, var(--bg));
   transition:
@@ -320,13 +320,15 @@ button {
     background-color var(--transition);
 }
 
-/* Full-bleed header band (grey stays above the divider) */
+/* Full-bleed header band — same edge line as .viewport__panel */
 html[data-view="gallery"] .label-header::before,
 html[data-view="collection"] .label-header::before {
   content: "";
   position: absolute;
   inset: 0 calc(50% - 50vw);
   background: var(--header-bg);
+  border: 1px solid #d8d8d8;
+  border-top: none;
   z-index: -1;
   pointer-events: none;
 }
@@ -334,7 +336,6 @@ html[data-view="collection"] .label-header::before {
 /* Desktop — tab-bar foot: grey plate curves into the white page */
 @media (min-width: 901px) {
   .label-header {
-    border-bottom: none;
     background: transparent;
     padding-bottom: 1.25rem;
     margin-bottom: 1.35rem;
