@@ -331,6 +331,24 @@ html[data-view="collection"] .label-header::before {
   pointer-events: none;
 }
 
+/* Desktop — tab-bar foot: grey plate curves into the white page */
+@media (min-width: 901px) {
+  .label-header {
+    border-bottom: none;
+    background: transparent;
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.35rem;
+  }
+
+  html[data-view="gallery"] .label-header::before,
+  html[data-view="collection"] .label-header::before {
+    border-radius: 0 0 28px 28px;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.65) inset,
+      0 10px 24px rgba(0, 0, 0, 0.05);
+  }
+}
+
 .label-header__row {
   position: relative;
   display: flex;
@@ -936,7 +954,7 @@ html[data-view="schema"] .label-header__view-panel {
   height: 100%;
 }
 
-/* Desktop — soft white disc behind the ring so it lifts off the grey header */
+/* Desktop — gentle white→grey wash behind the ring (not a hard disc) */
 @media (min-width: 901px) {
   .label-header__ring {
     isolation: isolate;
@@ -945,19 +963,20 @@ html[data-view="schema"] .label-header__view-panel {
   .label-header__ring::before {
     content: "";
     position: absolute;
-    inset: -18%;
+    inset: -42%;
     z-index: 0;
     border-radius: 9999px;
     pointer-events: none;
     background: radial-gradient(
       circle at 50% 50%,
-      #ffffff 0%,
-      #ffffff 38%,
-      rgba(255, 255, 255, 0.92) 52%,
-      rgba(255, 255, 255, 0.45) 68%,
-      rgba(255, 255, 255, 0.12) 82%,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.72) 22%,
+      rgba(245, 245, 245, 0.48) 42%,
+      rgba(240, 240, 240, 0.28) 58%,
+      rgba(240, 240, 240, 0.12) 72%,
       transparent 100%
     );
+    filter: blur(14px);
   }
 
   .label-header__ring .living-ring {
@@ -966,16 +985,16 @@ html[data-view="schema"] .label-header__view-panel {
   }
 
   .label-header__ring .living-ring__bloom {
-    inset: -8%;
+    inset: -28%;
     background: radial-gradient(
       circle at 50% 48%,
-      rgba(255, 255, 255, 1) 0%,
-      rgba(255, 255, 255, 0.75) 42%,
-      rgba(255, 255, 255, 0.2) 68%,
-      transparent 82%
+      rgba(255, 255, 255, 0.55) 0%,
+      rgba(255, 255, 255, 0.28) 35%,
+      rgba(240, 240, 240, 0.12) 58%,
+      transparent 78%
     );
-    filter: blur(10px);
-    opacity: 1;
+    filter: blur(16px);
+    opacity: 0.9;
   }
 }
 
