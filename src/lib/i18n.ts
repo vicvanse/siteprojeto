@@ -87,12 +87,15 @@ export type MessageKey =
   | "collection.download"
   | "collection.explore"
   | "collection.exit"
+  | "collection.logOut"
   | "collection.filters"
   | "collection.filterAll"
   | "collection.filterBooklets"
   | "collection.filterEssays"
   | "collection.filterGuides"
   | "collection.emptyFilter"
+  | "collection.missing"
+  | "collection.missingObject"
   | "collection.personalCopy"
   | "collection.copy"
   | "collection.acquired"
@@ -164,12 +167,15 @@ const en: Dictionary = {
   "collection.download": "DOWNLOAD ↓",
   "collection.explore": "EXPLORE ARCHIVE →",
   "collection.exit": "EXIT",
+  "collection.logOut": "Log out",
   "collection.filters": "Filter collection",
   "collection.filterAll": "ALL",
   "collection.filterBooklets": "BOOKLETS",
   "collection.filterEssays": "ESSAYS",
   "collection.filterGuides": "FIELD GUIDES",
   "collection.emptyFilter": "Nothing in this drawer yet.",
+  "collection.missing": "MISSING",
+  "collection.missingObject": "Missing object {number}: {title} — open in Gallery",
   "collection.personalCopy": "PERSONAL COPY",
   "collection.copy": "COPY",
   "collection.acquired": "ACQUIRED",
@@ -250,12 +256,15 @@ const pt: Dictionary = {
   "collection.download": "BAIXAR ↓",
   "collection.explore": "EXPLORAR ARQUIVO →",
   "collection.exit": "SAIR",
+  "collection.logOut": "Sair",
   "collection.filters": "Filtrar collection",
   "collection.filterAll": "TUDO",
   "collection.filterBooklets": "BOOKLETS",
   "collection.filterEssays": "ENSAIOS",
   "collection.filterGuides": "FIELD GUIDES",
   "collection.emptyFilter": "Nada nesta gaveta ainda.",
+  "collection.missing": "FALTA",
+  "collection.missingObject": "Objeto ausente {number}: {title} — abrir na Gallery",
   "collection.personalCopy": "EXEMPLAR",
   "collection.copy": "CÓPIA",
   "collection.acquired": "ADQUIRIDO",

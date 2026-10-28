@@ -1,6 +1,6 @@
 /** Working label identity — swap without touching page structure. */
 export const brand = {
-  name: "PAPERS",
+  name: "Vekon: Papers",
   tagline: "a Vekon project",
   statement: "Objects, by design",
   yearStart: 2026,

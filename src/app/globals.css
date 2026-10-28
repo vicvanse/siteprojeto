@@ -752,6 +752,17 @@ html[data-view="schema"] .lang-swatch__chip {
   }
 }
 
+/* Opposite phase — while one rises, the other returns */
+@keyframes gatcha-foil-sweep-down {
+  0%,
+  100% {
+    transform: translateY(-40%) rotate(-28deg);
+  }
+  50% {
+    transform: translateY(280%) rotate(-28deg);
+  }
+}
+
 .label-header__name {
   position: relative;
   z-index: 2;
@@ -1534,8 +1545,8 @@ html[data-view="schema"] .viewport__tether {
     rgba(255, 255, 255, 0.18) 65%,
     rgba(255, 255, 255, 0) 100%
   );
-  transform: translateY(280%) rotate(-28deg);
-  animation: gatcha-foil-sweep-up 4.6s ease-in-out infinite;
+  transform: translateY(-40%) rotate(-28deg);
+  animation: gatcha-foil-sweep-down 4.6s ease-in-out infinite;
 }
 
 .object-stack__heading {
@@ -2421,13 +2432,21 @@ html[data-view="schema"] .releases__count-pill {
 
 .release-slot__price {
   flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-left: auto;
+  padding: 2px 7px;
+  border: 1px solid #e0e0e0;
+  border-radius: 999px;
+  background: #ffffff;
   font-family: var(--font-mono), ui-monospace, Menlo, Consolas, monospace;
   font-size: 0.52rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #111;
   white-space: nowrap;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .release-slot__more {
@@ -2584,7 +2603,10 @@ html[data-view="schema"] .release-slot__more {
   .release-slot__price {
     margin-left: 0;
     margin-top: 0.15rem;
+    padding: 3px 8px;
     font-size: 0.58rem;
+    color: #111;
+    background: #ffffff;
   }
 }
 
@@ -2779,59 +2801,12 @@ html[data-view="schema"] .release-slot__more {
   align-self: flex-start;
 }
 
-/* Library column — mobile: panel then filters; desktop: filters then panel */
-.collection--library {
-  display: flex;
-  flex-direction: column;
-}
-
-.collection--library > .collection__head {
-  order: 0;
-}
-
-.collection--library > .viewport {
-  order: 1;
-}
-
-.collection--library > .collection__filters {
-  order: 2;
-}
-
-.collection--library > .collection__shelf-block {
-  order: 3;
-}
-
-.collection--library > .collection__extras-block {
-  order: 4;
-}
-
-.collection--library > .collection__foot {
-  order: 5;
-}
-
-@media (min-width: 901px) {
-  .collection--library > .collection__filters {
-    order: 1;
-  }
-
-  .collection--library > .viewport {
-    order: 2;
-  }
-}
-
 /* Same category pills as Vekon Market (Avatars / Banners / Eggs). */
 .collection__filters {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 1.1rem;
-  margin-bottom: 1.1rem;
-}
-
-@media (min-width: 901px) {
-  .collection__filters {
-    margin-top: 0;
-  }
+  margin: 0;
 }
 
 @keyframes collection-filter-blink {
@@ -2883,16 +2858,68 @@ html[data-view="schema"] .release-slot__more {
   display: none;
 }
 
-.collection__shelf-block {
-  margin-top: 1.5rem;
+/* Same hairline as Gallery → Releases */
+.collection__shelf-block,
+.collection__extras-block {
+  margin-top: 2.25rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--line-soft);
 }
 
-.collection__extras-block {
-  margin-top: 2rem;
+.collection__stage {
+  position: relative;
+}
+
+.collection__logout {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  z-index: 8;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 5px 11px;
+  border: 1px solid #e0e0e0;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  font-family: var(--font-mono), ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #111;
+  cursor: pointer;
+}
+
+.collection__logout:hover {
+  border-color: #ccc;
+  background: #f7f7f7;
+}
+
+@media (max-width: 900px) {
+  /* Clear the floating living ring on the panel corner */
+  .collection__logout {
+    top: 0.7rem;
+    right: 3.6rem;
+  }
+}
+
+.collection__section-head--below-panel {
+  margin-top: 0;
 }
 
 .collection__section-head {
   margin-bottom: 1rem;
+}
+
+.collection__section-head--shelf {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
 }
 
 .collection__section-title {
@@ -3145,6 +3172,45 @@ html[data-view="schema"] .release-slot__more {
 
 .shelf-card__langs {
   display: none;
+}
+
+/* Unowned publications — B/W at the end of the shelf */
+.shelf-card--missing {
+  background-image: linear-gradient(
+    to top,
+    #7a7a7a 0%,
+    #7a7a7a 26%,
+    #ececec 26%,
+    #ececec 100%
+  );
+  border-color: #cfcfcf;
+  color: #444;
+  opacity: 0.92;
+}
+
+.shelf-card--missing .shelf-card__cover {
+  filter: grayscale(1) contrast(1.05) brightness(0.92);
+}
+
+.shelf-card--missing .shelf-card__name,
+.shelf-card--missing .shelf-card__kind {
+  color: #555;
+}
+
+.shelf-card--missing:hover,
+.shelf-card--missing:focus-visible {
+  background-color: #333;
+  background-image: none;
+  border-color: #222;
+  color: #fff;
+  opacity: 1;
+}
+
+.shelf-card--missing:hover .shelf-card__name,
+.shelf-card--missing:focus-visible .shelf-card__name,
+.shelf-card--missing:hover .shelf-card__kind,
+.shelf-card--missing:focus-visible .shelf-card__kind {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /* Extras — wider banner crops, separate from publications */
@@ -3669,6 +3735,12 @@ html[data-view="schema"] .release-slot__more {
   .collection__account {
     justify-content: center;
     padding-top: 0;
+  }
+
+  .collection__section-head--shelf {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .collection__filters {

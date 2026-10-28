@@ -2,17 +2,14 @@
 
 import Link from "next/link";
 import { brand } from "@/brand";
-import { useLanguage } from "@/components/LanguageProvider";
 import { AccentSwatches } from "./AccentSwatches";
 import { HeaderLivingRing } from "./HeaderLivingRing";
 import { ViewSwitcher } from "./ViewSwitcher";
 
 /**
- * Header: accent swatches (left desktop / under View on mobile) · View+PAPERS · living ring.
+ * Header: accent swatches (left desktop / under View on mobile) · View + Vekon: Papers · living ring.
  */
 export function LabelHeader() {
-  const { t } = useLanguage();
-
   return (
     <header className="label-header">
       <div className="label-header__row">
@@ -26,7 +23,6 @@ export function LabelHeader() {
             <Link href="/" className="label-header__name">
               {brand.name}
             </Link>
-            <span className="label-header__tag">{t("tagline")}</span>
           </div>
 
           <div className="label-header__accents">

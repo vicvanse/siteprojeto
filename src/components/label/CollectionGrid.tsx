@@ -6,7 +6,6 @@ import { isExtra, isPublication, kindLabel } from "@/data/artifacts";
 import { useAccess } from "@/components/AccessProvider";
 import { useLanguage } from "@/components/LanguageProvider";
 import { useViewMode } from "@/components/ViewModeProvider";
-import { identityInitials } from "@/lib/personal-copy";
 import { ArtworkCover } from "./ArtworkCover";
 import { OwnedObject } from "./OwnedObject";
 
@@ -38,9 +37,14 @@ export function CollectionGrid({
   const { setMode } = useViewMode();
   const [filter, setFilter] = useState<Filter>("all");
 
+  const publications = useMemo(
+    () => artifacts.filter((a) => isPublication(a)),
+    [artifacts],
+  );
+
   const ownedObjects = useMemo(
-    () => artifacts.filter((a) => isPublication(a) && owns(a.id)),
-    [artifacts, owns],
+    () => publications.filter((a) => owns(a.id)),
+    [publications, owns],
   );
 
   const ownedExtras = useMemo(
@@ -48,15 +52,19 @@ export function CollectionGrid({
     [extras, owns],
   );
 
-  const filteredObjects = useMemo(() => {
-    if (filter === "all") return ownedObjects;
-    return ownedObjects.filter((a) => a.kind === filter);
-  }, [ownedObjects, filter]);
+  /* All publications in filter: owned first (color), missing last (B/W). */
+  const shelfObjects = useMemo(() => {
+    const pool =
+      filter === "all" ? publications : publications.filter((a) => a.kind === filter);
+    const held = pool.filter((a) => owns(a.id));
+    const missing = pool.filter((a) => !owns(a.id));
+    return [...held, ...missing];
+  }, [publications, filter, owns]);
 
   const active =
-    filteredObjects.find((a) => a.id === activeId) ??
+    ownedObjects.find((a) => a.id === activeId) ??
     ownedExtras.find((a) => a.id === activeId) ??
-    filteredObjects[0] ??
+    ownedObjects[0] ??
     null;
 
   useEffect(() => {
@@ -87,68 +95,75 @@ export function CollectionGrid({
 
   const objectCount = String(ownedObjects.length).padStart(2, "0");
   const extraCount = String(ownedExtras.length).padStart(2, "0");
-  const initials = identityInitials(email);
 
   return (
     <section className="collection collection--library" aria-labelledby="collection-title">
-      <header className="collection__head collection__head--row">
-        <div className="collection__intro">
+      <div className="collection__stage">
+        <button
+          type="button"
+          className="collection__logout"
+          title={email ?? undefined}
+          onClick={() => void signOut()}
+        >
+          {t("collection.logOut")}
+        </button>
+        {active ? <OwnedObject artifact={active} /> : null}
+      </div>
+
+      <div className="collection__shelf-block">
+        <header className="collection__section-head collection__section-head--shelf collection__section-head--below-panel">
           <h1 id="collection-title" className="collection__title">
             <span className="collection__title-main">{t("collection.yours")}</span>
             <span className="collection__title-count">
               {`: ${objectCount} ${t("objects").toUpperCase()}`}
             </span>
           </h1>
-        </div>
-        <div className="collection__account">
-          <span className="collection__vc" title={email ?? undefined}>
-            {initials}
-          </span>
-          <button type="button" className="collection__exit" onClick={() => void signOut()}>
-            {t("collection.exit")}
-          </button>
-        </div>
-      </header>
-
-      {active ? <OwnedObject artifact={active} /> : null}
-
-      <nav className="collection__filters" aria-label={t("collection.filters")}>
-        {FILTERS.map((f) => (
-          <button
-            key={f.id}
-            type="button"
-            className={`collection-filter${filter === f.id ? " collection-filter--active" : ""}`}
-            aria-pressed={filter === f.id}
-            onClick={() => setFilter(f.id)}
-          >
-            {t(f.labelKey)}
-          </button>
-        ))}
-      </nav>
-
-      <div className="collection__shelf-block">
-        <header className="collection__section-head">
-          <h2 className="collection__section-title">
-            {t("collection.yourObjects")} / {objectCount}
-          </h2>
+          <nav className="collection__filters" aria-label={t("collection.filters")}>
+            {FILTERS.map((f) => (
+              <button
+                key={f.id}
+                type="button"
+                className={`collection-filter${filter === f.id ? " collection-filter--active" : ""}`}
+                aria-pressed={filter === f.id}
+                onClick={() => setFilter(f.id)}
+              >
+                {t(f.labelKey)}
+              </button>
+            ))}
+          </nav>
         </header>
 
-        {filteredObjects.length === 0 ? (
+        {shelfObjects.length === 0 ? (
           <p className="collection__empty">{t("collection.emptyFilter")}</p>
         ) : (
           <ul className="collection-shelf">
-            {filteredObjects.map((artifact) => {
-              const selected = active?.id === artifact.id;
+            {shelfObjects.map((artifact) => {
+              const held = owns(artifact.id);
+              const selected = held && active?.id === artifact.id;
               return (
                 <li key={artifact.id} className="collection-shelf__item">
                   <button
                     type="button"
-                    className={`shelf-card${selected ? " shelf-card--active" : ""}`}
+                    className={`shelf-card${selected ? " shelf-card--active" : ""}${held ? "" : " shelf-card--missing"}`}
                     aria-pressed={selected}
-                    aria-label={t("showObject")
-                      .replace("{number}", artifact.number)
-                      .replace("{title}", artifact.title)}
-                    onClick={() => onSelect(artifact)}
+                    aria-label={
+                      held
+                        ? t("showObject")
+                            .replace("{number}", artifact.number)
+                            .replace("{title}", artifact.title)
+                        : t("collection.missingObject")
+                            .replace("{number}", artifact.number)
+                            .replace("{title}", artifact.title)
+                    }
+                    onClick={() => {
+                      if (held) {
+                        onSelect(artifact);
+                        return;
+                      }
+                      /* Missing slot → Gallery so GET is one click away. */
+                      onSelect(artifact);
+                      setMode("gallery");
+                    }}
                   >
                     <span className="shelf-card__photo">
                       {artifact.cover ? (
@@ -165,7 +180,9 @@ export function CollectionGrid({
                     <span className="shelf-card__meta">
                       <span className="shelf-card__name">{artifact.title}</span>
                       <span className="shelf-card__kind">
-                        {artifact.number} · {kindLabel(artifact.kind)}
+                        {held
+                          ? `${artifact.number} · ${kindLabel(artifact.kind)}`
+                          : t("collection.missing")}
                       </span>
                     </span>
                   </button>
@@ -178,7 +195,6 @@ export function CollectionGrid({
 
       {ownedExtras.length > 0 ? (
         <div className="collection__extras-block">
-          <div className="collection__rule" aria-hidden />
           <header className="collection__section-head">
             <h2 className="collection__section-title">
               {t("collection.extras")} / {extraCount}
