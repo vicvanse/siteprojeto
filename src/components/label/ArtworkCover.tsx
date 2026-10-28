@@ -11,9 +11,17 @@ type Props = {
  * Native <img> + pixelated rendering — Next/Image re-encode blurs pixel banners.
  */
 export function ArtworkCover({ artifact, size = "featured" }: Props) {
-  const label = artifact.type.toUpperCase();
+  const label =
+    artifact.kind === "extra"
+      ? "Banner"
+      : artifact.kind === "field-guide"
+        ? "Guide"
+        : artifact.kind === "essay"
+          ? "Essay"
+          : "Booklet";
   const hasCover = Boolean(artifact.cover);
-  const avatarPx = size === "featured" ? 72 : 40;
+  const avatarPx = 72;
+  const showAvatar = size === "featured";
 
   return (
     <div
@@ -36,21 +44,23 @@ export function ArtworkCover({ artifact, size = "featured" }: Props) {
 
       <span className="artwork__code">{label}</span>
 
-      {artifact.avatar ? (
-        <span className="artwork__avatar">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={artifact.avatar}
-            alt=""
-            width={avatarPx}
-            height={avatarPx}
-            draggable={false}
-            decoding="async"
-          />
-        </span>
-      ) : (
-        <span className="artwork__glyph">{artifact.number.slice(-2)}</span>
-      )}
+      {showAvatar ? (
+        artifact.avatar ? (
+          <span className="artwork__avatar">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={artifact.avatar}
+              alt=""
+              width={avatarPx}
+              height={avatarPx}
+              draggable={false}
+              decoding="async"
+            />
+          </span>
+        ) : (
+          <span className="artwork__glyph">{artifact.number.slice(-2)}</span>
+        )
+      ) : null}
     </div>
   );
 }

@@ -1,8 +1,12 @@
 import { LabelStage } from "@/components/label/LabelStage";
-import { featuredArtifact, releaseArtifacts } from "@/data/artifacts";
+import { catalogArtifacts, latestArtifact } from "@/data/artifacts";
 
 export default function HomePage() {
+  const initial = latestArtifact(catalogArtifacts);
   return (
-    <LabelStage initial={featuredArtifact} releases={releaseArtifacts} />
+    <LabelStage
+      initial={initial}
+      releases={catalogArtifacts.filter((a) => a.id !== initial.id)}
+    />
   );
 }

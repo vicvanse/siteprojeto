@@ -5,13 +5,14 @@ import { useRouter } from "next/navigation";
 import { useAccess } from "@/components/AccessProvider";
 import { useViewMode } from "@/components/ViewModeProvider";
 import { LabelStage } from "@/components/label/LabelStage";
-import { featuredArtifact, releaseArtifacts } from "@/data/artifacts";
+import { catalogArtifacts, latestArtifact } from "@/data/artifacts";
 
 /** Direct Collection entry — opens overlay if identification is still required. */
 export default function CollectionPage() {
   const router = useRouter();
   const { setMode } = useViewMode();
   const { ready, authenticated, openOverlay } = useAccess();
+  const initial = latestArtifact(catalogArtifacts);
 
   useEffect(() => {
     if (!ready) return;
@@ -21,6 +22,9 @@ export default function CollectionPage() {
   }, [ready, authenticated, openOverlay, setMode, router]);
 
   return (
-    <LabelStage initial={featuredArtifact} releases={releaseArtifacts} />
+    <LabelStage
+      initial={initial}
+      releases={catalogArtifacts.filter((a) => a.id !== initial.id)}
+    />
   );
 }

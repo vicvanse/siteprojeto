@@ -7,6 +7,7 @@ import { useLanguage } from "@/components/LanguageProvider";
 import { artifactDescriptionKey, type MessageKey } from "@/lib/i18n";
 import { ArtifactFrame } from "./ArtifactFrame";
 import { ArtworkCover } from "./ArtworkCover";
+import { ViewportTools } from "./ViewportTools";
 
 type Props = {
   artifact: Artifact;
@@ -112,6 +113,8 @@ export function FeaturedObject({ artifact }: Props) {
             </div>
           </div>
         </div>
+
+        <ViewportTools />
       </div>
     </section>
   );

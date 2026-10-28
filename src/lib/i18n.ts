@@ -72,11 +72,30 @@ export type MessageKey =
   | "view"
   | "gallery"
   | "collection"
+  | "logIn"
   | "collection.kicker"
+  | "collection.yours"
   | "collection.owned"
   | "collection.locked"
   | "collection.ownedMeta"
   | "collection.lockedMeta"
+  | "collection.objectCount"
+  | "collection.yourObjects"
+  | "collection.extras"
+  | "collection.banner"
+  | "collection.download"
+  | "collection.explore"
+  | "collection.exit"
+  | "collection.filters"
+  | "collection.filterAll"
+  | "collection.filterBooklets"
+  | "collection.filterEssays"
+  | "collection.filterGuides"
+  | "collection.emptyFilter"
+  | "collection.personalCopy"
+  | "collection.copy"
+  | "collection.acquired"
+  | "collection.version"
   | "access.kicker"
   | "access.title"
   | "access.lead"
@@ -96,6 +115,7 @@ export type MessageKey =
   | "object"
   | "pages"
   | "get"
+  | "seeMore"
   | "releases"
   | "objects"
   | "editions"
@@ -128,11 +148,30 @@ const en: Dictionary = {
   view: "View",
   gallery: "Gallery",
   collection: "Collection",
+  logIn: "Log in",
   "collection.kicker": "YOUR OBJECTS",
+  "collection.yours": "YOUR COLLECTION",
   "collection.owned": "OWNED",
   "collection.locked": "LOCKED",
   "collection.ownedMeta": "{count} in your collection",
   "collection.lockedMeta": "Identification required",
+  "collection.objectCount": "{count} OBJECTS",
+  "collection.yourObjects": "YOUR OBJECTS",
+  "collection.extras": "COLLECTED EXTRAS",
+  "collection.banner": "BANNER",
+  "collection.download": "DOWNLOAD ↓",
+  "collection.explore": "EXPLORE ARCHIVE →",
+  "collection.exit": "EXIT",
+  "collection.filters": "Filter collection",
+  "collection.filterAll": "ALL",
+  "collection.filterBooklets": "BOOKLETS",
+  "collection.filterEssays": "ESSAYS",
+  "collection.filterGuides": "FIELD GUIDES",
+  "collection.emptyFilter": "Nothing in this drawer yet.",
+  "collection.personalCopy": "PERSONAL COPY",
+  "collection.copy": "COPY",
+  "collection.acquired": "ACQUIRED",
+  "collection.version": "VERSION",
   "access.kicker": "ACCESS / COLLECTION",
   "access.title": "Access your collection",
   "access.lead": "Enter the email used to collect your objects.",
@@ -152,6 +191,7 @@ const en: Dictionary = {
   object: "Object",
   pages: "PAGES",
   get: "Get →",
+  seeMore: "See more →",
   releases: "Releases",
   objects: "objects",
   editions: "Editions",
@@ -193,11 +233,30 @@ const pt: Dictionary = {
   view: "Vista",
   gallery: "Galeria",
   collection: "Collection",
+  logIn: "Entrar",
   "collection.kicker": "SEUS OBJETOS",
+  "collection.yours": "SUA COLLECTION",
   "collection.owned": "SEU",
   "collection.locked": "BLOQUEADO",
   "collection.ownedMeta": "{count} na sua collection",
   "collection.lockedMeta": "Identificação necessária",
+  "collection.objectCount": "{count} OBJETOS",
+  "collection.yourObjects": "SEUS OBJETOS",
+  "collection.extras": "EXTRAS COLETADOS",
+  "collection.banner": "BANNER",
+  "collection.download": "BAIXAR ↓",
+  "collection.explore": "EXPLORAR ARQUIVO →",
+  "collection.exit": "SAIR",
+  "collection.filters": "Filtrar collection",
+  "collection.filterAll": "TUDO",
+  "collection.filterBooklets": "BOOKLETS",
+  "collection.filterEssays": "ENSAIOS",
+  "collection.filterGuides": "FIELD GUIDES",
+  "collection.emptyFilter": "Nada nesta gaveta ainda.",
+  "collection.personalCopy": "EXEMPLAR",
+  "collection.copy": "CÓPIA",
+  "collection.acquired": "ADQUIRIDO",
+  "collection.version": "VERSÃO",
   "access.kicker": "ACCESS / COLLECTION",
   "access.title": "Acesse sua collection",
   "access.lead": "Digite o email usado para coletar seus objetos.",
@@ -217,6 +276,7 @@ const pt: Dictionary = {
   object: "Objeto",
   pages: "PÁGINAS",
   get: "Pegar →",
+  seeMore: "Ver mais →",
   releases: "Lançamentos",
   objects: "objetos",
   editions: "Edições",
@@ -258,9 +318,11 @@ const es: Dictionary = {
   view: "Vista",
   gallery: "Galería",
   collection: "Collection",
+  logIn: "Entrar",
   object: "Objeto",
   pages: "PÁGINAS",
   get: "Obtener →",
+  seeMore: "Ver más →",
   releases: "Lanzamientos",
   objects: "objetos",
   editions: "Ediciones",
@@ -302,9 +364,11 @@ const de: Dictionary = {
   view: "Ansicht",
   gallery: "Galerie",
   collection: "Collection",
+  logIn: "Anmelden",
   object: "Objekt",
   pages: "SEITEN",
   get: "Holen →",
+  seeMore: "Mehr →",
   releases: "Releases",
   objects: "Objekte",
   editions: "Ausgaben",
@@ -346,9 +410,11 @@ const fr: Dictionary = {
   view: "Vue",
   gallery: "Galerie",
   collection: "Collection",
+  logIn: "Connexion",
   object: "Objet",
   pages: "PAGES",
   get: "Obtenir →",
+  seeMore: "Voir plus →",
   releases: "Parutions",
   objects: "objets",
   editions: "Éditions",
@@ -390,9 +456,11 @@ const it: Dictionary = {
   view: "Vista",
   gallery: "Galleria",
   collection: "Collection",
+  logIn: "Accedi",
   object: "Oggetto",
   pages: "PAGINE",
   get: "Prendi →",
+  seeMore: "Vedi di più →",
   releases: "Uscite",
   objects: "oggetti",
   editions: "Edizioni",
@@ -434,9 +502,11 @@ const ja: Dictionary = {
   view: "表示",
   gallery: "ギャラリー",
   collection: "コレクション",
+  logIn: "ログイン",
   object: "オブジェクト",
   pages: "ページ",
   get: "入手 →",
+  seeMore: "もっと見る →",
   releases: "リリース",
   objects: "オブジェクト",
   editions: "エディション",
@@ -478,9 +548,11 @@ const ko: Dictionary = {
   view: "보기",
   gallery: "갤러리",
   collection: "컬렉션",
+  logIn: "로그인",
   object: "오브젝트",
   pages: "페이지",
   get: "받기 →",
+  seeMore: "더 보기 →",
   releases: "릴리스",
   objects: "오브젝트",
   editions: "에디션",
@@ -522,9 +594,11 @@ const zhCN: Dictionary = {
   view: "视图",
   gallery: "画廊",
   collection: "收藏",
+  logIn: "登录",
   object: "物件",
   pages: "页",
   get: "获取 →",
+  seeMore: "查看更多 →",
   releases: "发行",
   objects: "物件",
   editions: "版本",
@@ -566,9 +640,11 @@ const zhTW: Dictionary = {
   view: "檢視",
   gallery: "藝廊",
   collection: "收藏",
+  logIn: "登入",
   object: "物件",
   pages: "頁",
   get: "取得 →",
+  seeMore: "查看更多 →",
   releases: "發行",
   objects: "物件",
   editions: "版本",

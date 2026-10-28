@@ -23,7 +23,7 @@ import {
   type Language,
 } from "@/lib/i18n";
 
-/** Mudar estilo — full grid on desktop; compact lang+active color on mobile (expands down). */
+/** Mudar estilo — full grid on desktop; compact on mobile with floating popover. */
 export function AccentSwatches() {
   const { hue, setHue, ready } = useAccent();
   const { language, setLanguage, t } = useLanguage();

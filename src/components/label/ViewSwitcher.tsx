@@ -1,18 +1,28 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { useAccess } from "@/components/AccessProvider";
 import { useLanguage } from "@/components/LanguageProvider";
 import { useViewMode, type ViewMode } from "@/components/ViewModeProvider";
 
-/** Physical pair-pill control — Gallery / Collection. */
+/** Physical pair-pill control — Gallery / Collection (Log in when signed out). */
 export function ViewSwitcher() {
   const { mode, setMode } = useViewMode();
   const { ready, authenticated, openOverlay } = useAccess();
   const { t } = useLanguage();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  /* SSR + first paint stay on Collection to avoid hydration mismatch. */
+  const collectionLabel =
+    mounted && ready && !authenticated ? t("logIn") : t("collection");
 
   const options: { id: ViewMode; label: string }[] = [
     { id: "gallery", label: t("gallery") },
-    { id: "collection", label: t("collection") },
+    { id: "collection", label: collectionLabel },
   ];
 
   function select(next: ViewMode) {

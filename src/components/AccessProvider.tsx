@@ -9,22 +9,7 @@ import {
   useState,
 } from "react";
 
-const SESSION_KEY = "papers-access-session";
-const PENDING_KEY = "papers-access-pending";
-const LINK_TTL_MS = 15 * 60 * 1000;
-
 export type AccessOverlayPhase = "form" | "sent";
-
-type AccessSession = {
-  email: string;
-  ownedIds: string[];
-};
-
-type PendingAccess = {
-  email: string;
-  token: string;
-  expiresAt: number;
-};
 
 type AccessContextValue = {
   ready: boolean;
@@ -34,24 +19,19 @@ type AccessContextValue = {
   overlayOpen: boolean;
   overlayPhase: AccessOverlayPhase;
   pendingEmail: string | null;
-  pendingToken: string | null;
+  /** Dev / no-email provider: openable magic URL. */
+  magicUrl: string | null;
+  busy: boolean;
   openOverlay: (phase?: AccessOverlayPhase) => void;
   closeOverlay: () => void;
-  requestAccess: (email: string) => { token: string };
-  resendAccess: () => { token: string } | null;
-  completeAccess: (token: string) => boolean;
+  requestAccess: (email: string) => Promise<{ ok: boolean; error?: string }>;
+  resendAccess: () => Promise<{ ok: boolean; error?: string } | null>;
+  completeAccess: (token: string) => Promise<boolean>;
   owns: (id: string) => boolean;
-  signOut: () => void;
+  signOut: () => Promise<void>;
 };
 
 const AccessContext = createContext<AccessContextValue | null>(null);
-
-/** Demo ownership — a few collected objects once identified. */
-function demoOwnedIds(email: string): string[] {
-  const base = ["001", "007"];
-  const extra = email.toLowerCase().includes("a") ? ["003"] : ["005"];
-  return [...base, ...extra];
-}
 
 function maskEmail(email: string) {
   const [user, domain] = email.split("@");
@@ -60,53 +40,52 @@ function maskEmail(email: string) {
   return `${visible}${"•".repeat(Math.max(2, user.length - visible.length))}@${domain}`;
 }
 
-function readSession(): AccessSession | null {
-  try {
-    const raw = localStorage.getItem(SESSION_KEY);
-    if (!raw) return null;
-    const parsed = JSON.parse(raw) as AccessSession;
-    if (!parsed?.email || !Array.isArray(parsed.ownedIds)) return null;
-    return parsed;
-  } catch {
-    return null;
-  }
-}
-
-function readPending(): PendingAccess | null {
-  try {
-    const raw = localStorage.getItem(PENDING_KEY);
-    if (!raw) return null;
-    const parsed = JSON.parse(raw) as PendingAccess;
-    if (!parsed?.email || !parsed?.token || !parsed?.expiresAt) return null;
-    if (Date.now() > parsed.expiresAt) {
-      localStorage.removeItem(PENDING_KEY);
-      return null;
-    }
-    return parsed;
-  } catch {
-    return null;
-  }
-}
-
-function makeToken() {
-  if (typeof crypto !== "undefined" && "randomUUID" in crypto) {
-    return crypto.randomUUID().replace(/-/g, "").slice(0, 24);
-  }
-  return `${Date.now().toString(36)}${Math.random().toString(36).slice(2, 10)}`;
-}
-
 export function AccessProvider({ children }: { children: React.ReactNode }) {
   const [ready, setReady] = useState(false);
-  const [session, setSession] = useState<AccessSession | null>(null);
-  const [pending, setPending] = useState<PendingAccess | null>(null);
+  const [authenticated, setAuthenticated] = useState(false);
+  const [email, setEmail] = useState<string | null>(null);
+  const [ownedIds, setOwnedIds] = useState<string[]>([]);
   const [overlayOpen, setOverlayOpen] = useState(false);
   const [overlayPhase, setOverlayPhase] = useState<AccessOverlayPhase>("form");
+  const [pendingEmail, setPendingEmail] = useState<string | null>(null);
+  const [pendingRawEmail, setPendingRawEmail] = useState<string | null>(null);
+  const [magicUrl, setMagicUrl] = useState<string | null>(null);
+  const [busy, setBusy] = useState(false);
+
+  const refreshSession = useCallback(async () => {
+    try {
+      const res = await fetch("/api/access/session", { cache: "no-store" });
+      const data = (await res.json()) as {
+        authenticated?: boolean;
+        email?: string;
+        ownedIds?: string[];
+      };
+      if (data.authenticated && data.email) {
+        setAuthenticated(true);
+        setEmail(data.email);
+        setOwnedIds(Array.isArray(data.ownedIds) ? data.ownedIds : []);
+      } else {
+        setAuthenticated(false);
+        setEmail(null);
+        setOwnedIds([]);
+      }
+    } catch {
+      setAuthenticated(false);
+      setEmail(null);
+      setOwnedIds([]);
+    }
+  }, []);
 
   useEffect(() => {
-    setSession(readSession());
-    setPending(readPending());
-    setReady(true);
-  }, []);
+    let cancelled = false;
+    (async () => {
+      await refreshSession();
+      if (!cancelled) setReady(true);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [refreshSession]);
 
   const openOverlay = useCallback((phase: AccessOverlayPhase = "form") => {
     setOverlayPhase(phase);
@@ -117,66 +96,100 @@ export function AccessProvider({ children }: { children: React.ReactNode }) {
     setOverlayOpen(false);
   }, []);
 
-  const requestAccess = useCallback((email: string) => {
-    const trimmed = email.trim().toLowerCase();
-    const next: PendingAccess = {
-      email: trimmed,
-      token: makeToken(),
-      expiresAt: Date.now() + LINK_TTL_MS,
-    };
-    localStorage.setItem(PENDING_KEY, JSON.stringify(next));
-    setPending(next);
-    setOverlayPhase("sent");
-    setOverlayOpen(true);
-    return { token: next.token };
-  }, []);
-
-  const resendAccess = useCallback(() => {
-    if (!pending?.email) return null;
-    return requestAccess(pending.email);
-  }, [pending, requestAccess]);
-
-  const completeAccess = useCallback((token: string) => {
-    const current = readPending();
-    if (!current || current.token !== token) return false;
-    if (Date.now() > current.expiresAt) {
-      localStorage.removeItem(PENDING_KEY);
-      setPending(null);
-      return false;
+  const requestAccess = useCallback(async (value: string) => {
+    const trimmed = value.trim().toLowerCase();
+    setBusy(true);
+    try {
+      const res = await fetch("/api/access/request", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: trimmed }),
+      });
+      const data = (await res.json()) as {
+        ok?: boolean;
+        error?: string;
+        emailed?: boolean;
+        magicUrl?: string;
+        email?: string;
+      };
+      if (!res.ok || !data.ok) {
+        return { ok: false, error: data.error ?? "request_failed" };
+      }
+      setPendingRawEmail(data.email ?? trimmed);
+      setPendingEmail(maskEmail(data.email ?? trimmed));
+      setMagicUrl(data.magicUrl ?? null);
+      setOverlayPhase("sent");
+      setOverlayOpen(true);
+      return { ok: true };
+    } catch {
+      return { ok: false, error: "network" };
+    } finally {
+      setBusy(false);
     }
-    const next: AccessSession = {
-      email: current.email,
-      ownedIds: demoOwnedIds(current.email),
-    };
-    localStorage.setItem(SESSION_KEY, JSON.stringify(next));
-    localStorage.removeItem(PENDING_KEY);
-    setSession(next);
-    setPending(null);
-    setOverlayOpen(false);
-    setOverlayPhase("form");
-    return true;
   }, []);
 
-  const signOut = useCallback(() => {
-    localStorage.removeItem(SESSION_KEY);
-    setSession(null);
+  const resendAccess = useCallback(async () => {
+    if (!pendingRawEmail) return null;
+    return requestAccess(pendingRawEmail);
+  }, [pendingRawEmail, requestAccess]);
+
+  const completeAccess = useCallback(async (token: string) => {
+    setBusy(true);
+    try {
+      const res = await fetch("/api/access/verify", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ token }),
+      });
+      const data = (await res.json()) as {
+        ok?: boolean;
+        email?: string;
+        ownedIds?: string[];
+      };
+      if (!res.ok || !data.ok || !data.email) return false;
+      setAuthenticated(true);
+      setEmail(data.email);
+      setOwnedIds(Array.isArray(data.ownedIds) ? data.ownedIds : []);
+      setMagicUrl(null);
+      setPendingEmail(null);
+      setPendingRawEmail(null);
+      setOverlayOpen(false);
+      setOverlayPhase("form");
+      return true;
+    } catch {
+      return false;
+    } finally {
+      setBusy(false);
+    }
+  }, []);
+
+  const signOut = useCallback(async () => {
+    try {
+      await fetch("/api/access/signout", { method: "POST" });
+    } catch {
+      /* ignore */
+    }
+    setAuthenticated(false);
+    setEmail(null);
+    setOwnedIds([]);
   }, []);
 
   const owns = useCallback(
-    (id: string) => Boolean(session?.ownedIds.includes(id)),
-    [session],
+    (id: string) => ownedIds.includes(id),
+    [ownedIds],
   );
 
   const value = useMemo<AccessContextValue>(
     () => ({
       ready,
-      authenticated: Boolean(session),
-      email: session?.email ?? null,
-      ownedIds: session?.ownedIds ?? [],
+      authenticated,
+      email,
+      ownedIds,
       overlayOpen,
       overlayPhase,
-      pendingEmail: pending ? maskEmail(pending.email) : null,
-      pendingToken: pending?.token ?? null,
+      pendingEmail,
+      magicUrl,
+      busy,
       openOverlay,
       closeOverlay,
       requestAccess,
@@ -187,10 +200,14 @@ export function AccessProvider({ children }: { children: React.ReactNode }) {
     }),
     [
       ready,
-      session,
+      authenticated,
+      email,
+      ownedIds,
       overlayOpen,
       overlayPhase,
-      pending,
+      pendingEmail,
+      magicUrl,
+      busy,
       openOverlay,
       closeOverlay,
       requestAccess,

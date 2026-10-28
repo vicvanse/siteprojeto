@@ -22,7 +22,7 @@ const LEFT_WORDS = [
 
 const RIGHT_WORDS = [
   "Collection",
-  "Zine",
+  "Booklet",
   "Release",
   "Object",
   "Papers",

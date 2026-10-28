@@ -13,6 +13,8 @@ export type AccentHue =
 export type AccentPalette = {
   selected: string;
   selectedAlt: string;
+  /** Light tint — same as Vekon quick-thought photo moldura (mobile). */
+  surfaceEven: string;
   surfaceOdd: string;
   ring: string;
   ringSelected: string;
@@ -54,6 +56,7 @@ export const ACCENT_PALETTES: Record<AccentHue, AccentPalette> = {
   blue: {
     selected: "#434c5e",
     selectedAlt: "#344054",
+    surfaceEven: "#e8eaf0",
     surfaceOdd: "#d3d7de",
     ring: "#9ca3af",
     ringSelected: "#1f2937",
@@ -61,6 +64,7 @@ export const ACCENT_PALETTES: Record<AccentHue, AccentPalette> = {
   red: {
     selected: "#5c2228",
     selectedAlt: "#4a1a20",
+    surfaceEven: "#f0e6e8",
     surfaceOdd: "#deced1",
     ring: "#af9a9e",
     ringSelected: "#3a1218",
@@ -68,6 +72,7 @@ export const ACCENT_PALETTES: Record<AccentHue, AccentPalette> = {
   yellow: {
     selected: "#5e5743",
     selectedAlt: "#544e38",
+    surfaceEven: "#f0ece8",
     surfaceOdd: "#ded8d3",
     ring: "#afaa9c",
     ringSelected: "#37311f",
@@ -75,6 +80,7 @@ export const ACCENT_PALETTES: Record<AccentHue, AccentPalette> = {
   green: {
     selected: "#435e4c",
     selectedAlt: "#385443",
+    surfaceEven: "#e8f0ea",
     surfaceOdd: "#d3ded7",
     ring: "#9caf9c",
     ringSelected: "#1f3725",
@@ -82,6 +88,7 @@ export const ACCENT_PALETTES: Record<AccentHue, AccentPalette> = {
   purple: {
     selected: "#4e435e",
     selectedAlt: "#443854",
+    surfaceEven: "#ebe8f0",
     surfaceOdd: "#d7d3de",
     ring: "#a39caf",
     ringSelected: "#251f37",
@@ -89,6 +96,7 @@ export const ACCENT_PALETTES: Record<AccentHue, AccentPalette> = {
   pink: {
     selected: "#5e4354",
     selectedAlt: "#54384c",
+    surfaceEven: "#f0e8ed",
     surfaceOdd: "#ded3da",
     ring: "#af9ca8",
     ringSelected: "#371f2d",
@@ -96,13 +104,16 @@ export const ACCENT_PALETTES: Record<AccentHue, AccentPalette> = {
   white: {
     selected: "#525252",
     selectedAlt: "#404040",
-    surfaceOdd: "#f5f5f5",
+    /* Light grey moldura — readable on white release panels (not near-white #fafafa) */
+    surfaceEven: "#e8e8e8",
+    surfaceOdd: "#d8d8d8",
     ring: "#d4d4d4",
     ringSelected: "#262626",
   },
   cyan: {
     selected: "#43585e",
     selectedAlt: "#384c54",
+    surfaceEven: "#e8eef0",
     surfaceOdd: "#d3dbde",
     ring: "#9ca8af",
     ringSelected: "#1f3337",
@@ -110,6 +121,7 @@ export const ACCENT_PALETTES: Record<AccentHue, AccentPalette> = {
   brown: {
     selected: "#5e4843",
     selectedAlt: "#544038",
+    surfaceEven: "#f0ebe4",
     surfaceOdd: "#ded6cc",
     ring: "#afa49c",
     ringSelected: "#37291f",
@@ -124,4 +136,6 @@ export function applyAccentToDocument(hue: AccentHue) {
   root.style.setProperty("--conquest-fill", palette.selected);
   root.style.setProperty("--conquest-fill-alt", palette.selectedAlt);
   root.style.setProperty("--conquest-fill-ring", palette.ringSelected);
+  root.style.setProperty("--accent-surface-even", palette.surfaceEven);
+  root.style.setProperty("--accent-surface-odd", palette.surfaceOdd);
 }

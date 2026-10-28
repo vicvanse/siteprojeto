@@ -11,7 +11,8 @@ export function AccessOverlay() {
     overlayOpen,
     overlayPhase,
     pendingEmail,
-    pendingToken,
+    magicUrl,
+    busy,
     closeOverlay,
     requestAccess,
     resendAccess,
@@ -37,16 +38,24 @@ export function AccessOverlay() {
 
   if (!overlayOpen) return null;
 
-  function onSubmit(event: FormEvent) {
+  async function onSubmit(event: FormEvent) {
     event.preventDefault();
     const value = email.trim();
-    if (!value || !value.includes("@")) {
+    const isOwner = value.toLowerCase() === "owner";
+    if (!value || (!isOwner && !value.includes("@"))) {
       setError(t("access.emailInvalid"));
       return;
     }
     setError(null);
-    requestAccess(value);
+    const result = await requestAccess(value);
+    if (!result.ok) setError(t("access.emailInvalid"));
   }
+
+  const openHref = magicUrl
+    ? magicUrl.startsWith("http")
+      ? new URL(magicUrl).pathname + new URL(magicUrl).search
+      : magicUrl
+    : null;
 
   return (
     <div className="access-overlay" role="presentation">
@@ -76,11 +85,12 @@ export function AccessOverlay() {
               <input
                 id="access-email"
                 className="access-overlay__input"
-                type="email"
+                type="text"
                 autoComplete="email"
                 inputMode="email"
-                placeholder="name@email.com"
+                placeholder="name@email.com or OWNER"
                 value={email}
+                disabled={busy}
                 onChange={(event) => {
                   setEmail(event.target.value);
                   if (error) setError(null);
@@ -92,7 +102,11 @@ export function AccessOverlay() {
                 </p>
               ) : null}
               <div className="access-overlay__actions">
-                <button type="submit" className="access-overlay__submit">
+                <button
+                  type="submit"
+                  className="access-overlay__submit"
+                  disabled={busy}
+                >
                   {t("access.send")}
                 </button>
               </div>
@@ -109,12 +123,9 @@ export function AccessOverlay() {
             </p>
             <p className="access-overlay__note">{t("access.checkHint")}</p>
             <p className="access-overlay__expire">{t("access.expire")}</p>
-            {pendingToken ? (
+            {openHref ? (
               <p className="access-overlay__open">
-                <Link
-                  href={`/access?t=${encodeURIComponent(pendingToken)}`}
-                  className="access-overlay__open-link"
-                >
+                <Link href={openHref} className="access-overlay__open-link">
                   {t("access.openLink")}
                 </Link>
               </p>
@@ -123,7 +134,10 @@ export function AccessOverlay() {
               <button
                 type="button"
                 className="access-overlay__again"
-                onClick={() => resendAccess()}
+                disabled={busy}
+                onClick={() => {
+                  void resendAccess();
+                }}
               >
                 {t("access.sendAgain")}
               </button>

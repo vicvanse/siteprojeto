@@ -1,5 +1,5 @@
 export type ProductType =
-  | "zine"
+  | "booklet"
   | "poster"
   | "deck"
   | "wallpaper"
@@ -39,7 +39,7 @@ export const products: Product[] = [
     number: "001",
     title: "YOU'RE NOT DEPRESSED",
     subtitle: "YOU'RE JUST JOBLESS",
-    type: "zine",
+    type: "booklet",
     status: "available",
     price: 7,
     currency: "BRL",
@@ -74,7 +74,7 @@ export const products: Product[] = [
     number: "002",
     title: "SOFT KNIFE",
     subtitle: "decisions that don't cut",
-    type: "zine",
+    type: "booklet",
     status: "available",
     price: 9,
     currency: "BRL",

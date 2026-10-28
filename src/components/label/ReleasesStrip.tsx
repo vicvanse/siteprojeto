@@ -11,80 +11,72 @@ type Props = {
   onSelect: (artifact: Artifact) => void;
 };
 
-const PER_ROW = 5;
-
-function chunkRows(items: Artifact[], size: number) {
-  const rows: Artifact[][] = [];
-  for (let i = 0; i < items.length; i += size) {
-    rows.push(items.slice(i, i + size));
-  }
-  return rows;
+function byNumberDesc(a: Artifact, b: Artifact) {
+  return b.number.localeCompare(a.number, undefined, { numeric: true });
 }
 
-/** Secondary magazine rows — each row is its own panel; click swaps featured. */
+/**
+ * Releases — desktop: tall frameless 6-up.
+ * Mobile: Vekon moldura (shell / well / badge) tinted like quick-thought.
+ */
 export function ReleasesStrip({ artifacts, activeId, onSelect }: Props) {
   const { t } = useLanguage();
-  const rows = chunkRows(artifacts, PER_ROW);
+  const ordered = [...artifacts].sort(byNumberDesc);
 
   return (
     <section className="releases" aria-labelledby="releases-title">
       <div className="releases__head">
-        <p className="meta" id="releases-title">
+        <p className="releases__title-pill" id="releases-title">
           {t("releases")}
         </p>
-        <p className="releases__count meta">
-          {String(artifacts.length).padStart(2, "0")} {t("objects")}
+        <p className="releases__count-pill">
+          {String(ordered.length).padStart(2, "0")} {t("objects")}
         </p>
       </div>
 
-      <div className="releases__rows">
-        {rows.map((row, rowIndex) => (
-          <ul
-            key={`releases-row-${rowIndex}`}
-            className="releases__rail releases__rail--panel"
-          >
-            {row.map((artifact) => {
-              const active = artifact.id === activeId;
-              return (
-                <li key={artifact.id} className="release-slot">
-                  <button
-                    type="button"
-                    className={`release-slot__btn${active ? " release-slot__btn--active" : ""}`}
-                    aria-pressed={active}
-                    aria-label={t("showObject", {
-                      number: artifact.number,
-                      title: artifact.title,
-                    })}
-                    onClick={() => onSelect(artifact)}
-                  >
-                    <div className="release-slot__shell">
-                      <div className="release-slot__well">
-                        <div className="release-slot__mount">
-                          <ArtworkCover artifact={artifact} size="release" />
-                        </div>
-                      </div>
-                      <span className="release-slot__badge">
-                        {artifact.number}
+      <ul className="releases__grid">
+        {ordered.map((artifact) => {
+          const active = artifact.id === activeId;
+          return (
+            <li key={artifact.id} className="release-slot">
+              <button
+                type="button"
+                className={`release-slot__btn${active ? " release-slot__btn--active" : ""}`}
+                aria-pressed={active}
+                aria-label={t("showObject", {
+                  number: artifact.number,
+                  title: artifact.title,
+                })}
+                onClick={() => onSelect(artifact)}
+              >
+                <span className="release-slot__frame">
+                  <span className="release-slot__shell">
+                    <span className="release-slot__well">
+                      <span className="release-slot__mount">
+                        <ArtworkCover artifact={artifact} size="release" />
                       </span>
-                    </div>
-                    <div className="release-slot__meta">
-                      <p className="release-slot__title">{artifact.title}</p>
-                      {artifact.subtitle ? (
-                        <p className="release-slot__sub">{artifact.subtitle}</p>
-                      ) : null}
-                      <p className="release-slot__price meta">
-                        {artifact.status === "free"
-                          ? t("free")
-                          : formatPrice(artifact)}
-                      </p>
-                    </div>
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
-        ))}
-      </div>
+                    </span>
+                    <span className="release-slot__badge">{artifact.number}</span>
+                  </span>
+                </span>
+                <span className="release-slot__meta">
+                  <span className="release-slot__num">{artifact.number}</span>
+                  <span className="release-slot__title">{artifact.title}</span>
+                  {artifact.subtitle ? (
+                    <span className="release-slot__sub">{artifact.subtitle}</span>
+                  ) : null}
+                  <span className="release-slot__price">
+                    {artifact.status === "free"
+                      ? t("free")
+                      : formatPrice(artifact)}
+                  </span>
+                  <span className="release-slot__more">{t("seeMore")}</span>
+                </span>
+              </button>
+            </li>
+          );
+        })}
+      </ul>
     </section>
   );
 }

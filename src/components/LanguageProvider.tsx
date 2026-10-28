@@ -38,9 +38,14 @@ function readStoredLanguage(): Language {
   return DEFAULT_LANGUAGE;
 }
 
+const CJK_LANGUAGES = new Set<Language>(["ja", "ko", "zh-CN", "zh-TW"]);
+
 function applyLanguageToDocument(language: Language) {
   if (typeof document === "undefined") return;
-  document.documentElement.lang = LANGUAGE_BCP47[language];
+  const root = document.documentElement;
+  root.lang = LANGUAGE_BCP47[language];
+  if (CJK_LANGUAGES.has(language)) root.dataset.script = "cjk";
+  else delete root.dataset.script;
 }
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {

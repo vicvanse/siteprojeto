@@ -21,24 +21,33 @@ function AccessClient() {
 
   useEffect(() => {
     if (!ready) return;
-    const token = search.get("t") ?? search.get("token");
-    if (token) {
-      const ok = completeAccess(token);
-      setStatus(ok ? "ok" : "bad");
-      if (ok) {
+    let cancelled = false;
+
+    (async () => {
+      const token = search.get("t") ?? search.get("token");
+      if (token) {
+        const ok = await completeAccess(token);
+        if (cancelled) return;
+        setStatus(ok ? "ok" : "bad");
+        if (ok) {
+          setMode("collection");
+          router.replace("/?view=collection");
+        }
+        return;
+      }
+      if (authenticated) {
         setMode("collection");
         router.replace("/?view=collection");
+        return;
       }
-      return;
-    }
-    if (authenticated) {
+      setStatus("ok");
       setMode("collection");
-      router.replace("/?view=collection");
-      return;
-    }
-    setStatus("ok");
-    setMode("collection");
-    openOverlay("form");
+      openOverlay("form");
+    })();
+
+    return () => {
+      cancelled = true;
+    };
   }, [
     ready,
     search,

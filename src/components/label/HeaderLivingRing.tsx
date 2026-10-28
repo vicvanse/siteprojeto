@@ -38,7 +38,7 @@ export function HeaderLivingRing() {
     <Link
       href="/"
       className="label-header__ring"
-      aria-label="Vekon — Memory · Personas"
+      aria-label="Vekon"
       title="Vekon"
       style={
         size > 0
