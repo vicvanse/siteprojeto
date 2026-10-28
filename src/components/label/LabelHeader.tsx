@@ -7,18 +7,14 @@ import { HeaderLivingRing } from "./HeaderLivingRing";
 import { ViewSwitcher } from "./ViewSwitcher";
 
 /**
- * Header: accent swatches · View + Vekon mark/Papers · living ring.
- * Brand uses the Papers glyph (not letterspaced wordmark) — living ring stays as the right mark.
+ * Header: accent swatches · Vekon:Papers + View · living ring.
+ * Brand sits left of Gallery/Collection on desktop; living ring stays as the right mark.
  */
 export function LabelHeader() {
   return (
     <header className="label-header">
       <div className="label-header__row">
         <div className="label-header__stack">
-          <div className="label-header__view-panel">
-            <ViewSwitcher />
-          </div>
-
           <Link href="/" className="label-header__brand-panel" aria-label={brand.name}>
             <span className="label-header__mark">
               <span className="label-header__foil" aria-hidden />
@@ -38,6 +34,10 @@ export function LabelHeader() {
               <span className="label-header__word-main">Papers</span>
             </span>
           </Link>
+
+          <div className="label-header__view-panel">
+            <ViewSwitcher />
+          </div>
 
           <div className="label-header__accents">
             <AccentSwatches />
