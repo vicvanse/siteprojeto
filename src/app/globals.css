@@ -85,8 +85,8 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Same charcoal as the header brand panel */
-  background: var(--papers-brand-fill, #525252);
+  /* Same light grey as the page header */
+  background: var(--header-bg, #f0f0f0);
   pointer-events: none;
 }
 
@@ -102,28 +102,6 @@ html {
   height: min(42vw, 220px);
 }
 
-/* Light mark on the charcoal hold screen */
-.site-intro .living-ring__bloom {
-  background: radial-gradient(
-    circle at 45% 40%,
-    rgba(255, 255, 255, 0.55) 0%,
-    rgba(233, 236, 246, 0.18) 38%,
-    transparent 72%
-  );
-}
-
-.site-intro .living-ring__outer {
-  border-color: rgba(255, 255, 255, 0.88);
-  box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.12),
-    0 10px 28px rgba(0, 0, 0, 0.28);
-}
-
-.site-intro .living-ring__inner {
-  background: rgba(255, 255, 255, 0.94);
-  border-color: rgba(0, 0, 0, 0.06);
-}
-
 .site-intro .living-ring__subtitle {
   display: none;
 }
@@ -135,7 +113,7 @@ html {
   font-weight: 600;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.78);
+  color: #333;
   padding-right: 0.28em;
 }
 
