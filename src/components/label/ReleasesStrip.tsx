@@ -60,16 +60,18 @@ export function ReleasesStrip({ artifacts, activeId, onSelect }: Props) {
                   </span>
                 </span>
                 <span className="release-slot__meta">
-                  <span className="release-slot__num">{artifact.number}</span>
-                  <span className="release-slot__title">{artifact.title}</span>
+                  <span className="release-slot__line">
+                    <span className="release-slot__num">{artifact.number}</span>
+                    <span className="release-slot__title">{artifact.title}</span>
+                    <span className="release-slot__price">
+                      {artifact.status === "free"
+                        ? t("free")
+                        : formatPrice(artifact)}
+                    </span>
+                  </span>
                   {artifact.subtitle ? (
                     <span className="release-slot__sub">{artifact.subtitle}</span>
                   ) : null}
-                  <span className="release-slot__price">
-                    {artifact.status === "free"
-                      ? t("free")
-                      : formatPrice(artifact)}
-                  </span>
                   <span className="release-slot__more">{t("seeMore")}</span>
                 </span>
               </button>

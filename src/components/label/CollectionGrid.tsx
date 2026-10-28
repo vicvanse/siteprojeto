@@ -94,11 +94,11 @@ export function CollectionGrid({
       <header className="collection__head collection__head--row">
         <div className="collection__intro">
           <h1 id="collection-title" className="collection__title">
-            {t("collection.yours")}
+            <span className="collection__title-main">{t("collection.yours")}</span>
+            <span className="collection__title-count">
+              {`: ${objectCount} ${t("objects").toUpperCase()}`}
+            </span>
           </h1>
-          <p className="collection__meta">
-            {t("collection.objectCount").replace("{count}", objectCount)}
-          </p>
         </div>
         <div className="collection__account">
           <span className="collection__vc" title={email ?? undefined}>
@@ -123,7 +123,6 @@ export function CollectionGrid({
           </button>
         ))}
       </nav>
-      <div className="collection__rule" aria-hidden />
 
       {active ? <OwnedObject artifact={active} /> : null}
 
@@ -138,13 +137,10 @@ export function CollectionGrid({
           <p className="collection__empty">{t("collection.emptyFilter")}</p>
         ) : (
           <ul className="collection-shelf">
-            {filteredObjects.map((artifact, index) => {
+            {filteredObjects.map((artifact) => {
               const selected = active?.id === artifact.id;
               return (
-                <li
-                  key={artifact.id}
-                  className={`collection-shelf__item collection-shelf__item--${(index % 5) + 1}`}
-                >
+                <li key={artifact.id} className="collection-shelf__item">
                   <button
                     type="button"
                     className={`shelf-card${selected ? " shelf-card--active" : ""}`}
@@ -154,15 +150,13 @@ export function CollectionGrid({
                       .replace("{title}", artifact.title)}
                     onClick={() => onSelect(artifact)}
                   >
-                    <span className="shelf-card__num">{artifact.number}</span>
-                    <span className="shelf-card__frame">
+                    <span className="shelf-card__photo">
                       <ArtworkCover artifact={artifact} size="release" />
                     </span>
                     <span className="shelf-card__meta">
-                      <span className="shelf-card__kind">{kindLabel(artifact.kind)}</span>
                       <span className="shelf-card__name">{artifact.title}</span>
-                      <span className="shelf-card__langs">
-                        {(artifact.languages ?? ["en"]).map((l) => l.toUpperCase()).join(" / ")}
+                      <span className="shelf-card__kind">
+                        {artifact.number} · {kindLabel(artifact.kind)}
                       </span>
                     </span>
                   </button>

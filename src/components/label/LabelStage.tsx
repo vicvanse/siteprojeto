@@ -28,10 +28,13 @@ export function LabelStage({ initial, releases }: Props) {
 
   const select = useCallback((artifact: Artifact) => {
     setActive(artifact);
+    /* After paint: open at top panel and scroll the page up to it. */
     window.requestAnimationFrame(() => {
-      document.getElementById("viewport")?.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
+      window.requestAnimationFrame(() => {
+        document.getElementById("viewport")?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
       });
     });
   }, []);

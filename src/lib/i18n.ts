@@ -80,6 +80,7 @@ export type MessageKey =
   | "collection.ownedMeta"
   | "collection.lockedMeta"
   | "collection.objectCount"
+  | "collection.yoursCount"
   | "collection.yourObjects"
   | "collection.extras"
   | "collection.banner"
@@ -156,6 +157,7 @@ const en: Dictionary = {
   "collection.ownedMeta": "{count} in your collection",
   "collection.lockedMeta": "Identification required",
   "collection.objectCount": "{count} OBJECTS",
+  "collection.yoursCount": "YOUR COLLECTION: {count} OBJECTS",
   "collection.yourObjects": "YOUR OBJECTS",
   "collection.extras": "COLLECTED EXTRAS",
   "collection.banner": "BANNER",
@@ -241,6 +243,7 @@ const pt: Dictionary = {
   "collection.ownedMeta": "{count} na sua collection",
   "collection.lockedMeta": "Identificação necessária",
   "collection.objectCount": "{count} OBJETOS",
+  "collection.yoursCount": "SUA COLLECTION: {count} OBJETOS",
   "collection.yourObjects": "SEUS OBJETOS",
   "collection.extras": "EXTRAS COLETADOS",
   "collection.banner": "BANNER",
