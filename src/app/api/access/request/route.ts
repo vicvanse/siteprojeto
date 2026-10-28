@@ -1,12 +1,30 @@
 import { NextResponse } from "next/server";
 import {
+  SESSION_COOKIE,
+  SESSION_TTL_MS,
   createMagicToken,
+  createSession,
+  encodeSession,
   isAccessIdentity,
   isOwnerKey,
   magicLinkUrl,
   normalizeAccessIdentity,
   sendMagicLinkEmail,
 } from "@/lib/access-auth";
+
+function sessionCookie(identity: string) {
+  const session = createSession(identity);
+  return {
+    session,
+    options: {
+      httpOnly: true,
+      sameSite: "lax" as const,
+      secure: process.env.NODE_ENV === "production",
+      path: "/",
+      maxAge: Math.floor(SESSION_TTL_MS / 1000),
+    },
+  };
+}
 
 export async function POST(request: Request) {
   let body: { email?: string };
@@ -21,20 +39,22 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "invalid_email" }, { status: 400 });
   }
 
-  const token = createMagicToken(identity);
-  const url = magicLinkUrl(token);
-
-  // OWNER is a local demo key — never email it; always return the open link.
+  // OWNER demo key — unlock immediately (no email / magic-link click).
   if (isOwnerKey(identity)) {
-    console.info("[access] OWNER magic link:", url);
-    return NextResponse.json({
+    const { session, options } = sessionCookie(identity);
+    const response = NextResponse.json({
       ok: true,
-      email: identity,
+      authenticated: true,
+      email: session.email,
+      ownedIds: session.ownedIds,
       emailed: false,
-      magicUrl: url,
     });
+    response.cookies.set(SESSION_COOKIE, encodeSession(session), options);
+    return response;
   }
 
+  const token = createMagicToken(identity);
+  const url = magicLinkUrl(token);
   const mail = await sendMagicLinkEmail(identity, url);
 
   if (!mail.sent) {

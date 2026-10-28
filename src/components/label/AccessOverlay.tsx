@@ -51,11 +51,16 @@ export function AccessOverlay() {
     if (!result.ok) setError(t("access.emailInvalid"));
   }
 
-  const openHref = magicUrl
-    ? magicUrl.startsWith("http")
-      ? new URL(magicUrl).pathname + new URL(magicUrl).search
-      : magicUrl
-    : null;
+  let openHref: string | null = null;
+  if (magicUrl) {
+    try {
+      openHref = magicUrl.startsWith("http")
+        ? new URL(magicUrl).pathname + new URL(magicUrl).search
+        : magicUrl;
+    } catch {
+      openHref = magicUrl;
+    }
+  }
 
   return (
     <div className="access-overlay" role="presentation">

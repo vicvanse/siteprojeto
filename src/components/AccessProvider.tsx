@@ -111,9 +111,23 @@ export function AccessProvider({ children }: { children: React.ReactNode }) {
         emailed?: boolean;
         magicUrl?: string;
         email?: string;
+        authenticated?: boolean;
+        ownedIds?: string[];
       };
       if (!res.ok || !data.ok) {
         return { ok: false, error: data.error ?? "request_failed" };
+      }
+      /* OWNER (and any direct unlock) — session cookie already set. */
+      if (data.authenticated && data.email) {
+        setAuthenticated(true);
+        setEmail(data.email);
+        setOwnedIds(Array.isArray(data.ownedIds) ? data.ownedIds : []);
+        setMagicUrl(null);
+        setPendingEmail(null);
+        setPendingRawEmail(null);
+        setOverlayOpen(false);
+        setOverlayPhase("form");
+        return { ok: true };
       }
       setPendingRawEmail(data.email ?? trimmed);
       setPendingEmail(maskEmail(data.email ?? trimmed));

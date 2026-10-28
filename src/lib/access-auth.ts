@@ -44,10 +44,11 @@ export function demoOwnedIds(email: string): string[] {
 function secret() {
   const value = process.env.ACCESS_SECRET?.trim();
   if (value) return value;
-  if (process.env.NODE_ENV !== "production") {
-    return "papers-dev-access-secret-change-me";
+  /* Fallback keeps OWNER / demo access alive on Vercel if env is missing. */
+  if (process.env.NODE_ENV === "production") {
+    console.warn("[access] ACCESS_SECRET is not set — using demo fallback");
   }
-  throw new Error("ACCESS_SECRET is not set");
+  return "papers-demo-access-secret-change-me";
 }
 
 function b64url(input: Buffer | string) {
