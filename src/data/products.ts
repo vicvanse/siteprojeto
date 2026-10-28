@@ -46,7 +46,7 @@ export const products: Product[] = [
     coverTone: "wine",
     description:
       "Eight pages about the difference between a mood and a calendar. Print it. Fold it. Leave it on a desk that hates you.",
-    format: "PDF · A4 / US Letter",
+    format: "PDF",
     contents: "8 pages",
     releaseDate: "2026.10.26",
     featured: true,

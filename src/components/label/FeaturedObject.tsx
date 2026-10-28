@@ -1,7 +1,7 @@
 "use client";
 
 import { useLayoutEffect, useRef, useState, type CSSProperties } from "react";
-import type { Artifact } from "@/data/artifacts";
+import type { Artifact, ArtifactLang } from "@/data/artifacts";
 import { formatPrice } from "@/data/artifacts";
 import { useLanguage } from "@/components/LanguageProvider";
 import { artifactDescriptionKey, type MessageKey } from "@/lib/i18n";
@@ -13,13 +13,21 @@ type Props = {
   artifact: Artifact;
 };
 
+const LANG_LABEL: Record<ArtifactLang, string> = {
+  en: "EN",
+  pt: "PT",
+  es: "ES",
+  fr: "FR",
+  de: "DE",
+  it: "IT",
+  ja: "JA",
+  ko: "KO",
+};
+
+/* Real downloads: colour PDF, B/W PDF, optional folding guide. Same files print. */
 const EDITION_KEYS = [
   "edition.readColour",
   "edition.readBw",
-  "edition.printA4Colour",
-  "edition.printA4Bw",
-  "edition.printLetterColour",
-  "edition.printLetterBw",
   "edition.folding",
 ] as const satisfies readonly MessageKey[];
 
@@ -29,6 +37,8 @@ export function FeaturedObject({ artifact }: Props) {
   const [titleH, setTitleH] = useState(0);
   const descKey = artifactDescriptionKey(artifact.id);
   const description = descKey ? t(descKey) : artifact.description;
+  const langs = artifact.languages?.length ? artifact.languages : (["en"] as ArtifactLang[]);
+  const languagePill = `${t("edition.languages")} · ${langs.map((l) => LANG_LABEL[l]).join(" · ")}`;
   const plaques = [
     `PDF`,
     `${String(artifact.pages ?? 0).padStart(2, "0")} ${t("pages")}`,
@@ -108,6 +118,12 @@ export function FeaturedObject({ artifact }: Props) {
                     {t(key)}
                   </button>
                 ))}
+                <button type="button" className="edition-pill">
+                  {languagePill}
+                </button>
+                <button type="button" className="edition-pill">
+                  {t("edition.references")}
+                </button>
               </div>
               <p className="edition-note">{t("edition.note")}</p>
             </div>

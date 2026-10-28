@@ -49,12 +49,14 @@ export function OwnedObject({ artifact }: Props) {
   const description = descKey ? t(descKey) : artifact.description;
   const copy = personalCopy(email ?? "guest", artifact.id, artifact.version ?? "1.0");
   const isExtra = artifact.kind === "extra";
+  const ownedStamp = `${t("collection.owned")} / ${formatAcquiredStamp(copy.acquired)}`;
   const plaques = isExtra
-    ? [artifact.format ?? "PNG", `BANNER / ${artifact.number}`]
+    ? [artifact.format ?? "PNG", `BANNER / ${artifact.number}`, ownedStamp]
     : [
         artifact.format ?? "PDF",
         `${String(artifact.pages ?? 0).padStart(2, "0")} ${t("pages")}`,
         LANG_LABEL[editionLang],
+        ownedStamp,
       ];
 
   useLayoutEffect(() => {
@@ -90,9 +92,6 @@ export function OwnedObject({ artifact }: Props) {
               >
                 <ArtworkCover artifact={artifact} size="featured" />
               </ArtifactFrame>
-              <p className="owned-stamp">
-                {t("collection.owned")} / {formatAcquiredStamp(copy.acquired)}
-              </p>
             </div>
           </div>
 

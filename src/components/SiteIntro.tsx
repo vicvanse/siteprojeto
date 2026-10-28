@@ -2,84 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { LivingRingMark } from "@/components/label/LivingRingMark";
 
-const COPIES = 9;
-/** Índice em que ambos os trilhos param — texto final alinhado. */
-const FINAL_INDEX = 4;
-const CELL = 88;
-
-const LEFT_WORDS = [
-  "Archive",
-  "Label",
-  "Studio",
-  "Field",
-  "Vekon:",
-  "Object",
-  "Gallery",
-  "Collection",
-  "Vekon:",
-];
-
-const RIGHT_WORDS = [
-  "Collection",
-  "Booklet",
-  "Release",
-  "Object",
-  "Papers",
-  "Mark",
-  "Frame",
-  "Egg",
-  "Papers",
-];
-
-function WordReelColumn({
-  words,
-  direction,
-  width,
-}: {
-  words: string[];
-  /** 1 = sobe, -1 = desce */
-  direction: 1 | -1;
-  width: number;
-}) {
-  const startIndex = direction === 1 ? 0 : COPIES - 1;
-  const startY = -startIndex * CELL;
-  const endY = -FINAL_INDEX * CELL;
-
-  return (
-    <div
-      className="site-intro__reel"
-      style={{
-        height: CELL,
-        width,
-      }}
-    >
-      <motion.div
-        className="site-intro__track"
-        initial={{ y: startY }}
-        animate={{ y: endY }}
-        transition={{
-          duration: 1.4,
-          delay: 0.08,
-          ease: [0.65, 0.05, 0.18, 1],
-        }}
-      >
-        {words.map((word, i) => (
-          <span
-            key={`${word}-${i}`}
-            className="site-intro__word"
-            style={{ height: CELL, width }}
-            aria-hidden
-          >
-            {word}
-          </span>
-        ))}
-      </motion.div>
-    </div>
-  );
-}
-
-/** Intro: dois trilhos em roleta; param em “Vekon: Papers”. */
+/**
+ * Page enter — Durarara-style hold: mark fades in, rests, overlay lifts.
+ * Living ring is the mark (no word roulette).
+ */
 export function SiteIntro() {
   const [phase, setPhase] = useState<"boot" | "play" | "done">("boot");
 
@@ -101,8 +29,9 @@ export function SiteIntro() {
     setPhase("play");
     document.body.style.overflow = "hidden";
 
-    const doneAt = window.setTimeout(finish, 2000);
-    const safetyAt = window.setTimeout(finish, 4000);
+    /* Fade in ~0.6s + hold ~1.4s + exit starts — total ~2.6s before gone */
+    const doneAt = window.setTimeout(finish, 2600);
+    const safetyAt = window.setTimeout(finish, 5000);
 
     return () => {
       window.clearTimeout(doneAt);
@@ -119,13 +48,18 @@ export function SiteIntro() {
           className="site-intro"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+          transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
           aria-hidden
         >
-          <div className="site-intro__pair">
-            <WordReelColumn words={LEFT_WORDS} direction={1} width={200} />
-            <WordReelColumn words={RIGHT_WORDS} direction={-1} width={180} />
-          </div>
+          <motion.div
+            className="site-intro__mark"
+            initial={{ opacity: 0, scale: 0.92 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <LivingRingMark className="site-intro__ring" />
+            <p className="site-intro__caption">Papers</p>
+          </motion.div>
         </motion.div>
       ) : null}
     </AnimatePresence>
