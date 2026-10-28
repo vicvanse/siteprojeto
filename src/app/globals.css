@@ -2900,18 +2900,25 @@ html[data-view="schema"] .release-slot__more {
 }
 
 .shelf-card__photo .artwork,
-.shelf-card__photo .artwork__cover {
+.shelf-card__photo .artwork__cover,
+.shelf-card__cover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  image-rendering: pixelated;
 }
 
-/* Clean photo foil — no release code / veil overlays */
+/* No shine / foil / veil on YOUR OBJECTS thumbs */
+.shelf-card__foil,
+.shelf-card__photo::before,
+.shelf-card__photo::after,
 .shelf-card__photo .artwork__code,
 .shelf-card__photo .artwork__veil,
 .shelf-card__photo .artwork__avatar,
 .shelf-card__photo .artwork__glyph {
-  display: none;
+  display: none !important;
+  content: none !important;
+  animation: none !important;
 }
 
 /* No reflective veil / kind code on Collection extras banners */

@@ -151,7 +151,16 @@ export function CollectionGrid({
                     onClick={() => onSelect(artifact)}
                   >
                     <span className="shelf-card__photo">
-                      <ArtworkCover artifact={artifact} size="release" />
+                      {artifact.cover ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          className="shelf-card__cover"
+                          src={artifact.cover}
+                          alt=""
+                          draggable={false}
+                          decoding="async"
+                        />
+                      ) : null}
                     </span>
                     <span className="shelf-card__meta">
                       <span className="shelf-card__name">{artifact.title}</span>
