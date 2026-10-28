@@ -17,7 +17,8 @@ function byNumberDesc(a: Artifact, b: Artifact) {
 
 /**
  * Releases — museum moldura (shell / well / badge), same language as the
- * featured banner. Mobile keeps the accent-tinted plate variant.
+ * featured banner. Desktop hangs title + price on the frame; mobile keeps
+ * the accent-tinted plate variant.
  */
 export function ReleasesStrip({ artifacts, activeId, onSelect }: Props) {
   const { t } = useLanguage();
@@ -37,6 +38,8 @@ export function ReleasesStrip({ artifacts, activeId, onSelect }: Props) {
       <ul className="releases__grid">
         {ordered.map((artifact) => {
           const active = artifact.id === activeId;
+          const price =
+            artifact.status === "free" ? t("free") : formatPrice(artifact);
           return (
             <li key={artifact.id} className="release-slot">
               <button
@@ -58,17 +61,12 @@ export function ReleasesStrip({ artifacts, activeId, onSelect }: Props) {
                     </span>
                     <span className="release-slot__badge">{artifact.number}</span>
                   </span>
+                  <span className="release-slot__hang">
+                    <span className="release-slot__title">{artifact.title}</span>
+                    <span className="release-slot__price">{price}</span>
+                  </span>
                 </span>
                 <span className="release-slot__meta">
-                  <span className="release-slot__line">
-                    <span className="release-slot__num">{artifact.number}</span>
-                    <span className="release-slot__title">{artifact.title}</span>
-                    <span className="release-slot__price">
-                      {artifact.status === "free"
-                        ? t("free")
-                        : formatPrice(artifact)}
-                    </span>
-                  </span>
                   {artifact.subtitle ? (
                     <span className="release-slot__sub">{artifact.subtitle}</span>
                   ) : null}

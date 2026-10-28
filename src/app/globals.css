@@ -188,7 +188,6 @@ html[data-script="cjk"] .get-btn,
 html[data-script="cjk"] .edition-pill,
 html[data-script="cjk"] .edition-note,
 html[data-script="cjk"] .release-slot__title,
-html[data-script="cjk"] .release-slot__num,
 html[data-script="cjk"] .release-slot__price,
 html[data-script="cjk"] .release-slot__more,
 html[data-script="cjk"] .label-header__tag,
@@ -2538,31 +2537,14 @@ html[data-view="schema"] .releases__count-pill {
   filter: brightness(0.985);
 }
 
-.release-slot__meta {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.12rem;
-  min-width: 0;
-  padding: 0 0.05rem;
-}
-
-/* Desktop: number · title · price on one baseline */
-.release-slot__line {
+/* White pill hanging on the moldura — title + price (badge already has #) */
+.release-slot__hang {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: center;
   gap: 0.35rem;
   min-width: 0;
-  width: 100%;
-}
-
-.release-slot__num {
-  flex: 0 0 auto;
-  font-family: var(--font-mono), ui-monospace, Menlo, Consolas, monospace;
-  font-size: 0.55rem;
-  letter-spacing: 0.1em;
-  color: var(--muted);
+  max-width: calc(100% - 12px);
 }
 
 .release-slot__title {
@@ -2580,6 +2562,29 @@ html[data-view="schema"] .releases__count-pill {
   white-space: nowrap;
 }
 
+.release-slot__price {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono), ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.52rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #111;
+  white-space: nowrap;
+}
+
+.release-slot__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.12rem;
+  min-width: 0;
+  width: 100%;
+  padding: 0 0.05rem;
+}
+
 .release-slot__sub {
   display: none;
   margin: 0;
@@ -2587,25 +2592,7 @@ html[data-view="schema"] .releases__count-pill {
   font-style: italic;
   line-height: 1.25;
   color: var(--ink-soft);
-}
-
-.release-slot__price {
-  flex: 0 0 auto;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  padding: 2px 7px;
-  border: 1px solid #e0e0e0;
-  border-radius: 999px;
-  background: #ffffff;
-  font-family: var(--font-mono), ui-monospace, Menlo, Consolas, monospace;
-  font-size: 0.52rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #111;
-  white-space: nowrap;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
 .release-slot__more {
@@ -2613,6 +2600,7 @@ html[data-view="schema"] .releases__count-pill {
   align-items: center;
   justify-content: center;
   margin-top: 0.25rem;
+  margin-inline: auto;
   min-height: 24px;
   padding: 0 0.7rem;
   border: 1px solid #262626;
@@ -2628,6 +2616,43 @@ html[data-view="schema"] .releases__count-pill {
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.18),
     0 2px 0 0 #404040;
+}
+
+/* Desktop — hang the white pill on the bottom edge of the moldura */
+@media (min-width: 901px) {
+  .release-slot__btn {
+    align-items: center;
+    gap: 0.55rem;
+  }
+
+  .release-slot__frame {
+    margin-bottom: 0.55rem;
+  }
+
+  .release-slot__hang {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 3;
+    transform: translate(-50%, 50%);
+    padding: 4px 8px 4px 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 999px;
+    background: #ffffff;
+    box-shadow:
+      0 1px 0 #d2d2d2,
+      0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  .release-slot__price {
+    padding: 2px 0 2px 6px;
+    border-left: 1px solid #e8e8e8;
+  }
+
+  .release-slot__meta {
+    align-items: center;
+    padding-top: 0.15rem;
+  }
 }
 
 html[data-view="schema"] .release-slot__frame {
@@ -2769,19 +2794,28 @@ html[data-view="schema"] .release-slot__more {
       0 2px 0 0 #4a4a4a;
   }
 
-  .release-slot__line {
+  .release-slot__hang {
+    position: static;
+    transform: none;
     flex-direction: column;
     align-items: flex-start;
     gap: 0.12rem;
-  }
-
-  .release-slot__num {
-    display: none;
+    max-width: 100%;
+    margin-top: 0.35rem;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
   }
 
   .release-slot__title {
     font-size: 0.72rem;
     font-weight: 650;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
   }
 
   .release-slot__sub {
@@ -2789,12 +2823,22 @@ html[data-view="schema"] .release-slot__more {
   }
 
   .release-slot__price {
-    margin-left: 0;
     margin-top: 0.15rem;
     padding: 3px 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 999px;
     font-size: 0.58rem;
     color: #111;
     background: #ffffff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+
+  .release-slot__meta {
+    align-items: flex-start;
+  }
+
+  .release-slot__more {
+    margin-inline: 0;
   }
 }
 
