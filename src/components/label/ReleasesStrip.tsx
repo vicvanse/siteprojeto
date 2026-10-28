@@ -16,9 +16,8 @@ function byNumberDesc(a: Artifact, b: Artifact) {
 }
 
 /**
- * Releases — museum moldura (shell / well / badge), same language as the
- * featured banner. Desktop hangs title + price on the frame; mobile keeps
- * the accent-tinted plate variant.
+ * Releases — museum moldura with title/price hang pill.
+ * Mobile also centers subtitle above See more.
  */
 export function ReleasesStrip({ artifacts, activeId, onSelect }: Props) {
   const { t } = useLanguage();
