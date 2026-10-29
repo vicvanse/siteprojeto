@@ -1493,67 +1493,102 @@ html[data-view="schema"] .viewport__panel {
 
 /* Collection desktop — unavailable object preview (Gallery CTAs, locked look) */
 .viewport--missing .viewport__panel {
-  background: #1a1a1a;
-  border-color: #111;
+  background: #363636;
+  border-color: #2a2a2a;
   color: #f0f0f0;
   box-shadow: none;
 }
 
 .viewport--missing .object-id-pill {
-  background: #111;
-  border-color: #333;
-  color: rgba(255, 255, 255, 0.85);
-  box-shadow: none;
+  background: #ffffff;
+  border-color: #e0e0e0;
+  color: #333;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
 }
 
+/* Keep museum moldura light — only the outer panel stays black */
 .viewport--missing .artifact-frame__shell {
-  background: #2a2a2a;
-  border-color: #1a1a1a;
-  box-shadow: none;
+  background: #f5f5f5;
+  border-color: #d8d8d8;
+  box-shadow: var(--shadow);
+  color: #111;
 }
 
-.viewport--missing .artwork,
+.viewport--missing .artifact-frame__well {
+  background: #ebebeb;
+  border-color: #d9d9d9;
+}
+
+.viewport--missing .artifact-frame__plaques li {
+  background: #ececec;
+  border-color: #cfcfcf;
+  color: #111;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 1px 0 #d0d0d0;
+}
+
+/* Number pill on the moldura — gray, not black/white */
+.viewport--missing .artifact-frame__badge {
+  background: #7a7a7a;
+  color: #f0f0f0;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    0 2px 0 0 #555;
+}
+
+/* B&W only the cover — keep avatar crisp */
 .viewport--missing .artwork__cover {
   filter: grayscale(1) contrast(1.08) brightness(0.78);
 }
 
-.viewport--missing .object-stack__heading,
-.viewport--missing .object-stack__sub,
+.viewport--missing .artwork__avatar {
+  filter: none;
+  border-color: #fafaf8;
+  background: #e8e8e8;
+}
+
+.viewport--missing .artwork__code,
+.viewport--missing .artwork__glyph {
+  filter: none;
+}
+
+/*
+ * Title plate locked to white-accent chrome
+ * (selected #525252 / alt #404040 / ring #262626) — ignores other hues.
+ */
+.viewport--missing .object-stack__title {
+  background: #525252;
+  border-color: #262626;
+  color: #ffffff;
+  box-shadow:
+    0 1px 0 color-mix(in srgb, #404040 80%, #000),
+    0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.viewport--missing .object-stack__heading {
+  color: #ffffff;
+}
+
+.viewport--missing .object-stack__sub {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.viewport--missing .object-stack__leg {
+  background: #525252;
+  border-color: #262626;
+  box-shadow:
+    0 1px 0 color-mix(in srgb, #404040 80%, #000),
+    1px 0 0 color-mix(in srgb, #404040 55%, #000);
+}
+
+/* Body card is white — keep body copy dark */
+.viewport--missing .object-stack__body {
+  color: #171717;
+}
+
 .viewport--missing .object-stack__desc {
-  color: #f0f0f0;
-}
-
-.viewport--missing .object-stack__sub,
-.viewport--missing .object-stack__desc {
-  color: rgba(255, 255, 255, 0.72);
-}
-
-.viewport--missing .price-chip {
-  background: #111;
-  border-color: #333;
-  color: #f0f0f0;
-  box-shadow: none;
-}
-
-.viewport--missing .get-btn {
-  background: #f0f0f0;
-  color: #111;
-  border-color: #f0f0f0;
-  box-shadow: none;
-}
-
-.viewport--missing .get-btn:hover {
-  background: #fff;
-}
-
-.viewport--missing .edition-pill {
-  background: #2a2a2a;
-  color: rgba(255, 255, 255, 0.78);
-}
-
-.viewport--missing .edition-pill:hover {
-  background: #333;
-  color: #fff;
+  color: #333;
 }
 
 .viewport--missing .edition-note,
@@ -1561,19 +1596,43 @@ html[data-view="schema"] .viewport__panel {
 .viewport--missing .manifestations__channel,
 .viewport--missing .manifestations__meta,
 .viewport--missing .manifestations__note {
-  color: rgba(255, 255, 255, 0.55);
+  color: #999;
 }
 
 .viewport--missing .manifestations__item {
-  color: rgba(255, 255, 255, 0.88);
+  color: #171717;
 }
 
-.viewport--missing .edition-pills {
-  border-top-color: #333;
+.viewport--missing .price-chip {
+  background: #fff;
+  border-color: #d0d0d0;
+  color: #171717;
+  box-shadow: var(--shadow-soft);
 }
 
+.viewport--missing .get-btn {
+  background: #1a1a1a;
+  color: #fafaf8;
+  border-color: #111;
+}
+
+.viewport--missing .get-btn:hover {
+  background: #2a2a2a;
+}
+
+.viewport--missing .edition-pill {
+  background: #e4e4e4;
+  color: #333;
+}
+
+.viewport--missing .edition-pill:hover {
+  background: #d8d8d8;
+  color: #111;
+}
+
+.viewport--missing .edition-pills,
 .viewport--missing .manifestations {
-  border-top-color: #333;
+  border-top-color: var(--line-soft);
 }
 
 .viewport__id {
