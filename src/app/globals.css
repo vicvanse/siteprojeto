@@ -1491,6 +1491,91 @@ html[data-view="schema"] .viewport__panel {
   box-shadow: none;
 }
 
+/* Collection desktop — unavailable object preview (Gallery CTAs, locked look) */
+.viewport--missing .viewport__panel {
+  background: #1a1a1a;
+  border-color: #111;
+  color: #f0f0f0;
+  box-shadow: none;
+}
+
+.viewport--missing .object-id-pill {
+  background: #111;
+  border-color: #333;
+  color: rgba(255, 255, 255, 0.85);
+  box-shadow: none;
+}
+
+.viewport--missing .artifact-frame__shell {
+  background: #2a2a2a;
+  border-color: #1a1a1a;
+  box-shadow: none;
+}
+
+.viewport--missing .artwork,
+.viewport--missing .artwork__cover {
+  filter: grayscale(1) contrast(1.08) brightness(0.78);
+}
+
+.viewport--missing .object-stack__heading,
+.viewport--missing .object-stack__sub,
+.viewport--missing .object-stack__desc {
+  color: #f0f0f0;
+}
+
+.viewport--missing .object-stack__sub,
+.viewport--missing .object-stack__desc {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.viewport--missing .price-chip {
+  background: #111;
+  border-color: #333;
+  color: #f0f0f0;
+  box-shadow: none;
+}
+
+.viewport--missing .get-btn {
+  background: #f0f0f0;
+  color: #111;
+  border-color: #f0f0f0;
+  box-shadow: none;
+}
+
+.viewport--missing .get-btn:hover {
+  background: #fff;
+}
+
+.viewport--missing .edition-pill {
+  background: #2a2a2a;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.viewport--missing .edition-pill:hover {
+  background: #333;
+  color: #fff;
+}
+
+.viewport--missing .edition-note,
+.viewport--missing .manifestations__label,
+.viewport--missing .manifestations__channel,
+.viewport--missing .manifestations__meta,
+.viewport--missing .manifestations__note {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.viewport--missing .manifestations__item {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.viewport--missing .edition-pills {
+  border-top-color: #333;
+}
+
+.viewport--missing .manifestations {
+  border-top-color: #333;
+}
+
 .viewport__id {
   margin: 0 0 0.9rem;
   display: flex;
@@ -3299,58 +3384,32 @@ html[data-view="schema"] .release-slot__more {
   margin-top: 0;
 }
 
-/* Filters live with the shelf; desktop lifts them beside the title */
+@media (min-width: 901px) {
+  .collection__section-head--above-stage {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .collection__section-head--above-stage .collection__title {
+    justify-content: center;
+  }
+}
+
+/* Filters sit with the shelf, below the object panel (all breakpoints) */
 .collection__shelf-block .collection__filters {
   margin-bottom: 1rem;
 }
 
 @media (min-width: 901px) {
-  .collection--library {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    grid-template-areas:
-      "title filters"
-      "stage stage"
-      "shelf shelf"
-      "extras extras"
-      "foot foot";
-    align-items: center;
-  }
-
-  .collection__section-head--above-stage {
-    grid-area: title;
-    margin-bottom: 1.15rem;
-  }
-
-  .collection__filters {
-    grid-area: filters;
-    margin-bottom: 1.15rem;
-    justify-self: end;
-  }
-
-  .collection__stage {
-    grid-area: stage;
-    justify-self: stretch;
-  }
-
   .collection__shelf-block {
-    display: contents;
+    margin-top: 2.5rem;
+    padding-top: 1.35rem;
   }
 
-  .collection-shelf,
-  .collection__empty {
-    grid-area: shelf;
-    margin-top: 2.25rem;
-    padding-top: 1.15rem;
-    border-top: 1px solid var(--line-soft);
-  }
-
-  .collection__extras-block {
-    grid-area: extras;
-  }
-
-  .collection__foot {
-    grid-area: foot;
+  .collection__shelf-block .collection__filters {
+    justify-content: flex-end;
+    margin-bottom: 1.25rem;
   }
 }
 

@@ -7,6 +7,7 @@ import {
   hasManifestation,
   relatedBanner,
 } from "@/data/artifacts";
+import { useAccess } from "@/components/AccessProvider";
 import { useLanguage } from "@/components/LanguageProvider";
 import { artifactDescriptionKey, type MessageKey } from "@/lib/i18n";
 import { ArtifactFrame } from "./ArtifactFrame";
@@ -15,6 +16,9 @@ import { ViewportTools } from "./ViewportTools";
 
 type Props = {
   artifact: Artifact;
+  /** Collection desktop: unavailable object — black panel, B&W art, Gallery CTAs. */
+  variant?: "default" | "missing";
+  showLogout?: boolean;
 };
 
 const LANG_LABEL: Record<ArtifactLang, string> = {
@@ -35,10 +39,16 @@ const EDITION_KEYS = [
   "edition.folding",
 ] as const satisfies readonly MessageKey[];
 
-export function FeaturedObject({ artifact }: Props) {
+export function FeaturedObject({
+  artifact,
+  variant = "default",
+  showLogout = false,
+}: Props) {
   const { t } = useLanguage();
+  const { email, signOut } = useAccess();
   const titleRef = useRef<HTMLDivElement>(null);
   const [titleH, setTitleH] = useState(0);
+  const missing = variant === "missing";
   const descKey = artifactDescriptionKey(artifact.id);
   const description = descKey ? t(descKey) : artifact.description;
   const langs = artifact.languages?.length ? artifact.languages : (["en"] as ArtifactLang[]);
@@ -66,8 +76,22 @@ export function FeaturedObject({ artifact }: Props) {
   }, [artifact.id, artifact.title, artifact.subtitle]);
 
   return (
-    <section id="viewport" className="viewport" aria-labelledby="featured-title">
+    <section
+      id="viewport"
+      className={`viewport${missing ? " viewport--missing" : ""}`}
+      aria-labelledby="featured-title"
+    >
       <div className="viewport__panel">
+        {showLogout ? (
+          <button
+            type="button"
+            className="collection__logout"
+            title={email ?? undefined}
+            onClick={() => void signOut()}
+          >
+            {t("collection.logOut")}
+          </button>
+        ) : null}
         <p className="viewport__id">
           <span className="object-id-pill">
             {t("object")} / {artifact.number}

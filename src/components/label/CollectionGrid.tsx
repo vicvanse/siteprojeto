@@ -7,7 +7,10 @@ import { useAccess } from "@/components/AccessProvider";
 import { useLanguage } from "@/components/LanguageProvider";
 import { useViewMode } from "@/components/ViewModeProvider";
 import { ArtworkCover } from "./ArtworkCover";
+import { FeaturedObject } from "./FeaturedObject";
 import { OwnedObject } from "./OwnedObject";
+
+const DESKTOP_MQ = "(min-width: 901px)";
 
 type Filter = "all" | Exclude<ArtifactKind, "extra">;
 
@@ -40,6 +43,15 @@ export function CollectionGrid({
   const { t } = useLanguage();
   const { setMode } = useViewMode();
   const [filter, setFilter] = useState<Filter>("all");
+  const [desktop, setDesktop] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia(DESKTOP_MQ);
+    const sync = () => setDesktop(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
 
   const publications = useMemo(
     () => artifacts.filter((a) => isPublication(a)),
@@ -65,10 +77,19 @@ export function CollectionGrid({
     return [...held, ...missing];
   }, [publications, filter, owns]);
 
+  const focused =
+    publications.find((a) => a.id === activeId) ??
+    extras.find((a) => a.id === activeId) ??
+    null;
+  const focusedMissing =
+    Boolean(focused) && isPublication(focused!) && !owns(focused!.id);
+  const showMissingPreview = desktop && focusedMissing;
+
   const active =
-    ownedObjects.find((a) => a.id === activeId) ??
-    ownedExtras.find((a) => a.id === activeId) ??
+    (focused && owns(focused.id) ? focused : null) ??
+    (showMissingPreview ? focused : null) ??
     ownedObjects[0] ??
+    ownedExtras[0] ??
     null;
 
   useEffect(() => {
@@ -198,7 +219,17 @@ export function CollectionGrid({
       </header>
 
       <div className="collection__stage">
-        {active ? <OwnedObject artifact={active} /> : null}
+        {active ? (
+          showMissingPreview ? (
+            <FeaturedObject
+              artifact={active}
+              variant="missing"
+              showLogout
+            />
+          ) : (
+            <OwnedObject artifact={active} />
+          )
+        ) : null}
       </div>
 
       <div className="collection__shelf-block">
@@ -222,7 +253,8 @@ export function CollectionGrid({
           <ul className="collection-shelf">
             {shelfObjects.map((artifact) => {
               const held = owns(artifact.id);
-              const selected = held && active?.id === artifact.id;
+              const selected =
+                active?.id === artifact.id && (held || (desktop && !held));
               return (
                 <li key={artifact.id} className="collection-shelf__item">
                   <button
@@ -239,13 +271,11 @@ export function CollectionGrid({
                             .replace("{title}", artifact.title)
                     }
                     onClick={() => {
-                      if (held) {
-                        onSelect(artifact);
-                        return;
-                      }
-                      /* Missing slot → Gallery so GET is one click away. */
                       onSelect(artifact);
-                      setMode("gallery");
+                      /* Mobile missing → Gallery; desktop stays in Collection. */
+                      if (!held && !window.matchMedia(DESKTOP_MQ).matches) {
+                        setMode("gallery");
+                      }
                     }}
                   >
                     <span className="shelf-card__frame">
