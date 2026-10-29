@@ -75,6 +75,7 @@ html[data-view="schema"] {
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 /* Entry — Durarara-style: living ring holds, then overlay lifts */
@@ -348,28 +349,22 @@ html[data-view="collection"] .label-header::before {
   pointer-events: none;
 }
 
-/* Desktop — tab-bar foot: grey plate curves into the white page */
+/* Desktop — grey plate inset L/R (no full-bleed), curves into the white page */
 @media (min-width: 901px) {
   .label-header {
     background: transparent;
-    padding: 0.55rem 0 0.85rem;
-    margin-bottom: 1.15rem;
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.35rem;
   }
 
   html[data-view="gallery"] .label-header::before,
   html[data-view="collection"] .label-header::before {
+    /* Stay inside .shell — white page shows as side recess */
+    inset: 0;
     border-radius: 0 0 28px 28px;
     box-shadow:
       0 1px 0 rgba(255, 255, 255, 0.65) inset,
       0 10px 24px rgba(0, 0, 0, 0.05);
-  }
-
-  .label-header__row {
-    min-height: 88px;
-  }
-
-  .label-header__accents {
-    top: calc(50% - 2rem);
   }
 }
 
@@ -4024,8 +4019,39 @@ html[data-view="schema"] .release-slot__more {
   border-color: #000;
 }
 
-.collection--locked .collection__shelf-block {
-  margin-top: 1.5rem;
+/* Locked Collection — same shelf rhythm as logged-in; no left-anchored gate stack */
+.collection--locked .collection__shelf-block--locked {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.collection--locked .collection__section-head--shelf {
+  align-items: flex-end;
+  margin-bottom: 1.25rem;
+}
+
+.collection--locked .collection__gate {
+  margin-top: 0;
+  align-self: flex-end;
+  flex-shrink: 0;
+  padding: 7px 14px;
+  border: 1px solid #d0d0d0;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.collection--locked .collection__gate:hover {
+  border-color: #111;
+  color: #111;
+}
+
+@media (min-width: 901px) {
+  .collection--locked .collection-shelf {
+    /* Same breathing room as Releases hang pills — avoids left clip / shift */
+    padding-inline: 0.15rem;
+  }
 }
 
 .extra-card__meta {

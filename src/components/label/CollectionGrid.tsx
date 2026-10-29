@@ -88,21 +88,23 @@ export function CollectionGrid({
         className="collection collection--library collection--locked"
         aria-labelledby="collection-title"
       >
-        <header className="collection__head">
-          <p className="collection__kicker">{t("collection.locked")}</p>
-          <h1 id="collection-title" className="collection__title">
-            <span className="collection__title-main">{t("collection.yours")}</span>
-            <span className="collection__title-count">
-              {`: ${objectCount} ${t("objects").toUpperCase()}`}
-            </span>
-          </h1>
-          <p className="collection__meta">{t("collection.lockedMeta")}</p>
-          <button type="button" className="collection__gate" onClick={unlock}>
-            {t("logIn")} →
-          </button>
-        </header>
+        <div className="collection__shelf-block collection__shelf-block--locked">
+          <header className="collection__section-head collection__section-head--shelf">
+            <div className="collection__intro">
+              <p className="collection__kicker">{t("collection.locked")}</p>
+              <h1 id="collection-title" className="collection__title">
+                <span className="collection__title-main">{t("collection.yours")}</span>
+                <span className="collection__title-count">
+                  {`: ${objectCount} ${t("objects").toUpperCase()}`}
+                </span>
+              </h1>
+              <p className="collection__meta">{t("collection.lockedMeta")}</p>
+            </div>
+            <button type="button" className="collection__gate" onClick={unlock}>
+              {t("logIn")} →
+            </button>
+          </header>
 
-        <div className="collection__shelf-block">
           <ul className="collection-shelf">
             {lockedObjects.map((artifact) => (
               <li key={artifact.id} className="collection-shelf__item">
