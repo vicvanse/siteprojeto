@@ -188,13 +188,20 @@ export function CollectionGrid({
 
   return (
     <section className="collection collection--library" aria-labelledby="collection-title">
-      <header className="collection__section-head collection__section-head--shelf collection__section-head--above-stage">
+      <header className="collection__section-head collection__section-head--above-stage">
         <h1 id="collection-title" className="collection__title">
           <span className="collection__title-main">{t("collection.yours")}</span>
           <span className="collection__title-count">
             {`: ${objectCount} ${t("objects").toUpperCase()}`}
           </span>
         </h1>
+      </header>
+
+      <div className="collection__stage">
+        {active ? <OwnedObject artifact={active} /> : null}
+      </div>
+
+      <div className="collection__shelf-block">
         <nav className="collection__filters" aria-label={t("collection.filters")}>
           {FILTERS.map((f) => (
             <button
@@ -208,13 +215,7 @@ export function CollectionGrid({
             </button>
           ))}
         </nav>
-      </header>
 
-      <div className="collection__stage">
-        {active ? <OwnedObject artifact={active} /> : null}
-      </div>
-
-      <div className="collection__shelf-block">
         {shelfObjects.length === 0 ? (
           <p className="collection__empty">{t("collection.emptyFilter")}</p>
         ) : (
