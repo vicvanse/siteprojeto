@@ -352,8 +352,8 @@ html[data-view="collection"] .label-header::before {
 @media (min-width: 901px) {
   .label-header {
     background: transparent;
-    padding-bottom: 1.25rem;
-    margin-bottom: 1.35rem;
+    padding: 0.55rem 0 0.85rem;
+    margin-bottom: 1.15rem;
   }
 
   html[data-view="gallery"] .label-header::before,
@@ -362,6 +362,14 @@ html[data-view="collection"] .label-header::before {
     box-shadow:
       0 1px 0 rgba(255, 255, 255, 0.65) inset,
       0 10px 24px rgba(0, 0, 0, 0.05);
+  }
+
+  .label-header__row {
+    min-height: 88px;
+  }
+
+  .label-header__accents {
+    top: calc(50% - 2rem);
   }
 }
 
@@ -3991,6 +3999,33 @@ html[data-view="schema"] .release-slot__more {
   box-shadow:
     0 0 0 1.5px var(--ink),
     var(--shadow-soft);
+}
+
+/* Locked / inactive extras — same black + B&W language as missing shelf */
+.extra-card--missing .extra-card__frame {
+  background: #1a1a1a;
+  border-color: #111;
+  box-shadow: none;
+}
+
+.extra-card--missing .extra-card__mount .artwork,
+.extra-card--missing .extra-card__mount .artwork__cover {
+  filter: grayscale(1) contrast(1.08) brightness(0.78);
+}
+
+.extra-card--missing .extra-card__id,
+.extra-card--missing .extra-card__name,
+.extra-card--missing .extra-card__dl {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.extra-card--missing:hover .extra-card__frame,
+.extra-card--missing:focus-visible .extra-card__frame {
+  border-color: #000;
+}
+
+.collection--locked .collection__shelf-block {
+  margin-top: 1.5rem;
 }
 
 .extra-card__meta {

@@ -77,22 +77,106 @@ export function CollectionGrid({
   }, [authenticated, active, activeId, onSelect]);
 
   if (!authenticated) {
+    const lockedObjects = [...publications].sort(byNumberDesc);
+    const lockedExtras = extras.filter((a) => isExtra(a));
+    const objectCount = String(lockedObjects.length).padStart(2, "0");
+    const extraCount = String(lockedExtras.length).padStart(2, "0");
+    const unlock = () => openOverlay("form");
+
     return (
-      <section className="collection" aria-labelledby="collection-title">
+      <section
+        className="collection collection--library collection--locked"
+        aria-labelledby="collection-title"
+      >
         <header className="collection__head">
-          <p className="collection__kicker">{t("collection.yours")}</p>
+          <p className="collection__kicker">{t("collection.locked")}</p>
           <h1 id="collection-title" className="collection__title">
-            {t("collection")}
+            <span className="collection__title-main">{t("collection.yours")}</span>
+            <span className="collection__title-count">
+              {`: ${objectCount} ${t("objects").toUpperCase()}`}
+            </span>
           </h1>
           <p className="collection__meta">{t("collection.lockedMeta")}</p>
-          <button
-            type="button"
-            className="collection__gate"
-            onClick={() => openOverlay("form")}
-          >
+          <button type="button" className="collection__gate" onClick={unlock}>
             {t("logIn")} →
           </button>
         </header>
+
+        <div className="collection__shelf-block">
+          <ul className="collection-shelf">
+            {lockedObjects.map((artifact) => (
+              <li key={artifact.id} className="collection-shelf__item">
+                <button
+                  type="button"
+                  className="shelf-card shelf-card--missing"
+                  aria-label={t("collection.missingObject")
+                    .replace("{number}", artifact.number)
+                    .replace("{title}", artifact.title)}
+                  onClick={unlock}
+                >
+                  <span className="shelf-card__frame">
+                    <span className="shelf-card__shell">
+                      <span className="shelf-card__well">
+                        <span className="shelf-card__mount">
+                          <ArtworkCover artifact={artifact} size="release" />
+                        </span>
+                      </span>
+                      <span className="shelf-card__badge">{artifact.number}</span>
+                    </span>
+                    <span className="shelf-card__hang">
+                      <span className="shelf-card__name">{artifact.title}</span>
+                      <span className="shelf-card__kind">
+                        {t("collection.locked")}
+                      </span>
+                    </span>
+                  </span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {lockedExtras.length > 0 ? (
+          <div className="collection__extras-block">
+            <header className="collection__section-head">
+              <h2 className="collection__section-title">
+                {t("collection.extras")} / {extraCount}
+              </h2>
+            </header>
+            <ul className="extras-shelf">
+              {lockedExtras.map((artifact, index) => (
+                <li
+                  key={artifact.id}
+                  className={`extras-shelf__item extras-shelf__item--${(index % 3) + 1}`}
+                >
+                  <button
+                    type="button"
+                    className="extra-card extra-card--missing"
+                    onClick={unlock}
+                  >
+                    <span className="extra-card__frame">
+                      <span className="extra-card__shell">
+                        <span className="extra-card__well">
+                          <span className="extra-card__mount">
+                            <ArtworkCover artifact={artifact} size="release" />
+                          </span>
+                        </span>
+                        <span className="extra-card__badge">{artifact.number}</span>
+                      </span>
+                    </span>
+                    <span className="extra-card__meta">
+                      <span className="extra-card__id">
+                        {t("collection.banner")} {artifact.number}
+                      </span>
+                      <span className="extra-card__name">{artifact.title}</span>
+                      <span className="extra-card__dl">{t("collection.locked")}</span>
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
       </section>
     );
   }
