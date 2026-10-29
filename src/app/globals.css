@@ -306,6 +306,22 @@ button {
   min-height: calc(100vh - 140px);
 }
 
+/* Booklet preview — break out of gallery column, quieter chrome */
+body:has(.booklet-route) .shell {
+  width: 100%;
+  max-width: none;
+  padding: 0 0 2.5rem;
+}
+
+body:has(.booklet-route) .label-header {
+  margin-bottom: 0.65rem;
+  padding-block: 0.7rem 0.75rem;
+}
+
+body:has(.booklet-route) .shell__main {
+  min-height: 0;
+}
+
 /* ── Header — Progress-in-the-app stack language ───────────── */
 
 .label-header {
@@ -1447,6 +1463,7 @@ html[data-view="schema"] .view-pill:hover:not(.view-pill--active) {
 }
 
 .viewport__panel {
+  position: relative;
   width: fit-content;
   max-width: 100%;
   margin-inline: auto;
@@ -1722,6 +1739,85 @@ html[data-view="schema"] .object-stack__desc {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+}
+
+/* Papers ↔ Vekon manifestations — annotation, not entitlement */
+.manifestations {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.15rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--line-soft);
+}
+
+.manifestations__label {
+  margin: 0 0 0.1rem;
+  font-family: var(--font-mono), ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.manifestations__row {
+  display: grid;
+  grid-template-columns: 4.2rem minmax(0, 1fr) auto;
+  gap: 0.45rem 0.65rem;
+  align-items: baseline;
+  font-family: var(--font-mono), ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.manifestations__channel {
+  color: var(--muted);
+}
+
+.manifestations__item {
+  color: var(--ink);
+}
+
+.manifestations__meta {
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+.manifestations__note {
+  margin: 0.25rem 0 0;
+  font-size: 0.66rem;
+  font-style: italic;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+html[data-view="schema"] .manifestations__note {
+  color: var(--ink-soft);
+}
+
+.related-manifestation {
+  margin-top: 0.15rem;
+  padding-top: 0.55rem;
+  border-top: 1px solid var(--line-soft);
+}
+
+.related-manifestation__kicker {
+  margin: 0 0 0.2rem;
+  font-family: var(--font-mono), ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.related-manifestation__line {
+  margin: 0;
+  font-family: var(--font-mono), ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2131,6 +2227,28 @@ html[data-view="schema"] .artwork__cover {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
 }
 
+/* Field guides — dark Vekon mark (Papers keeps the cream glyph) */
+.artwork__kind-mark {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.artwork__kind-mark img {
+  width: 22px;
+  height: 22px;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  object-fit: cover;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.artwork__kind-mark .artwork__code {
+  position: static;
+}
+
 .artwork__glyph {
   position: relative;
   z-index: 2;
@@ -2348,6 +2466,27 @@ html[data-view="schema"] .vekon-mark__caption-line--soft {
   padding-top: 1.15rem;
   border-top: 1px solid var(--line-soft);
   padding-bottom: 2rem;
+}
+
+/* Desktop — white panel enclosing the whole releases block */
+@media (min-width: 901px) {
+  .releases {
+    margin-top: 2.5rem;
+    padding: 1.35rem 1.35rem 1.6rem;
+    border: 1px solid #d8d8d8;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.65),
+      0 1px 0 #e0e0e0,
+      0 10px 22px rgba(0, 0, 0, 0.05);
+  }
+
+  html[data-view="schema"] .releases {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px dashed var(--line-strong);
+    box-shadow: none;
+  }
 }
 
 .releases__head {
@@ -3070,6 +3209,7 @@ html[data-view="schema"] .release-slot__more {
   position: relative;
 }
 
+/* Anchored to the grey object panel — top-right on desktop */
 .collection__logout {
   position: absolute;
   top: 0.85rem;
@@ -3098,9 +3238,10 @@ html[data-view="schema"] .release-slot__more {
   background: #f7f7f7;
 }
 
-/* Desktop — same conquest plate as the title container */
 @media (min-width: 901px) {
   .collection__logout {
+    top: 1rem;
+    right: 1rem;
     border-color: var(--conquest-fill-ring, #262626);
     background: var(--conquest-fill, #525252);
     color: #ffffff;
@@ -3289,6 +3430,7 @@ html[data-view="schema"] .release-slot__more {
 
 .shelf-card__mount .artwork__veil,
 .shelf-card__mount .artwork__code,
+.shelf-card__mount .artwork__kind-mark,
 .shelf-card__mount .artwork__avatar,
 .shelf-card__mount .artwork__glyph {
   display: none !important;
@@ -3431,30 +3573,40 @@ html[data-view="schema"] .release-slot__more {
   color: rgba(255, 255, 255, 0.72);
 }
 
-/* Unowned — B/W + muted grey (mobile people card) */
+/* Unowned — dark moldura + B/W art (mobile people card) */
 .shelf-card--missing {
-  background: #ffffff;
-  border-color: #cfcfcf;
-  color: #444;
-  opacity: 0.92;
+  background: #2a2a2a;
+  border-color: #1a1a1a;
+  color: #f0f0f0;
+  opacity: 1;
+  box-shadow:
+    0 var(--shelf-extrude) 0 0 #1f1f1f,
+    var(--shelf-extrude) 0 0 0 #181818,
+    var(--shelf-extrude) var(--shelf-extrude) 0 0 #111,
+    1px 2px 5px rgba(0, 0, 0, 0.28);
+}
+
+.shelf-card--missing .shelf-card__mount {
+  border-color: #3a3a3a;
+  background: #1a1a1a;
 }
 
 .shelf-card--missing .shelf-card__mount .artwork,
 .shelf-card--missing .shelf-card__mount .artwork__cover {
-  filter: grayscale(1) contrast(1.05) brightness(0.92);
+  filter: grayscale(1) contrast(1.05) brightness(0.78);
 }
 
 .shelf-card--missing .shelf-card__name,
 .shelf-card--missing .shelf-card__kind,
 .shelf-card--missing .shelf-card__badge {
-  color: #555;
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .shelf-card--missing:hover,
 .shelf-card--missing:focus-visible {
-  background-color: #333;
+  background-color: #1f1f1f;
   background-image: none;
-  border-color: #222;
+  border-color: #111;
   color: #fff;
   opacity: 1;
 }
@@ -3465,7 +3617,7 @@ html[data-view="schema"] .release-slot__more {
 .shelf-card--missing:focus-visible .shelf-card__kind,
 .shelf-card--missing:hover .shelf-card__badge,
 .shelf-card--missing:focus-visible .shelf-card__badge {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.92);
 }
 
 /* Desktop only — same museum moldura as Releases */
@@ -3672,76 +3824,77 @@ html[data-view="schema"] .release-slot__more {
     color: #555;
   }
 
-  /* Unowned — grey moldura + B/W art */
+  /* Unowned — dark moldura + B/W art */
   .shelf-card--missing {
     background: transparent;
     border: none;
-    color: #111;
+    color: #f0f0f0;
     opacity: 1;
+    box-shadow: none;
   }
 
   .shelf-card--missing .shelf-card__shell {
-    background: #e8e8e8;
-    border-color: #c8c8c8;
+    background: #2a2a2a;
+    border-color: #1a1a1a;
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.55),
-      0 1px 0 #d0d0d0,
-      1px 0 0 #c4c4c4,
-      1px 1px 0 #b8b8b8,
-      0 8px 16px rgba(0, 0, 0, 0.05);
+      inset 0 1px 0 rgba(255, 255, 255, 0.06),
+      0 1px 0 #1f1f1f,
+      1px 0 0 #181818,
+      1px 1px 0 #111,
+      0 8px 16px rgba(0, 0, 0, 0.22);
   }
 
   .shelf-card--missing .shelf-card__well {
-    background: #dedede;
-    border-color: #cfcfcf;
+    background: #222;
+    border-color: #1a1a1a;
   }
 
   .shelf-card--missing .shelf-card__mount {
-    background: #2a2a2a;
-    border-color: #bdbdbd;
+    background: #141414;
+    border-color: #3a3a3a;
   }
 
   .shelf-card--missing .shelf-card__mount .artwork,
   .shelf-card--missing .shelf-card__mount .artwork__cover {
-    filter: grayscale(1) contrast(1.08) brightness(0.9);
+    filter: grayscale(1) contrast(1.08) brightness(0.78);
   }
 
   .shelf-card--missing .shelf-card__badge {
-    background: #6a6a6a;
-    color: #fafaf8;
+    background: #111;
+    color: rgba(255, 255, 255, 0.75);
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.12),
-      0 2px 0 0 #4a4a4a;
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 2px 0 0 #000;
   }
 
   .shelf-card--missing .shelf-card__hang {
-    background: #f3f3f3;
-    border-color: #d0d0d0;
+    background: #222;
+    border-color: #1a1a1a;
   }
 
   .shelf-card--missing .shelf-card__name,
   .shelf-card--missing .shelf-card__kind {
-    color: #666;
+    color: rgba(255, 255, 255, 0.72);
   }
 
   .shelf-card--missing:hover,
   .shelf-card--missing:focus-visible {
     background: transparent;
     border: none;
-    color: #111;
+    color: #fff;
     opacity: 1;
   }
 
   .shelf-card--missing:hover .shelf-card__shell,
   .shelf-card--missing:focus-visible .shelf-card__shell {
-    filter: brightness(0.97);
+    filter: brightness(1.08);
   }
 
   .shelf-card--missing:hover .shelf-card__name,
   .shelf-card--missing:focus-visible .shelf-card__name,
   .shelf-card--missing:hover .shelf-card__kind,
   .shelf-card--missing:focus-visible .shelf-card__kind {
-    color: #666;
+    color: rgba(255, 255, 255, 0.92);
   }
 
   .shelf-card--missing:hover .shelf-card__badge,
@@ -3753,6 +3906,7 @@ html[data-view="schema"] .release-slot__more {
 /* No reflective veil / kind code on Collection extras banners */
 .extra-card__mount .artwork__veil,
 .extra-card__mount .artwork__code,
+.extra-card__mount .artwork__kind-mark,
 .extra-card__mount .artwork__avatar,
 .extra-card__mount .artwork__glyph {
   display: none;

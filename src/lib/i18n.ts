@@ -129,6 +129,14 @@ export type MessageKey =
   | "edition.languages"
   | "edition.references"
   | "edition.note"
+  | "manifestations"
+  | "manifestations.papers"
+  | "manifestations.vekon"
+  | "manifestations.pdfBooklet"
+  | "manifestations.bannerCosmetic"
+  | "manifestations.purchaseNote"
+  | "manifestations.related"
+  | "manifestations.alsoInVekon"
   | "papersKind"
   | "lifeKind"
   | "tagline"
@@ -208,6 +216,15 @@ const en: Dictionary = {
   "edition.references": "References marked",
   "edition.note":
     "Colour or black and white PDF, in multiple languages, with sources clearly marked. Read on screen or print. For personal use, please don't resell.",
+  manifestations: "Manifestations",
+  "manifestations.papers": "Papers",
+  "manifestations.vekon": "Vekon",
+  "manifestations.pdfBooklet": "PDF booklet",
+  "manifestations.bannerCosmetic": "Cosmetic",
+  "manifestations.purchaseNote":
+    "Purchase here includes the Papers edition only. The banner is available separately in Vekon.",
+  "manifestations.related": "Related manifestation",
+  "manifestations.alsoInVekon": "Also exists in Vekon",
   papersKind: "texts",
   lifeKind: "a diary app",
   tagline: "a Vekon project",
@@ -295,6 +312,15 @@ const pt: Dictionary = {
   "edition.references": "Referências indicadas",
   "edition.note":
     "PDF em cor ou preto e branco, em vários idiomas, com referências bem marcadas. Leia na tela ou imprima. Para uso pessoal — por favor, não revenda.",
+  manifestations: "Manifestações",
+  "manifestations.papers": "Papers",
+  "manifestations.vekon": "Vekon",
+  "manifestations.pdfBooklet": "Booklet PDF",
+  "manifestations.bannerCosmetic": "Cosmético",
+  "manifestations.purchaseNote":
+    "A compra no site inclui apenas o PDF. O banner está disponível separadamente no Vekon.",
+  "manifestations.related": "Manifestação relacionada",
+  "manifestations.alsoInVekon": "Também existe no Vekon",
   papersKind: "textos",
   lifeKind: "um app de diário",
   tagline: "um projeto Vekon",
@@ -339,6 +365,15 @@ const es: Dictionary = {
   "edition.references": "Referencias marcadas",
   "edition.note":
     "Léelo en pantalla, o imprímelo al 100% y dóblalo. Para uso personal — por favor, no lo revendás.",
+  manifestations: "Manifestations",
+  "manifestations.papers": "Papers",
+  "manifestations.vekon": "Vekon",
+  "manifestations.pdfBooklet": "PDF booklet",
+  "manifestations.bannerCosmetic": "Cosmetic",
+  "manifestations.purchaseNote":
+    "Purchase here includes the Papers edition only. The banner is available separately in Vekon.",
+  "manifestations.related": "Related manifestation",
+  "manifestations.alsoInVekon": "Also exists in Vekon",
   papersKind: "textos",
   lifeKind: "una app de diario",
   tagline: "un proyecto Vekon",
@@ -383,6 +418,15 @@ const de: Dictionary = {
   "edition.references": "Quellen markiert",
   "edition.note":
     "Am Bildschirm lesen oder zu 100 % drucken und falten. Nur für den persönlichen Gebrauch — bitte nicht weiterverkaufen.",
+  manifestations: "Manifestations",
+  "manifestations.papers": "Papers",
+  "manifestations.vekon": "Vekon",
+  "manifestations.pdfBooklet": "PDF booklet",
+  "manifestations.bannerCosmetic": "Cosmetic",
+  "manifestations.purchaseNote":
+    "Purchase here includes the Papers edition only. The banner is available separately in Vekon.",
+  "manifestations.related": "Related manifestation",
+  "manifestations.alsoInVekon": "Also exists in Vekon",
   papersKind: "Texte",
   lifeKind: "eine Tagebuch-App",
   tagline: "ein Vekon-Projekt",
@@ -427,6 +471,15 @@ const fr: Dictionary = {
   "edition.references": "Références indiquées",
   "edition.note":
     "Lisez à l’écran, ou imprimez à 100 % et pliez. Usage personnel — merci de ne pas revendre.",
+  manifestations: "Manifestations",
+  "manifestations.papers": "Papers",
+  "manifestations.vekon": "Vekon",
+  "manifestations.pdfBooklet": "PDF booklet",
+  "manifestations.bannerCosmetic": "Cosmetic",
+  "manifestations.purchaseNote":
+    "Purchase here includes the Papers edition only. The banner is available separately in Vekon.",
+  "manifestations.related": "Related manifestation",
+  "manifestations.alsoInVekon": "Also exists in Vekon",
   papersKind: "textes",
   lifeKind: "une app de journal",
   tagline: "un projet Vekon",
@@ -471,6 +524,15 @@ const it: Dictionary = {
   "edition.references": "Riferimenti indicati",
   "edition.note":
     "Leggilo a schermo, o stampalo al 100% e piegalo. Per uso personale — per favore non rivenderlo.",
+  manifestations: "Manifestations",
+  "manifestations.papers": "Papers",
+  "manifestations.vekon": "Vekon",
+  "manifestations.pdfBooklet": "PDF booklet",
+  "manifestations.bannerCosmetic": "Cosmetic",
+  "manifestations.purchaseNote":
+    "Purchase here includes the Papers edition only. The banner is available separately in Vekon.",
+  "manifestations.related": "Related manifestation",
+  "manifestations.alsoInVekon": "Also exists in Vekon",
   papersKind: "testi",
   lifeKind: "un'app diario",
   tagline: "un progetto Vekon",
@@ -515,6 +577,15 @@ const ja: Dictionary = {
   "edition.references": "出典を明記",
   "edition.note":
     "画面で読むか、100%で印刷して折ってください。個人利用のみ — 転売しないでください。",
+  manifestations: "Manifestations",
+  "manifestations.papers": "Papers",
+  "manifestations.vekon": "Vekon",
+  "manifestations.pdfBooklet": "PDF booklet",
+  "manifestations.bannerCosmetic": "Cosmetic",
+  "manifestations.purchaseNote":
+    "Purchase here includes the Papers edition only. The banner is available separately in Vekon.",
+  "manifestations.related": "Related manifestation",
+  "manifestations.alsoInVekon": "Also exists in Vekon",
   papersKind: "テキスト",
   lifeKind: "日記アプリ",
   tagline: "Vekon プロジェクト",
@@ -559,6 +630,15 @@ const ko: Dictionary = {
   "edition.references": "참고 표시",
   "edition.note":
     "화면으로 읽거나 100%로 인쇄해 접으세요. 개인 사용만 — 재판매하지 마세요.",
+  manifestations: "Manifestations",
+  "manifestations.papers": "Papers",
+  "manifestations.vekon": "Vekon",
+  "manifestations.pdfBooklet": "PDF booklet",
+  "manifestations.bannerCosmetic": "Cosmetic",
+  "manifestations.purchaseNote":
+    "Purchase here includes the Papers edition only. The banner is available separately in Vekon.",
+  "manifestations.related": "Related manifestation",
+  "manifestations.alsoInVekon": "Also exists in Vekon",
   papersKind: "텍스트",
   lifeKind: "다이어리 앱",
   tagline: "Vekon 프로젝트",
@@ -603,6 +683,15 @@ const zhCN: Dictionary = {
   "edition.references": "标明出处",
   "edition.note":
     "可在屏幕阅读，或以 100% 打印后折叠。仅供个人使用 — 请勿转售。",
+  manifestations: "Manifestations",
+  "manifestations.papers": "Papers",
+  "manifestations.vekon": "Vekon",
+  "manifestations.pdfBooklet": "PDF booklet",
+  "manifestations.bannerCosmetic": "Cosmetic",
+  "manifestations.purchaseNote":
+    "Purchase here includes the Papers edition only. The banner is available separately in Vekon.",
+  "manifestations.related": "Related manifestation",
+  "manifestations.alsoInVekon": "Also exists in Vekon",
   papersKind: "文本",
   lifeKind: "日记应用",
   tagline: "Vekon 项目",
@@ -647,6 +736,15 @@ const zhTW: Dictionary = {
   "edition.references": "標明出處",
   "edition.note":
     "可在螢幕閱讀，或以 100% 列印後摺疊。僅供個人使用 — 請勿轉售。",
+  manifestations: "Manifestations",
+  "manifestations.papers": "Papers",
+  "manifestations.vekon": "Vekon",
+  "manifestations.pdfBooklet": "PDF booklet",
+  "manifestations.bannerCosmetic": "Cosmetic",
+  "manifestations.purchaseNote":
+    "Purchase here includes the Papers edition only. The banner is available separately in Vekon.",
+  "manifestations.related": "Related manifestation",
+  "manifestations.alsoInVekon": "Also exists in Vekon",
   papersKind: "文本",
   lifeKind: "日記應用",
   tagline: "Vekon 專案",

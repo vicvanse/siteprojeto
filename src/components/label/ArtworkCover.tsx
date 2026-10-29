@@ -11,10 +11,11 @@ type Props = {
  * Native <img> + pixelated rendering — Next/Image re-encode blurs pixel banners.
  */
 export function ArtworkCover({ artifact, size = "featured" }: Props) {
+  const isGuide = artifact.kind === "field-guide";
   const label =
     artifact.kind === "extra"
       ? "Banner"
-      : artifact.kind === "field-guide"
+      : isGuide
         ? "Guide"
         : artifact.kind === "essay"
           ? "Essay"
@@ -25,7 +26,7 @@ export function ArtworkCover({ artifact, size = "featured" }: Props) {
 
   return (
     <div
-      className={`artwork artwork--${size}${hasCover ? " artwork--media" : ""}`}
+      className={`artwork artwork--${size}${hasCover ? " artwork--media" : ""}${isGuide ? " artwork--guide" : ""}`}
       aria-hidden
     >
       {artifact.cover ? (
@@ -42,7 +43,22 @@ export function ArtworkCover({ artifact, size = "featured" }: Props) {
 
       <div className="artwork__veil" />
 
-      <span className="artwork__code">{label}</span>
+      {isGuide ? (
+        <span className="artwork__kind-mark">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/vekon-guides-icon.png"
+            alt=""
+            width={28}
+            height={28}
+            draggable={false}
+            decoding="async"
+          />
+          <span className="artwork__code">{label}</span>
+        </span>
+      ) : (
+        <span className="artwork__code">{label}</span>
+      )}
 
       {showAvatar ? (
         artifact.avatar ? (

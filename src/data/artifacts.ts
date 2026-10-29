@@ -13,6 +13,9 @@ export type ArtifactStatus = "available" | "free" | "incubating" | "archived";
 
 export type ArtifactLang = "en" | "pt" | "es" | "fr" | "de" | "it" | "ja" | "ko";
 
+/** How an OBJECT exists in Papers / Vekon — only set when not the default. */
+export type ArtifactManifestation = "pdf" | "banner";
+
 export type Artifact = {
   id: string;
   slug: string;
@@ -31,6 +34,16 @@ export type Artifact = {
   version?: string;
   /** Edition languages available for this object. */
   languages?: ArtifactLang[];
+  /**
+   * Explicit manifestations when not the default
+   * (publication → pdf, extra → banner).
+   */
+  manifestations?: ArtifactManifestation[];
+  /**
+   * Canonical Papers → Vekon link (publication only).
+   * Inverse: relatedPublication(banner).
+   */
+  relatedBannerId?: string;
   /** Banner used as cover art (temporary stand-in). */
   cover?: string;
   /** Avatar overlaid on cover (temporary stand-in). */
@@ -214,6 +227,8 @@ export const releaseArtifacts: Artifact[] = [
     releaseDate: "22.04.26",
     version: "1.0",
     languages: ["en"],
+    manifestations: ["pdf", "banner"],
+    relatedBannerId: "b004",
     description:
       "Sunset field notes with three subjects who refuse to pose. Twelve pages on distance, muscle, and the color the grass becomes when the day finally gives up. A study that keeps circling the same fence.",
     cover: "/covers/009-pasture.gif",
@@ -288,6 +303,38 @@ export function isPublication(artifact: Artifact) {
 
 export function isExtra(artifact: Artifact) {
   return artifact.kind === "extra";
+}
+
+/** Default: publication → pdf; banner/extra → banner. Override via `manifestations`. */
+export function effectiveManifestations(
+  artifact: Artifact,
+): ArtifactManifestation[] {
+  if (artifact.manifestations?.length) return artifact.manifestations;
+  return isExtra(artifact) ? ["banner"] : ["pdf"];
+}
+
+export function hasManifestation(
+  artifact: Artifact,
+  kind: ArtifactManifestation,
+) {
+  return effectiveManifestations(artifact).includes(kind);
+}
+
+/** Publication → linked Vekon banner (canonical relatedBannerId). */
+export function relatedBanner(
+  artifact: Artifact,
+  extras: Artifact[] = extraArtifacts,
+): Artifact | undefined {
+  if (!artifact.relatedBannerId) return undefined;
+  return extras.find((e) => e.id === artifact.relatedBannerId);
+}
+
+/** Banner → publication that points at it (inverse of relatedBannerId). */
+export function relatedPublication(
+  banner: Artifact,
+  publications: Artifact[] = catalogArtifacts,
+): Artifact | undefined {
+  return publications.find((p) => p.relatedBannerId === banner.id);
 }
 
 /** Highest object number — default featured on open. */

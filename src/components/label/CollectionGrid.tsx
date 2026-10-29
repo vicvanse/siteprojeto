@@ -36,7 +36,7 @@ export function CollectionGrid({
   activeId,
   onSelect,
 }: Props) {
-  const { authenticated, owns, email, openOverlay, signOut } = useAccess();
+  const { authenticated, owns, openOverlay } = useAccess();
   const { t } = useLanguage();
   const { setMode } = useViewMode();
   const [filter, setFilter] = useState<Filter>("all");
@@ -56,12 +56,14 @@ export function CollectionGrid({
     [extras, owns],
   );
 
-  /* Filter pool in number desc (owned color / missing B&W stay in place). */
+  /* Owned first (number desc), missing last (number desc). */
   const shelfObjects = useMemo(() => {
     const pool =
       filter === "all" ? publications : publications.filter((a) => a.kind === filter);
-    return [...pool].sort(byNumberDesc);
-  }, [publications, filter]);
+    const held = pool.filter((a) => owns(a.id)).sort(byNumberDesc);
+    const missing = pool.filter((a) => !owns(a.id)).sort(byNumberDesc);
+    return [...held, ...missing];
+  }, [publications, filter, owns]);
 
   const active =
     ownedObjects.find((a) => a.id === activeId) ??
@@ -101,14 +103,6 @@ export function CollectionGrid({
   return (
     <section className="collection collection--library" aria-labelledby="collection-title">
       <div className="collection__stage">
-        <button
-          type="button"
-          className="collection__logout"
-          title={email ?? undefined}
-          onClick={() => void signOut()}
-        >
-          {t("collection.logOut")}
-        </button>
         {active ? <OwnedObject artifact={active} /> : null}
       </div>
 

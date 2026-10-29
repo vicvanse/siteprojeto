@@ -6,6 +6,7 @@ import {
   downloadActionLabel,
   kindLabel,
   openActionLabel,
+  relatedBanner,
 } from "@/data/artifacts";
 import { useAccess } from "@/components/AccessProvider";
 import { useLanguage } from "@/components/LanguageProvider";
@@ -39,7 +40,7 @@ function editionLangs(artifact: Artifact): ArtifactLang[] {
  * OPEN primary, DOWNLOAD secondary; OWNED + copy sheet instead of GET/price.
  */
 export function OwnedObject({ artifact }: Props) {
-  const { email } = useAccess();
+  const { email, signOut } = useAccess();
   const { t } = useLanguage();
   const titleRef = useRef<HTMLDivElement>(null);
   const [titleH, setTitleH] = useState(0);
@@ -49,6 +50,10 @@ export function OwnedObject({ artifact }: Props) {
   const description = descKey ? t(descKey) : artifact.description;
   const copy = personalCopy(email ?? "guest", artifact.id, artifact.version ?? "1.0");
   const isExtra = artifact.kind === "extra";
+  const linkedBanner = !isExtra ? relatedBanner(artifact) : undefined;
+  const relatedBannerLine = linkedBanner
+    ? `${t("manifestations.vekon")} · ${linkedBanner.title.split(/\s*\/\s*/)[0]!.trim()} · Banner`
+    : null;
   const ownedStamp = `${t("collection.owned")} / ${formatAcquiredStamp(copy.acquired)}`;
   const plaques = isExtra
     ? [artifact.format ?? "PNG", `BANNER / ${artifact.number}`, ownedStamp]
@@ -76,6 +81,14 @@ export function OwnedObject({ artifact }: Props) {
   return (
     <section id="viewport" className="viewport viewport--owned" aria-labelledby="owned-title">
       <div className="viewport__panel">
+        <button
+          type="button"
+          className="collection__logout"
+          title={email ?? undefined}
+          onClick={() => void signOut()}
+        >
+          {t("collection.logOut")}
+        </button>
         <p className="viewport__id">
           <span className="object-id-pill">
             {isExtra ? t("collection.banner") : t("object")} / {artifact.number}
@@ -152,6 +165,15 @@ export function OwnedObject({ artifact }: Props) {
                       </button>
                     ))}
                   </div>
+                </div>
+              ) : null}
+
+              {relatedBannerLine ? (
+                <div className="related-manifestation">
+                  <p className="related-manifestation__kicker">
+                    {t("manifestations.related")}
+                  </p>
+                  <p className="related-manifestation__line">{relatedBannerLine}</p>
                 </div>
               ) : null}
 

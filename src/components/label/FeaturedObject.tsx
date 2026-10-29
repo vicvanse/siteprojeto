@@ -2,7 +2,11 @@
 
 import { useLayoutEffect, useRef, useState, type CSSProperties } from "react";
 import type { Artifact, ArtifactLang } from "@/data/artifacts";
-import { formatPrice } from "@/data/artifacts";
+import {
+  formatPrice,
+  hasManifestation,
+  relatedBanner,
+} from "@/data/artifacts";
 import { useLanguage } from "@/components/LanguageProvider";
 import { artifactDescriptionKey, type MessageKey } from "@/lib/i18n";
 import { ArtifactFrame } from "./ArtifactFrame";
@@ -39,6 +43,12 @@ export function FeaturedObject({ artifact }: Props) {
   const description = descKey ? t(descKey) : artifact.description;
   const langs = artifact.languages?.length ? artifact.languages : (["en"] as ArtifactLang[]);
   const languagePill = `${t("edition.languages")} · ${langs.map((l) => LANG_LABEL[l]).join(" · ")}`;
+  const banner = relatedBanner(artifact);
+  const showVekonManifestation =
+    hasManifestation(artifact, "banner") && Boolean(banner);
+  const bannerLabel = banner
+    ? `${banner.title.split(/\s*\/\s*/)[0]!.trim()} BANNER`
+    : "";
   const plaques = [
     `PDF`,
     `${String(artifact.pages ?? 0).padStart(2, "0")} ${t("pages")}`,
@@ -111,6 +121,39 @@ export function FeaturedObject({ artifact }: Props) {
                   {t("get")}
                 </button>
               </div>
+
+              {showVekonManifestation ? (
+                <div
+                  className="manifestations"
+                  role="group"
+                  aria-label={t("manifestations")}
+                >
+                  <p className="manifestations__label">{t("manifestations")}</p>
+                  <div className="manifestations__row">
+                    <span className="manifestations__channel">
+                      {t("manifestations.papers")}
+                    </span>
+                    <span className="manifestations__item">
+                      {t("manifestations.pdfBooklet")}
+                    </span>
+                    <span className="manifestations__meta">
+                      {artifact.pages ?? 0} {t("pages").toLowerCase()}
+                    </span>
+                  </div>
+                  <div className="manifestations__row">
+                    <span className="manifestations__channel">
+                      {t("manifestations.vekon")}
+                    </span>
+                    <span className="manifestations__item">{bannerLabel}</span>
+                    <span className="manifestations__meta">
+                      {t("manifestations.bannerCosmetic")}
+                    </span>
+                  </div>
+                  <p className="manifestations__note">
+                    {t("manifestations.purchaseNote")}
+                  </p>
+                </div>
+              ) : null}
 
               <div className="edition-pills" role="group" aria-label={t("editions")}>
                 {EDITION_KEYS.map((key) => (
