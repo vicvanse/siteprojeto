@@ -1,17 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { LivingRingMark } from "@/components/label/LivingRingMark";
 
 /**
  * Page enter — Durarara-style hold: mark fades in, rests, overlay lifts.
- * Living ring is the mark (no word roulette).
+ * Starts in "play" so the cover is present on first paint (no site flash).
  */
 export function SiteIntro() {
-  const [phase, setPhase] = useState<"boot" | "play" | "done">("boot");
+  const [phase, setPhase] = useState<"play" | "done">("play");
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduced) {
       setPhase("done");
@@ -22,21 +22,16 @@ export function SiteIntro() {
     const finish = () => {
       if (finished) return;
       finished = true;
-      document.body.style.overflow = "";
       setPhase("done");
     };
 
-    setPhase("play");
-    document.body.style.overflow = "hidden";
-
-    /* Fade in ~0.45s + hold ~1s + exit starts — total ~1.82s before gone (70%) */
+    /* Fade in ~0.45s + hold ~1s + exit starts — total ~1.82s before gone */
     const doneAt = window.setTimeout(finish, 1820);
     const safetyAt = window.setTimeout(finish, 3500);
 
     return () => {
       window.clearTimeout(doneAt);
       window.clearTimeout(safetyAt);
-      document.body.style.overflow = "";
     };
   }, []);
 

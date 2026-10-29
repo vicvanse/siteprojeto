@@ -91,6 +91,11 @@ html {
   pointer-events: none;
 }
 
+/* Cover locks scroll while present (no JS body.style flash) */
+body:has(.site-intro) {
+  overflow: hidden;
+}
+
 .site-intro__mark {
   display: flex;
   flex-direction: column;
@@ -359,8 +364,8 @@ html[data-view="collection"] .label-header::before {
 
   html[data-view="gallery"] .label-header::before,
   html[data-view="collection"] .label-header::before {
-    /* Stay inside .shell — white page shows as side recess */
-    inset: 0;
+    /* Halfway between full-bleed and .shell width */
+    inset: 0 calc((100% - 100vw) / 4);
     border-radius: 0 0 28px 28px;
     box-shadow:
       0 1px 0 rgba(255, 255, 255, 0.65) inset,
@@ -3283,6 +3288,15 @@ html[data-view="schema"] .release-slot__more {
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem 1rem;
+}
+
+/* Title sits above the owned object / banner panel */
+.collection__section-head--above-stage {
+  margin-bottom: 1.15rem;
+}
+
+.collection__section-head--above-stage + .collection__stage {
+  margin-top: 0;
 }
 
 .collection__section-title {

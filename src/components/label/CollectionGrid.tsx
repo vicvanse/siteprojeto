@@ -188,33 +188,33 @@ export function CollectionGrid({
 
   return (
     <section className="collection collection--library" aria-labelledby="collection-title">
+      <header className="collection__section-head collection__section-head--shelf collection__section-head--above-stage">
+        <h1 id="collection-title" className="collection__title">
+          <span className="collection__title-main">{t("collection.yours")}</span>
+          <span className="collection__title-count">
+            {`: ${objectCount} ${t("objects").toUpperCase()}`}
+          </span>
+        </h1>
+        <nav className="collection__filters" aria-label={t("collection.filters")}>
+          {FILTERS.map((f) => (
+            <button
+              key={f.id}
+              type="button"
+              className={`collection-filter${filter === f.id ? " collection-filter--active" : ""}`}
+              aria-pressed={filter === f.id}
+              onClick={() => setFilter(f.id)}
+            >
+              {t(f.labelKey)}
+            </button>
+          ))}
+        </nav>
+      </header>
+
       <div className="collection__stage">
         {active ? <OwnedObject artifact={active} /> : null}
       </div>
 
       <div className="collection__shelf-block">
-        <header className="collection__section-head collection__section-head--shelf collection__section-head--below-panel">
-          <h1 id="collection-title" className="collection__title">
-            <span className="collection__title-main">{t("collection.yours")}</span>
-            <span className="collection__title-count">
-              {`: ${objectCount} ${t("objects").toUpperCase()}`}
-            </span>
-          </h1>
-          <nav className="collection__filters" aria-label={t("collection.filters")}>
-            {FILTERS.map((f) => (
-              <button
-                key={f.id}
-                type="button"
-                className={`collection-filter${filter === f.id ? " collection-filter--active" : ""}`}
-                aria-pressed={filter === f.id}
-                onClick={() => setFilter(f.id)}
-              >
-                {t(f.labelKey)}
-              </button>
-            ))}
-          </nav>
-        </header>
-
         {shelfObjects.length === 0 ? (
           <p className="collection__empty">{t("collection.emptyFilter")}</p>
         ) : (

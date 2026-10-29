@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useMemo, useState } from "react";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import type { Artifact } from "@/data/artifacts";
 import { extraArtifacts, latestArtifact } from "@/data/artifacts";
 import { useViewMode } from "@/components/ViewModeProvider";
@@ -17,6 +18,7 @@ type Props = {
 
 export function LabelStage({ initial, releases }: Props) {
   const { mode } = useViewMode();
+  const reduceMotion = useReducedMotion();
   const catalog = useMemo(() => {
     const byId = new Map<string, Artifact>();
     for (const artifact of [initial, ...releases]) {
@@ -26,38 +28,52 @@ export function LabelStage({ initial, releases }: Props) {
   }, [initial, releases]);
   const [active, setActive] = useState(() => latestArtifact(catalog));
 
-  const select = useCallback((artifact: Artifact) => {
-    setActive(artifact);
-    /* After paint: open at top panel and scroll the page up to it. */
-    window.requestAnimationFrame(() => {
+  const select = useCallback(
+    (artifact: Artifact) => {
+      setActive(artifact);
+      const behavior: ScrollBehavior = reduceMotion ? "auto" : "smooth";
+      const scrollUp = () => window.scrollTo({ top: 0, behavior });
+      /* After paint, and again after Gallery↔Collection fade if mode changes. */
       window.requestAnimationFrame(() => {
-        document.getElementById("viewport")?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
+        window.requestAnimationFrame(scrollUp);
       });
-    });
-  }, []);
+      window.setTimeout(scrollUp, reduceMotion ? 0 : 480);
+    },
+    [reduceMotion],
+  );
+
+  const fadeMs = reduceMotion ? 0 : 0.45;
 
   return (
     <>
-      {mode === "collection" ? (
-        <CollectionGrid
-          artifacts={catalog}
-          extras={extraArtifacts}
-          activeId={active.id}
-          onSelect={select}
-        />
-      ) : (
-        <>
-          <FeaturedObject artifact={active} />
-          <ReleasesStrip
-            artifacts={catalog}
-            activeId={active.id}
-            onSelect={select}
-          />
-        </>
-      )}
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.div
+          key={mode}
+          className="label-stage__view"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: fadeMs, ease: [0.4, 0, 0.2, 1] }}
+        >
+          {mode === "collection" ? (
+            <CollectionGrid
+              artifacts={catalog}
+              extras={extraArtifacts}
+              activeId={active.id}
+              onSelect={select}
+            />
+          ) : (
+            <>
+              <FeaturedObject artifact={active} />
+              <ReleasesStrip
+                artifacts={catalog}
+                activeId={active.id}
+                onSelect={select}
+              />
+            </>
+          )}
+        </motion.div>
+      </AnimatePresence>
       <footer className="site-mark">
         <VekonMarkBadge />
       </footer>
