@@ -262,3 +262,14 @@ html:root .read-btn{background:var(--sb);box-shadow:var(--r-sm)}
   .collection__section-head--above-stage .cx-account{right:0}
 }
 @media (max-width:1100px){.cx-side{display:none!important}}
+
+/* ---- Manifestations in the same language as Themes / References ---- */
+html:root .manifestations{gap:10px;margin-top:12px;padding-top:12px;border-top:1px solid rgba(0,0,0,.06)}
+html:root .manifestations__label{margin:0;font-family:var(--font-mono),monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#6b6b6b}
+html:root .manifestations__row{grid-template-columns:88px auto minmax(0,1fr);gap:10px;align-items:center;font-size:inherit}
+html:root .manifestations__channel{font-family:var(--font-mono),monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#6b6b6b}
+html:root .manifestations__item{justify-self:start;font-family:var(--font-mono),monospace;font-size:11px;letter-spacing:normal;text-transform:none;padding:5px 10px;border-radius:999px;background:var(--sb,#e4e4e1);color:#3a3a3e;box-shadow:var(--r-in-sm,inset 2px 2px 4px rgba(0,0,0,.12),inset -2px -2px 4px rgba(255,255,255,.9))}
+html:root .manifestations__meta{font-family:var(--font-sans),sans-serif;font-size:12.5px;letter-spacing:normal;text-transform:none;color:#2a2a2e}
+html:root .manifestations__note{margin:2px 0 0 98px;font-size:11.5px;font-style:normal;line-height:1.45;color:#6a6a70}
+html:root .viewport--missing .manifestations__item{background:#e6e7eb}
+@media (max-width:900px){html:root .manifestations__row{grid-template-columns:72px auto minmax(0,1fr)}html:root .manifestations__note{margin-left:82px}}

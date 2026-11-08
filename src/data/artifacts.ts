@@ -238,7 +238,7 @@ export const releaseArtifacts: Artifact[] = [
     manifestations: ["pdf", "banner"],
     relatedBannerId: "b004",
     description:
-      "A two-sheet manifesto about time: how much of a life is left, how we spend our hours, and what stays with us. Printed in one blue ink, citing Augustine and Seneca.",
+      "The founding manifesto of Vekon. How time works, where we spend our hours, and what stays with us.",
     cover: "/covers/009-pasture.gif",
     avatar: "/avatars/001-cat.gif",
     downloads: {

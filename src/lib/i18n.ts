@@ -173,7 +173,7 @@ type Dictionary = Record<MessageKey, string>;
 const en: Dictionary = {
   "intro.label": "About · Vekon: Papers",
   "intro.title": "Short texts, kept as objects.",
-  "intro.body": "Vekon: Papers publishes booklets, essays and field guides as numbered objects. Each one is a PDF made to be read on screen or printed and folded at home, and many also live in Vekon Life as a banner for your diary.",
+  "intro.body": "A life is made of hours, and most of them pass without leaving a mark. Papers is where we keep the ones that did: short texts on time, attention and what remains, each one numbered and kept as an object, to read on a screen or print and fold by hand.",
   "intro.since": "Since 2026",
   "themes": "Themes",
   "references": "References",
@@ -278,14 +278,14 @@ const en: Dictionary = {
   "desc.008":
     "Bars, a bicycle, and the light that still finds a way through. Eight pages from the wrong side of a gate — neighbors as silhouettes, afternoons as evidence, and the small politics of a shared courtyard.",
   "desc.009":
-    "A two-sheet manifesto about time: how much of a life is left, how we spend our hours, and what stays with us. Printed in one blue ink, citing Augustine and Seneca.",
+    "The founding manifesto of Vekon. How time works, where we spend our hours, and what stays with us.",
 };
 
 const pt: Dictionary = {
   ...en,
   "intro.label": "Sobre · Vekon: Papers",
   "intro.title": "Textos curtos, guardados como objetos.",
-  "intro.body": "A Vekon: Papers publica booklets, ensaios e guias de campo como objetos numerados. Cada um é um PDF para ler na tela ou imprimir e dobrar em casa, e muitos também vivem no Vekon Life como um banner para o seu diário.",
+  "intro.body": "Uma vida é feita de horas, e a maioria passa sem deixar marca. Papers é onde guardamos as que deixaram: textos curtos sobre o tempo, a atenção e o que fica, cada um numerado e guardado como objeto, para ler na tela ou imprimir e dobrar à mão.",
   "intro.since": "Desde 2026",
   "themes": "Temas",
   "references": "Referências",
@@ -390,14 +390,14 @@ const pt: Dictionary = {
   "desc.008":
     "Grades, uma bicicleta, e a luz que ainda encontra caminho. Oito páginas do lado errado do portão — vizinhos como silhuetas, tardes como evidência, e a pequena política de um pátio compartilhado.",
   "desc.009":
-    "Um manifesto em duas folhas sobre o tempo: quanto resta de uma vida, como gastamos as horas e o que fica com a gente. Impresso em uma só tinta azul, com citações de Agostinho e Sêneca.",
+    "Manifesto base para Vekon. Como o tempo funciona, onde gastamos nossas horas e o que fica conosco.",
 };
 
 const es: Dictionary = {
   ...en,
   "intro.label": "Acerca de · Vekon: Papers",
   "intro.title": "Textos breves, guardados como objetos.",
-  "intro.body": "Vekon: Papers publica cuadernillos, ensayos y guías de campo como objetos numerados. Cada uno es un PDF para leer en pantalla o imprimir y doblar en casa, y muchos también viven en Vekon Life como un banner para tu diario.",
+  "intro.body": "Una vida está hecha de horas, y la mayoría pasa sin dejar huella. Papers es donde guardamos las que sí la dejaron: textos breves sobre el tiempo, la atención y lo que queda, cada uno numerado y guardado como un objeto, para leer en pantalla o imprimir y doblar a mano.",
   "intro.since": "Desde 2026",
   "themes": "Temas",
   "references": "Referencias",
@@ -459,14 +459,14 @@ const es: Dictionary = {
   "desc.008":
     "Rejas, una bicicleta, y la luz que aún encuentra camino. Ocho páginas del lado equivocado de una puerta — vecinos como siluetas, tardes como evidencia, y la pequeña política de un patio compartido.",
   "desc.009":
-    "Un manifiesto en dos hojas sobre el tiempo: cuánto queda de una vida, cómo gastamos las horas y qué se queda con nosotros. Impreso en una sola tinta azul, con citas de Agustín y Séneca.",
+    "El manifiesto fundacional de Vekon. Cómo funciona el tiempo, en qué gastamos nuestras horas y qué se queda con nosotros.",
 };
 
 const de: Dictionary = {
   ...en,
   "intro.label": "Über · Vekon: Papers",
   "intro.title": "Kurze Texte, aufbewahrt als Objekte.",
-  "intro.body": "Vekon: Papers veröffentlicht Hefte, Essays und Feldführer als nummerierte Objekte. Jedes ist ein PDF zum Lesen am Bildschirm oder zum Ausdrucken und Falten zu Hause, und viele leben auch in Vekon Life als Banner für dein Tagebuch.",
+  "intro.body": "Ein Leben besteht aus Stunden, und die meisten vergehen, ohne eine Spur zu hinterlassen. Papers ist der Ort, an dem wir die anderen aufbewahren: kurze Texte über Zeit, Aufmerksamkeit und das, was bleibt, jeder nummeriert und als Objekt aufbewahrt, zum Lesen am Bildschirm oder zum Ausdrucken und Falten von Hand.",
   "intro.since": "Seit 2026",
   "themes": "Themen",
   "references": "Referenzen",
@@ -528,14 +528,14 @@ const de: Dictionary = {
   "desc.008":
     "Gitter, ein Fahrrad, und Licht, das trotzdem durchkommt. Acht Seiten von der falschen Seite eines Tors — Nachbarn als Silhouetten, Nachmittage als Beweise, und die kleine Politik eines gemeinsamen Hofs.",
   "desc.009":
-    "Ein Manifest auf zwei Blättern über die Zeit: wie viel von einem Leben bleibt, wie wir unsere Stunden verbringen und was uns davon bleibt. In einer blauen Farbe gedruckt, mit Zitaten von Augustinus und Seneca.",
+    "Das Gründungsmanifest von Vekon. Wie die Zeit funktioniert, wofür wir unsere Stunden verbrauchen und was uns bleibt.",
 };
 
 const fr: Dictionary = {
   ...en,
   "intro.label": "À propos · Vekon: Papers",
   "intro.title": "Des textes courts, gardés comme des objets.",
-  "intro.body": "Vekon: Papers publie des livrets, des essais et des guides de terrain comme des objets numérotés. Chacun est un PDF à lire à l'écran ou à imprimer et plier chez soi, et beaucoup vivent aussi dans Vekon Life comme bannière pour votre journal.",
+  "intro.body": "Une vie est faite d'heures, et la plupart passent sans laisser de trace. Papers est l'endroit où nous gardons celles qui en ont laissé une : des textes courts sur le temps, l'attention et ce qui reste, chacun numéroté et gardé comme un objet, à lire à l'écran ou à imprimer et plier à la main.",
   "intro.since": "Depuis 2026",
   "themes": "Thèmes",
   "references": "Références",
@@ -597,14 +597,14 @@ const fr: Dictionary = {
   "desc.008":
     "Des barreaux, un vélo, et la lumière qui trouve encore un passage. Huit pages du mauvais côté d’une grille — voisins en silhouettes, après-midi en preuves, et la petite politique d’une cour partagée.",
   "desc.009":
-    "Un manifeste en deux feuillets sur le temps : ce qui reste d'une vie, la façon dont nous passons nos heures et ce qui demeure avec nous. Imprimé d'une seule encre bleue, avec des citations d'Augustin et de Sénèque.",
+    "Le manifeste fondateur de Vekon. Comment fonctionne le temps, où passent nos heures et ce qui reste avec nous.",
 };
 
 const it: Dictionary = {
   ...en,
   "intro.label": "Info · Vekon: Papers",
   "intro.title": "Testi brevi, custoditi come oggetti.",
-  "intro.body": "Vekon: Papers pubblica libretti, saggi e guide da campo come oggetti numerati. Ognuno è un PDF da leggere a schermo o da stampare e piegare a casa, e molti vivono anche in Vekon Life come banner per il tuo diario.",
+  "intro.body": "Una vita è fatta di ore, e la maggior parte passa senza lasciare traccia. Papers è il luogo in cui custodiamo quelle che l'hanno lasciata: testi brevi sul tempo, sull'attenzione e su ciò che resta, ognuno numerato e custodito come un oggetto, da leggere sullo schermo o da stampare e piegare a mano.",
   "intro.since": "Dal 2026",
   "themes": "Temi",
   "references": "Riferimenti",
@@ -666,14 +666,14 @@ const it: Dictionary = {
   "desc.008":
     "Sbarre, una bicicletta, e la luce che trova ancora un passaggio. Otto pagine dal lato sbagliato di un cancello — vicini come silhouette, pomeriggi come prove, e la piccola politica di un cortile condiviso.",
   "desc.009":
-    "Un manifesto in due fogli sul tempo: quanto resta di una vita, come passiamo le ore e cosa rimane con noi. Stampato in un solo inchiostro blu, con citazioni di Agostino e Seneca.",
+    "Il manifesto fondativo di Vekon. Come funziona il tempo, dove spendiamo le nostre ore e che cosa resta con noi.",
 };
 
 const ja: Dictionary = {
   ...en,
   "intro.label": "Vekon: Papers について",
   "intro.title": "短いテキストを、オブジェクトとして。",
-  "intro.body": "Vekon: Papers は、ブックレット、エッセイ、フィールドガイドを番号つきのオブジェクトとして出版しています。どれも画面で読むことも、印刷して家で折ることもできる PDF で、多くは Vekon Life の日記を飾るバナーにもなります。",
+  "intro.body": "人生は時間でできていて、そのほとんどは跡を残さずに過ぎていきます。Papers は、跡を残した時間をしまっておく場所です。時間、注意、そして残るものについての短いテキストを、ひとつずつ番号をつけてオブジェクトとして保管しています。画面で読むことも、印刷して手で折ることもできます。",
   "intro.since": "2026年から",
   "themes": "テーマ",
   "references": "参照",
@@ -735,14 +735,14 @@ const ja: Dictionary = {
   "desc.008":
     "棚、自転車、それでも通り抜ける光。門の裏側からの八ページ — シルエットの隣人、証拠のような午後、共有中庭の小さな政治。",
   "desc.009":
-    "時間についての二枚組のマニフェスト。人生にどれだけ残っているか、時間をどう使うか、そして何が私たちに残るのか。青一色で印刷され、アウグスティヌスとセネカを引用しています。",
+    "Vekon の基盤となるマニフェスト。時間はどう働くのか、私たちはどこで時間を使っているのか、そして何が私たちのもとに残るのか。",
 };
 
 const ko: Dictionary = {
   ...en,
   "intro.label": "소개 · Vekon: Papers",
   "intro.title": "짧은 글을, 오브젝트로 간직하다.",
-  "intro.body": "Vekon: Papers는 소책자, 에세이, 필드 가이드를 번호가 매겨진 오브젝트로 출간합니다. 모두 화면에서 읽거나 인쇄해 집에서 접을 수 있는 PDF이며, 상당수는 Vekon Life에서 일기를 꾸미는 배너로도 존재합니다.",
+  "intro.body": "삶은 시간으로 이루어지고, 그 대부분은 흔적 없이 지나갑니다. Papers는 흔적을 남긴 시간을 간직하는 곳입니다. 시간과 주의, 그리고 남는 것에 관한 짧은 글을 하나하나 번호를 붙여 오브젝트로 보관합니다. 화면으로 읽거나 인쇄해 손으로 접을 수 있습니다.",
   "intro.since": "2026년부터",
   "themes": "테마",
   "references": "참고 문헌",
@@ -804,14 +804,14 @@ const ko: Dictionary = {
   "desc.008":
     "쇠창살, 자전거, 그래도 스며드는 빛. 문 반대편에서 쓴 여덟 페이지 — 실루엣인 이웃, 증거인 오후, 공유 마당의 작은 정치.",
   "desc.009":
-    "시간에 관한 두 장짜리 선언문. 삶이 얼마나 남았는지, 우리가 시간을 어떻게 쓰는지, 그리고 무엇이 우리에게 남는지. 파란색 한 가지로 인쇄했으며 아우구스티누스와 세네카를 인용합니다.",
+    "Vekon의 바탕이 되는 선언문. 시간은 어떻게 작동하는지, 우리는 어디에 시간을 쓰는지, 그리고 무엇이 우리에게 남는지.",
 };
 
 const zhCN: Dictionary = {
   ...en,
   "intro.label": "关于 · Vekon: Papers",
   "intro.title": "短小的文字，作为物件保存。",
-  "intro.body": "Vekon: Papers 以编号物件的形式出版小册子、随笔和田野指南。每一件都是 PDF，可以在屏幕上阅读，也可以打印后在家折叠；其中许多也以横幅的形式存在于 Vekon Life，装点你的日记。",
+  "intro.body": "人生由时间组成，而大多数时间流逝时不留痕迹。Papers 是我们保存那些留下痕迹的时间的地方：关于时间、专注与留存之物的短文，每一篇都编上号、作为物件保存，可以在屏幕上阅读，也可以打印后亲手折叠。",
   "intro.since": "始于 2026",
   "themes": "主题",
   "references": "参考",
@@ -873,14 +873,14 @@ const zhCN: Dictionary = {
   "desc.008":
     "铁栏、一辆自行车，以及仍能挤进来的光。从门的另一侧写下的八页——邻居成了剪影，午后成了证据，还有共享庭院的小小政治。",
   "desc.009":
-    "一份关于时间的两页宣言：人生还剩多少，我们如何度过时光，以及什么会留在我们身上。以单一蓝色印刷，引用奥古斯丁与塞涅卡。",
+    "Vekon 的基础宣言。时间如何运作，我们把时光花在了哪里，以及什么会留在我们身边。",
 };
 
 const zhTW: Dictionary = {
   ...en,
   "intro.label": "關於 · Vekon: Papers",
   "intro.title": "短小的文字，作為物件保存。",
-  "intro.body": "Vekon: Papers 以編號物件的形式出版小冊子、隨筆與田野指南。每一件都是 PDF，可以在螢幕上閱讀，也可以列印後在家摺疊；其中許多也以橫幅的形式存在於 Vekon Life，妝點你的日記。",
+  "intro.body": "人生由時間組成，而大多數時間流逝時不留痕跡。Papers 是我們保存那些留下痕跡的時間的地方：關於時間、專注與留存之物的短文，每一篇都編上號、作為物件保存，可以在螢幕上閱讀，也可以列印後親手摺疊。",
   "intro.since": "始於 2026",
   "themes": "主題",
   "references": "參考",
@@ -942,7 +942,7 @@ const zhTW: Dictionary = {
   "desc.008":
     "鐵欄、一輛腳踏車，以及仍能擠進來的光。從門的另一側寫下的八頁——邻居成了剪影，午後成了證據，還有共享庭院的小小政治。",
   "desc.009":
-    "一份關於時間的兩頁宣言：人生還剩多少，我們如何度過時光，以及什麼會留在我們身上。以單一藍色印刷，引用奧古斯丁與塞涅卡。",
+    "Vekon 的基礎宣言。時間如何運作，我們把時光花在了哪裡，以及什麼會留在我們身邊。",
 };
 
 export const DICTIONARIES: Record<Language, Dictionary> = {
