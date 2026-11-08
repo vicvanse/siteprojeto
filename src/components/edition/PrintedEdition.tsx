@@ -11,6 +11,8 @@ type Mode = "spreads" | "sequence";
 type Props = {
   /** Folder under /public/editions, e.g. "009". */
   id: string;
+  /** Public object number shown in the bar (defaults to the folder id). */
+  number?: string;
   title: string;
   sheets: number;
   /** Edition languages that have page images. */
@@ -54,7 +56,7 @@ const COPY: Record<
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
 
 /** Sheets as designed (page images), side by side or in sequence. */
-export function PrintedEdition({ id, title, sheets, langs, downloads }: Props) {
+export function PrintedEdition({ id, number, title, sheets, langs, downloads }: Props) {
   const { language } = useLanguage();
   const [lang, setLang] = useState<EditionLang>(langs[0] ?? "en");
   const [mode, setMode] = useState<Mode>("spreads");
@@ -79,7 +81,7 @@ export function PrintedEdition({ id, title, sheets, langs, downloads }: Props) {
           </a>
           <p className="edition__id">
             <span className="edition__dot" aria-hidden />
-            <b>Object / {id}</b> · {title} · {c.edition}
+            <b>Object / {number ?? id}</b> · {title} · {c.edition}
           </p>
         </div>
         {/* Same black Vekon: Papers plate as the site header, for continuity. */}

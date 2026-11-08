@@ -395,3 +395,6 @@ html{-webkit-tap-highlight-color:transparent}
   .object-stack__acquire .price-chip{padding-inline:.65rem!important}
   html:root .manifestations__meta{white-space:nowrap}
 }
+
+/* The description is always shown whole */
+.object-stack__desc{display:block!important;-webkit-line-clamp:unset!important;overflow:visible!important}

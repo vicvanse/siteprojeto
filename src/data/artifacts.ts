@@ -222,9 +222,10 @@ export const releaseArtifacts: Artifact[] = [
     avatar: "/avatars/004-baker.gif",
   },
   {
+    /* Internal id stays "009" (files, accounts); the public number is 001. */
     id: "009",
     slug: "manifesto-what-remains",
-    number: "009",
+    number: "001",
     title: "MANIFESTO",
     subtitle: "WHAT REMAINS OF THE JOURNEY",
     type: "booklet",
@@ -245,7 +246,7 @@ export const releaseArtifacts: Artifact[] = [
       en: "/downloads/what-remains-of-the-journey-en.pdf",
       pt: "/downloads/o-que-fica-da-jornada-pt.pdf",
     },
-    edition: "/edition/009",
+    edition: "/edition/001",
     themes: ["theme.time", "theme.memory", "theme.choice", "theme.self"],
     references: ["ref.augustine", "ref.seneca"],
   },

@@ -1,23 +1,6 @@
-import type { Metadata } from "next";
-import { PrintedEdition } from "@/components/edition/PrintedEdition";
+import { redirect } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: "Manifesto · Printed edition",
-  description:
-    "What Remains of the Journey / O Que Fica da Jornada. Object 009, two sheets in one blue ink.",
-};
-
-export default function Edition009Page() {
-  return (
-    <PrintedEdition
-      id="009"
-      title="Manifesto"
-      sheets={2}
-      langs={["en", "pt"]}
-      downloads={{
-        en: "/downloads/what-remains-of-the-journey-en.pdf",
-        pt: "/downloads/o-que-fica-da-jornada-pt.pdf",
-      }}
-    />
-  );
+/** The Manifesto is now object 001; keep old links working. */
+export default function Edition009Redirect() {
+  redirect("/edition/001");
 }
