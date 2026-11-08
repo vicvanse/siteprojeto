@@ -313,3 +313,4 @@ html[data-enter="quick"] .label-header{animation-duration:.3s;animation-delay:0s
   body:not(:has(.viewport__tools)) .label-header__stack{flex-wrap:wrap;justify-content:center;row-gap:10px}
   body:not(:has(.viewport__tools)) .label-header__accents{flex:0 0 100%;display:flex!important;justify-content:center;margin-top:0!important}
 }
+@media (max-width:380px){html:root .label-header__view-panel .view-pill{padding-inline:.5rem}html:root .label-header__brand-panel{padding-right:9px}}
