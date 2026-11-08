@@ -4,6 +4,7 @@ import type { Artifact } from "@/data/artifacts";
 import { formatPrice } from "@/data/artifacts";
 import { useLanguage } from "@/components/LanguageProvider";
 import { ArtworkCover } from "./ArtworkCover";
+import { ReleasesHud } from "./Hud";
 
 type Props = {
   artifacts: Artifact[];
@@ -25,6 +26,12 @@ export function ReleasesStrip({ artifacts, activeId, onSelect }: Props) {
 
   return (
     <section className="releases" aria-labelledby="releases-title">
+      {ordered.length > 0 ? (
+        <ReleasesHud
+          first={ordered[0]!.number}
+          last={ordered[ordered.length - 1]!.number}
+        />
+      ) : null}
       <div className="releases__head">
         <p className="releases__title-pill" id="releases-title">
           {t("releases")}

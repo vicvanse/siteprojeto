@@ -7,52 +7,26 @@ import {
   hasManifestation,
   relatedBanner,
 } from "@/data/artifacts";
-import { useAccess } from "@/components/AccessProvider";
 import { useLanguage } from "@/components/LanguageProvider";
-import { artifactDescriptionKey, type MessageKey } from "@/lib/i18n";
+import { artifactDescriptionKey } from "@/lib/i18n";
 import { ArtifactFrame } from "./ArtifactFrame";
 import { ArtworkCover } from "./ArtworkCover";
+import { PanelHud } from "./Hud";
 import { ViewportTools } from "./ViewportTools";
 
 type Props = {
   artifact: Artifact;
   /** Collection desktop: unavailable object — black panel, B&W art, Gallery CTAs. */
   variant?: "default" | "missing";
-  showLogout?: boolean;
 };
 
-const LANG_LABEL: Record<ArtifactLang, string> = {
-  en: "EN",
-  pt: "PT",
-  es: "ES",
-  fr: "FR",
-  de: "DE",
-  it: "IT",
-  ja: "JA",
-  ko: "KO",
-};
-
-/* Real downloads: colour PDF, B/W PDF, optional folding guide. Same files print. */
-const EDITION_KEYS = [
-  "edition.readColour",
-  "edition.readBw",
-  "edition.folding",
-] as const satisfies readonly MessageKey[];
-
-export function FeaturedObject({
-  artifact,
-  variant = "default",
-  showLogout = false,
-}: Props) {
+export function FeaturedObject({ artifact, variant = "default" }: Props) {
   const { t, language } = useLanguage();
-  const { email, signOut } = useAccess();
   const titleRef = useRef<HTMLDivElement>(null);
   const [titleH, setTitleH] = useState(0);
   const missing = variant === "missing";
   const descKey = artifactDescriptionKey(artifact.id);
   const description = descKey ? t(descKey) : artifact.description;
-  const langs = artifact.languages?.length ? artifact.languages : (["en"] as ArtifactLang[]);
-  const languagePill = `${t("edition.languages")} · ${langs.map((l) => LANG_LABEL[l]).join(" · ")}`;
   const banner = relatedBanner(artifact);
   const showVekonManifestation =
     hasManifestation(artifact, "banner") && Boolean(banner);
@@ -86,16 +60,7 @@ export function FeaturedObject({
       aria-labelledby="featured-title"
     >
       <div className="viewport__panel">
-        {showLogout ? (
-          <button
-            type="button"
-            className="collection__logout"
-            title={email ?? undefined}
-            onClick={() => void signOut()}
-          >
-            {t("collection.logOut")}
-          </button>
-        ) : null}
+        <PanelHud artifact={artifact} />
         <p className="viewport__id">
           <span className="object-id-pill">
             {t("object")} / {artifact.number}
@@ -199,19 +164,32 @@ export function FeaturedObject({
                 </div>
               ) : null}
 
-              <div className="edition-pills" role="group" aria-label={t("editions")}>
-                {EDITION_KEYS.map((key) => (
-                  <button key={key} type="button" className="edition-pill">
-                    {t(key)}
-                  </button>
-                ))}
-                <button type="button" className="edition-pill">
-                  {languagePill}
-                </button>
-                <button type="button" className="edition-pill">
-                  {t("edition.references")}
-                </button>
-              </div>
+              {artifact.themes?.length || artifact.references?.length ? (
+                <div className="cx-themes">
+                  {artifact.themes?.length ? (
+                    <div className="cx-themes__row">
+                      <span className="cx-themes__label">{t("themes")}</span>
+                      <div className="cx-themes__list">
+                        {artifact.themes.map((key) => (
+                          <span key={key} className="cx-themes__tag">
+                            {t(key)}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  ) : null}
+                  {artifact.references?.length ? (
+                    <div className="cx-themes__row">
+                      <span className="cx-themes__label">{t("references")}</span>
+                      <div className="cx-themes__ref">
+                        {artifact.references.map((key) => (
+                          <span key={key}>{t(key)}</span>
+                        ))}
+                      </div>
+                    </div>
+                  ) : null}
+                </div>
+              ) : null}
               <p className="edition-note">{t("edition.note")}</p>
             </div>
           </div>

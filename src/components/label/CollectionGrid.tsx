@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 import type { Artifact, ArtifactKind } from "@/data/artifacts";
-import { isExtra, isPublication, kindLabel } from "@/data/artifacts";
+import { formatPrice, isExtra, isPublication, kindLabel } from "@/data/artifacts";
 import { useAccess } from "@/components/AccessProvider";
 import { useLanguage } from "@/components/LanguageProvider";
 import { useViewMode } from "@/components/ViewModeProvider";
@@ -39,7 +39,7 @@ export function CollectionGrid({
   activeId,
   onSelect,
 }: Props) {
-  const { authenticated, owns, openOverlay } = useAccess();
+  const { authenticated, owns, openOverlay, email, signOut } = useAccess();
   const { t } = useLanguage();
   const { setMode } = useViewMode();
   const [filter, setFilter] = useState<Filter>("all");
@@ -206,6 +206,11 @@ export function CollectionGrid({
 
   const objectCount = String(ownedObjects.length).padStart(2, "0");
   const extraCount = String(ownedExtras.length).padStart(2, "0");
+  const totalCount = String(publications.length).padStart(2, "0");
+  const progress = publications.length ? ownedObjects.length / publications.length : 0;
+  const ring = 2 * Math.PI * 13;
+  const firstMissingId = shelfObjects.find((a) => !owns(a.id))?.id;
+  const missingCount = String(shelfObjects.filter((a) => !owns(a.id)).length).padStart(2, "0");
 
   return (
     <section className="collection collection--library" aria-labelledby="collection-title">
@@ -215,17 +220,37 @@ export function CollectionGrid({
           <span className="collection__title-count">
             {`: ${objectCount} ${t("objects").toUpperCase()}`}
           </span>
+          <span className="cx-prog">
+            <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden>
+              <circle cx="17" cy="17" r="13" fill="none" stroke="#c3c6cd" strokeWidth="3" />
+              <circle
+                cx="17"
+                cy="17"
+                r="13"
+                fill="none"
+                stroke="#2a2a2e"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeDasharray={`${(ring * progress).toFixed(1)} ${ring.toFixed(1)}`}
+                transform="rotate(-90 17 17)"
+              />
+              <circle cx="17" cy="4" r="2" fill="#e8582a" />
+            </svg>
+            {objectCount} / {totalCount} {t("objects")}
+          </span>
         </h1>
+        <div className="cx-account">
+          <span>{t("collection.owner")}</span>
+          <button type="button" title={email ?? undefined} onClick={() => void signOut()}>
+            {t("collection.logOut")}
+          </button>
+        </div>
       </header>
 
       <div className="collection__stage">
         {active ? (
           showMissingPreview ? (
-            <FeaturedObject
-              artifact={active}
-              variant="missing"
-              showLogout
-            />
+            <FeaturedObject artifact={active} variant="missing" />
           ) : (
             <OwnedObject artifact={active} />
           )
@@ -256,7 +281,13 @@ export function CollectionGrid({
               const selected =
                 active?.id === artifact.id && (held || (desktop && !held));
               return (
-                <li key={artifact.id} className="collection-shelf__item">
+                <Fragment key={artifact.id}>
+                {artifact.id === firstMissingId ? (
+                  <li className="cx-miss-head">
+                    {t("collection.notYet", { n: missingCount })}
+                  </li>
+                ) : null}
+                <li className="collection-shelf__item">
                   <button
                     type="button"
                     className={`shelf-card${selected ? " shelf-card--active" : ""}${held ? "" : " shelf-card--missing"}`}
@@ -292,12 +323,18 @@ export function CollectionGrid({
                         <span className="shelf-card__kind">
                           {held
                             ? kindLabel(artifact.kind)
-                            : t("collection.missing")}
+                            : artifact.status === "free"
+                              ? t("free")
+                              : formatPrice(artifact)}
                         </span>
                       </span>
+                      {held ? null : (
+                        <span className="cx-miss-cta">{t("collection.seeInGallery")}</span>
+                      )}
                     </span>
                   </button>
                 </li>
+                </Fragment>
               );
             })}
           </ul>

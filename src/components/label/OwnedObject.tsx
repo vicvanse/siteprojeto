@@ -14,6 +14,7 @@ import { artifactDescriptionKey } from "@/lib/i18n";
 import { formatAcquiredStamp, personalCopy } from "@/lib/personal-copy";
 import { ArtifactFrame } from "./ArtifactFrame";
 import { ArtworkCover } from "./ArtworkCover";
+import { PanelHud } from "./Hud";
 import { ViewportTools } from "./ViewportTools";
 
 type Props = {
@@ -40,7 +41,7 @@ function editionLangs(artifact: Artifact): ArtifactLang[] {
  * OPEN primary, DOWNLOAD secondary; OWNED + copy sheet instead of GET/price.
  */
 export function OwnedObject({ artifact }: Props) {
-  const { email, signOut } = useAccess();
+  const { email } = useAccess();
   const { t } = useLanguage();
   const titleRef = useRef<HTMLDivElement>(null);
   const [titleH, setTitleH] = useState(0);
@@ -84,14 +85,7 @@ export function OwnedObject({ artifact }: Props) {
   return (
     <section id="viewport" className="viewport viewport--owned" aria-labelledby="owned-title">
       <div className="viewport__panel">
-        <button
-          type="button"
-          className="collection__logout"
-          title={email ?? undefined}
-          onClick={() => void signOut()}
-        >
-          {t("collection.logOut")}
-        </button>
+        <PanelHud artifact={artifact} />
         <p className="viewport__id">
           <span className="object-id-pill">
             {isExtra ? t("collection.banner") : t("object")} / {artifact.number}

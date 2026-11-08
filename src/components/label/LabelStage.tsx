@@ -8,6 +8,8 @@ import { useViewMode } from "@/components/ViewModeProvider";
 import { AccessOverlay } from "./AccessOverlay";
 import { CollectionGrid } from "./CollectionGrid";
 import { FeaturedObject } from "./FeaturedObject";
+import { SideHud } from "./Hud";
+import { PapersIntro } from "./PapersIntro";
 import { ReleasesStrip } from "./ReleasesStrip";
 import { VekonMarkBadge } from "./VekonMarkBadge";
 
@@ -43,6 +45,9 @@ export function LabelStage({ initial, releases }: Props) {
   );
 
   const fadeMs = reduceMotion ? 0 : 0.45;
+  const numbers = catalog.map((a) => a.number).sort();
+  const firstNo = numbers[numbers.length - 1] ?? "";
+  const lastNo = numbers[0] ?? "";
 
   return (
     <>
@@ -65,6 +70,7 @@ export function LabelStage({ initial, releases }: Props) {
           ) : (
             <>
               <FeaturedObject artifact={active} />
+              <PapersIntro objectCount={catalog.length} />
               <ReleasesStrip
                 artifacts={catalog}
                 activeId={active.id}
@@ -74,6 +80,7 @@ export function LabelStage({ initial, releases }: Props) {
           )}
         </motion.div>
       </AnimatePresence>
+      <SideHud first={firstNo} last={lastNo} />
       <footer className="site-mark">
         <VekonMarkBadge />
       </footer>

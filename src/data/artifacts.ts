@@ -1,3 +1,5 @@
+import type { MessageKey } from "@/lib/i18n";
+
 export type ArtifactType =
   | "booklet"
   | "poster"
@@ -52,6 +54,10 @@ export type Artifact = {
   downloads?: Partial<Record<ArtifactLang, string>>;
   /** Printed edition viewer (sheets as designed), e.g. "/edition/009". */
   edition?: string;
+  /** Theme tags shown on the featured card (i18n keys). */
+  themes?: MessageKey[];
+  /** Works cited, shown under the themes (i18n keys). */
+  references?: MessageKey[];
 };
 
 export const featuredArtifact: Artifact = {
@@ -240,6 +246,8 @@ export const releaseArtifacts: Artifact[] = [
       pt: "/downloads/o-que-fica-da-jornada-pt.pdf",
     },
     edition: "/edition/009",
+    themes: ["theme.time", "theme.memory", "theme.choice", "theme.self"],
+    references: ["ref.augustine", "ref.seneca"],
   },
 ];
 

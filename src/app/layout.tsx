@@ -10,6 +10,7 @@ import { LabelHeader } from "@/components/label/LabelHeader";
 import { ACCENT_PALETTES, DEFAULT_ACCENT_HUE } from "@/lib/accent";
 import { DEFAULT_LANGUAGE, LANGUAGE_BCP47, LANGUAGE_STORAGE_KEY } from "@/lib/i18n";
 import "./globals.css";
+import "./soft.css";
 
 /** Apply stored accent before paint — avoids pink flash + keeps CSS vars in sync. */
 const accentBootScript = `(function(){try{var k="papers-accent-hue";var h=localStorage.getItem(k)||${JSON.stringify(DEFAULT_ACCENT_HUE)};var p=${JSON.stringify(ACCENT_PALETTES)};var c=p[h]||p[${JSON.stringify(DEFAULT_ACCENT_HUE)}];var r=document.documentElement;r.dataset.accentHue=h;r.style.setProperty("--conquest-fill",c.selected);r.style.setProperty("--conquest-fill-alt",c.selectedAlt);r.style.setProperty("--conquest-fill-ring",c.ringSelected);r.style.setProperty("--accent-surface-even",c.surfaceEven);r.style.setProperty("--accent-surface-odd",c.surfaceOdd);}catch(e){}})();`;

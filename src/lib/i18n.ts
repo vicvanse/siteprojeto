@@ -120,6 +120,21 @@ export type MessageKey =
   | "pages"
   | "get"
   | "read"
+  | "intro.label"
+  | "intro.title"
+  | "intro.body"
+  | "intro.since"
+  | "themes"
+  | "references"
+  | "theme.time"
+  | "theme.memory"
+  | "theme.choice"
+  | "theme.self"
+  | "ref.augustine"
+  | "ref.seneca"
+  | "collection.owner"
+  | "collection.notYet"
+  | "collection.seeInGallery"
   | "seeMore"
   | "releases"
   | "objects"
@@ -156,6 +171,21 @@ export type MessageKey =
 type Dictionary = Record<MessageKey, string>;
 
 const en: Dictionary = {
+  "intro.label": "About · Vekon: Papers",
+  "intro.title": "Short texts, kept as objects.",
+  "intro.body": "Vekon: Papers publishes booklets, essays and field guides as numbered objects. Each one is a PDF made to be read on screen or printed and folded at home, and many also live in Vekon Life as a banner for your diary.",
+  "intro.since": "Since 2026",
+  "themes": "Themes",
+  "references": "References",
+  "theme.time": "Time",
+  "theme.memory": "Memory",
+  "theme.choice": "Choice",
+  "theme.self": "The self",
+  "ref.augustine": "Augustine, Confessions XI",
+  "ref.seneca": "Seneca, On the Shortness of Life",
+  "collection.owner": "Owner",
+  "collection.notYet": "Not with you yet · {n}",
+  "collection.seeInGallery": "See in Gallery →",
   view: "View:",
   gallery: "Gallery",
   collection: "Collection",
@@ -253,6 +283,21 @@ const en: Dictionary = {
 
 const pt: Dictionary = {
   ...en,
+  "intro.label": "Sobre · Vekon: Papers",
+  "intro.title": "Textos curtos, guardados como objetos.",
+  "intro.body": "A Vekon: Papers publica booklets, ensaios e guias de campo como objetos numerados. Cada um é um PDF para ler na tela ou imprimir e dobrar em casa, e muitos também vivem no Vekon Life como um banner para o seu diário.",
+  "intro.since": "Desde 2026",
+  "themes": "Temas",
+  "references": "Referências",
+  "theme.time": "Tempo",
+  "theme.memory": "Memória",
+  "theme.choice": "Escolha",
+  "theme.self": "O eu",
+  "ref.augustine": "Agostinho, Confissões XI",
+  "ref.seneca": "Sêneca, Sobre a brevidade da vida",
+  "collection.owner": "Dono",
+  "collection.notYet": "Ainda não estão com você · {n}",
+  "collection.seeInGallery": "Ver na Gallery →",
   view: "Vista:",
   gallery: "Galeria",
   collection: "Collection",
@@ -350,6 +395,21 @@ const pt: Dictionary = {
 
 const es: Dictionary = {
   ...en,
+  "intro.label": "Acerca de · Vekon: Papers",
+  "intro.title": "Textos breves, guardados como objetos.",
+  "intro.body": "Vekon: Papers publica cuadernillos, ensayos y guías de campo como objetos numerados. Cada uno es un PDF para leer en pantalla o imprimir y doblar en casa, y muchos también viven en Vekon Life como un banner para tu diario.",
+  "intro.since": "Desde 2026",
+  "themes": "Temas",
+  "references": "Referencias",
+  "theme.time": "Tiempo",
+  "theme.memory": "Memoria",
+  "theme.choice": "Elección",
+  "theme.self": "El yo",
+  "ref.augustine": "Agustín, Confesiones XI",
+  "ref.seneca": "Séneca, Sobre la brevedad de la vida",
+  "collection.owner": "Propietario",
+  "collection.notYet": "Aún no están contigo · {n}",
+  "collection.seeInGallery": "Ver en la galería →",
   view: "Vista:",
   gallery: "Galería",
   collection: "Collection",
@@ -404,6 +464,21 @@ const es: Dictionary = {
 
 const de: Dictionary = {
   ...en,
+  "intro.label": "Über · Vekon: Papers",
+  "intro.title": "Kurze Texte, aufbewahrt als Objekte.",
+  "intro.body": "Vekon: Papers veröffentlicht Hefte, Essays und Feldführer als nummerierte Objekte. Jedes ist ein PDF zum Lesen am Bildschirm oder zum Ausdrucken und Falten zu Hause, und viele leben auch in Vekon Life als Banner für dein Tagebuch.",
+  "intro.since": "Seit 2026",
+  "themes": "Themen",
+  "references": "Referenzen",
+  "theme.time": "Zeit",
+  "theme.memory": "Erinnerung",
+  "theme.choice": "Entscheidung",
+  "theme.self": "Das Selbst",
+  "ref.augustine": "Augustinus, Bekenntnisse XI",
+  "ref.seneca": "Seneca, Von der Kürze des Lebens",
+  "collection.owner": "Besitzer",
+  "collection.notYet": "Noch nicht bei dir · {n}",
+  "collection.seeInGallery": "In der Galerie ansehen →",
   view: "Ansicht:",
   gallery: "Galerie",
   collection: "Collection",
@@ -458,6 +533,21 @@ const de: Dictionary = {
 
 const fr: Dictionary = {
   ...en,
+  "intro.label": "À propos · Vekon: Papers",
+  "intro.title": "Des textes courts, gardés comme des objets.",
+  "intro.body": "Vekon: Papers publie des livrets, des essais et des guides de terrain comme des objets numérotés. Chacun est un PDF à lire à l'écran ou à imprimer et plier chez soi, et beaucoup vivent aussi dans Vekon Life comme bannière pour votre journal.",
+  "intro.since": "Depuis 2026",
+  "themes": "Thèmes",
+  "references": "Références",
+  "theme.time": "Temps",
+  "theme.memory": "Mémoire",
+  "theme.choice": "Choix",
+  "theme.self": "Le soi",
+  "ref.augustine": "Augustin, Les Confessions XI",
+  "ref.seneca": "Sénèque, De la brièveté de la vie",
+  "collection.owner": "Propriétaire",
+  "collection.notYet": "Pas encore avec vous · {n}",
+  "collection.seeInGallery": "Voir dans la galerie →",
   view: "Vue:",
   gallery: "Galerie",
   collection: "Collection",
@@ -512,6 +602,21 @@ const fr: Dictionary = {
 
 const it: Dictionary = {
   ...en,
+  "intro.label": "Info · Vekon: Papers",
+  "intro.title": "Testi brevi, custoditi come oggetti.",
+  "intro.body": "Vekon: Papers pubblica libretti, saggi e guide da campo come oggetti numerati. Ognuno è un PDF da leggere a schermo o da stampare e piegare a casa, e molti vivono anche in Vekon Life come banner per il tuo diario.",
+  "intro.since": "Dal 2026",
+  "themes": "Temi",
+  "references": "Riferimenti",
+  "theme.time": "Tempo",
+  "theme.memory": "Memoria",
+  "theme.choice": "Scelta",
+  "theme.self": "Il sé",
+  "ref.augustine": "Agostino, Confessioni XI",
+  "ref.seneca": "Seneca, La brevità della vita",
+  "collection.owner": "Proprietario",
+  "collection.notYet": "Non ancora con te · {n}",
+  "collection.seeInGallery": "Vedi nella galleria →",
   view: "Vista:",
   gallery: "Galleria",
   collection: "Collection",
@@ -566,6 +671,21 @@ const it: Dictionary = {
 
 const ja: Dictionary = {
   ...en,
+  "intro.label": "Vekon: Papers について",
+  "intro.title": "短いテキストを、オブジェクトとして。",
+  "intro.body": "Vekon: Papers は、ブックレット、エッセイ、フィールドガイドを番号つきのオブジェクトとして出版しています。どれも画面で読むことも、印刷して家で折ることもできる PDF で、多くは Vekon Life の日記を飾るバナーにもなります。",
+  "intro.since": "2026年から",
+  "themes": "テーマ",
+  "references": "参照",
+  "theme.time": "時間",
+  "theme.memory": "記憶",
+  "theme.choice": "選択",
+  "theme.self": "自己",
+  "ref.augustine": "アウグスティヌス『告白』第11巻",
+  "ref.seneca": "セネカ『人生の短さについて』",
+  "collection.owner": "オーナー",
+  "collection.notYet": "まだ手元にないもの · {n}",
+  "collection.seeInGallery": "ギャラリーで見る →",
   view: "表示:",
   gallery: "ギャラリー",
   collection: "コレクション",
@@ -620,6 +740,21 @@ const ja: Dictionary = {
 
 const ko: Dictionary = {
   ...en,
+  "intro.label": "소개 · Vekon: Papers",
+  "intro.title": "짧은 글을, 오브젝트로 간직하다.",
+  "intro.body": "Vekon: Papers는 소책자, 에세이, 필드 가이드를 번호가 매겨진 오브젝트로 출간합니다. 모두 화면에서 읽거나 인쇄해 집에서 접을 수 있는 PDF이며, 상당수는 Vekon Life에서 일기를 꾸미는 배너로도 존재합니다.",
+  "intro.since": "2026년부터",
+  "themes": "테마",
+  "references": "참고 문헌",
+  "theme.time": "시간",
+  "theme.memory": "기억",
+  "theme.choice": "선택",
+  "theme.self": "자아",
+  "ref.augustine": "아우구스티누스, 『고백록』 11권",
+  "ref.seneca": "세네카, 『인생의 짧음에 관하여』",
+  "collection.owner": "소유자",
+  "collection.notYet": "아직 없는 오브젝트 · {n}",
+  "collection.seeInGallery": "갤러리에서 보기 →",
   view: "보기:",
   gallery: "갤러리",
   collection: "컬렉션",
@@ -674,6 +809,21 @@ const ko: Dictionary = {
 
 const zhCN: Dictionary = {
   ...en,
+  "intro.label": "关于 · Vekon: Papers",
+  "intro.title": "短小的文字，作为物件保存。",
+  "intro.body": "Vekon: Papers 以编号物件的形式出版小册子、随笔和田野指南。每一件都是 PDF，可以在屏幕上阅读，也可以打印后在家折叠；其中许多也以横幅的形式存在于 Vekon Life，装点你的日记。",
+  "intro.since": "始于 2026",
+  "themes": "主题",
+  "references": "参考",
+  "theme.time": "时间",
+  "theme.memory": "记忆",
+  "theme.choice": "选择",
+  "theme.self": "自我",
+  "ref.augustine": "奥古斯丁《忏悔录》第十一卷",
+  "ref.seneca": "塞涅卡《论生命之短暂》",
+  "collection.owner": "所有者",
+  "collection.notYet": "尚未拥有 · {n}",
+  "collection.seeInGallery": "在画廊中查看 →",
   view: "视图:",
   gallery: "画廊",
   collection: "收藏",
@@ -728,6 +878,21 @@ const zhCN: Dictionary = {
 
 const zhTW: Dictionary = {
   ...en,
+  "intro.label": "關於 · Vekon: Papers",
+  "intro.title": "短小的文字，作為物件保存。",
+  "intro.body": "Vekon: Papers 以編號物件的形式出版小冊子、隨筆與田野指南。每一件都是 PDF，可以在螢幕上閱讀，也可以列印後在家摺疊；其中許多也以橫幅的形式存在於 Vekon Life，妝點你的日記。",
+  "intro.since": "始於 2026",
+  "themes": "主題",
+  "references": "參考",
+  "theme.time": "時間",
+  "theme.memory": "記憶",
+  "theme.choice": "選擇",
+  "theme.self": "自我",
+  "ref.augustine": "奧古斯丁《懺悔錄》第十一卷",
+  "ref.seneca": "塞涅卡《論生命之短暫》",
+  "collection.owner": "所有者",
+  "collection.notYet": "尚未擁有 · {n}",
+  "collection.seeInGallery": "在藝廊中查看 →",
   view: "檢視:",
   gallery: "藝廊",
   collection: "收藏",
