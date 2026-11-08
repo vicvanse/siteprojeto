@@ -73,9 +73,15 @@ export function PrintedEdition({ id, title, sheets, langs, downloads }: Props) {
   return (
     <div className="edition">
       <header className="edition__bar">
-        <a className="edition__btn edition__back" href="/">
-          {c.back}
-        </a>
+        <div className="edition__left">
+          <a className="edition__btn edition__back" href="/">
+            {c.back}
+          </a>
+          <p className="edition__id">
+            <span className="edition__dot" aria-hidden />
+            <b>Object / {id}</b> · {title} · {c.edition}
+          </p>
+        </div>
         {/* Same black Vekon: Papers plate as the site header, for continuity. */}
         <a className="label-header__brand-panel edition__brand" href="/" aria-label="Vekon: Papers">
           <span className="label-header__mark">
@@ -95,10 +101,6 @@ export function PrintedEdition({ id, title, sheets, langs, downloads }: Props) {
             <span className="label-header__word-main">Papers</span>
           </span>
         </a>
-        <p className="edition__id">
-          <span className="edition__dot" aria-hidden />
-          <b>Object / {id}</b> · {title} · {c.edition}
-        </p>
         <div className="edition__controls">
           {langs.length > 1 ? (
             <div className="edition__seg" role="group" aria-label="Language">

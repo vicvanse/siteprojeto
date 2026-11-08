@@ -272,9 +272,7 @@
   position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-  grid-template-areas:
-    "back brand controls"
-    "id id id";
+  grid-template-areas: "left brand controls";
   align-items: center;
   gap: 10px 14px;
   max-width: 1240px;
@@ -301,10 +299,19 @@
   justify-self: end;
 }
 
+/* Back on the far left, the object line right next to the brand plate. */
+.edition__left {
+  grid-area: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  min-width: 0;
+}
+
 .edition__id {
-  grid-area: id;
-  justify-self: center;
-  text-align: center;
+  text-align: right;
+  min-width: 0;
 }
 
 @media (max-width: 820px) {
@@ -313,6 +320,16 @@
       "back brand ."
       "controls controls controls"
       "id id id";
+  }
+
+  .edition__left {
+    display: contents;
+  }
+
+  .edition__id {
+    grid-area: id;
+    justify-self: center;
+    text-align: center;
     margin: 0 8px;
     padding: 12px 12px 10px;
     border-radius: 0 0 24px 24px;
