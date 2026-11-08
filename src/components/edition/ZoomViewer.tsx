@@ -257,7 +257,7 @@ export function ZoomViewer({
             {labels.fit}
           </button>
         </div>
-        <button type="button" className="zv__btn zv__btn--text" onClick={onClose} autoFocus>
+        <button type="button" className="zv__btn zv__btn--text" onClick={onClose}>
           {labels.close}
         </button>
       </div>
