@@ -33,6 +33,21 @@ export async function sendSupabaseMagicLink(email: string, redirectTo: string) {
   return { sent: true as const };
 }
 
+/** Exchange a token_hash from the email (server-side flow) for the user. */
+export async function verifySupabaseTokenHash(tokenHash: string, type: string) {
+  const res = await fetch(`${URL_ENV()}/auth/v1/verify`, {
+    method: "POST",
+    headers: { apikey: ANON(), "Content-Type": "application/json" },
+    body: JSON.stringify({ token_hash: tokenHash, type }),
+    cache: "no-store",
+  });
+  if (!res.ok) return null;
+  const data = (await res.json()) as { user?: { id?: string; email?: string } };
+  const user = data.user;
+  if (!user?.id || !user.email) return null;
+  return { id: user.id, email: user.email.toLowerCase() };
+}
+
 /** Validate a Supabase access token and return the user it belongs to. */
 export async function supabaseUser(accessToken: string) {
   const res = await fetch(`${URL_ENV()}/auth/v1/user`, {

@@ -26,7 +26,11 @@ type AccessContextValue = {
   closeOverlay: () => void;
   requestAccess: (email: string) => Promise<{ ok: boolean; error?: string }>;
   resendAccess: () => Promise<{ ok: boolean; error?: string } | null>;
-  completeAccess: (token: string, kind?: "papers" | "supabase") => Promise<boolean>;
+  completeAccess: (
+    token: string,
+    kind?: "papers" | "supabase" | "hash",
+    type?: string,
+  ) => Promise<boolean>;
   /** Signed in: add a free object to the Collection. */
   claim: (objectId: string) => Promise<void>;
   owns: (id: string) => boolean;
@@ -149,13 +153,23 @@ export function AccessProvider({ children }: { children: React.ReactNode }) {
     return requestAccess(pendingRawEmail);
   }, [pendingRawEmail, requestAccess]);
 
-  const completeAccess = useCallback(async (token: string, kind: "papers" | "supabase" = "papers") => {
+  const completeAccess = useCallback(async (
+    token: string,
+    kind: "papers" | "supabase" | "hash" = "papers",
+    type?: string,
+  ) => {
     setBusy(true);
     try {
       const res = await fetch("/api/access/verify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(kind === "supabase" ? { supabaseToken: token } : { token }),
+        body: JSON.stringify(
+          kind === "supabase"
+            ? { supabaseToken: token }
+            : kind === "hash"
+              ? { tokenHash: token, type }
+              : { token },
+        ),
       });
       const data = (await res.json()) as {
         ok?: boolean;

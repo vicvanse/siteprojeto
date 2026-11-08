@@ -43,6 +43,19 @@ function AccessClient() {
         return;
       }
 
+      /* Supabase email template with ?token_hash=…&type=… */
+      const tokenHash = search.get("token_hash");
+      if (tokenHash) {
+        const ok = await completeAccess(tokenHash, "hash", search.get("type") ?? "magiclink");
+        if (cancelled) return;
+        setStatus(ok ? "ok" : "bad");
+        if (ok) {
+          setMode("collection");
+          router.replace("/?view=collection");
+        }
+        return;
+      }
+
       const token = search.get("t") ?? search.get("token");
       if (token) {
         const ok = await completeAccess(token);
