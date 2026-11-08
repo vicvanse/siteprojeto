@@ -47,7 +47,8 @@ export function Loupe({ hd, children, className, label }: Props) {
   const place = useCallback((clientX: number, clientY: number, touch: boolean) => {
     const el = ref.current;
     if (!el) return;
-    const r = el.getBoundingClientRect();
+    /* Measure the sheet image itself, not the padded frame around it. */
+    const r = (el.querySelector("img") ?? el).getBoundingClientRect();
     const rx = Math.min(Math.max(clientX - r.left, 0), r.width);
     const ry = Math.min(Math.max(clientY - r.top, 0), r.height);
     setState({ x: clientX, y: clientY, rx, ry, w: r.width, h: r.height, touch });
