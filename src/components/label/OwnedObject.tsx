@@ -54,6 +54,9 @@ export function OwnedObject({ artifact }: Props) {
   const relatedBannerLine = linkedBanner
     ? `${t("manifestations.vekon")} · ${linkedBanner.title.split(/\s*\/\s*/)[0]!.trim()} · Banner`
     : null;
+  const pdfHref = artifact.downloads
+    ? (artifact.downloads[editionLang] ?? artifact.downloads.en)
+    : undefined;
   const ownedStamp = `${t("collection.owned")} / ${formatAcquiredStamp(copy.acquired)}`;
   const plaques = isExtra
     ? [artifact.format ?? "PNG", `BANNER / ${artifact.number}`, ownedStamp]
@@ -140,13 +143,28 @@ export function OwnedObject({ artifact }: Props) {
 
               <div className="owned-actions">
                 {!isExtra ? (
-                  <button type="button" className="owned-btn owned-btn--primary">
-                    {openActionLabel(artifact.kind)}
-                  </button>
+                  artifact.edition ? (
+                    <a
+                      className="owned-btn owned-btn--primary"
+                      href={`${artifact.edition}${editionLang === "pt" ? "?lang=pt" : ""}`}
+                    >
+                      {openActionLabel(artifact.kind)}
+                    </a>
+                  ) : (
+                    <button type="button" className="owned-btn owned-btn--primary">
+                      {openActionLabel(artifact.kind)}
+                    </button>
+                  )
                 ) : null}
-                <button type="button" className="owned-btn owned-btn--ghost">
-                  {downloadActionLabel(artifact.kind)}
-                </button>
+                {pdfHref ? (
+                  <a className="owned-btn owned-btn--ghost" href={pdfHref} download>
+                    {downloadActionLabel(artifact.kind)}
+                  </a>
+                ) : (
+                  <button type="button" className="owned-btn owned-btn--ghost">
+                    {downloadActionLabel(artifact.kind)}
+                  </button>
+                )}
               </div>
 
               {!isExtra ? (

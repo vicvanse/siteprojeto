@@ -159,6 +159,11 @@ export function FeaturedObject({
                     {t("get")}
                   </button>
                 )}
+                {artifact.edition ? (
+                  <a className="read-btn" href={artifact.edition}>
+                    {t("read")}
+                  </a>
+                ) : null}
               </div>
 
               {showVekonManifestation ? (

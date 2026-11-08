@@ -48,8 +48,10 @@ export type Artifact = {
   cover?: string;
   /** Avatar overlaid on cover (temporary stand-in). */
   avatar?: string;
-  /** Free objects: PDF per edition language (falls back to English). */
+  /** PDF per edition language (falls back to English). */
   downloads?: Partial<Record<ArtifactLang, string>>;
+  /** Printed edition viewer (sheets as designed), e.g. "/edition/009". */
+  edition?: string;
 };
 
 export const featuredArtifact: Artifact = {
@@ -237,6 +239,7 @@ export const releaseArtifacts: Artifact[] = [
       en: "/downloads/what-remains-of-the-journey-en.pdf",
       pt: "/downloads/o-que-fica-da-jornada-pt.pdf",
     },
+    edition: "/edition/009",
   },
 ];
 

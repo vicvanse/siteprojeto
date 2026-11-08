@@ -119,6 +119,7 @@ export type MessageKey =
   | "object"
   | "pages"
   | "get"
+  | "read"
   | "seeMore"
   | "releases"
   | "objects"
@@ -205,6 +206,7 @@ const en: Dictionary = {
   object: "Object",
   pages: "PAGES",
   get: "Get →",
+  read: "Read →",
   seeMore: "See more →",
   releases: "Releases",
   objects: "objects",
@@ -301,6 +303,7 @@ const pt: Dictionary = {
   object: "Objeto",
   pages: "PÁGINAS",
   get: "Pegar →",
+  read: "Ler →",
   seeMore: "Ver mais →",
   releases: "Lançamentos",
   objects: "objetos",
@@ -354,6 +357,7 @@ const es: Dictionary = {
   object: "Objeto",
   pages: "PÁGINAS",
   get: "Obtener →",
+  read: "Leer →",
   seeMore: "Ver más →",
   releases: "Lanzamientos",
   objects: "objetos",
@@ -407,6 +411,7 @@ const de: Dictionary = {
   object: "Objekt",
   pages: "SEITEN",
   get: "Holen →",
+  read: "Lesen →",
   seeMore: "Mehr →",
   releases: "Releases",
   objects: "Objekte",
@@ -460,6 +465,7 @@ const fr: Dictionary = {
   object: "Objet",
   pages: "PAGES",
   get: "Obtenir →",
+  read: "Lire →",
   seeMore: "Voir plus →",
   releases: "Parutions",
   objects: "objets",
@@ -513,6 +519,7 @@ const it: Dictionary = {
   object: "Oggetto",
   pages: "PAGINE",
   get: "Prendi →",
+  read: "Leggi →",
   seeMore: "Vedi di più →",
   releases: "Uscite",
   objects: "oggetti",
@@ -566,6 +573,7 @@ const ja: Dictionary = {
   object: "オブジェクト",
   pages: "ページ",
   get: "入手 →",
+  read: "読む →",
   seeMore: "もっと見る →",
   releases: "リリース",
   objects: "オブジェクト",
@@ -619,6 +627,7 @@ const ko: Dictionary = {
   object: "오브젝트",
   pages: "페이지",
   get: "받기 →",
+  read: "읽기 →",
   seeMore: "더 보기 →",
   releases: "릴리스",
   objects: "오브젝트",
@@ -672,6 +681,7 @@ const zhCN: Dictionary = {
   object: "物件",
   pages: "页",
   get: "获取 →",
+  read: "阅读 →",
   seeMore: "查看更多 →",
   releases: "发行",
   objects: "物件",
@@ -725,6 +735,7 @@ const zhTW: Dictionary = {
   object: "物件",
   pages: "頁",
   get: "取得 →",
+  read: "閱讀 →",
   seeMore: "查看更多 →",
   releases: "發行",
   objects: "物件",

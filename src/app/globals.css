@@ -4717,3 +4717,28 @@ html[data-view="schema"] .release-slot__more {
 a.get-btn {
   text-decoration: none;
 }
+
+/* Read: opens the printed edition (objects that have one). */
+.read-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 1.1rem;
+  border-radius: 9999px;
+  background: #f2f2f0;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-family: var(--font-mono), ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow:
+    -3px -3px 8px rgba(255, 255, 255, 0.9),
+    4px 5px 12px rgba(0, 0, 0, 0.16);
+}
+
+a.owned-btn {
+  text-decoration: none;
+}
