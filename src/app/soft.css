@@ -273,3 +273,4 @@ html:root .manifestations__meta{font-family:var(--font-sans),sans-serif;font-siz
 html:root .manifestations__note{margin:2px 0 0 98px;font-size:11.5px;font-style:normal;line-height:1.45;color:#6a6a70}
 html:root .viewport--missing .manifestations__item{background:#e6e7eb}
 @media (max-width:900px){html:root .manifestations__row{grid-template-columns:72px auto minmax(0,1fr)}html:root .manifestations__note{margin-left:82px}}
+@media (max-width:900px){html:root body{overflow-x:clip}}
