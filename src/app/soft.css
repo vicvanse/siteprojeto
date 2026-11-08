@@ -357,3 +357,20 @@ html{-webkit-tap-highlight-color:transparent}
 @media (max-width:900px){
   html:root .viewport:not(.viewport--missing) .object-stack__body{box-shadow:4px 5px 10px var(--sd),-2px -3px 6px rgba(255,255,255,.5)!important}
 }
+
+/* ---- Mobile Gallery: colour + language as the desktop plate, one row ---- */
+@media (max-width:900px){
+  .viewport__tools .accent-swatches__compact{display:none!important}
+  .viewport__tools .accent-swatches-panel{width:100%!important;max-width:none!important;padding:7px 10px!important;border-radius:999px!important}
+  .viewport__tools .accent-swatches--full{display:flex!important;flex-direction:row!important;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:4px;position:static!important;width:100%;padding:0!important;margin:0!important;background:transparent!important;border:0!important;box-shadow:none!important}
+  .viewport__tools .accent-swatches__row{display:contents}
+  .viewport__tools .accent-swatch{width:24px!important;height:24px!important;padding:3px!important}
+  .viewport__tools .accent-swatch__chip{width:16px!important;height:16px!important;border-radius:999px!important}
+  .viewport__tools .accent-swatches__lang-desktop{display:flex!important;order:99;width:30px!important;height:30px!important;margin-left:4px}
+  .viewport__tools .accent-swatches__lang-desktop .accent-swatch__chip{width:auto!important;height:auto!important;border-radius:0!important}
+  .viewport__tools .accent-swatches__langs{position:absolute;left:0;right:0;bottom:calc(100% + 10px);z-index:20;grid-template-columns:repeat(5,1fr);justify-items:center;gap:8px;padding:12px;margin:0;border:0;border-radius:22px;background:var(--sb);box-shadow:var(--r-up)}
+}
+
+/* A printed seal, not pixel art: keep it smooth on a paper-white plate. */
+.artwork__avatar:has(img[src$=".png"]){image-rendering:auto;background:#fdfdfb}
+.artwork__avatar img[src$=".png"]{object-position:center}

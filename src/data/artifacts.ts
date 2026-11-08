@@ -240,7 +240,7 @@ export const releaseArtifacts: Artifact[] = [
     description:
       "The founding manifesto of Vekon. How time works, where we spend our hours, and what stays with us.",
     cover: "/covers/009-pasture.gif",
-    avatar: "/avatars/001-cat.gif",
+    avatar: "/avatars/009-heron-seal.png",
     downloads: {
       en: "/downloads/what-remains-of-the-journey-en.pdf",
       pt: "/downloads/o-que-fica-da-jornada-pt.pdf",
