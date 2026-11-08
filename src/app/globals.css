@@ -176,45 +176,49 @@ html[lang="zh-TW"] {
 }
 
 html[data-script="cjk"] body {
-  font-family: var(--font-cjk), var(--font-sans), system-ui, sans-serif;
-  letter-spacing: 1px;
+  /* Latin font first: Geist only covers Latin, so CJK glyphs fall through to Noto
+     while letters, numbers and titles keep the original typeface. */
+  font-family: var(--font-sans), var(--font-cjk), system-ui, sans-serif;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Elements that are Geist Mono in Latin */
 html[data-script="cjk"] .meta,
-html[data-script="cjk"] .view-pill__label,
 html[data-script="cjk"] .view-switcher__label,
 html[data-script="cjk"] .releases__title-pill,
 html[data-script="cjk"] .releases__count-pill,
 html[data-script="cjk"] .object-id-pill,
 html[data-script="cjk"] .price-chip,
 html[data-script="cjk"] .get-btn,
+html[data-script="cjk"] .read-btn,
+html[data-script="cjk"] .owned-btn,
 html[data-script="cjk"] .edition-pill,
-html[data-script="cjk"] .edition-note,
-html[data-script="cjk"] .release-slot__title,
 html[data-script="cjk"] .release-slot__price,
 html[data-script="cjk"] .release-slot__more,
 html[data-script="cjk"] .label-header__tag,
 html[data-script="cjk"] .label-header__word-soft,
 html[data-script="cjk"] .label-header__word-main,
 html[data-script="cjk"] .lang-swatch__chip,
+html[data-script="cjk"] .collection__kicker,
+html[data-script="cjk"] .vekon-mark__caption-line {
+  font-family: var(--font-mono), var(--font-cjk), ui-monospace, monospace;
+}
+
+/* Elements that are Geist (sans) in Latin */
+html[data-script="cjk"] .view-pill__label,
+html[data-script="cjk"] .edition-note,
+html[data-script="cjk"] .release-slot__title,
 html[data-script="cjk"] .object-stack__heading,
 html[data-script="cjk"] .object-stack__sub,
 html[data-script="cjk"] .object-stack__desc,
-html[data-script="cjk"] .collection__kicker,
-html[data-script="cjk"] .vekon-mark__caption-line {
-  font-family: var(--font-cjk), var(--font-sans), system-ui, sans-serif;
-  letter-spacing: 1px;
+html[data-script="cjk"] .collection__title {
+  font-family: var(--font-sans), var(--font-cjk), system-ui, sans-serif;
 }
 
-/* pixel-art.jp body floor (~15px) on chrome — don't shrink rem root */
-html[data-script="cjk"] .view-pill {
-  min-height: 32px;
-  padding: 6px 14px;
-}
-
+/* Small labels: a modest bump so kanji/hangul stay legible, without blowing up
+   the Latin pills next to them. Case and tracking follow the Latin design. */
 html[data-script="cjk"] .view-pill__label,
 html[data-script="cjk"] .view-switcher__label,
 html[data-script="cjk"] .meta,
@@ -226,55 +230,24 @@ html[data-script="cjk"] .price-chip,
 html[data-script="cjk"] .get-btn,
 html[data-script="cjk"] .release-slot__more,
 html[data-script="cjk"] .release-slot__price {
-  font-size: 15px;
-  font-weight: 400;
-  text-transform: none;
-}
-
-/* Medium only where Latin used bold for hierarchy — still lighter than 600/700 */
-html[data-script="cjk"] .view-pill--active .view-pill__label,
-html[data-script="cjk"] .get-btn,
-html[data-script="cjk"] .release-slot__more,
-html[data-script="cjk"] .label-header__word-main,
-html[data-script="cjk"] .object-stack__heading,
-html[data-script="cjk"] .collection__title,
-html[data-script="cjk"] .release-slot__title {
-  font-weight: 500;
-}
-
-html[data-script="cjk"] .releases__title-pill,
-html[data-script="cjk"] .releases__count-pill,
-html[data-script="cjk"] .object-id-pill,
-html[data-script="cjk"] .price-chip {
-  min-height: 32px;
-  padding: 6px 12px;
-}
-
-html[data-script="cjk"] .get-btn,
-html[data-script="cjk"] .release-slot__more {
-  min-height: 40px;
-  padding: 0 1.15rem;
-}
-
-html[data-script="cjk"] .edition-pill {
-  min-height: 30px;
-  padding: 0.35rem 0.75rem;
+  font-size: 12px;
+  letter-spacing: 0.06em;
 }
 
 html[data-script="cjk"] .object-stack__desc,
 html[data-script="cjk"] .edition-note {
-  line-height: 2;
-  font-size: 15px;
+  line-height: 1.9;
+  font-size: 14px;
 }
 
 html[data-script="cjk"] .object-stack__heading {
-  letter-spacing: 1px;
-  line-height: 1.45;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
 }
 
 html[data-script="cjk"] .object-stack__sub {
   font-style: normal;
-  line-height: 1.55;
+  line-height: 1.45;
 }
 
 a {
