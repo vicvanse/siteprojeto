@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
-import { ZoomViewer } from "./ZoomViewer";
+import { Loupe } from "./Loupe";
 import "./edition.css";
 
 type EditionLang = "en" | "pt";
@@ -27,15 +27,8 @@ const COPY: Record<
     spreads: string;
     sequence: string;
     note: string;
-    close: string;
     pdf: string;
     back: string;
-    fit: string;
-    zoomIn: string;
-    zoomOut: string;
-    prev: string;
-    next: string;
-    hint: string;
   }
 > = {
   en: {
@@ -43,32 +36,18 @@ const COPY: Record<
     sheet: "Sheet",
     spreads: "Spreads",
     sequence: "Sequence",
-    note: "Click a sheet to open it and zoom in. This is the edition exactly as printed.",
-    close: "Close ×",
+    note: "Hover a sheet to magnify it and scroll to change the zoom. On a phone, touch and hold. This is the edition exactly as printed.",
     pdf: "PDF ↓",
     back: "← Papers",
-    fit: "Fit",
-    zoomIn: "Zoom in",
-    zoomOut: "Zoom out",
-    prev: "Previous sheet",
-    next: "Next sheet",
-    hint: "Pinch or Ctrl + scroll to zoom · drag to move · double click to switch",
   },
   pt: {
     edition: "Edição impressa",
     sheet: "Folha",
     spreads: "Lado a lado",
     sequence: "Sequência",
-    note: "Clique numa folha para abrir e dar zoom. Esta é a edição exatamente como impressa.",
-    close: "Fechar ×",
+    note: "Passe o mouse sobre a folha para ampliar e role para mudar o aumento. No celular, toque e segure. Esta é a edição exatamente como impressa.",
     pdf: "PDF ↓",
     back: "← Papers",
-    fit: "Ajustar",
-    zoomIn: "Aproximar",
-    zoomOut: "Afastar",
-    prev: "Folha anterior",
-    next: "Próxima folha",
-    hint: "Pinça ou Ctrl + rolagem para zoom · arraste para mover · clique duplo alterna",
   },
 };
 
@@ -79,7 +58,6 @@ export function PrintedEdition({ id, title, sheets, langs, downloads }: Props) {
   const { language } = useLanguage();
   const [lang, setLang] = useState<EditionLang>(langs[0] ?? "en");
   const [mode, setMode] = useState<Mode>("spreads");
-  const [zoom, setZoom] = useState<number | null>(null);
 
   useEffect(() => {
     const fromUrl = new URLSearchParams(window.location.search).get("lang");
@@ -95,8 +73,11 @@ export function PrintedEdition({ id, title, sheets, langs, downloads }: Props) {
   return (
     <div className="edition">
       <header className="edition__bar">
-        {/* Same black Vekon: Papers plate as the site header — continuity, and the way back. */}
-        <a className="label-header__brand-panel edition__brand" href="/" aria-label={c.back}>
+        <a className="edition__btn edition__back" href="/">
+          {c.back}
+        </a>
+        {/* Same black Vekon: Papers plate as the site header, for continuity. */}
+        <a className="label-header__brand-panel edition__brand" href="/" aria-label="Vekon: Papers">
           <span className="label-header__mark">
             <span className="label-header__foil" aria-hidden />
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -160,15 +141,18 @@ export function PrintedEdition({ id, title, sheets, langs, downloads }: Props) {
       <main className="edition__stage" data-mode={mode}>
         {pages.map((n) => (
           <figure key={n} className="edition__sheet">
-            <button
-              type="button"
+            <Loupe
               className="edition__page"
-              onClick={() => setZoom(n)}
-              aria-label={`${c.sheet} ${ROMAN[n - 1]}`}
+              hd={`/editions/${id}/${lang}-${n}-hd.jpg`}
+              label={`${c.sheet} ${ROMAN[n - 1]}`}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={src(n)} alt={`${title}, ${c.sheet} ${ROMAN[n - 1]}`} />
-            </button>
+              <img
+                src={src(n)}
+                alt={`${title}, ${c.sheet} ${ROMAN[n - 1]}`}
+                draggable={false}
+              />
+            </Loupe>
             <figcaption className="edition__cap">
               <span>
                 {c.sheet} {ROMAN[n - 1]} / {ROMAN[sheets - 1]}
@@ -180,29 +164,6 @@ export function PrintedEdition({ id, title, sheets, langs, downloads }: Props) {
       </main>
       <p className="edition__note">{c.note}</p>
 
-      {zoom !== null ? (
-        <ZoomViewer
-          sheet={zoom}
-          sheets={sheets}
-          roman={ROMAN}
-          hd={(n) => `/editions/${id}/${lang}-${n}-hd.jpg`}
-          lo={src}
-          width={2483}
-          height={3508}
-          labels={{
-            sheet: c.sheet,
-            close: c.close,
-            fit: c.fit,
-            zoomIn: c.zoomIn,
-            zoomOut: c.zoomOut,
-            prev: c.prev,
-            next: c.next,
-            hint: c.hint,
-          }}
-          onSheet={(n) => setZoom(Math.min(sheets, Math.max(1, n)))}
-          onClose={() => setZoom(null)}
-        />
-      ) : null}
     </div>
   );
 }
