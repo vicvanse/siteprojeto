@@ -21,9 +21,10 @@ export function HeaderLivingRing() {
 
     const sync = () => {
       const desktop = mq.matches;
-      /* Anchor: Object / NN pill; on the locked Collection, the title. */
+      /* Anchor: Object / NN pill; on the locked Collection, the LOCKED line. */
       const pill =
         document.querySelector(".object-id-pill") ??
+        document.querySelector(".collection__kicker") ??
         document.querySelector(".collection__title");
 
       if (desktop) {
