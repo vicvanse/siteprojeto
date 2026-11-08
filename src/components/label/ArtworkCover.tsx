@@ -1,4 +1,8 @@
+"use client";
+
 import type { Artifact } from "@/data/artifacts";
+import { useLanguage } from "@/components/LanguageProvider";
+import { kindKey } from "@/lib/i18n";
 
 type Props = {
   artifact: Artifact;
@@ -11,15 +15,9 @@ type Props = {
  * Native <img> + pixelated rendering — Next/Image re-encode blurs pixel banners.
  */
 export function ArtworkCover({ artifact, size = "featured" }: Props) {
+  const { t } = useLanguage();
   const isGuide = artifact.kind === "field-guide";
-  const label =
-    artifact.kind === "extra"
-      ? "Banner"
-      : isGuide
-        ? "Guide"
-        : artifact.kind === "essay"
-          ? "Essay"
-          : "Booklet";
+  const label = t(kindKey(artifact.kind));
   const hasCover = Boolean(artifact.cover);
   const avatarPx = 72;
   const showAvatar = size === "featured";

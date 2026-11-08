@@ -4,13 +4,12 @@ import { useLayoutEffect, useRef, useState, type CSSProperties } from "react";
 import type { Artifact, ArtifactLang } from "@/data/artifacts";
 import {
   downloadActionLabel,
-  kindLabel,
   openActionLabel,
   relatedBanner,
 } from "@/data/artifacts";
 import { useAccess } from "@/components/AccessProvider";
 import { useLanguage } from "@/components/LanguageProvider";
-import { artifactDescriptionKey } from "@/lib/i18n";
+import { artifactDescriptionKey, artifactSubtitleKey, kindKey } from "@/lib/i18n";
 import { formatAcquiredStamp, personalCopy } from "@/lib/personal-copy";
 import { ArtifactFrame } from "./ArtifactFrame";
 import { ArtworkCover } from "./ArtworkCover";
@@ -119,8 +118,10 @@ export function OwnedObject({ artifact }: Props) {
               <h1 id="owned-title" className="object-stack__heading">
                 {artifact.title}
               </h1>
-              {artifact.subtitle ? (
-                <p className="object-stack__sub">{artifact.subtitle}</p>
+              {(artifactSubtitleKey(artifact.id) ? t(artifactSubtitleKey(artifact.id)!) : artifact.subtitle) ? (
+                <p className="object-stack__sub">
+                  {artifactSubtitleKey(artifact.id) ? t(artifactSubtitleKey(artifact.id)!) : artifact.subtitle}
+                </p>
               ) : null}
             </div>
 
@@ -128,7 +129,7 @@ export function OwnedObject({ artifact }: Props) {
 
             <div className="object-stack__body">
               <p className="owned-kind">
-                {kindLabel(artifact.kind)} / {artifact.number}
+                {t(kindKey(artifact.kind)).toUpperCase()} / {artifact.number}
               </p>
 
               {description ? (

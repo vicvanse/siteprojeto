@@ -384,3 +384,7 @@ html{-webkit-tap-highlight-color:transparent}
 /* Desktop ring: "MEMORY • PERSONAS" is wider than the ring; on narrower screens
    pull the ring in so the caption stays inside the header plate. */
 @media (min-width:901px){.label-header__ring{right:max(0px, calc(46px - (100vw - 100%) / 4))}}
+
+/* Price / Get / Read: buttons size to their label, arrow stays on the same line */
+.object-stack__acquire{flex-wrap:wrap;row-gap:10px}
+.object-stack__acquire > *{flex:0 0 auto;white-space:nowrap}

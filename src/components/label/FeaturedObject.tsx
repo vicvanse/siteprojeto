@@ -11,7 +11,7 @@ import { useAccess } from "@/components/AccessProvider";
 import { useLanguage } from "@/components/LanguageProvider";
 import { useViewMode } from "@/components/ViewModeProvider";
 import { PENDING_GET_KEY } from "./pending-get";
-import { artifactDescriptionKey } from "@/lib/i18n";
+import { artifactBannerKey, artifactDescriptionKey, artifactSubtitleKey } from "@/lib/i18n";
 import { ArtifactFrame } from "./ArtifactFrame";
 import { ArtworkCover } from "./ArtworkCover";
 import { PanelHud } from "./Hud";
@@ -47,9 +47,14 @@ export function FeaturedObject({ artifact, variant = "default" }: Props) {
   const banner = relatedBanner(artifact);
   const showVekonManifestation =
     hasManifestation(artifact, "banner") && Boolean(banner);
-  const bannerLabel = banner
-    ? `${banner.title.split(/\s*\/\s*/)[0]!.trim()} BANNER`
-    : "";
+  const bannerKey = artifactBannerKey(artifact.id);
+  const bannerLabel = bannerKey
+    ? t(bannerKey)
+    : banner
+      ? `${banner.title.split(/\s*\/\s*/)[0]!.trim()} BANNER`
+      : "";
+  const subKey = artifactSubtitleKey(artifact.id);
+  const subtitle = subKey ? t(subKey) : artifact.subtitle;
   const freeDownload =
     artifact.status === "free" && artifact.downloads
       ? (artifact.downloads[language as ArtifactLang] ?? artifact.downloads.en)
@@ -112,8 +117,8 @@ export function FeaturedObject({ artifact, variant = "default" }: Props) {
               <h1 id="featured-title" className="object-stack__heading">
                 {artifact.title}
               </h1>
-              {artifact.subtitle ? (
-                <p className="object-stack__sub">{artifact.subtitle}</p>
+              {subtitle ? (
+                <p className="object-stack__sub">{subtitle}</p>
               ) : null}
             </div>
 

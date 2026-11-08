@@ -3,6 +3,7 @@
 import type { Artifact } from "@/data/artifacts";
 import { formatPrice } from "@/data/artifacts";
 import { useLanguage } from "@/components/LanguageProvider";
+import { artifactSubtitleKey } from "@/lib/i18n";
 import { ArtworkCover } from "./ArtworkCover";
 import { ReleasesHud } from "./Hud";
 
@@ -73,8 +74,10 @@ export function ReleasesStrip({ artifacts, activeId, onSelect }: Props) {
                   </span>
                 </span>
                 <span className="release-slot__meta">
-                  {artifact.subtitle ? (
-                    <span className="release-slot__sub">{artifact.subtitle}</span>
+                  {(artifactSubtitleKey(artifact.id) ? t(artifactSubtitleKey(artifact.id)!) : artifact.subtitle) ? (
+                    <span className="release-slot__sub">
+                      {artifactSubtitleKey(artifact.id) ? t(artifactSubtitleKey(artifact.id)!) : artifact.subtitle}
+                    </span>
                   ) : null}
                   <span className="release-slot__more">{t("seeMore")}</span>
                 </span>

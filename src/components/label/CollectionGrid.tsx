@@ -2,10 +2,10 @@
 
 import { Fragment, useEffect, useMemo, useState } from "react";
 import type { Artifact, ArtifactKind } from "@/data/artifacts";
-import { formatPrice, isExtra, isPublication, kindLabel } from "@/data/artifacts";
+import { formatPrice, isExtra, isPublication } from "@/data/artifacts";
 import { useAccess } from "@/components/AccessProvider";
 import { useLanguage } from "@/components/LanguageProvider";
-import { LANGUAGES, LANGUAGE_NAMES, type Language } from "@/lib/i18n";
+import { LANGUAGES, LANGUAGE_NAMES, kindKey, type Language } from "@/lib/i18n";
 import { useViewMode } from "@/components/ViewModeProvider";
 import { ArtworkCover } from "./ArtworkCover";
 import { FeaturedObject } from "./FeaturedObject";
@@ -295,7 +295,7 @@ export function CollectionGrid({
                         <span className="shelf-card__name">{artifact.title}</span>
                         <span className="shelf-card__kind">
                           {held
-                            ? kindLabel(artifact.kind)
+                            ? t(kindKey(artifact.kind)).toUpperCase()
                             : artifact.status === "free"
                               ? t("free")
                               : formatPrice(artifact)}
