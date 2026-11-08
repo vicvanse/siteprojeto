@@ -21,7 +21,10 @@ export function HeaderLivingRing() {
 
     const sync = () => {
       const desktop = mq.matches;
-      const pill = document.querySelector(".object-id-pill");
+      /* Anchor: Object / NN pill; on the locked Collection, the title. */
+      const pill =
+        document.querySelector(".object-id-pill") ??
+        document.querySelector(".collection__title");
 
       if (desktop) {
         const h = Math.max(
@@ -38,9 +41,9 @@ export function HeaderLivingRing() {
       }
 
       /* Mobile: size near the Object / NN pill; pin vertical center to it. */
-      const pillH = pill
+      const pillH = pill?.classList.contains("object-id-pill")
         ? Math.round(pill.getBoundingClientRect().height)
-        : 28;
+        : 23;
       const nextSize = Math.max(44, Math.round(pillH * 2.15));
       setSize(nextSize);
 
@@ -48,14 +51,8 @@ export function HeaderLivingRing() {
       if (!el || !header || !pill) return;
       const headerRect = header.getBoundingClientRect();
       const pillRect = pill.getBoundingClientRect();
-      /* Sit the ring higher: top third of Object / NN, not dead center. */
-      const lift = Math.round(nextSize * 0.48);
-      const top =
-        pillRect.top -
-        headerRect.top +
-        pillRect.height / 2 -
-        nextSize / 2 -
-        lift;
+      /* Same vertical center as Object / NN. */
+      const top = pillRect.top - headerRect.top + pillRect.height / 2 - nextSize / 2;
       el.style.top = `${Math.round(top)}px`;
       el.style.transform = "none";
     };
@@ -70,6 +67,10 @@ export function HeaderLivingRing() {
     window.addEventListener("resize", sync);
     mq.addEventListener("change", sync);
 
+    /* The entrance animation moves the panels; measure again once it settles. */
+    document.addEventListener("animationend", sync, true);
+    const settle = window.setTimeout(sync, 2700);
+
     /* Object / NN mounts after Gallery/Collection swaps — catch late pills. */
     const mo = new MutationObserver(sync);
     if (main) mo.observe(main, { childList: true, subtree: true });
@@ -77,6 +78,8 @@ export function HeaderLivingRing() {
     return () => {
       ro.disconnect();
       mo.disconnect();
+      document.removeEventListener("animationend", sync, true);
+      window.clearTimeout(settle);
       window.removeEventListener("resize", sync);
       mq.removeEventListener("change", sync);
     };

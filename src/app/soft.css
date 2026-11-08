@@ -301,3 +301,15 @@ html[data-enter="quick"] .collection__stage,html[data-enter="quick"] .collection
   animation-duration:.45s;animation-delay:calc(var(--i,0) * 60ms)}
 html[data-enter="quick"] .label-header{animation-duration:.3s;animation-delay:0s}
 @media (prefers-reduced-motion:reduce){html[data-enter] *{animation:none!important}}
+
+/* ---- Mobile header: closed plate, room for the view pills ---- */
+@media (max-width:900px){
+  /* Floating plate inside the viewport (100vw included the scrollbar and
+     hid the right corner). */
+  html:root[data-view] .label-header::before{inset:0 -8px!important;border-radius:0 0 24px 24px!important}
+  html:root .label-header__view-panel .view-switcher__label{display:none}
+  html:root .label-header__view-panel .view-pill{padding-inline:.7rem}
+  /* Locked Collection: language/colour chips move to their own row. */
+  body:not(:has(.viewport__tools)) .label-header__row{flex-wrap:wrap;row-gap:10px}
+  body:not(:has(.viewport__tools)) .label-header__accents{order:3;flex:0 0 100%;display:flex!important;justify-content:center;margin-top:0!important}
+}
