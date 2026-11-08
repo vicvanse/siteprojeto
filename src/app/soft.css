@@ -314,5 +314,7 @@ html[data-enter="quick"] .label-header{animation-duration:.3s;animation-delay:0s
   /* Locked Collection: only the language chip, inline; colour waits for the Gallery. */
   body:not(:has(.viewport__tools)) .label-header__accents{display:flex!important;align-items:center;margin:0 0 0 6px!important}
   body:not(:has(.viewport__tools)) .accent-swatches__compact .accent-swatch:not(.lang-swatch){display:none!important}
+  body:not(:has(.viewport__tools)) .label-header__accents .accent-swatches-panel{padding:4px!important;border-radius:999px!important}
+  html:root .label-header__view-panel .view-pill{white-space:nowrap}
 }
 @media (max-width:380px){html:root .label-header__view-panel .view-pill{padding-inline:.5rem}html:root .label-header__brand-panel{padding-right:9px}}
