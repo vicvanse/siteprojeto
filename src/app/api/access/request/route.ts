@@ -57,7 +57,10 @@ export async function POST(request: Request) {
 
   /* Real accounts: Supabase sends the link (shared with Vekon Life). */
   if (supabaseEnabled()) {
-    const sent = await sendSupabaseMagicLink(identity, `${siteOrigin()}/access`);
+    /* Return to the exact site the reader is on (VERCEL_URL is the
+       per-deployment host, which isn't in Supabase's allowed list). */
+    const origin = request.headers.get("origin") ?? new URL(request.url).origin;
+    const sent = await sendSupabaseMagicLink(identity, `${origin || siteOrigin()}/access`);
     if (!sent.sent) {
       return NextResponse.json(
         { ok: false, error: sent.status === 429 ? "rate_limited" : "send_failed" },
