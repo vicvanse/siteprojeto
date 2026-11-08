@@ -330,3 +330,13 @@ html[data-enter="quick"] .label-header{animation-duration:.45s;animation-delay:0
   /* The ring at Object / NN height is gone on mobile. */
   html:root .label-header__ring{display:none!important}
 }
+
+/* ---- Touch: no grey tap flash, no sticky hover after a tap ---- */
+html{-webkit-tap-highlight-color:transparent}
+@media (hover:none){
+  html:root .release-slot__btn:hover .release-slot__shell{box-shadow:var(--r-mid)!important}
+  html:root .release-slot__btn:hover .release-slot__more{background:var(--sb)!important;box-shadow:var(--r-sm)!important;color:#3a3a3e!important}
+  html:root .release-slot__btn--active .release-slot__shell,html:root .release-slot__btn--active:hover .release-slot__shell{box-shadow:var(--r-in)!important}
+  html:root .release-slot__btn--active .release-slot__more,html:root .release-slot__btn--active:hover .release-slot__more{background:#2a2a2e!important;color:#f2f2f4!important;box-shadow:var(--r-sm)!important}
+  html:root .shelf-card:not(.shelf-card--missing):hover .shelf-card__shell{transform:none;box-shadow:var(--r-mid)!important}
+}
