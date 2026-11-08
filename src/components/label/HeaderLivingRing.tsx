@@ -83,8 +83,16 @@ export function HeaderLivingRing() {
 
     /* Gallery ↔ Collection: hide at once, come back on the new view's pill
        once the old view has faded out. */
+    let lastView = document.documentElement.dataset.view;
     const viewObs = new MutationObserver(() => {
-      if (mq.matches) return;
+      const next = document.documentElement.dataset.view;
+      const prev = lastView;
+      lastView = next;
+      /* First set on load, or no real change: just place it. */
+      if (!prev || prev === next || mq.matches) {
+        sync();
+        return;
+      }
       switching = true;
       show(false);
       window.clearTimeout(switchTimer);
