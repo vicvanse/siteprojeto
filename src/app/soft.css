@@ -54,7 +54,7 @@ html[data-view=gallery] .artifact-frame__tick{opacity:.8;background:#1a1a1a}
 .cx-rule{background:currentColor;opacity:.18}
 .viewport__panel > .cx-code{top:6px}
 .cx-account{position:absolute;top:50%;transform:translateY(-50%)}
-@media (max-width:1100px){.cx-side{display:none!important}}}
+@media (max-width:1440px){.cx-side{display:none!important}}}
 @media (max-width:900px){.cx{display:none!important}
 .releases{margin-top:2rem;padding:1rem .85rem 1.25rem;border:1px solid #d8d8d8;border-radius:14px;background:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.65),0 1px 0 #e0e0e0,0 10px 22px rgba(0,0,0,.05)}
 .releases__grid{gap:1.4rem .6rem}.release-slot__shell{padding:7px 7px 6px}.release-slot__title{font-size:.6rem}
@@ -261,7 +261,7 @@ html:root .read-btn{background:var(--sb);box-shadow:var(--r-sm)}
   .cx-side--right{right:2px}
   .collection__section-head--above-stage .cx-account{right:0}
 }
-@media (max-width:1100px){.cx-side{display:none!important}}
+@media (max-width:1440px){.cx-side{display:none!important}}
 
 /* ---- Manifestations in the same language as Themes / References ---- */
 html:root .manifestations{gap:10px;margin-top:12px;padding-top:12px;border-top:1px solid rgba(0,0,0,.06)}
