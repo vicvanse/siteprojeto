@@ -120,6 +120,8 @@ export type MessageKey =
   | "pages"
   | "get"
   | "read"
+  | "acquire.title"
+  | "acquire.note"
   | "access.google"
   | "access.googleLead"
   | "access.rateLimited"
@@ -181,6 +183,8 @@ export type MessageKey =
 type Dictionary = Record<MessageKey, string>;
 
 const en: Dictionary = {
+  "acquire.title": "Acquired",
+  "acquire.note": "Now in your Collection.",
   "access.google": "Continue with Google",
   "access.googleLead": "Sign in with Google to keep your objects in one place, here and in Vekon Life.",
   "access.rateLimited": "Too many links requested. Please wait a few minutes and try again.",
@@ -303,6 +307,8 @@ const en: Dictionary = {
 
 const pt: Dictionary = {
   ...en,
+  "acquire.title": "Adquirido",
+  "acquire.note": "Agora na sua Coleção.",
   "access.google": "Continuar com Google",
   "access.googleLead": "Entre com o Google para guardar seus objetos num só lugar, aqui e no Vekon Life.",
   "access.rateLimited": "Muitos links pedidos. Espere alguns minutos e tente de novo.",
@@ -425,6 +431,8 @@ const pt: Dictionary = {
 
 const es: Dictionary = {
   ...en,
+  "acquire.title": "Adquirido",
+  "acquire.note": "Ahora en tu colección.",
   "access.google": "Continuar con Google",
   "access.googleLead": "Entra con Google para guardar tus objetos en un solo lugar, aquí y en Vekon Life.",
   "access.rateLimited": "Demasiados enlaces solicitados. Espera unos minutos y vuelve a intentarlo.",
@@ -546,6 +554,8 @@ const es: Dictionary = {
 
 const de: Dictionary = {
   ...en,
+  "acquire.title": "Erworben",
+  "acquire.note": "Jetzt in deiner Sammlung.",
   "access.google": "Mit Google fortfahren",
   "access.googleLead": "Melde dich mit Google an, um deine Objekte an einem Ort zu behalten, hier und in Vekon Life.",
   "access.rateLimited": "Zu viele Links angefordert. Warte ein paar Minuten und versuche es erneut.",
@@ -667,6 +677,8 @@ const de: Dictionary = {
 
 const fr: Dictionary = {
   ...en,
+  "acquire.title": "Acquis",
+  "acquire.note": "Désormais dans votre collection.",
   "access.google": "Continuer avec Google",
   "access.googleLead": "Connectez-vous avec Google pour garder vos objets au même endroit, ici et dans Vekon Life.",
   "access.rateLimited": "Trop de liens demandés. Attendez quelques minutes et réessayez.",
@@ -788,6 +800,8 @@ const fr: Dictionary = {
 
 const it: Dictionary = {
   ...en,
+  "acquire.title": "Acquisito",
+  "acquire.note": "Ora nella tua collezione.",
   "access.google": "Continua con Google",
   "access.googleLead": "Accedi con Google per tenere i tuoi oggetti in un unico posto, qui e in Vekon Life.",
   "access.rateLimited": "Troppi link richiesti. Attendi qualche minuto e riprova.",
@@ -909,6 +923,8 @@ const it: Dictionary = {
 
 const ja: Dictionary = {
   ...en,
+  "acquire.title": "入手",
+  "acquire.note": "コレクションに追加されました。",
   "access.google": "Google で続ける",
   "access.googleLead": "Google でログインして、オブジェクトをここと Vekon Life でひとつにまとめましょう。",
   "access.rateLimited": "リンクのリクエストが多すぎます。数分待ってからもう一度お試しください。",
@@ -1030,6 +1046,8 @@ const ja: Dictionary = {
 
 const ko: Dictionary = {
   ...en,
+  "acquire.title": "획득",
+  "acquire.note": "컬렉션에 추가되었습니다.",
   "access.google": "Google로 계속하기",
   "access.googleLead": "Google로 로그인해 오브젝트를 이곳과 Vekon Life에서 한곳에 보관하세요.",
   "access.rateLimited": "링크 요청이 너무 많습니다. 몇 분 후 다시 시도하세요.",
@@ -1151,6 +1169,8 @@ const ko: Dictionary = {
 
 const zhCN: Dictionary = {
   ...en,
+  "acquire.title": "已获得",
+  "acquire.note": "已加入你的收藏。",
   "access.google": "使用 Google 继续",
   "access.googleLead": "使用 Google 登录，把你的物件保存在同一个地方，这里和 Vekon Life 都可以用。",
   "access.rateLimited": "请求的链接过多。请等几分钟再试。",
@@ -1272,6 +1292,8 @@ const zhCN: Dictionary = {
 
 const zhTW: Dictionary = {
   ...en,
+  "acquire.title": "已取得",
+  "acquire.note": "已加入你的收藏。",
   "access.google": "使用 Google 繼續",
   "access.googleLead": "使用 Google 登入，把你的物件保存在同一個地方，這裡和 Vekon Life 都能用。",
   "access.rateLimited": "請求的連結過多。請等幾分鐘再試。",

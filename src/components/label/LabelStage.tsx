@@ -12,6 +12,7 @@ import { CollectionGrid } from "./CollectionGrid";
 import { FeaturedObject } from "./FeaturedObject";
 import { SideHud } from "./Hud";
 import { PapersIntro } from "./PapersIntro";
+import { AcquireEffect, announceAcquired } from "./AcquireEffect";
 import { ReleasesStrip } from "./ReleasesStrip";
 import { VekonMarkBadge } from "./VekonMarkBadge";
 
@@ -46,6 +47,18 @@ export function LabelStage({ initial, releases }: Props) {
     },
     [reduceMotion],
   );
+
+  /* Back from checkout: /?acquired=<id> plays the acquisition moment once. */
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("acquired");
+    if (!id) return;
+    params.delete("acquired");
+    const rest = params.toString();
+    window.history.replaceState(null, "", `${window.location.pathname}${rest ? `?${rest}` : ""}`);
+    const target = catalog.find((a) => a.id === id);
+    if (target) window.setTimeout(() => announceAcquired(target), 600);
+  }, [catalog]);
 
   /* Back from login with a pending GET: focus that object in Collection. */
   useEffect(() => {
@@ -102,6 +115,7 @@ export function LabelStage({ initial, releases }: Props) {
         <VekonMarkBadge />
       </footer>
       <AccessOverlay />
+      <AcquireEffect />
     </>
   );
 }

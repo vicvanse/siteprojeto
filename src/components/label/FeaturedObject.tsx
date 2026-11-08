@@ -15,6 +15,7 @@ import { artifactBannerKey, artifactDescriptionKey, artifactSubtitleKey } from "
 import { ArtifactFrame } from "./ArtifactFrame";
 import { ArtworkCover } from "./ArtworkCover";
 import { PanelHud } from "./Hud";
+import { announceAcquired } from "./AcquireEffect";
 import { ViewportTools } from "./ViewportTools";
 
 type Props = {
@@ -25,7 +26,7 @@ type Props = {
 
 export function FeaturedObject({ artifact, variant = "default" }: Props) {
   const { t, language } = useLanguage();
-  const { authenticated, openOverlay, claim } = useAccess();
+  const { authenticated, openOverlay, claim, owns } = useAccess();
   const { setMode } = useViewMode();
 
   /* Not signed in: go to Collection and ask for login; remember the object
@@ -140,7 +141,11 @@ export function FeaturedObject({ artifact, variant = "default" }: Props) {
                     rel="noopener"
                     onClick={() => {
                       /* Signed in: the free object also joins the Collection. */
-                      if (authenticated) void claim(artifact.id);
+                      if (authenticated) {
+                        const isNew = !owns(artifact.id);
+                        void claim(artifact.id);
+                        if (isNew) announceAcquired(artifact);
+                      }
                     }}
                   >
                     {t("get")}
