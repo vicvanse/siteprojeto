@@ -352,3 +352,8 @@ html{-webkit-tap-highlight-color:transparent}
 .releases__grid:not(:has(> li:nth-child(6))) > li,
 .collection-shelf:not(:has(> li:nth-child(6))) > li{flex:0 0 calc((100% - (var(--cols) - 1) * var(--gx)) / var(--cols));min-width:0}
 .collection-shelf:not(:has(> li:nth-child(6))) > .cx-miss-head{flex-basis:100%}
+
+/* Mobile: lighter white haze from the description card over the coloured title */
+@media (max-width:900px){
+  html:root .viewport:not(.viewport--missing) .object-stack__body{box-shadow:4px 5px 10px var(--sd),-2px -3px 6px rgba(255,255,255,.5)!important}
+}
