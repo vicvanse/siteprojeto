@@ -56,7 +56,9 @@ export function ZoomViewer({
   const fitRef = useRef(1);
   const pointers = useRef(new Map<number, { x: number; y: number }>());
   const pinch = useRef<{ d: number; mx: number; my: number } | null>(null);
-  const lastTap = useRef(0);
+  /* Taps are judged on release: one finger, short, barely moved. */
+  const tapStart = useRef<{ x: number; y: number; t: number; moved: boolean } | null>(null);
+  const lastTap = useRef<{ x: number; y: number; t: number } | null>(null);
 
   const box = () => {
     const el = areaRef.current;
@@ -167,16 +169,11 @@ export function ZoomViewer({
         my: (a.y + b.y) / 2,
       };
     }
-    /* Double tap / double click: toggle between fit and 2.5× at that point. */
-    const now = Date.now();
-    if (pointers.current.size === 1 && now - lastTap.current < 300) {
-      const p = local(e);
-      const atFit = viewRef.current.s <= fitRef.current * 1.05;
-      if (atFit) zoomAt(2.5, p.x, p.y);
-      else fit();
-      lastTap.current = 0;
+    if (pointers.current.size === 1) {
+      tapStart.current = { ...local(e), t: Date.now(), moved: false };
     } else {
-      lastTap.current = now;
+      tapStart.current = null; // a second finger means pinch, not a tap
+      lastTap.current = null;
     }
   };
 
@@ -185,6 +182,8 @@ export function ZoomViewer({
     if (!prev) return;
     const p = local(e);
     pointers.current.set(e.pointerId, p);
+    const ts = tapStart.current;
+    if (ts && Math.hypot(p.x - ts.x, p.y - ts.y) > 8) ts.moved = true;
     if (pointers.current.size === 2 && pinch.current) {
       const [a, b] = [...pointers.current.values()] as [
         { x: number; y: number },
@@ -214,6 +213,20 @@ export function ZoomViewer({
   const onPointerUp = (e: React.PointerEvent) => {
     pointers.current.delete(e.pointerId);
     if (pointers.current.size < 2) pinch.current = null;
+    const ts = tapStart.current;
+    tapStart.current = null;
+    if (!ts || ts.moved || Date.now() - ts.t > 300 || pointers.current.size > 0) return;
+    /* Double tap / double click: toggle between fit and 2.5× at that point. */
+    const prev = lastTap.current;
+    const now = Date.now();
+    if (prev && now - prev.t < 320 && Math.hypot(ts.x - prev.x, ts.y - prev.y) < 30) {
+      const atFit = viewRef.current.s <= fitRef.current * 1.05;
+      if (atFit) zoomAt(2.5, ts.x, ts.y);
+      else fit();
+      lastTap.current = null;
+    } else {
+      lastTap.current = { x: ts.x, y: ts.y, t: now };
+    }
   };
 
   const percent = fitRef.current ? Math.round((view.s / fitRef.current) * 100) : 100;

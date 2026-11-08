@@ -117,7 +117,7 @@ export function PrintedEdition({ id, title, sheets, langs, downloads }: Props) {
               ))}
             </div>
           ) : null}
-          <div className="edition__seg" role="group" aria-label="View">
+          <div className="edition__seg edition__seg--mode" role="group" aria-label="View">
             <button
               type="button"
               aria-pressed={mode === "spreads"}

@@ -351,3 +351,61 @@
     display: none;
   }
 }
+
+/* ---- Mobile reading: the bar scrolls away, sheets use the full width ---- */
+@media (max-width: 820px) {
+  .edition__bar {
+    position: static;
+    box-shadow: none;
+    gap: 10px 8px;
+    padding: 12px 12px 4px;
+  }
+
+  .edition__bar > .edition__btn {
+    order: 1;
+  }
+
+  .edition__controls {
+    order: 2;
+    gap: 8px;
+  }
+
+  .edition__id {
+    order: 3;
+    flex: 0 0 100%;
+    font-size: 9.5px;
+    line-height: 1.5;
+  }
+
+  /* One column already: Spreads and Sequence look the same here. */
+  .edition__seg--mode {
+    display: none;
+  }
+
+  .edition__seg button,
+  .edition__btn {
+    min-height: 34px;
+    padding: 0 12px;
+  }
+
+  .edition__stage,
+  .edition__stage[data-mode="sequence"] {
+    gap: 22px;
+    padding: 12px 8px 0;
+  }
+
+  .edition__page {
+    padding: 6px;
+    border-radius: 14px;
+    box-shadow: 6px 6px 14px var(--ed-dark), -6px -6px 14px var(--ed-light);
+  }
+
+  .edition__note {
+    margin-top: 24px;
+    padding-bottom: 48px;
+  }
+
+  .zv__bar {
+    height: 56px !important;
+  }
+}
