@@ -57,7 +57,9 @@ export function LabelStage({ initial, releases }: Props) {
     const rest = params.toString();
     window.history.replaceState(null, "", `${window.location.pathname}${rest ? `?${rest}` : ""}`);
     const target = catalog.find((a) => a.id === id);
-    if (target) window.setTimeout(() => announceAcquired(target), 600);
+    /* Wait for the entrance cover to lift before the moment plays. */
+    const delay = document.documentElement.dataset.enter === "full" ? 1900 : 600;
+    if (target) window.setTimeout(() => announceAcquired(target), delay);
   }, [catalog]);
 
   /* Back from login with a pending GET: focus that object in Collection. */
