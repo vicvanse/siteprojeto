@@ -380,3 +380,7 @@ html{-webkit-tap-highlight-color:transparent}
   .accent-swatches__langs .accent-swatch{border:0!important;border-radius:999px!important}
   .viewport__tools .accent-swatches-panel{background:transparent!important;box-shadow:none!important;padding:0!important}
 }
+
+/* Desktop ring: "MEMORY • PERSONAS" is wider than the ring; on narrower screens
+   pull the ring in so the caption stays inside the header plate. */
+@media (min-width:901px){.label-header__ring{right:max(0px, calc(46px - (100vw - 100%) / 4))}}
