@@ -409,3 +409,8 @@
     height: 56px !important;
   }
 }
+
+/* The edition has its own bar ("← Papers"); the site header would only duplicate it. */
+.shell:has(.edition) > .label-header {
+  display: none;
+}
