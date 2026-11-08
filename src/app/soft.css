@@ -340,3 +340,15 @@ html{-webkit-tap-highlight-color:transparent}
   html:root .release-slot__btn--active .release-slot__more,html:root .release-slot__btn--active:hover .release-slot__more{background:#2a2a2e!important;color:#f2f2f4!important;box-shadow:var(--r-sm)!important}
   html:root .shelf-card:not(.shelf-card--missing):hover .shelf-card__shell{transform:none;box-shadow:var(--r-mid)!important}
 }
+
+/* ---- Up to 5 objects: centre them (same card width); from 6 on, the full grid ---- */
+.releases__grid{--cols:6;--gx:.6rem}
+.collection-shelf{--cols:6;--gx:.55rem}
+@media (min-width:901px) and (max-width:1100px){.collection-shelf{--cols:5}}
+@media (max-width:900px){.releases__grid{--cols:3;--gx:.75rem}.collection-shelf{--cols:3;--gx:5px}}
+@media (max-width:520px){.releases__grid{--cols:2;--gx:.7rem}}
+.releases__grid:not(:has(> li:nth-child(6))),
+.collection-shelf:not(:has(> li:nth-child(6))){display:flex;flex-wrap:wrap;justify-content:center;column-gap:var(--gx)}
+.releases__grid:not(:has(> li:nth-child(6))) > li,
+.collection-shelf:not(:has(> li:nth-child(6))) > li{flex:0 0 calc((100% - (var(--cols) - 1) * var(--gx)) / var(--cols));min-width:0}
+.collection-shelf:not(:has(> li:nth-child(6))) > .cx-miss-head{flex-basis:100%}
