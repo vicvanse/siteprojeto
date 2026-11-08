@@ -370,3 +370,13 @@ html{-webkit-tap-highlight-color:transparent}
 /* A printed seal, not pixel art: keep it smooth on a paper-white plate. */
 .artwork__avatar:has(img[src$=".png"]){image-rendering:auto;background:#fdfdfb}
 .artwork__avatar img[src$=".png"]{object-position:center}
+
+/* Mobile compact face = the desktop header circles (round soft buttons, round chips) */
+@media (max-width:900px){
+  .accent-swatches__compact .accent-swatch{width:36px!important;height:36px!important;padding:0!important;border:0!important;border-radius:999px!important;background:var(--sb)!important;box-shadow:var(--r-sm)!important}
+  .accent-swatches__compact .accent-swatch__chip:not(.lang-swatch__chip){width:20px!important;height:20px!important;border-radius:999px!important;background-size:400% 400%!important;background-position:100% 100%!important;box-shadow:inset 1px 1px 2px rgba(0,0,0,.3)!important}
+  .accent-swatches__compact .lang-swatch__chip,
+  .accent-swatches__langs .lang-swatch__chip{background:transparent!important;box-shadow:none!important;border-radius:999px!important;color:#3a3a3e!important}
+  .accent-swatches__langs .accent-swatch{border:0!important;border-radius:999px!important}
+  .viewport__tools .accent-swatches-panel{background:transparent!important;box-shadow:none!important;padding:0!important}
+}

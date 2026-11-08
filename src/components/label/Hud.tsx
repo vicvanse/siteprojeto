@@ -64,7 +64,7 @@ export function SideHud({ first, last }: { first: string; last: string }) {
         VEKON — PAPERS — ARCHIVE 2026
       </div>
       <div className="cx cx-side cx-side--right" aria-hidden>
-        OBJECTS {last} — {first} · INDEPENDENT PRINTED MATTER
+        OBJECTS — INDEPENDENT PRINTED MATTER
       </div>
     </>
   );
