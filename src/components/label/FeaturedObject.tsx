@@ -175,9 +175,6 @@ export function FeaturedObject({ artifact, variant = "default" }: Props) {
                       {t("manifestations.bannerCosmetic")}
                     </span>
                   </div>
-                  <p className="manifestations__note">
-                    {t("manifestations.purchaseNote")}
-                  </p>
                 </div>
               ) : null}
 

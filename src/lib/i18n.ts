@@ -247,7 +247,7 @@ const en: Dictionary = {
   "edition.languages": "Languages",
   "edition.references": "References marked",
   "edition.note":
-    "Colour or black and white PDF, in multiple languages, with sources clearly marked. Read on screen or print. For personal use, please don't resell.",
+    "PDF in multiple languages, with sources clearly marked. Read on screen or print. The Vekon cosmetic is sold separately. For personal use, please don't resell.",
   manifestations: "Manifestations",
   "manifestations.papers": "Papers",
   "manifestations.vekon": "Vekon",
@@ -359,7 +359,7 @@ const pt: Dictionary = {
   "edition.languages": "Idiomas",
   "edition.references": "Referências indicadas",
   "edition.note":
-    "PDF em cor ou preto e branco, em vários idiomas, com referências bem marcadas. Leia na tela ou imprima. Para uso pessoal — por favor, não revenda.",
+    "PDF em vários idiomas, com as fontes bem marcadas. Leia na tela ou imprima. O cosmético do Vekon é vendido à parte. Para uso pessoal, por favor não revenda.",
   manifestations: "Manifestações",
   "manifestations.papers": "Papers",
   "manifestations.vekon": "Vekon",
@@ -428,7 +428,7 @@ const es: Dictionary = {
   "edition.languages": "Idiomas",
   "edition.references": "Referencias marcadas",
   "edition.note":
-    "Léelo en pantalla, o imprímelo al 100% y dóblalo. Para uso personal — por favor, no lo revendás.",
+    "PDF en varios idiomas, con las fuentes bien señaladas. Léelo en pantalla o imprímelo. El cosmético de Vekon se vende por separado. Para uso personal, por favor no lo revendas.",
   manifestations: "Manifestations",
   "manifestations.papers": "Papers",
   "manifestations.vekon": "Vekon",
@@ -497,7 +497,7 @@ const de: Dictionary = {
   "edition.languages": "Sprachen",
   "edition.references": "Quellen markiert",
   "edition.note":
-    "Am Bildschirm lesen oder zu 100 % drucken und falten. Nur für den persönlichen Gebrauch — bitte nicht weiterverkaufen.",
+    "PDF in mehreren Sprachen, mit klar gekennzeichneten Quellen. Am Bildschirm lesen oder ausdrucken. Das Vekon-Kosmetikobjekt wird separat verkauft. Nur für den persönlichen Gebrauch, bitte nicht weiterverkaufen.",
   manifestations: "Manifestations",
   "manifestations.papers": "Papers",
   "manifestations.vekon": "Vekon",
@@ -566,7 +566,7 @@ const fr: Dictionary = {
   "edition.languages": "Langues",
   "edition.references": "Références indiquées",
   "edition.note":
-    "Lisez à l’écran, ou imprimez à 100 % et pliez. Usage personnel — merci de ne pas revendre.",
+    "PDF en plusieurs langues, avec des sources clairement indiquées. À lire à l'écran ou à imprimer. Le cosmétique Vekon est vendu séparément. Pour un usage personnel, merci de ne pas revendre.",
   manifestations: "Manifestations",
   "manifestations.papers": "Papers",
   "manifestations.vekon": "Vekon",
@@ -635,7 +635,7 @@ const it: Dictionary = {
   "edition.languages": "Lingue",
   "edition.references": "Riferimenti indicati",
   "edition.note":
-    "Leggilo a schermo, o stampalo al 100% e piegalo. Per uso personale — per favore non rivenderlo.",
+    "PDF in più lingue, con le fonti chiaramente indicate. Da leggere a schermo o da stampare. Il cosmetico Vekon è venduto separatamente. Per uso personale, si prega di non rivendere.",
   manifestations: "Manifestations",
   "manifestations.papers": "Papers",
   "manifestations.vekon": "Vekon",
@@ -704,7 +704,7 @@ const ja: Dictionary = {
   "edition.languages": "言語",
   "edition.references": "出典を明記",
   "edition.note":
-    "画面で読むか、100%で印刷して折ってください。個人利用のみ — 転売しないでください。",
+    "複数言語の PDF、出典を明記。画面で読むことも、印刷することもできます。Vekon のコスメティックは別売りです。個人利用に限ります。転売はご遠慮ください。",
   manifestations: "Manifestations",
   "manifestations.papers": "Papers",
   "manifestations.vekon": "Vekon",
@@ -773,7 +773,7 @@ const ko: Dictionary = {
   "edition.languages": "언어",
   "edition.references": "참고 표시",
   "edition.note":
-    "화면으로 읽거나 100%로 인쇄해 접으세요. 개인 사용만 — 재판매하지 마세요.",
+    "여러 언어로 된 PDF, 출처를 명확히 표기했습니다. 화면으로 읽거나 인쇄하세요. Vekon 코스메틱은 별도로 판매됩니다. 개인 용도로만 사용하고 재판매하지 마세요.",
   manifestations: "Manifestations",
   "manifestations.papers": "Papers",
   "manifestations.vekon": "Vekon",
@@ -842,7 +842,7 @@ const zhCN: Dictionary = {
   "edition.languages": "语言",
   "edition.references": "标明出处",
   "edition.note":
-    "可在屏幕阅读，或以 100% 打印后折叠。仅供个人使用 — 请勿转售。",
+    "多语言 PDF，出处标注清晰。可在屏幕上阅读或打印。Vekon 装饰物品单独出售。仅供个人使用，请勿转售。",
   manifestations: "Manifestations",
   "manifestations.papers": "Papers",
   "manifestations.vekon": "Vekon",
@@ -911,7 +911,7 @@ const zhTW: Dictionary = {
   "edition.languages": "語言",
   "edition.references": "標明出處",
   "edition.note":
-    "可在螢幕閱讀，或以 100% 列印後摺疊。僅供個人使用 — 請勿轉售。",
+    "多語言 PDF，出處標註清楚。可在螢幕上閱讀或列印。Vekon 裝飾物品另行販售。僅供個人使用，請勿轉售。",
   manifestations: "Manifestations",
   "manifestations.papers": "Papers",
   "manifestations.vekon": "Vekon",
