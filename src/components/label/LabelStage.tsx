@@ -1,10 +1,12 @@
 "use client";
 
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import type { Artifact } from "@/data/artifacts";
 import { extraArtifacts, latestArtifact } from "@/data/artifacts";
+import { useAccess } from "@/components/AccessProvider";
 import { useViewMode } from "@/components/ViewModeProvider";
+import { PENDING_GET_KEY } from "./pending-get";
 import { AccessOverlay } from "./AccessOverlay";
 import { CollectionGrid } from "./CollectionGrid";
 import { FeaturedObject } from "./FeaturedObject";
@@ -19,7 +21,8 @@ type Props = {
 };
 
 export function LabelStage({ initial, releases }: Props) {
-  const { mode } = useViewMode();
+  const { mode, setMode } = useViewMode();
+  const { authenticated } = useAccess();
   const reduceMotion = useReducedMotion();
   const catalog = useMemo(() => {
     const byId = new Map<string, Artifact>();
@@ -43,6 +46,20 @@ export function LabelStage({ initial, releases }: Props) {
     },
     [reduceMotion],
   );
+
+  /* Back from login with a pending GET: focus that object in Collection. */
+  useEffect(() => {
+    if (!authenticated) return;
+    let pending: string | null = null;
+    try {
+      pending = localStorage.getItem(PENDING_GET_KEY);
+      localStorage.removeItem(PENDING_GET_KEY);
+    } catch {}
+    const target = pending ? catalog.find((a) => a.id === pending) : undefined;
+    if (!target) return;
+    setActive(target);
+    setMode("collection");
+  }, [authenticated, catalog, setMode]);
 
   const fadeMs = reduceMotion ? 0 : 0.45;
   const numbers = catalog.map((a) => a.number).sort();

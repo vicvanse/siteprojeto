@@ -7,7 +7,10 @@ import {
   hasManifestation,
   relatedBanner,
 } from "@/data/artifacts";
+import { useAccess } from "@/components/AccessProvider";
 import { useLanguage } from "@/components/LanguageProvider";
+import { useViewMode } from "@/components/ViewModeProvider";
+import { PENDING_GET_KEY } from "./pending-get";
 import { artifactDescriptionKey } from "@/lib/i18n";
 import { ArtifactFrame } from "./ArtifactFrame";
 import { ArtworkCover } from "./ArtworkCover";
@@ -22,6 +25,20 @@ type Props = {
 
 export function FeaturedObject({ artifact, variant = "default" }: Props) {
   const { t, language } = useLanguage();
+  const { authenticated, openOverlay } = useAccess();
+  const { setMode } = useViewMode();
+
+  /* Not signed in: go to Collection and ask for login; remember the object
+     so it is focused there after the magic link brings the user back. */
+  const handleGet = () => {
+    if (authenticated) return; // checkout comes here once payments exist
+    try {
+      localStorage.setItem(PENDING_GET_KEY, artifact.id);
+    } catch {}
+    setMode("collection");
+    window.scrollTo({ top: 0 });
+    openOverlay("form");
+  };
   const titleRef = useRef<HTMLDivElement>(null);
   const [titleH, setTitleH] = useState(0);
   const missing = variant === "missing";
@@ -120,7 +137,7 @@ export function FeaturedObject({ artifact, variant = "default" }: Props) {
                     {t("get")}
                   </a>
                 ) : (
-                  <button type="button" className="get-btn">
+                  <button type="button" className="get-btn" onClick={handleGet}>
                     {t("get")}
                   </button>
                 )}
