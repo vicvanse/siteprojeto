@@ -17,8 +17,11 @@ const accentBootScript = `(function(){try{var k="papers-accent-hue";var h=localS
 
 const langBootScript = `(function(){try{var k=${JSON.stringify(LANGUAGE_STORAGE_KEY)};var m=${JSON.stringify(LANGUAGE_BCP47)};var d=${JSON.stringify(DEFAULT_LANGUAGE)};var cjk={ja:1,ko:1,"zh-CN":1,"zh-TW":1};var v=localStorage.getItem(k);var lang=m[v]?v:d;var r=document.documentElement;r.lang=m[lang]||m[d];if(cjk[lang])r.dataset.script="cjk";else delete r.dataset.script;}catch(e){}})();`;
 
-/** First visit in this tab session gets the full entrance; later loads only the quick rise. */
-const enterBootScript = `(function(){try{var r=document.documentElement;if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;var k="papers-entered";r.dataset.enter=sessionStorage.getItem(k)?"quick":"full";sessionStorage.setItem(k,"1");}catch(e){}})();`;
+/**
+ * Full entrance on the first visit in a tab, and again once 20 minutes have
+ * passed since the last full one; quick rise for reloads in between.
+ */
+const enterBootScript = `(function(){try{var r=document.documentElement;if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;var k="papers-entered-at",now=Date.now(),last=Number(sessionStorage.getItem(k))||0;if(now-last>12e5){r.dataset.enter="full";sessionStorage.setItem(k,String(now));}else{r.dataset.enter="quick";}}catch(e){}})();`;
 
 const sans = Geist({
   variable: "--font-sans",
