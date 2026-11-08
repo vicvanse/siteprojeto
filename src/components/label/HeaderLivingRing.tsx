@@ -49,7 +49,8 @@ export function HeaderLivingRing() {
 
       const el = ringRef.current;
       if (!el || !header || !pill) return;
-      const headerRect = header.getBoundingClientRect();
+      /* Measure against the ring's own positioning box (the header row). */
+      const headerRect = (el.offsetParent ?? header).getBoundingClientRect();
       const pillRect = pill.getBoundingClientRect();
       /* Same vertical center as Object / NN. */
       const top = pillRect.top - headerRect.top + pillRect.height / 2 - nextSize / 2;
