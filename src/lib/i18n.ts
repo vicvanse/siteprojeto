@@ -120,6 +120,8 @@ export type MessageKey =
   | "pages"
   | "get"
   | "read"
+  | "access.rateLimited"
+  | "access.sendFailed"
   | "subtitle.009"
   | "banner.009"
   | "kind.essay"
@@ -177,6 +179,8 @@ export type MessageKey =
 type Dictionary = Record<MessageKey, string>;
 
 const en: Dictionary = {
+  "access.rateLimited": "Too many links requested. Please wait a few minutes and try again.",
+  "access.sendFailed": "The link couldn't be sent. Please try again.",
   "subtitle.009": "WHAT REMAINS OF THE JOURNEY",
   "banner.009": "Pasture banner",
   "kind.essay": "Essay",
@@ -295,6 +299,8 @@ const en: Dictionary = {
 
 const pt: Dictionary = {
   ...en,
+  "access.rateLimited": "Muitos links pedidos. Espere alguns minutos e tente de novo.",
+  "access.sendFailed": "Não foi possível enviar o link. Tente de novo.",
   "subtitle.009": "O QUE FICA DA JORNADA",
   "banner.009": "Banner do pasto",
   "kind.essay": "Ensaio",
@@ -413,6 +419,8 @@ const pt: Dictionary = {
 
 const es: Dictionary = {
   ...en,
+  "access.rateLimited": "Demasiados enlaces solicitados. Espera unos minutos y vuelve a intentarlo.",
+  "access.sendFailed": "No se pudo enviar el enlace. Inténtalo de nuevo.",
   "access.badLink": "Este enlace de acceso no es válido o ha caducado.",
   "access.checkHint": "Ábrelo para acceder a tu colección.",
   "access.checkLead": "Enviamos un enlace de acceso a {email}",
@@ -530,6 +538,8 @@ const es: Dictionary = {
 
 const de: Dictionary = {
   ...en,
+  "access.rateLimited": "Zu viele Links angefordert. Warte ein paar Minuten und versuche es erneut.",
+  "access.sendFailed": "Der Link konnte nicht gesendet werden. Bitte versuche es erneut.",
   "access.badLink": "Dieser Zugangslink ist ungültig oder abgelaufen.",
   "access.checkHint": "Öffne ihn, um auf deine Sammlung zuzugreifen.",
   "access.checkLead": "Wir haben einen Zugangslink an {email} gesendet",
@@ -647,6 +657,8 @@ const de: Dictionary = {
 
 const fr: Dictionary = {
   ...en,
+  "access.rateLimited": "Trop de liens demandés. Attendez quelques minutes et réessayez.",
+  "access.sendFailed": "Le lien n'a pas pu être envoyé. Réessayez.",
   "access.badLink": "Ce lien d'accès est invalide ou a expiré.",
   "access.checkHint": "Ouvrez-le pour accéder à votre collection.",
   "access.checkLead": "Nous avons envoyé un lien d'accès à {email}",
@@ -764,6 +776,8 @@ const fr: Dictionary = {
 
 const it: Dictionary = {
   ...en,
+  "access.rateLimited": "Troppi link richiesti. Attendi qualche minuto e riprova.",
+  "access.sendFailed": "Impossibile inviare il link. Riprova.",
   "access.badLink": "Questo link di accesso non è valido o è scaduto.",
   "access.checkHint": "Aprilo per accedere alla tua collezione.",
   "access.checkLead": "Abbiamo inviato un link di accesso a {email}",
@@ -881,6 +895,8 @@ const it: Dictionary = {
 
 const ja: Dictionary = {
   ...en,
+  "access.rateLimited": "リンクのリクエストが多すぎます。数分待ってからもう一度お試しください。",
+  "access.sendFailed": "リンクを送信できませんでした。もう一度お試しください。",
   "access.badLink": "このアクセスリンクは無効か、期限が切れています。",
   "access.checkHint": "開いてコレクションにアクセスしてください。",
   "access.checkLead": "{email} にアクセスリンクを送りました",
@@ -998,6 +1014,8 @@ const ja: Dictionary = {
 
 const ko: Dictionary = {
   ...en,
+  "access.rateLimited": "링크 요청이 너무 많습니다. 몇 분 후 다시 시도하세요.",
+  "access.sendFailed": "링크를 보낼 수 없습니다. 다시 시도하세요.",
   "access.badLink": "이 접속 링크는 유효하지 않거나 만료되었습니다.",
   "access.checkHint": "링크를 열어 컬렉션에 접속하세요.",
   "access.checkLead": "{email}(으)로 접속 링크를 보냈습니다",
@@ -1115,6 +1133,8 @@ const ko: Dictionary = {
 
 const zhCN: Dictionary = {
   ...en,
+  "access.rateLimited": "请求的链接过多。请等几分钟再试。",
+  "access.sendFailed": "无法发送链接，请重试。",
   "access.badLink": "此访问链接无效或已过期。",
   "access.checkHint": "打开它即可访问你的收藏。",
   "access.checkLead": "我们已向 {email} 发送访问链接",
@@ -1232,6 +1252,8 @@ const zhCN: Dictionary = {
 
 const zhTW: Dictionary = {
   ...en,
+  "access.rateLimited": "請求的連結過多。請等幾分鐘再試。",
+  "access.sendFailed": "無法寄送連結，請重試。",
   "access.badLink": "此存取連結無效或已過期。",
   "access.checkHint": "打開它即可存取你的收藏。",
   "access.checkLead": "我們已向 {email} 寄送存取連結",

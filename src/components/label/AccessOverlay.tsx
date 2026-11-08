@@ -48,7 +48,15 @@ export function AccessOverlay() {
     }
     setError(null);
     const result = await requestAccess(value);
-    if (!result.ok) setError(t("access.emailInvalid"));
+    if (!result.ok) {
+      setError(
+        result.error === "rate_limited"
+          ? t("access.rateLimited")
+          : result.error === "invalid_email"
+            ? t("access.emailInvalid")
+            : t("access.sendFailed"),
+      );
+    }
   }
 
   let openHref: string | null = null;
