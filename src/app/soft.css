@@ -318,3 +318,4 @@ html[data-enter="quick"] .label-header{animation-duration:.3s;animation-delay:0s
   html:root .label-header__view-panel .view-pill{white-space:nowrap}
 }
 @media (max-width:380px){html:root .label-header__view-panel .view-pill{padding-inline:.5rem}html:root .label-header__brand-panel{padding-right:9px}}
+@media (max-width:900px){html:root .label-header__ring{opacity:0;transition:opacity .22s ease}}

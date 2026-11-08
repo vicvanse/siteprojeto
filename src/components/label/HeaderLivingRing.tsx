@@ -18,6 +18,20 @@ export function HeaderLivingRing() {
     const brand = document.querySelector(".label-header__brand-panel");
     const header = document.querySelector(".label-header");
     const mq = window.matchMedia("(min-width: 901px)");
+    let switching = false;
+    let switchTimer = 0;
+
+    /* Layout position (ignores transforms, so entrance/fade animations
+       don't throw the measurement off). */
+    const pageTop = (node: HTMLElement | null) => {
+      let y = 0;
+      for (let n = node; n; n = n.offsetParent as HTMLElement | null) y += n.offsetTop;
+      return y;
+    };
+    const show = (on: boolean) => {
+      const el = ringRef.current;
+      if (el) el.style.opacity = on ? "1" : "0";
+    };
 
     const sync = () => {
       const desktop = mq.matches;
@@ -37,9 +51,11 @@ export function HeaderLivingRing() {
         if (el) {
           el.style.top = "";
           el.style.transform = "";
+          el.style.opacity = "";
         }
         return;
       }
+      if (switching) return;
 
       /* Mobile: size near the Object / NN pill; pin vertical center to it. */
       const pillH = pill?.classList.contains("object-id-pill")
@@ -49,17 +65,36 @@ export function HeaderLivingRing() {
       setSize(nextSize);
 
       const el = ringRef.current;
-      if (!el || !header || !pill) return;
-      /* Measure against the ring's own positioning box (the header row). */
-      const headerRect = (el.offsetParent ?? header).getBoundingClientRect();
-      const pillRect = pill.getBoundingClientRect();
-      /* Same vertical center as Object / NN. */
-      const top = pillRect.top - headerRect.top + pillRect.height / 2 - nextSize / 2;
+      if (!el || !header) return;
+      if (!pill) {
+        show(false);
+        return;
+      }
+      /* Same vertical center as Object / NN, measured from the ring's own box. */
+      const box = (el.offsetParent as HTMLElement | null) ?? (header as HTMLElement);
+      const anchor = pill as HTMLElement;
+      const top = pageTop(anchor) - pageTop(box) + anchor.offsetHeight / 2 - nextSize / 2;
       el.style.top = `${Math.round(top)}px`;
       el.style.transform = "none";
+      show(true);
     };
 
     sync();
+
+    /* Gallery ↔ Collection: hide at once, come back on the new view's pill
+       once the old view has faded out. */
+    const viewObs = new MutationObserver(() => {
+      if (mq.matches) return;
+      switching = true;
+      show(false);
+      window.clearTimeout(switchTimer);
+      switchTimer = window.setTimeout(() => {
+        switching = false;
+        sync();
+      }, 520);
+    });
+    viewObs.observe(document.documentElement, { attributes: true, attributeFilter: ["data-view"] });
+
     const ro = new ResizeObserver(sync);
     if (view) ro.observe(view);
     if (brand) ro.observe(brand);
@@ -80,6 +115,8 @@ export function HeaderLivingRing() {
     return () => {
       ro.disconnect();
       mo.disconnect();
+      viewObs.disconnect();
+      window.clearTimeout(switchTimer);
       document.removeEventListener("animationend", sync, true);
       window.clearTimeout(settle);
       window.removeEventListener("resize", sync);
