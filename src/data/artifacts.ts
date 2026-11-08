@@ -238,7 +238,7 @@ export const releaseArtifacts: Artifact[] = [
     manifestations: ["pdf", "banner"],
     relatedBannerId: "b004",
     description:
-      "The founding manifesto of Vekon. How time works, where we spend our hours, and what stays with us.",
+      "A life lasts about eighty years, but we only start remembering it around seven. This manifesto does that arithmetic and asks what to do with the time that is left. Two sheets, a single ink, and the text where Vekon began.",
     cover: "/covers/009-pasture.gif",
     avatar: "/avatars/009-heron-seal.png",
     downloads: {

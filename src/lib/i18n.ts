@@ -290,7 +290,7 @@ const en: Dictionary = {
   "desc.008":
     "Bars, a bicycle, and the light that still finds a way through. Eight pages from the wrong side of a gate — neighbors as silhouettes, afternoons as evidence, and the small politics of a shared courtyard.",
   "desc.009":
-    "The founding manifesto of Vekon. How time works, where we spend our hours, and what stays with us.",
+    "A life lasts about eighty years, but we only start remembering it around seven. This manifesto does that arithmetic and asks what to do with the time that is left. Two sheets, a single ink, and the text where Vekon began.",
 };
 
 const pt: Dictionary = {
@@ -408,7 +408,7 @@ const pt: Dictionary = {
   "desc.008":
     "Grades, uma bicicleta, e a luz que ainda encontra caminho. Oito páginas do lado errado do portão — vizinhos como silhuetas, tardes como evidência, e a pequena política de um pátio compartilhado.",
   "desc.009":
-    "Manifesto base para Vekon. Como o tempo funciona, onde gastamos nossas horas e o que fica conosco.",
+    "Uma vida dura perto de oitenta anos, mas só começamos a lembrá-la por volta dos sete. Este manifesto faz essa conta e pergunta o que fazer com o tempo que resta. Duas folhas, uma tinta só, e o texto em que o Vekon começou.",
 };
 
 const es: Dictionary = {
@@ -525,7 +525,7 @@ const es: Dictionary = {
   "desc.008":
     "Rejas, una bicicleta, y la luz que aún encuentra camino. Ocho páginas del lado equivocado de una puerta — vecinos como siluetas, tardes como evidencia, y la pequeña política de un patio compartido.",
   "desc.009":
-    "El manifiesto fundacional de Vekon. Cómo funciona el tiempo, en qué gastamos nuestras horas y qué se queda con nosotros.",
+    "Una vida dura cerca de ochenta años, pero solo empezamos a recordarla hacia los siete. Este manifiesto hace esa cuenta y pregunta qué hacer con el tiempo que queda. Dos hojas, una sola tinta, y el texto en el que empezó Vekon.",
 };
 
 const de: Dictionary = {
@@ -642,7 +642,7 @@ const de: Dictionary = {
   "desc.008":
     "Gitter, ein Fahrrad, und Licht, das trotzdem durchkommt. Acht Seiten von der falschen Seite eines Tors — Nachbarn als Silhouetten, Nachmittage als Beweise, und die kleine Politik eines gemeinsamen Hofs.",
   "desc.009":
-    "Das Gründungsmanifest von Vekon. Wie die Zeit funktioniert, wofür wir unsere Stunden verbrauchen und was uns bleibt.",
+    "Ein Leben dauert etwa achtzig Jahre, doch erinnern können wir uns erst ab etwa sieben. Dieses Manifest macht diese Rechnung auf und fragt, was wir mit der verbleibenden Zeit anfangen. Zwei Blätter, eine einzige Farbe und der Text, mit dem Vekon begann.",
 };
 
 const fr: Dictionary = {
@@ -759,7 +759,7 @@ const fr: Dictionary = {
   "desc.008":
     "Des barreaux, un vélo, et la lumière qui trouve encore un passage. Huit pages du mauvais côté d’une grille — voisins en silhouettes, après-midi en preuves, et la petite politique d’une cour partagée.",
   "desc.009":
-    "Le manifeste fondateur de Vekon. Comment fonctionne le temps, où passent nos heures et ce qui reste avec nous.",
+    "Une vie dure environ quatre-vingts ans, mais on ne commence à s'en souvenir que vers sept ans. Ce manifeste fait ce calcul et demande quoi faire du temps qui reste. Deux feuilles, une seule encre, et le texte par lequel Vekon a commencé.",
 };
 
 const it: Dictionary = {
@@ -876,7 +876,7 @@ const it: Dictionary = {
   "desc.008":
     "Sbarre, una bicicletta, e la luce che trova ancora un passaggio. Otto pagine dal lato sbagliato di un cancello — vicini come silhouette, pomeriggi come prove, e la piccola politica di un cortile condiviso.",
   "desc.009":
-    "Il manifesto fondativo di Vekon. Come funziona il tempo, dove spendiamo le nostre ore e che cosa resta con noi.",
+    "Una vita dura circa ottant'anni, ma cominciamo a ricordarla solo verso i sette. Questo manifesto fa questo conto e chiede che cosa fare del tempo che resta. Due fogli, un solo inchiostro, e il testo da cui è nato Vekon.",
 };
 
 const ja: Dictionary = {
@@ -993,7 +993,7 @@ const ja: Dictionary = {
   "desc.008":
     "棚、自転車、それでも通り抜ける光。門の裏側からの八ページ — シルエットの隣人、証拠のような午後、共有中庭の小さな政治。",
   "desc.009":
-    "Vekon の基盤となるマニフェスト。時間はどう働くのか、私たちはどこで時間を使っているのか、そして何が私たちのもとに残るのか。",
+    "人生はおよそ八十年。けれど、私たちがそれを覚えはじめるのは七歳ごろからです。このマニフェストはその計算をして、残された時間をどう使うかを問いかけます。二枚の紙、一色のインク、そして Vekon がはじまった文章。",
 };
 
 const ko: Dictionary = {
@@ -1110,7 +1110,7 @@ const ko: Dictionary = {
   "desc.008":
     "쇠창살, 자전거, 그래도 스며드는 빛. 문 반대편에서 쓴 여덟 페이지 — 실루엣인 이웃, 증거인 오후, 공유 마당의 작은 정치.",
   "desc.009":
-    "Vekon의 바탕이 되는 선언문. 시간은 어떻게 작동하는지, 우리는 어디에 시간을 쓰는지, 그리고 무엇이 우리에게 남는지.",
+    "삶은 대략 팔십 년이지만, 우리는 일곱 살 무렵부터에야 그것을 기억하기 시작합니다. 이 선언문은 그 계산을 해 보고, 남은 시간으로 무엇을 할지 묻습니다. 두 장의 종이, 한 가지 잉크, 그리고 Vekon이 시작된 글.",
 };
 
 const zhCN: Dictionary = {
@@ -1227,7 +1227,7 @@ const zhCN: Dictionary = {
   "desc.008":
     "铁栏、一辆自行车，以及仍能挤进来的光。从门的另一侧写下的八页——邻居成了剪影，午后成了证据，还有共享庭院的小小政治。",
   "desc.009":
-    "Vekon 的基础宣言。时间如何运作，我们把时光花在了哪里，以及什么会留在我们身边。",
+    "一生大约八十年，但我们大约从七岁才开始记得它。这份宣言算了这笔账，并追问该如何度过剩下的时间。两张纸，一种墨色，以及 Vekon 开始的那篇文字。",
 };
 
 const zhTW: Dictionary = {
@@ -1344,7 +1344,7 @@ const zhTW: Dictionary = {
   "desc.008":
     "鐵欄、一輛腳踏車，以及仍能擠進來的光。從門的另一側寫下的八頁——邻居成了剪影，午後成了證據，還有共享庭院的小小政治。",
   "desc.009":
-    "Vekon 的基礎宣言。時間如何運作，我們把時光花在了哪裡，以及什麼會留在我們身邊。",
+    "一生大約八十年，但我們大約從七歲才開始記得它。這份宣言算了這筆帳，並追問該如何度過剩下的時間。兩張紙，一種墨色，以及 Vekon 開始的那篇文字。",
 };
 
 export const DICTIONARIES: Record<Language, Dictionary> = {
