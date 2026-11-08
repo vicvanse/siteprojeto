@@ -309,8 +309,10 @@ html[data-enter="quick"] .label-header{animation-duration:.3s;animation-delay:0s
   html:root[data-view] .label-header::before{inset:0 -8px!important;border-radius:0 0 24px 24px!important}
   html:root .label-header__view-panel .view-switcher__label{display:none}
   html:root .label-header__view-panel .view-pill{padding-inline:.7rem}
-  /* Locked Collection: language/colour chips move to their own row. */
-  body:not(:has(.viewport__tools)) .label-header__stack{flex-wrap:wrap;justify-content:center;row-gap:10px}
-  body:not(:has(.viewport__tools)) .label-header__accents{flex:0 0 100%;display:flex!important;justify-content:center;margin-top:0!important}
+  /* The header box itself painted a light rectangle over the rounded plate. */
+  html:root .label-header{background:transparent!important}
+  /* Locked Collection: only the language chip, inline; colour waits for the Gallery. */
+  body:not(:has(.viewport__tools)) .label-header__accents{display:flex!important;align-items:center;margin:0 0 0 6px!important}
+  body:not(:has(.viewport__tools)) .accent-swatches__compact .accent-swatch:not(.lang-swatch){display:none!important}
 }
 @media (max-width:380px){html:root .label-header__view-panel .view-pill{padding-inline:.5rem}html:root .label-header__brand-panel{padding-right:9px}}
