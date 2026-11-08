@@ -274,3 +274,30 @@ html:root .manifestations__note{margin:2px 0 0 98px;font-size:11.5px;font-style:
 html:root .viewport--missing .manifestations__item{background:#e6e7eb}
 @media (max-width:900px){html:root .manifestations__row{grid-template-columns:72px auto minmax(0,1fr)}html:root .manifestations__note{margin-left:82px}}
 @media (max-width:900px){html:root body{overflow-x:clip}}
+
+/* ---- Entrance: ring rises out of the surface, then the panels rise ---- */
+.site-intro{background:#e6e7eb}
+html[data-enter="quick"] .site-intro{display:none}
+.site-intro__disc{display:grid;place-items:center;padding:26px;border-radius:50%;background:#e6e7eb;animation:papers-press .9s cubic-bezier(.22,1,.36,1) both}
+@keyframes papers-press{
+  0%{box-shadow:inset 10px 10px 22px #c3c6cd,inset -10px -10px 22px #fff}
+  45%{box-shadow:inset 0 0 0 #c3c6cd,inset 0 0 0 #fff}
+  55%{box-shadow:0 0 0 #c3c6cd,0 0 0 #fff}
+  100%{box-shadow:14px 14px 30px #c3c6cd,-14px -14px 30px #fff}
+}
+@keyframes papers-rise{from{opacity:0;transform:translateY(14px) scale(.985)}to{opacity:1;transform:none}}
+@keyframes papers-fade{from{opacity:0}to{opacity:1}}
+html[data-enter] .label-header{animation:papers-fade .5s ease-out both}
+html[data-enter] #viewport .viewport__panel{--i:1}
+html[data-enter] .papers-intro,html[data-enter] .collection__stage{--i:2}
+html[data-enter] .releases,html[data-enter] .collection__shelf-block{--i:3}
+html[data-enter] .collection__extras-block{--i:4}
+html[data-enter] #viewport .viewport__panel,html[data-enter] .papers-intro,html[data-enter] .releases,
+html[data-enter] .collection__stage,html[data-enter] .collection__shelf-block,html[data-enter] .collection__extras-block{
+  animation:papers-rise .6s cubic-bezier(.22,1,.36,1) both;animation-delay:calc(.9s + var(--i,0) * 90ms)}
+html[data-enter] .label-header{animation-delay:.85s}
+html[data-enter="quick"] #viewport .viewport__panel,html[data-enter="quick"] .papers-intro,html[data-enter="quick"] .releases,
+html[data-enter="quick"] .collection__stage,html[data-enter="quick"] .collection__shelf-block,html[data-enter="quick"] .collection__extras-block{
+  animation-duration:.45s;animation-delay:calc(var(--i,0) * 60ms)}
+html[data-enter="quick"] .label-header{animation-duration:.3s;animation-delay:0s}
+@media (prefers-reduced-motion:reduce){html[data-enter] *{animation:none!important}}
