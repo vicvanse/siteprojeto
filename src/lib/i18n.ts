@@ -120,6 +120,8 @@ export type MessageKey =
   | "pages"
   | "get"
   | "read"
+  | "access.google"
+  | "access.googleLead"
   | "access.rateLimited"
   | "access.sendFailed"
   | "subtitle.009"
@@ -179,6 +181,8 @@ export type MessageKey =
 type Dictionary = Record<MessageKey, string>;
 
 const en: Dictionary = {
+  "access.google": "Continue with Google",
+  "access.googleLead": "Sign in with Google to keep your objects in one place, here and in Vekon Life.",
   "access.rateLimited": "Too many links requested. Please wait a few minutes and try again.",
   "access.sendFailed": "The link couldn't be sent. Please try again.",
   "subtitle.009": "WHAT REMAINS OF THE JOURNEY",
@@ -299,6 +303,8 @@ const en: Dictionary = {
 
 const pt: Dictionary = {
   ...en,
+  "access.google": "Continuar com Google",
+  "access.googleLead": "Entre com o Google para guardar seus objetos num só lugar, aqui e no Vekon Life.",
   "access.rateLimited": "Muitos links pedidos. Espere alguns minutos e tente de novo.",
   "access.sendFailed": "Não foi possível enviar o link. Tente de novo.",
   "subtitle.009": "O QUE FICA DA JORNADA",
@@ -419,6 +425,8 @@ const pt: Dictionary = {
 
 const es: Dictionary = {
   ...en,
+  "access.google": "Continuar con Google",
+  "access.googleLead": "Entra con Google para guardar tus objetos en un solo lugar, aquí y en Vekon Life.",
   "access.rateLimited": "Demasiados enlaces solicitados. Espera unos minutos y vuelve a intentarlo.",
   "access.sendFailed": "No se pudo enviar el enlace. Inténtalo de nuevo.",
   "access.badLink": "Este enlace de acceso no es válido o ha caducado.",
@@ -538,6 +546,8 @@ const es: Dictionary = {
 
 const de: Dictionary = {
   ...en,
+  "access.google": "Mit Google fortfahren",
+  "access.googleLead": "Melde dich mit Google an, um deine Objekte an einem Ort zu behalten, hier und in Vekon Life.",
   "access.rateLimited": "Zu viele Links angefordert. Warte ein paar Minuten und versuche es erneut.",
   "access.sendFailed": "Der Link konnte nicht gesendet werden. Bitte versuche es erneut.",
   "access.badLink": "Dieser Zugangslink ist ungültig oder abgelaufen.",
@@ -657,6 +667,8 @@ const de: Dictionary = {
 
 const fr: Dictionary = {
   ...en,
+  "access.google": "Continuer avec Google",
+  "access.googleLead": "Connectez-vous avec Google pour garder vos objets au même endroit, ici et dans Vekon Life.",
   "access.rateLimited": "Trop de liens demandés. Attendez quelques minutes et réessayez.",
   "access.sendFailed": "Le lien n'a pas pu être envoyé. Réessayez.",
   "access.badLink": "Ce lien d'accès est invalide ou a expiré.",
@@ -776,6 +788,8 @@ const fr: Dictionary = {
 
 const it: Dictionary = {
   ...en,
+  "access.google": "Continua con Google",
+  "access.googleLead": "Accedi con Google per tenere i tuoi oggetti in un unico posto, qui e in Vekon Life.",
   "access.rateLimited": "Troppi link richiesti. Attendi qualche minuto e riprova.",
   "access.sendFailed": "Impossibile inviare il link. Riprova.",
   "access.badLink": "Questo link di accesso non è valido o è scaduto.",
@@ -895,6 +909,8 @@ const it: Dictionary = {
 
 const ja: Dictionary = {
   ...en,
+  "access.google": "Google で続ける",
+  "access.googleLead": "Google でログインして、オブジェクトをここと Vekon Life でひとつにまとめましょう。",
   "access.rateLimited": "リンクのリクエストが多すぎます。数分待ってからもう一度お試しください。",
   "access.sendFailed": "リンクを送信できませんでした。もう一度お試しください。",
   "access.badLink": "このアクセスリンクは無効か、期限が切れています。",
@@ -1014,6 +1030,8 @@ const ja: Dictionary = {
 
 const ko: Dictionary = {
   ...en,
+  "access.google": "Google로 계속하기",
+  "access.googleLead": "Google로 로그인해 오브젝트를 이곳과 Vekon Life에서 한곳에 보관하세요.",
   "access.rateLimited": "링크 요청이 너무 많습니다. 몇 분 후 다시 시도하세요.",
   "access.sendFailed": "링크를 보낼 수 없습니다. 다시 시도하세요.",
   "access.badLink": "이 접속 링크는 유효하지 않거나 만료되었습니다.",
@@ -1133,6 +1151,8 @@ const ko: Dictionary = {
 
 const zhCN: Dictionary = {
   ...en,
+  "access.google": "使用 Google 继续",
+  "access.googleLead": "使用 Google 登录，把你的物件保存在同一个地方，这里和 Vekon Life 都可以用。",
   "access.rateLimited": "请求的链接过多。请等几分钟再试。",
   "access.sendFailed": "无法发送链接，请重试。",
   "access.badLink": "此访问链接无效或已过期。",
@@ -1252,6 +1272,8 @@ const zhCN: Dictionary = {
 
 const zhTW: Dictionary = {
   ...en,
+  "access.google": "使用 Google 繼續",
+  "access.googleLead": "使用 Google 登入，把你的物件保存在同一個地方，這裡和 Vekon Life 都能用。",
   "access.rateLimited": "請求的連結過多。請等幾分鐘再試。",
   "access.sendFailed": "無法寄送連結，請重試。",
   "access.badLink": "此存取連結無效或已過期。",

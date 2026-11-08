@@ -398,3 +398,9 @@ html{-webkit-tap-highlight-color:transparent}
 
 /* The description is always shown whole */
 .object-stack__desc{display:block!important;-webkit-line-clamp:unset!important;overflow:visible!important}
+
+/* Continue with Google */
+.access-overlay__actions--google{justify-content:center;margin-top:18px}
+.access-overlay__google{display:inline-flex;align-items:center;gap:10px;min-height:46px;padding:0 20px;border:0;border-radius:999px;background:#fff;color:#1f1f22;font-family:var(--font-sans),sans-serif;font-size:14px;font-weight:600;cursor:pointer;box-shadow:4px 4px 10px #c3c6cd,-4px -4px 10px #fff,0 0 0 1px rgba(0,0,0,.06)}
+.access-overlay__google:hover{box-shadow:6px 6px 14px #c3c6cd,-6px -6px 14px #fff,0 0 0 1px rgba(0,0,0,.08)}
+.access-overlay__google:active{box-shadow:inset 2px 2px 5px #c3c6cd,inset -2px -2px 5px #fff}
