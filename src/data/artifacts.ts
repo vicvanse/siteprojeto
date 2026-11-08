@@ -300,16 +300,25 @@ export const extraArtifacts: Artifact[] = [
   },
 ];
 
+/**
+ * Objects that are live on the site. The others stay defined here (and in git)
+ * so they can come back by adding their id.
+ */
+const PUBLISHED_IDS = new Set(["009"]);
+const PUBLISHED_EXTRAS = new Set(["b004"]);
+
 /** Publications shown in Gallery / Releases. */
-export const catalogArtifacts: Artifact[] = [
-  featuredArtifact,
-  ...releaseArtifacts,
-];
+export const catalogArtifacts: Artifact[] = [featuredArtifact, ...releaseArtifacts].filter((a) =>
+  PUBLISHED_IDS.has(a.id),
+);
+
+/** Extras that belong to published objects. */
+export const publishedExtras: Artifact[] = extraArtifacts.filter((a) => PUBLISHED_EXTRAS.has(a.id));
 
 /** Everything that can sit in a Collection (objects + extras). */
 export const collectibleArtifacts: Artifact[] = [
   ...catalogArtifacts,
-  ...extraArtifacts,
+  ...publishedExtras,
 ];
 
 export function isPublication(artifact: Artifact) {

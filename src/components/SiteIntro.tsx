@@ -25,7 +25,7 @@ export function SiteIntro() {
        switches don't replay it. */
     const clearAt = window.setTimeout(() => {
       delete root.dataset.enter;
-    }, 2600);
+    }, 3400);
     if (root.dataset.enter === "quick") {
       setPhase("done");
       return () => window.clearTimeout(clearAt);
@@ -37,9 +37,9 @@ export function SiteIntro() {
       setPhase("done");
     };
 
-    /* Ring rises ~0.9s, cover lifts at ~1.05s (0.35s fade) */
-    const doneAt = window.setTimeout(finish, 1050);
-    const safetyAt = window.setTimeout(finish, 3000);
+    /* Ring rises ~1.3s, cover lifts at ~1.5s (0.5s fade) */
+    const doneAt = window.setTimeout(finish, 1500);
+    const safetyAt = window.setTimeout(finish, 3500);
 
     return () => {
       window.clearTimeout(doneAt);
@@ -56,7 +56,7 @@ export function SiteIntro() {
           className="site-intro"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.35, ease: [0.4, 0, 0.2, 1] }}
+          transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
           aria-hidden
         >
           <motion.div

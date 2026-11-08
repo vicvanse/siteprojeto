@@ -5,6 +5,7 @@ import type { Artifact, ArtifactKind } from "@/data/artifacts";
 import { formatPrice, isExtra, isPublication, kindLabel } from "@/data/artifacts";
 import { useAccess } from "@/components/AccessProvider";
 import { useLanguage } from "@/components/LanguageProvider";
+import { LANGUAGES, LANGUAGE_NAMES, type Language } from "@/lib/i18n";
 import { useViewMode } from "@/components/ViewModeProvider";
 import { ArtworkCover } from "./ArtworkCover";
 import { FeaturedObject } from "./FeaturedObject";
@@ -40,7 +41,7 @@ export function CollectionGrid({
   onSelect,
 }: Props) {
   const { authenticated, owns, openOverlay, email, signOut } = useAccess();
-  const { t } = useLanguage();
+  const { t, language, setLanguage } = useLanguage();
   const { setMode } = useViewMode();
   const [filter, setFilter] = useState<Filter>("all");
   const [desktop, setDesktop] = useState(false);
@@ -99,9 +100,7 @@ export function CollectionGrid({
 
   if (!authenticated) {
     const lockedObjects = [...publications].sort(byNumberDesc);
-    const lockedExtras = extras.filter((a) => isExtra(a));
     const objectCount = String(lockedObjects.length).padStart(2, "0");
-    const extraCount = String(lockedExtras.length).padStart(2, "0");
     const unlock = () => openOverlay("form");
 
     return (
@@ -121,9 +120,24 @@ export function CollectionGrid({
               </h1>
               <p className="collection__meta">{t("collection.lockedMeta")}</p>
             </div>
-            <button type="button" className="collection__gate" onClick={unlock}>
-              {t("logIn")} →
-            </button>
+            <div className="collection__gate-row">
+              <label className="collection__lang">
+                <span className="collection__lang-label">{t("language")}</span>
+                <select
+                  value={language}
+                  onChange={(e) => setLanguage(e.target.value as Language)}
+                >
+                  {LANGUAGES.map((code) => (
+                    <option key={code} value={code}>
+                      {LANGUAGE_NAMES[code]}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <button type="button" className="collection__gate" onClick={unlock}>
+                {t("logIn")} →
+              </button>
+            </div>
           </header>
 
           <ul className="collection-shelf">
@@ -159,47 +173,6 @@ export function CollectionGrid({
           </ul>
         </div>
 
-        {lockedExtras.length > 0 ? (
-          <div className="collection__extras-block">
-            <header className="collection__section-head">
-              <h2 className="collection__section-title">
-                {t("collection.extras")} / {extraCount}
-              </h2>
-            </header>
-            <ul className="extras-shelf">
-              {lockedExtras.map((artifact, index) => (
-                <li
-                  key={artifact.id}
-                  className={`extras-shelf__item extras-shelf__item--${(index % 3) + 1}`}
-                >
-                  <button
-                    type="button"
-                    className="extra-card extra-card--missing"
-                    onClick={unlock}
-                  >
-                    <span className="extra-card__frame">
-                      <span className="extra-card__shell">
-                        <span className="extra-card__well">
-                          <span className="extra-card__mount">
-                            <ArtworkCover artifact={artifact} size="release" />
-                          </span>
-                        </span>
-                        <span className="extra-card__badge">{artifact.number}</span>
-                      </span>
-                    </span>
-                    <span className="extra-card__meta">
-                      <span className="extra-card__id">
-                        {t("collection.banner")} {artifact.number}
-                      </span>
-                      <span className="extra-card__name">{artifact.title}</span>
-                      <span className="extra-card__dl">{t("collection.locked")}</span>
-                    </span>
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
       </section>
     );
   }

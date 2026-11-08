@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import type { Artifact } from "@/data/artifacts";
-import { extraArtifacts, latestArtifact } from "@/data/artifacts";
+import { latestArtifact, publishedExtras } from "@/data/artifacts";
 import { useAccess } from "@/components/AccessProvider";
 import { useViewMode } from "@/components/ViewModeProvider";
 import { PENDING_GET_KEY } from "./pending-get";
@@ -80,7 +80,7 @@ export function LabelStage({ initial, releases }: Props) {
           {mode === "collection" ? (
             <CollectionGrid
               artifacts={catalog}
-              extras={extraArtifacts}
+              extras={publishedExtras}
               activeId={active.id}
               onSelect={select}
             />
