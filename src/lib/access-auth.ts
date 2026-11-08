@@ -12,6 +12,8 @@ export type AccessSession = {
   email: string;
   ownedIds: string[];
   exp: number;
+  /** Supabase user id when the account is real (not the OWNER demo key). */
+  uid?: string;
 };
 
 export type MagicPayload = {
@@ -116,12 +118,13 @@ export function verifyMagicToken(token: string): MagicPayload | null {
   return payload;
 }
 
-export function createSession(email: string): AccessSession {
+export function createSession(email: string, uid?: string, ownedIds?: string[]): AccessSession {
   const identity = normalizeAccessIdentity(email);
   return {
     email: identity,
-    ownedIds: demoOwnedIds(identity),
+    ownedIds: ownedIds ?? demoOwnedIds(identity),
     exp: Date.now() + SESSION_TTL_MS,
+    ...(uid ? { uid } : {}),
   };
 }
 
@@ -136,6 +139,8 @@ export function decodeSession(token: string | undefined | null): AccessSession |
     return null;
   }
   if (Date.now() > session.exp) return null;
+  /* Real accounts: owned set is read from Supabase by the caller. */
+  if (session.uid) return session;
   /* Demo ledger may change — always resolve current owned set from identity. */
   return {
     ...session,

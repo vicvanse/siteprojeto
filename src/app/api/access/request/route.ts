@@ -10,7 +10,9 @@ import {
   magicLinkUrl,
   normalizeAccessIdentity,
   sendMagicLinkEmail,
+  siteOrigin,
 } from "@/lib/access-auth";
+import { sendSupabaseMagicLink, supabaseEnabled } from "@/lib/supabase-rest";
 
 function sessionCookie(identity: string) {
   const session = createSession(identity);
@@ -51,6 +53,18 @@ export async function POST(request: Request) {
     });
     response.cookies.set(SESSION_COOKIE, encodeSession(session), options);
     return response;
+  }
+
+  /* Real accounts: Supabase sends the link (shared with Vekon Life). */
+  if (supabaseEnabled()) {
+    const sent = await sendSupabaseMagicLink(identity, `${siteOrigin()}/access`);
+    if (!sent.sent) {
+      return NextResponse.json(
+        { ok: false, error: sent.status === 429 ? "rate_limited" : "send_failed" },
+        { status: sent.status === 429 ? 429 : 502 },
+      );
+    }
+    return NextResponse.json({ ok: true, email: identity, emailed: true });
   }
 
   const token = createMagicToken(identity);

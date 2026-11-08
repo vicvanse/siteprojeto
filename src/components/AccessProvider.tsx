@@ -26,7 +26,9 @@ type AccessContextValue = {
   closeOverlay: () => void;
   requestAccess: (email: string) => Promise<{ ok: boolean; error?: string }>;
   resendAccess: () => Promise<{ ok: boolean; error?: string } | null>;
-  completeAccess: (token: string) => Promise<boolean>;
+  completeAccess: (token: string, kind?: "papers" | "supabase") => Promise<boolean>;
+  /** Signed in: add a free object to the Collection. */
+  claim: (objectId: string) => Promise<void>;
   owns: (id: string) => boolean;
   signOut: () => Promise<void>;
 };
@@ -147,13 +149,13 @@ export function AccessProvider({ children }: { children: React.ReactNode }) {
     return requestAccess(pendingRawEmail);
   }, [pendingRawEmail, requestAccess]);
 
-  const completeAccess = useCallback(async (token: string) => {
+  const completeAccess = useCallback(async (token: string, kind: "papers" | "supabase" = "papers") => {
     setBusy(true);
     try {
       const res = await fetch("/api/access/verify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ token }),
+        body: JSON.stringify(kind === "supabase" ? { supabaseToken: token } : { token }),
       });
       const data = (await res.json()) as {
         ok?: boolean;
@@ -193,6 +195,20 @@ export function AccessProvider({ children }: { children: React.ReactNode }) {
     [ownedIds],
   );
 
+  const claim = useCallback(async (objectId: string) => {
+    try {
+      const res = await fetch("/api/access/claim", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ objectId }),
+      });
+      const data = (await res.json()) as { ok?: boolean; ownedIds?: string[] };
+      if (data.ok && Array.isArray(data.ownedIds)) setOwnedIds(data.ownedIds);
+    } catch {
+      /* The download still happens; the Collection catches up on next load. */
+    }
+  }, []);
+
   const value = useMemo<AccessContextValue>(
     () => ({
       ready,
@@ -209,6 +225,7 @@ export function AccessProvider({ children }: { children: React.ReactNode }) {
       requestAccess,
       resendAccess,
       completeAccess,
+      claim,
       owns,
       signOut,
     }),
@@ -227,6 +244,7 @@ export function AccessProvider({ children }: { children: React.ReactNode }) {
       requestAccess,
       resendAccess,
       completeAccess,
+      claim,
       owns,
       signOut,
     ],

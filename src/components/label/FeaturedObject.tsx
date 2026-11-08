@@ -25,7 +25,7 @@ type Props = {
 
 export function FeaturedObject({ artifact, variant = "default" }: Props) {
   const { t, language } = useLanguage();
-  const { authenticated, openOverlay } = useAccess();
+  const { authenticated, openOverlay, claim } = useAccess();
   const { setMode } = useViewMode();
 
   /* Not signed in: go to Collection and ask for login; remember the object
@@ -138,6 +138,10 @@ export function FeaturedObject({ artifact, variant = "default" }: Props) {
                     href={freeDownload}
                     target="_blank"
                     rel="noopener"
+                    onClick={() => {
+                      /* Signed in: the free object also joins the Collection. */
+                      if (authenticated) void claim(artifact.id);
+                    }}
                   >
                     {t("get")}
                   </a>

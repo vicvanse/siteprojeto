@@ -24,6 +24,25 @@ function AccessClient() {
     let cancelled = false;
 
     (async () => {
+      /* Supabase magic link lands here with #access_token=… in the hash. */
+      const hash = new URLSearchParams(window.location.hash.replace(/^#/, ""));
+      const supaToken = hash.get("access_token");
+      if (supaToken) {
+        window.history.replaceState(null, "", window.location.pathname);
+        const ok = await completeAccess(supaToken, "supabase");
+        if (cancelled) return;
+        setStatus(ok ? "ok" : "bad");
+        if (ok) {
+          setMode("collection");
+          router.replace("/?view=collection");
+        }
+        return;
+      }
+      if (hash.get("error")) {
+        setStatus("bad");
+        return;
+      }
+
       const token = search.get("t") ?? search.get("token");
       if (token) {
         const ok = await completeAccess(token);
