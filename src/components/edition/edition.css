@@ -414,3 +414,14 @@
 .shell:has(.edition) > .label-header {
   display: none;
 }
+
+.edition__brand {
+  flex: none;
+  text-decoration: none;
+}
+
+@media (max-width: 820px) {
+  .edition__bar > .edition__brand {
+    order: 1;
+  }
+}
