@@ -179,7 +179,6 @@ html[data-script="cjk"] body {
   /* Latin font first: Geist only covers Latin, so CJK glyphs fall through to Noto
      while letters, numbers and titles keep the original typeface. */
   font-family: var(--font-sans), var(--font-cjk), system-ui, sans-serif;
-  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -215,39 +214,6 @@ html[data-script="cjk"] .object-stack__sub,
 html[data-script="cjk"] .object-stack__desc,
 html[data-script="cjk"] .collection__title {
   font-family: var(--font-sans), var(--font-cjk), system-ui, sans-serif;
-}
-
-/* Small labels: a modest bump so kanji/hangul stay legible, without blowing up
-   the Latin pills next to them. Case and tracking follow the Latin design. */
-html[data-script="cjk"] .view-pill__label,
-html[data-script="cjk"] .view-switcher__label,
-html[data-script="cjk"] .meta,
-html[data-script="cjk"] .releases__title-pill,
-html[data-script="cjk"] .releases__count-pill,
-html[data-script="cjk"] .object-id-pill,
-html[data-script="cjk"] .edition-pill,
-html[data-script="cjk"] .price-chip,
-html[data-script="cjk"] .get-btn,
-html[data-script="cjk"] .release-slot__more,
-html[data-script="cjk"] .release-slot__price {
-  font-size: 12px;
-  letter-spacing: 0.06em;
-}
-
-html[data-script="cjk"] .object-stack__desc,
-html[data-script="cjk"] .edition-note {
-  line-height: 1.9;
-  font-size: 14px;
-}
-
-html[data-script="cjk"] .object-stack__heading {
-  letter-spacing: -0.01em;
-  line-height: 1.3;
-}
-
-html[data-script="cjk"] .object-stack__sub {
-  font-style: normal;
-  line-height: 1.45;
 }
 
 a {
