@@ -246,7 +246,7 @@ const en: Dictionary = {
   "desc.008":
     "Bars, a bicycle, and the light that still finds a way through. Eight pages from the wrong side of a gate — neighbors as silhouettes, afternoons as evidence, and the small politics of a shared courtyard.",
   "desc.009":
-    "Sunset field notes with three subjects who refuse to pose. Twelve pages on distance, muscle, and the color the grass becomes when the day finally gives up. A study that keeps circling the same fence.",
+    "A two-sheet manifesto about time: how much of a life is left, how we spend our hours, and what stays with us. Printed in one blue ink, citing Augustine and Seneca.",
 };
 
 const pt: Dictionary = {
@@ -342,7 +342,7 @@ const pt: Dictionary = {
   "desc.008":
     "Grades, uma bicicleta, e a luz que ainda encontra caminho. Oito páginas do lado errado do portão — vizinhos como silhuetas, tardes como evidência, e a pequena política de um pátio compartilhado.",
   "desc.009":
-    "Notas de campo ao pôr do sol com três sujeitos que recusam posar. Doze páginas sobre distância, músculo, e a cor que a grama fica quando o dia finalmente desiste. Um estudo que continua circulando a mesma cerca.",
+    "Um manifesto em duas folhas sobre o tempo: quanto resta de uma vida, como gastamos as horas e o que fica com a gente. Impresso em uma só tinta azul, com citações de Agostinho e Sêneca.",
 };
 
 const es: Dictionary = {
@@ -395,7 +395,7 @@ const es: Dictionary = {
   "desc.008":
     "Rejas, una bicicleta, y la luz que aún encuentra camino. Ocho páginas del lado equivocado de una puerta — vecinos como siluetas, tardes como evidencia, y la pequeña política de un patio compartido.",
   "desc.009":
-    "Notas de campo al atardecer con tres sujetos que se niegan a posar. Doce páginas sobre distancia, músculo, y el color que toma la hierba cuando el día finalmente se rinde. Un estudio que sigue rodeando la misma cerca.",
+    "Un manifiesto en dos hojas sobre el tiempo: cuánto queda de una vida, cómo gastamos las horas y qué se queda con nosotros. Impreso en una sola tinta azul, con citas de Agustín y Séneca.",
 };
 
 const de: Dictionary = {
@@ -448,7 +448,7 @@ const de: Dictionary = {
   "desc.008":
     "Gitter, ein Fahrrad, und Licht, das trotzdem durchkommt. Acht Seiten von der falschen Seite eines Tors — Nachbarn als Silhouetten, Nachmittage als Beweise, und die kleine Politik eines gemeinsamen Hofs.",
   "desc.009":
-    "Sonnenuntergangs-Feldnotizen mit drei Motiven, die nicht posieren. Zwölf Seiten über Distanz, Muskel und die Farbe, die das Gras annimmt, wenn der Tag endlich aufgibt. Eine Studie, die denselben Zaun umkreist.",
+    "Ein Manifest auf zwei Blättern über die Zeit: wie viel von einem Leben bleibt, wie wir unsere Stunden verbringen und was uns davon bleibt. In einer blauen Farbe gedruckt, mit Zitaten von Augustinus und Seneca.",
 };
 
 const fr: Dictionary = {
@@ -501,7 +501,7 @@ const fr: Dictionary = {
   "desc.008":
     "Des barreaux, un vélo, et la lumière qui trouve encore un passage. Huit pages du mauvais côté d’une grille — voisins en silhouettes, après-midi en preuves, et la petite politique d’une cour partagée.",
   "desc.009":
-    "Notes de terrain au coucher du soleil avec trois sujets qui refusent de poser. Douze pages sur la distance, le muscle, et la couleur que prend l’herbe quand le jour finit par abandonner. Une étude qui tourne autour de la même clôture.",
+    "Un manifeste en deux feuillets sur le temps : ce qui reste d'une vie, la façon dont nous passons nos heures et ce qui demeure avec nous. Imprimé d'une seule encre bleue, avec des citations d'Augustin et de Sénèque.",
 };
 
 const it: Dictionary = {
@@ -554,7 +554,7 @@ const it: Dictionary = {
   "desc.008":
     "Sbarre, una bicicletta, e la luce che trova ancora un passaggio. Otto pagine dal lato sbagliato di un cancello — vicini come silhouette, pomeriggi come prove, e la piccola politica di un cortile condiviso.",
   "desc.009":
-    "Appunti di campo al tramonto con tre soggetti che rifiutano di posare. Dodici pagine su distanza, muscolo, e il colore che prende l’erba quando il giorno finalmente si arrende. Uno studio che continua a girare intorno allo stesso recinto.",
+    "Un manifesto in due fogli sul tempo: quanto resta di una vita, come passiamo le ore e cosa rimane con noi. Stampato in un solo inchiostro blu, con citazioni di Agostino e Seneca.",
 };
 
 const ja: Dictionary = {
@@ -607,7 +607,7 @@ const ja: Dictionary = {
   "desc.008":
     "棚、自転車、それでも通り抜ける光。門の裏側からの八ページ — シルエットの隣人、証拠のような午後、共有中庭の小さな政治。",
   "desc.009":
-    "ポーズを拒む三頭の被写体との日没フィールドノート。距離と筋肉、そして一日が折れたときの草の色について十二ページ。同じ棚を回り続ける習作。",
+    "時間についての二枚組のマニフェスト。人生にどれだけ残っているか、時間をどう使うか、そして何が私たちに残るのか。青一色で印刷され、アウグスティヌスとセネカを引用しています。",
 };
 
 const ko: Dictionary = {
@@ -660,7 +660,7 @@ const ko: Dictionary = {
   "desc.008":
     "쇠창살, 자전거, 그래도 스며드는 빛. 문 반대편에서 쓴 여덟 페이지 — 실루엣인 이웃, 증거인 오후, 공유 마당의 작은 정치.",
   "desc.009":
-    "포즈를 거부하는 세 피사체와 함께한 노을 필드 노트. 거리와 근육, 하루가 포기할 때 풀이 되는 색에 대한 열두 페이지. 같은 울타리를 계속 도는 스터디.",
+    "시간에 관한 두 장짜리 선언문. 삶이 얼마나 남았는지, 우리가 시간을 어떻게 쓰는지, 그리고 무엇이 우리에게 남는지. 파란색 한 가지로 인쇄했으며 아우구스티누스와 세네카를 인용합니다.",
 };
 
 const zhCN: Dictionary = {
@@ -713,7 +713,7 @@ const zhCN: Dictionary = {
   "desc.008":
     "铁栏、一辆自行车，以及仍能挤进来的光。从门的另一侧写下的八页——邻居成了剪影，午后成了证据，还有共享庭院的小小政治。",
   "desc.009":
-    "日落田野笔记，三个拒绝摆姿势的对象。十二页关于距离、肌肉，以及白昼终于放弃时草地的颜色。一项不断绕着同一道篱笆打转的习作。",
+    "一份关于时间的两页宣言：人生还剩多少，我们如何度过时光，以及什么会留在我们身上。以单一蓝色印刷，引用奥古斯丁与塞涅卡。",
 };
 
 const zhTW: Dictionary = {
@@ -766,7 +766,7 @@ const zhTW: Dictionary = {
   "desc.008":
     "鐵欄、一輛腳踏車，以及仍能擠進來的光。從門的另一側寫下的八頁——邻居成了剪影，午後成了證據，還有共享庭院的小小政治。",
   "desc.009":
-    "日落田野筆記，三個拒絕擺姿勢的對象。十二頁關於距離、肌肉，以及白昼終於放棄時草地的顏色。一項不斷繞著同一道籬笆打轉的習作。",
+    "一份關於時間的兩頁宣言：人生還剩多少，我們如何度過時光，以及什麼會留在我們身上。以單一藍色印刷，引用奧古斯丁與塞涅卡。",
 };
 
 export const DICTIONARIES: Record<Language, Dictionary> = {

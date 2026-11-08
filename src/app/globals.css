@@ -4713,3 +4713,7 @@ html[data-view="schema"] .release-slot__more {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
+
+a.get-btn {
+  text-decoration: none;
+}

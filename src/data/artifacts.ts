@@ -48,6 +48,8 @@ export type Artifact = {
   cover?: string;
   /** Avatar overlaid on cover (temporary stand-in). */
   avatar?: string;
+  /** Free objects: PDF per edition language (falls back to English). */
+  downloads?: Partial<Record<ArtifactLang, string>>;
 };
 
 export const featuredArtifact: Artifact = {
@@ -213,26 +215,28 @@ export const releaseArtifacts: Artifact[] = [
   },
   {
     id: "009",
-    slug: "pasture-three",
+    slug: "manifesto-what-remains",
     number: "009",
-    title: "THREE HORSES",
-    subtitle: "PASTURE STUDY",
+    title: "MANIFESTO",
+    subtitle: "WHAT REMAINS OF THE JOURNEY",
     type: "booklet",
-    kind: "booklet",
-    status: "available",
-    price: 9,
-    currency: "BRL",
+    kind: "essay",
+    status: "free",
     format: "PDF",
-    pages: 12,
-    releaseDate: "22.04.26",
+    pages: 2,
+    releaseDate: "07.11.26",
     version: "1.0",
-    languages: ["en"],
+    languages: ["en", "pt"],
     manifestations: ["pdf", "banner"],
     relatedBannerId: "b004",
     description:
-      "Sunset field notes with three subjects who refuse to pose. Twelve pages on distance, muscle, and the color the grass becomes when the day finally gives up. A study that keeps circling the same fence.",
+      "A two-sheet manifesto about time: how much of a life is left, how we spend our hours, and what stays with us. Printed in one blue ink, citing Augustine and Seneca.",
     cover: "/covers/009-pasture.gif",
     avatar: "/avatars/001-cat.gif",
+    downloads: {
+      en: "/downloads/what-remains-of-the-journey-en.pdf",
+      pt: "/downloads/o-que-fica-da-jornada-pt.pdf",
+    },
   },
 ];
 

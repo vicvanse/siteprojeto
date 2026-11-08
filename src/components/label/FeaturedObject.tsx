@@ -44,7 +44,7 @@ export function FeaturedObject({
   variant = "default",
   showLogout = false,
 }: Props) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const { email, signOut } = useAccess();
   const titleRef = useRef<HTMLDivElement>(null);
   const [titleH, setTitleH] = useState(0);
@@ -59,6 +59,10 @@ export function FeaturedObject({
   const bannerLabel = banner
     ? `${banner.title.split(/\s*\/\s*/)[0]!.trim()} BANNER`
     : "";
+  const freeDownload =
+    artifact.status === "free" && artifact.downloads
+      ? (artifact.downloads[language as ArtifactLang] ?? artifact.downloads.en)
+      : undefined;
   const plaques = [
     `PDF`,
     `${String(artifact.pages ?? 0).padStart(2, "0")} ${t("pages")}`,
@@ -141,9 +145,20 @@ export function FeaturedObject({
                 <span className="price-chip">
                   {artifact.status === "free" ? t("free") : formatPrice(artifact)}
                 </span>
-                <button type="button" className="get-btn">
-                  {t("get")}
-                </button>
+                {freeDownload ? (
+                  <a
+                    className="get-btn"
+                    href={freeDownload}
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    {t("get")}
+                  </a>
+                ) : (
+                  <button type="button" className="get-btn">
+                    {t("get")}
+                  </button>
+                )}
               </div>
 
               {showVekonManifestation ? (
