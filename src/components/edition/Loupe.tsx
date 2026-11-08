@@ -5,6 +5,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 type Props = {
   /** High-resolution image shown inside the loupe. */
   hd: string;
+  /** Low-resolution image, shown underneath while the HD one loads. */
+  lo: string;
   children: React.ReactNode;
   className?: string;
   label: string;
@@ -24,7 +26,7 @@ type State = { x: number; y: number; rx: number; ry: number; w: number; h: numbe
  * that spot enlarged. Wheel changes the magnification. On touch, press and
  * hold to bring it up, then drag; it sits above the finger.
  */
-export function Loupe({ hd, children, className, label }: Props) {
+export function Loupe({ hd, lo, children, className, label }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const [state, setState] = useState<State | null>(null);
   const [zoom, setZoom] = useState(START);
@@ -166,9 +168,9 @@ export function Loupe({ hd, children, className, label }: Props) {
             top: lens.top,
             width: W,
             height: H,
-            backgroundImage: `url(${hd})`,
-            backgroundSize: lens.backgroundSize,
-            backgroundPosition: lens.backgroundPosition,
+            backgroundImage: `url(${hd}), url(${lo})`,
+            backgroundSize: `${lens.backgroundSize}, ${lens.backgroundSize}`,
+            backgroundPosition: `${lens.backgroundPosition}, ${lens.backgroundPosition}`,
           }}
         >
           <span className="loupe__zoom">{zoom.toFixed(1)}×</span>

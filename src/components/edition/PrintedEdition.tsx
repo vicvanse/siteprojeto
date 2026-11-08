@@ -143,7 +143,8 @@ export function PrintedEdition({ id, title, sheets, langs, downloads }: Props) {
           <figure key={n} className="edition__sheet">
             <Loupe
               className="edition__page"
-              hd={`/editions/${id}/${lang}-${n}-hd.jpg`}
+              hd={`/editions/${id}/${lang}-${n}-hd.webp`}
+              lo={src(n)}
               label={`${c.sheet} ${ROMAN[n - 1]}`}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
