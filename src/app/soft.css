@@ -388,3 +388,10 @@ html{-webkit-tap-highlight-color:transparent}
 /* Price / Get / Read: buttons size to their label, arrow stays on the same line */
 .object-stack__acquire{flex-wrap:wrap;row-gap:10px}
 .object-stack__acquire > *{flex:0 0 auto;white-space:nowrap}
+@media (max-width:900px){
+  .object-stack__acquire{gap:8px}
+  html:root .object-stack__acquire .get-btn{padding:0 .95rem!important}
+  .object-stack__acquire .read-btn{padding:0 .85rem}
+  .object-stack__acquire .price-chip{padding-inline:.65rem!important}
+  html:root .manifestations__meta{white-space:nowrap}
+}
