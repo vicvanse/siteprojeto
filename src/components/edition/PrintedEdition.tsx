@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
+import { ZoomViewer } from "./ZoomViewer";
 import "./edition.css";
 
 type EditionLang = "en" | "pt";
@@ -29,6 +30,12 @@ const COPY: Record<
     close: string;
     pdf: string;
     back: string;
+    fit: string;
+    zoomIn: string;
+    zoomOut: string;
+    prev: string;
+    next: string;
+    hint: string;
   }
 > = {
   en: {
@@ -36,20 +43,32 @@ const COPY: Record<
     sheet: "Sheet",
     spreads: "Spreads",
     sequence: "Sequence",
-    note: "Click a sheet to see it at full size. This is the edition exactly as printed.",
+    note: "Click a sheet to open it and zoom in. This is the edition exactly as printed.",
     close: "Close ×",
     pdf: "PDF ↓",
     back: "← Papers",
+    fit: "Fit",
+    zoomIn: "Zoom in",
+    zoomOut: "Zoom out",
+    prev: "Previous sheet",
+    next: "Next sheet",
+    hint: "Pinch or Ctrl + scroll to zoom · drag to move · double click to switch",
   },
   pt: {
     edition: "Edição impressa",
     sheet: "Folha",
     spreads: "Lado a lado",
     sequence: "Sequência",
-    note: "Clique numa folha para ver em tamanho real. Esta é a edição exatamente como impressa.",
+    note: "Clique numa folha para abrir e dar zoom. Esta é a edição exatamente como impressa.",
     close: "Fechar ×",
     pdf: "PDF ↓",
     back: "← Papers",
+    fit: "Ajustar",
+    zoomIn: "Aproximar",
+    zoomOut: "Afastar",
+    prev: "Folha anterior",
+    next: "Próxima folha",
+    hint: "Pinça ou Ctrl + rolagem para zoom · arraste para mover · clique duplo alterna",
   },
 };
 
@@ -67,15 +86,6 @@ export function PrintedEdition({ id, title, sheets, langs, downloads }: Props) {
     const wanted = (fromUrl ?? language) as EditionLang;
     if (langs.includes(wanted)) setLang(wanted);
   }, [language, langs]);
-
-  useEffect(() => {
-    if (zoom === null) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setZoom(null);
-    };
-    document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
-  }, [zoom]);
 
   const c = COPY[lang];
   const pages = Array.from({ length: sheets }, (_, i) => i + 1);
@@ -155,18 +165,27 @@ export function PrintedEdition({ id, title, sheets, langs, downloads }: Props) {
       <p className="edition__note">{c.note}</p>
 
       {zoom !== null ? (
-        <div
-          className="edition__zoom"
-          role="dialog"
-          aria-label={`${c.sheet} ${ROMAN[zoom - 1]}`}
-          onClick={() => setZoom(null)}
-        >
-          <button type="button" className="edition__btn edition__close" autoFocus>
-            {c.close}
-          </button>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={src(zoom)} alt="" />
-        </div>
+        <ZoomViewer
+          sheet={zoom}
+          sheets={sheets}
+          roman={ROMAN}
+          hd={(n) => `/editions/${id}/${lang}-${n}-hd.jpg`}
+          lo={src}
+          width={2483}
+          height={3508}
+          labels={{
+            sheet: c.sheet,
+            close: c.close,
+            fit: c.fit,
+            zoomIn: c.zoomIn,
+            zoomOut: c.zoomOut,
+            prev: c.prev,
+            next: c.next,
+            hint: c.hint,
+          }}
+          onSheet={(n) => setZoom(Math.min(sheets, Math.max(1, n)))}
+          onClose={() => setZoom(null)}
+        />
       ) : null}
     </div>
   );
