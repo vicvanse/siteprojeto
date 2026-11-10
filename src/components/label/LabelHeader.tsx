@@ -5,6 +5,7 @@ import { brand } from "@/brand";
 import { AccentSwatches } from "./AccentSwatches";
 import { HeaderLivingRing } from "./HeaderLivingRing";
 import { ViewSwitcher } from "./ViewSwitcher";
+import { withBase } from "@/lib/base-path";
 
 /**
  * Header: accent swatches · Vekon:Papers + View · living ring.
@@ -21,7 +22,7 @@ export function LabelHeader() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 className="label-header__glyph"
-                src="/vekon-papers-icon.png"
+                src={withBase("/vekon-papers-icon.png")}
                 alt=""
                 width={40}
                 height={40}

@@ -2,6 +2,7 @@
 
 import { brand } from "@/brand";
 import { useLanguage } from "@/components/LanguageProvider";
+import { withBase } from "@/lib/base-path";
 
 /**
  * Footer marks — Papers (red star / light) beside Life (black), each with what it is.
@@ -11,12 +12,12 @@ export function VekonMarkBadge() {
 
   return (
     <aside className="vekon-marks" aria-label="Vekon">
-      <a href="/" className="vekon-mark vekon-mark--papers">
+      <a href={withBase("/")} className="vekon-mark vekon-mark--papers">
         <div className="vekon-mark__plate vekon-mark__plate--papers">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             className="vekon-mark__glyph"
-            src="/vekon-papers-icon.png"
+            src={withBase("/vekon-papers-icon.png")}
             alt=""
             width={72}
             height={72}
@@ -42,7 +43,7 @@ export function VekonMarkBadge() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             className="vekon-mark__glyph"
-            src="/vekon-life-icon.png"
+            src={withBase("/vekon-life-icon.png")}
             alt=""
             width={72}
             height={72}

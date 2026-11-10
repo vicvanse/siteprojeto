@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { PrintedEdition } from "@/components/edition/PrintedEdition";
+import { withBase } from "@/lib/base-path";
 
 export const metadata: Metadata = {
   title: "Manifesto · Printed edition",
@@ -16,8 +17,8 @@ export default function Edition001Page() {
       sheets={2}
       langs={["en", "pt"]}
       downloads={{
-        en: "/downloads/what-remains-of-the-journey-en.pdf",
-        pt: "/downloads/o-que-fica-da-jornada-pt.pdf",
+        en: withBase("/downloads/what-remains-of-the-journey-en.pdf"),
+        pt: withBase("/downloads/o-que-fica-da-jornada-pt.pdf"),
       }}
     />
   );

@@ -8,6 +8,7 @@ import {
   useMemo,
   useState,
 } from "react";
+import { withBase } from "@/lib/base-path";
 
 export type AccessOverlayPhase = "form" | "sent";
 
@@ -60,7 +61,7 @@ export function AccessProvider({ children }: { children: React.ReactNode }) {
 
   const refreshSession = useCallback(async () => {
     try {
-      const res = await fetch("/api/access/session", { cache: "no-store" });
+      const res = await fetch(withBase("/api/access/session"), { cache: "no-store" });
       const data = (await res.json()) as {
         authenticated?: boolean;
         email?: string;
@@ -106,7 +107,7 @@ export function AccessProvider({ children }: { children: React.ReactNode }) {
     const trimmed = value.trim().toLowerCase();
     setBusy(true);
     try {
-      const res = await fetch("/api/access/request", {
+      const res = await fetch(withBase("/api/access/request"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: trimmed }),
@@ -160,7 +161,7 @@ export function AccessProvider({ children }: { children: React.ReactNode }) {
   ) => {
     setBusy(true);
     try {
-      const res = await fetch("/api/access/verify", {
+      const res = await fetch(withBase("/api/access/verify"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(
@@ -195,7 +196,7 @@ export function AccessProvider({ children }: { children: React.ReactNode }) {
 
   const signOut = useCallback(async () => {
     try {
-      await fetch("/api/access/signout", { method: "POST" });
+      await fetch(withBase("/api/access/signout"), { method: "POST" });
     } catch {
       /* ignore */
     }
@@ -211,7 +212,7 @@ export function AccessProvider({ children }: { children: React.ReactNode }) {
 
   const claim = useCallback(async (objectId: string) => {
     try {
-      const res = await fetch("/api/access/claim", {
+      const res = await fetch(withBase("/api/access/claim"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ objectId }),
