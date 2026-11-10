@@ -2,6 +2,7 @@
 
 import { Children, useState, type ReactNode } from "react";
 import "./booklet.css";
+import { withBase } from "@/lib/base-path";
 
 type Mode = "sequence" | "spreads";
 
@@ -25,7 +26,7 @@ export function BookletViewer({ code, objectLabel, children }: Props) {
       <header className="booklet-desk__bar">
         <div className="booklet-desk__identity">
           <p className="booklet-desk__meta">
-            <a href="/">← Papers</a>
+            <a href={withBase("/")}>← Papers</a>
             <span className="booklet-desk__sep" aria-hidden>
               /
             </span>

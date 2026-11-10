@@ -1,3 +1,4 @@
+import { withBase } from "@/lib/base-path";
 /** Booklet 001 — O mundo que estava lá · OBJECT / 009 · Three Horses */
 
 export const BOOKLET_001 = {
@@ -12,8 +13,8 @@ export const BOOKLET_001 = {
     slug: "pasture-three",
     title: "Three Horses",
     subtitle: "Pasture Study",
-    cover: "/covers/009-pasture.gif",
-    avatar: "/avatars/001-cat.gif",
+    cover: withBase("/covers/009-pasture.gif"),
+    avatar: withBase("/avatars/001-cat.gif"),
     type: "Digital landscape",
     source: "Vekon Archive",
     date: "2026",

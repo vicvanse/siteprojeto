@@ -1,4 +1,5 @@
 import type { MessageKey } from "@/lib/i18n";
+import { withBase } from "@/lib/base-path";
 
 export type ArtifactType =
   | "booklet"
@@ -78,8 +79,8 @@ export const featuredArtifact: Artifact = {
   languages: ["en", "pt"],
   description:
     "Chapter one of a week that never clocks in. Eight pages on the gap between a mood and a calendar — mornings that feel like endings, inboxes that feel like weather, and the quiet math of being between jobs without calling it a crisis.",
-  cover: "/covers/001-clover2.gif",
-  avatar: "/avatars/001-cat.gif",
+  cover: withBase("/covers/001-clover2.gif"),
+  avatar: withBase("/avatars/001-cat.gif"),
 };
 
 export const incubatingEgg: Artifact = {
@@ -113,8 +114,8 @@ export const releaseArtifacts: Artifact[] = [
     languages: ["en", "pt", "es"],
     description:
       "Twelve pages from the concrete ledge after midnight. Trains below, neon above, and a notebook that only opens when the city thinks nobody is watching. Half reportage, half apology to whoever still waits for the last bus.",
-    cover: "/covers/003-default2.gif",
-    avatar: "/avatars/003-astro.gif",
+    cover: withBase("/covers/003-default2.gif"),
+    avatar: withBase("/avatars/003-astro.gif"),
   },
   {
     id: "004",
@@ -134,8 +135,8 @@ export const releaseArtifacts: Artifact[] = [
     languages: ["en", "pt"],
     description:
       "A short field chapter under a lavender sky. Two sheep, one fence, and the hour when the grass turns the color of bruises that heal. Six pages of quiet looking — almost a prayer, almost a joke.",
-    cover: "/covers/004-landscape-roxo.gif",
-    avatar: "/avatars/004-baker.gif",
+    cover: withBase("/covers/004-landscape-roxo.gif"),
+    avatar: withBase("/avatars/004-baker.gif"),
   },
   {
     id: "005",
@@ -155,8 +156,8 @@ export const releaseArtifacts: Artifact[] = [
     languages: ["en"],
     description:
       "Sixteen pages of salt, rods, and the patience of not catching anything. Line in the water, phone in the pocket, stories from people who measure time in casts instead of clocks. A pier essay that refuses a clean ending.",
-    cover: "/covers/005-pier.gif",
-    avatar: "/avatars/005-croc.gif",
+    cover: withBase("/covers/005-pier.gif"),
+    avatar: withBase("/avatars/005-croc.gif"),
   },
   {
     id: "006",
@@ -176,8 +177,8 @@ export const releaseArtifacts: Artifact[] = [
     languages: ["en", "pt"],
     description:
       "Skyline inventory written from under the overhang. Balconies, AC units, laundry flags — a catalog of lives stacked one floor at a time. Ten pages of looking up until your neck learns a new posture.",
-    cover: "/covers/006-terrace.gif",
-    avatar: "/avatars/006-blazer.gif",
+    cover: withBase("/covers/006-terrace.gif"),
+    avatar: withBase("/avatars/006-blazer.gif"),
   },
   {
     id: "007",
@@ -197,8 +198,8 @@ export const releaseArtifacts: Artifact[] = [
     languages: ["en", "pt", "es", "fr"],
     description:
       "Soft towers, hard edges — a field guide to silhouettes that pretend to be architecture. Ten pages of naming what sticks out of the land when the light is wrong and the horizon won't stay still.",
-    cover: "/covers/007-towers4.gif",
-    avatar: "/avatars/003-astro.gif",
+    cover: withBase("/covers/007-towers4.gif"),
+    avatar: withBase("/avatars/003-astro.gif"),
   },
   {
     id: "008",
@@ -218,8 +219,8 @@ export const releaseArtifacts: Artifact[] = [
     languages: ["en", "pt"],
     description:
       "Bars, a bicycle, and the light that still finds a way through. Eight pages from the wrong side of a gate — neighbors as silhouettes, afternoons as evidence, and the small politics of a shared courtyard.",
-    cover: "/covers/008-courtyard.gif",
-    avatar: "/avatars/004-baker.gif",
+    cover: withBase("/covers/008-courtyard.gif"),
+    avatar: withBase("/avatars/004-baker.gif"),
   },
   {
     /* Internal id stays "009" (files, accounts); the public number is 001. */
@@ -240,13 +241,13 @@ export const releaseArtifacts: Artifact[] = [
     relatedBannerId: "b004",
     description:
       "A life lasts about eighty years, but we only start remembering it around seven. This manifesto does that arithmetic and asks what to do with the time that is left. Two sheets, a single ink, and the text where Vekon began.",
-    cover: "/covers/009-pasture.gif",
-    avatar: "/avatars/009-heron-seal.png",
+    cover: withBase("/covers/009-pasture.gif"),
+    avatar: withBase("/avatars/009-heron-seal.png"),
     downloads: {
-      en: "/downloads/what-remains-of-the-journey-en.pdf",
-      pt: "/downloads/o-que-fica-da-jornada-pt.pdf",
+      en: withBase("/downloads/what-remains-of-the-journey-en.pdf"),
+      pt: withBase("/downloads/o-que-fica-da-jornada-pt.pdf"),
     },
-    edition: "/edition/001",
+    edition: withBase("/edition/001"),
     themes: ["theme.time", "theme.memory", "theme.choice", "theme.self"],
     references: ["ref.augustine", "ref.seneca"],
   },
@@ -267,7 +268,7 @@ export const extraArtifacts: Artifact[] = [
     version: "1.0",
     languages: ["en"],
     description: "Wide pasture still — dusk light, fence line, three silhouettes.",
-    cover: "/covers/009-pasture.gif",
+    cover: withBase("/covers/009-pasture.gif"),
   },
   {
     id: "b006",
@@ -282,7 +283,7 @@ export const extraArtifacts: Artifact[] = [
     version: "1.0",
     languages: ["en"],
     description: "Under-overhang crop — balconies stacked against evening sky.",
-    cover: "/covers/006-terrace.gif",
+    cover: withBase("/covers/006-terrace.gif"),
   },
   {
     id: "b011",
@@ -297,7 +298,7 @@ export const extraArtifacts: Artifact[] = [
     version: "1.0",
     languages: ["en"],
     description: "Overpass night still — neon spill, empty lane, long walk home.",
-    cover: "/covers/003-default2.gif",
+    cover: withBase("/covers/003-default2.gif"),
   },
 ];
 

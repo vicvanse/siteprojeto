@@ -1,3 +1,4 @@
+import { BASE_PATH } from "@/lib/base-path";
 import { NextResponse } from "next/server";
 import { SESSION_COOKIE } from "@/lib/access-auth";
 
@@ -7,7 +8,7 @@ export async function POST() {
     httpOnly: true,
     sameSite: "lax",
     secure: process.env.NODE_ENV === "production",
-    path: "/",
+    path: BASE_PATH,
     maxAge: 0,
   });
   return response;

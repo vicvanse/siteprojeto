@@ -13,6 +13,7 @@ import {
   siteOrigin,
 } from "@/lib/access-auth";
 import { sendSupabaseMagicLink, supabaseEnabled } from "@/lib/supabase-rest";
+import { BASE_PATH, withBase } from "@/lib/base-path";
 
 function sessionCookie(identity: string) {
   const session = createSession(identity);
@@ -22,7 +23,7 @@ function sessionCookie(identity: string) {
       httpOnly: true,
       sameSite: "lax" as const,
       secure: process.env.NODE_ENV === "production",
-      path: "/",
+      path: BASE_PATH,
       maxAge: Math.floor(SESSION_TTL_MS / 1000),
     },
   };
@@ -60,7 +61,7 @@ export async function POST(request: Request) {
     /* Return to the exact site the reader is on (VERCEL_URL is the
        per-deployment host, which isn't in Supabase's allowed list). */
     const origin = request.headers.get("origin") ?? new URL(request.url).origin;
-    const sent = await sendSupabaseMagicLink(identity, `${origin || siteOrigin()}/access`);
+    const sent = await sendSupabaseMagicLink(identity, `${origin || siteOrigin()}${withBase("/access")}`);
     if (!sent.sent) {
       return NextResponse.json(
         { ok: false, error: sent.status === 429 ? "rate_limited" : "send_failed" },

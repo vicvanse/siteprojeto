@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { Loupe } from "./Loupe";
 import "./edition.css";
+import { withBase } from "@/lib/base-path";
 
 type EditionLang = "en" | "pt";
 type Mode = "spreads" | "sequence";
@@ -69,14 +70,14 @@ export function PrintedEdition({ id, number, title, sheets, langs, downloads }: 
 
   const c = COPY[lang];
   const pages = Array.from({ length: sheets }, (_, i) => i + 1);
-  const src = (n: number) => `/editions/${id}/${lang}-${n}.jpg`;
+  const src = (n: number) => withBase(`/editions/${id}/${lang}-${n}.jpg`);
   const pdf = downloads?.[lang] ?? downloads?.en;
 
   return (
     <div className="edition">
       <header className="edition__bar">
         <div className="edition__left">
-          <a className="edition__btn edition__back" href="/">
+          <a className="edition__btn edition__back" href={withBase("/")}>
             {c.back}
           </a>
           <p className="edition__id">
@@ -85,13 +86,13 @@ export function PrintedEdition({ id, number, title, sheets, langs, downloads }: 
           </p>
         </div>
         {/* Same black Vekon: Papers plate as the site header, for continuity. */}
-        <a className="label-header__brand-panel edition__brand" href="/" aria-label="Vekon: Papers">
+        <a className="label-header__brand-panel edition__brand" href={withBase("/")} aria-label="Vekon: Papers">
           <span className="label-header__mark">
             <span className="label-header__foil" aria-hidden />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               className="label-header__glyph"
-              src="/vekon-papers-icon.png"
+              src={withBase("/vekon-papers-icon.png")}
               alt=""
               width={40}
               height={40}
@@ -147,7 +148,7 @@ export function PrintedEdition({ id, number, title, sheets, langs, downloads }: 
           <figure key={n} className="edition__sheet">
             <Loupe
               className="edition__page"
-              hd={`/editions/${id}/${lang}-${n}-hd.webp`}
+              hd={withBase(`/editions/${id}/${lang}-${n}-hd.webp`)}
               lo={src(n)}
               label={`${c.sheet} ${ROMAN[n - 1]}`}
             >

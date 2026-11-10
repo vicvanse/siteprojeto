@@ -1,3 +1,4 @@
+import { withBase } from "@/lib/base-path";
 export type ProductType =
   | "booklet"
   | "poster"
@@ -65,7 +66,7 @@ export const products: Product[] = [
     format: "PNG",
     contents: "1 file",
     releaseDate: "2026.10.26",
-    download: "/downloads/free-object-001.txt",
+    download: withBase("/downloads/free-object-001.txt"),
     weight: "small",
   },
   {

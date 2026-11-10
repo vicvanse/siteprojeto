@@ -1,5 +1,6 @@
 import { createHmac, timingSafeEqual } from "crypto";
 import { collectibleArtifacts } from "@/data/artifacts";
+import { withBase } from "@/lib/base-path";
 
 const SESSION_COOKIE = "papers-access";
 const MAGIC_TTL_MS = 15 * 60 * 1000;
@@ -159,7 +160,7 @@ export function siteOrigin() {
 }
 
 export function magicLinkUrl(token: string) {
-  return `${siteOrigin()}/access?t=${encodeURIComponent(token)}`;
+  return `${siteOrigin()}${withBase("/access")}?t=${encodeURIComponent(token)}`;
 }
 
 export function isEmail(value: string) {

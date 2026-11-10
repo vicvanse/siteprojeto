@@ -14,6 +14,7 @@ import {
   SpecimenCrop,
   TechnicalLabel,
 } from "./primitives";
+import { withBase } from "@/lib/base-path";
 
 /** PAGE 01 — Cover · Gathering Moss logic on Papers white */
 export function CoverPage() {
@@ -49,7 +50,7 @@ export function CoverPage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 className="bk-mark"
-                src="/vekon-papers-icon.png"
+                src={withBase("/vekon-papers-icon.png")}
                 alt=""
                 width={22}
                 height={22}

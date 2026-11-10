@@ -4,12 +4,13 @@ import Link from "next/link";
 import { useEffect, useId, useState, type FormEvent } from "react";
 import { useAccess } from "@/components/AccessProvider";
 import { useLanguage } from "@/components/LanguageProvider";
+import { withBase } from "@/lib/base-path";
 
 /* Real accounts (shared with Vekon Life) are on when Supabase is configured. */
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL?.replace(/\/$/, "") ?? "";
 
 function signInWithGoogle() {
-  const back = `${window.location.origin}/access`;
+  const back = `${window.location.origin}${withBase("/access")}`;
   window.location.href = `${SUPABASE_URL}/auth/v1/authorize?provider=google&redirect_to=${encodeURIComponent(back)}`;
 }
 

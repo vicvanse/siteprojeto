@@ -3,6 +3,7 @@
 import type { Artifact } from "@/data/artifacts";
 import { useLanguage } from "@/components/LanguageProvider";
 import { kindKey } from "@/lib/i18n";
+import { withBase } from "@/lib/base-path";
 
 type Props = {
   artifact: Artifact;
@@ -45,7 +46,7 @@ export function ArtworkCover({ artifact, size = "featured" }: Props) {
         <span className="artwork__kind-mark">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/vekon-guides-icon.png"
+            src={withBase("/vekon-guides-icon.png")}
             alt=""
             width={28}
             height={28}
