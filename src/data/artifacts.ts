@@ -247,7 +247,7 @@ export const releaseArtifacts: Artifact[] = [
       en: withBase("/downloads/what-remains-of-the-journey-en.pdf"),
       pt: withBase("/downloads/o-que-fica-da-jornada-pt.pdf"),
     },
-    edition: "/edition/001",
+    edition: withBase("/edition/001"),
     themes: ["theme.time", "theme.memory", "theme.choice", "theme.self"],
     references: ["ref.augustine", "ref.seneca"],
   },
