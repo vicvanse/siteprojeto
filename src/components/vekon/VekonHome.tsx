@@ -77,10 +77,9 @@ export function VekonHome() {
           <br />
           DOORS: 02 · OPEN
         </div>
-        <span className="vh-plate">
+        <span className="vh-seal">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={withBase("/vekon-mark.png")} alt="" width={30} height={30} draggable={false} />
-          <span className="vh-plate__word">Vekon</span>
+          <img src={withBase("/vekon-seal.png")} alt="Vekon" width={900} height={278} draggable={false} />
         </span>
         <div className="vh-bar__end">
           <nav className="vh-jump" aria-label="Vekon">
