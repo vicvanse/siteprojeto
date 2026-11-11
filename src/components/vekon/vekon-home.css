@@ -66,7 +66,7 @@
   .vh-code span{font-size:8.5px;color:#666}
   .vh-hero__grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:56px;align-items:center}
   .vh-label{margin:0 0 20px}
-  .vh-title{font-size:clamp(2.8rem,5vw,4.6rem);line-height:.95;margin-bottom:1.6rem}
+  .vh-title{font-size:clamp(3.6rem,8vw,7rem);line-height:.9;margin-bottom:1.6rem}
   .vh-body{max-width:56ch;font-size:16.5px}
   .vh-facts{display:flex;flex-wrap:wrap;gap:8px;margin:1.6rem 0 0;padding:0;list-style:none}
   .vh-facts li{font-size:10.5px;letter-spacing:.08em;padding:6px 12px;border-radius:999px;background:var(--sb);box-shadow:inset 3px 3px 6px var(--sd),inset -3px -3px 6px var(--sl)}
