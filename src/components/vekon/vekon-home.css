@@ -248,3 +248,9 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-doors::after{content:"";position:absolute;left:50%;top:-30px;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:#e8582a;
     box-shadow:0 0 0 5px var(--sb)}
 }
+/* Desktop: the title never runs under the Living Ring — its size is also
+   capped by the width of its own column (container units). */
+@media (min-width:901px){
+  .vh-hero__text{container-type:inline-size;min-width:0}
+  .vekon-home .vh-title{font-size:min(clamp(3.4rem,13vh,8rem),27cqi)!important}
+}
