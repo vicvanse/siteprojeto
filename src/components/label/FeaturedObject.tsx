@@ -218,7 +218,6 @@ export function FeaturedObject({ artifact, variant = "default" }: Props) {
                   ) : null}
                 </div>
               ) : null}
-              <p className="edition-note">{t("edition.note")}</p>
             </div>
           </div>
         </div>
