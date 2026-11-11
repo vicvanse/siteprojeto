@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { Loupe } from "./Loupe";
 import "./edition.css";
-import { withBase } from "@/lib/base-path";
+import { VEKON_HOME_URL, withBase } from "@/lib/base-path";
 
 type EditionLang = "en" | "pt";
 type Mode = "spreads" | "sequence";
@@ -86,7 +86,7 @@ export function PrintedEdition({ id, number, title, sheets, langs, downloads }: 
           </p>
         </div>
         {/* Same black Vekon: Papers plate as the site header, for continuity. */}
-        <a className="label-header__brand-panel edition__brand is-logo" href={withBase("/")} aria-label="Vekon: Papers">
+        <a className="label-header__brand-panel edition__brand is-logo" href={VEKON_HOME_URL} aria-label="Vekon">
           <span className="label-header__logo-wrap">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img

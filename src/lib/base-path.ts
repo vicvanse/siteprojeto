@@ -10,3 +10,6 @@ export function withBase(path: string): string {
   if (path === BASE_PATH || path.startsWith(`${BASE_PATH}/`)) return path;
   return `${BASE_PATH}${path}`;
 }
+
+/** The Vekon home (vekonlife.com), outside this app's basePath. */
+export const VEKON_HOME_URL = "https://vekonlife.com/";

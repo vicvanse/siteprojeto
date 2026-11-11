@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
+import { VEKON_HOME_URL } from "@/lib/base-path";
 import { LivingRingMark } from "./LivingRingMark";
 
 /**
@@ -133,9 +133,9 @@ export function HeaderLivingRing() {
   }, []);
 
   return (
-    <Link
+    <a
       ref={ringRef}
-      href="/"
+      href={VEKON_HOME_URL}
       className="label-header__ring"
       aria-label="Vekon"
       title="Vekon"
@@ -146,6 +146,6 @@ export function HeaderLivingRing() {
       }
     >
       <LivingRingMark />
-    </Link>
+    </a>
   );
 }

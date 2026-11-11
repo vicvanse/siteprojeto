@@ -32,7 +32,7 @@ export function ViewSwitcher() {
 
   return (
     <div className="view-switcher" role="group" aria-label={t("view")}>
-      <span className="view-switcher__label">{t("view")}</span>
+      <span className="view-switcher__label">Papers</span>
       <div className="view-switcher__pair">
         {options.map((opt) => {
           const active = mode === opt.id;

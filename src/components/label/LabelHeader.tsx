@@ -1,11 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import { brand } from "@/brand";
 import { AccentSwatches } from "./AccentSwatches";
 import { HeaderLivingRing } from "./HeaderLivingRing";
 import { ViewSwitcher } from "./ViewSwitcher";
-import { withBase } from "@/lib/base-path";
+import { VEKON_HOME_URL, withBase } from "@/lib/base-path";
 
 /**
  * Header: accent swatches · Vekon:Papers + View · living ring.
@@ -16,7 +14,7 @@ export function LabelHeader() {
     <header className="label-header">
       <div className="label-header__row">
         <div className="label-header__stack">
-          <Link href="/" className="label-header__brand-panel is-logo" aria-label={brand.name}>
+          <a href={VEKON_HOME_URL} className="label-header__brand-panel is-logo" aria-label="Vekon">
             <span className="label-header__logo-wrap">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -30,7 +28,7 @@ export function LabelHeader() {
             />
             <span className="label-header__logo-sub">Papers</span>
           </span>
-          </Link>
+          </a>
 
           <div className="label-header__view-panel">
             <ViewSwitcher />

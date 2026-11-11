@@ -438,3 +438,10 @@ html:root .label-header__logo-wrap{display:inline-flex;align-items:center;gap:10
 html:root .label-header__logo{display:block;height:40px;width:auto}
 html:root .label-header__logo-sub{font-family:var(--font-mono),monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#3a3a3a}
 @media (max-width:900px){html:root .label-header__logo{height:30px}html:root .label-header__logo-sub{font-size:9.5px}}
+
+/* Desktop: "Papers" moves beside Gallery / Collection (the switcher label);
+   the small "Papers" next to the logo stays only on mobile and in the edition bar. */
+@media (min-width:901px){
+  html:root .label-header .label-header__logo-sub{display:none}
+  html:root .label-header__view-panel .view-switcher__label{color:#1a1a1a;font-weight:700;font-size:.72rem;letter-spacing:.18em;margin-right:4px}
+}
