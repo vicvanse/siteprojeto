@@ -477,3 +477,10 @@ html:root .label-header__logo.vk-wm{--wm-h:40px;height:var(--wm-h)!important;wid
 @media (max-width:900px){
   html:root .label-header__view-panel .view-switcher__label{display:inline;color:#1a1a1a;font-weight:700;font-size:.66rem;letter-spacing:.16em;margin:0 4px 0 6px}
 }
+
+/* Desktop accents: one line — 5 colors · language · 5 colors
+   (the language chip already sits at the end of the first row). */
+@media (min-width:901px){
+  html:root .label-header__accents .accent-swatches--full{flex-direction:row!important;align-items:center;gap:7px}
+  html:root .label-header__accents .accent-swatches__row{display:inline-flex;align-items:center}
+}
