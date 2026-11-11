@@ -445,3 +445,8 @@ html:root .label-header__logo-sub{font-family:var(--font-mono),monospace;font-si
   html:root .label-header .label-header__logo-sub{display:none}
   html:root .label-header__view-panel .view-switcher__label{color:#1a1a1a;font-weight:700;font-size:.72rem;letter-spacing:.18em;margin-right:4px}
 }
+/* Logo and the Papers / Gallery / Collection pill: a clear gap (the pill
+   used to tuck under the old black plate with a negative margin). */
+@media (min-width:901px){
+  html:root .label-header__stack:has(.is-logo) .label-header__view-panel{margin-left:22px!important;padding-left:18px!important}
+}
