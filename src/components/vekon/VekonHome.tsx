@@ -121,6 +121,7 @@ export function VekonHome() {
         <TodayLine />
         <span className="vh-logo" aria-hidden />
         <div className="vh-bar__end">
+          <span className="vh-bar__name">Vekon</span>
           <nav className="vh-jump" aria-label="Vekon">
             <a onClick={markDoor} href="/landing">Life</a>
             <a onClick={markDoor} href={withBase("/")}>Papers</a>
