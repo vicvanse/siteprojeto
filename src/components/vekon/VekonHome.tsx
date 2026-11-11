@@ -48,6 +48,9 @@ const DAY_WORD: Record<Language, string> = {
   ja: "日", ko: "일", "zh-CN": "第", "zh-TW": "第",
 } as Record<Language, string>;
 
+/** First day of Vekon (local midnight). */
+const VEKON_DAY_ONE = new Date(2026, 10, 11);
+
 /** Today's date, as a diary page header: weekday · day month year / day N of the year. */
 function TodayLine() {
   const { language } = useLanguage();
@@ -61,18 +64,17 @@ function TodayLine() {
   const loc = language as string;
   const weekday = new Intl.DateTimeFormat(loc, { weekday: "short" }).format(now).replace(/\.$/, "");
   const date = new Intl.DateTimeFormat(loc, { day: "numeric", month: "short", year: "numeric" }).format(now).replace(/\./g, "");
-  const start = new Date(now.getFullYear(), 0, 1);
-  const dayOfYear = Math.floor((now.getTime() - start.getTime()) / 86_400_000) + 1;
-  const leap = new Date(now.getFullYear(), 1, 29).getMonth() === 1;
-  const total = leap ? 366 : 365;
+  /* Day N of Vekon, counted from the first day (Nov 11, 2026 = Day 1), local time. */
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const vekonDay = Math.round((today.getTime() - VEKON_DAY_ONE.getTime()) / 86_400_000) + 1;
   const word = DAY_WORD[language] ?? "Day";
-  const dayLabel = /^zh/.test(loc) ? `${word} ${dayOfYear} 天` : /^(ja|ko)$/.test(loc) ? `${dayOfYear}${word}` : `${word} ${dayOfYear}`;
+  const dayLabel = /^zh/.test(loc) ? `${word} ${vekonDay} 天` : /^(ja|ko)$/.test(loc) ? `${vekonDay}${word}` : `${word} ${vekonDay}`;
   return (
     <time className="vh-bar__meta" dateTime={now.toISOString().slice(0, 10)}>
       <span className="vh-dot" aria-hidden />
       {weekday} · {date}
       <br />
-      {dayLabel} / {total}
+      Vekon · {dayLabel}
     </time>
   );
 }
