@@ -17,7 +17,7 @@
 
 /* Header seal (engraved oval, blue ink) */
 .vh-seal{display:inline-flex;align-items:center}
-.vh-seal img{display:block;height:44px;width:auto}
+.vh-seal img{display:block;height:36px;width:auto}
 
 /* Panels */
 .vh-hero,.vh-door{background:var(--sb);box-shadow:10px 10px 22px var(--sd),-10px -10px 22px var(--sl)}
@@ -50,7 +50,7 @@
   .vh-bar::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:0 0 34px 34px;background:var(--sb);box-shadow:10px 10px 22px var(--sd),-10px -10px 22px var(--sl)}
   .vh-bar__meta{display:block;font-size:9.5px;line-height:1.7;color:#555}
   .vh-plate,.vh-seal{justify-self:center}
-  .vh-seal img{height:64px}
+  .vh-seal img{height:50px}
   .vh-bar{padding-block:20px!important}
   .vh-plate img{width:36px;height:36px}
   .vh-plate__word{font-size:17px}
