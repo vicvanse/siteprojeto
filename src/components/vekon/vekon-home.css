@@ -1,0 +1,58 @@
+/* Vekon root page: the Papers SOFT relief, without the Papers header. */
+.shell:has(.vekon-home) > .label-header{display:none}
+
+.vekon-home{--sb:#e6e7eb;--sd:#c3c6cd;--sl:#fff;max-width:980px;margin:0 auto;padding:28px 0 40px;color:#1f1f1f}
+.vh-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+.vh-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:34px}
+.vh-plate{display:inline-flex;align-items:center;gap:10px;padding:8px 18px 8px 9px;border-radius:999px;background:#151515;color:#f3efe6;box-shadow:6px 8px 16px rgba(0,0,0,.22),-5px -5px 12px rgba(255,255,255,.9)}
+.vh-plate img{width:30px;height:30px;border-radius:50%;object-fit:cover}
+.vh-plate__word{font-weight:800;font-size:15px;letter-spacing:.02em;text-transform:uppercase}
+.vh-lang select{appearance:none;border:0;border-radius:999px;padding:9px 16px;background:var(--sb);color:#3a3a3a;font-family:var(--font-mono),monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;box-shadow:4px 4px 8px var(--sd),-4px -4px 8px var(--sl)}
+
+.vh-hero{padding:2.6rem 2.8rem;border-radius:34px;background:var(--sb);box-shadow:10px 10px 22px var(--sd),-10px -10px 22px var(--sl)}
+.vh-label,.vh-doors-label,.vh-door__kind,.vh-foot{font-family:var(--font-mono),monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:#555}
+.vh-label{margin:0 0 16px}
+.vh-dot{display:inline-block;width:6px;height:6px;border-radius:9px;background:#e8582a;margin-right:6px;vertical-align:1px}
+.vh-title{margin:0 0 1.2rem;font-size:clamp(2rem,5vw,3.6rem);font-weight:800;line-height:1;text-transform:uppercase;letter-spacing:-.02em;max-width:14ch}
+.vh-body{margin:0;max-width:62ch;font-size:16px;line-height:1.7;color:#2a2a2e}
+
+.vh-doors-label{margin:2.6rem 0 1rem 1.2rem}
+.vh-doors{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.vh-door{display:flex;flex-direction:column;gap:1.1rem;padding:1.8rem;border-radius:30px;background:var(--sb);box-shadow:10px 10px 22px var(--sd),-10px -10px 22px var(--sl)}
+.vh-door__head{display:flex;align-items:center;gap:14px}
+.vh-door__icon{display:grid;place-items:center;width:68px;height:68px;flex:none;border-radius:20px;background:#f5efe2;box-shadow:inset 3px 3px 6px var(--sd),inset -3px -3px 6px var(--sl);overflow:hidden}
+.vh-door__icon--dark{background:#1a0606}
+.vh-door__icon img{width:56px;height:56px;border-radius:14px}
+.vh-door__kind{margin:0 0 4px}
+.vh-door__name{margin:0;font-size:1.5rem;font-weight:800;text-transform:uppercase;letter-spacing:-.01em;line-height:1}
+.vh-door__name span{font-weight:500;color:#6b6b6b}
+.vh-door__body{margin:0;flex:1;font-size:15px;line-height:1.65;color:#2a2a2e}
+.vh-door__actions{display:flex;flex-wrap:wrap;gap:12px}
+.vh-btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 1.3rem;border-radius:999px;font-family:var(--font-mono),monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:transform .15s ease,box-shadow .15s ease}
+.vh-btn--dark{background:#151515;color:#f7f7f5;box-shadow:6px 8px 16px rgba(0,0,0,.22),-5px -5px 12px rgba(255,255,255,.9)}
+.vh-btn--soft{background:var(--sb);color:#2a2a2a;box-shadow:4px 4px 8px var(--sd),-4px -4px 8px var(--sl)}
+@media (hover:hover){.vh-btn:hover{transform:translateY(-1px)}.vh-btn--soft:hover{background:#2a2a2a;color:#f7f7f5}}
+.vh-btn:active{transform:translateY(1px)}
+.vh-btn:focus-visible,.vh-lang select:focus-visible{outline:2px solid #e8582a;outline-offset:3px}
+
+.vh-foot{margin:2.6rem 0 0;text-align:center}
+
+/* Same entrance as Papers (html[data-enter] is set before paint in layout.tsx). */
+html[data-enter] .vh-bar{animation:papers-fade .7s ease-out both;animation-delay:1.3s}
+html[data-enter] .vh-hero,html[data-enter] .vh-doors-label,html[data-enter] .vh-door{animation:papers-rise .8s cubic-bezier(.22,1,.36,1) both;animation-delay:calc(1.35s + var(--i,0) * 120ms)}
+html[data-enter="quick"] .vh-bar{animation-duration:.45s;animation-delay:0s}
+html[data-enter="quick"] .vh-hero,html[data-enter="quick"] .vh-doors-label,html[data-enter="quick"] .vh-door{animation-duration:.6s;animation-delay:calc(var(--i,0) * 80ms)}
+
+@media (max-width:900px){
+  .vekon-home{padding:16px 0 28px}
+  .vh-bar{margin-bottom:22px}
+  .vh-hero{padding:1.6rem 1.3rem;border-radius:26px}
+  .vh-body{font-size:15px}
+  .vh-doors{grid-template-columns:1fr;gap:20px}
+  .vh-doors-label{margin:2rem 0 .8rem .8rem}
+  .vh-door{padding:1.4rem 1.2rem;border-radius:24px}
+  .vh-btn{flex:1 1 auto;justify-content:center}
+  .vekon-home *{-webkit-tap-highlight-color:transparent}
+}
+html[data-script="cjk"] .vh-title{line-height:1.2;max-width:none}

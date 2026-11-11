@@ -2,6 +2,7 @@
 
 import { useLayoutEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { usePathname } from "next/navigation";
 import { LivingRingMark } from "@/components/label/LivingRingMark";
 
 /**
@@ -12,6 +13,8 @@ import { LivingRingMark } from "@/components/label/LivingRingMark";
  */
 export function SiteIntro() {
   const [phase, setPhase] = useState<"play" | "done">("play");
+  /* The Vekon root page shares this entrance, captioned with its own name. */
+  const caption = usePathname() === "/vekon" ? "Vekon" : "Papers";
 
   useLayoutEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -68,7 +71,7 @@ export function SiteIntro() {
             <span className="site-intro__disc">
               <LivingRingMark className="site-intro__ring" />
             </span>
-            <p className="site-intro__caption">Papers</p>
+            <p className="site-intro__caption">{caption}</p>
           </motion.div>
         </motion.div>
       ) : null}
