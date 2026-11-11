@@ -11,5 +11,9 @@ export function withBase(path: string): string {
   return `${BASE_PATH}${path}`;
 }
 
-/** The Vekon home (vekonlife.com), outside this app's basePath. */
-export const VEKON_HOME_URL = "https://vekonlife.com/";
+/**
+ * The Vekon home (vekonlife.com/), outside this app's basePath. Root-relative on
+ * purpose: Papers is served at www.vekonlife.com/papers, so "/" stays on the same
+ * origin (no apex→www redirect) and the cross-page view transition can run.
+ */
+export const VEKON_HOME_URL = "/";

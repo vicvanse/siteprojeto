@@ -450,3 +450,14 @@ html:root .label-header__logo-sub{font-family:var(--font-mono),monospace;font-si
 @media (min-width:901px){
   html:root .label-header__stack:has(.is-logo) .label-header__view-panel{margin-left:22px!important;padding-left:18px!important}
 }
+
+/* ── Page change effect between vekonlife.com, /landing and /papers ──
+   All three are same-origin full page loads, so a cross-document view
+   transition runs when both pages opt in (pixellife's landing-soft.css has
+   the same rule). Old page sinks and fades, new page rises in. */
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:vk-page-out .32s cubic-bezier(.4,0,1,1) both}
+::view-transition-new(root){animation:vk-page-in .55s cubic-bezier(.22,1,.36,1) both}
+@keyframes vk-page-out{to{opacity:0;transform:scale(.985);filter:blur(2px)}}
+@keyframes vk-page-in{from{opacity:0;transform:translateY(16px) scale(1.008)}}
+@media (prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}

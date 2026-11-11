@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { LANGUAGES, LANGUAGE_NAMES, type Language } from "@/lib/i18n";
@@ -11,6 +10,8 @@ import "./vekon-home.css";
 /*
  * Links into Vekon Life (/landing, /auth/login) leave this app, so they are
  * plain <a> with absolute paths: next/link would prefix them with /papers.
+ * Papers links are plain <a> too, so moving between Vekon and Papers is a full
+ * page load and the cross-document view transition (soft.css) plays.
  */
 
 /** Deterministic barcode bars (same idea as the Papers HUD). */
@@ -116,7 +117,7 @@ export function VekonHome() {
         <div className="vh-bar__end">
           <nav className="vh-jump" aria-label="Vekon">
             <a href="/landing">Life</a>
-            <Link href="/">Papers</Link>
+            <a href={withBase("/")}>Papers</a>
           </nav>
           <LangSelect />
         </div>
@@ -219,9 +220,9 @@ export function VekonHome() {
           </div>
           <p className="vh-door__body">{t("home.papers.body")}</p>
           <div className="vh-door__actions">
-            <Link className="vh-btn vh-btn--dark" href="/">
+            <a className="vh-btn vh-btn--dark" href={withBase("/")}>
               {t("home.papers.open")} <span aria-hidden>→</span>
-            </Link>
+            </a>
           </div>
         </article>
       </div>
