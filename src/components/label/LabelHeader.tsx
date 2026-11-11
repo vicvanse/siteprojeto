@@ -16,24 +16,20 @@ export function LabelHeader() {
     <header className="label-header">
       <div className="label-header__row">
         <div className="label-header__stack">
-          <Link href="/" className="label-header__brand-panel" aria-label={brand.name}>
-            <span className="label-header__mark">
-              <span className="label-header__foil" aria-hidden />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                className="label-header__glyph"
-                src={withBase("/vekon-papers-icon.png")}
-                alt=""
-                width={40}
-                height={40}
-                draggable={false}
-                decoding="async"
-              />
-            </span>
-            <span className="label-header__word">
-              <span className="label-header__word-soft">Vekon</span>
-              <span className="label-header__word-main">Papers</span>
-            </span>
+          <Link href="/" className="label-header__brand-panel is-logo" aria-label={brand.name}>
+            <span className="label-header__logo-wrap">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="label-header__logo"
+              src={withBase("/vekon-logo.png")}
+              alt=""
+              width={720}
+              height={249}
+              draggable={false}
+              decoding="async"
+            />
+            <span className="label-header__logo-sub">Papers</span>
+          </span>
           </Link>
 
           <div className="label-header__view-panel">

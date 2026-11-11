@@ -86,22 +86,19 @@ export function PrintedEdition({ id, number, title, sheets, langs, downloads }: 
           </p>
         </div>
         {/* Same black Vekon: Papers plate as the site header, for continuity. */}
-        <a className="label-header__brand-panel edition__brand" href={withBase("/")} aria-label="Vekon: Papers">
-          <span className="label-header__mark">
-            <span className="label-header__foil" aria-hidden />
+        <a className="label-header__brand-panel edition__brand is-logo" href={withBase("/")} aria-label="Vekon: Papers">
+          <span className="label-header__logo-wrap">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              className="label-header__glyph"
-              src={withBase("/vekon-papers-icon.png")}
+              className="label-header__logo"
+              src={withBase("/vekon-logo.png")}
               alt=""
-              width={40}
-              height={40}
+              width={720}
+              height={249}
               draggable={false}
+              decoding="async"
             />
-          </span>
-          <span className="label-header__word">
-            <span className="label-header__word-soft">Vekon</span>
-            <span className="label-header__word-main">Papers</span>
+            <span className="label-header__logo-sub">Papers</span>
           </span>
         </a>
         <div className="edition__controls">

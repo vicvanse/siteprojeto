@@ -429,3 +429,12 @@ html{-webkit-tap-highlight-color:transparent}
 @keyframes acq-pop{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:scale(1)}}
 @keyframes acq-ping{0%{box-shadow:0 0 0 0 rgba(232,88,42,.55)}100%{box-shadow:0 0 0 14px rgba(232,88,42,0)}}
 @media (prefers-reduced-motion:reduce){.acquire,.acquire *{animation-duration:.01s!important;transition-duration:.01s!important}}
+
+/* Brand plate → the Vekon logo (serif wordmark in a pill outline, orange star)
+   with a small mono "Papers" beside it. No black plate. */
+html:root .label-header__brand-panel.is-logo{background:transparent!important;box-shadow:none!important;border:0!important;padding:0 4px!important;gap:10px;display:inline-flex;align-items:center;min-height:0}
+html:root .label-header__brand-panel.is-logo::before,html:root .label-header__brand-panel.is-logo::after{display:none!important}
+html:root .label-header__logo-wrap{display:inline-flex;align-items:center;gap:10px}
+html:root .label-header__logo{display:block;height:40px;width:auto}
+html:root .label-header__logo-sub{font-family:var(--font-mono),monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#3a3a3a}
+@media (max-width:900px){html:root .label-header__logo{height:30px}html:root .label-header__logo-sub{font-size:9.5px}}
