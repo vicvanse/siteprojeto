@@ -254,3 +254,8 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-hero__text{container-type:inline-size;min-width:0}
   .vekon-home .vh-title{font-size:min(clamp(3.4rem,13vh,8rem),27cqi)!important}
 }
+/* Mobile: Living Ring above the about text */
+@media (max-width:900px){
+  .vh-hero__grid{display:flex;flex-direction:column}
+  .vh-mark{order:-1;margin:0 0 1.4rem!important}
+}
