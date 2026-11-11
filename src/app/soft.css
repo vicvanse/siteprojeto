@@ -472,3 +472,8 @@ html:root .label-header__logo.vk-wm{--wm-h:40px;height:var(--wm-h)!important;wid
 @media (max-width:900px){html:root .label-header__logo.vk-wm{--wm-h:32px}.vk-wm{border-width:1.5px}}
 .vh-logo .vk-wm{--wm-h:34px}
 @media (min-width:901px){.vh-logo .vk-wm{--wm-h:44px}}
+/* No logo in the header: "Papers" (the switcher label) names the site on
+   mobile too. */
+@media (max-width:900px){
+  html:root .label-header__view-panel .view-switcher__label{display:inline;color:#1a1a1a;font-weight:700;font-size:.66rem;letter-spacing:.16em;margin:0 4px 0 6px}
+}

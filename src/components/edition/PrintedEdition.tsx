@@ -4,8 +4,7 @@ import { useEffect, useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { Loupe } from "./Loupe";
 import "./edition.css";
-import { VekonWordmark } from "@/components/VekonWordmark";
-import { VEKON_HOME_URL, withBase } from "@/lib/base-path";
+import { withBase } from "@/lib/base-path";
 
 type EditionLang = "en" | "pt";
 type Mode = "spreads" | "sequence";
@@ -86,13 +85,7 @@ export function PrintedEdition({ id, number, title, sheets, langs, downloads }: 
             <b>Object / {number ?? id}</b> · {title} · {c.edition}
           </p>
         </div>
-        {/* Same black Vekon: Papers plate as the site header, for continuity. */}
-        <a className="label-header__brand-panel edition__brand is-logo" href={VEKON_HOME_URL} aria-label="Vekon">
-          <span className="label-header__logo-wrap">
-            <VekonWordmark className="label-header__logo" />
-            <span className="label-header__logo-sub">Papers</span>
-          </span>
-        </a>
+        <span className="edition__brand-spacer" aria-hidden />
         <div className="edition__controls">
           {langs.length > 1 ? (
             <div className="edition__seg" role="group" aria-label="Language">
