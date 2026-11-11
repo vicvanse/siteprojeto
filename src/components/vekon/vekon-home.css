@@ -231,3 +231,11 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vekon-home .vh-title{display:none}
   .vh-door__name span{display:none}
 }
+/* Mobile header, revised: two plates in the track, like Papers' Gallery /
+   Log in — "Vekon" raised, the language as the second plate. */
+@media (max-width:900px){
+  .vh-bar__end{gap:4px;padding:5px}
+  .vh-bar__name{display:inline-flex;align-items:center;height:36px;padding:0 18px;margin:0;border-radius:999px;background:#f0f1f3;
+    box-shadow:3px 3px 7px var(--sd),-3px -3px 7px var(--sl);font-size:11.5px;letter-spacing:.16em}
+  .vh-lang select{height:36px;padding:0 16px;background:transparent!important;box-shadow:none!important;color:#555;font-weight:600}
+}
