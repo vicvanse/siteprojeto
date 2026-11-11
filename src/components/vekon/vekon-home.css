@@ -308,3 +308,8 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
     box-shadow:var(--r-sm,4px 4px 8px #c3c6cd,-4px -4px 8px #fff);font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.06em;color:#3a3a3a;cursor:pointer}
   .vh-langdot select{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;font-size:16px}
 }
+/* Mobile: Papers mirrors Life — icon and "Publisher / Papers" on the right */
+@media (max-width:900px){
+  .vh-door--papers .vh-door__head{flex-direction:row-reverse;text-align:right}
+  .vh-door--papers .vh-door__actions{justify-content:flex-end}
+}
