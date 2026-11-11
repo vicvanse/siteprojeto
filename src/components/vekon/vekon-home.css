@@ -214,3 +214,5 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
 @media (max-width:900px){.vh-label,.vh-doors-label{display:none!important}}
 /* No "Two doors" label anywhere */
 .vekon-home .vh-doors-label{display:none!important}
+/* No kicker above the title */
+.vekon-home .vh-label{display:none!important}
