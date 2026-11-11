@@ -313,3 +313,10 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-door--papers .vh-door__head{flex-direction:row-reverse;text-align:right}
   .vh-door--papers .vh-door__actions{justify-content:flex-end}
 }
+/* Mobile: Open Papers sized to its label (not full width); the sign-off
+   sits in an inset slot, like Papers' "Objects / 00n". */
+@media (max-width:900px){
+  .vh-door--papers .vh-btn{flex:0 0 auto;min-height:40px;padding:0 1.2rem}
+  .vh-foot{display:table;margin:1.8rem auto 0!important;padding:7px 14px;border-radius:999px;background:var(--sb);
+    box-shadow:inset 3px 3px 6px var(--sd),inset -3px -3px 6px var(--sl);font-size:10px;letter-spacing:.14em}
+}
