@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { LANGUAGES, LANGUAGE_NAMES, type Language } from "@/lib/i18n";
 import { withBase } from "@/lib/base-path";
@@ -42,6 +43,40 @@ function Barcode({ seed, label }: { seed: string; label: string }) {
   );
 }
 
+const DAY_WORD: Record<Language, string> = {
+  en: "Day", pt: "Dia", es: "Día", de: "Tag", fr: "Jour", it: "Giorno",
+  ja: "日", ko: "일", "zh-CN": "第", "zh-TW": "第",
+} as Record<Language, string>;
+
+/** Today's date, as a diary page header: weekday · day month year / day N of the year. */
+function TodayLine() {
+  const { language } = useLanguage();
+  const [now, setNow] = useState<Date | null>(null);
+  useEffect(() => {
+    setNow(new Date());
+    const id = window.setInterval(() => setNow(new Date()), 60_000);
+    return () => window.clearInterval(id);
+  }, []);
+  if (!now) return <div className="vh-bar__meta" aria-hidden />;
+  const loc = language as string;
+  const weekday = new Intl.DateTimeFormat(loc, { weekday: "short" }).format(now).replace(/\.$/, "");
+  const date = new Intl.DateTimeFormat(loc, { day: "numeric", month: "short", year: "numeric" }).format(now).replace(/\./g, "");
+  const start = new Date(now.getFullYear(), 0, 1);
+  const dayOfYear = Math.floor((now.getTime() - start.getTime()) / 86_400_000) + 1;
+  const leap = new Date(now.getFullYear(), 1, 29).getMonth() === 1;
+  const total = leap ? 366 : 365;
+  const word = DAY_WORD[language] ?? "Day";
+  const dayLabel = /^zh/.test(loc) ? `${word} ${dayOfYear} 天` : /^(ja|ko)$/.test(loc) ? `${dayOfYear}${word}` : `${word} ${dayOfYear}`;
+  return (
+    <time className="vh-bar__meta" dateTime={now.toISOString().slice(0, 10)}>
+      <span className="vh-dot" aria-hidden />
+      {weekday} · {date}
+      <br />
+      {dayLabel} / {total}
+    </time>
+  );
+}
+
 function LangSelect() {
   const { t, language, setLanguage } = useLanguage();
   return (
@@ -71,12 +106,7 @@ export function VekonHome() {
       </div>
 
       <header className="vh-bar">
-        <div className="vh-bar__meta" aria-hidden>
-          <span className="vh-dot" />
-          ROOT · NODE 000
-          <br />
-          DOORS: 02 · OPEN
-        </div>
+        <TodayLine />
         <span className="vh-logo">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src={withBase("/vekon-logo.png")} alt="Vekon" width={720} height={249} draggable={false} />
