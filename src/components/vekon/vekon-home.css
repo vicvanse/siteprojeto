@@ -264,3 +264,10 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-hero__grid{display:flex;flex-direction:column}
   .vh-mark{order:-1;margin:0 0 1.4rem!important}
 }
+/* Mobile: no groove between the panels (space only); the header is a
+   floating pill, rounded on all sides. */
+@media (max-width:900px){
+  .vh-doors::before,.vh-doors::after{display:none!important}
+  .vh-bar{margin:0 0 22px!important;padding:10px!important}
+  .vh-bar::before{border-radius:999px!important}
+}
