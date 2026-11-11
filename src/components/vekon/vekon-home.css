@@ -290,3 +290,5 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-hero{position:relative;padding-bottom:4.4rem!important}
   .vh-hero__lang{display:block;position:absolute;right:14px;bottom:14px}
 }
+/* Mobile: smaller gap between the about panel and Vekon: Life */
+@media (max-width:900px){.vh-doors{margin-top:22px!important}}
