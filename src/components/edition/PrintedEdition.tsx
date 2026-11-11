@@ -91,7 +91,7 @@ export function PrintedEdition({ id, number, title, sheets, langs, downloads }: 
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               className="label-header__logo"
-              src={withBase("/vekon-logo.svg")}
+              src={withBase("/vekon-logo-v3.svg")}
               alt=""
               width={720}
               height={249}

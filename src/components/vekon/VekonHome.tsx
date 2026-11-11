@@ -121,7 +121,7 @@ export function VekonHome() {
         <TodayLine />
         <span className="vh-logo">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={withBase("/vekon-logo.svg")} alt="Vekon" width={720} height={249} draggable={false} />
+          <img src={withBase("/vekon-logo-v3.svg")} alt="Vekon" width={720} height={249} draggable={false} />
         </span>
         <div className="vh-bar__end">
           <nav className="vh-jump" aria-label="Vekon">
