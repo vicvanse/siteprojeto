@@ -167,9 +167,6 @@ export function VekonHome() {
         <div className="vh-hero__lang">
           <LangSelect />
         </div>
-        <div className="vh-hero__lang">
-          <LangSelect />
-        </div>
       </section>
 
       <p className="vh-doors-label" style={{ ["--i" as string]: 2 }}>
