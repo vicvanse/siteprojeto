@@ -133,3 +133,49 @@ html[data-enter="quick"] .vh-hero,html[data-enter="quick"] .vh-doors-label,html[
   .vekon-home *{-webkit-tap-highlight-color:transparent}
 }
 html[data-script="cjk"] .vh-title{line-height:1.2}
+
+/* ── Desktop, one screen: everything fits the window, no page scroll.
+   Hero on the left, the two doors stacked on the right; sizes follow the
+   window height. Short windows (< 720px) get the scroll back. ── */
+@media (min-width:901px) and (min-height:720px){
+  html:has(.vekon-home),html:has(.vekon-home) body{height:100%;overflow:hidden}
+  .shell:has(.vekon-home){padding:0!important;min-height:0!important;height:100dvh}
+  .shell:has(.vekon-home) > .shell__main{min-height:0!important;height:100%}
+
+  .vekon-home{height:100dvh;box-sizing:border-box;padding:0 0 clamp(10px,1.6vh,18px);display:grid;
+    grid-template-columns:minmax(0,1.38fr) minmax(0,1fr);
+    grid-template-rows:auto auto minmax(0,1fr) auto;
+    grid-template-areas:"bar bar" "hero label" "hero doors" "foot foot";
+    column-gap:clamp(20px,2vw,32px)}
+  .vh-bar{grid-area:bar;margin:0 -2rem clamp(18px,3vh,36px)!important;padding-block:clamp(14px,2vh,22px)!important}
+  .vh-hero{grid-area:hero;display:flex;flex-direction:column;min-height:0;padding:clamp(16px,2.2vh,24px) clamp(24px,2.4vw,34px) clamp(20px,3vh,34px)}
+  .vh-hero__top{margin-bottom:clamp(8px,2vh,24px)}
+  .vh-hero__grid{flex:1;min-height:0;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(20px,2.4vw,40px)}
+  .vh-title{font-size:clamp(3rem,10vh,6.4rem)!important;margin-bottom:clamp(10px,2vh,22px)!important}
+  .vh-label{margin-bottom:clamp(8px,1.6vh,18px)!important}
+  .vh-body{font-size:clamp(15px,1.9vh,17px);line-height:1.6}
+  .vh-facts{margin-top:clamp(10px,2vh,22px)}
+  .vh-mark{align-self:center;justify-self:center;width:100%}
+  .vh-mark__well{width:min(100%,46vh);margin:0 auto}
+  .vh-mark figcaption{justify-content:center;margin-top:clamp(6px,1.4vh,14px)}
+
+  .vh-doors-label{grid-area:label;margin:0 0 clamp(8px,1.4vh,14px) 6px!important}
+  .vh-doors{grid-area:doors;display:flex!important;flex-direction:column;gap:clamp(16px,2.4vh,28px);min-height:0}
+  .vh-door{flex:1;min-height:0;display:grid!important;grid-template-columns:auto minmax(0,1fr);
+    grid-template-rows:auto minmax(0,1fr) auto;grid-template-areas:"well head" "well body" "well actions";
+    column-gap:clamp(16px,1.6vw,24px);row-gap:clamp(6px,1.2vh,12px);align-items:start;
+    padding:clamp(14px,2vh,22px)!important;border-radius:30px}
+  .vh-door__top{display:none!important}
+  .vh-door__well{grid-area:well;height:100%!important;max-height:clamp(120px,22vh,210px);aspect-ratio:1;align-self:center}
+  .vh-door__well img{width:72%!important;height:72%!important}
+  .vh-door__head{grid-area:head;padding:0!important}
+  .vh-door__name{font-size:clamp(1.4rem,3.2vh,1.9rem)!important}
+  .vh-door__body{grid-area:body;padding:0!important;font-size:clamp(14px,1.75vh,15.5px)!important;line-height:1.55;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4}
+  .vh-door__actions{grid-area:actions;padding:0!important}
+  .vh-door .vh-btn{min-height:clamp(38px,5vh,44px)}
+
+  .vh-foot{grid-area:foot;margin:clamp(10px,1.6vh,16px) 0 0!important}
+  .vh-side{top:50%;transform-origin:center}
+  .vh-side--left{transform:translateY(-50%) rotate(180deg)}
+  .vh-side--right{transform:translateY(-50%)}
+}
