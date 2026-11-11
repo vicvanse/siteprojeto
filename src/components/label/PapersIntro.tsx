@@ -35,7 +35,6 @@ export function PapersIntro({ objectCount }: Props) {
   const facts = [
     `${String(objectCount).padStart(2, "0")} ${t("objects")}`,
     "PDF",
-    "EN · PT",
     t("intro.since"),
   ];
 
