@@ -19,7 +19,7 @@ export function LabelHeader() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               className="label-header__logo"
-              src={withBase("/vekon-logo.png")}
+              src={withBase("/vekon-logo.svg")}
               alt=""
               width={720}
               height={249}
