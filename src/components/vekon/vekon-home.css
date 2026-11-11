@@ -271,3 +271,13 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-bar{margin:0 0 22px!important;padding:10px!important}
   .vh-bar::before{border-radius:999px!important}
 }
+/* Mobile: the header holds only "Vekon"; the language moves to the
+   bottom-right corner of the Vekon panel. Desktop keeps it in the header. */
+.vh-hero__lang{display:none}
+@media (max-width:900px){
+  .vh-bar__end .vh-lang{display:none}
+  .vh-bar__end{padding:5px}
+  .vh-hero{padding-bottom:72px!important}
+  .vh-hero__lang{display:block;position:absolute;right:16px;bottom:16px}
+  .vh-hero__lang .vh-lang select{height:34px;padding:0 14px;background:var(--sb)!important;box-shadow:var(--r-sm,4px 4px 8px #c3c6cd,-4px -4px 8px #fff)!important;color:#3a3a3a;font-weight:600}
+}
