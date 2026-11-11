@@ -210,3 +210,5 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
     grid-template-areas:"bar bar" "hero ." "hero label" "hero doors" "hero ." "foot foot"}
   .vh-doors{flex:none}
 }
+/* Mobile: no "About" / "Two doors" labels */
+@media (max-width:900px){.vh-label,.vh-doors-label{display:none!important}}
