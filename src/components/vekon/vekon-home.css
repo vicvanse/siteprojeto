@@ -71,8 +71,13 @@
   .vh-facts{display:flex;flex-wrap:wrap;gap:8px;margin:1.6rem 0 0;padding:0;list-style:none}
   .vh-facts li{font-size:10.5px;letter-spacing:.08em;padding:6px 12px;border-radius:999px;background:var(--sb);box-shadow:inset 3px 3px 6px var(--sd),inset -3px -3px 6px var(--sl)}
   .vh-mark{display:block;margin:0}
-  .vh-mark__well{display:grid;place-items:center;aspect-ratio:1;border-radius:28px;padding:22px;background:#d9dade;box-shadow:inset 6px 6px 12px var(--sd),inset -6px -6px 12px var(--sl)}
-  .vh-mark__well img{width:100%;height:100%;object-fit:cover;border-radius:18px;box-shadow:6px 8px 18px rgba(0,0,0,.18)}
+  .vh-mark__well{display:grid;place-items:center;aspect-ratio:1;border-radius:34px;background:var(--sb);box-shadow:inset 8px 8px 18px var(--sd),inset -8px -8px 18px var(--sl)}
+  /* The ring that opens Papers, raised out of the well like the entrance disc */
+  .vh-mark__disc{display:grid;place-items:center;width:78%;aspect-ratio:1;border-radius:50%;background:var(--sb);box-shadow:14px 14px 30px var(--sd),-14px -14px 30px var(--sl)}
+  html[data-enter] .vh-mark__disc{animation:papers-press 1.3s cubic-bezier(.22,1,.36,1) both;animation-delay:1.5s}
+  html[data-enter="quick"] .vh-mark__disc{animation-duration:.8s;animation-delay:.1s}
+  .vh-mark__ring{width:72%;height:72%}
+  .vh-mark__ring .living-ring__subtitle{display:none}
   .vh-mark figcaption{display:flex;gap:8px;margin-top:14px;font-size:9px;color:#666}
   .vh-mark figcaption span{padding:4px 9px;border-radius:999px;box-shadow:inset 2px 2px 4px var(--sd),inset -2px -2px 4px var(--sl)}
 

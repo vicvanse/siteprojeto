@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useLanguage } from "@/components/LanguageProvider";
 import { LANGUAGES, LANGUAGE_NAMES, type Language } from "@/lib/i18n";
 import { withBase } from "@/lib/base-path";
+import { LivingRingMark } from "@/components/label/LivingRingMark";
 import "./vekon-home.css";
 
 /*
@@ -113,11 +114,12 @@ export function VekonHome() {
           </div>
           <figure className="vh-mark">
             <div className="vh-mark__well">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={withBase("/vekon-mark.png")} alt="Vekon" width={260} height={260} draggable={false} />
+              <span className="vh-mark__disc">
+                <LivingRingMark className="vh-mark__ring" />
+              </span>
             </div>
             <figcaption aria-hidden>
-              <span>MARK</span>
+              <span>LIVING RING</span>
               <span>V-000</span>
               <span>1:1</span>
             </figcaption>
