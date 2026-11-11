@@ -108,7 +108,7 @@ export function VekonHome() {
             <ul className="vh-facts" aria-hidden>
               <li>02 doors</li>
               <li>Life · Papers</li>
-              <li>{t("intro.since")}</li>
+              <li>Memory • Personas</li>
             </ul>
           </div>
           <figure className="vh-mark">
@@ -194,7 +194,7 @@ export function VekonHome() {
         </article>
       </div>
 
-      <p className="vh-foot">Vekon · {t("intro.since")}</p>
+      <p className="vh-foot">Vekon · Memory • Personas</p>
     </div>
   );
 }
