@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { LANGUAGES, LANGUAGE_INITIALS, LANGUAGE_NAMES, type Language } from "@/lib/i18n";
 import { withBase } from "@/lib/base-path";
+import { ACCENT_PALETTES, ACCENT_ORDER } from "@/lib/accent";
 import { LivingRingMark } from "@/components/label/LivingRingMark";
 import "./vekon-home.css";
 
@@ -122,11 +123,32 @@ function LangSelect() {
   );
 }
 
+/** Two different Papers colors, drawn at random on each visit (mobile button tint). */
+function useDoorColors() {
+  const [colors, setColors] = useState<[string, string] | null>(null);
+  useEffect(() => {
+    const pool = ACCENT_ORDER.filter((h) => h !== "white").map((h) => ACCENT_PALETTES[h].selected);
+    const a = Math.floor(Math.random() * pool.length);
+    let b = Math.floor(Math.random() * (pool.length - 1));
+    if (b >= a) b += 1;
+    setColors([pool[a], pool[b]]);
+  }, []);
+  return colors;
+}
+
 export function VekonHome() {
   const { t } = useLanguage();
+  const doorColors = useDoorColors();
 
   return (
-    <div className="vekon-home">
+    <div
+      className="vekon-home"
+      style={
+        doorColors
+          ? ({ ["--door-a" as string]: doorColors[0], ["--door-b" as string]: doorColors[1] } as CSSProperties)
+          : undefined
+      }
+    >
       <div className="vh-side vh-side--left" aria-hidden>
         VEKON — INDEX — 2026
       </div>

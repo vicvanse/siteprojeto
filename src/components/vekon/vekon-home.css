@@ -321,16 +321,11 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
     box-shadow:inset 3px 3px 6px var(--sd),inset -3px -3px 6px var(--sl);font-size:10px;letter-spacing:.14em}
 }
 
-/* Mobile: a slow sheen in the Papers colors crosses "Sign in", then
-   "Open Papers" (alternating, ~1.2s every 8s). If a Papers color is chosen
-   (html[data-accent-hue], set by the accent boot script), the sheen uses it. */
+/* Mobile: "Sign in" and "Open Papers" fade from black to a Papers color
+   (random per visit, set as --door-a / --door-b by VekonHome), hold it,
+   fade back to black, and loop. The two buttons are offset by half a cycle. */
 @media (max-width:900px) and (prefers-reduced-motion:no-preference){
-  .vh-door .vh-btn--dark{position:relative;overflow:hidden;isolation:isolate}
-  .vh-door .vh-btn--dark::after{content:"";position:absolute;inset:-2px;z-index:1;pointer-events:none;mix-blend-mode:screen;opacity:.6;
-    background:linear-gradient(110deg,transparent 28%,var(--sheen-a,#af9a9e) 42%,var(--sheen-b,#a39caf) 50%,var(--sheen-c,#9ca8af) 58%,transparent 72%);
-    transform:translateX(-130%);animation:vh-sheen 8s cubic-bezier(.45,0,.25,1) infinite}
-  .vh-door--papers .vh-btn--dark::after{animation-delay:4s}
-  html[data-accent-hue]:not([data-accent-hue="white"]) .vh-door .vh-btn--dark{
-    --sheen-a:var(--accent-surface-odd);--sheen-b:var(--accent-surface-even);--sheen-c:var(--accent-surface-odd)}
+  .vh-door--life .vh-btn--dark{--door:var(--door-a,#151515);animation:vh-door-tint 10s ease-in-out infinite}
+  .vh-door--papers .vh-btn--dark{--door:var(--door-b,#151515);animation:vh-door-tint 10s ease-in-out 5s infinite}
 }
-@keyframes vh-sheen{0%,72%{transform:translateX(-130%)}87%,100%{transform:translateX(130%)}}
+@keyframes vh-door-tint{0%,28%{background:#151515}40%,72%{background:var(--door)}84%,100%{background:#151515}}
