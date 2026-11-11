@@ -203,3 +203,10 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-door .vh-btn{min-height:38px;padding:0 1rem;font-size:10.5px}
   .vh-door__actions{gap:8px}
 }
+/* Life and Papers centered on the height of the Vekon panel:
+   empty 1fr rows above and below the label + doors. */
+@media (min-width:901px) and (min-height:720px){
+  .vekon-home{grid-template-rows:auto minmax(0,1fr) auto auto minmax(0,1fr) auto;
+    grid-template-areas:"bar bar" "hero ." "hero label" "hero doors" "hero ." "foot foot"}
+  .vh-doors{flex:none}
+}
