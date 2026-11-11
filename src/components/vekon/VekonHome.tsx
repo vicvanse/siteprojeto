@@ -80,6 +80,15 @@ function TodayLine() {
   );
 }
 
+/** Arriving at Papers or the Life landing from here plays the Living Ring entrance. */
+function markDoor() {
+  try {
+    sessionStorage.setItem("vekon-door", "1");
+  } catch {
+    /* storage unavailable: no entrance, navigation still works */
+  }
+}
+
 function LangSelect() {
   const { t, language, setLanguage } = useLanguage();
   return (
@@ -116,8 +125,8 @@ export function VekonHome() {
         </span>
         <div className="vh-bar__end">
           <nav className="vh-jump" aria-label="Vekon">
-            <a href="/landing">Life</a>
-            <a href={withBase("/")}>Papers</a>
+            <a onClick={markDoor} href="/landing">Life</a>
+            <a onClick={markDoor} href={withBase("/")}>Papers</a>
           </nav>
           <LangSelect />
         </div>
@@ -188,7 +197,7 @@ export function VekonHome() {
           </div>
           <p className="vh-door__body">{t("home.life.body")}</p>
           <div className="vh-door__actions">
-            <a className="vh-btn vh-btn--soft" href="/landing">
+            <a onClick={markDoor} className="vh-btn vh-btn--soft" href="/landing">
               {t("home.life.learn")}
             </a>
             <a className="vh-btn vh-btn--dark" href="/auth/login">
@@ -220,7 +229,7 @@ export function VekonHome() {
           </div>
           <p className="vh-door__body">{t("home.papers.body")}</p>
           <div className="vh-door__actions">
-            <a className="vh-btn vh-btn--dark" href={withBase("/")}>
+            <a onClick={markDoor} className="vh-btn vh-btn--dark" href={withBase("/")}>
               {t("home.papers.open")} <span aria-hidden>→</span>
             </a>
           </div>

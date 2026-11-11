@@ -22,7 +22,7 @@ const langBootScript = `(function(){try{var k=${JSON.stringify(LANGUAGE_STORAGE_
  * Full entrance on the first visit in a tab, and again once 20 minutes have
  * passed since the last full one; quick rise for reloads in between.
  */
-const enterBootScript = `(function(){try{var r=document.documentElement;if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;var k="papers-entered-at",now=Date.now(),last=Number(sessionStorage.getItem(k))||0;if(now-last>12e5){r.dataset.enter="full";sessionStorage.setItem(k,String(now));}else{r.dataset.enter="quick";}}catch(e){}})();`;
+const enterBootScript = `(function(){try{var r=document.documentElement;if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;var k="papers-entered-at",now=Date.now(),last=Number(sessionStorage.getItem(k))||0,door=sessionStorage.getItem("vekon-door")==="1";if(door)sessionStorage.removeItem("vekon-door");if(door||now-last>12e5){r.dataset.enter="full";sessionStorage.setItem(k,String(now));}else{r.dataset.enter="quick";}}catch(e){}})();`;
 
 const sans = Geist({
   variable: "--font-sans",
