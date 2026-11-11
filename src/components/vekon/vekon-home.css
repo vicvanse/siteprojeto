@@ -121,6 +121,15 @@ html[data-enter="quick"] .vh-hero,html[data-enter="quick"] .vh-doors-label,html[
   .vh-doors{display:grid;grid-template-columns:1fr;gap:20px}
   .vh-door{padding:1.4rem 1.2rem;border-radius:24px}
   .vh-btn{flex:1 1 auto;justify-content:center}
+  /* Living ring under the description, in its own well */
+  .vh-mark{display:block;margin:1.5rem 0 0}
+  .vh-mark__well{display:grid;place-items:center;padding:28px 0;border-radius:22px;background:var(--sb);box-shadow:inset 6px 6px 12px var(--sd),inset -6px -6px 12px var(--sl)}
+  .vh-mark__disc{display:grid;place-items:center;width:min(62vw,230px);aspect-ratio:1;border-radius:50%;background:var(--sb);box-shadow:10px 10px 22px var(--sd),-10px -10px 22px var(--sl)}
+  html[data-enter] .vh-mark__disc{animation:papers-press 1.3s cubic-bezier(.22,1,.36,1) both;animation-delay:1.5s}
+  html[data-enter="quick"] .vh-mark__disc{animation-duration:.8s;animation-delay:.1s}
+  .vh-mark__ring{width:72%;height:72%}
+  .vh-mark__ring .living-ring__subtitle{display:none}
+  .vh-mark figcaption{display:none}
   .vekon-home *{-webkit-tap-highlight-color:transparent}
 }
 html[data-script="cjk"] .vh-title{line-height:1.2}
