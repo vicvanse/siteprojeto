@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { Loupe } from "./Loupe";
 import "./edition.css";
+import { VekonWordmark } from "@/components/VekonWordmark";
 import { VEKON_HOME_URL, withBase } from "@/lib/base-path";
 
 type EditionLang = "en" | "pt";
@@ -88,16 +89,7 @@ export function PrintedEdition({ id, number, title, sheets, langs, downloads }: 
         {/* Same black Vekon: Papers plate as the site header, for continuity. */}
         <a className="label-header__brand-panel edition__brand is-logo" href={VEKON_HOME_URL} aria-label="Vekon">
           <span className="label-header__logo-wrap">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              className="label-header__logo"
-              src={withBase("/vekon-logo-v3.svg")}
-              alt=""
-              width={720}
-              height={249}
-              draggable={false}
-              decoding="async"
-            />
+            <VekonWordmark className="label-header__logo" />
             <span className="label-header__logo-sub">Papers</span>
           </span>
         </a>

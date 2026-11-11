@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Geist, Geist_Mono } from "next/font/google";
+import { EB_Garamond, Geist, Geist_Mono } from "next/font/google";
 import { AccessProvider } from "@/components/AccessProvider";
 import { AccentProvider } from "@/components/AccentProvider";
 import { LanguageProvider } from "@/components/LanguageProvider";
@@ -29,6 +29,14 @@ const sans = Geist({
   subsets: ["latin"],
 });
 
+/* Vekon wordmark (live text: hinted and pixel-sharp at header size). */
+const serif = EB_Garamond({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  weight: ["600"],
+  display: "swap",
+});
+
 const mono = Geist_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
@@ -55,7 +63,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${sans.variable} ${mono.variable}`}
+      className={`${sans.variable} ${mono.variable} ${serif.variable}`}
       data-view="gallery"
       suppressHydrationWarning
     >

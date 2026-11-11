@@ -3,6 +3,7 @@
 import { AccentSwatches } from "./AccentSwatches";
 import { HeaderLivingRing } from "./HeaderLivingRing";
 import { ViewSwitcher } from "./ViewSwitcher";
+import { VekonWordmark } from "@/components/VekonWordmark";
 import { VEKON_HOME_URL, withBase } from "@/lib/base-path";
 
 /**
@@ -16,16 +17,7 @@ export function LabelHeader() {
         <div className="label-header__stack">
           <a href={VEKON_HOME_URL} className="label-header__brand-panel is-logo" aria-label="Vekon">
             <span className="label-header__logo-wrap">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              className="label-header__logo"
-              src={withBase("/vekon-logo-v3.svg")}
-              alt=""
-              width={720}
-              height={249}
-              draggable={false}
-              decoding="async"
-            />
+            <VekonWordmark className="label-header__logo" />
             <span className="label-header__logo-sub">Papers</span>
           </span>
           </a>

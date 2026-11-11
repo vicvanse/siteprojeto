@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { LANGUAGES, LANGUAGE_NAMES, type Language } from "@/lib/i18n";
 import { withBase } from "@/lib/base-path";
+import { VekonWordmark } from "@/components/VekonWordmark";
 import { LivingRingMark } from "@/components/label/LivingRingMark";
 import "./vekon-home.css";
 
@@ -120,8 +121,7 @@ export function VekonHome() {
       <header className="vh-bar">
         <TodayLine />
         <span className="vh-logo">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={withBase("/vekon-logo-v3.svg")} alt="Vekon" width={720} height={249} draggable={false} />
+          <VekonWordmark />
         </span>
         <div className="vh-bar__end">
           <nav className="vh-jump" aria-label="Vekon">

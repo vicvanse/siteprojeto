@@ -461,3 +461,14 @@ html:root .label-header__logo-sub{font-family:var(--font-mono),monospace;font-si
 @keyframes vk-page-out{to{opacity:0;transform:scale(.985);filter:blur(2px)}}
 @keyframes vk-page-in{from{opacity:0;transform:translateY(16px) scale(1.008)}}
 @media (prefers-reduced-motion:reduce){::view-transition-old(root),::view-transition-new(root){animation:none}}
+
+/* ── Vekon wordmark (live: CSS pill + EB Garamond + SVG star) ── */
+.vk-wm{--wm-h:40px;position:relative;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;
+  height:var(--wm-h);padding:0 calc(var(--wm-h) * .55);border:2px solid #151515;border-radius:999px;color:#151515;flex:none}
+.vk-wm__word{display:block;padding-top:calc(var(--wm-h) * .16);margin-right:-.22em;font-family:var(--font-serif),Georgia,serif;
+  font-weight:600;font-size:calc(var(--wm-h) * .44);line-height:1;letter-spacing:.22em}
+.vk-wm__star{position:absolute;left:50%;top:calc(var(--wm-h) * .07);width:calc(var(--wm-h) * .26);height:auto;transform:translateX(-50%);fill:#e8582a}
+html:root .label-header__logo.vk-wm{--wm-h:40px;height:var(--wm-h)!important;width:auto!important}
+@media (max-width:900px){html:root .label-header__logo.vk-wm{--wm-h:32px}.vk-wm{border-width:1.5px}}
+.vh-logo .vk-wm{--wm-h:34px}
+@media (min-width:901px){.vh-logo .vk-wm{--wm-h:44px}}
