@@ -189,7 +189,7 @@ export function VekonHome() {
             <div>
               <p className="vh-door__kind">{t("home.life.label")}</p>
               <h2 className="vh-door__name">
-                <span>Vekon</span> Life
+                <span>Vekon:</span> Life
               </h2>
             </div>
           </div>

@@ -259,3 +259,8 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-hero__grid{display:flex;flex-direction:column}
   .vh-mark{order:-1;margin:0 0 1.4rem!important}
 }
+/* Mobile: the Living Ring comes first, above the about text */
+@media (max-width:900px){
+  .vh-hero__grid{display:flex;flex-direction:column}
+  .vh-mark{order:-1;margin:0 0 1.4rem!important}
+}
