@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
-import { LANGUAGES, LANGUAGE_NAMES, type Language } from "@/lib/i18n";
+import { LANGUAGES, LANGUAGE_INITIALS, LANGUAGE_NAMES, type Language } from "@/lib/i18n";
 import { withBase } from "@/lib/base-path";
 import { LivingRingMark } from "@/components/label/LivingRingMark";
 import "./vekon-home.css";
@@ -89,6 +89,23 @@ function markDoor() {
   }
 }
 
+/** Mobile: the language as a single circle (initials), like the Papers header. */
+function LangCircle() {
+  const { t, language, setLanguage } = useLanguage();
+  return (
+    <label className="vh-langdot" title={LANGUAGE_NAMES[language]}>
+      <span aria-hidden>{LANGUAGE_INITIALS[language]}</span>
+      <select aria-label={t("language")} value={language} onChange={(e) => setLanguage(e.target.value as Language)}>
+        {LANGUAGES.map((code) => (
+          <option key={code} value={code}>
+            {LANGUAGE_NAMES[code]}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+}
+
 function LangSelect() {
   const { t, language, setLanguage } = useLanguage();
   return (
@@ -145,11 +162,14 @@ export function VekonHome() {
               {t("home.title")}
             </h1>
             <p className="vh-body">{t("home.body")}</p>
-            <ul className="vh-facts" aria-hidden>
-              <li>02 doors</li>
-              <li>Life · Papers</li>
-              <li>Memory · Personas</li>
-            </ul>
+            <div className="vh-hero__foot">
+              <ul className="vh-facts" aria-hidden>
+                <li>02 doors</li>
+                <li>Life · Papers</li>
+                <li>Memory · Personas</li>
+              </ul>
+              <LangCircle />
+            </div>
           </div>
           <figure className="vh-mark">
             <div className="vh-mark__well">
@@ -163,9 +183,6 @@ export function VekonHome() {
               <span>1:1</span>
             </figcaption>
           </figure>
-        </div>
-        <div className="vh-hero__lang">
-          <LangSelect />
         </div>
       </section>
 

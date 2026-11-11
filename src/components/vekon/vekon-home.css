@@ -292,3 +292,19 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
 }
 /* Mobile: smaller gap between the about panel and Vekon: Life */
 @media (max-width:900px){.vh-doors{margin-top:22px!important}}
+
+/* Facts row + language circle (circle is mobile only) */
+.vh-hero__foot{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.vh-langdot{display:none}
+@media (min-width:901px){.vh-hero__foot .vh-facts{display:flex}}
+@media (max-width:900px){
+  /* Header: just the "Vekon" plate in a pill that hugs it */
+  .vh-bar{width:max-content;margin:0 auto 22px!important;padding:8px!important}
+  .vh-bar__end{padding:0!important;background:none!important;box-shadow:none!important}
+  .vh-hero{padding-bottom:1.4rem!important}
+  /* Language as one circle, level with the end of the text */
+  .vh-hero__foot{justify-content:flex-end;margin-top:-6px}
+  .vh-langdot{position:relative;display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--sb);
+    box-shadow:var(--r-sm,4px 4px 8px #c3c6cd,-4px -4px 8px #fff);font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.06em;color:#3a3a3a;cursor:pointer}
+  .vh-langdot select{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;font-size:16px}
+}
