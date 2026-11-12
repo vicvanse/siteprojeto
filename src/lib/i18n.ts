@@ -141,6 +141,8 @@ export type MessageKey =
   | "home.body"
   | "home.doors"
   | "home.projects"
+  | "home.bodyLead"
+  | "home.projectsLine"
   | "home.life.label"
   | "home.life.body"
   | "home.life.learn"
@@ -214,6 +216,8 @@ const en: Dictionary = {
   "home.kicker": "Project",
   "home.title": "Vekon",
   "home.body": "Vekon is an independent studio that makes tools and publications about time, memory and the human soul. We believe memory is both made and stored. It brings together two projects with the same idea: paying more attention to the hours we live.",
+  "home.bodyLead": "Vekon is an independent studio that makes tools and publications about time, memory and the human soul. We believe memory is both made and stored.",
+  "home.projectsLine": "It brings together two projects with the same idea: paying more attention to the hours we live.",
   "home.doors": "Two doors",
   "home.projects": "Our projects",
   "home.life.label": "Diary app",
@@ -350,6 +354,8 @@ const pt: Dictionary = {
   "home.kicker": "Projeto",
   "home.title": "Vekon",
   "home.body": "Vekon é um estúdio independente que faz ferramentas e publicações sobre tempo, memória e alma humana. Acreditamos que a memória é, ao mesmo tempo, feita e armazenada. Reúne dois projetos com a mesma ideia: dar mais atenção às horas que vivemos.",
+  "home.bodyLead": "Vekon é um estúdio independente que faz ferramentas e publicações sobre tempo, memória e alma humana. Acreditamos que a memória é, ao mesmo tempo, feita e armazenada.",
+  "home.projectsLine": "Reúne dois projetos com a mesma ideia: dar mais atenção às horas que vivemos.",
   "home.doors": "Duas portas",
   "home.projects": "Nossos projetos",
   "home.life.label": "App de diário",
@@ -528,6 +534,8 @@ const es: Dictionary = {
   "home.kicker": "Proyecto",
   "home.title": "Vekon",
   "home.body": "Vekon es un estudio independiente que hace herramientas y publicaciones sobre el tiempo, la memoria y el alma humana. Creemos que la memoria es, a la vez, hecha y almacenada. Reúne dos proyectos con la misma idea: prestar más atención a las horas que vivimos.",
+  "home.bodyLead": "Vekon es un estudio independiente que hace herramientas y publicaciones sobre el tiempo, la memoria y el alma humana. Creemos que la memoria es, a la vez, hecha y almacenada.",
+  "home.projectsLine": "Reúne dos proyectos con la misma idea: prestar más atención a las horas que vivimos.",
   "home.doors": "Dos puertas",
   "home.projects": "Nuestros proyectos",
   "home.life.label": "App de diario",
@@ -663,6 +671,8 @@ const de: Dictionary = {
   "home.kicker": "Projekt",
   "home.title": "Vekon",
   "home.body": "Vekon ist ein unabhängiges Studio, das Werkzeuge und Publikationen über Zeit, Erinnerung und die menschliche Seele macht. Wir glauben, dass Erinnerung zugleich gemacht und gespeichert wird. Es vereint zwei Projekte mit derselben Idee: den Stunden, die wir leben, mehr Aufmerksamkeit zu schenken.",
+  "home.bodyLead": "Vekon ist ein unabhängiges Studio, das Werkzeuge und Publikationen über Zeit, Erinnerung und die menschliche Seele macht. Wir glauben, dass Erinnerung zugleich gemacht und gespeichert wird.",
+  "home.projectsLine": "Es vereint zwei Projekte mit derselben Idee: den Stunden, die wir leben, mehr Aufmerksamkeit zu schenken.",
   "home.doors": "Zwei Türen",
   "home.projects": "Unsere Projekte",
   "home.life.label": "Tagebuch-App",
@@ -798,6 +808,8 @@ const fr: Dictionary = {
   "home.kicker": "Projet",
   "home.title": "Vekon",
   "home.body": "Vekon est un studio indépendant qui crée des outils et des publications sur le temps, la mémoire et l'âme humaine. Nous croyons que la mémoire est à la fois fabriquée et stockée. Il réunit deux projets portés par la même idée : prêter plus d'attention aux heures que nous vivons.",
+  "home.bodyLead": "Vekon est un studio indépendant qui crée des outils et des publications sur le temps, la mémoire et l'âme humaine. Nous croyons que la mémoire est à la fois fabriquée et stockée.",
+  "home.projectsLine": "Il réunit deux projets portés par la même idée : prêter plus d'attention aux heures que nous vivons.",
   "home.doors": "Deux portes",
   "home.projects": "Nos projets",
   "home.life.label": "Appli de journal",
@@ -933,6 +945,8 @@ const it: Dictionary = {
   "home.kicker": "Progetto",
   "home.title": "Vekon",
   "home.body": "Vekon è uno studio indipendente che crea strumenti e pubblicazioni sul tempo, sulla memoria e sull'anima umana. Crediamo che la memoria sia insieme costruita e archiviata. Riunisce due progetti con la stessa idea: dare più attenzione alle ore che viviamo.",
+  "home.bodyLead": "Vekon è uno studio indipendente che crea strumenti e pubblicazioni sul tempo, sulla memoria e sull'anima umana. Crediamo che la memoria sia insieme costruita e archiviata.",
+  "home.projectsLine": "Riunisce due progetti con la stessa idea: dare più attenzione alle ore che viviamo.",
   "home.doors": "Due porte",
   "home.projects": "I nostri progetti",
   "home.life.label": "App di diario",
@@ -1068,6 +1082,8 @@ const ja: Dictionary = {
   "home.kicker": "プロジェクト",
   "home.title": "Vekon",
   "home.body": "Vekon は、時間と記憶、そして人間の魂についての道具と出版物をつくるインディペンデントなスタジオです。記憶はつくられると同時に、保存されるものだと私たちは考えています。ふたつのプロジェクトは同じ考えから生まれました。私たちが生きる時間に、もっと注意を向けること。",
+  "home.bodyLead": "Vekon は、時間と記憶、そして人間の魂についての道具と出版物をつくるインディペンデントなスタジオです。記憶はつくられると同時に、保存されるものだと私たちは考えています。",
+  "home.projectsLine": "ふたつのプロジェクトは同じ考えから生まれました。私たちが生きる時間に、もっと注意を向けること。",
   "home.doors": "ふたつの入口",
   "home.projects": "私たちのプロジェクト",
   "home.life.label": "日記アプリ",
@@ -1203,6 +1219,8 @@ const ko: Dictionary = {
   "home.kicker": "프로젝트",
   "home.title": "Vekon",
   "home.body": "Vekon은 시간과 기억, 그리고 인간의 영혼에 관한 도구와 출판물을 만드는 독립 스튜디오입니다. 우리는 기억이 만들어지는 동시에 저장된다고 믿습니다. 두 프로젝트는 같은 생각에서 출발합니다. 우리가 살아가는 시간에 더 많은 주의를 기울이는 것.",
+  "home.bodyLead": "Vekon은 시간과 기억, 그리고 인간의 영혼에 관한 도구와 출판물을 만드는 독립 스튜디오입니다. 우리는 기억이 만들어지는 동시에 저장된다고 믿습니다.",
+  "home.projectsLine": "두 프로젝트는 같은 생각에서 출발합니다. 우리가 살아가는 시간에 더 많은 주의를 기울이는 것.",
   "home.doors": "두 개의 문",
   "home.projects": "우리의 프로젝트",
   "home.life.label": "일기 앱",
@@ -1338,6 +1356,8 @@ const zhCN: Dictionary = {
   "home.kicker": "项目",
   "home.title": "Vekon",
   "home.body": "Vekon 是一家独立工作室，制作关于时间、记忆与人类灵魂的工具和出版物。我们相信，记忆既是被创造的，也是被储存的。它汇集了两个出于同一想法的项目：更加留意我们度过的每一个小时。",
+  "home.bodyLead": "Vekon 是一家独立工作室，制作关于时间、记忆与人类灵魂的工具和出版物。我们相信，记忆既是被创造的，也是被储存的。",
+  "home.projectsLine": "它汇集了两个出于同一想法的项目：更加留意我们度过的每一个小时。",
   "home.doors": "两扇门",
   "home.projects": "我们的项目",
   "home.life.label": "日记应用",
@@ -1473,6 +1493,8 @@ const zhTW: Dictionary = {
   "home.kicker": "項目",
   "home.title": "Vekon",
   "home.body": "Vekon 是一家獨立工作室，製作關於時間、記憶與人類靈魂的工具和出版品。我們相信，記憶既是被創造的，也是被儲存的。它匯集了兩個出於同一想法的計畫：更加留意我們度過的每一個小時。",
+  "home.bodyLead": "Vekon 是一家獨立工作室，製作關於時間、記憶與人類靈魂的工具和出版品。我們相信，記憶既是被創造的，也是被儲存的。",
+  "home.projectsLine": "它匯集了兩個出於同一想法的計畫：更加留意我們度過的每一個小時。",
   "home.doors": "兩扇門",
   "home.projects": "我們的計畫",
   "home.life.label": "日記應用",

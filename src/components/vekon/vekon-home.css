@@ -374,3 +374,12 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
 }
 @keyframes vh-dot-tint{0%,28%{background:#e8582a}40%,72%{background:var(--door)}84%,100%{background:#e8582a}}
 @keyframes vh-dot-over{0%,28%{opacity:0}40%,72%{opacity:1}84%,100%{opacity:0}}
+/* Mobile only: the about panel ends on the belief line; "It brings together
+   two projects…" sits above the Our projects pill. Desktop keeps the full text. */
+.vh-body--lead,.vh-projects-line{display:none}
+@media (max-width:900px){
+  .vh-body--full{display:none}
+  .vh-body--lead{display:block}
+  .vh-projects-line{display:block;margin:30px 12px 0;text-align:center;font-size:15px;line-height:1.55;color:#3a3a40}
+  .vh-projects{margin-top:16px!important}
+}

@@ -188,7 +188,8 @@ export function VekonHome() {
             <h1 id="vh-title" className="vh-title">
               {t("home.title")}
             </h1>
-            <p className="vh-body">{t("home.body")}</p>
+            <p className="vh-body vh-body--full">{t("home.body")}</p>
+            <p className="vh-body vh-body--lead">{t("home.bodyLead")}</p>
             <div className="vh-hero__foot">
               <ul className="vh-facts" aria-hidden>
                 <li>02 doors</li>
@@ -218,6 +219,7 @@ export function VekonHome() {
         {t("home.doors")}
       </p>
 
+      <p className="vh-projects-line">{t("home.projectsLine")}</p>
       <p className="vh-projects">
         <span className="vh-dot" aria-hidden />
         {t("home.projects")}
