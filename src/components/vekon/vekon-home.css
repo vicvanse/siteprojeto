@@ -350,3 +350,10 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
     box-shadow:10px 10px 22px var(--sd),-10px -10px 22px var(--sl)!important}
   .vh-lotus img{width:30px;height:30px;filter:drop-shadow(2px 2px 2px rgba(150,154,164,.85)) drop-shadow(-1.5px -1.5px 1px #fff)}
 }
+/* Flame, revised: aligned with the header pill (the page has 16px top
+   padding on mobile) and tones inverted — a sunken disc with the flame
+   engraved in darker gray, white catching its lower edge. */
+@media (max-width:900px){
+  .vh-lotus{top:16px;box-shadow:inset 5px 5px 10px var(--sd),inset -5px -5px 10px var(--sl)!important}
+  .vh-lotus img{filter:brightness(.6) drop-shadow(1px 1px 0 #fff) drop-shadow(-1px -1px 1px rgba(0,0,0,.12))}
+}
