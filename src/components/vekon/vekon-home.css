@@ -365,3 +365,12 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
     font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#555}
   .vh-doors{margin-top:20px!important}
 }
+/* The "Our projects" dot follows the buttons: orange at rest, Sign in's color
+   while it is lit, then Open Papers' color (overlay, same 5s offset). */
+@media (max-width:900px) and (prefers-reduced-motion:no-preference){
+  .vh-projects .vh-dot{position:relative;--door:var(--door-a,#e8582a);animation:vh-dot-tint 10s ease-in-out infinite}
+  .vh-projects .vh-dot::after{content:"";position:absolute;inset:0;border-radius:inherit;background:var(--door-b,#e8582a);opacity:0;
+    animation:vh-dot-over 10s ease-in-out 5s infinite}
+}
+@keyframes vh-dot-tint{0%,28%{background:#e8582a}40%,72%{background:var(--door)}84%,100%{background:#e8582a}}
+@keyframes vh-dot-over{0%,28%{opacity:0}40%,72%{opacity:1}84%,100%{opacity:0}}
