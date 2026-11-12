@@ -156,10 +156,10 @@ export function VekonHome() {
         LIFE · PAPERS — OBSERVE BEFORE INTERPRETING
       </div>
 
-      {/* Mobile: engraved gray lotus, left of the header pill */}
+      {/* Mobile: raised flame in a raised disc (two layers, like the Vekon header pill) */}
       <span className="vh-lotus" aria-hidden>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={withBase("/vekon-lotus-gray.png")} alt="" width={96} height={96} draggable={false} />
+        <img src={withBase("/vekon-flame.png")} alt="" width={96} height={96} draggable={false} />
       </span>
       <header className="vh-bar">
         <TodayLine />
