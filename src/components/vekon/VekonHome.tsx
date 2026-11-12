@@ -156,6 +156,11 @@ export function VekonHome() {
         LIFE · PAPERS — OBSERVE BEFORE INTERPRETING
       </div>
 
+      {/* Mobile: white lotus on a black disc, left of the header pill */}
+      <span className="vh-lotus" aria-hidden>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={withBase("/vekon-lotus-white.png")} alt="" width={96} height={96} draggable={false} />
+      </span>
       <header className="vh-bar">
         <TodayLine />
         <span className="vh-logo" aria-hidden />
