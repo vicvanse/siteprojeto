@@ -218,6 +218,11 @@ export function VekonHome() {
         {t("home.doors")}
       </p>
 
+      <p className="vh-projects">
+        <span className="vh-dot" aria-hidden />
+        {t("home.projects")}
+      </p>
+
       <div className="vh-doors">
         <article className="vh-door vh-door--life" style={{ ["--i" as string]: 2 }}>
           <div className="vh-door__top" aria-hidden>

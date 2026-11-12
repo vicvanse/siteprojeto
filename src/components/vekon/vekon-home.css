@@ -357,3 +357,11 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-lotus{top:16px;box-shadow:inset 5px 5px 10px var(--sd),inset -5px -5px 10px var(--sl)!important}
   .vh-lotus img{filter:brightness(.6) drop-shadow(1px 1px 0 #fff) drop-shadow(-1px -1px 1px rgba(0,0,0,.12))}
 }
+/* Mobile only: "Our projects" inset pill between the about panel and the doors */
+.vh-projects{display:none}
+@media (max-width:900px){
+  .vh-projects{display:table;margin:30px auto 0;padding:8px 16px;border-radius:999px;background:var(--sb);
+    box-shadow:inset 3px 3px 6px var(--sd),inset -3px -3px 6px var(--sl);
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#555}
+  .vh-doors{margin-top:20px!important}
+}
