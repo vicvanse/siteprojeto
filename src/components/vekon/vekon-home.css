@@ -383,3 +383,13 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-projects-line{display:block;margin:30px 12px 0;text-align:center;font-size:15px;line-height:1.55;color:#3a3a40}
   .vh-projects{margin-top:16px!important}
 }
+/* Mobile: "Our projects" pill on top and the sentence below it, together in
+   one sunken well (lighter than another raised card). */
+.vh-projects-box{display:none}
+@media (max-width:900px){
+  .vh-projects-box{display:block;margin:28px 0 0;padding:16px 18px 18px;border-radius:24px;background:var(--sb);
+    box-shadow:inset 5px 5px 10px var(--sd),inset -5px -5px 10px var(--sl);text-align:center}
+  .vh-projects-box .vh-projects{margin:0 auto!important;box-shadow:3px 3px 7px var(--sd),-3px -3px 7px var(--sl)}
+  .vh-projects-box .vh-projects-line{margin:12px 4px 0;font-size:14.5px}
+  .vh-doors{margin-top:22px!important}
+}

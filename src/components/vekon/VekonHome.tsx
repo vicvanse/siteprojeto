@@ -219,11 +219,13 @@ export function VekonHome() {
         {t("home.doors")}
       </p>
 
-      <p className="vh-projects-line">{t("home.projectsLine")}</p>
-      <p className="vh-projects">
-        <span className="vh-dot" aria-hidden />
-        {t("home.projects")}
-      </p>
+      <div className="vh-projects-box">
+        <p className="vh-projects">
+          <span className="vh-dot" aria-hidden />
+          {t("home.projects")}
+        </p>
+        <p className="vh-projects-line">{t("home.projectsLine")}</p>
+      </div>
 
       <div className="vh-doors">
         <article className="vh-door vh-door--life" style={{ ["--i" as string]: 2 }}>
