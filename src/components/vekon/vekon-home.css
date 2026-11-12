@@ -393,3 +393,31 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-projects-box .vh-projects-line{margin:12px 4px 0;font-size:14.5px}
   .vh-doors{margin-top:22px!important}
 }
+
+/* ── Mobile projects section, rebuilt ──
+   One raised panel: a header row ("● Our projects" chip · 02), the sentence,
+   then Life and Papers as two sunken rows inside it. Desktop ignores the
+   wrapper (display:contents), so its grid is unchanged. */
+.vh-projects-panel{display:contents}
+.vh-projects-count{display:none}
+@media (max-width:900px){
+  .vh-projects-panel{display:block;margin-top:24px;padding:16px 14px 14px;border-radius:26px;background:var(--sb);
+    box-shadow:10px 10px 22px var(--sd),-10px -10px 22px var(--sl)}
+  .vh-projects-box{display:grid!important;grid-template-columns:1fr auto;align-items:center;row-gap:10px;margin:0!important;
+    padding:0 4px!important;background:none!important;box-shadow:none!important;text-align:left!important}
+  .vh-projects-box .vh-projects{margin:0!important;justify-self:start;box-shadow:inset 3px 3px 6px var(--sd),inset -3px -3px 6px var(--sl)!important}
+  .vh-projects-count{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;color:#777}
+  .vh-projects-box .vh-projects-line{grid-column:1 / -1;margin:2px 0 0!important;text-align:left;font-size:15px;line-height:1.55;color:#2a2a2e}
+
+  .vh-projects-panel .vh-doors{margin-top:16px!important;gap:12px!important}
+  .vh-projects-panel .vh-door{padding:14px!important;border-radius:20px!important;gap:.8rem!important;
+    box-shadow:inset 5px 5px 10px var(--sd),inset -5px -5px 10px var(--sl)!important}
+  .vh-projects-panel .vh-door__icon{width:52px;height:52px;border-radius:15px}
+  .vh-projects-panel .vh-door__icon img{width:42px;height:42px;border-radius:11px}
+  .vh-projects-panel .vh-door__name{font-size:1.25rem}
+  .vh-projects-panel .vh-door__body{font-size:14.5px;line-height:1.55}
+  /* rows read the same way: no mirrored Papers row inside the list */
+  .vh-projects-panel .vh-door--papers .vh-door__head{flex-direction:row;text-align:left}
+  .vh-projects-panel .vh-door--papers .vh-door__actions{justify-content:flex-start}
+  .vh-projects-panel .vh-btn{flex:0 0 auto!important;min-height:40px;padding:0 1.1rem}
+}

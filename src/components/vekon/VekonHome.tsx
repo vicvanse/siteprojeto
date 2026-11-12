@@ -219,76 +219,79 @@ export function VekonHome() {
         {t("home.doors")}
       </p>
 
-      <div className="vh-projects-box">
-        <p className="vh-projects">
-          <span className="vh-dot" aria-hidden />
-          {t("home.projects")}
-        </p>
-        <p className="vh-projects-line">{t("home.projectsLine")}</p>
-      </div>
+      <section className="vh-projects-panel" aria-label={t("home.projects")}>
+        <div className="vh-projects-box">
+          <p className="vh-projects">
+            <span className="vh-dot" aria-hidden />
+            {t("home.projects")}
+          </p>
+          <span className="vh-projects-count" aria-hidden>02</span>
+          <p className="vh-projects-line">{t("home.projectsLine")}</p>
+        </div>
 
-      <div className="vh-doors">
-        <article className="vh-door vh-door--life" style={{ ["--i" as string]: 2 }}>
-          <div className="vh-door__top" aria-hidden>
-            <span className="vh-pill">DOOR / 01</span>
-            <span className="vh-door__route">/landing</span>
-          </div>
-          <div className="vh-door__well vh-door__well--dark">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={withBase("/vekon-life-icon.png")} alt="" width={180} height={180} draggable={false} />
-          </div>
-          <div className="vh-door__head">
-            <span className="vh-door__icon vh-door__icon--dark">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={withBase("/vekon-life-icon.png")} alt="" width={56} height={56} draggable={false} />
-            </span>
-            <div>
-              <p className="vh-door__kind">{t("home.life.label")}</p>
-              <h2 className="vh-door__name">
-                <span>Vekon:</span> Life
-              </h2>
+        <div className="vh-doors">
+          <article className="vh-door vh-door--life" style={{ ["--i" as string]: 2 }}>
+            <div className="vh-door__top" aria-hidden>
+              <span className="vh-pill">DOOR / 01</span>
+              <span className="vh-door__route">/landing</span>
             </div>
-          </div>
-          <p className="vh-door__body">{t("home.life.body")}</p>
-          <div className="vh-door__actions">
-            <a onClick={markDoor} className="vh-btn vh-btn--soft" href="/landing">
-              {t("home.life.learn")}
-            </a>
-            <a className="vh-btn vh-btn--dark" href="/auth/login">
-              {t("home.life.enter")} <span aria-hidden>→</span>
-            </a>
-          </div>
-        </article>
+            <div className="vh-door__well vh-door__well--dark">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={withBase("/vekon-life-icon.png")} alt="" width={180} height={180} draggable={false} />
+            </div>
+            <div className="vh-door__head">
+              <span className="vh-door__icon vh-door__icon--dark">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={withBase("/vekon-life-icon.png")} alt="" width={56} height={56} draggable={false} />
+              </span>
+              <div>
+                <p className="vh-door__kind">{t("home.life.label")}</p>
+                <h2 className="vh-door__name">
+                  <span>Vekon:</span> Life
+                </h2>
+              </div>
+            </div>
+            <p className="vh-door__body">{t("home.life.body")}</p>
+            <div className="vh-door__actions">
+              <a onClick={markDoor} className="vh-btn vh-btn--soft" href="/landing">
+                {t("home.life.learn")}
+              </a>
+              <a className="vh-btn vh-btn--dark" href="/auth/login">
+                {t("home.life.enter")} <span aria-hidden>→</span>
+              </a>
+            </div>
+          </article>
 
-        <article className="vh-door vh-door--papers" style={{ ["--i" as string]: 3 }}>
-          <div className="vh-door__top" aria-hidden>
-            <span className="vh-pill">DOOR / 02</span>
-            <span className="vh-door__route">/papers</span>
-          </div>
-          <div className="vh-door__well">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={withBase("/vekon-papers-icon.png")} alt="" width={180} height={180} draggable={false} />
-          </div>
-          <div className="vh-door__head">
-            <span className="vh-door__icon">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={withBase("/vekon-papers-icon.png")} alt="" width={56} height={56} draggable={false} />
-            </span>
-            <div>
-              <p className="vh-door__kind">{t("home.papers.label")}</p>
-              <h2 className="vh-door__name">
-                <span>Vekon:</span> Papers
-              </h2>
+          <article className="vh-door vh-door--papers" style={{ ["--i" as string]: 3 }}>
+            <div className="vh-door__top" aria-hidden>
+              <span className="vh-pill">DOOR / 02</span>
+              <span className="vh-door__route">/papers</span>
             </div>
-          </div>
-          <p className="vh-door__body">{t("home.papers.body")}</p>
-          <div className="vh-door__actions">
-            <a onClick={markDoor} className="vh-btn vh-btn--dark" href={withBase("/")}>
-              {t("home.papers.open")} <span aria-hidden>→</span>
-            </a>
-          </div>
-        </article>
-      </div>
+            <div className="vh-door__well">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={withBase("/vekon-papers-icon.png")} alt="" width={180} height={180} draggable={false} />
+            </div>
+            <div className="vh-door__head">
+              <span className="vh-door__icon">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={withBase("/vekon-papers-icon.png")} alt="" width={56} height={56} draggable={false} />
+              </span>
+              <div>
+                <p className="vh-door__kind">{t("home.papers.label")}</p>
+                <h2 className="vh-door__name">
+                  <span>Vekon:</span> Papers
+                </h2>
+              </div>
+            </div>
+            <p className="vh-door__body">{t("home.papers.body")}</p>
+            <div className="vh-door__actions">
+              <a onClick={markDoor} className="vh-btn vh-btn--dark" href={withBase("/")}>
+                {t("home.papers.open")} <span aria-hidden>→</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
 
       <p className="vh-foot">Vekon · Memory · Personas</p>
     </div>
