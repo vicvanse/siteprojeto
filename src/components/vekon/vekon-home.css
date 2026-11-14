@@ -453,9 +453,9 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-flame{position:absolute!important;right:4px;left:auto!important;top:13px!important;margin:0!important;display:grid!important}
   .vh-projects-panel{margin-top:16px!important}
 }
-/* Desktop doors: "Diary app / Vekon: Life" sit low, the title level with
-   the bottom of the icon. */
+/* Desktop doors: "Diary app / Vekon: Life" centered on the icon (halfway
+   between top-aligned and bottom-aligned). */
 @media (min-width:901px) and (min-height:720px){
-  .vh-door__head{align-self:end!important}
+  .vh-door__head{align-self:center!important}
   .vh-door__name{line-height:1!important;margin-bottom:0!important}
 }
