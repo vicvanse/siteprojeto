@@ -156,16 +156,16 @@ export function VekonHome() {
         LIFE · PAPERS — OBSERVE BEFORE INTERPRETING
       </div>
 
-      {/* Mobile: the language as a circle in the top-left corner */}
-      <span className="vh-toplang">
-        <LangCircle />
-      </span>
-      {/* Mobile: the flame in the top-right corner */}
-      <span className="vh-lotus vh-flame" aria-hidden>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={withBase("/vekon-flame.png")} alt="" width={96} height={96} draggable={false} />
-      </span>
       <header className="vh-bar">
+        {/* Mobile: the language as a circle in the top-left corner */}
+        <span className="vh-toplang">
+          <LangCircle />
+        </span>
+        {/* Mobile: the flame in the top-right corner */}
+        <span className="vh-lotus vh-flame" aria-hidden>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={withBase("/vekon-flame.png")} alt="" width={96} height={96} draggable={false} />
+        </span>
         <TodayLine />
         <span className="vh-logo" aria-hidden />
         <div className="vh-bar__end">
