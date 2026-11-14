@@ -133,11 +133,6 @@ export function FeaturedObject({ artifact, variant = "default" }: Props) {
                 <span className="price-chip">
                   {artifact.status === "free" ? t("free") : formatPrice(artifact)}
                 </span>
-                {artifact.edition ? (
-                  <a className="get-btn" href={artifact.edition}>
-                    {t("read")}
-                  </a>
-                ) : null}
                 {freeDownload ? (
                   <a
                     className={artifact.edition ? "read-btn" : "get-btn"}
@@ -160,6 +155,11 @@ export function FeaturedObject({ artifact, variant = "default" }: Props) {
                     {t("get")}
                   </button>
                 )}
+                {artifact.edition ? (
+                  <a className="get-btn" href={artifact.edition}>
+                    {t("read")}
+                  </a>
+                ) : null}
               </div>
 
               {showVekonManifestation ? (

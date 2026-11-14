@@ -492,3 +492,6 @@ html:root .label-header__logo.vk-wm{--wm-h:40px;height:var(--wm-h)!important;wid
   html:root .label-header__accents .accent-swatches__langs .accent-swatch{border:0!important;border-radius:999px!important}
   html:root .label-header__accents .accent-swatches__langs .lang-swatch__chip{background:transparent!important;box-shadow:none!important}
 }
+/* The open language tray must sit above the object card from the first
+   frame (the card's entrance animation otherwise paints over it). */
+html:root .label-header:has(.accent-swatches-panel--open){position:relative;z-index:60}
