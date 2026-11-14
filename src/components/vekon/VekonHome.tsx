@@ -160,6 +160,11 @@ export function VekonHome() {
       <span className="vh-toplang">
         <LangCircle />
       </span>
+      {/* Mobile: the flame in the top-right corner */}
+      <span className="vh-lotus vh-flame" aria-hidden>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={withBase("/vekon-flame.png")} alt="" width={96} height={96} draggable={false} />
+      </span>
       <header className="vh-bar">
         <TodayLine />
         <span className="vh-logo" aria-hidden />
@@ -217,19 +222,12 @@ export function VekonHome() {
         {t("home.doors")}
       </p>
 
-      {/* Mobile: the flame, centered between the about panel and the projects */}
-      <span className="vh-lotus vh-flame" aria-hidden>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={withBase("/vekon-flame.png")} alt="" width={96} height={96} draggable={false} />
-      </span>
-
       <section className="vh-projects-panel" aria-label={t("home.projects")}>
         <div className="vh-projects-box">
           <p className="vh-projects">
             <span className="vh-dot" aria-hidden />
             {t("home.projects")}
           </p>
-          <span className="vh-projects-count" aria-hidden>02</span>
           <p className="vh-projects-line">{t("home.projectsLine")}</p>
         </div>
 

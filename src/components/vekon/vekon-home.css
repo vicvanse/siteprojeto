@@ -448,3 +448,8 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-projects-panel .vh-door--papers .vh-door__actions{justify-content:center!important}
 }
 @media (hover:hover){.vh-langdot:hover{background:#2a2a2a;color:#f7f7f5}}
+/* Mobile: the flame goes to the top-right corner (language stays top-left) */
+@media (max-width:900px){
+  .vh-flame{position:absolute!important;right:4px;left:auto!important;top:13px!important;margin:0!important;display:grid!important}
+  .vh-projects-panel{margin-top:16px!important}
+}
