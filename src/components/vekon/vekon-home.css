@@ -421,3 +421,30 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-projects-panel .vh-door--papers .vh-door__actions{justify-content:flex-start}
   .vh-projects-panel .vh-btn{flex:0 0 auto!important;min-height:40px;padding:0 1.1rem}
 }
+
+/* Desktop: Life / Papers cards keep their content height, so the spacing
+   inside them never grows on tall windows. */
+@media (min-width:901px) and (min-height:720px){
+  .vh-door{flex:0 0 auto!important;align-content:start!important}
+}
+
+/* Header language: hover like "Learn more" (soft plate turns dark) */
+.vh-lang select{transition:background .15s,color .15s}
+@media (hover:hover){.vh-lang select:hover{background:#2a2a2a!important;color:#f7f7f5!important}}
+
+/* ── Mobile: language circle top-left (where the flame was); the flame sits
+   centered between the about panel and the projects; door rows centered ── */
+.vh-toplang{display:none}
+@media (max-width:900px){
+  .vh-toplang{position:absolute;left:4px;top:20px;z-index:2;display:block}
+  .vh-toplang .vh-langdot{display:grid}
+  .vh-flame{position:static!important;margin:22px auto 0!important;display:grid!important}
+  .vh-projects-panel{margin-top:22px!important}
+
+  .vh-projects-panel .vh-door{text-align:center}
+  .vh-projects-panel .vh-door__head,
+  .vh-projects-panel .vh-door--papers .vh-door__head{flex-direction:column!important;align-items:center;text-align:center!important;gap:8px}
+  .vh-projects-panel .vh-door__actions,
+  .vh-projects-panel .vh-door--papers .vh-door__actions{justify-content:center!important}
+}
+@media (hover:hover){.vh-langdot:hover{background:#2a2a2a;color:#f7f7f5}}

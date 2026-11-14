@@ -150,16 +150,15 @@ export function VekonHome() {
       }
     >
       <div className="vh-side vh-side--left" aria-hidden>
-        VEKON — INDEX — 2026
+        VEKON · MEMORY · PERSONAS
       </div>
       <div className="vh-side vh-side--right" aria-hidden>
         LIFE · PAPERS — OBSERVE BEFORE INTERPRETING
       </div>
 
-      {/* Mobile: raised flame in a raised disc (two layers, like the Vekon header pill) */}
-      <span className="vh-lotus" aria-hidden>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={withBase("/vekon-flame.png")} alt="" width={96} height={96} draggable={false} />
+      {/* Mobile: the language as a circle in the top-left corner */}
+      <span className="vh-toplang">
+        <LangCircle />
       </span>
       <header className="vh-bar">
         <TodayLine />
@@ -196,7 +195,6 @@ export function VekonHome() {
                 <li>Life · Papers</li>
                 <li>Memory · Personas</li>
               </ul>
-              <LangCircle />
             </div>
           </div>
           <figure className="vh-mark">
@@ -218,6 +216,12 @@ export function VekonHome() {
         <span className="vh-dot" aria-hidden />
         {t("home.doors")}
       </p>
+
+      {/* Mobile: the flame, centered between the about panel and the projects */}
+      <span className="vh-lotus vh-flame" aria-hidden>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={withBase("/vekon-flame.png")} alt="" width={96} height={96} draggable={false} />
+      </span>
 
       <section className="vh-projects-panel" aria-label={t("home.projects")}>
         <div className="vh-projects-box">
