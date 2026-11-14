@@ -471,3 +471,8 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-flame{position:absolute!important;right:14px!important;left:auto!important;top:50%!important;transform:translateY(-50%);width:44px!important;height:44px!important}
   .vh-flame img{width:26px!important;height:26px!important}
 }
+/* Mobile: the living-ring well curves more at top-left and bottom-right,
+   so the sunken gap reads as an eye around the ring. */
+@media (max-width:900px){
+  .vh-mark__well{border-radius:96px 22px 96px 22px!important}
+}
