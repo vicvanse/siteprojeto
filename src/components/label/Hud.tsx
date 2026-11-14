@@ -61,10 +61,10 @@ export function SideHud({ first, last }: { first: string; last: string }) {
   return (
     <>
       <div className="cx cx-side cx-side--left" aria-hidden>
-        VEKON — PAPERS — ARCHIVE 2026
+        VEKON — PAPERS — ARCHIVE
       </div>
       <div className="cx cx-side cx-side--right" aria-hidden>
-        OBJECTS — INDEPENDENT PRINTED MATTER
+        OBJECTS — YOU WILL ALL BE DEAD IN 80 YEARS
       </div>
     </>
   );

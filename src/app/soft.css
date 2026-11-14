@@ -484,3 +484,11 @@ html:root .label-header__logo.vk-wm{--wm-h:40px;height:var(--wm-h)!important;wid
   html:root .label-header__accents .accent-swatches--full{flex-direction:row!important;align-items:center;gap:7px}
   html:root .label-header__accents .accent-swatches__row{display:inline-flex;align-items:center}
 }
+/* Desktop: the language chip opens only the languages, as a tray that drops
+   down below the header plate; the color row stays as it is. */
+@media (min-width:901px){
+  html:root .label-header__accents .accent-swatches__langs{position:absolute!important;top:calc(100% + 10px);left:50%;transform:translateX(-50%);z-index:30;grid-template-columns:repeat(5,34px);gap:8px!important;margin:0!important;padding:12px!important;border:0!important;border-radius:22px;background:var(--sb);box-shadow:var(--r-up)}
+  html:root .label-header__accents .accent-swatches-panel--open{z-index:30}
+  html:root .label-header__accents .accent-swatches__langs .accent-swatch{border:0!important;border-radius:999px!important}
+  html:root .label-header__accents .accent-swatches__langs .lang-swatch__chip{background:transparent!important;box-shadow:none!important}
+}
