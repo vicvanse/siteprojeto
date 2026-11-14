@@ -476,3 +476,11 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
 @media (max-width:900px){
   .vh-mark__well{border-radius:96px 22px 96px 22px!important}
 }
+/* Mobile: "Our projects" centered; the flame sits centered under the
+   "Vekon · Memory · Personas" footer (out of the header). */
+@media (max-width:900px){
+  .vh-projects-box{grid-template-columns:1fr!important;justify-items:center}
+  .vh-projects-box .vh-projects{justify-self:center!important}
+  .vh-projects-box .vh-projects-line{text-align:center!important}
+  .vh-flame{position:static!important;transform:none!important;margin:18px auto 0!important;display:grid!important}
+}
