@@ -491,3 +491,7 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-hero{box-shadow:6px 6px 14px var(--sd),-6px -6px 14px var(--sl)!important}
   .vh-projects-panel{position:relative;z-index:1;box-shadow:6px 6px 14px var(--sd),-6px -6px 14px var(--sl)!important}
 }
+/* Mobile: the about text centered */
+@media (max-width:900px){
+  .vh-hero .vh-body,.vh-hero .vh-body--lead{text-align:center!important;margin-left:auto!important;margin-right:auto!important}
+}
