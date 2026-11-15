@@ -484,3 +484,10 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-projects-box .vh-projects-line{text-align:center!important}
   .vh-flame{position:static!important;transform:none!important;margin:18px auto 0!important;display:grid!important}
 }
+/* Mobile: softer shadow on the about panel, and the projects panel painted
+   above it (the about panel is positioned, so its shadow was falling over
+   the top of "Our projects" and darkening it). */
+@media (max-width:900px){
+  .vh-hero{box-shadow:6px 6px 14px var(--sd),-6px -6px 14px var(--sl)!important}
+  .vh-projects-panel{position:relative;z-index:1;box-shadow:6px 6px 14px var(--sd),-6px -6px 14px var(--sl)!important}
+}
