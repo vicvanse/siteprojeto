@@ -648,3 +648,8 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-mcloud--b{width:52%;right:-16%;bottom:8%;opacity:.42;animation-direction:alternate-reverse}
 }
 @media (max-width:900px) and (prefers-reduced-motion:reduce){.vh-mcloud{animation:none}}
+/* clouds at full visibility (desktop): solid slate ink, no fade */
+@media (min-width:901px){
+  .vh-cloud,.vh-cloud--b{opacity:1!important;-webkit-mask-image:none!important;mask-image:none!important}
+  html[data-enter] .vh-cloud{animation:vh-cloud-drift 40s ease-in-out infinite alternate!important}
+}
