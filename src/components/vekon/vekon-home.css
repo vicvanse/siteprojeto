@@ -511,3 +511,18 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
     background:linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.1) 40%,rgba(255,255,255,.5) 50%,rgba(255,255,255,.1) 60%,rgba(255,255,255,0) 100%);
     animation:brand-kira-sweep 5.8s ease-in-out infinite}
 }
+/* Mobile header: the Papers color beside the language (as in Papers);
+   its colors drop down below. Papers card comes before Life. */
+.vh-colordot{display:none}
+@media (max-width:900px){
+  .vh-toplang{display:flex!important;align-items:center;gap:8px}
+  .vh-colordot{position:relative;display:block}
+  .vh-colordot__btn,.vh-colordot__opt{display:grid;place-items:center;width:38px;height:38px;padding:0;border:0;border-radius:50%;background:var(--sb);cursor:pointer;
+    box-shadow:var(--r-sm,4px 4px 8px #c3c6cd,-4px -4px 8px #fff)}
+  .vh-colordot__chip{display:block;width:20px;height:20px;border-radius:50%;background:#d7d3de;box-shadow:inset 1px 1px 2px rgba(0,0,0,.3)}
+  .vh-colordot__opt.is-on{box-shadow:inset 3px 3px 6px var(--sd),inset -3px -3px 6px var(--sl)}
+  .vh-colordot__tray{position:absolute;top:calc(100% + 12px);left:-46px;z-index:40;display:grid;grid-template-columns:repeat(5,38px);gap:8px;padding:12px;
+    border-radius:22px;background:var(--sb);box-shadow:10px 10px 22px var(--sd),-10px -10px 22px var(--sl)}
+  .vh-projects-panel .vh-door--papers{order:-1}
+}
+@media (max-width:900px){.vh-bar:has(.vh-colordot__tray){z-index:50}}

@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState, type CSSProperties } from "react";
+import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { LANGUAGES, LANGUAGE_INITIALS, LANGUAGE_NAMES, type Language } from "@/lib/i18n";
 import { withBase } from "@/lib/base-path";
-import { ACCENT_PALETTES, ACCENT_ORDER } from "@/lib/accent";
+import { ACCENT_PALETTES, ACCENT_ORDER, type AccentHue } from "@/lib/accent";
 import { LivingRingMark } from "@/components/label/LivingRingMark";
 import { useAccent } from "@/components/AccentProvider";
 import "./vekon-home.css";
@@ -108,6 +108,52 @@ function LangCircle() {
   );
 }
 
+/** Mobile header: the Papers color, beside the language. Tap to open the
+ *  colors (same choice as in Papers). */
+function ColorDot() {
+  const { hue, setHue, ready } = useAccent();
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLSpanElement>(null);
+  useEffect(() => {
+    if (!open) return;
+    const close = (e: Event) => {
+      if (!ref.current?.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener("pointerdown", close);
+    return () => document.removeEventListener("pointerdown", close);
+  }, [open]);
+  const swatch = (h: AccentHue) => ({
+    background: `linear-gradient(135deg, ${ACCENT_PALETTES[h].surfaceOdd} 50%, ${ACCENT_PALETTES[h].selected} 50%)`,
+  });
+  return (
+    <span className="vh-colordot" ref={ref}>
+      <button type="button" className="vh-colordot__btn" aria-label="Color" aria-expanded={open} onClick={() => setOpen((v) => !v)}>
+        <span className="vh-colordot__chip" style={ready ? swatch(hue) : undefined} />
+      </button>
+      {open ? (
+        <span className="vh-colordot__tray" role="listbox" aria-label="Color">
+          {ACCENT_ORDER.map((h) => (
+            <button
+              key={h}
+              type="button"
+              role="option"
+              aria-selected={h === hue}
+              aria-label={h}
+              className={`vh-colordot__opt${h === hue ? " is-on" : ""}`}
+              onClick={() => {
+                setHue(h);
+                setOpen(false);
+              }}
+            >
+              <span className="vh-colordot__chip" style={swatch(h)} />
+            </button>
+          ))}
+        </span>
+      ) : null}
+    </span>
+  );
+}
+
 function LangSelect() {
   const { t, language, setLanguage } = useLanguage();
   return (
@@ -167,6 +213,7 @@ export function VekonHome() {
         {/* Mobile: the language as a circle in the top-left corner */}
         <span className="vh-toplang">
           <LangCircle />
+          <ColorDot />
         </span>
         <TodayLine />
         <span className="vh-logo" aria-hidden />
