@@ -6,6 +6,7 @@ import { LANGUAGES, LANGUAGE_INITIALS, LANGUAGE_NAMES, type Language } from "@/l
 import { withBase } from "@/lib/base-path";
 import { ACCENT_PALETTES, ACCENT_ORDER } from "@/lib/accent";
 import { LivingRingMark } from "@/components/label/LivingRingMark";
+import { useAccent } from "@/components/AccentProvider";
 import "./vekon-home.css";
 
 /*
@@ -139,14 +140,20 @@ function useDoorColors() {
 export function VekonHome() {
   const { t } = useLanguage();
   const doorColors = useDoorColors();
+  /* The color picked in Papers (same site, so the same saved choice). */
+  const { hue, ready: accentReady } = useAccent();
+  const papersAccent = accentReady ? ACCENT_PALETTES[hue] : null;
 
   return (
     <div
       className="vekon-home"
       style={
-        doorColors
-          ? ({ ["--door-a" as string]: doorColors[0], ["--door-b" as string]: doorColors[1] } as CSSProperties)
-          : undefined
+        {
+          ...(doorColors ? { ["--door-a" as string]: doorColors[0], ["--door-b" as string]: doorColors[1] } : {}),
+          ...(papersAccent
+            ? { ["--papers-accent" as string]: papersAccent.selected, ["--papers-accent-soft" as string]: papersAccent.surfaceOdd }
+            : {}),
+        } as CSSProperties
       }
     >
       <div className="vh-side vh-side--left" aria-hidden>
