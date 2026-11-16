@@ -637,3 +637,14 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
 }
 /* clouds in front of the panels (they don't take clicks) */
 @media (min-width:901px){.vh-cloud{z-index:20!important}}
+/* Mobile: clouds beside the Living Ring */
+.vh-mcloud{display:none}
+@media (max-width:900px){
+  .vekon-home{overflow-x:clip}
+  .vh-mark{position:relative}
+  .vh-mark__well{position:relative;z-index:1}
+  .vh-mcloud{display:block;position:absolute;z-index:0;height:auto;pointer-events:none;opacity:.5;animation:vh-cloud-drift 32s ease-in-out infinite alternate}
+  .vh-mcloud--a{width:62%;left:-20%;top:12%}
+  .vh-mcloud--b{width:52%;right:-16%;bottom:8%;opacity:.42;animation-direction:alternate-reverse}
+}
+@media (max-width:900px) and (prefers-reduced-motion:reduce){.vh-mcloud{animation:none}}

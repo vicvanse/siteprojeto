@@ -267,6 +267,11 @@ export function VekonHome() {
             <span className="vh-band" aria-hidden>
               <span className="vh-band__shine" />
             </span>
+            {/* Mobile: two clouds at the height of the ring */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="vh-mcloud vh-mcloud--a" src={withBase("/vekon/cloud-a.webp")} alt="" aria-hidden width={760} height={259} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="vh-mcloud vh-mcloud--b" src={withBase("/vekon/cloud-b.webp")} alt="" aria-hidden width={640} height={297} />
             <div className="vh-mark__well">
               <span className="vh-mark__disc">
                 <LivingRingMark className="vh-mark__ring" />
@@ -376,7 +381,7 @@ export function VekonHome() {
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img className="vh-medal__cloud vh-medal__cloud--b" src={withBase("/vekon/cloud-b.webp")} alt="" aria-hidden width={640} height={297} />
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="vh-medal__fig" src={withBase("/vekon/plates/plate-01-fall.webp")} alt="A winged figure falling, feathers loose around him" loading="lazy" width={900} height={1096} />
+          <img className="vh-medal__fig" src={withBase("/vekon/plates/plate-01-fall-ink.webp")} alt="A winged figure falling, feathers loose around him" loading="lazy" width={900} height={1096} />
         </span>
         <figcaption>
           <span className="vh-print__num">Pl. I</span>
