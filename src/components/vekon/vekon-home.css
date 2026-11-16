@@ -592,3 +592,18 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
 /* the print is now a transparent ink layer: no blend mode (some phones
    painted the blended image on black) */
 @media (max-width:900px){.vh-plate__img{mix-blend-mode:normal!important;opacity:.95}}
+
+/* Desktop: engraved clouds in the side margins (slate ink, behind the panels,
+   drifting very slowly). */
+.vh-cloud{display:none}
+@media (min-width:901px){
+  .vekon-home{isolation:isolate}
+  .vh-cloud{display:block;position:absolute;z-index:-1;height:auto;pointer-events:none;user-select:none;opacity:.5;
+    -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 14%,#000 86%,transparent 100%)}
+  .vh-cloud--a{width:clamp(200px,17vw,320px);left:-2vw;top:clamp(90px,14vh,150px);animation:vh-cloud-drift 38s ease-in-out infinite alternate}
+  .vh-cloud--b{width:clamp(220px,19vw,360px);right:-1vw;top:clamp(230px,36vh,330px);opacity:.42;animation:vh-cloud-drift 46s ease-in-out infinite alternate-reverse}
+  @keyframes vh-cloud-drift{from{translate:-10px 0}to{translate:14px -4px}}
+  html[data-enter] .vh-cloud{animation:vh-cloud-in 1.6s ease both 1.4s,vh-cloud-drift 40s ease-in-out 3s infinite alternate}
+  @keyframes vh-cloud-in{from{opacity:0}}
+}
+@media (prefers-reduced-motion:reduce){.vh-cloud{animation:none!important}}
