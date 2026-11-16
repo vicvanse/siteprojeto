@@ -628,3 +628,10 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
 }
 @media (max-width:900px) and (prefers-reduced-motion:reduce){.vh-medal__cloud{animation:none}}
 @keyframes vh-cloud-drift{from{translate:-10px 0}to{translate:14px -4px}}
+/* clouds: placed against the window, not the centered column (they were
+   sitting behind the hero and the doors) */
+@media (min-width:901px){
+  .vh-cloud{position:fixed!important}
+  .vh-cloud--a{left:-1.5vw!important;top:clamp(130px,22vh,220px)!important;width:clamp(200px,16vw,330px)!important}
+  .vh-cloud--b{right:-1vw!important;left:auto!important;top:clamp(300px,46vh,420px)!important;width:clamp(210px,17vw,340px)!important}
+}
