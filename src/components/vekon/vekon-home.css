@@ -653,3 +653,15 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-cloud,.vh-cloud--b{opacity:1!important;-webkit-mask-image:none!important;mask-image:none!important}
   html[data-enter] .vh-cloud{animation:vh-cloud-drift 40s ease-in-out infinite alternate!important}
 }
+/* buttons and the projects dot keep their own color (no color cycle) */
+.vh-door .vh-btn--dark,.vh-projects .vh-dot{animation:none!important}
+.vh-door .vh-btn--dark{background:#151515!important}
+.vh-projects .vh-dot{background:#e8582a!important}
+/* desktop clouds: a touch of transparency */
+@media (min-width:901px){.vh-cloud,.vh-cloud--b{opacity:.82!important}}
+/* mobile: clip clouds at the screen edge, not at the column (no side strips) */
+@media (max-width:900px){
+  html:has(.vekon-home),body:has(.vekon-home){overflow-x:clip}
+  .vekon-home{overflow-x:visible!important}
+  .shell:has(.vekon-home),.shell:has(.vekon-home) > .shell__main{overflow:visible!important}
+}
