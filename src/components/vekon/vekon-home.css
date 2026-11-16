@@ -589,3 +589,6 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
     -webkit-mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 62%,transparent 100%)}
   .vh-plate figcaption{border-top:0!important;justify-content:center;gap:10px;margin-top:-6px}
 }
+/* the print is now a transparent ink layer: no blend mode (some phones
+   painted the blended image on black) */
+@media (max-width:900px){.vh-plate__img{mix-blend-mode:normal!important;opacity:.95}}
