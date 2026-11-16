@@ -549,37 +549,15 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-aboutlabel{display:block;text-align:center;margin:0 0 14px!important}
 }
 
-/* ===== Mobile "relief" version: the surface around the ring is a contour
-   relief; the about text and the projects sit on it, without boxes. Papers
-   language kept: header plate, mono labels with the orange dot, black pills,
-   project cards. ===== */
-.vh-relief,.vh-mark__tag{display:none}
+/* ===== Mobile: ring, about and projects sit on the surface, without
+   boxes (Papers language kept: header plate, mono labels with the orange
+   dot, black pills, project cards). ===== */
 @media (max-width:900px){
-  .vekon-home{overflow-x:clip}
-  .vh-bar{z-index:5}
-  /* the ring panel and the about panel lose their boxes */
   .vh-mark,.vh-hero__text{background:none!important;box-shadow:none!important;border-radius:0!important}
-  .vh-mark{position:relative;overflow:visible!important;padding:34px 0 26px!important;margin:0 0 6px!important}
+  .vh-mark{overflow:visible!important;padding:18px 0 22px!important;margin:0!important}
   .vh-band{display:none!important}
-  .vh-mark__well{position:relative;z-index:2;background:none!important;box-shadow:none!important;border-radius:0!important;padding:0!important}
-  .vh-mark__disc{position:relative;z-index:2;background:var(--sb)}
-  /* the relief, centered on the ring and fading out toward the text */
-  .vh-relief{display:block;position:absolute;z-index:0;left:50%;top:50%;width:820px;height:820px;transform:translate(-50%,-47%);pointer-events:none;
-    -webkit-mask-image:radial-gradient(closest-side,#000 58%,transparent 100%);mask-image:radial-gradient(closest-side,#000 58%,transparent 100%)}
-  .vh-relief__terrace{fill:var(--sb)}
-  .vh-relief__accent{fill:none;stroke:var(--papers-accent,#4e435e);stroke-width:1.4;opacity:.75}
-  .vh-relief__line{fill:none;stroke:#fff;stroke-width:1.2;opacity:.95}
-  html[data-enter] .vh-relief{animation:vh-relief-in 1.6s cubic-bezier(.22,1,.36,1) both;animation-delay:1.2s}
-  @keyframes vh-relief-in{from{opacity:0;transform:translate(-50%,-47%) scale(.94)}}
-  /* small instrument labels around the ring */
-  .vh-mark__tag{display:block;position:absolute;z-index:3;font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:#6a6a70}
-  .vh-mark__tag--a{top:14px;left:4px}
-  .vh-mark__tag--b{bottom:6px;right:4px}
-  .vh-mark__tag--a::before{content:"";display:inline-block;width:6px;height:6px;border-radius:9px;background:#e8582a;margin-right:7px;vertical-align:1px}
-  /* about text: on the surface, with a quiet plate behind for legibility */
-  .vh-hero__text{position:relative;z-index:2;padding:6px 6px 0!important}
-  .vh-hero{margin-bottom:8px}
-  /* projects: no outer box; the two cards stand on the surface */
+  .vh-mark__well{background:none!important;box-shadow:none!important;border-radius:0!important;padding:0!important}
+  .vh-hero__text{padding:6px 6px 0!important}
   .vh-projects-panel{background:none!important;box-shadow:none!important;padding:0!important;margin-top:26px!important}
   .vh-projects-box{background:none!important;box-shadow:none!important}
 }

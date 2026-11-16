@@ -6,7 +6,6 @@ import { LANGUAGES, LANGUAGE_INITIALS, LANGUAGE_NAMES, type Language } from "@/l
 import { withBase } from "@/lib/base-path";
 import { ACCENT_PALETTES, ACCENT_ORDER, type AccentHue } from "@/lib/accent";
 import { LivingRingMark } from "@/components/label/LivingRingMark";
-import { VekonRelief } from "./VekonRelief";
 import { useAccent } from "@/components/AccentProvider";
 import "./vekon-home.css";
 
@@ -263,9 +262,6 @@ export function VekonHome() {
             <span className="vh-band" aria-hidden>
               <span className="vh-band__shine" />
             </span>
-            <VekonRelief />
-            <span className="vh-mark__tag vh-mark__tag--a" aria-hidden>VKN-000</span>
-            <span className="vh-mark__tag vh-mark__tag--b" aria-hidden>Memory · Personas</span>
             <div className="vh-mark__well">
               <span className="vh-mark__disc">
                 <LivingRingMark className="vh-mark__ring" />
