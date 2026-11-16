@@ -568,14 +568,14 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
 @media (max-width:900px){
   .vh-plates{display:block;position:relative;margin:34px 0 8px;padding:0 4px}
   .vh-plates__label{display:block;text-align:center;margin:0 0 18px!important}
-  .vh-plate{margin:0;display:flex;flex-direction:column;gap:10px}
-  .vh-plate__paper{padding:14px;border-radius:6px;background:#f6f4ef;box-shadow:6px 8px 18px rgba(0,0,0,.12),-4px -4px 12px rgba(255,255,255,.85)}
-  .vh-plate__paper img{display:block;width:100%;height:auto;mix-blend-mode:multiply}
-  .vh-plate figcaption{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:0 4px;border-top:1px solid #c9cbd1;padding-top:8px}
-  .vh-plate__num{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#6a6a70}
-  .vh-plate__title{font-family:var(--font-serif),Georgia,serif;font-style:italic;font-size:17px;color:#1f2a6b}
-  .vh-plate--a{width:86%;margin-right:auto;transform:rotate(-1.2deg)}
-  .vh-plate--b{width:72%;margin-left:auto;margin-top:-56px;position:relative;z-index:1;transform:rotate(1.4deg)}
+  .vh-print{margin:0;display:flex;flex-direction:column;gap:10px}
+  .vh-print__paper{padding:14px;border-radius:6px;background:#f6f4ef;box-shadow:6px 8px 18px rgba(0,0,0,.12),-4px -4px 12px rgba(255,255,255,.85)}
+  .vh-print__paper img{display:block;width:100%;height:auto;mix-blend-mode:multiply}
+  .vh-print figcaption{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:0 4px;border-top:1px solid #c9cbd1;padding-top:8px}
+  .vh-print__num{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#6a6a70}
+  .vh-print__title{font-family:var(--font-serif),Georgia,serif;font-style:italic;font-size:17px;color:#1f2a6b}
+  .vh-print--a{width:86%;margin-right:auto;transform:rotate(-1.2deg)}
+  .vh-print--b{width:72%;margin-left:auto;margin-top:-56px;position:relative;z-index:1;transform:rotate(1.4deg)}
   .vh-plates__rule{display:flex;align-items:center;justify-content:center;gap:10px;width:42%;margin:18px 0 0 6%;color:#2a3aa8}
   .vh-plates__rule i{flex:1;height:1px;background:#2a3aa8;opacity:.5}
   .vh-plates__rule b{font-size:12px;font-weight:400}
@@ -584,14 +584,14 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
 /* Plates v2: the print sits in the page itself — no paper, no frame; its
    white ground takes the page's gray (multiply) and its edges fade out. */
 @media (max-width:900px){
-  .vh-plate--a{width:100%!important;margin:0!important;transform:none!important}
-  .vh-plate__img{display:block;width:108%;max-width:none;margin:0 -4%;height:auto;mix-blend-mode:multiply;opacity:.92;
+  .vh-print--a{width:100%!important;margin:0!important;transform:none!important}
+  .vh-print__img{display:block;width:108%;max-width:none;margin:0 -4%;height:auto;mix-blend-mode:multiply;opacity:.92;
     -webkit-mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 62%,transparent 100%)}
-  .vh-plate figcaption{border-top:0!important;justify-content:center;gap:10px;margin-top:-6px}
+  .vh-print figcaption{border-top:0!important;justify-content:center;gap:10px;margin-top:-6px}
 }
 /* the print is now a transparent ink layer: no blend mode (some phones
    painted the blended image on black) */
-@media (max-width:900px){.vh-plate__img{mix-blend-mode:normal!important;opacity:.95}}
+@media (max-width:900px){.vh-print__img{mix-blend-mode:normal!important;opacity:.95}}
 
 /* Desktop: engraved clouds in the side margins (slate ink, behind the panels,
    drifting very slowly). */

@@ -365,12 +365,12 @@ export function VekonHome() {
           <span className="papers-intro__dot" aria-hidden />
           Plates · Vekon
         </p>
-        <figure className="vh-plate vh-plate--a">
+        <figure className="vh-print vh-print--a">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="vh-plate__img" src={withBase("/vekon/plates/plate-01-fall.webp")} alt="A winged figure falling, feathers loose around him" loading="lazy" width={900} height={1096} />
+          <img className="vh-print__img" src={withBase("/vekon/plates/plate-01-fall.webp")} alt="A winged figure falling, feathers loose around him" loading="lazy" width={900} height={1096} />
           <figcaption>
-            <span className="vh-plate__num">Pl. I</span>
-            <span className="vh-plate__title">The fall</span>
+            <span className="vh-print__num">Pl. I</span>
+            <span className="vh-print__title">The fall</span>
           </figcaption>
         </figure>
       </section>
