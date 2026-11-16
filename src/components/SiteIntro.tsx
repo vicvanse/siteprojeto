@@ -13,8 +13,8 @@ import { LivingRingMark } from "@/components/label/LivingRingMark";
  */
 export function SiteIntro() {
   const [phase, setPhase] = useState<"play" | "done">("play");
-  /* The Vekon root page shares this entrance, captioned with its own name. */
-  const caption = usePathname() === "/vekon" ? "Vekon" : "Papers";
+  /* The Vekon root page shares this entrance, captioned "Personas". */
+  const caption = usePathname() === "/vekon" ? "Personas" : "Papers";
 
   useLayoutEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

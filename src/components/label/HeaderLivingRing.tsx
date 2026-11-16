@@ -136,6 +136,14 @@ export function HeaderLivingRing() {
     <a
       ref={ringRef}
       href={VEKON_HOME_URL}
+      onClick={() => {
+        /* Tells the Vekon home to play its entrance ("PERSONAS"). */
+        try {
+          sessionStorage.setItem("vekon-door", "1");
+        } catch {
+          /* ignore */
+        }
+      }}
       className="label-header__ring"
       aria-label="Vekon"
       title="Vekon"
