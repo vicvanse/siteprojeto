@@ -205,6 +205,11 @@ export function VekonHome() {
             </div>
           </div>
           <figure className="vh-mark">
+            {/* Mobile: a band in the Papers color along the top of the panel,
+                thin at the right, following the well's curve down the left. */}
+            <span className="vh-band" aria-hidden>
+              <span className="vh-band__shine" />
+            </span>
             <div className="vh-mark__well">
               <span className="vh-mark__disc">
                 <LivingRingMark className="vh-mark__ring" />
