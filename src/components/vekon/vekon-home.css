@@ -561,3 +561,22 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-projects-panel{background:none!important;box-shadow:none!important;padding:0!important;margin-top:26px!important}
   .vh-projects-box{background:none!important;box-shadow:none!important}
 }
+
+/* Mobile: plates at the end of the page, set like the manifesto — prints on
+   paper, staggered, with roman plate numbers and serif titles. */
+.vh-plates{display:none}
+@media (max-width:900px){
+  .vh-plates{display:block;position:relative;margin:34px 0 8px;padding:0 4px}
+  .vh-plates__label{display:block;text-align:center;margin:0 0 18px!important}
+  .vh-plate{margin:0;display:flex;flex-direction:column;gap:10px}
+  .vh-plate__paper{padding:14px;border-radius:6px;background:#f6f4ef;box-shadow:6px 8px 18px rgba(0,0,0,.12),-4px -4px 12px rgba(255,255,255,.85)}
+  .vh-plate__paper img{display:block;width:100%;height:auto;mix-blend-mode:multiply}
+  .vh-plate figcaption{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:0 4px;border-top:1px solid #c9cbd1;padding-top:8px}
+  .vh-plate__num{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#6a6a70}
+  .vh-plate__title{font-family:var(--font-serif),Georgia,serif;font-style:italic;font-size:17px;color:#1f2a6b}
+  .vh-plate--a{width:86%;margin-right:auto;transform:rotate(-1.2deg)}
+  .vh-plate--b{width:72%;margin-left:auto;margin-top:-56px;position:relative;z-index:1;transform:rotate(1.4deg)}
+  .vh-plates__rule{display:flex;align-items:center;justify-content:center;gap:10px;width:42%;margin:18px 0 0 6%;color:#2a3aa8}
+  .vh-plates__rule i{flex:1;height:1px;background:#2a3aa8;opacity:.5}
+  .vh-plates__rule b{font-size:12px;font-weight:400}
+}
