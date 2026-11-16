@@ -234,6 +234,11 @@ export function VekonHome() {
         </div>
         <div className="vh-hero__grid">
           <div className="vh-hero__text">
+            {/* Mobile: the label as in Papers' about block */}
+            <p className="papers-intro__label vh-aboutlabel">
+              <span className="papers-intro__dot" aria-hidden />
+              {t("home.aboutLabel")}
+            </p>
             <p className="vh-label">
               <span className="vh-dot" aria-hidden />
               {t("home.kicker")}
