@@ -13,8 +13,15 @@ import { LivingRingMark } from "@/components/label/LivingRingMark";
  */
 export function SiteIntro() {
   const [phase, setPhase] = useState<"play" | "done">("play");
-  /* The Vekon root page shares this entrance, captioned "Personas". */
-  const caption = usePathname() === "/vekon" ? "Personas" : "Papers";
+  /* The Vekon root page (vekonlife.com/, rewritten to /papers/vekon) shares
+     this entrance, captioned "Personas". usePathname() can't tell it apart
+     from the Papers home through the rewrite, so read the browser URL. */
+  const pathname = usePathname();
+  const [caption, setCaption] = useState(pathname === "/vekon" ? "Personas" : "Papers");
+  useLayoutEffect(() => {
+    const p = window.location.pathname.replace(/\/$/, "");
+    if (p === "" || p.endsWith("/vekon")) setCaption("Personas");
+  }, []);
 
   useLayoutEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
