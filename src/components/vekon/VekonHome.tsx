@@ -361,28 +361,11 @@ export function VekonHome() {
           Plates · Vekon
         </p>
         <figure className="vh-plate vh-plate--a">
-          <div className="vh-plate__paper">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={withBase("/vekon/plates/plate-01-fall.webp")} alt="A winged figure falling, feathers loose around him" loading="lazy" width={900} height={1096} />
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="vh-plate__img" src={withBase("/vekon/plates/plate-01-fall.webp")} alt="A winged figure falling, feathers loose around him" loading="lazy" width={900} height={1096} />
           <figcaption>
             <span className="vh-plate__num">Pl. I</span>
             <span className="vh-plate__title">The fall</span>
-          </figcaption>
-        </figure>
-        <span className="vh-plates__rule" aria-hidden>
-          <i />
-          <b>✦</b>
-          <i />
-        </span>
-        <figure className="vh-plate vh-plate--b">
-          <div className="vh-plate__paper">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={withBase("/vekon/plates/plate-02-heron.webp")} alt="A heron in flight, wings open" loading="lazy" width={900} height={1350} />
-          </div>
-          <figcaption>
-            <span className="vh-plate__num">Pl. II</span>
-            <span className="vh-plate__title">The return</span>
           </figcaption>
         </figure>
       </section>

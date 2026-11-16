@@ -580,3 +580,12 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-plates__rule i{flex:1;height:1px;background:#2a3aa8;opacity:.5}
   .vh-plates__rule b{font-size:12px;font-weight:400}
 }
+
+/* Plates v2: the print sits in the page itself — no paper, no frame; its
+   white ground takes the page's gray (multiply) and its edges fade out. */
+@media (max-width:900px){
+  .vh-plate--a{width:100%!important;margin:0!important;transform:none!important}
+  .vh-plate__img{display:block;width:108%;max-width:none;margin:0 -4%;height:auto;mix-blend-mode:multiply;opacity:.92;
+    -webkit-mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 72% 70% at 50% 50%,#000 62%,transparent 100%)}
+  .vh-plate figcaption{border-top:0!important;justify-content:center;gap:10px;margin-top:-6px}
+}
