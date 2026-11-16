@@ -526,3 +526,11 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-projects-panel .vh-door--papers{order:-1}
 }
 @media (max-width:900px){.vh-bar:has(.vh-colordot__tray){z-index:50}}
+/* Mobile: "Two projects, one idea…" closes the about text (full body, as on
+   desktop) and leaves the Our projects panel. */
+@media (max-width:900px){
+  .vh-body--full{display:block!important}
+  .vh-body--lead{display:none!important}
+  .vh-projects-box .vh-projects-line{display:none!important}
+  .vh-projects-box{row-gap:0!important}
+}
