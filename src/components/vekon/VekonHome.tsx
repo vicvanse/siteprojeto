@@ -360,27 +360,29 @@ export function VekonHome() {
       </section>
 
       {/* Mobile: plates, laid out like the pages of the manifesto */}
-      <section className="vh-plates" aria-label="Plates">
-        <p className="papers-intro__label vh-plates__label">
-          <span className="papers-intro__dot" aria-hidden />
-          Plates · Vekon
-        </p>
-        <figure className="vh-print vh-print--a">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="vh-print__img" src={withBase("/vekon/plates/plate-01-fall.webp")} alt="A winged figure falling, feathers loose around him" loading="lazy" width={900} height={1096} />
-          <figcaption>
-            <span className="vh-print__num">Pl. I</span>
-            <span className="vh-print__title">The fall</span>
-          </figcaption>
-        </figure>
-      </section>
-
       <p className="vh-foot">Vekon · Memory · Personas</p>
       {/* Mobile: the flame, centered under the footer */}
       <span className="vh-lotus vh-flame" aria-hidden>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={withBase("/vekon-flame.png")} alt="" width={96} height={96} draggable={false} />
       </span>
+      {/* Mobile: under the flame, a medallion framed like the Living Ring —
+          Icarus falling through the clouds */}
+      <figure className="vh-medal" aria-label="The fall">
+        <span className="vh-medal__disc">
+          <span className="vh-medal__ring" aria-hidden />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="vh-medal__cloud vh-medal__cloud--a" src={withBase("/vekon/cloud-a.webp")} alt="" aria-hidden width={760} height={259} />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="vh-medal__cloud vh-medal__cloud--b" src={withBase("/vekon/cloud-b.webp")} alt="" aria-hidden width={640} height={297} />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="vh-medal__fig" src={withBase("/vekon/plates/plate-01-fall.webp")} alt="A winged figure falling, feathers loose around him" loading="lazy" width={900} height={1096} />
+        </span>
+        <figcaption>
+          <span className="vh-print__num">Pl. I</span>
+          <span className="vh-print__title">The fall</span>
+        </figcaption>
+      </figure>
     </div>
   );
 }
