@@ -123,7 +123,7 @@ function ColorDot() {
     return () => document.removeEventListener("pointerdown", close);
   }, [open]);
   const swatch = (h: AccentHue) => ({
-    background: `linear-gradient(135deg, ${ACCENT_PALETTES[h].surfaceOdd} 50%, ${ACCENT_PALETTES[h].selected} 50%)`,
+    background: ACCENT_PALETTES[h].selected,
   });
   return (
     <span className="vh-colordot" ref={ref}>
