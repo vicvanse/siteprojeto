@@ -534,3 +534,12 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-projects-box .vh-projects-line{display:none!important}
   .vh-projects-box{row-gap:0!important}
 }
+/* Mobile: two panels — the living ring (with the Papers color band) and
+   the about text — instead of one. */
+@media (max-width:900px){
+  .vh-hero{background:none!important;box-shadow:none!important;padding:0!important;border-radius:0!important}
+  .vh-mark,.vh-hero__text{background:var(--sb);border-radius:26px;box-shadow:6px 6px 14px var(--sd),-6px -6px 14px var(--sl)}
+  .vh-mark{margin:0 0 18px!important;padding:1.3rem;overflow:hidden}
+  .vh-band{top:0!important;left:0!important;right:0!important;bottom:50%!important}
+  .vh-hero__text{padding:1.5rem 1.3rem 1.4rem}
+}
