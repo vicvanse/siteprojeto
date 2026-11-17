@@ -712,11 +712,3 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
 @media (max-width:900px){
   .vh-mark--m{margin-top:20px!important}
 }
-/* Mobile: about moves under the flame; desktop keeps it in the hero. */
-@media (min-width:901px){
-  .vh-hero--m{display:none!important}
-}
-@media (max-width:900px){
-  .vh-hero:not(.vh-hero--m) .vh-hero__text{display:none!important}
-  .vh-hero--m{margin-top:26px!important}
-}
