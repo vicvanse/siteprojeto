@@ -15,6 +15,12 @@ export type AccessSession = {
   exp: number;
   /** Supabase user id when the account is real (not the OWNER demo key). */
   uid?: string;
+  /** Supabase access token (real accounts). Data calls run as this user. */
+  at?: string;
+  /** Supabase refresh token, to renew `at` server-side. */
+  rt?: string;
+  /** Access token expiry, epoch ms. */
+  atExp?: number;
 };
 
 export type MagicPayload = {
@@ -127,13 +133,21 @@ export function verifyMagicToken(token: string): MagicPayload | null {
   return payload;
 }
 
-export function createSession(email: string, uid?: string, ownedIds?: string[]): AccessSession {
+export function createSession(
+  email: string,
+  uid?: string,
+  ownedIds?: string[],
+  tokens?: { accessToken: string; refreshToken?: string; expiresAt: number },
+): AccessSession {
   const identity = normalizeAccessIdentity(email);
   return {
     email: identity,
     ownedIds: ownedIds ?? demoOwnedIds(identity),
     exp: Date.now() + SESSION_TTL_MS,
     ...(uid ? { uid } : {}),
+    ...(tokens
+      ? { at: tokens.accessToken, rt: tokens.refreshToken, atExp: tokens.expiresAt }
+      : {}),
   };
 }
 
@@ -148,8 +162,9 @@ export function decodeSession(token: string | undefined | null): AccessSession |
     return null;
   }
   if (Date.now() > session.exp) return null;
-  /* Real accounts: owned set is read from Supabase by the caller. */
-  if (session.uid) return session;
+  /* Real accounts: owned set is read from Supabase by the caller. Cookies
+     from before per-user tokens carry no `at`: treat as signed out. */
+  if (session.uid) return session.at ? session : null;
   /* Demo ledger may change — always resolve current owned set from identity. */
   return {
     ...session,

@@ -29,7 +29,12 @@ function AccessClient() {
       const supaToken = hash.get("access_token");
       if (supaToken) {
         window.history.replaceState(null, "", window.location.pathname);
-        const ok = await completeAccess(supaToken, "supabase");
+        const ok = await completeAccess(
+          supaToken,
+          "supabase",
+          undefined,
+          hash.get("refresh_token") ?? undefined,
+        );
         if (cancelled) return;
         setStatus(ok ? "ok" : "bad");
         if (ok) {
