@@ -680,3 +680,8 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
     animation:vh-cloud-drift 46s ease-in-out infinite alternate-reverse}
 }
 @media (prefers-reduced-motion:reduce){.vh-cloud-emblem{animation:none}}
+/* Desktop: the heron takes the left cloud's place; the cloud goes */
+@media (min-width:901px){
+  .vh-cloud--a{display:none!important}
+  .vh-cloud-emblem{width:clamp(130px,11vw,200px)!important;left:clamp(16px,3vw,64px)!important;top:clamp(120px,20vh,210px)!important}
+}

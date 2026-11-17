@@ -208,7 +208,7 @@ export function VekonHome() {
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img className="vh-cloud vh-cloud--a" src={withBase("/vekon/cloud-a2.webp")} alt="" aria-hidden width={760} height={259} />
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img className="vh-cloud vh-cloud--b" src={withBase("/vekon/cloud-b2.webp")} alt="" aria-hidden width={640} height={297} />
+      <img className="vh-cloud vh-cloud--b" src={withBase("/vekon/cloud-b3.webp")} alt="" aria-hidden width={640} height={297} />
       <div className="vh-side vh-side--left" aria-hidden>
         VEKON · MEMORY · PERSONAS
       </div>
@@ -273,7 +273,7 @@ export function VekonHome() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img className="vh-mcloud vh-mcloud--a" src={withBase("/vekon/cloud-a2.webp")} alt="" aria-hidden width={760} height={259} />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className="vh-mcloud vh-mcloud--b" src={withBase("/vekon/cloud-b2.webp")} alt="" aria-hidden width={640} height={297} />
+            <img className="vh-mcloud vh-mcloud--b" src={withBase("/vekon/cloud-b3.webp")} alt="" aria-hidden width={640} height={297} />
             <div className="vh-mark__well">
               <span className="vh-mark__disc">
                 <LivingRingMark className="vh-mark__ring" />
