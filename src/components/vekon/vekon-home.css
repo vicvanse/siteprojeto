@@ -665,3 +665,9 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vekon-home{overflow-x:visible!important}
   .shell:has(.vekon-home),.shell:has(.vekon-home) > .shell__main{overflow:visible!important}
 }
+/* Emblem medal: the SVG brings its own double circle, so the disc only
+   carries the relief */
+@media (max-width:900px){
+  .vh-medal--emblem .vh-medal__disc{display:grid;place-items:center}
+  .vh-medal__emblem{display:block;width:90%;height:auto}
+}

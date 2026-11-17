@@ -373,19 +373,16 @@ export function VekonHome() {
       </span>
       {/* Mobile: under the flame, a medallion framed like the Living Ring —
           Icarus falling through the clouds */}
-      <figure className="vh-medal" aria-label="The fall">
+      {/* Mobile: under the flame, the Vekon emblem — the heron, for the search
+          (a medal in the language of old publishers' devices) */}
+      <figure className="vh-medal vh-medal--emblem" aria-label="The heron">
         <span className="vh-medal__disc">
-          <span className="vh-medal__ring" aria-hidden />
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="vh-medal__cloud vh-medal__cloud--a" src={withBase("/vekon/cloud-a2.webp")} alt="" aria-hidden width={760} height={259} />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="vh-medal__cloud vh-medal__cloud--b" src={withBase("/vekon/cloud-b2.webp")} alt="" aria-hidden width={640} height={297} />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="vh-medal__fig" src={withBase("/vekon/plates/plate-01-fall-ink.webp")} alt="A winged figure falling, feathers loose around him" loading="lazy" width={900} height={1096} />
+          <img className="vh-medal__emblem" src={withBase("/vekon/emblem-heron.svg")} alt="A heron in flight inside a double circle, a small star above" loading="lazy" width={320} height={320} />
         </span>
         <figcaption>
           <span className="vh-print__num">Pl. I</span>
-          <span className="vh-print__title">The fall</span>
+          <span className="vh-print__title">The heron</span>
         </figcaption>
       </figure>
     </div>
