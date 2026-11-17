@@ -700,3 +700,12 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
 }
 @media (max-width:900px){.vh-colordot{display:none!important}}
 .vh-door__body{-webkit-line-clamp:unset!important;display:block!important;overflow:visible!important}
+/* Swap: on mobile the heron opens the page and the Living Ring sits
+   between the about text and the projects. Desktop keeps its layout. */
+@media (min-width:901px){
+  .vh-mark--m{display:none!important}
+}
+@media (max-width:900px){
+  .vh-hero .vh-mark{display:none!important}
+  .vh-medal--top{order:-1;margin:0 auto 1.4rem!important}
+}
