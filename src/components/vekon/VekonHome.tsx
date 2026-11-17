@@ -204,6 +204,8 @@ export function VekonHome() {
     >
       {/* Desktop: two engraved clouds in the margins, behind the panels */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img className="vh-cloud-emblem" src={withBase("/vekon/emblem-heron.svg")} alt="" aria-hidden width={320} height={320} />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img className="vh-cloud vh-cloud--a" src={withBase("/vekon/cloud-a2.webp")} alt="" aria-hidden width={760} height={259} />
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img className="vh-cloud vh-cloud--b" src={withBase("/vekon/cloud-b2.webp")} alt="" aria-hidden width={640} height={297} />
