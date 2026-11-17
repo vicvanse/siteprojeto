@@ -10,7 +10,7 @@ import {
   magicLinkUrl,
   normalizeAccessIdentity,
   sendMagicLinkEmail,
-  siteOrigin,
+  trustedReturnOrigin,
 } from "@/lib/access-auth";
 import { sendSupabaseMagicLink, supabaseEnabled } from "@/lib/supabase-rest";
 import { BASE_PATH, withBase } from "@/lib/base-path";
@@ -60,8 +60,8 @@ export async function POST(request: Request) {
   if (supabaseEnabled()) {
     /* Return to the exact site the reader is on (VERCEL_URL is the
        per-deployment host, which isn't in Supabase's allowed list). */
-    const origin = request.headers.get("origin") ?? new URL(request.url).origin;
-    const sent = await sendSupabaseMagicLink(identity, `${origin || siteOrigin()}${withBase("/access")}`);
+    const origin = trustedReturnOrigin(request.headers.get("origin"));
+    const sent = await sendSupabaseMagicLink(identity, `${origin}${withBase("/access")}`);
     if (!sent.sent) {
       return NextResponse.json(
         { ok: false, error: sent.status === 429 ? "rate_limited" : "send_failed" },
@@ -75,7 +75,7 @@ export async function POST(request: Request) {
   const url = magicLinkUrl(token);
   const mail = await sendMagicLinkEmail(identity, url);
 
-  if (!mail.sent) {
+  if (!mail.sent && process.env.NODE_ENV !== "production") {
     console.info("[access] magic link (dev / no email provider):", url);
   }
 
@@ -83,7 +83,7 @@ export async function POST(request: Request) {
     ok: true,
     email: identity,
     emailed: mail.sent,
-    /** Only returned when email was not sent — for local/dev confirmation. */
-    magicUrl: mail.sent ? undefined : url,
+    /** Only returned in local dev when email was not sent (it is a login link). */
+    magicUrl: mail.sent || process.env.NODE_ENV === "production" ? undefined : url,
   });
 }

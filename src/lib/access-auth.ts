@@ -23,8 +23,12 @@ export type MagicPayload = {
   n: string;
 };
 
-/** Demo master key — typing OWNER in login unlocks every object. */
+/**
+ * Demo master key — typing OWNER in login unlocks every object.
+ * Local dev only: in production it would bypass the paywall for anyone.
+ */
 export function isOwnerKey(value: string) {
+  if (process.env.NODE_ENV === "production") return false;
   const raw = value.trim().toLowerCase();
   if (!raw) return false;
   if (raw === OWNER_KEY) return true;
@@ -50,11 +54,15 @@ export function demoOwnedIds(email: string): string[] {
 function secret() {
   const value = process.env.ACCESS_SECRET?.trim();
   if (value) return value;
-  /* Fallback keeps OWNER / demo access alive on Vercel if env is missing. */
+  /*
+   * This repo is public, so a fixed fallback lets anyone forge session
+   * cookies (and the server acts on their uid with the service role key).
+   * Fail closed in production; keep the fallback for local dev only.
+   */
   if (process.env.NODE_ENV === "production") {
-    console.warn("[access] ACCESS_SECRET is not set — using demo fallback");
+    throw new Error("[access] ACCESS_SECRET is not set");
   }
-  return "papers-demo-access-secret-change-me";
+  return "papers-dev-only-access-secret";
 }
 
 function b64url(input: Buffer | string) {
@@ -157,6 +165,25 @@ export function siteOrigin() {
     return `https://${process.env.VERCEL_URL.replace(/\/$/, "")}`;
   }
   return "http://localhost:3456";
+}
+
+/**
+ * Origins the Supabase magic link may return to. The request's Origin header
+ * is client-controlled, so only known Vekon hosts are accepted.
+ */
+export function trustedReturnOrigin(requestOrigin: string | null | undefined) {
+  const fallback = siteOrigin();
+  if (!requestOrigin) return fallback;
+  const allowed = new Set([
+    fallback,
+    "https://www.vekonlife.com",
+    "https://papers.vekonlife.com",
+  ]);
+  if (process.env.NODE_ENV !== "production") {
+    allowed.add("http://localhost:3456");
+    allowed.add("http://localhost:3000");
+  }
+  return allowed.has(requestOrigin) ? requestOrigin : fallback;
 }
 
 export function magicLinkUrl(token: string) {
