@@ -295,29 +295,6 @@ export function VekonHome() {
         </div>
       </section>
 
-      {/* Mobile: the Living Ring, after the about text, before the projects */}
-      <figure className="vh-mark vh-mark--m" aria-hidden>
-        {/* Mobile: a band in the Papers color along the top of the panel,
-            thin at the right, following the well's curve down the left. */}
-        <span className="vh-band" aria-hidden>
-          <span className="vh-band__shine" />
-        </span>
-        {/* Mobile: two clouds at the height of the ring */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="vh-mcloud vh-mcloud--a" src={withBase("/vekon/cloud-a3.webp")} alt="" aria-hidden width={760} height={259} />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="vh-mcloud vh-mcloud--b" src={withBase("/vekon/cloud-b3.webp")} alt="" aria-hidden width={640} height={297} />
-        <div className="vh-mark__well">
-          <span className="vh-mark__disc">
-            <LivingRingMark className="vh-mark__ring" />
-          </span>
-        </div>
-        <figcaption aria-hidden>
-          <span>LIVING RING</span>
-          <span>V-000</span>
-          <span>1:1</span>
-        </figcaption>
-      </figure>
 
       <p className="vh-doors-label" style={{ ["--i" as string]: 2 }}>
         <span className="vh-dot" aria-hidden />
@@ -404,6 +381,30 @@ export function VekonHome() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={withBase("/vekon-flame.png")} alt="" width={96} height={96} draggable={false} />
       </span>
+
+      {/* Mobile: the Living Ring, at the very end, under the flame */}
+      <figure className="vh-mark vh-mark--m" aria-hidden>
+        {/* Mobile: a band in the Papers color along the top of the panel,
+            thin at the right, following the well's curve down the left. */}
+        <span className="vh-band" aria-hidden>
+          <span className="vh-band__shine" />
+        </span>
+        {/* Mobile: two clouds at the height of the ring */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="vh-mcloud vh-mcloud--a" src={withBase("/vekon/cloud-a3.webp")} alt="" aria-hidden width={760} height={259} />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="vh-mcloud vh-mcloud--b" src={withBase("/vekon/cloud-b3.webp")} alt="" aria-hidden width={640} height={297} />
+        <div className="vh-mark__well">
+          <span className="vh-mark__disc">
+            <LivingRingMark className="vh-mark__ring" />
+          </span>
+        </div>
+        <figcaption aria-hidden>
+          <span>LIVING RING</span>
+          <span>V-000</span>
+          <span>1:1</span>
+        </figcaption>
+      </figure>
     </div>
   );
 }

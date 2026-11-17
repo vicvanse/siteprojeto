@@ -709,3 +709,6 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-hero .vh-mark{display:none!important}
   .vh-medal--top{order:-1;margin:0 auto 1.4rem!important}
 }
+@media (max-width:900px){
+  .vh-mark--m{margin-top:20px!important}
+}
