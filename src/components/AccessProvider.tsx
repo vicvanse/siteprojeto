@@ -31,6 +31,7 @@ type AccessContextValue = {
     token: string,
     kind?: "papers" | "supabase" | "hash",
     type?: string,
+    refreshToken?: string,
   ) => Promise<boolean>;
   /** Signed in: add a free object to the Collection. */
   claim: (objectId: string) => Promise<void>;
@@ -158,6 +159,7 @@ export function AccessProvider({ children }: { children: React.ReactNode }) {
     token: string,
     kind: "papers" | "supabase" | "hash" = "papers",
     type?: string,
+    refreshToken?: string,
   ) => {
     setBusy(true);
     try {
@@ -166,7 +168,7 @@ export function AccessProvider({ children }: { children: React.ReactNode }) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(
           kind === "supabase"
-            ? { supabaseToken: token }
+            ? { supabaseToken: token, refreshToken }
             : kind === "hash"
               ? { tokenHash: token, type }
               : { token },
