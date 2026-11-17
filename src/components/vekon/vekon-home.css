@@ -698,3 +698,4 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
 @media (max-width:900px){
   .vh-mcloud--a{display:block!important;width:64%!important;left:-16%!important;right:auto!important;top:auto!important;bottom:6%!important;opacity:.55!important}
 }
+@media (max-width:900px){.vh-colordot{display:none!important}}
