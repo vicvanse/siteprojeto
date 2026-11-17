@@ -690,3 +690,7 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-mcloud--a{display:none!important}
   .vh-mcloud--b{display:block!important;width:72%!important;left:14%!important;right:auto!important;top:auto!important;bottom:-4%!important;opacity:.55!important}
 }
+/* Mobile: the single cloud at the upper right of the Living Ring */
+@media (max-width:900px){
+  .vh-mcloud--b{width:60%!important;left:auto!important;right:-14%!important;top:4%!important;bottom:auto!important}
+}
