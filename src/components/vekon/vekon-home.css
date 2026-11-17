@@ -671,3 +671,4 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-medal--emblem .vh-medal__disc{display:grid;place-items:center}
   .vh-medal__emblem{display:block;width:90%;height:auto}
 }
+@media (max-width:900px){.vh-mcloud{display:none!important}}
