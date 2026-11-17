@@ -382,6 +382,18 @@ export function VekonHome() {
         <img src={withBase("/vekon-flame.png")} alt="" width={96} height={96} draggable={false} />
       </span>
 
+      {/* Mobile: the about text, after the flame and before the Living Ring */}
+      <section className="vh-hero vh-hero--m" aria-label={t("home.aboutLabel")}>
+        <div className="vh-hero__text">
+          <p className="papers-intro__label vh-aboutlabel">
+            <span className="papers-intro__dot" aria-hidden />
+            {t("home.aboutLabel")}
+          </p>
+          <p className="vh-body vh-body--full">{t("home.body")}</p>
+          <p className="vh-body vh-body--lead">{t("home.bodyLead")}</p>
+        </div>
+      </section>
+
       {/* Mobile: the Living Ring, at the very end, under the flame */}
       <figure className="vh-mark vh-mark--m" aria-hidden>
         {/* Mobile: a band in the Papers color along the top of the panel,
