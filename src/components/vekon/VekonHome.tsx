@@ -206,7 +206,7 @@ export function VekonHome() {
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img className="vh-cloud-emblem" src={withBase("/vekon/emblem-heron.svg")} alt="" aria-hidden width={320} height={320} />
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img className="vh-cloud vh-cloud--a" src={withBase("/vekon/cloud-a2.webp")} alt="" aria-hidden width={760} height={259} />
+      <img className="vh-cloud vh-cloud--a" src={withBase("/vekon/cloud-a3.webp")} alt="" aria-hidden width={760} height={259} />
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img className="vh-cloud vh-cloud--b" src={withBase("/vekon/cloud-b3.webp")} alt="" aria-hidden width={640} height={297} />
       <div className="vh-side vh-side--left" aria-hidden>
@@ -271,7 +271,7 @@ export function VekonHome() {
             </span>
             {/* Mobile: two clouds at the height of the ring */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className="vh-mcloud vh-mcloud--a" src={withBase("/vekon/cloud-a2.webp")} alt="" aria-hidden width={760} height={259} />
+            <img className="vh-mcloud vh-mcloud--a" src={withBase("/vekon/cloud-a3.webp")} alt="" aria-hidden width={760} height={259} />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img className="vh-mcloud vh-mcloud--b" src={withBase("/vekon/cloud-b3.webp")} alt="" aria-hidden width={640} height={297} />
             <div className="vh-mark__well">

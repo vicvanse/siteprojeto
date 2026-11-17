@@ -694,3 +694,7 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
 @media (max-width:900px){
   .vh-mcloud--b{width:60%!important;left:auto!important;right:-14%!important;top:4%!important;bottom:auto!important}
 }
+/* Mobile: a second cloud at the lower left of the Living Ring */
+@media (max-width:900px){
+  .vh-mcloud--a{display:block!important;width:64%!important;left:-16%!important;right:auto!important;top:auto!important;bottom:6%!important;opacity:.55!important}
+}
