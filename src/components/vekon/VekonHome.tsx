@@ -288,6 +288,18 @@ export function VekonHome() {
         </div>
       </section>
 
+      {/* Mobile: the Vekon emblem, the heron, before the projects */}
+      <figure className="vh-medal vh-medal--emblem" aria-label={t("home.heron")}>
+        <span className="vh-medal__disc">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="vh-medal__emblem" src={withBase("/vekon/emblem-heron.svg")} alt="A heron in flight inside a double circle, a small star above" loading="lazy" width={320} height={320} />
+        </span>
+        <figcaption>
+          <span className="vh-print__num">Pl. I</span>
+          <span className="vh-print__title">{t("home.heron")}</span>
+        </figcaption>
+      </figure>
+
       <p className="vh-doors-label" style={{ ["--i" as string]: 2 }}>
         <span className="vh-dot" aria-hidden />
         {t("home.doors")}
@@ -373,20 +385,6 @@ export function VekonHome() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={withBase("/vekon-flame.png")} alt="" width={96} height={96} draggable={false} />
       </span>
-      {/* Mobile: under the flame, a medallion framed like the Living Ring —
-          Icarus falling through the clouds */}
-      {/* Mobile: under the flame, the Vekon emblem — the heron, for the search
-          (a medal in the language of old publishers' devices) */}
-      <figure className="vh-medal vh-medal--emblem" aria-label={t("home.heron")}>
-        <span className="vh-medal__disc">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="vh-medal__emblem" src={withBase("/vekon/emblem-heron.svg")} alt="A heron in flight inside a double circle, a small star above" loading="lazy" width={320} height={320} />
-        </span>
-        <figcaption>
-          <span className="vh-print__num">Pl. I</span>
-          <span className="vh-print__title">{t("home.heron")}</span>
-        </figcaption>
-      </figure>
     </div>
   );
 }
