@@ -269,10 +269,6 @@ export function VekonHome() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img className="vh-medal__emblem" src={withBase("/vekon/emblem-heron.svg")} alt="A heron in flight inside a double circle, a small star above" loading="eager" width={320} height={320} />
             </span>
-            <figcaption>
-              <span className="vh-print__num">Pl. I</span>
-              <span className="vh-print__title">{t("home.heron")}</span>
-            </figcaption>
           </figure>
           <figure className="vh-mark">
             {/* Mobile: a band in the Papers color along the top of the panel,
