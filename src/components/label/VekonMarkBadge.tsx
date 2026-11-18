@@ -1,8 +1,10 @@
 "use client";
 
-import { brand } from "@/brand";
 import { useLanguage } from "@/components/LanguageProvider";
 import { withBase } from "@/lib/base-path";
+
+/** Both footer marks lead home, to the Vekon page that presents the two projects. */
+const VEKON_HOME = "https://www.vekonlife.com/";
 
 /**
  * Footer marks — Papers (red star / light) beside Life (black), each with what it is.
@@ -12,7 +14,7 @@ export function VekonMarkBadge() {
 
   return (
     <aside className="vekon-marks" aria-label="Vekon">
-      <a href={withBase("/")} className="vekon-mark vekon-mark--papers">
+      <a href={VEKON_HOME} className="vekon-mark vekon-mark--papers">
         <div className="vekon-mark__plate vekon-mark__plate--papers">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -33,12 +35,7 @@ export function VekonMarkBadge() {
         </p>
       </a>
 
-      <a
-        href={brand.vekonUrl}
-        className="vekon-mark vekon-mark--life"
-        target="_blank"
-        rel="noreferrer"
-      >
+      <a href={VEKON_HOME} className="vekon-mark vekon-mark--life">
         <div className="vekon-mark__plate vekon-mark__plate--life">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
