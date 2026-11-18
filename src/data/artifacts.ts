@@ -240,7 +240,7 @@ export const releaseArtifacts: Artifact[] = [
     manifestations: ["pdf", "banner"],
     relatedBannerId: "b004",
     description:
-      "A life lasts about eighty years, but we only start remembering it around seven. This manifesto does that arithmetic and asks what to do with the time that is left. Two sheets, a single ink, and the text where Vekon began.",
+      "A life lasts about eighty years, but we only start remembering it around seven. This manifesto does that arithmetic and asks what to do with the time that is left.",
     cover: withBase("/covers/009-pasture.gif"),
     avatar: withBase("/avatars/009-heron-seal.png"),
     downloads: {
