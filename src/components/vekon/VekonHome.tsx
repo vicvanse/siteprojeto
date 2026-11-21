@@ -1,5 +1,6 @@
 "use client";
 
+import { HeronEmblem } from "@/components/vekon/HeronEmblem";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { LANGUAGES, LANGUAGE_INITIALS, LANGUAGE_NAMES, type Language } from "@/lib/i18n";
@@ -259,8 +260,7 @@ export function VekonHome() {
           {/* Mobile: the heron at the top, where the ring was */}
           <figure className="vh-medal vh-medal--emblem vh-medal--top" aria-label={t("home.heron")}>
             <span className="vh-medal__disc">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="vh-medal__emblem" src={withBase("/vekon/emblem-heron.svg")} alt="A heron in flight inside a double circle, a small star above" loading="eager" width={320} height={320} />
+              <HeronEmblem label="A heron in flight inside a double circle, a small star above" />
             </span>
           </figure>
           <figure className="vh-mark">
