@@ -184,8 +184,44 @@ function useDoorColors() {
   return colors;
 }
 
+/**
+ * Mobile: the blocks below the heron rise into place as they scroll in,
+ * one at a time, instead of all animating on load out of sight.
+ */
+function useScrollReveal() {
+  useEffect(() => {
+    if (!window.matchMedia("(max-width: 900px)").matches) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!("IntersectionObserver" in window)) return;
+    const els = Array.from(
+      document.querySelectorAll<HTMLElement>(
+        ".vekon-home .vh-doors-label, .vekon-home .vh-door, .vekon-home .vh-foot, .vekon-home .vh-flame, .vekon-home .vh-mark--m",
+      ),
+    );
+    const fold = window.innerHeight * 0.92;
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (!e.isIntersecting) continue;
+          e.target.classList.add("is-in");
+          io.unobserve(e.target);
+        }
+      },
+      { threshold: 0.18, rootMargin: "0px 0px -6% 0px" },
+    );
+    for (const el of els) {
+      // Already on screen at load: leave it to the entrance animation.
+      if (el.getBoundingClientRect().top < fold) continue;
+      el.classList.add("vh-reveal");
+      io.observe(el);
+    }
+    return () => io.disconnect();
+  }, []);
+}
+
 export function VekonHome() {
   const { t } = useLanguage();
+  useScrollReveal();
   const doorColors = useDoorColors();
   /* The color picked in Papers (same site, so the same saved choice). */
   const { hue, ready: accentReady } = useAccent();

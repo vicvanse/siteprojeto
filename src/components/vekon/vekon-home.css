@@ -745,3 +745,29 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-btn--soft:active{box-shadow:inset 3px 3px 6px var(--sd),inset -3px -3px 6px var(--sl)!important}
   .vh-btn--dark:active{box-shadow:inset 3px 3px 8px rgba(0,0,0,.55)!important}
 }
+/* ---- Mobile life after the entrance ---- */
+@media (max-width:900px){
+  /* 1. Blocks rise in, and their relief lights up, as they scroll into view. */
+  .vekon-home .vh-reveal{opacity:0;translate:0 32px;animation:none!important;
+    transition:opacity .75s cubic-bezier(.22,1,.36,1),translate .75s cubic-bezier(.22,1,.36,1),box-shadow 1s ease .1s}
+  .vekon-home .vh-door.vh-reveal:not(.is-in){box-shadow:0 0 0 var(--sd),0 0 0 var(--sl)!important}
+  .vekon-home .vh-reveal.is-in{opacity:1;translate:0 0}
+
+  /* 4. The flame breathes. */
+  .vh-flame img{transform-origin:50% 85%;animation:vh-flame-breathe 3.2s ease-in-out infinite}
+
+  /* 3. Clouds drift left, slowly, across the page and back in from the right. */
+  .vh-mark--m .vh-mcloud--b{animation:vh-cloud-pass-b 95s linear -32s infinite!important}
+  .vh-mark--m .vh-mcloud--a{animation:vh-cloud-pass-a 115s linear -78s infinite!important}
+}
+@keyframes vh-flame-breathe{
+  0%,100%{transform:scale(1) rotate(0deg);filter:brightness(1)}
+  30%{transform:scale(1.045,1.07) rotate(-1.5deg);filter:brightness(1.08)}
+  55%{transform:scale(.985,1.01) rotate(1deg);filter:brightness(.97)}
+  80%{transform:scale(1.03,1.05) rotate(-.6deg);filter:brightness(1.05)}
+}
+@keyframes vh-cloud-pass-b{from{transform:translateX(60vw)}to{transform:translateX(-120vw)}}
+@keyframes vh-cloud-pass-a{from{transform:translateX(116vw)}to{transform:translateX(-55vw)}}
+@media (max-width:900px) and (prefers-reduced-motion:reduce){
+  .vh-flame img,.vh-mark--m .vh-mcloud{animation:none!important}
+}
