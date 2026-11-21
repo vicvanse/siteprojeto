@@ -185,7 +185,7 @@ function useDoorColors() {
 }
 
 /**
- * Mobile: the blocks below the heron rise into place as they scroll in,
+ * Mobile: the blocks below the Living Ring rise into place as they scroll in,
  * one at a time, instead of all animating on load out of sight.
  */
 function useScrollReveal() {
@@ -195,7 +195,7 @@ function useScrollReveal() {
     if (!("IntersectionObserver" in window)) return;
     const els = Array.from(
       document.querySelectorAll<HTMLElement>(
-        ".vekon-home .vh-projects, .vekon-home .vh-door, .vekon-home .vh-foot, .vekon-home .vh-flame, .vekon-home .vh-mark--m",
+        ".vekon-home .vh-projects, .vekon-home .vh-door, .vekon-home .vh-foot, .vekon-home .vh-flame, .vekon-home .vh-medal--top",
       ),
     );
     const fold = window.innerHeight * 0.92;
@@ -293,11 +293,28 @@ export function VekonHome() {
               </ul>
             </div>
           </div>
-          {/* Mobile: the heron at the top, where the ring was */}
-          <figure className="vh-medal vh-medal--emblem vh-medal--top" aria-label={t("home.heron")}>
-            <span className="vh-medal__disc">
-              <HeronEmblem label="A heron in flight inside a double circle, a small star above" />
+          {/* Mobile: the Living Ring, at the top (swapped with the heron) */}
+          <figure className="vh-mark vh-mark--m" aria-hidden>
+            {/* Mobile: a band in the Papers color along the top of the panel,
+                thin at the right, following the well's curve down the left. */}
+            <span className="vh-band" aria-hidden>
+              <span className="vh-band__shine" />
             </span>
+            {/* Mobile: two clouds at the height of the ring */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="vh-mcloud vh-mcloud--a" src={withBase("/vekon/cloud-a3.webp")} alt="" aria-hidden width={760} height={259} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="vh-mcloud vh-mcloud--b" src={withBase("/vekon/cloud-b3.webp")} alt="" aria-hidden width={640} height={297} />
+            <div className="vh-mark__well">
+              <span className="vh-mark__disc">
+                <LivingRingMark className="vh-mark__ring" />
+              </span>
+            </div>
+            <figcaption aria-hidden>
+              <span>LIVING RING</span>
+              <span>V-000</span>
+              <span>1:1</span>
+            </figcaption>
           </figure>
           <figure className="vh-mark">
             {/* Mobile: a band in the Papers color along the top of the panel,
@@ -411,28 +428,11 @@ export function VekonHome() {
         <img src={withBase("/vekon-flame.png")} alt="" width={96} height={96} draggable={false} />
       </span>
 
-      {/* Mobile: the Living Ring, at the very end, under the flame */}
-      <figure className="vh-mark vh-mark--m" aria-hidden>
-        {/* Mobile: a band in the Papers color along the top of the panel,
-            thin at the right, following the well's curve down the left. */}
-        <span className="vh-band" aria-hidden>
-          <span className="vh-band__shine" />
+      {/* Mobile: the heron at the very end, under the flame */}
+      <figure className="vh-medal vh-medal--emblem vh-medal--top" aria-label={t("home.heron")}>
+        <span className="vh-medal__disc">
+          <HeronEmblem label="A heron in flight inside a double circle, a small star above" />
         </span>
-        {/* Mobile: two clouds at the height of the ring */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="vh-mcloud vh-mcloud--a" src={withBase("/vekon/cloud-a3.webp")} alt="" aria-hidden width={760} height={259} />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="vh-mcloud vh-mcloud--b" src={withBase("/vekon/cloud-b3.webp")} alt="" aria-hidden width={640} height={297} />
-        <div className="vh-mark__well">
-          <span className="vh-mark__disc">
-            <LivingRingMark className="vh-mark__ring" />
-          </span>
-        </div>
-        <figcaption aria-hidden>
-          <span>LIVING RING</span>
-          <span>V-000</span>
-          <span>1:1</span>
-        </figcaption>
       </figure>
     </div>
   );

@@ -706,11 +706,11 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-mark--m{display:none!important}
 }
 @media (max-width:900px){
-  .vh-hero .vh-mark{display:none!important}
-  .vh-medal--top{order:-1;margin:0 auto 1.4rem!important}
+  .vh-hero .vh-mark:not(.vh-mark--m){display:none!important}
+  .vh-medal--top{margin:26px auto 8px!important}
 }
 @media (max-width:900px){
-  .vh-mark--m{margin-top:20px!important}
+  .vh-mark--m{margin-top:0!important}
 }
 /* ---- Mobile fun: the heron inks itself, flies at seven taps; everything presses in ---- */
 .vh-heron{display:block;width:90%;height:auto;overflow:visible;cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none}
@@ -773,7 +773,7 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
 }
 /* Papers / Life cards on mobile: raised, not sunken. */
 @media (max-width:900px){
-  .vekon-home .vh-projects-panel .vh-door{box-shadow:10px 10px 22px var(--sd),-10px -10px 22px var(--sl)!important}
+  .vekon-home .vh-projects-panel .vh-door{box-shadow:6px 6px 12px var(--sd),-6px -6px 12px var(--sl)!important}
   .vekon-home .vh-projects-panel .vh-door:active{box-shadow:4px 4px 10px var(--sd),-4px -4px 10px var(--sl)!important}
   .vekon-home .vh-projects-panel .vh-door.vh-reveal:not(.is-in){box-shadow:0 0 0 var(--sd),0 0 0 var(--sl)!important}
 }
