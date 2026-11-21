@@ -714,15 +714,15 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
 }
 /* ---- Mobile fun: the heron inks itself, flies at seven taps; everything presses in ---- */
 .vh-heron{display:block;width:90%;height:auto;overflow:visible;cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none}
-.vh-heron [pathLength]{stroke-dasharray:1;stroke-dashoffset:1}
-.vh-heron [fill="#1E3AA8"]{opacity:0}
-.vh-heron[data-state="draw"] [pathLength]{stroke-dashoffset:0;transition:stroke-dashoffset 1.3s cubic-bezier(.45,.05,.25,1)}
-.vh-heron[data-state="draw"] .vh-heron__bird [pathLength]{transition-duration:1.9s;transition-delay:.35s}
-.vh-heron[data-state="draw"] [fill="#1E3AA8"]{opacity:1;transition:opacity .6s ease 1.4s}
-.vh-heron:is([data-state="fly"],[data-state="rebirth"]) :is(.vh-heron__frame,.vh-heron__ticks) [pathLength]{stroke-dashoffset:0}
-.vh-heron:is([data-state="fly"],[data-state="rebirth"]) .vh-heron__frame [fill="#1E3AA8"]{opacity:1}
-.vh-heron[data-state="fly"] .vh-heron__bird [pathLength]{stroke-dashoffset:0}
-.vh-heron[data-state="fly"] .vh-heron__bird [fill="#1E3AA8"]{opacity:1}
+.vh-heron .vh-heron__s{stroke-dasharray:1;stroke-dashoffset:1}
+.vh-heron .vh-heron__f{opacity:0}
+.vh-heron[data-state="draw"] .vh-heron__s{stroke-dashoffset:0;transition:stroke-dashoffset 1.3s cubic-bezier(.45,.05,.25,1)}
+.vh-heron[data-state="draw"] .vh-heron__bird .vh-heron__s{transition-duration:1.9s;transition-delay:.35s}
+.vh-heron[data-state="draw"] .vh-heron__f{opacity:1;transition:opacity .6s ease 1.4s}
+.vh-heron:is([data-state="fly"],[data-state="rebirth"]) :is(.vh-heron__frame,.vh-heron__ticks) .vh-heron__s{stroke-dashoffset:0}
+.vh-heron:is([data-state="fly"],[data-state="rebirth"]) .vh-heron__frame .vh-heron__f{opacity:1}
+.vh-heron[data-state="fly"] .vh-heron__bird .vh-heron__s{stroke-dashoffset:0}
+.vh-heron[data-state="fly"] .vh-heron__bird .vh-heron__f{opacity:1}
 .vh-heron__bird{transform-box:fill-box;transform-origin:50% 50%}
 .vh-heron[data-state="fly"] .vh-heron__bird{animation:vh-heron-fly 1.6s cubic-bezier(.5,0,.75,0) forwards}
 @keyframes vh-heron-fly{
@@ -731,8 +731,8 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   100%{transform:translate(230px,-240px) rotate(-14deg) scale(.7);opacity:0}
 }
 @media (prefers-reduced-motion:reduce){
-  .vh-heron [pathLength]{stroke-dashoffset:0!important;transition:none!important}
-  .vh-heron [fill="#1E3AA8"]{opacity:1!important}
+  .vh-heron .vh-heron__s{stroke-dashoffset:0!important;transition:none!important}
+  .vh-heron .vh-heron__f{opacity:1!important}
   .vh-heron__bird{animation:none!important}
 }
 @media (max-width:900px){
