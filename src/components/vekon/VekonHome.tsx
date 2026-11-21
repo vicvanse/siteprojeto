@@ -195,7 +195,7 @@ function useScrollReveal() {
     if (!("IntersectionObserver" in window)) return;
     const els = Array.from(
       document.querySelectorAll<HTMLElement>(
-        ".vekon-home .vh-doors-label, .vekon-home .vh-door, .vekon-home .vh-foot, .vekon-home .vh-flame, .vekon-home .vh-mark--m",
+        ".vekon-home .vh-projects, .vekon-home .vh-door, .vekon-home .vh-foot, .vekon-home .vh-flame, .vekon-home .vh-mark--m",
       ),
     );
     const fold = window.innerHeight * 0.92;
