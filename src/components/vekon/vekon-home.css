@@ -771,3 +771,10 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
 @media (max-width:900px) and (prefers-reduced-motion:reduce){
   .vh-flame img,.vh-mark--m .vh-mcloud{animation:none!important}
 }
+/* Heron: the double ring turns slowly like a dial; the bird stays upright. */
+.vh-heron__frame,.vh-heron__ticks{transform-box:view-box;transform-origin:160px 160px;animation:vh-heron-dial 60s linear infinite}
+@keyframes vh-heron-dial{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.vh-heron__frame,.vh-heron__ticks{animation:none}}
+
+/* Papers / Life icons: raised plates instead of wells. */
+.vh-door__icon{box-shadow:4px 4px 9px var(--sd),-4px -4px 9px var(--sl)!important}
