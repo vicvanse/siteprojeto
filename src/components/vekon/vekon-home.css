@@ -826,3 +826,20 @@ html[data-enter] .vh-wolf{animation:vh-wolf-in .9s cubic-bezier(.22,1,.36,1) 1.3
 @keyframes vh-forget-strike{to{stroke-dashoffset:0}}
 @media (prefers-reduced-motion:reduce){.vh-forget__line{animation:none;stroke-dashoffset:0}}
 
+/* Mobile: each project card as in Papers' object card: a band in the
+   project's color carries the icon and name; a light panel with the text and
+   buttons slides over it from the right, casting a shadow on the band.
+   Papers uses the color picked in Papers; Life its wine. */
+@media (max-width:900px){
+  .vekon-home .vh-projects-panel .vh-door{--band:var(--papers-accent,#434c5e);background:var(--band)!important;padding:0!important;gap:0!important;row-gap:0!important;overflow:hidden;text-align:left!important}
+  .vekon-home .vh-projects-panel .vh-door--life{--band:#2b0d0e}
+  .vekon-home .vh-projects-panel .vh-door .vh-door__head{display:flex!important;flex-direction:row!important;justify-content:flex-start!important;align-items:center!important;gap:14px!important;padding:18px 20px 16px!important;margin:0!important;text-align:left!important}
+  .vekon-home .vh-projects-panel .vh-door .vh-door__head>div{text-align:left!important}
+  .vekon-home .vh-projects-panel .vh-door .vh-door__kind{color:rgba(255,255,255,.62)!important;margin:0!important}
+  .vekon-home .vh-projects-panel .vh-door .vh-door__name{color:#fff!important;margin:2px 0 0!important}
+  .vekon-home .vh-projects-panel .vh-door .vh-door__icon{box-shadow:0 0 0 2px rgba(255,255,255,.12)!important}
+  .vekon-home .vh-projects-panel .vh-door .vh-door__body{position:relative;z-index:1;margin:0 0 0 22px!important;padding:18px 18px 12px!important;text-align:left!important}
+  .vekon-home .vh-projects-panel .vh-door .vh-door__body::before{content:"";position:absolute;z-index:-1;left:0;right:0;top:0;height:640px;
+    background:var(--sb,#e6e7eb);border-radius:20px 0 0 0;box-shadow:-10px 6px 18px rgba(0,0,0,.24)}
+  .vekon-home .vh-projects-panel .vh-door .vh-door__actions{position:relative;z-index:2;margin:0 0 0 22px!important;padding:4px 18px 22px!important;justify-content:flex-start!important}
+}
