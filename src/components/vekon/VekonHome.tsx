@@ -332,6 +332,9 @@ export function VekonHome() {
 
       <section className="vh-projects-panel" aria-label={t("home.projects")}>
         <div className="vh-projects-box">
+          {/* Mobile: the wolf's sun, alone, turning slowly above the projects */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="vh-sun" src={withBase("/vekon/sun-ink.webp")} alt="" aria-hidden width={357} height={360} draggable={false} />
           <p className="vh-projects">
             <span className="vh-dot" aria-hidden />
             {t("home.projects")}

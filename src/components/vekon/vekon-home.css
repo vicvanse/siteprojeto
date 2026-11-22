@@ -800,3 +800,10 @@ html[data-enter] .vh-wolf{animation:vh-wolf-in .9s cubic-bezier(.22,1,.36,1) 1.3
   .vh-flame .vh-flame__f{animation:none!important}
   .vh-flame .vh-flame__f--1{opacity:1}
 }
+/* Mobile: the sun ornament above Our projects, turning very slowly. */
+.vh-sun{display:none}
+@media (max-width:900px){
+  .vh-sun{display:block;width:64px;height:auto;margin:6px auto 14px;animation:vh-sun-turn 48s linear infinite;-webkit-user-select:none;user-select:none}
+}
+@keyframes vh-sun-turn{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.vh-sun{animation:none}}
