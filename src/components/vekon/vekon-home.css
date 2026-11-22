@@ -707,10 +707,11 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
 }
 @media (max-width:900px){
   .vh-hero .vh-mark:not(.vh-mark--m){display:none!important}
-  .vh-medal--top{margin:26px auto 8px!important}
+  .vh-medal--top{order:-1;position:relative;overflow:visible!important;margin:0 auto 1.4rem!important}
+  .vh-medal--top .vh-medal__disc{z-index:1}
 }
 @media (max-width:900px){
-  .vh-mark--m{margin-top:0!important}
+  .vh-mark--m{margin-top:20px!important}
 }
 /* ---- Mobile fun: the heron inks itself, flies at seven taps; everything presses in ---- */
 .vh-heron{display:block;width:90%;height:auto;overflow:visible;cursor:pointer;-webkit-tap-highlight-color:transparent;user-select:none}
@@ -757,8 +758,8 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vh-flame img{transform-origin:50% 85%;animation:vh-flame-breathe 3.2s ease-in-out infinite}
 
   /* 3. Clouds drift left, slowly, across the page and back in from the right. */
-  .vh-mark--m .vh-mcloud--b{animation:vh-cloud-pass-b 95s linear -32s infinite!important}
-  .vh-mark--m .vh-mcloud--a{animation:vh-cloud-pass-a 115s linear -78s infinite!important}
+  .vh-medal--top .vh-mcloud--b{animation:vh-cloud-pass-b 95s linear -32s infinite!important}
+  .vh-medal--top .vh-mcloud--a{animation:vh-cloud-pass-a 115s linear -78s infinite!important}
 }
 @keyframes vh-flame-breathe{
   0%,100%{transform:scale(1) rotate(0deg);filter:brightness(1)}
@@ -769,7 +770,7 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
 @keyframes vh-cloud-pass-b{from{transform:translateX(60vw)}to{transform:translateX(-120vw)}}
 @keyframes vh-cloud-pass-a{from{transform:translateX(116vw)}to{transform:translateX(-55vw)}}
 @media (max-width:900px) and (prefers-reduced-motion:reduce){
-  .vh-flame img,.vh-mark--m .vh-mcloud{animation:none!important}
+  .vh-flame img,.vh-medal--top .vh-mcloud{animation:none!important}
 }
 /* Papers / Life cards on mobile: raised, not sunken. */
 @media (max-width:900px){
