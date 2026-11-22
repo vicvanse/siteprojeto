@@ -780,7 +780,7 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
 }
 /* Mobile: the maned wolf sticker replaces the heron disc. The torn gray
    paper is its own frame: no relief disc, a soft drop shadow instead. */
-.vh-medal--wolf{width:min(88vw,360px)}
+.vh-medal--wolf{width:min(72vw,290px)}
 .vh-wolf{position:relative;z-index:1;display:block;width:100%;height:auto;
   filter:drop-shadow(6px 8px 10px rgba(120,124,135,.45)) drop-shadow(-3px -3px 6px rgba(255,255,255,.8));
   -webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
