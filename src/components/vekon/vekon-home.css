@@ -778,3 +778,12 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vekon-home .vh-projects-panel .vh-door:active{box-shadow:4px 4px 10px var(--sd),-4px -4px 10px var(--sl)!important}
   .vekon-home .vh-projects-panel .vh-door.vh-reveal:not(.is-in){box-shadow:0 0 0 var(--sd),0 0 0 var(--sl)!important}
 }
+/* Mobile: the maned wolf sticker replaces the heron disc. The torn gray
+   paper is its own frame: no relief disc, a soft drop shadow instead. */
+.vh-medal--wolf{width:min(88vw,360px)}
+.vh-wolf{position:relative;z-index:1;display:block;width:100%;height:auto;
+  filter:drop-shadow(6px 8px 10px rgba(120,124,135,.45)) drop-shadow(-3px -3px 6px rgba(255,255,255,.8));
+  -webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+html[data-enter] .vh-wolf{animation:vh-wolf-in .9s cubic-bezier(.22,1,.36,1) 1.35s both}
+@keyframes vh-wolf-in{from{opacity:0;transform:translateY(18px) rotate(-5deg) scale(.96)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){html[data-enter] .vh-wolf{animation:none}}

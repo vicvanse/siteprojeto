@@ -1,6 +1,5 @@
 "use client";
 
-import { HeronEmblem } from "@/components/vekon/HeronEmblem";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 import { LANGUAGES, LANGUAGE_INITIALS, LANGUAGE_NAMES, type Language } from "@/lib/i18n";
@@ -293,13 +292,12 @@ export function VekonHome() {
               </ul>
             </div>
           </div>
-          {/* Mobile: the heron at the top, with the clouds */}
-          <figure className="vh-medal vh-medal--emblem vh-medal--top" aria-label={t("home.heron")}>
+          {/* Mobile: the maned wolf at the top, with the clouds */}
+          <figure className="vh-medal vh-medal--emblem vh-medal--top vh-medal--wolf" aria-label="Maned wolf howling at a black sun">
             <img className="vh-mcloud vh-mcloud--a" src={withBase("/vekon/cloud-a3.webp")} alt="" aria-hidden width={760} height={259} />
             <img className="vh-mcloud vh-mcloud--b" src={withBase("/vekon/cloud-b3.webp")} alt="" aria-hidden width={640} height={297} />
-            <span className="vh-medal__disc">
-              <HeronEmblem label="A heron in flight inside a double circle, a small star above" />
-            </span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="vh-wolf" src={withBase("/vekon/wolf-sun.webp")} alt="" width={760} height={760} loading="eager" draggable={false} />
           </figure>
           <figure className="vh-mark">
             {/* Mobile: a band in the Papers color along the top of the panel,
