@@ -850,3 +850,21 @@ html[data-enter] .vh-wolf{animation:vh-wolf-in .9s cubic-bezier(.22,1,.36,1) 1.3
   .vekon-home .vh-projects-panel .vh-door .vh-door__body{text-align:center!important}
   .vekon-home .vh-projects-panel .vh-door .vh-door__actions{justify-content:center!important}
 }
+/* Mobile: ink stars around the Living Ring at the end, twinkling out of step. */
+.vh-star{display:none}
+@media (max-width:900px){
+  .vh-mark--m{position:relative}
+  .vh-star{display:block;position:absolute;z-index:3;height:auto;pointer-events:none;-webkit-user-select:none;user-select:none;
+    transform-origin:50% 50%;animation:vh-star-twinkle 3.6s ease-in-out infinite}
+  .vh-star--1{width:34px;left:7%;top:8%;animation-delay:-.4s}
+  .vh-star--2{width:20px;left:20%;top:30%;animation-delay:-1.9s;animation-duration:2.8s}
+  .vh-star--3{width:28px;right:8%;top:16%;animation-delay:-2.7s}
+  .vh-star--4{width:18px;right:16%;bottom:22%;animation-delay:-1.1s;animation-duration:3.1s}
+  .vh-star--5{width:24px;left:12%;bottom:12%;animation-delay:-3.2s;animation-duration:4.2s}
+}
+@keyframes vh-star-twinkle{
+  0%,100%{transform:scale(.82) rotate(0deg);opacity:.55}
+  45%{transform:scale(1.08) rotate(12deg);opacity:1}
+  60%{transform:scale(.95) rotate(8deg);opacity:.9}
+}
+@media (prefers-reduced-motion:reduce){.vh-star{animation:none}}

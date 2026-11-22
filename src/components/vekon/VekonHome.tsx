@@ -475,6 +475,17 @@ export function VekonHome() {
 
       {/* Mobile: the Living Ring, at the very end, under the flame */}
       <figure className="vh-mark vh-mark--m" aria-hidden>
+        {/* Mobile: ink stars twinkling around the Living Ring */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="vh-star vh-star--1" src={withBase("/vekon/star-ink.webp")} alt="" width={137} height={160} draggable={false} />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="vh-star vh-star--2" src={withBase("/vekon/star-ink.webp")} alt="" width={137} height={160} draggable={false} />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="vh-star vh-star--3" src={withBase("/vekon/star-ink.webp")} alt="" width={137} height={160} draggable={false} />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="vh-star vh-star--4" src={withBase("/vekon/star-ink.webp")} alt="" width={137} height={160} draggable={false} />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="vh-star vh-star--5" src={withBase("/vekon/star-ink.webp")} alt="" width={137} height={160} draggable={false} />
         {/* Mobile: a band in the Papers color along the top of the panel,
             thin at the right, following the well's curve down the left. */}
         <span className="vh-band" aria-hidden>
