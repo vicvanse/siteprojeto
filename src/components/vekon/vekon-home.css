@@ -800,10 +800,29 @@ html[data-enter] .vh-wolf{animation:vh-wolf-in .9s cubic-bezier(.22,1,.36,1) 1.3
   .vh-flame .vh-flame__f{animation:none!important}
   .vh-flame .vh-flame__f--1{opacity:1}
 }
-/* Mobile: the sun ornament above Our projects, turning very slowly. */
+/* Mobile: the sun ornament above Our projects: it turns slowly while its
+   five hand-drawn frames boil (~4.5 fps), like the flame. */
 .vh-sun{display:none}
 @media (max-width:900px){
-  .vh-sun{display:block;width:64px;height:auto;margin:6px auto 14px;animation:vh-sun-turn 48s linear infinite;-webkit-user-select:none;user-select:none}
+  .vh-sun{display:grid;width:68px;height:68px;margin:6px auto 14px;animation:vh-sun-turn 48s linear infinite}
+  .vh-sun__f{grid-area:1/1;width:100%;height:100%;opacity:0;-webkit-user-select:none;user-select:none;animation:vh-sun-frame 1.1s step-end infinite}
+  .vh-sun__f--2{animation-delay:-.88s}
+  .vh-sun__f--3{animation-delay:-.66s}
+  .vh-sun__f--4{animation-delay:-.44s}
+  .vh-sun__f--5{animation-delay:-.22s}
 }
 @keyframes vh-sun-turn{to{transform:rotate(360deg)}}
-@media (prefers-reduced-motion:reduce){.vh-sun{animation:none}}
+@keyframes vh-sun-frame{0%{opacity:1}20%{opacity:0}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.vh-sun{animation:none}.vh-sun__f{animation:none}.vh-sun__f--1{opacity:1}}
+
+/* About in two voices: the first sentence as an ink serif headline with
+   "forget" struck through in pencil, then Vekon's answer, quieter. */
+.vh-body-head{display:block;font-family:var(--font-serif),Georgia,serif;font-style:italic;font-weight:400;font-size:23px;line-height:1.32;color:#1f2a6b;letter-spacing:-.005em;font-size-adjust:none}
+.vh-body-tail{display:block;margin-top:10px;font-size:14.5px;line-height:1.55;color:#5f626b}
+.vh-forget{position:relative;display:inline-block}
+.vh-forget svg{position:absolute;left:-6%;top:50%;width:112%;height:.55em;transform:translateY(-35%) rotate(-2deg);overflow:visible;pointer-events:none}
+.vh-forget__line{fill:none;stroke:#1f2a6b;stroke-width:2.2;stroke-linecap:round;vector-effect:non-scaling-stroke;opacity:.85;
+  stroke-dasharray:1;stroke-dashoffset:1;animation:vh-forget-strike .65s cubic-bezier(.6,0,.3,1) 2.1s forwards}
+@keyframes vh-forget-strike{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.vh-forget__line{animation:none;stroke-dashoffset:0}}
+

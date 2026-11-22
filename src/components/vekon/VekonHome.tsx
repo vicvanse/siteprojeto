@@ -183,6 +183,50 @@ function useDoorColors() {
   return colors;
 }
 
+/** The word that gets the pencil strike-through, per language. */
+const FORGET_WORD: Record<string, string> = {
+  en: "forget", pt: "esquecer", es: "olvidarás", de: "vergessen", fr: "oublierez",
+  it: "dimenticherai", ja: "忘れ", ko: "잊게", "zh-CN": "忘记", "zh-TW": "忘記", zh: "忘记",
+};
+
+/**
+ * The about text in two voices: the first sentence as a handwritten-feeling
+ * serif headline (with "forget" struck through in pencil), then Vekon's
+ * answer, smaller and quieter.
+ */
+function AboutLines({ text, lang }: { text: string; lang: string }) {
+  const cut = text.indexOf("Vekon");
+  const head = (cut > 0 ? text.slice(0, cut) : text).trim();
+  const tail = cut > 0 ? text.slice(cut).trim() : "";
+  const word = FORGET_WORD[lang] ?? FORGET_WORD[lang.split("-")[0]] ?? "";
+  const at = word ? head.indexOf(word) : -1;
+  return (
+    <>
+      <span className="vh-body-head">
+        {at < 0 ? (
+          head
+        ) : (
+          <>
+            {head.slice(0, at)}
+            <span className="vh-forget">
+              {word}
+              <svg viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden>
+                <path
+                  className="vh-forget__line"
+                  pathLength={1}
+                  d="M2 12 C 14 8, 22 15, 34 10 S 56 7, 66 12 S 86 13, 98 8"
+                />
+              </svg>
+            </span>
+            {head.slice(at + word.length)}
+          </>
+        )}
+      </span>
+      {tail ? <span className="vh-body-tail">{tail}</span> : null}
+    </>
+  );
+}
+
 /**
  * Mobile: the blocks below the Living Ring rise into place as they scroll in,
  * one at a time, instead of all animating on load out of sight.
@@ -219,7 +263,7 @@ function useScrollReveal() {
 }
 
 export function VekonHome() {
-  const { t } = useLanguage();
+  const { t, language: lang } = useLanguage();
   useScrollReveal();
   const doorColors = useDoorColors();
   /* The color picked in Papers (same site, so the same saved choice). */
@@ -282,8 +326,8 @@ export function VekonHome() {
             <h1 id="vh-title" className="vh-title">
               {t("home.title")}
             </h1>
-            <p className="vh-body vh-body--full">{t("home.body")}</p>
-            <p className="vh-body vh-body--lead">{t("home.bodyLead")}</p>
+            <p className="vh-body vh-body--full"><AboutLines text={t("home.body")} lang={lang} /></p>
+            <p className="vh-body vh-body--lead"><AboutLines text={t("home.bodyLead")} lang={lang} /></p>
             <div className="vh-hero__foot">
               <ul className="vh-facts" aria-hidden>
                 <li>02 doors</li>
@@ -334,7 +378,18 @@ export function VekonHome() {
         <div className="vh-projects-box">
           {/* Mobile: the wolf's sun, alone, turning slowly above the projects */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img className="vh-sun" src={withBase("/vekon/sun-ink.webp")} alt="" aria-hidden width={357} height={360} draggable={false} />
+          <span className="vh-sun" aria-hidden>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="vh-sun__f vh-sun__f--1" src={withBase("/vekon/sun-ink-1.webp")} alt="" width={300} height={300} draggable={false} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="vh-sun__f vh-sun__f--2" src={withBase("/vekon/sun-ink-2.webp")} alt="" width={300} height={300} draggable={false} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="vh-sun__f vh-sun__f--3" src={withBase("/vekon/sun-ink-3.webp")} alt="" width={300} height={300} draggable={false} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="vh-sun__f vh-sun__f--4" src={withBase("/vekon/sun-ink-4.webp")} alt="" width={300} height={300} draggable={false} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="vh-sun__f vh-sun__f--5" src={withBase("/vekon/sun-ink-5.webp")} alt="" width={300} height={300} draggable={false} />
+          </span>
           <p className="vh-projects">
             <span className="vh-dot" aria-hidden />
             {t("home.projects")}
