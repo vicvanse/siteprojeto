@@ -297,7 +297,7 @@ export function VekonHome() {
             <img className="vh-mcloud vh-mcloud--a" src={withBase("/vekon/cloud-a3.webp")} alt="" aria-hidden width={760} height={259} />
             <img className="vh-mcloud vh-mcloud--b" src={withBase("/vekon/cloud-b3.webp")} alt="" aria-hidden width={640} height={297} />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img className="vh-wolf" src={withBase("/vekon/wolf-sun.webp")} alt="" width={760} height={760} loading="eager" draggable={false} />
+            <img className="vh-wolf" src={withBase("/vekon/wolf-sun-ink.webp")} alt="" width={760} height={760} loading="eager" draggable={false} />
           </figure>
           <figure className="vh-mark">
             {/* Mobile: a band in the Papers color along the top of the panel,
@@ -408,7 +408,11 @@ export function VekonHome() {
       {/* Mobile: the flame, centered under the footer */}
       <span className="vh-lotus vh-flame" aria-hidden>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={withBase("/vekon-flame.png")} alt="" width={96} height={96} draggable={false} />
+        <img className="vh-flame__f vh-flame__f--1" src={withBase("/vekon/flame-ink-1.webp")} alt="" width={200} height={200} draggable={false} />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="vh-flame__f vh-flame__f--2" src={withBase("/vekon/flame-ink-2.webp")} alt="" width={200} height={200} draggable={false} />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="vh-flame__f vh-flame__f--3" src={withBase("/vekon/flame-ink-3.webp")} alt="" width={200} height={200} draggable={false} />
       </span>
 
       {/* Mobile: the Living Ring, at the very end, under the flame */}

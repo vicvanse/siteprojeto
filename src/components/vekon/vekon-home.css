@@ -755,7 +755,6 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
   .vekon-home .vh-reveal.is-in{opacity:1;translate:0 0}
 
   /* 4. The flame breathes. */
-  .vh-flame img{transform-origin:50% 85%;animation:vh-flame-breathe 3.2s ease-in-out infinite}
 
   /* 3. Clouds drift left, slowly, across the page and back in from the right. */
   .vh-medal--top .vh-mcloud--b{animation:vh-cloud-pass-b 95s linear -32s infinite!important}
@@ -787,3 +786,17 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
 html[data-enter] .vh-wolf{animation:vh-wolf-in .9s cubic-bezier(.22,1,.36,1) 1.35s both}
 @keyframes vh-wolf-in{from{opacity:0;transform:translateY(18px) rotate(-5deg) scale(.96)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){html[data-enter] .vh-wolf{animation:none}}
+/* The ink drawings: wolf without the paper shadow; the flame as a hand-drawn
+   flipbook (three frames swapped at ~4 fps, the third a gust to the right). */
+.vh-wolf{filter:none!important}
+.vh-flame .vh-flame__f{grid-area:1/1;width:34px!important;height:34px!important;filter:none!important;animation:none}
+.vh-flame .vh-flame__f--1{animation:vh-flame-f1 1.15s step-end infinite}
+.vh-flame .vh-flame__f--2{opacity:0;animation:vh-flame-f2 1.15s step-end infinite}
+.vh-flame .vh-flame__f--3{opacity:0;animation:vh-flame-f3 1.15s step-end infinite}
+@keyframes vh-flame-f1{0%{opacity:1}20%{opacity:0}40%{opacity:1}60%{opacity:0}100%{opacity:0}}
+@keyframes vh-flame-f2{0%{opacity:0}20%{opacity:1}40%{opacity:0}60%{opacity:1}80%{opacity:0}100%{opacity:0}}
+@keyframes vh-flame-f3{0%{opacity:0}80%{opacity:1}100%{opacity:1}}
+@media (prefers-reduced-motion:reduce){
+  .vh-flame .vh-flame__f{animation:none!important}
+  .vh-flame .vh-flame__f--1{opacity:1}
+}
