@@ -238,7 +238,7 @@ function useScrollReveal() {
     if (!("IntersectionObserver" in window)) return;
     const els = Array.from(
       document.querySelectorAll<HTMLElement>(
-        ".vekon-home .vh-projects, .vekon-home .vh-door, .vekon-home .vh-foot, .vekon-home .vh-flame, .vekon-home .vh-mark--m",
+        ".vekon-home .vh-projects, .vekon-home .vh-door, .vekon-home .vh-rule, .vekon-home .vh-flame, .vekon-home .vh-mark--m, .vekon-home .vh-seal",
       ),
     );
     const fold = window.innerHeight * 0.92;
@@ -462,6 +462,16 @@ export function VekonHome() {
       </section>
 
       {/* Mobile: plates, laid out like the pages of the manifesto */}
+      {/* Mobile: a thin rule with a star in the middle, drawn from the centre */}
+      <div className="vh-rule" aria-hidden>
+        <svg viewBox="0 0 240 24">
+          <path className="vh-rule__l" pathLength={1} d="M110 12 H8" />
+          <path className="vh-rule__r" pathLength={1} d="M130 12 H232" />
+          <path className="vh-rule__star" d="M120 2 C121 9 123 11 130 12 C123 13 121 15 120 22 C119 15 117 13 110 12 C117 11 119 9 120 2 Z" />
+          <circle cx="8" cy="12" r="1.6" className="vh-rule__dot" />
+          <circle cx="232" cy="12" r="1.6" className="vh-rule__dot" />
+        </svg>
+      </div>
       <p className="vh-foot">Vekon · Memory · Personas</p>
       {/* Mobile: the flame, centered under the footer */}
       <span className="vh-lotus vh-flame" aria-hidden>
@@ -475,6 +485,22 @@ export function VekonHome() {
 
       {/* Mobile: the Living Ring, at the very end, under the flame */}
       <figure className="vh-mark vh-mark--m" aria-hidden>
+        {/* Mobile: the motto set in an arc over the ring, like a seal */}
+        <svg className="vh-arc" viewBox="0 0 300 300" aria-hidden>
+          <defs>
+            <path id="vh-arc-path" d="M 22 150 A 128 128 0 0 1 278 150" />
+          </defs>
+          <text>
+            <textPath href="#vh-arc-path" startOffset="50%" textAnchor="middle">
+              VEKON ✦ MEMORY ✦ PERSONAS
+            </textPath>
+          </text>
+        </svg>
+        <span className="vh-crosses" aria-hidden>
+          <span>+ + + + +</span>
+          <span>+ + +</span>
+          <span>+</span>
+        </span>
         {/* Mobile: ink stars twinkling around the Living Ring */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className="vh-star vh-star--1" src={withBase("/vekon/star-ink.webp")} alt="" width={137} height={160} draggable={false} />
@@ -503,6 +529,11 @@ export function VekonHome() {
           <span>1:1</span>
         </figcaption>
       </figure>
+      {/* Mobile: the closing stamp */}
+      <div className="vh-seal" aria-hidden>
+        <p className="vh-seal__main">All memories reserved</p>
+        <p className="vh-seal__sub">© Vekon · keep what&apos;s worth keeping</p>
+      </div>
     </div>
   );
 }
