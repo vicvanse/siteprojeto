@@ -875,6 +875,7 @@ html[data-enter] .vh-wolf{animation:vh-wolf-in .9s cubic-bezier(.22,1,.36,1) 1.3
   .vh-rule{display:block;width:min(78%,320px);margin:30px auto 4px}
   .vh-rule svg{display:block;width:100%;height:auto;overflow:visible}
   .vh-rule__l,.vh-rule__r{fill:none;stroke:#1f2a6b;stroke-width:1;opacity:.7;stroke-dasharray:1;stroke-dashoffset:0}
+  .vh-rule__star{fill:#1f2a6b}
   .vh-rule__dot{fill:#1f2a6b;opacity:.7}
   .vh-rule.vh-reveal .vh-rule__l,.vh-rule.vh-reveal .vh-rule__r{stroke-dashoffset:1;transition:stroke-dashoffset 1.1s cubic-bezier(.22,1,.36,1) .25s}
   .vh-rule.vh-reveal .vh-rule__dot{opacity:0;transition:opacity .4s ease 1.2s}
