@@ -503,15 +503,15 @@ export function VekonHome() {
         </span>
         {/* Mobile: ink stars twinkling around the Living Ring */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="vh-star vh-star--1" src={withBase("/vekon/star-ink.webp")} alt="" width={137} height={160} draggable={false} />
+        <img className="vh-star vh-star--1" src={withBase("/vekon/star-ink-1.webp")} alt="" width={207} height={220} draggable={false} />
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="vh-star vh-star--2" src={withBase("/vekon/star-ink.webp")} alt="" width={137} height={160} draggable={false} />
+        <img className="vh-star vh-star--2" src={withBase("/vekon/star-ink-2.webp")} alt="" width={207} height={220} draggable={false} />
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="vh-star vh-star--3" src={withBase("/vekon/star-ink.webp")} alt="" width={137} height={160} draggable={false} />
+        <img className="vh-star vh-star--3" src={withBase("/vekon/star-ink-3.webp")} alt="" width={207} height={220} draggable={false} />
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="vh-star vh-star--4" src={withBase("/vekon/star-ink.webp")} alt="" width={137} height={160} draggable={false} />
+        <img className="vh-star vh-star--4" src={withBase("/vekon/star-ink-4.webp")} alt="" width={207} height={220} draggable={false} />
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="vh-star vh-star--5" src={withBase("/vekon/star-ink.webp")} alt="" width={137} height={160} draggable={false} />
+        <img className="vh-star vh-star--5" src={withBase("/vekon/star-ink-5.webp")} alt="" width={207} height={220} draggable={false} />
         {/* Mobile: a band in the Papers color along the top of the panel,
             thin at the right, following the well's curve down the left. */}
         <span className="vh-band" aria-hidden>
