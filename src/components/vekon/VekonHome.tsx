@@ -462,27 +462,18 @@ export function VekonHome() {
       </section>
 
       {/* Mobile: plates, laid out like the pages of the manifesto */}
-      {/* Mobile: a thin rule, drawn from the centre (no star: nothing sits over the Living Ring) */}
+      {/* Mobile: a thin rule with a star in the middle, drawn from the centre */}
       <div className="vh-rule" aria-hidden>
         <svg viewBox="0 0 240 24">
-          <path className="vh-rule__l" pathLength={1} d="M120 12 H8" />
-          <path className="vh-rule__r" pathLength={1} d="M120 12 H232" />
+          <path className="vh-rule__l" pathLength={1} d="M110 12 H8" />
+          <path className="vh-rule__r" pathLength={1} d="M130 12 H232" />
+          <path className="vh-rule__star" d="M120 2 C121 9 123 11 130 12 C123 13 121 15 120 22 C119 15 117 13 110 12 C117 11 119 9 120 2 Z" />
           <circle cx="8" cy="12" r="1.6" className="vh-rule__dot" />
           <circle cx="232" cy="12" r="1.6" className="vh-rule__dot" />
         </svg>
       </div>
       <p className="vh-foot">Vekon · Memory · Personas</p>
-      {/* Mobile: the flame, centered under the footer */}
-      <span className="vh-lotus vh-flame" aria-hidden>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="vh-flame__f vh-flame__f--1" src={withBase("/vekon/flame-ink-1.webp")} alt="" width={200} height={200} draggable={false} />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="vh-flame__f vh-flame__f--2" src={withBase("/vekon/flame-ink-2.webp")} alt="" width={200} height={200} draggable={false} />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="vh-flame__f vh-flame__f--3" src={withBase("/vekon/flame-ink-3.webp")} alt="" width={200} height={200} draggable={false} />
-      </span>
-
-      {/* Mobile: the Living Ring, at the very end, under the flame */}
+      {/* Mobile: the Living Ring, at the very end, under the rule */}
       <figure className="vh-mark vh-mark--m" aria-hidden>
         {/* Mobile: the motto set in an arc over the ring, like a seal */}
         <svg className="vh-arc" viewBox="0 0 300 300" aria-hidden>
