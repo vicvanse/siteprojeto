@@ -895,3 +895,7 @@ html[data-enter] .vh-wolf{animation:vh-wolf-in .9s cubic-bezier(.22,1,.36,1) 1.3
 @media (max-width:900px) and (prefers-reduced-motion:reduce){
   .vh-rule.vh-reveal .vh-rule__l,.vh-rule.vh-reveal .vh-rule__r{stroke-dashoffset:0;transition:none}
 }
+@media (max-width:900px){
+  .vh-mark--m{margin-top:46px!important}
+  .vh-crosses{left:auto!important;right:6%;align-items:flex-end!important;bottom:-10px!important}
+}
