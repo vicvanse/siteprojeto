@@ -8,7 +8,8 @@ export type AccentHue =
   | "purple"
   | "white"
   | "cyan"
-  | "brown";
+  | "brown"
+  | "silver";
 
 export type AccentPalette = {
   selected: string;
@@ -28,6 +29,7 @@ export const OFFICIAL_ACCENT_HUES: AccentHue[] = [
   "pink",
   "yellow",
   "green",
+  "silver",
 ];
 
 /** Bottom row — atelier set. */
@@ -39,6 +41,8 @@ export const ATELIER_ACCENT_HUES: AccentHue[] = [
   "brown",
 ];
 
+/** Light grey — between the default grey and the card surfaces, for a
+ *  softer contrast. Placed on the top row so both rows keep five. */
 export const ACCENT_ORDER: AccentHue[] = [
   ...OFFICIAL_ACCENT_HUES,
   ...ATELIER_ACCENT_HUES,
@@ -117,6 +121,14 @@ export const ACCENT_PALETTES: Record<AccentHue, AccentPalette> = {
     surfaceOdd: "#d3dbde",
     ring: "#9ca8af",
     ringSelected: "#1f3337",
+  },
+  silver: {
+    selected: "#8a8d94",
+    selectedAlt: "#777a81",
+    surfaceEven: "#eeeff1",
+    surfaceOdd: "#dfe0e4",
+    ring: "#c4c6cb",
+    ringSelected: "#4a4d54",
   },
   brown: {
     selected: "#5e4843",
