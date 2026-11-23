@@ -473,7 +473,17 @@ export function VekonHome() {
         </svg>
       </div>
       <p className="vh-foot">Vekon · Memory · Personas</p>
-      {/* Mobile: the Living Ring, at the very end, under the rule */}
+      {/* Mobile: the flame, centered under the footer */}
+      <span className="vh-lotus vh-flame" aria-hidden>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="vh-flame__f vh-flame__f--1" src={withBase("/vekon/flame-ink-1.webp")} alt="" width={200} height={200} draggable={false} />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="vh-flame__f vh-flame__f--2" src={withBase("/vekon/flame-ink-2.webp")} alt="" width={200} height={200} draggable={false} />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="vh-flame__f vh-flame__f--3" src={withBase("/vekon/flame-ink-3.webp")} alt="" width={200} height={200} draggable={false} />
+      </span>
+
+      {/* Mobile: the Living Ring, at the very end, under the flame */}
       <figure className="vh-mark vh-mark--m" aria-hidden>
         {/* Mobile: the motto set in an arc over the ring, like a seal */}
         <svg className="vh-arc" viewBox="0 0 300 300" aria-hidden>
@@ -495,11 +505,7 @@ export function VekonHome() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className="vh-star vh-star--1" src={withBase("/vekon/star-ink-1.webp")} alt="" width={207} height={220} draggable={false} />
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="vh-star vh-star--2" src={withBase("/vekon/star-ink-2.webp")} alt="" width={207} height={220} draggable={false} />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className="vh-star vh-star--3" src={withBase("/vekon/star-ink-3.webp")} alt="" width={207} height={220} draggable={false} />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="vh-star vh-star--4" src={withBase("/vekon/star-ink-4.webp")} alt="" width={207} height={220} draggable={false} />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className="vh-star vh-star--5" src={withBase("/vekon/star-ink-5.webp")} alt="" width={207} height={220} draggable={false} />
         {/* Mobile: a band in the Papers color along the top of the panel,
