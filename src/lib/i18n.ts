@@ -369,7 +369,7 @@ const pt: Dictionary = {
   "home.life.learn": "Conhecer",
   "home.life.enter": "Entrar",
   "home.papers.label": "Editora",
-  "home.papers.body": "Ensaios sobre a mente, por caminhos pouco convencionais, para você ver o mundo um pouco diferente.",
+  "home.papers.body": "Ensaios sobre a memória, escritos de forma não convencional, para você ver o mundo um pouco diferente.",
   "home.papers.open": "Abrir o Papers",
   "themes": "Temas",
   "references": "Referências",
