@@ -365,7 +365,7 @@ const pt: Dictionary = {
   "home.doors": "Duas portas",
   "home.projects": "Nossos projetos",
   "home.life.label": "App de diário",
-  "home.life.body": "Escreva o dia, acompanhe hábitos e metas, e guarde as pessoas e os momentos que importam. Faça sua autobiografia e observe sua vida tomar forma.",
+  "home.life.body": "Faça sua autobiografia e observe sua vida tomar forma. Escreva o dia, acompanhe hábitos e metas, e guarde as pessoas e os momentos que importam.",
   "home.life.learn": "Conhecer",
   "home.life.enter": "Entrar",
   "home.papers.label": "Editora",
