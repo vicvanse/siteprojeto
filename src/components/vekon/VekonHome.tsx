@@ -473,47 +473,18 @@ export function VekonHome() {
         </svg>
       </div>
       <p className="vh-foot">Vekon · Memory · Personas</p>
-      {/* Mobile: the Living Ring, under the rule */}
-      <figure className="vh-mark vh-mark--m" aria-hidden>
-        {/* Mobile: the motto set in an arc over the ring, like a seal */}
-        <svg className="vh-arc" viewBox="0 0 300 300" aria-hidden>
-          <defs>
-            <path id="vh-arc-path" d="M 22 150 A 128 128 0 0 1 278 150" />
-          </defs>
-          <text>
-            <textPath href="#vh-arc-path" startOffset="50%" textAnchor="middle">
-              VEKON ✦ MEMORY ✦ PERSONAS
-            </textPath>
-          </text>
-        </svg>
-        <span className="vh-crosses" aria-hidden>
-          <span>+ + + + +</span>
-          <span>+ + +</span>
-          <span>+</span>
-        </span>
-        {/* Mobile: ink stars twinkling around the Living Ring */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="vh-star vh-star--1" src={withBase("/vekon/star-ink-1.webp")} alt="" width={207} height={220} draggable={false} />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="vh-star vh-star--3" src={withBase("/vekon/star-ink-3.webp")} alt="" width={207} height={220} draggable={false} />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="vh-star vh-star--5" src={withBase("/vekon/star-ink-5.webp")} alt="" width={207} height={220} draggable={false} />
-        {/* Mobile: a band in the Papers color along the top of the panel,
-            thin at the right, following the well's curve down the left. */}
-        <span className="vh-band" aria-hidden>
-          <span className="vh-band__shine" />
-        </span>
-        {/* Mobile: two clouds at the height of the ring */}
-        <div className="vh-mark__well">
-          <span className="vh-mark__disc">
+      {/* Mobile: a small scene under the rule — the Living Ring as the sun,
+          half behind an ink mountain range, a heron flying across it. */}
+      <figure className="vh-mark vh-mark--m vh-scene" aria-hidden>
+        <div className="vh-scene__sky">
+          <span className="vh-mark__disc vh-scene__sun">
             <LivingRingMark className="vh-mark__ring" />
           </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="vh-scene__mountains" src={withBase("/vekon/scene-mountains.webp")} alt="" width={1400} height={252} draggable={false} />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="vh-scene__heron" src={withBase("/vekon/scene-heron.webp")} alt="" width={600} height={584} draggable={false} />
         </div>
-        <figcaption aria-hidden>
-          <span>LIVING RING</span>
-          <span>V-000</span>
-          <span>1:1</span>
-        </figcaption>
       </figure>
       {/* Mobile: the closing stamp */}
       <div className="vh-seal" aria-hidden>

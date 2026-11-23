@@ -922,3 +922,19 @@ html[data-enter] .vh-wolf{animation:vh-wolf-in .9s cubic-bezier(.22,1,.36,1) 1.3
   .vh-seal{margin-bottom:0!important}
   .vh-flame{margin:20px auto 40px!important}
 }
+/* ===== Mobile: the closing scene — Living Ring as sun/moon behind the
+   mountains, a heron crossing it. Replaces the ring + ink stars. ===== */
+.vh-scene__sky{display:none}
+@media (max-width:900px){
+  .vh-mark--m.vh-scene{margin:18px auto 0!important;padding:0!important;overflow:hidden}
+  .vh-scene__sky{display:block;position:relative;width:100%;max-width:440px;height:262px;margin:0 auto;overflow:hidden}
+  .vh-scene .vh-scene__sun{position:absolute;left:50%;top:48px;width:150px!important;margin-left:-75px;z-index:1;
+    box-shadow:8px 8px 18px var(--sd),-8px -8px 18px var(--sl)}
+  .vh-scene__mountains{position:absolute;z-index:2;left:50%;bottom:6px;width:160%;max-width:none;height:auto;transform:translateX(-50%);
+    pointer-events:none;-webkit-user-select:none;user-select:none}
+  .vh-scene__heron{position:absolute;z-index:3;left:5%;top:8px;width:108px;height:auto;pointer-events:none;-webkit-user-select:none;user-select:none;
+    animation:vh-heron-drift 9s ease-in-out infinite}
+  .vh-scene figcaption{display:none!important}
+}
+@keyframes vh-heron-drift{0%,100%{transform:translate(0,0) rotate(0deg)}50%{transform:translate(6px,-5px) rotate(-2deg)}}
+@media (prefers-reduced-motion:reduce){.vh-scene__heron{animation:none}}
