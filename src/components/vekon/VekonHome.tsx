@@ -462,12 +462,11 @@ export function VekonHome() {
       </section>
 
       {/* Mobile: plates, laid out like the pages of the manifesto */}
-      {/* Mobile: a thin rule with a star in the middle, drawn from the centre */}
+      {/* Mobile: a thin rule, drawn from the centre (no star: nothing sits over the Living Ring) */}
       <div className="vh-rule" aria-hidden>
         <svg viewBox="0 0 240 24">
-          <path className="vh-rule__l" pathLength={1} d="M110 12 H8" />
-          <path className="vh-rule__r" pathLength={1} d="M130 12 H232" />
-          <path className="vh-rule__star" d="M120 2 C121 9 123 11 130 12 C123 13 121 15 120 22 C119 15 117 13 110 12 C117 11 119 9 120 2 Z" />
+          <path className="vh-rule__l" pathLength={1} d="M120 12 H8" />
+          <path className="vh-rule__r" pathLength={1} d="M120 12 H232" />
           <circle cx="8" cy="12" r="1.6" className="vh-rule__dot" />
           <circle cx="232" cy="12" r="1.6" className="vh-rule__dot" />
         </svg>
