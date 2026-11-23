@@ -698,7 +698,6 @@ html[data-script="cjk"] .vh-title{line-height:1.2}
 @media (max-width:900px){
   .vh-mcloud--a{display:block!important;width:64%!important;left:-16%!important;right:auto!important;top:auto!important;bottom:6%!important;opacity:.55!important}
 }
-@media (max-width:900px){.vh-colordot{display:none!important}}
 .vh-door__body{-webkit-line-clamp:unset!important;display:block!important;overflow:visible!important}
 /* Swap: on mobile the heron opens the page and the Living Ring sits
    between the about text and the projects. Desktop keeps its layout. */

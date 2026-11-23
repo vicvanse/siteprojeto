@@ -174,7 +174,7 @@ function LangSelect() {
 function useDoorColors() {
   const [colors, setColors] = useState<[string, string] | null>(null);
   useEffect(() => {
-    const pool = ACCENT_ORDER.filter((h) => h !== "white").map((h) => ACCENT_PALETTES[h].selected);
+    const pool = ACCENT_ORDER.filter((h) => h !== "white" && h !== "silver").map((h) => ACCENT_PALETTES[h].selected);
     const a = Math.floor(Math.random() * pool.length);
     let b = Math.floor(Math.random() * (pool.length - 1));
     if (b >= a) b += 1;
