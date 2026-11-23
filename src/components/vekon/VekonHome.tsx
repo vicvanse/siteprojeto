@@ -473,17 +473,7 @@ export function VekonHome() {
         </svg>
       </div>
       <p className="vh-foot">Vekon · Memory · Personas</p>
-      {/* Mobile: the flame, centered under the footer */}
-      <span className="vh-lotus vh-flame" aria-hidden>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="vh-flame__f vh-flame__f--1" src={withBase("/vekon/flame-ink-1.webp")} alt="" width={200} height={200} draggable={false} />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="vh-flame__f vh-flame__f--2" src={withBase("/vekon/flame-ink-2.webp")} alt="" width={200} height={200} draggable={false} />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="vh-flame__f vh-flame__f--3" src={withBase("/vekon/flame-ink-3.webp")} alt="" width={200} height={200} draggable={false} />
-      </span>
-
-      {/* Mobile: the Living Ring, at the very end, under the flame */}
+      {/* Mobile: the Living Ring, under the rule */}
       <figure className="vh-mark vh-mark--m" aria-hidden>
         {/* Mobile: the motto set in an arc over the ring, like a seal */}
         <svg className="vh-arc" viewBox="0 0 300 300" aria-hidden>
@@ -530,6 +520,15 @@ export function VekonHome() {
         <p className="vh-seal__main">All memories reserved</p>
         <p className="vh-seal__sub">© Vekon · keep what&apos;s worth keeping</p>
       </div>
+      {/* Mobile: the flame, last thing on the page, under the closing stamp */}
+      <span className="vh-lotus vh-flame" aria-hidden>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="vh-flame__f vh-flame__f--1" src={withBase("/vekon/flame-ink-1.webp")} alt="" width={200} height={200} draggable={false} />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="vh-flame__f vh-flame__f--2" src={withBase("/vekon/flame-ink-2.webp")} alt="" width={200} height={200} draggable={false} />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="vh-flame__f vh-flame__f--3" src={withBase("/vekon/flame-ink-3.webp")} alt="" width={200} height={200} draggable={false} />
+      </span>
     </div>
   );
 }
