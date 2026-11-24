@@ -195,7 +195,10 @@ const FORGET_WORD: Record<string, string> = {
  * answer, smaller and quieter.
  */
 function AboutLines({ text, lang }: { text: string; lang: string }) {
-  const cut = text.indexOf("Vekon");
+  /* The two voices are split by a line break in the copy ("\n"); older
+     copy without one splits where "Vekon" starts the answer. */
+  const nl = text.indexOf("\n");
+  const cut = nl > 0 ? nl : text.indexOf("Vekon");
   const head = (cut > 0 ? text.slice(0, cut) : text).trim();
   const tail = cut > 0 ? text.slice(cut).trim() : "";
   const word = FORGET_WORD[lang] ?? FORGET_WORD[lang.split("-")[0]] ?? "";
@@ -488,7 +491,6 @@ export function VekonHome() {
       </figure>
       {/* Mobile: the closing stamp */}
       <div className="vh-seal" aria-hidden>
-        <p className="vh-seal__main">All memories reserved</p>
         <p className="vh-seal__sub">© Vekon · keep what&apos;s worth keeping</p>
       </div>
       {/* Mobile: the flame, last thing on the page, under the closing stamp */}
