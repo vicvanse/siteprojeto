@@ -491,7 +491,8 @@ export function VekonHome() {
       </figure>
       {/* Mobile: the closing stamp */}
       <div className="vh-seal" aria-hidden>
-        <p className="vh-seal__sub">© Vekon · keep what&apos;s worth keeping</p>
+        <p className="vh-seal__main">Keep what&apos;s worth keeping</p>
+        <p className="vh-seal__sub">© Vekon</p>
       </div>
       {/* Mobile: the flame, last thing on the page, under the closing stamp */}
       <span className="vh-lotus vh-flame" aria-hidden>
