@@ -151,6 +151,7 @@ export type MessageKey =
   | "home.life.enter"
   | "home.papers.label"
   | "home.papers.body"
+  | "home.seal"
   | "home.papers.open"
   | "themes"
   | "references"
@@ -230,6 +231,7 @@ const en: Dictionary = {
   "home.life.enter": "Sign in",
   "home.papers.label": "Publisher",
   "home.papers.body": "Texts on any subject interesting enough to catch your eye. Just read. Or don't, whatever.",
+  "home.seal": "Keep what's worth keeping",
   "home.papers.open": "Open Papers",
   "themes": "Themes",
   "references": "References",
@@ -370,6 +372,7 @@ const pt: Dictionary = {
   "home.life.enter": "Entrar",
   "home.papers.label": "Editora",
   "home.papers.body": "Textos sobre quaisquer assuntos interessantes o suficiente para chamar a atenção. Só lê. Ou não, tanto faz.",
+  "home.seal": "Guarde o que vale a pena guardar",
   "home.papers.open": "Abrir o Papers",
   "themes": "Temas",
   "references": "Referências",
@@ -552,6 +555,7 @@ const es: Dictionary = {
   "home.life.enter": "Entrar",
   "home.papers.label": "Editorial",
   "home.papers.body": "Textos sobre cualquier tema lo bastante interesante como para llamar la atención. Solo lee. O no, da igual.",
+  "home.seal": "Guarda lo que vale la pena guardar",
   "home.papers.open": "Abrir Papers",
   "themes": "Temas",
   "references": "Referencias",
@@ -691,6 +695,7 @@ const de: Dictionary = {
   "home.life.enter": "Anmelden",
   "home.papers.label": "Verlag",
   "home.papers.body": "Texte über alles, was interessant genug ist, um aufzufallen. Lies einfach. Oder nicht, ist auch egal.",
+  "home.seal": "Bewahre, was es wert ist",
   "home.papers.open": "Papers öffnen",
   "themes": "Themen",
   "references": "Referenzen",
@@ -830,6 +835,7 @@ const fr: Dictionary = {
   "home.life.enter": "Se connecter",
   "home.papers.label": "Éditeur",
   "home.papers.body": "Des textes sur tout sujet assez intéressant pour attirer l'attention. Lis, c'est tout. Ou pas, peu importe.",
+  "home.seal": "Garde ce qui mérite d'être gardé",
   "home.papers.open": "Ouvrir Papers",
   "themes": "Thèmes",
   "references": "Références",
@@ -969,6 +975,7 @@ const it: Dictionary = {
   "home.life.enter": "Accedi",
   "home.papers.label": "Editore",
   "home.papers.body": "Testi su qualsiasi argomento abbastanza interessante da attirare l'attenzione. Leggi e basta. O no, fa lo stesso.",
+  "home.seal": "Conserva ciò che vale la pena conservare",
   "home.papers.open": "Apri Papers",
   "themes": "Temi",
   "references": "Riferimenti",
@@ -1108,6 +1115,7 @@ const ja: Dictionary = {
   "home.life.enter": "ログイン",
   "home.papers.label": "出版",
   "home.papers.body": "目を引くほど面白いことなら、どんなテーマでも書いた文章。とにかく読んで。読まなくても、別にいい。",
+  "home.seal": "残す価値のあるものを、残そう",
   "home.papers.open": "Papers を開く",
   "themes": "テーマ",
   "references": "参照",
@@ -1247,6 +1255,7 @@ const ko: Dictionary = {
   "home.life.enter": "로그인",
   "home.papers.label": "출판",
   "home.papers.body": "눈길을 끌 만큼 흥미로운 것이라면 어떤 주제든 다룬 글. 그냥 읽어요. 아니면 말고요.",
+  "home.seal": "간직할 만한 것을 간직하세요",
   "home.papers.open": "Papers 열기",
   "themes": "테마",
   "references": "참고 문헌",
@@ -1386,6 +1395,7 @@ const zhCN: Dictionary = {
   "home.life.enter": "登录",
   "home.papers.label": "出版",
   "home.papers.body": "关于任何足够有趣、能引起注意的话题的文字。读就是了。不读也无所谓。",
+  "home.seal": "留住值得留住的",
   "home.papers.open": "打开 Papers",
   "themes": "主题",
   "references": "参考",
@@ -1525,6 +1535,7 @@ const zhTW: Dictionary = {
   "home.life.enter": "登入",
   "home.papers.label": "出版",
   "home.papers.body": "關於任何足夠有趣、能引起注意的話題的文字。讀就是了。不讀也無所謂。",
+  "home.seal": "留住值得留住的",
   "home.papers.open": "開啟 Papers",
   "themes": "主題",
   "references": "參考",
